@@ -5,7 +5,7 @@
 
 		<div class="col-xs-7">
 			<div class="icon pull-left" style="{function.generateCategoryBackground}">
-				<i class="fa {categories.icon}"></i>
+				<i class="fa fa-fw {categories.icon}"></i>
 			</div>
 
 			<h1 class="title pull-left">
