@@ -3,7 +3,7 @@
 	<li data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}" class="row">
 		<meta itemprop="name" content="{categories.name}">
 
-		<div class="col-xs-7">
+		<div class="col-xs-7 content">
 			<div class="icon pull-left" style="{function.generateCategoryBackground}">
 				<i class="fa fa-fw {categories.icon}"></i>
 			</div>
