@@ -47,7 +47,7 @@
 </head>
 
 <body>
-	<div class="navbar navbar-fixed-top header" role="navigation" id="header-menu">
+	<div class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu">
 		<div class="container">
 			<!-- IMPORT partials/menu.tpl -->
 		</div>

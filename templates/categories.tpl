@@ -1,56 +1,40 @@
-<div class="row categories" itemscope itemtype="http://www.schema.org/ItemList">
-	<div class="col-sm-12">
-		<!-- BEGIN categories -->
-		<div class="{categories.class}" data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}">
-			<meta itemprop="name" content="{categories.name}">
-			<h4 class="category-title">
-				<!-- IF !categories.link -->
-				<span class="badge {categories.unread-class}">{categories.topic_count} </span>
-				<!-- ENDIF !categories.link -->
+<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+	<!-- BEGIN categories -->
+	<li data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}" class="row">
+		<meta itemprop="name" content="{categories.name}">
 
-				<!-- IF categories.link -->
-				<a href="{categories.link}" itemprop="url" target="_blank">
-				<!-- ELSE -->
-				<a href="{relative_path}/category/{categories.slug}" itemprop="url">
-				<!-- ENDIF categories.link -->
-				{categories.name}
-				</a>
-			</h4>
+		<div class="col-xs-7">
+			<div class="icon pull-left" style="{function.generateCategoryBackground}">
+				<i class="fa {categories.icon}"></i>
+			</div>
 
-			<!-- IF categories.link -->
-			<a style="color: {categories.color};" href="{categories.link}" itemprop="url" target="_blank">
-			<!-- ELSE -->
-			<a style="color: {categories.color};" href="{relative_path}/category/{categories.slug}" itemprop="url">
-			<!-- ENDIF categories.link -->
-				<div
-					id="category-{categories.cid}" class="category-header category-header-image-{categories.imageClass}"
-					title="{categories.description}"
-					style="
-						<!-- IF categories.backgroundImage -->background-image: url({categories.backgroundImage});<!-- ENDIF categories.backgroundImage -->
-						<!-- IF categories.bgColor -->background-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
-					"
-				>
-					<div id="category-{categories.cid}" class="category-slider-{categories.post_count}">
-						<!-- IF categories.icon -->
-						<div class="category-box"><i class="fa {categories.icon} fa-4x"></i></div>
-						<!-- ENDIF categories.icon -->
-						<div class="category-box" itemprop="description">{categories.description}</div>
-
-						<!-- BEGIN posts -->
-						<div class="category-box">
-							<div class="post-preview">
-								<img src="{categories.posts.user.picture}" class="pull-left" />
-								<p class=""><strong>{categories.posts.user.username}</strong>: {categories.posts.content}</p>
-							</div>
-						</div>
-						<!-- END posts -->
-						<!-- IF categories.icon -->
-						<div class="category-box"><i class="fa {categories.icon} fa-4x"></i></div>
-						<!-- ENDIF categories.icon -->
-					</div>
-				</div>
-			</a>
+			<h1 class="title pull-left">
+				<!-- IMPORT partials/categories/link.tpl --><br />
+				<small>{categories.description}</small>
+			</h1>
 		</div>
-		<!-- END categories -->
-	</div>
+
+		<!-- IF !categories.link -->
+		<ul class="stats">
+			<li class="col-xs-1">
+				<span class="{categories.unread-class}">{categories.topic_count}</span><br />
+				<small>Topics</small>
+			</li>
+			<li class="col-xs-1">
+				<span class="{categories.unread-class}">{categories.post_count}</span><br />
+				<small>Posts</small>
+			</li>
+			<li class="col-xs-3">
+				<!-- IMPORT partials/categories/lastpost.tpl -->
+			</li>
+		</ul>
+		<!-- ELSE -->
+		<div class="col-xs-3">
+
+		</div>
+		<!-- ENDIF !categories.link -->
+
+		<div class="clearfix"></div>
+	</li>
+	<!-- END categories -->
 </div>
