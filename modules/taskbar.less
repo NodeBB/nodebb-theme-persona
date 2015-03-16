@@ -1,0 +1,75 @@
+@import "../less/keyframes";
+
+.taskbar {
+	display: none;
+	z-index: 10001;
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+	margin-top: 0;
+	-webkit-transition: opacity 150ms ease-in;
+	   -moz-transition: opacity 150ms ease-in;
+	    -ms-transition: opacity 150ms ease-in;
+	     -o-transition: opacity 150ms ease-in;
+	        transition: opacity 150ms ease-in;
+
+	&[data-active="1"] {
+		display: block;
+	}
+
+	&:hover {
+		-moz-opacity: 1;
+		opacity: 1;
+	}
+
+	&.navbar {
+		min-height: 32px;
+	}
+
+	li {
+		float: left;
+
+		&.new a {
+			-webkit-animation: taskbar-active 3s infinite;
+			-moz-animation: taskbar-active 3s infinite;
+			-o-animation: taskbar-active 3s infinite;
+			animation: taskbar-active 3s infinite;
+		}
+
+		a {
+			padding: 3px 15px;
+			font-size: 13px;
+
+			> span {
+				max-width: 200px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+		}
+
+		img {
+			max-width: 24px;
+			max-height: 24px;
+			margin-right: 1em;
+		}
+
+		&.pulse {
+			-webkit-animation: pulsate 2500ms linear;
+			-webkit-animation-iteration-count: infinite;
+		}
+
+		@-webkit-keyframes pulsate {
+			0% { background: none; }
+			50% { background: #e5e5e5; }
+			100% { background: none; }
+		}
+	}
+
+
+	@media (max-width: 979px) {
+		/*
+	 		Gets in the way of entering text when writing posts
+		*/
+		display: none !important;
+	}
+}

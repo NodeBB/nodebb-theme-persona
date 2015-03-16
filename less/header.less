@@ -1,0 +1,242 @@
+.header {
+
+	#user_label {
+		img {
+			border: 1px solid #454;
+			width: 19px;
+			height: 19px;
+		}
+
+		span {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+	.forum-title {
+		margin: 0px;
+	}
+
+	.forum-logo {
+		float: left;
+		max-height: 50px;
+		width: auto;
+	}
+
+	.header-topic-title {
+		text-align: right;
+		padding: 15px 15px;
+		font-size: 18px;
+		line-height: 20px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		span {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: @brand-primary;
+		}
+	}
+
+	.pagination-block {
+		margin-right: 10px !important;
+
+		.progress-container {
+			height: 2px;
+			position: relative;
+			bottom: 10px;
+			background: #666;
+			width: 90%;
+			margin: auto;
+
+			.progress-bar {
+				background-color: #eee;
+				height: 2px;
+			}
+		}
+
+		.dropdown-toggle {
+			display: inline-block;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		.open>a {
+			background-color: rgba(0, 0, 0, 0)!important;
+		}
+
+
+		.dropdown-menu {
+			padding: 10px;
+		}
+
+		@media (max-width: 767px) {
+			.progress-container {
+				display: inline-block;
+				position: static;
+				bottom: 0px;
+				margin-left: 1em;
+				width: 100px;
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	#notif-list {
+		overflow-x: hidden;
+		overflow-y: auto;
+		max-height: 250px;
+		padding: 0;
+
+		li {
+			font-size: 12px;
+			width: 300px;
+			text-align: left;
+			margin-bottom: 5px;
+			margin-right: 5px;
+			margin-left: 5px;
+			list-style-type: none;
+			padding: 0.5em;
+			clear: both;
+
+			img {
+				max-width: 32px;
+				max-height: 32px;
+				float: left;
+			}
+
+			a {
+				color: @text-color;
+				white-space: normal;
+				overflow: hidden;
+				margin: 0;
+				// padding: 3px 5px 3px 20px;
+				text-overflow: ellipsis;
+
+				.text {
+					margin-left: 40px;
+					margin-right: 50px;
+					display: block;
+					min-height: 32px;
+				}
+			}
+
+			&.unread {
+				.bg-variant(@state-warning-bg);
+
+				.mark-read:after {
+					content: "\f111";
+				}
+
+				.mark-read:hover:after {
+					content: "\f10c";
+				}
+			}
+
+			.mark-read {
+				color: @text-muted;
+
+				&:after {
+					font-family: "FontAwesome";
+					content: "\f10c";
+					padding: 4px 1rem;
+					position: relative;
+					top: 1px;
+				}
+
+				&:hover {
+					color: @gray-dark;
+					.pointer;
+
+					&:after {
+						content: "\f111";
+					}
+				}
+			}
+		}
+	}
+
+	.notif-dropdown-link {
+		// margin-top: 1em;
+		border-top: 1px solid rgba(163, 163, 163, 0.5);
+
+		a {
+			display: block;
+			text-align: center;
+			padding: 0.5em 0;
+			font-weight: 600;
+		}
+	}
+
+	#chat-list {
+		#notif-list;
+
+		li {
+			.pointer;
+			width: 200px;
+
+			a {
+				white-space: nowrap;
+				line-height: 30px;
+
+				img {
+					width: 32px;
+					margin-right: 1em;
+				}
+			}
+
+			&.no_active a {
+				text-align: center;
+				white-space: normal;
+			}
+		}
+	}
+}
+
+
+.breadcrumb {
+	li {
+		max-width: 100%;
+		.text-ellipsis;
+	}
+}
+
+#reconnect {
+	font-size: 14px;
+	-webkit-transition: opacity 250ms linear;
+	-moz-transition: opacity 250ms linear;
+	-ms-transition: opacity 250ms linear;
+	-o-transition: opacity 250ms linear;
+	transition: opacity 250ms linear;
+	-moz-opacity: 0.00;
+	opacity: 0.00;
+	min-width: 45px;
+
+	&.active {
+		-moz-opacity: 1;
+		opacity: 1;
+	}
+
+	& +div.tooltip .tooltip-inner {
+		width: 350px;
+	}
+}
+
+.unread-count:after {
+	content: attr(data-content);
+	position: relative;
+	left: -6px;
+	top: -7px;
+	font-size: 10px;
+	text-align: center;
+	border: 1px solid #890405;
+	color: #fff;
+	font-weight: bold;
+	min-width: 20px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #c91106;
+	padding: 1px 2px;
+	font-family: @font-family-sans-serif;
+}

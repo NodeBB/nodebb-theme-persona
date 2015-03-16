@@ -1,0 +1,116 @@
+// TODO: Needs to be cleaned up - do not child theme or you will lose your work.
+
+.account {
+	.topic-row {
+		width: 100%;
+	}
+}
+
+.favourites {
+	.topic-row {
+		width: 100%;
+		margin-bottom: 10px;
+
+		.user-img {
+			width: 24px;
+			height: 24px;
+			float: left;
+		}
+
+		a {
+			span {
+				overflow: hidden;
+				height: 16px;
+				padding-left: 8px;
+			}
+		}
+
+		.content {
+			max-height: 250px;
+			position: relative;
+			clear: left;
+			display: block;
+			overflow: hidden;
+		}
+	}
+
+}
+
+.account-sub-links {
+	border:none;
+
+	> li {
+		float:right;
+	}
+}
+
+.account-picture-block{
+	vertical-align:top;
+	margin-bottom:20px;
+
+	div {
+		margin-bottom: 10px;
+	}
+
+	.dropdown-toggle {
+		cursor: pointer;
+	}
+}
+
+.user-profile-picture {
+	width:128px;
+}
+
+.user-picture-label {
+	font-size:20px;
+}
+
+
+.account-bio-label{
+	display:block;
+	font-size:14px;
+	opacity:0.8;
+}
+
+.account-bio-value {
+	display:block;
+	margin-bottom:10px;
+	font-size:18px;
+}
+
+
+.account-username-box {
+	margin-bottom:10px;
+
+	.open #profile {
+		background-color: lighten(@brand-primary, 10%);
+	}
+}
+
+.account-username{
+  font-size:20px;
+  font-weight:bold;
+}
+
+
+.user-recent-posts {
+	.panel-body {
+		.content {
+			max-height:250px;
+			word-break: break-word;
+			overflow: hidden;
+			position: relative;
+		}
+	}
+}
+
+.account-stats {
+	.formatted-number, .human-readable-number {
+		font-size:30px;
+	}
+
+	.account-bio-label {
+		font-size:16px;
+		width:100px;
+	}
+}

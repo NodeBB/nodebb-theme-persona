@@ -1,0 +1,162 @@
+.groups {
+	&.list {
+		margin-top: 1em;
+		.panel-body {
+			min-height: 72px;
+		}
+	}
+
+	.list-cover {
+		background-size: cover;
+		min-height: 125px;
+		background-position: 50% 50%;
+		.pointer;
+
+		h3 {
+			background-color: rgba(0,0,0,0.5);
+			display: inline-block;
+			padding: 0.25em 0.5em;
+			color: white;
+			font-weight: bold;
+		}
+	}
+
+	.group-cover {
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 200px;
+		position: relative;
+		margin-bottom: 1em;
+
+		@media (min-width: @screen-md-min) {
+			min-height: 250px;
+		}
+
+		.change {
+			visibility: hidden;
+		}
+
+		&.initialised:hover {
+			.change {
+				.opacity(1);
+				visibility: visible;
+			}
+		}
+
+		&.active {
+			&:hover {
+				cursor: move;
+			}
+
+			.instructions {
+				.opacity(1);
+			}
+
+			.change {
+				display: none;
+			}
+
+			.save {
+				display: inline-block;
+			}
+		}
+
+		&.saving {
+			.save {
+				display: none;
+			}
+
+			.indicator {
+				display: inline-block;
+			}
+		}
+
+		.change, .save, .indicator {
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.change {
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: none;
+		}
+
+		.instructions {
+			display: inline-block;
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			margin-top: 2em;
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+	}
+
+	.members {
+		padding-left: 0;
+
+		> li {
+			list-style-type: none;
+			display: inline-block;
+
+			img {
+				width: 32px;
+			}
+		}
+
+		.truncated {
+			vertical-align: bottom;
+		}
+	}
+
+	.view-full {
+		float: right;
+	}
+
+	&.details {
+		.members, .pending {
+			img {
+				width: 32px;
+			}
+
+			.member-name {
+				vertical-align: middle;
+			}
+		}
+
+		.latest-posts {
+			.content {
+				max-height: 250px;
+				word-break: break-word;
+				overflow: hidden;
+				position: relative;
+			}
+			.user-img {
+				width: 32px;
+			}
+		}
+	}
+}

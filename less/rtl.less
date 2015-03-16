@@ -1,0 +1,19 @@
+html[data-dir="rtl"] {
+	@import "./bootstrap-rtl/bootstrap-rtl";
+
+	.home {
+		h4 {
+			text-align: right;
+		}
+	}
+
+	.container {
+		#main-nav {
+			float: right !important;
+		}
+
+		#logged-in-menu, #logged-out-menu {
+			float: left !important;
+		}
+	}
+}
