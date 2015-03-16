@@ -4,7 +4,9 @@
 	<p>
 		<strong>{categories.posts.user.username}</strong> <small class="timeago" title="{categories.posts.relativeTime}"></small>
 	</p>
-	{categories.posts.content}
+	<div class="post-content">
+		{categories.posts.content}
+	</div>
 </div>
 <!-- ENDIF @first -->
 <!-- END posts -->
