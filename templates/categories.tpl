@@ -15,21 +15,19 @@
 		</div>
 
 		<!-- IF !categories.link -->
-		<ul class="stats">
-			<li class="col-xs-1">
-				<span class="{categories.unread-class}">{categories.topic_count}</span><br />
-				<small>Topics</small>
-			</li>
-			<li class="col-xs-1">
-				<span class="{categories.unread-class}">{categories.post_count}</span><br />
-				<small>Posts</small>
-			</li>
-			<li class="col-xs-3">
-				<!-- IMPORT partials/categories/lastpost.tpl -->
-			</li>
-		</ul>
-		<!-- ELSE -->
+		<div class="col-xs-1 stats">
+			<span class="{categories.unread-class}">{categories.topic_count}</span><br />
+			<small>Topics</small>
+		</div>
+		<div class="col-xs-1 stats">
+			<span class="{categories.unread-class}">{categories.post_count}</span><br />
+			<small>Posts</small>
+		</div>
 		<div class="col-xs-3">
+			<!-- IMPORT partials/categories/lastpost.tpl -->
+		</div>
+		<!-- ELSE -->
+		<div class="col-xs-4">
 
 		</div>
 		<!-- ENDIF !categories.link -->
