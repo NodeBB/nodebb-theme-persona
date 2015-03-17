@@ -65,7 +65,7 @@
 		<!-- BEGIN topics -->
 		<li class="category-item {function.generateTopicClass}" itemprop="itemListElement" data-tid="{topics.tid}" data-index="{topics.index}">
 
-			<div class="col-md-12 col-xs-12 panel panel-default topic-row">
+			<div class="col-md-12 col-xs-12 topic-row">
 				<!-- IF privileges.editable -->
 					<i class="fa fa-fw fa-square-o pull-left select pointer"></i>
 				<!-- ENDIF privileges.editable -->
