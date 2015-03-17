@@ -1,9 +1,9 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<ul id="post-container" class="posts" data-tid="{tid}">
+	<ul component="topic" id="post-container" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
-			<li class="post-row <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
+			<li component="post" class="post-row <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
 				<a component="post/anchor" name="{posts.index}"></a>
 
 				<meta itemprop="datePublished" content="{posts.relativeTime}">
