@@ -12,7 +12,7 @@
 
 	<div class="subcategories row">
 		<!-- BEGIN children -->
-		<!-- IMPORT partials/category_child.tpl -->
+		<!-- IMPORT partials/category/subcategory.tpl -->
 		<!-- END children -->
 	</div>
 
@@ -37,8 +37,8 @@
 			</button>
 			<!-- ENDIF loggedIn -->
 
-			<!-- IMPORT partials/category_tools.tpl -->
-			<!-- IMPORT partials/category_sort.tpl -->
+			<!-- IMPORT partials/category/tools.tpl -->
+			<!-- IMPORT partials/category/sort.tpl -->
 		</span>
 
 	</div>
@@ -102,7 +102,7 @@
 						<!-- ENDIF topics.unreplied -->
 					</span>
 
-					<!-- IMPORT partials/category_tags.tpl -->
+					<!-- IMPORT partials/category/tags.tpl -->
 				</small>
 			</div>
 		</li>

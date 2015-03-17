@@ -50,7 +50,7 @@
 							</a>
 							<!-- ENDIF topics.unreplied -->
 						</span>
-						<!-- IMPORT partials/category_tags.tpl -->
+						<!-- IMPORT partials/category/tags.tpl -->
 					</small>
 				</div>
 			</li>
