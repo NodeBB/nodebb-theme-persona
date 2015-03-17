@@ -30,17 +30,8 @@
 		app.user = JSON.parse('{userJSON}');
 	</script>
 	<script src="{relative_path}/nodebb.min.js?{script-buster}"></script>
-	<script>
-		require.config({
-			baseUrl: "{relative_path}/src/modules",
-			waitSeconds: 3,
-			urlArgs: "{cache-buster}",
-			paths: {
-				'forum': '../forum',
-				'vendor': '../../vendor'
-			}
-		});
-	</script>
+	<!-- IMPORT partials/requirejs-config.tpl -->
+	
 	<!-- IF useCustomJS -->
 	{customJS}
 	<!-- ENDIF useCustomJS -->
