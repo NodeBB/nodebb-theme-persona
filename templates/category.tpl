@@ -65,19 +65,22 @@
 		<!-- BEGIN topics -->
 		<li class="category-item {function.generateTopicClass}" itemprop="itemListElement" data-tid="{topics.tid}" data-index="{topics.index}">
 
-			<div class="col-md-12 col-xs-12 topic-row">
+			<div class="topic-row">
 				<!-- IF privileges.editable -->
 					<i class="fa fa-fw fa-square-o pull-left select pointer"></i>
 				<!-- ENDIF privileges.editable -->
 				<a href="{relative_path}/user/{topics.user.userslug}" class="pull-left">
-					<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-rounded user-img" title="{topics.user.username}"/>
+					<img src="{topics.user.picture}" class="img-circle user-img" title="{topics.user.username}"/>
 				</a>
 
 				<h3>
 					<a href="{relative_path}/topic/{topics.slug}" itemprop="url">
 						<meta itemprop="name" content="{topics.title}">
 
-						<strong><i class="fa fa-thumb-tack<!-- IF !topics.pinned --> hide<!-- ENDIF !topics.pinned -->"></i> <i class="fa fa-lock<!-- IF !topics.locked --> hide<!-- ENDIF !topics.locked -->"></i></strong>
+						<strong>
+							<i class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
+							<i class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
+						</strong>
 						<span class="topic-title">{topics.title}</span>
 					</a>
 				</h3>
@@ -102,7 +105,7 @@
 						[[category:no_replies]]
 						<!-- ELSE -->
 						<a href="<!-- IF topics.teaser.user.userslug -->{relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-							<img class="teaser-pic" src="{topics.teaser.user.picture}" title="{topics.teaser.user.username}"/>
+							<img class="teaser-pic img-circle" src="{topics.teaser.user.picture}" title="{topics.teaser.user.username}"/>
 						</a>
 						<a href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 							[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]
