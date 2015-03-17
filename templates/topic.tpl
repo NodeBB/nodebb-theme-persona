@@ -4,7 +4,7 @@
 	<ul id="post-container" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
 			<li class="post-row <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-				<a id="post_anchor_{posts.index}" name="{posts.index}"></a>
+				<a component="post/anchor" name="{posts.index}"></a>
 
 				<meta itemprop="datePublished" content="{posts.relativeTime}">
 				<meta itemprop="dateModified" content="{posts.relativeEditTime}">
