@@ -176,6 +176,5 @@
 
 </div>
 
-<input type="hidden" template-variable="yourid" value="{yourid}" />
-<input type="hidden" template-variable="theirid" value="{theirid}" />
-<input type="hidden" template-type="boolean" template-variable="isFollowing" value="{isFollowing}" />
+<!-- IMPORT partials/variables/account.tpl -->
+<!-- IMPORT partials/variables/account/profile.tpl -->

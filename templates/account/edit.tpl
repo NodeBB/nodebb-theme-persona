@@ -136,8 +136,5 @@
 	<!-- IMPORT partials/modals/upload_picture_from_url_modal.tpl -->
 </div>
 
-<input type="hidden" template-variable="yourid" value="{yourid}" />
-<input type="hidden" template-variable="theirid" value="{theirid}" />
-<input type="hidden" template-variable="userslug" value="{userslug}" />
-<input type="hidden" template-variable="gravatarpicture" value="{gravatarpicture}" />
-<input type="hidden" template-variable="uploadedpicture" value="{uploadedpicture}" />
+<!-- IMPORT partials/variables/account.tpl -->
+<!-- IMPORT partials/variables/account/edit.tpl -->

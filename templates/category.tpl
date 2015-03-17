@@ -1,12 +1,3 @@
-
-<input type="hidden" template-variable="category_id" value="{cid}" />
-<input type="hidden" template-variable="category_name" value="{name}" />
-<input type="hidden" template-variable="category_slug" value="{slug}" />
-<input type="hidden" template-variable="topic_count" value="{topic_count}" />
-<input type="hidden" template-variable="currentPage" value="{currentPage}" />
-<input type="hidden" template-variable="pageCount" value="{pageCount}" />
-
-
 <div class="category">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
@@ -26,17 +17,7 @@
 		<!-- ENDIF privileges.topics:create -->
 
 		<span class="pull-right">
-			<!-- IF loggedIn -->
-			<button type="button" class="btn btn-default btn-success watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->">
-				<i class="fa fa-eye"></i>
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:watch]]</span>
-			</button>
-			<button type="button" class="btn btn-default btn-warning ignore <!-- IF isIgnored -->hidden<!-- ENDIF isIgnored -->">
-				<i class="fa fa-eye-slash"></i>
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[category:ignore]]</span>
-			</button>
-			<!-- ENDIF loggedIn -->
-
+			<!-- IMPORT partials/category/watch.tpl -->
 			<!-- IMPORT partials/category/tools.tpl -->
 			<!-- IMPORT partials/category/sort.tpl -->
 		</span>
@@ -115,3 +96,4 @@
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
 <!-- IMPORT partials/noscript/paginator.tpl -->
+<!-- IMPORT partials/variables/category.tpl -->
