@@ -1,6 +1,6 @@
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 	<!-- BEGIN categories -->
-	<li data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}" class="row">
+	<li data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}" class="row clearfix">
 		<meta itemprop="name" content="{categories.name}">
 
 		<div class="col-md-7 col-sm-12 col-xs-12 content">
@@ -33,8 +33,6 @@
 			</div>
 			<!-- ENDIF !categories.link -->
 		</div>
-
-		<div class="clearfix"></div>
 	</li>
 	<!-- END categories -->
-</div>
+</ul>
