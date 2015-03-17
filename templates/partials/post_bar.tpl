@@ -19,8 +19,10 @@
 	<span class="browsing-users hidden">
 		&bull;
 		<small><span>[[category:browsing]]</span></small>
-		<div class="thread_active_users active-users inline-block"></div>
-		<small class="hidden"><i class="fa fa-users"></i> <span class="user-count"></span></small>
+		<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
+		<small class="hidden">
+			<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
+		</small>
 	</span>
 </div>
 
