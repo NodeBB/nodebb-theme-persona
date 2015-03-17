@@ -118,7 +118,7 @@
 						</div>
 					</div>
 
-					<div id="content_{posts.pid}" class="post-content" itemprop="text">{posts.content}</div>
+					<div component="post/content" class="post-content" itemprop="text">{posts.content}</div>
 					<!-- IF posts.user.signature -->
 					<div class="post-signature">{posts.user.signature}</div>
 					<!-- ENDIF posts.user.signature -->
