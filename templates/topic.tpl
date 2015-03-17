@@ -61,7 +61,7 @@
 							<!-- ENDIF !posts.selfPost -->
 							<button component="post/favourite" data-favourited="{posts.favourited}" class="favourite favourite-tooltip btn btn-sm btn-default <!-- IF posts.favourited --> btn-warning <!-- ENDIF posts.favourited -->" type="button">
 								<span class="favourite-text">[[topic:favourite]]</span>
-								<span class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
+								<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
 								<!-- IF posts.favourited -->
 								<i class="fa fa-star"></i>
 								<!-- ELSE -->
@@ -75,7 +75,7 @@
 							<button component="post/upvote" class="upvote btn btn-sm btn-default <!-- IF posts.upvoted --> upvoted btn-primary <!-- ENDIF posts.upvoted -->">
 								<i class="fa fa-chevron-up"></i>
 							</button>
-							<button component="post/votes" class="votes btn btn-sm btn-default" data-votes="{posts.votes}">{posts.votes}</button>
+							<button component="post/vote-count" class="votes btn btn-sm btn-default" data-votes="{posts.votes}">{posts.votes}</button>
 							<!-- IF !downvote:disabled -->
 							<button component="post/downvote" class="downvote btn btn-sm btn-default <!-- IF posts.downvoted --> downvoted btn-primary <!-- ENDIF posts.downvoted -->">
 								<i class="fa fa-chevron-down"></i>
