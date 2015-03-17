@@ -38,18 +38,7 @@
 			<!-- ENDIF loggedIn -->
 
 			<!-- IMPORT partials/category_tools.tpl -->
-
 			<!-- IMPORT partials/category_sort.tpl -->
-
-			<div class="dropdown share-dropdown inline-block">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:share]]</span>
-					<span class="visible-xs-inline"><i class="fa fa-fw fa-share-alt"></i></span>
-					<span class="caret"></span>
-				</button>
-
-				<!-- IMPORT partials/share_dropdown.tpl -->
-			</div>
 		</span>
 
 	</div>
