@@ -14,7 +14,7 @@
 					</a>
 					<!-- ENDIF showSiteTitle -->
 
-					<div class="header-topic-title visible-xs">
+					<div component="navbar/title" class="visible-xs">
 						<span></span>
 					</div>
 				</div>
