@@ -75,7 +75,7 @@
 							<button component="post/upvote" class="upvote btn btn-sm btn-default <!-- IF posts.upvoted --> upvoted btn-primary <!-- ENDIF posts.upvoted -->">
 								<i class="fa fa-chevron-up"></i>
 							</button>
-							<button component="post/voters" class="votes btn btn-sm btn-default" data-votes="{posts.votes}">{posts.votes}</button>
+							<button component="post/votes" class="votes btn btn-sm btn-default" data-votes="{posts.votes}">{posts.votes}</button>
 							<!-- IF !downvote:disabled -->
 							<button component="post/downvote" class="downvote btn btn-sm btn-default <!-- IF posts.downvoted --> downvoted btn-primary <!-- ENDIF posts.downvoted -->">
 								<i class="fa fa-chevron-down"></i>
@@ -131,7 +131,7 @@
 							<!-- ENDIF posts.editor.username -->
 						</span>
 						<span class="pull-left">
-							[[global:reputation]]: <i class='fa fa-star'></i> <span data-reputation="{posts.user.reputation}" data-uid="{posts.uid}" class='formatted-number reputation'>{posts.user.reputation}</span>&nbsp;|&nbsp;[[global:posts]]: <i class='fa fa-pencil'></i> <span class='formatted-number' component="user/postcount" data-uid="{posts.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
+							[[global:reputation]]: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.uid}" class='formatted-number reputation'>{posts.user.reputation}</span>&nbsp;|&nbsp;[[global:posts]]: <i class='fa fa-pencil'></i> <span class='formatted-number' component="user/postcount" data-uid="{posts.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
 							<!-- IF posts.user.custom_profile_info.length -->
 								<!-- BEGIN custom_profile_info -->
 								| {posts.user.custom_profile_info.content}
