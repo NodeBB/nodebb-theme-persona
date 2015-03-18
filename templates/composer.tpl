@@ -83,9 +83,22 @@
 						<![endif]-->
 					</form>
 				</div>
+
 				<div class="btn-group pull-right action-bar hidden-sm hidden-xs">
 					<button class="btn btn-default" data-action="discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
+
 					<button class="btn btn-primary" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
+					<!-- IF !isEditing -->
+					<!-- IF isAdminOrMod -->
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu pull-right" role="menu">
+						<li><a href="#" data-action="post-lock"><i class="fa fa-fw fa-lock"></i> [[modules:composer.submit_and_lock]]</a></li>
+					</ul>
+					<!-- ENDIF isAdminOrMod -->
+					<!-- ENDIF !isEditing -->
 				</div>
 
 				<!-- IF showTags -->
