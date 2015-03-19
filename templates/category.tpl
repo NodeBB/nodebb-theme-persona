@@ -1,12 +1,7 @@
 <div class="category">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
-	<div class="subcategories row">
-		<!-- BEGIN children -->
-		<!-- IMPORT partials/category/subcategory.tpl -->
-		<!-- END children -->
-	</div>
-
+	<!-- IMPORT partials/category/subcategory.tpl -->
+	
 	<!-- IF children.length --><hr /><!-- ENDIF children.length -->
 
 	<div class="clearfix">
@@ -37,7 +32,7 @@
 	<ul component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 		<meta itemprop="itemListOrder" content="descending">
 		<!-- BEGIN topics -->
-		<li component="category/topic" class="row clearfix {function.generateTopicClass}"  <!-- IMPORT partials/data/category.tpl -->>
+		<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 			<meta itemprop="name" content="{topics.title}">
 
 			<div class="col-md-7 col-sm-12 col-xs-12 content">
