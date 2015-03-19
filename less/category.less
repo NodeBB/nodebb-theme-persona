@@ -7,6 +7,51 @@
 				-moz-opacity: 0.30;
 				opacity: 0.30;
 			}
+
+			.select {
+				position: relative;
+				.pointer;
+
+				&:before {
+					content: "";
+				}
+
+				.fa-check {
+					border: 1px solid @brand-success;
+					color: @brand-success;
+					padding: 14px;
+					border-radius: 50%;
+					position: absolute;
+					font-size: 15px;
+					opacity: 0;	
+					top: 0px;
+
+					&:before {
+						.pointer;
+					}
+				}
+
+				.user-img {
+					opacity: 1;
+				}
+
+				.fa-check, .user-img {
+					.transition(.2s ease-in-out opacity);
+				}
+
+				width: 50px;
+				float: left;
+			}
+
+			&.selected {
+				.user-img {
+					opacity: 0;
+				}
+
+				.fa-check {
+					opacity: 1;
+				}
+			}
 		}
 
 		&:last-child li {

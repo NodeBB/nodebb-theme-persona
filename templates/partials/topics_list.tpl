@@ -5,14 +5,19 @@
 		<meta itemprop="name" content="{topics.title}">
 
 		<div class="col-md-7 col-sm-12 col-xs-12 content">
+			
+
 			<div class="pull-left">
 				<!-- IF showSelect -->
-					<i class="fa fa-fw fa-square-o pull-left select pointer"></i>
+					<div class="select fa-square-o">
+						<img src="{topics.user.picture}" class="img-circle user-img" />
+						<i class="fa fa-check"></i>
+					</div>
+				<!-- ELSE -->
+					<a href="{relative_path}/user/{topics.user.userslug}" class="pull-left">
+						<img src="{topics.user.picture}" class="img-circle user-img" title="{topics.user.username}"/>
+					</a>
 				<!-- ENDIF showSelect -->
-
-				<a href="{relative_path}/user/{topics.user.userslug}" class="pull-left">
-					<img src="{topics.user.picture}" class="img-circle user-img" title="{topics.user.username}"/>
-				</a>
 			</div>
 
 			<h1 class="title pull-left">
