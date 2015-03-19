@@ -30,10 +30,10 @@
 	</div>
 	<!-- ENDIF !topics.length -->
 
-	<ul id="topics-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
+	<ul component="category" id="topics-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 		<meta itemprop="itemListOrder" content="descending">
 		<!-- BEGIN topics -->
-		<li class="category-item {function.generateTopicClass}" itemprop="itemListElement" data-tid="{topics.tid}" data-index="{topics.index}">
+		<li component="category/topic" class="category-item {function.generateTopicClass}" data-tid="{topics.tid}" data-index="{topics.index}" data-cid="{topics.cid}" itemprop="itemListElement">
 
 			<div class="topic-row">
 				<!-- IF privileges.editable -->
