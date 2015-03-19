@@ -1,5 +1,4 @@
 <div class="popular">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<ul class="nav nav-pills">
@@ -17,9 +16,7 @@
 	</div>
 	<!-- ENDIF !topics.length -->
 
-	<div class="category row">
-		<div class="col-md-12">
-			<!-- IMPORT partials/topics_list.tpl -->
-		</div>
+	<div class="category">
+		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>
