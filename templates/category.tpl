@@ -7,7 +7,9 @@
 		<!-- END children -->
 	</div>
 
-	<div class="header category-tools clearfix">
+	<!-- IF children.length --><hr /><!-- ENDIF children.length -->
+
+	<div class="clearfix">
 		<!-- IF privileges.topics:create -->
 		<button id="new_post" class="btn btn-primary">[[category:new_topic_button]]</button>
 		<!-- ELSE -->
@@ -22,6 +24,8 @@
 			<!-- IMPORT partials/category/sort.tpl -->
 		</span>
 	</div>
+
+	<hr />
 
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning" id="category-no-topics">
