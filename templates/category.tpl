@@ -37,7 +37,7 @@
 	<ul component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 		<meta itemprop="itemListOrder" content="descending">
 		<!-- BEGIN topics -->
-		<li component="category/topic" class="row clearfix {function.generateTopicClass}" data-tid="{topics.tid}" data-index="{topics.index}" data-cid="{topics.cid}" itemprop="itemListElement">
+		<li component="category/topic" class="row clearfix {function.generateTopicClass}"  <!-- IMPORT partials/data/category.tpl -->>
 			<meta itemprop="name" content="{topics.title}">
 
 			<div class="col-md-7 col-sm-12 col-xs-12 content">
