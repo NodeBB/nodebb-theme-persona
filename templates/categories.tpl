@@ -1,4 +1,6 @@
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+	<p>Categories</p>
+
 	<!-- BEGIN categories -->
 	<li data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}" class="row clearfix">
 		<meta itemprop="name" content="{categories.name}">

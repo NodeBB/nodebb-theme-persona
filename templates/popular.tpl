@@ -17,6 +17,7 @@
 	<!-- ENDIF !topics.length -->
 
 	<div class="category">
+		<p>Popular</p>
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>

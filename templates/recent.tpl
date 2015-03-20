@@ -20,6 +20,7 @@
 	<!-- ENDIF !topics.length -->
 
 	<div class="category">
+		<p>Recent</p>
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>

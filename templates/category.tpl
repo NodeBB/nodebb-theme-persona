@@ -28,7 +28,7 @@
 	</div>
 	<!-- ENDIF !topics.length -->
 
-
+	<p>Topics</p>
 	<!-- IMPORT partials/topics_list.tpl -->
 
 	<!-- IF config.usePagination -->

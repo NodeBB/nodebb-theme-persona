@@ -27,6 +27,7 @@
 	</a>
 
 	<div class="category">
+		<p>Unread</p>
 		<!-- IMPORT partials/topics_list.tpl -->
 		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 	</div>
