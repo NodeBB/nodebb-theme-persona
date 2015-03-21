@@ -28,8 +28,6 @@
 		<!-- ENDIF !loggedIn -->
 	<!-- ENDIF privileges.topics:reply -->
 
-	<!-- IMPORT partials/thread_sort.tpl -->
-
 	<!-- IMPORT partials/thread_tools.tpl -->
 </div>
 <div style="clear:both;"></div>
