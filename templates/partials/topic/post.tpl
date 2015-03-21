@@ -1,4 +1,4 @@
-<div class="content clearfix">
+<div class="clearfix">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			<img src="{posts.user.picture}" align="left" itemprop="image" />
@@ -9,14 +9,22 @@
 	</div>
 
 	<h1 class="title pull-left">
-		<div class="main-post">
-			<p component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</p>
-		</div>
-
-		<!-- IF template.category -->
-		<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
-		<!-- ELSE -->
-		<small>[[global:posted_in_ago, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
-		<!-- ENDIF template.category -->
+		<!-- IF !posts.index -->
+		<p component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</p>
+		<!-- ENDIF !posts.index -->
+		<small>
+			<i class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+			<strong><a class="username-field" href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">
+				{posts.user.username}
+			</a></strong>
+			[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
+			<!-- IF posts.editor.username -->
+			<span>| [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
+			<!-- ENDIF posts.editor.username -->
+		</small>
 	</h1>
 </div>
+
+<div class="content" component="post/content" itemprop="text">{posts.content}</div>
+
+<hr />

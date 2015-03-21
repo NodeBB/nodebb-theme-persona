@@ -40,6 +40,28 @@
 	.topic-main-buttons a {
 		margin-left: 20px;
 	}
+
+	.title {
+		p {
+			margin-bottom: 4px;
+		}
+
+		small {
+			margin-top: 2px;
+			display: block;
+
+			color: @gray-light;
+
+			strong {
+				color: @gray-dark;
+			}
+		}
+	}
+
+	.content {
+		margin-top: 20px;
+		padding-bottom: 10px;
+	}
 }
 
 
@@ -60,16 +82,12 @@
 		padding: 0;
 
 		> li {
-			padding-bottom: 10px;
-
 			&.deleted {
 				-moz-opacity: 0.30;
 				opacity: 0.30;
 			}
 		}
-	}
 
-	.posts {
 		.post-content {
 			ul {
 				> li {

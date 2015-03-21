@@ -1,5 +1,3 @@
-<hr />
-
 <div class="inline-block">
 	<span class="tags">
 	<!-- BEGIN tags -->
@@ -22,7 +20,7 @@
 </div>
 
 <div class="topic-main-buttons pull-right">
-	<span class="loading-indicator btn" done="0" style="display:none;">
+	<span class="loading-indicator btn pull-left" done="0" style="display:none;">
 		<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 	</span>
 
