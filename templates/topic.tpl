@@ -1,6 +1,16 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
+	<h1 component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}
+		<span class="browsing-users hidden pull-right">
+			<span>[[category:browsing]]</span>
+			<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
+			<small class="hidden">
+				<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
+			</small>
+		</span>
+	</h1>
+
 	<ul component="topic" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>

@@ -1,7 +1,3 @@
-<!-- IF !posts.index -->
-<h1 component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</h1>
-<!-- ENDIF !posts.index -->
-
 <div class="clearfix">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">

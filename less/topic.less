@@ -1,4 +1,23 @@
 .topic {
+	h1 {
+		font-size: 28px;
+		line-height: 24px;
+		margin-bottom: 30px;
+
+		> span {
+			text-transform: uppercase;
+			color: @gray-light;
+			font-size: 12px;
+			display: inline-block;
+			margin-top: 8px;
+
+			> span {
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+		}
+	}
+
 	.posts {
 		.icon {
 			font-size: 17px;
@@ -14,19 +33,6 @@
 				height: 46px;
 				border-radius: 50%;
 			}
-		}
-
-		h1 {
-			font-size: 28px;
-			line-height: 24px;
-			margin-bottom: 30px
-		}
-	}
-
-	.browsing-users {
-		span {
-			text-transform: uppercase;
-			color: @gray-light;
 		}
 	}
 
@@ -59,7 +65,7 @@
 
 	.content {
 		margin-top: 20px;
-		padding-bottom: 10px;
+		padding-bottom: 1px;
 		margin-top: -43px;
 		margin-left: 61px;
 	}
@@ -161,11 +167,9 @@
 	a[data-uid] {
 		img {
 			border-radius: 50%;
-			margin-top: -4px;
-			margin-left: 1px;
+			width: 20px;
 			margin-right: -12px;
-			width: 46px;
-			height: 46px;
+			vertical-align: middle;
 		}
 
 		&::after {

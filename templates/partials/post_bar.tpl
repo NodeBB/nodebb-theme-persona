@@ -8,15 +8,6 @@
 	<!-- IF tags.length -->
 	<span>|</span>
 	<!-- ENDIF tags.length -->
-
-	
-	<span class="browsing-users hidden">
-		<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
-		<small class="hidden">
-			<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
-		</small>
-		<span>[[category:browsing]]</span>
-	</span>
 </div>
 
 <div class="topic-main-buttons pull-right">
