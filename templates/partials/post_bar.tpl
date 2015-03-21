@@ -12,12 +12,12 @@
 	</span>
 
 	<div class="stats">
-		<span class="topic-post-count human-readable-number" title="{postcount}">{postcount}</span><br />
-		<small>[[global:views]]</small>
+		<span class="human-readable-number" title="{postcount}">{postcount}</span><br />
+		<small>[[global:posts]]</small>
 	</div>
 	<div class="stats">
 		<span class="human-readable-number" title="{viewcount}">{viewcount}</span><br />
-		<small>[[global:posts]]</small>
+		<small>[[global:views]]</small>
 	</div>
 
 	<!-- IF privileges.topics:reply -->
