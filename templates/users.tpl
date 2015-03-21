@@ -21,7 +21,7 @@
 	<ul id="users-container" class="users-container">
 		<!-- IMPORT partials/users_list.tpl -->
 		<li class="users-box {show_anon} anon-user">
-			<img src="https://secure.gravatar.com/avatar/" class="img-thumbnail"/>
+			<img src="https://secure.gravatar.com/avatar/" />
 			<br/>
 			<div class="user-info">
 				<span id="online_anon_count">{anonymousUserCount}</span>

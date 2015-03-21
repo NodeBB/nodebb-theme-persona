@@ -8,7 +8,7 @@
 			<div class="account-picture-block panel panel-default">
 				<div class="panel-body">
 					<div class="text-center">
-						<img src="{picture}" class="user-profile-picture img-thumbnail" />
+						<img src="{picture}" class="user-profile-picture" />
 					</div>
 
 					<div>

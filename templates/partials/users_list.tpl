@@ -1,6 +1,6 @@
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
-	<a href="{relative_path}/user/{users.userslug}"><img src="{users.picture}" class="img-thumbnail"/></a>
+	<a href="{relative_path}/user/{users.userslug}"><img src="{users.picture}" /></a>
 	<br/>
 	<div class="user-info">
 		<span>

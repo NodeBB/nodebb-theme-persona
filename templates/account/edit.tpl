@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-2" style="text-align: center; margin-bottom:20px;">
 			<div class="account-picture-block text-center">
-				<img id="user-current-picture" class="user-profile-picture img-thumbnail" src="{picture}" /><br /><br />
+				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
 				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
 				<br/><br/>
 				<!-- IF config.allowAccountDelete -->
