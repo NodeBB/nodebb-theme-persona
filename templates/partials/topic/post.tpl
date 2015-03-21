@@ -1,3 +1,7 @@
+<!-- IF !posts.index -->
+<h1 component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</h1>
+<!-- ENDIF !posts.index -->
+
 <div class="clearfix">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
@@ -8,23 +12,21 @@
 		</a>
 	</div>
 
-	<h1 class="title pull-left">
-		<!-- IF !posts.index -->
-		<p component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</p>
-		<!-- ENDIF !posts.index -->
-		<small>
-			<i class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
-			<strong><a class="username-field" href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">
-				{posts.user.username}
-			</a></strong>
-			[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
-			<!-- IF posts.editor.username -->
-			<span>| [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
-			<!-- ENDIF posts.editor.username -->
-		</small>
-	</h1>
+	<small class="pull-left">
+		<i class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+		<strong>
+			<a class="username-field" href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
+		</strong>
+
+		[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
+
+		<!-- IF posts.editor.username -->
+		<span>| [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
+		<!-- ENDIF posts.editor.username -->
+	</small>
 </div>
 
+<br />
 <div class="content" component="post/content" itemprop="text">{posts.content}</div>
 
 <hr />
