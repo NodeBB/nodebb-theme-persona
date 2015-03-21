@@ -4,19 +4,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<div>
-					<a href="{relative_path}/">
-						<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
-					</a>
-					<!-- IF showSiteTitle -->
-					<a href="{relative_path}/">
-						<h1 class="navbar-brand forum-title">{title}</h1>
-					</a>
-					<!-- ENDIF showSiteTitle -->
 
-					<div component="navbar/title" class="visible-xs">
-						<span></span>
-					</div>
+				<a href="{relative_path}/">
+					<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
+				</a>
+				<!-- IF showSiteTitle -->
+				<a href="{relative_path}/">
+					<h1 class="navbar-brand forum-title">{title}</h1>
+				</a>
+				<!-- ENDIF showSiteTitle -->
+
+				<div component="navbar/title" class="visible-xs">
+					<span></span>
 				</div>
 			</div>
 
