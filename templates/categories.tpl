@@ -19,12 +19,12 @@
 		<div class="hidden-sm hidden-xs">
 			<!-- IF !categories.link -->
 			<div class="col-md-1 stats">
-				<span class="{categories.unread-class}">{categories.topic_count}</span><br />
-				<small>Topics</small>
-			</div>
-			<div class="col-md-1 stats">
 				<span class="{categories.unread-class}">{categories.post_count}</span><br />
 				<small>Posts</small>
+			</div>
+			<div class="col-md-1 stats">
+				<span class="{categories.unread-class}">{categories.topic_count}</span><br />
+				<small>Topics</small>
 			</div>
 			<div class="col-md-3">
 				<!-- IMPORT partials/categories/lastpost.tpl -->
