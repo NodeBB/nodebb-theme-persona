@@ -5,9 +5,7 @@
 		<meta itemprop="name" content="{topics.title}">
 
 		<div class="col-md-7 col-sm-9 col-xs-11 content">
-			
-
-			<div class="pull-left">
+			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 					<div class="select fa-square-o">
 						<img src="{topics.user.picture}" class="img-circle user-img" />
