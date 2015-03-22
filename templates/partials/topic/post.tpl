@@ -17,7 +17,7 @@
 		[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
 
 		<!-- IF posts.editor.username -->
-		<span>, [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
+		<span class="visible-lg-inline visible-md-inline">, [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
 		<!-- ENDIF posts.editor.username -->
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
