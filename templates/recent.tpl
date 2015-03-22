@@ -7,7 +7,7 @@
 	<a href="/login?next=recent" class="btn btn-primary">[[category:guest-login-post]]</a>
 	<!-- ENDIF loggedIn -->
 
-	<br/><br/>
+	<hr />
 
 	<a href="{relative_path}/recent">
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
