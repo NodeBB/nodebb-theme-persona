@@ -4,7 +4,7 @@
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{topics.title}">
 
-		<div class="col-md-7 col-sm-12 col-xs-12 content">
+		<div class="col-md-7 col-sm-9 col-xs-11 content">
 			
 
 			<div class="pull-left">
@@ -33,41 +33,39 @@
 			</h1>
 		</div>
 
-		<div class="hidden-sm hidden-xs">
-			<!-- IF !categories.link -->
-			<div class="col-md-1 stats">
-				<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
-				<small>[[global:views]]</small>
-			</div>
-			<div class="col-md-1 stats">
-				<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
-				<small>[[global:posts]]</small>
-			</div>
-			<div class="col-md-3">
-				<div class="card" style="border-color: {bgColor}">
-					<!-- IF topics.unreplied -->
-					<p>
-						[[category:no_replies]]
-					</p>
-					<!-- ELSE -->
-					<p>
-						<a href="<!-- IF topics.teaser.user.userslug -->{relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-							<strong>{topics.teaser.user.username}</strong>
-						</a>
-						<small class="timeago" title="{topics.teaser.timestamp}"></small>
-					</p>
-					<p>
-						{topics.teaser.content}
-					</p>
-					<!-- ENDIF topics.unreplied -->
-				</div>
-			</div>
-			<!-- ELSE -->
-			<div class="col-md-4">
-
-			</div>
-			<!-- ENDIF !categories.link -->
+		<!-- IF !categories.link -->
+		<div class="col-md-1 hidden-sm hidden-xs stats">
+			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
+			<small>[[global:views]]</small>
 		</div>
+		<div class="col-md-1 hidden-sm hidden-xs stats">
+			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
+			<small>[[global:posts]]</small>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-1">
+			<div class="card" style="border-color: {bgColor}">
+				<!-- IF topics.unreplied -->
+				<p class="hidden-xs">
+					[[category:no_replies]]
+				</p>
+				<!-- ELSE -->
+				<p class="hidden-xs">
+					<a href="<!-- IF topics.teaser.user.userslug -->{relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
+						<strong>{topics.teaser.user.username}</strong>
+					</a>
+					<small class="timeago" title="{topics.teaser.timestamp}"></small>
+				</p>
+				<p>
+					{topics.teaser.content}
+				</p>
+				<!-- ENDIF topics.unreplied -->
+			</div>
+		</div>
+		<!-- ELSE -->
+		<div class="col-md-4">
+
+		</div>
+		<!-- ENDIF !categories.link -->
 	</li>
 	<!-- END topics -->
 </ul>
