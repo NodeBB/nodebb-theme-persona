@@ -71,13 +71,18 @@
 	}
 
 	.moderator-tools {
-		text-transform: lowercase;
-		:before {
-			content: "\2022\0020";
-		}
-
+		position: absolute;
+		right: 5px;
+		top: 0px;
+		font-size: 14px;;
+		
 		a {
-			.pointer;
+			color: @gray-light;
+			outline: none;
+
+			&.menuitem {
+				color: @gray-dark;
+			}
 		}
 	}
 
@@ -115,6 +120,8 @@
 		padding: 0;
 
 		> li {
+			position: relative;
+
 			&.deleted {
 				-moz-opacity: 0.30;
 				opacity: 0.30;

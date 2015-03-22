@@ -17,20 +17,38 @@
 		[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
 
 		<!-- IF posts.editor.username -->
-		<span>| [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
+		<span>, [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
 		<!-- ENDIF posts.editor.username -->
 
-		<!-- IF posts.display_moderator_tools -->
-		<span class="moderator-tools">
-			<a component="post/edit">[[topic:edit]]</a>
-			<a component="post/delete">[[topic:delete]]</a>
-			<a component="post/purge" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">[[topic:purge]]</a>
-			<!-- IF posts.display_move_tools -->
-			<a component="post/move">[[topic:move]]</a>
-			<!-- ENDIF posts.display_move_tools -->
-		</span>
-		<!-- ENDIF posts.display_moderator_tools -->
-
+		<div class="dropdown moderator-tools">
+			<a href="#" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu">
+				<!-- IF posts.display_moderator_tools -->
+				<li role="presentation">
+					<a component="post/edit" role="menuitem" tabindex="-1" href="#">
+						[[topic:edit]]
+					</a>
+				</li>
+				<li role="presentation">
+					<a component="post/delete" role="menuitem" tabindex="-1" href="#">
+						[[topic:delete]]
+					</a>
+				</li>
+				<li role="presentation">
+					<a component="post/purge" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
+						[[topic:purge]]
+					</a>
+				</li>
+				<!-- IF posts.display_move_tools -->
+				<li role="presentation">
+					<a component="post/move" role="menuitem" tabindex="-1" href="#">
+						[[topic:move]]
+					</a>
+				</li>
+				<!-- ENDIF posts.display_move_tools -->
+				<!-- ENDIF posts.display_moderator_tools -->
+			</ul>
+		</div>
 	</small>
 </div>
 
