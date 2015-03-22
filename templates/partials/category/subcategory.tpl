@@ -6,8 +6,8 @@
 		<li data-cid="{children.cid}" data-numRecentReplies="{children.numRecentReplies}" class="row clearfix">
 			<meta itemprop="name" content="{children.name}">
 
-			<div class="col-md-7 col-sm-12 col-xs-12 content">
-				<div class="icon pull-left" style="{function.generateCategoryBackground}">
+			<div class="col-md-7 col-sm-9 col-xs-11 content">
+				<div class="icon hidden-sm hidden-xs pull-left" style="{function.generateCategoryBackground}">
 					<i class="fa fa-fw {children.icon}"></i>
 				</div>
 
@@ -23,36 +23,34 @@
 				</h1>
 			</div>
 
-			<div class="hidden-sm hidden-xs">
-				<!-- IF !children.link -->
-				<div class="col-md-1 stats">
-					<span class="{children.unread-class}">{children.topic_count}</span><br />
-					<small>Topics</small>
-				</div>
-				<div class="col-md-1 stats">
-					<span class="{children.unread-class}">{children.post_count}</span><br />
-					<small>Posts</small>
-				</div>
-				<div class="col-md-3">
-					<!-- BEGIN posts -->
-					<!-- IF @first -->
-					<div class="card" style="border-color: {children.bgColor}">
-						<p>
-							<strong>{children.posts.user.username}</strong> <small class="timeago" title="{children.posts.relativeTime}"></small>
-						</p>
-						<div class="post-content">
-							{children.posts.content}
-						</div>
-					</div>
-					<!-- ENDIF @first -->
-					<!-- END posts -->
-				</div>
-				<!-- ELSE -->
-				<div class="col-md-4">
-
-				</div>
-				<!-- ENDIF !children.link -->
+			<!-- IF !children.link -->
+			<div class="col-md-1 hidden-sm hidden-xs stats">
+				<span class="{children.unread-class}">{children.topic_count}</span><br />
+				<small>Topics</small>
 			</div>
+			<div class="col-md-1 hidden-sm hidden-xs stats">
+				<span class="{children.unread-class}">{children.post_count}</span><br />
+				<small>Posts</small>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-1">
+				<!-- BEGIN posts -->
+				<!-- IF @first -->
+				<div class="card" style="border-color: {children.bgColor}">
+					<p>
+						<strong>{children.posts.user.username}</strong> <small class="timeago" title="{children.posts.relativeTime}"></small>
+					</p>
+					<div class="post-content">
+						{children.posts.content}
+					</div>
+				</div>
+				<!-- ENDIF @first -->
+				<!-- END posts -->
+			</div>
+			<!-- ELSE -->
+			<div class="col-md-4">
+
+			</div>
+			<!-- ENDIF !children.link -->
 		</li>
 		<!-- END children -->
 	</ul>
