@@ -84,6 +84,15 @@
 				color: @gray-dark;
 			}
 		}
+
+		// temporary until we build component toggling
+		.favourite.btn-warning, .follow.btn-success {
+			background: white !important;
+			color: #333;
+			&:hover {
+				background: @brand-primary !important;
+			}
+		}
 	}
 
 	.tags {
