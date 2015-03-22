@@ -3,6 +3,14 @@
 
 	<h1 component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}
 		<!-- IMPORT partials/thread_sort.tpl -->
+
+		<button component="topic/follow" class="btn">
+			<!-- IF isFollowing -->
+			<span>[[topic:unwatch]]</span> <i class="fa fa-eye-slash"></i>
+			<!-- ELSE -->
+			[[topic:watch]]</span> <i class="fa fa-eye"></i>
+			<!-- ENDIF isFollowing -->
+		</button>
 		
 		<span class="browsing-users hidden pull-right">
 			<span>[[category:browsing]]</span>
