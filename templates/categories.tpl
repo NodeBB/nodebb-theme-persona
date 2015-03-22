@@ -1,3 +1,13 @@
+<div class="jumbotron">
+	<p>
+		Welcome to the NodeBB Developer Community
+	</p>
+	<p>
+		<strong>2015-03-22 Introducing the NodeBB 0.7.0 Persona preview</strong><br />
+		Head over to the <a href="#">Persona Feedback Thread</a> to send your feedback and suggestions!
+	</p>
+</div>
+
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 	<p>Categories</p>
 
