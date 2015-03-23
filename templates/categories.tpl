@@ -28,12 +28,12 @@
 
 		<!-- IF !categories.link -->
 		<div class="col-md-1 hidden-sm hidden-xs stats">
-			<span class="{categories.unread-class}">{categories.post_count}</span><br />
-			<small>Posts</small>
+			<span class="{categories.unread-class} human-readable-number" title="{categories.topic_count}">{categories.topic_count}</span><br />
+			<small>[[global:topics]]</small>
 		</div>
 		<div class="col-md-1 hidden-sm hidden-xs stats">
-			<span class="{categories.unread-class}">{categories.topic_count}</span><br />
-			<small>Topics</small>
+			<span class="{categories.unread-class} human-readable-number" title="{categories.post_count}">{categories.post_count}</span><br />
+			<small>[[global:posts]]</small>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-1">
 			<!-- IMPORT partials/categories/lastpost.tpl -->
