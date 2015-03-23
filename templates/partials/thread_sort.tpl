@@ -1,5 +1,5 @@
 <!-- IF loggedIn -->
-<div class="btn-group thread-sort">
+<div class="btn-group thread-sort hidden-xs hidden-sm">
 	<button class="btn dropdown-toggle" data-toggle="dropdown" type="button">[[topic:sort_by]] <span class="caret"></span></button>
 	<ul class="dropdown-menu">
 		<li><a href="#" class="oldest_to_newest" data-sort="oldest_to_newest"><i class="fa fa-fw"></i> [[topic:oldest_to_newest]]</a></li>

@@ -1,10 +1,11 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<h1 component="post/header" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}
+	<h1 component="post/header" itemprop="name">
+		<i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}
 		<!-- IMPORT partials/thread_sort.tpl -->
 
-		<button component="topic/follow" class="btn">
+		<button component="topic/follow" class="btn hidden-xs hidden-sm">
 			<!-- IF isFollowing -->
 			<span>[[topic:unwatch]]</span> <i class="fa fa-eye-slash"></i>
 			<!-- ELSE -->
@@ -12,7 +13,7 @@
 			<!-- ENDIF isFollowing -->
 		</button>
 		
-		<span class="browsing-users hidden pull-right">
+		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
 			<span>[[category:browsing]]</span>
 			<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
 			<small class="hidden">
