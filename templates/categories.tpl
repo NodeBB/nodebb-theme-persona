@@ -39,7 +39,8 @@
 			<!-- IMPORT partials/categories/lastpost.tpl -->
 		</div>
 		<!-- ELSE -->
-		<div class="col-md-5 col-sm-3 col-xs-1 hidden-lg hidden-md">
+		<div class="col-md-2 hidden-sm-hidden-xs"></div>
+		<div class="col-md-3 col-sm-3 col-xs-1">
 			<div class="card" style="border-color: {categories.bgColor}"></div>
 		</div>
 		<!-- ENDIF !categories.link -->

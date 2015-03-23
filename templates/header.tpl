@@ -38,10 +38,10 @@
 </head>
 
 <body>
-	<div class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu">
+	<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu">
 		<div class="container">
 			<!-- IMPORT partials/menu.tpl -->
 		</div>
-	</div>
+	</nav>
 	<div class="container" id="content">
 	<!-- IMPORT partials/noscript/warning.tpl -->
