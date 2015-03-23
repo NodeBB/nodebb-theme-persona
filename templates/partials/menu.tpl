@@ -184,9 +184,6 @@
 					</li>
 				</ul>
 
-				<div class="header-topic-title hidden-xs">
-					<span></span>
-				</div>
 				<!-- ELSE -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
