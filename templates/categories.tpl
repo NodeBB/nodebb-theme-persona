@@ -4,7 +4,7 @@
 	</p>
 	<p>
 		<strong>2015-03-22 Introducing the NodeBB 0.7.0 Persona preview</strong><br />
-		Head over to the <a href="#">Persona Feedback Thread</a> to send your feedback and suggestions!
+		Head over to the <a href="https://community.nodebb.org/topic/4054/introducing-the-nodebb-0-7-0-persona-preview">Persona Feedback Thread</a> to send your feedback and suggestions!
 	</p>
 </div>
 
