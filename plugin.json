@@ -1,0 +1,7 @@
+{
+	"id": "nodebb-theme-persona",
+	"hooks": [],
+	"scripts": [
+		"lib/persona.js"
+	]
+}

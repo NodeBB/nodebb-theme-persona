@@ -1,0 +1,47 @@
+@media (max-width: @screen-xs-max) {
+	#header-menu #nav-dropdown.navbar-slide-in {
+		width: 45%;
+		background: @gray-dark;
+		right: -45%;
+		min-height: 1000px;
+		position: fixed;
+		margin-top: -50px;
+		padding-left: 15px;
+		box-shadow: inset 2px 0px 12px black;
+		top: 0px;
+
+		a, a:hover, a:focus, a:active {
+			color: @gray-lighter;
+		}
+
+		> ul {
+			overflow: hidden;
+			
+			> li {
+				.transition(.40s ease-in-out transform);
+				transform: translate3d(-50px, 0, 0);
+			}
+		}
+	}
+
+	#header-menu .navbar-nav>.active>a,
+	#header-menu .navbar-nav>.active>a:hover,
+	#header-menu .navbar-nav>.active>a:focus {
+		background: none;
+	}
+
+
+	body {
+		.transition(.40s ease-in-out transform);
+
+		&.slide-in {
+			transform: translate3d(-45%, 0, 0);
+
+			#header-menu #nav-dropdown.navbar-slide-in > ul > li {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+
+		
+	}
+}

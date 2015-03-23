@@ -1,5 +1,5 @@
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="slide-in" data-target=".navbar-slide-in">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="navbar-collapse collapse" id="nav-dropdown">
+			<div class="navbar-slide-in" id="nav-dropdown">
 				<!-- IF !maintenanceHeader -->
 				<ul id="main-nav" class="nav navbar-nav">
 					<!-- BEGIN navigation -->
