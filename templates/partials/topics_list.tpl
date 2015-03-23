@@ -33,12 +33,12 @@
 
 		<!-- IF !categories.link -->
 		<div class="col-md-1 hidden-sm hidden-xs stats">
-			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
-			<small>[[global:views]]</small>
-		</div>
-		<div class="col-md-1 hidden-sm hidden-xs stats">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
 			<small>[[global:posts]]</small>
+		</div>
+		<div class="col-md-1 hidden-sm hidden-xs stats">
+			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
+			<small>[[global:views]]</small>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-1">
 			<div class="card" style="border-color: {bgColor}">
