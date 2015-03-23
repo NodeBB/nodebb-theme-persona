@@ -1,9 +1,7 @@
 <div class="unread">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
-		<strong>[[unread:no_unread_topics]]</strong>
-	</div>
+
 
 	<div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -28,6 +26,11 @@
 
 	<div class="category">
 		<p>Unread</p>
+
+		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
+			<strong>[[unread:no_unread_topics]]</strong>
+		</div>
+
 		<!-- IMPORT partials/topics_list.tpl -->
 		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 	</div>

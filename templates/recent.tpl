@@ -13,14 +13,15 @@
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
 
-	<!-- IF !topics.length -->
-	<div class="alert alert-warning" id="category-no-topics">
-		<strong>[[recent:no_recent_topics]]</strong>
-	</div>
-	<!-- ENDIF !topics.length -->
-
 	<div class="category">
 		<p>Recent</p>
+
+		<!-- IF !topics.length -->
+		<div class="alert alert-warning" id="category-no-topics">
+			<strong>[[recent:no_recent_topics]]</strong>
+		</div>
+		<!-- ENDIF !topics.length -->
+
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>
