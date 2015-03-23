@@ -1,5 +1,5 @@
 <div class="dropdown moderator-tools">
-	<a href="#" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
 	<ul class="dropdown-menu dropdown-menu-right" role="menu">
 
 		<!-- IF posts.display_moderator_tools -->
