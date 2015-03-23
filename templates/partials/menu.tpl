@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="navbar-collapse collapse navbar-ex1-collapse" id="nav-dropdown">
+			<div class="navbar-collapse collapse" id="nav-dropdown">
 				<!-- IF !maintenanceHeader -->
 				<ul id="main-nav" class="nav navbar-nav pull-left">
 					<!-- BEGIN navigation -->
