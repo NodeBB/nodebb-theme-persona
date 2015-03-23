@@ -21,7 +21,7 @@
 
 			<div class="navbar-collapse collapse" id="nav-dropdown">
 				<!-- IF !maintenanceHeader -->
-				<ul id="main-nav" class="nav navbar-nav pull-left">
+				<ul id="main-nav" class="nav navbar-nav">
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
@@ -40,7 +40,7 @@
 				</ul>
 
 				<!-- IF loggedIn -->
-				<ul id="logged-in-menu" class="nav navbar-nav navbar-right pull-right">
+				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
 							<i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
@@ -121,7 +121,7 @@
 					</li>
 				</ul>
 				<!-- ELSE -->
-				<ul id="logged-out-menu" class="nav navbar-nav navbar-right pull-right">
+				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
 					<!-- IF allowRegistration -->
 					<li>
 						<a href="{relative_path}/register">
@@ -154,7 +154,7 @@
 				</ul>
 				<!-- ENDIF searchEnabled -->
 
-				<ul class="nav navbar-nav navbar-right pull-right">
+				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a href="#" id="reconnect" class="hide" title="Connection to {title} has been lost, attempting to reconnect...">
 							<i class="fa fa-check"></i>
@@ -188,7 +188,7 @@
 					<span></span>
 				</div>
 				<!-- ELSE -->
-				<ul class="nav navbar-nav navbar-right pull-right">
+				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a href="{relative_path}/login">
 							<i class="fa fa-sign-in visible-xs-inline"></i>
