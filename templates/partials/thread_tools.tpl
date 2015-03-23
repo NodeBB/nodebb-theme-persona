@@ -1,24 +1,52 @@
 <!-- IF privileges.view_thread_tools -->
-<div class="btn-group thread-tools dropup">
+<div class="btn-group thread-tools">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 		<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:thread_tools.title]]</span>
 		<span class="visible-xs-inline"><i class="fa fa-fw fa-gear"></i></span>
 		<span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu pull-right">
+	<ul class="dropdown-menu dropdown-menu-right">
 		<!-- IF privileges.editable -->
-		<li><a component="topic/mark-unread-for-all" href="#" class="markAsUnreadForAll"><i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]</a></li>
-		<li><a component="topic/pin" href="#" class="pin_thread"><i class="fa fa-fw fa-thumb-tack"></i> [[topic:thread_tools.pin]]</a></li>
-		<li><a component="topic/lock" href="#" class="lock_thread"><i class="fa fa-fw fa-lock"></i> [[topic:thread_tools.lock]]</a></li>
+		<li>
+			<a component="topic/mark-unread-for-all" href="#">
+				<i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]
+			</a>
+		</li>
+		<li>
+			<a component="topic/pin" href="#">
+				<i class="fa fa-fw fa-thumb-tack"></i> [[topic:thread_tools.pin]]
+			</a>
+		</li>
+		<li>
+			<a component="topic/lock" href="#">
+				<i class="fa fa-fw fa-lock"></i> [[topic:thread_tools.lock]]
+			</a>
+		</li>
 		<li class="divider"></li>
-		<li><a component="topic/move" href="#" class="move_thread"><i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move]]</a></li>
-		<li><a component="topic/fork" href="#" class="fork_thread"><i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.fork]]</a></li>
+		<li>
+			<a component="topic/move" href="#">
+				<i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move]]
+			</a>
+		</li>
+		<li>
+			<a component="topic/fork" href="#">
+				<i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.fork]]
+			</a>
+		</li>
 		<li class="divider"></li>
 		<!-- ENDIF privileges.editable -->
 
 		<!-- IF privileges.deletable -->
-		<li><a component="topic/delete" href="#" class="delete_thread"><span class="text-error"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]</span></a></li>
-		<li><a component="topic/purge" href="#" class="purge_thread <!-- IF !deleted -->hidden<!-- ENDIF !deleted -->"><span class="text-error"><i class="fa fa-fw fa-eraser"></i> [[topic:thread_tools.purge]]</span></a></li>
+		<li>
+			<a component="topic/delete" href="#">
+				<i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]
+			</a>
+		</li>
+		<li>
+			<a component="topic/purge" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->">
+				<i class="fa fa-fw fa-eraser"></i> [[topic:thread_tools.purge]]
+			</a>
+		</li>
 		<!-- ENDIF privileges.deletable -->
 
 		<!-- IF privileges.editable -->
