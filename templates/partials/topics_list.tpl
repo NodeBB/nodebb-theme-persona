@@ -52,9 +52,9 @@
 						<small class="timeago" title="{topics.teaser.timestamp}"></small>
 					</a>
 				</p>
-				<p>
+				<div class="post-content">
 					{topics.teaser.content}
-				</p>
+				</div>
 				<!-- ENDIF topics.unreplied -->
 			</div>
 		</div>
