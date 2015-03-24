@@ -1,7 +1,13 @@
 .category {
-	ul {
-		li {
+	> ul {
+		> li {
 			list-style: none;
+
+			&:not(.unread) {
+				.card {
+					border-color: lighten(@gray-light, 20%) !important;
+				}
+			}
 
 			&.deleted {
 				-moz-opacity: 0.30;
