@@ -47,10 +47,10 @@
 				</p>
 				<!-- ELSE -->
 				<p class="hidden-xs">
-					<a href="<!-- IF topics.teaser.user.userslug -->{relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
-						<strong>{topics.teaser.user.username}</strong>
+					<strong>{topics.teaser.user.username}</strong>
+					<a href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+						<small class="timeago" title="{topics.teaser.timestamp}"></small>
 					</a>
-					<small class="timeago" title="{topics.teaser.timestamp}"></small>
 				</p>
 				<p>
 					{topics.teaser.content}

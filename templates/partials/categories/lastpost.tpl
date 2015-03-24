@@ -2,7 +2,10 @@
 	<!-- BEGIN posts -->
 	<!-- IF @first -->
 	<p>
-		<strong>{categories.posts.user.username}</strong> <small class="timeago" title="{categories.posts.relativeTime}"></small>
+		<strong>{categories.posts.user.username}</strong>
+		<a href="{relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">
+			<small class="timeago" title="{categories.posts.relativeTime}"></small>
+		</a>
 	</p>
 	<div class="post-content">
 		{categories.posts.content}

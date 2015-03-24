@@ -37,7 +37,10 @@
 					<!-- BEGIN posts -->
 					<!-- IF @first -->
 					<p>
-						<strong>{children.posts.user.username}</strong> <small class="timeago" title="{children.posts.relativeTime}"></small>
+						<strong>{children.posts.user.username}</strong>
+						<a href="{relative_path}/topic/{children.posts.topic.slug}<!-- IF children.posts.index -->/{children.posts.index}<!-- ENDIF children.posts.index -->">
+							<small class="timeago" title="{children.posts.relativeTime}"></small>
+						</a>
 					</p>
 					<div class="post-content">
 						{children.posts.content}
