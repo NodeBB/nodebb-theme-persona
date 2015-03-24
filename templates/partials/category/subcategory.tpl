@@ -25,30 +25,37 @@
 
 			<!-- IF !children.link -->
 			<div class="col-md-1 hidden-sm hidden-xs stats">
-				<span class="{children.unread-class}">{children.topic_count}</span><br />
-				<small>Topics</small>
+				<span class="{children.unread-class} human-readable-number" title="{children.topic_count}">{children.topic_count}</span><br />
+				<small>[[global:topics]]</small>
 			</div>
 			<div class="col-md-1 hidden-sm hidden-xs stats">
-				<span class="{children.unread-class}">{children.post_count}</span><br />
-				<small>Posts</small>
+				<span class="{children.unread-class} human-readable-number" title="{children.post_count}">{children.post_count}</span><br />
+				<small>[[global:posts]]</small>
 			</div>
 			<div class="col-md-3 col-sm-3 col-xs-1">
-				<!-- BEGIN posts -->
-				<!-- IF @first -->
 				<div class="card" style="border-color: {children.bgColor}">
+					<!-- BEGIN posts -->
+					<!-- IF @first -->
 					<p>
 						<strong>{children.posts.user.username}</strong> <small class="timeago" title="{children.posts.relativeTime}"></small>
 					</p>
 					<div class="post-content">
 						{children.posts.content}
 					</div>
+					<!-- ENDIF @first -->
+					<!-- END posts -->
+
+					<!-- IF !posts.length -->
+					<div class="post-content">
+						No new posts.
+					</div>
+					<!-- ENDIF !posts.length -->
 				</div>
-				<!-- ENDIF @first -->
-				<!-- END posts -->
 			</div>
 			<!-- ELSE -->
-			<div class="col-md-4">
-
+			<div class="col-md-2 hidden-sm-hidden-xs"></div>
+			<div class="col-md-3 col-sm-3 col-xs-1">
+				<div class="card" style="border-color: {children.bgColor}"></div>
 			</div>
 			<!-- ENDIF !children.link -->
 		</li>
