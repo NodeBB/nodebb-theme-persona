@@ -35,12 +35,12 @@
 			<span class="{categories.unread-class} human-readable-number" title="{categories.post_count}">{categories.post_count}</span><br />
 			<small>[[global:posts]]</small>
 		</div>
-		<div class="col-md-3 col-sm-3 col-xs-1">
+		<div class="col-md-3 col-sm-3 col-xs-1 teaser">
 			<!-- IMPORT partials/categories/lastpost.tpl -->
 		</div>
 		<!-- ELSE -->
 		<div class="col-md-2 hidden-sm-hidden-xs"></div>
-		<div class="col-md-3 col-sm-3 col-xs-1">
+		<div class="col-md-3 col-sm-3 col-xs-1 teaser">
 			<div class="card" style="border-color: {categories.bgColor}"></div>
 		</div>
 		<!-- ENDIF !categories.link -->

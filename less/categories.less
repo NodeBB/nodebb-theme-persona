@@ -4,6 +4,7 @@
 
 	> li {
 		margin-bottom: 20px;
+		min-height: 53px;
 
 		.content {
 			margin-top: 7px;
@@ -45,12 +46,19 @@
 			}
 		}
 
+		@media (max-width: 500px) {
+			.teaser {
+				position: absolute;
+				right: 4px;
+			}
+		}
+
 		.card {
 			border-left: 4px solid #ccc;
 			text-align: left;
-			height: 53px;
 			margin-top: 2px;
 			overflow: hidden;
+			height: 53px;
 
 			> * {
 				padding-left: 20px;

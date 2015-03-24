@@ -31,7 +31,6 @@
 			</h1>
 		</div>
 
-		<!-- IF !categories.link -->
 		<div class="col-md-1 hidden-sm hidden-xs stats">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
 			<small>[[global:posts]]</small>
@@ -40,7 +39,7 @@
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
 			<small>[[global:views]]</small>
 		</div>
-		<div class="col-md-3 col-sm-3 col-xs-1">
+		<div class="col-md-3 col-sm-3 col-xs-1 teaser">
 			<div class="card" style="border-color: {bgColor}">
 				<!-- IF topics.unreplied -->
 				<p class="hidden-xs">
@@ -59,11 +58,6 @@
 				<!-- ENDIF topics.unreplied -->
 			</div>
 		</div>
-		<!-- ELSE -->
-		<div class="col-md-4">
-
-		</div>
-		<!-- ENDIF !categories.link -->
 	</li>
 	<!-- END topics -->
 </ul>
