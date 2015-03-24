@@ -258,16 +258,27 @@
 		}
 
 		&::after {
-			.opacity(0);
+			z-index: 0;
+			opacity: 0;
+
 			font-family: "FontAwesome";
 			content: "\f11c";
 			padding: 4px 0.25em;
 			position: relative;
-			top: 1px;
+			top: 0px;
+			left: -7px;
+
+			-webkit-transition: opacity 250ms ease, top 250ms ease;
+			-moz-transition: opacity 250ms ease, top 250ms ease;
+			-ms-transition: opacity 250ms ease, top 250ms ease;
+			-o-transition: opacity 250ms ease, top 250ms ease;
+			transition: opacity 250ms ease, top 250ms ease;
 		}
 
 		&.replying::after {
-			.opacity(100);
+			opacity: 1;
+			top: -16px;
+			.animation(topic-reply-pulse 2s ease-in infinite);
 		}
 	}
 
