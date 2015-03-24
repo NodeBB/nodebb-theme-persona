@@ -24,9 +24,13 @@
 				<a href="{relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
 
 				<!-- IF template.category -->
-				<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
+				<small>
+					[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+				</small>
 				<!-- ELSE -->
-				<small>[[global:posted_in_ago, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
+				<small>
+					[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+				</small>
 				<!-- ENDIF template.category -->
 			</h1>
 		</div>
