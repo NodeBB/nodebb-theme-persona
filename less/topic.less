@@ -153,8 +153,7 @@
 
 .topic {
 	&.deleted {
-		-moz-opacity: 0.30;
-		opacity: 0.30;
+		.opacity(0.3);
 	}
 
 	.posts {
@@ -165,8 +164,9 @@
 			position: relative;
 
 			&.deleted {
-				-moz-opacity: 0.30;
-				opacity: 0.30;
+				.content {
+					.opacity(0.3);
+				}
 			}
 
 			hr {

@@ -11,7 +11,7 @@
 		</li>
 		<li role="presentation">
 			<a component="post/delete" role="menuitem" tabindex="-1" href="#">
-				<span class="menu-icon"><i class="fa fa-trash-o"></i></span> [[topic:delete]]
+				<div class="inline menu-icon"><i class="fa fa-trash-o"></i></div> <span>[[topic:delete]]</span>
 			</a>
 		</li>
 		<li role="presentation">
