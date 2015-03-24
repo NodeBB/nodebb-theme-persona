@@ -163,6 +163,15 @@
 				-moz-opacity: 0.30;
 				opacity: 0.30;
 			}
+
+			hr {
+				.transition(0.75s ease-in-out border-color);
+			}
+
+			&.highlight hr {
+				border-color: darken(@brand-info, 20%);
+				box-shadow: 0px 0px 1px @brand-info;
+			}
 		}
 
 		.post-content {
