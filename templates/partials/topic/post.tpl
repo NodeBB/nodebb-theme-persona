@@ -22,6 +22,11 @@
 		<span class="visible-lg-inline visible-md-inline">&bull; [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
 		<!-- ENDIF posts.editor.username -->
 
+		<span class="post-tools">
+			<a component="post/reply">[[topic:reply]]</a>
+			<a component="post/quote">[[topic:quote]]</a>
+		</span>
+
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
 </div>
