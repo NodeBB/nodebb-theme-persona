@@ -14,6 +14,8 @@
 			<a class="username-field" href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
 		</strong>
 
+		<!-- IMPORT partials/topic/badge.tpl -->
+
 		[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
 
 		<!-- IF posts.editor.username -->
