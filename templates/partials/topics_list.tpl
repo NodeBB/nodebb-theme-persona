@@ -25,11 +25,19 @@
 
 				<!-- IF template.category -->
 				<small>
+					<!-- IF topics.user.userslug -->
 					[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+					<!-- ELSE -->
+					[[global:posted_ago_by_guest, <span class="timeago" title="{topics.relativeTime}"></span>]]
+					<!-- ENDIF topics.user.userslug -->
 				</small>
 				<!-- ELSE -->
 				<small>
+					<!-- IF topics.user.userslug -->
 					[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+					<!-- ELSE -->
+					[[global:posted_in_ago_by_guest, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
+					<!-- ENDIF topics.user.userslug -->
 				</small>
 				<!-- ENDIF template.category -->
 			</h1>
