@@ -135,7 +135,9 @@
 			<!-- IF matchCount -->
 			<div class="alert alert-info">[[search:results_matching, {matchCount}, {search_query}, {time}]] </div>
 			<!-- ELSE -->
+			<!-- IF search_query -->
 			<div class="alert alert-warning">[[search:no-matches]]</div>
+			<!-- ENDIF search_query -->
 			<!-- ENDIF matchCount -->
 
 			<!-- BEGIN posts -->
