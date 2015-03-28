@@ -2,7 +2,7 @@
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
-		<meta itemprop="name" content="{topics.title}">
+		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-7 col-sm-9 col-xs-11 content">
 			<div class="avatar hidden-sm hidden-xs pull-left">
@@ -25,11 +25,19 @@
 
 				<!-- IF template.category -->
 				<small>
+					<!-- IF topics.user.userslug -->
 					[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+					<!-- ELSE -->
+					[[global:posted_ago_by_guest, <span class="timeago" title="{topics.relativeTime}"></span>]]
+					<!-- ENDIF topics.user.userslug -->
 				</small>
 				<!-- ELSE -->
 				<small>
+					<!-- IF topics.user.userslug -->
 					[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+					<!-- ELSE -->
+					[[global:posted_in_ago_by_guest, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
+					<!-- ENDIF topics.user.userslug -->
 				</small>
 				<!-- ENDIF template.category -->
 			</h1>
