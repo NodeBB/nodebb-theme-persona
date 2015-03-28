@@ -9,18 +9,18 @@
 
 	<hr />
 
-	<a href="{relative_path}/recent">
-		<div class="alert alert-warning hide" id="new-topics-alert"></div>
-	</a>
-
 	<div class="category">
-		<p>Recent</p>
+		<p>[[recent:title]]</p>
 
 		<!-- IF !topics.length -->
 		<div class="alert alert-warning" id="category-no-topics">
 			<strong>[[recent:no_recent_topics]]</strong>
 		</div>
 		<!-- ENDIF !topics.length -->
+
+		<a href="{relative_path}/recent">
+			<div class="alert alert-warning hide" id="new-topics-alert"></div>
+		</a>
 
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
