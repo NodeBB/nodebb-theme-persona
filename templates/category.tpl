@@ -1,12 +1,12 @@
 <div class="category">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<!-- IMPORT partials/category/subcategory.tpl -->
-	
+
 	<!-- IF children.length --><hr /><!-- ENDIF children.length -->
 
 	<div class="clearfix">
 		<!-- IF privileges.topics:create -->
-		<button id="new_post" class="btn btn-primary">[[category:new_topic_button]]</button>
+		<button id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 		<!-- ELSE -->
 			<!-- IF !loggedIn -->
 			<a href="/login?next=category/{slug}" class="btn btn-primary">[[category:guest-login-post]]</a>
