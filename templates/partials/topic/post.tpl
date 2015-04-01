@@ -16,12 +16,14 @@
 
 		<!-- IMPORT partials/topic/badge.tpl -->
 
-		[[global:posted_ago, <a class="permalink" href="{posts.index}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
+		<div class="visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+			[[global:posted_ago, <a class="permalink" href="{posts.index}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
-		<span class="post-tools">
-			<a component="post/reply">[[topic:reply]]</a>
-			<a component="post/quote">[[topic:quote]]</a>
-		</span>
+			<span class="post-tools">
+				<a component="post/reply">[[topic:reply]]</a>
+				<a component="post/quote">[[topic:quote]]</a>
+			</span>
+		</div>
 
 		<div class="votes">
 			<!-- IF !reputation:disabled -->
