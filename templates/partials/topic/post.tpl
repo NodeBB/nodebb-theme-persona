@@ -18,10 +18,6 @@
 
 		[[global:posted_ago, <a class="permalink" href="{posts.index}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
-		<!-- IF posts.editor.username -->
-		<span class="visible-lg-inline visible-md-inline">&bull; [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
-		<!-- ENDIF posts.editor.username -->
-
 		<span class="post-tools">
 			<a component="post/reply">[[topic:reply]]</a>
 			<a component="post/quote">[[topic:quote]]</a>
@@ -46,6 +42,12 @@
 </div>
 
 <br />
-<div class="content" component="post/content" itemprop="text">{posts.content}</div>
+<div class="content" component="post/content" itemprop="text">
+	{posts.content}
+</div>
+
+<!-- IF posts.editor.username -->
+<small class="pull-right">[[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
+<!-- ENDIF posts.editor.username -->
 
 <hr />
