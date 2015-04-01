@@ -27,11 +27,11 @@
 	}
 
 	#header-menu .navbar-nav>.active>a,
-	#header-menu .navbar-nav>.active>a:hover,
-	#header-menu .navbar-nav>.active>a:focus {
-		background: none;
+	#header-menu .navbar-nav>.active>a:focus,
+	#header-menu .navbar-nav>.open>a,
+	#header-menu .navbar-nav>.open>a:focus {
+		background: inherit;
 	}
-
 
 	body {
 		.transition(.40s ease-in-out transform);
@@ -43,7 +43,5 @@
 				transform: translate3d(0, 0, 0);
 			}
 		}
-
-		
 	}
 }
