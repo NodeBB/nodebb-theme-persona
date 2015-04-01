@@ -1,8 +1,8 @@
+	</div><!--END container -->
+
 	<div class="copyright text-center">
 		Copyright © 2015 <a target="_blank" href="https://www.nodebb.com">NodeBB</a> | <a target="_blank" href="//github.com/NodeBB/NodeBB/graphs/contributors">Contributors</a>
 	</div>
-
-	</div><!--END container -->
 
 	<div class="hide tpl-500">
 	<!-- IMPORT 500.tpl -->
