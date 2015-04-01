@@ -2,6 +2,11 @@
 
 <!-- IF valid -->
 <div class="well">
+	<!-- IF displayExpiryNotice -->
+	<div class="alert alert-warning">
+		[[reset_password:password_expired]]
+	</div>
+	<!-- ENDIF displayExpiryNotice -->
 	<div class="alert alert-success" id="success" style="display:none">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>[[reset_password:password_changed.title]]</strong>
@@ -20,8 +25,9 @@
 			<label for="repeat">[[reset_password:repeat_password]]</label>
 			<input class="form-control" type="password" placeholder="[[reset_password:repeat_password]]" id="repeat" /><br />
 		</div>
-
-		<button class="btn btn-primary btn-block" id="reset" type="submit">[[reset_password:reset_password]]</button>
+		<div class="col-xs-12">
+			<button class="btn btn-primary btn-block" id="reset" type="submit">[[reset_password:reset_password]]</button>
+		</div>
 	</form>
 </div>
 <!-- IMPORT partials/variables/reset_code.tpl -->
