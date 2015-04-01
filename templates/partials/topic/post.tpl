@@ -16,7 +16,7 @@
 
 		<!-- IMPORT partials/topic/badge.tpl -->
 
-		[[global:posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
+		[[global:posted_ago, <a class="permalink" href="{posts.index}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
 		<!-- IF posts.editor.username -->
 		<span class="visible-lg-inline visible-md-inline">&bull; [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
