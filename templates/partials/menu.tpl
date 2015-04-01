@@ -21,25 +21,47 @@
 
 			<div class="navbar-slide-in" id="nav-dropdown">
 				<!-- IF !maintenanceHeader -->
-				<ul id="main-nav" class="nav navbar-nav">
-					<!-- BEGIN navigation -->
-					<!-- IF function.displayMenuItem, @index -->
-					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
-							<!-- IF navigation.iconClass -->
-							<i class="fa fa-fw {navigation.iconClass}"></i>
-							<!-- ENDIF navigation.iconClass -->
-
-							<!-- IF navigation.text -->
-							<span class="{navigation.textClass}">{navigation.text}</span>
-							<!-- ENDIF navigation.text -->
-						</a>
-					</li>
-					<!-- ENDIF function.displayMenuItem -->
-					<!-- END navigation -->
-				</ul>
-
 				<!-- IF loggedIn -->
+
+				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+					<li id="user_label" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
+							<img id="user-header-picture" src="{user.picture}"/> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+						</a>
+						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
+							<li>
+								<a id="user-profile-link" href="{relative_path}/user/{user.userslug}">
+									<i class="fa fa-fw fa-circle status {user.status}"></i> <span id="user-header-name">{user.username}</span>
+								</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li>
+								<a href="#" class="user-status" data-status="online">
+									<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="user-status" data-status="away">
+									<i class="fa fa-fw fa-circle status away"></i><span> [[global:away]]</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="user-status" data-status="dnd">
+									<i class="fa fa-fw fa-circle status dnd"></i><span> [[global:dnd]]</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="user-status" data-status="offline">
+									<i class="fa fa-fw fa-circle status offline"></i><span> [[global:invisible]]</span>
+								</a>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li id="logout-link">
+								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
@@ -86,44 +108,6 @@
 						</a>
 					</li>
 					<!-- ENDIF !disableChat -->
-
-					<li id="user_label" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
-							<img id="user-header-picture" src="{user.picture}"/>
-						</a>
-						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
-							<li>
-								<a id="user-profile-link" href="{relative_path}/user/{user.userslug}">
-									<i class="fa fa-fw fa-circle status {user.status}"></i> <span id="user-header-name">{user.username}</span>
-								</a>
-							</li>
-							<li role="presentation" class="divider"></li>
-							<li>
-								<a href="#" class="user-status" data-status="online">
-									<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="user-status" data-status="away">
-									<i class="fa fa-fw fa-circle status away"></i><span> [[global:away]]</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="user-status" data-status="dnd">
-									<i class="fa fa-fw fa-circle status dnd"></i><span> [[global:dnd]]</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="user-status" data-status="offline">
-									<i class="fa fa-fw fa-circle status offline"></i><span> [[global:invisible]]</span>
-								</a>
-							</li>
-							<li role="presentation" class="divider"></li>
-							<li id="logout-link">
-								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
-							</li>
-						</ul>
-					</li>
 				</ul>
 				<!-- ELSE -->
 				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
@@ -159,7 +143,7 @@
 				</ul>
 				<!-- ENDIF searchEnabled -->
 
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
 						<a href="#" id="reconnect" class="hide" title="Connection to {title} has been lost, attempting to reconnect...">
 							<i class="fa fa-check"></i>
@@ -187,6 +171,24 @@
   							<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
   						</ul>
 					</li>
+				</ul>
+
+				<ul id="main-nav" class="nav navbar-nav">
+					<!-- BEGIN navigation -->
+					<!-- IF function.displayMenuItem, @index -->
+					<li class="{navigation.class}">
+						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+							<!-- IF navigation.iconClass -->
+							<i class="fa fa-fw {navigation.iconClass}"></i>
+							<!-- ENDIF navigation.iconClass -->
+
+							<!-- IF navigation.text -->
+							<span class="{navigation.textClass}">{navigation.text}</span>
+							<!-- ENDIF navigation.text -->
+						</a>
+					</li>
+					<!-- ENDIF function.displayMenuItem -->
+					<!-- END navigation -->
 				</ul>
 
 				<!-- ELSE -->
