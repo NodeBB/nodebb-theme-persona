@@ -10,14 +10,14 @@
 
 	<br />
 
-	<!-- IF !topics.length -->
-	<div class="alert alert-warning" id="category-no-topics">
-		<strong>[[recent:no_popular_topics]]</strong>
-	</div>
-	<!-- ENDIF !topics.length -->
-
 	<div class="category">
-		<p>Popular</p>
+		<p>[[global:header.popular]]</p>
+		<!-- IF !topics.length -->
+		<div class="alert alert-warning" id="category-no-topics">
+			<strong>[[recent:no_popular_topics]]</strong>
+		</div>
+		<!-- ENDIF !topics.length -->
+
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>
