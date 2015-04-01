@@ -1,5 +1,6 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="slide-in" data-target=".navbar-slide-in">
+					<span class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
