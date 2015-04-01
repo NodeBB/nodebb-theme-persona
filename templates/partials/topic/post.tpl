@@ -17,7 +17,7 @@
 		<!-- IMPORT partials/topic/badge.tpl -->
 
 		<div class="visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			[[global:posted_ago, <a class="permalink" href="{posts.index}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
+			[[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
 			<span class="post-tools">
 				<a component="post/reply">[[topic:reply]]</a>
