@@ -60,7 +60,7 @@
 				<!-- ELSE -->
 				<p class="hidden-xs">
 					<strong>{topics.teaser.user.username}</strong>
-					<a href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+					<a class="permalink" href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<small class="timeago" title="{topics.teaser.timestamp}"></small>
 					</a>
 				</p>

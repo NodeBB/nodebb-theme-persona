@@ -3,7 +3,7 @@
 	<!-- IF @first -->
 	<p>
 		<strong>{categories.posts.user.username}</strong>
-		<a href="{relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">
+		<a class="permalink" href="{relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">
 			<small class="timeago" title="{categories.posts.relativeTime}"></small>
 		</a>
 	</p>
