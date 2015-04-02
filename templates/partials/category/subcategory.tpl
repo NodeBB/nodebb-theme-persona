@@ -1,5 +1,5 @@
 <div class="subcategory">
-	<!-- IF children.length --><p class="subcattitle">[[header:subcategory]]</p><!-- ENDIF children.length -->
+	<!-- IF children.length --><p>[[header:subcategory]]</p><!-- ENDIF children.length -->
 
 	<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 		<!-- BEGIN children -->
