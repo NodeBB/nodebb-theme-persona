@@ -30,7 +30,7 @@
 	</div>
 	<!-- ENDIF meta -->
 </div>
-<div class="col-sm-3 hidden-xs">
+<div class="col-sm-3">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title">[[modules:chat.contacts]]</h2>
