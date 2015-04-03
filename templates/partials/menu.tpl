@@ -141,6 +141,11 @@
 							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 						</form>
 					</li>
+					<li class="visible-xs">
+						<a href="{relative_path}/search">
+							<i class="fa fa-search fa-fw"></i> [[global:search]]
+						</a>
+					</li>
 				</ul>
 				<!-- ENDIF searchEnabled -->
 
