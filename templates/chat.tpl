@@ -4,7 +4,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close hidden-xs" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4>[[modules:chat.chatting_with]] <i id="chat-user-status" class="fa fa-circle status offline" title="[[global:offline]]"></i></h4>
+				<h4>[[modules:chat.chatting_with]] <i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i></h4>
 			</div>
 			<div class="modal-body">
 				<span class="since-bar">

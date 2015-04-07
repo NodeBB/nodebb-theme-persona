@@ -39,7 +39,7 @@
 			<ul class="chats-list">
 				<!-- BEGIN contacts -->
 				<li data-username="{contacts.username}" data-uid="{contacts.uid}">
-					<i class="fa fa-circle status {contacts.status}"></i>
+					<i component="user/status" class="fa fa-circle status {contacts.status}"></i>
 					<img class="user-img" src="{contacts.picture}">
 					<span>{contacts.username}</span>
 				</li>
@@ -55,7 +55,7 @@
 			<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
 				<!-- BEGIN chats -->
 				<li data-username="{chats.username}" data-uid="{chats.uid}" class="<!-- IF chats.unread -->unread<!-- ENDIF chats.unread -->">
-					<i class="fa fa-circle status {chats.status}"></i>
+					<i component="user/status" class="fa fa-circle status {chats.status}"></i>
 					<img class="user-img" src="{chats.picture}">
 					<span>{chats.username}</span>
 				</li>
