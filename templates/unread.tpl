@@ -1,28 +1,31 @@
 <div class="unread">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
 
+	<div class="clearfix">
+		<div class="pull-left">
+		<!-- IMPORT partials/breadcrumbs.tpl -->
+		</div>
 
+		<div class="markread btn-group pull-right<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				[[unread:mark_as_read]] <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
 
-	<div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			[[unread:mark_as_read]] <span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu" role="menu">
+				<li role="presentation">
+					<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
+				</li>
 
-			<li role="presentation">
-				<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
-			</li>
-
-			<li role="presentation">
-				<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
-			</li>
-			<li class="divider"></li>
-		</ul>
+				<li role="presentation">
+					<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
+				</li>
+				<li class="divider"></li>
+			</ul>
+		</div>
 	</div>
 
-	<div class="category">
-		<p>[[unread:title]]</p>
+	<hr />
 
+	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
 			<strong>[[unread:no_unread_topics]]</strong>
 		</div>
