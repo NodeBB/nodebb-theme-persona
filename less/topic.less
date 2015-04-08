@@ -1,8 +1,12 @@
 .topic {
 	h1 {
-		font-size: 28px;
+
 		line-height: 24px;
 		margin-bottom: 30px;
+		.topic-title {
+			font-size: 28px;
+			color:inherit;
+		}
 
 		> span {
 			text-transform: uppercase;
@@ -103,11 +107,11 @@
 		right: -5px;
 		top: 0;
 		font-size: 14px;
-		
+
 		> a {
 			padding: 0.25em;
 		}
-		
+
 		a {
 			color: @gray-light;
 			outline: none;
@@ -289,7 +293,7 @@
 
 .thread_active_users {
 	text-transform: initial;
-	
+
 	a[data-uid] {
 		position: relative;
 		margin-left: 14px;
