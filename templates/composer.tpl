@@ -93,12 +93,12 @@
 				</div>
 
 				<div class="btn-group pull-right action-bar hidden-sm hidden-xs">
-					<button class="btn btn-default composer-discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
+					<button class="btn btn-default composer-discard" data-action="discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
 
 					<button class="btn btn-primary composer-submit" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
 					<!-- IF !isEditing -->
 					<!-- IF isAdminOrMod -->
-					<button type="button" class="btn btn-info dropdown-toggle" tabindex="7" data-toggle="dropdown">
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 						<span class="caret"></span>
 						<span class="sr-only">[[modules:composer.toggle_dropdown]]</span>
 					</button>
