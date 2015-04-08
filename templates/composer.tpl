@@ -100,7 +100,7 @@
 					<!-- IF isAdminOrMod -->
 					<button type="button" class="btn btn-info dropdown-toggle" tabindex="7" data-toggle="dropdown">
 						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
+						<span class="sr-only">[[modules:composer.toggle_dropdown]]</span>
 					</button>
 					<ul class="dropdown-menu pull-right" role="menu">
 						<li><a href="#" data-switch-action="post"><i class="fa fa-fw fa-check"></i> [[topic:composer.submit]]</a></li>
@@ -121,14 +121,14 @@
 		<div class="row write-preview-container">
 			<div class="col-md-6 col-sm-12 write-container">
 				<div class="help-text">
-					Compose <span class="help hidden"><i class="fa fa-question-circle"></i></span>
-					<span class="toggle-preview hide">Show Preview</span>
+					[[modules:composer.compose]] <span class="help hidden"><i class="fa fa-question-circle"></i></span>
+					<span class="toggle-preview hide">[[modules:composer.show_preview]]</span>
 				</div>
 				<textarea class="write" tabindex="5"></textarea>
 			</div>
 			<div class="col-md-6 hidden-sm hidden-xs preview-container">
 				<div class="help-text">
-					<span class="toggle-preview">Hide Preview</span>
+					<span class="toggle-preview">[[modules:composer.hide_preview]]</span>
 				</div>
 				<div class="preview well"></div>
 			</div>
