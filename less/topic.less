@@ -57,6 +57,20 @@
 		right: 25px;
 	}
 
+	[component="post/upvote"], [component="post/downvote"] {
+		color: @gray-light;
+		width: 20px;
+		height: 20px;
+		line-height: 18px;
+		text-align: center;
+		display: inline-block;
+	}
+
+	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
+		color: @brand-primary;
+		line-height: 18px;
+	}
+
 	.stats {
 		width: 60px;
 		float: left;
