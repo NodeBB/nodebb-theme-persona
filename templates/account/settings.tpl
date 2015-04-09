@@ -84,6 +84,7 @@
 				<div class="form-group">
 					<label for="grouptitle">[[user:grouptitle]]</label>
 					<select class="form-control" id="grouptitle" data-property="groupTitle">
+						<option value="">[[user:no-group-title]]</option>
 						<!-- BEGIN userGroups -->
 						<!-- IF userGroups.userTitleEnabled -->
 						<option value="{userGroups.name}">{userGroups.userTitle}</option>
