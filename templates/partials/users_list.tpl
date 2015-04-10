@@ -4,7 +4,7 @@
 	<br/>
 	<div class="user-info">
 		<span>
-			<i class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
+			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
 			<a href="{relative_path}/user/{users.userslug}">{users.username}</a>
 		</span>
 		<br/>

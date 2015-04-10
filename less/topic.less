@@ -1,8 +1,12 @@
 .topic {
 	h1 {
-		font-size: 28px;
+
 		line-height: 24px;
 		margin-bottom: 30px;
+		.topic-title {
+			font-size: 28px;
+			color:inherit;
+		}
 
 		> span {
 			text-transform: uppercase;
@@ -15,6 +19,10 @@
 				vertical-align: middle;
 				margin-right: 8px;
 			}
+		}
+
+		.topic-title {
+			text-transform: initial;
 		}
 
 		.browsing-users {
@@ -51,6 +59,14 @@
 		position: absolute;
 		top: 1px;
 		right: 25px;
+	}
+
+	[component="post/upvote"], [component="post/downvote"] {
+		color: @gray-light;
+	}
+
+	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
+		color: @brand-primary;
 	}
 
 	.stats {
@@ -103,11 +119,11 @@
 		right: -5px;
 		top: 0;
 		font-size: 14px;
-		
+
 		> a {
 			padding: 0.25em;
 		}
-		
+
 		a {
 			color: @gray-light;
 			outline: none;
@@ -257,11 +273,7 @@
 			}
 
 			iframe, .img-responsive {
-				width: 85%;
-			}
-
-			iframe, img {
-				max-width: 400px;
+				max-width: 85%;
 			}
 
 			.toggle {
@@ -292,32 +304,36 @@
 }
 
 .thread_active_users {
+	text-transform: initial;
+
 	a[data-uid] {
+		position: relative;
+		margin-left: 14px;
+
 		img {
 			border-radius: 50%;
 			width: 20px;
 			height: 20px;
-			margin-right: -12px;
 			vertical-align: middle;
 		}
 
 		&::after {
+			position: absolute;
 			z-index: 0;
 			opacity: 0;
 
 			font-family: "FontAwesome";
 			content: "\f11c";
 			padding: 4px 0.25em;
-			position: relative;
 			top: 0px;
-			left: -7px;
+			left: 0px;
 
 			.transition(~"opacity ease 250ms, top ease 250ms")
 		}
 
 		&.replying::after {
 			opacity: 1;
-			top: -16px;
+			top: -24px;
 			.animation(topic-reply-pulse 2s ease-in infinite);
 		}
 	}

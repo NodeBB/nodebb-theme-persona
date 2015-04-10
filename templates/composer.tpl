@@ -15,11 +15,19 @@
 				<input class="handle form-control" type="text" tabindex="1" placeholder="[[topic:composer.handle_placeholder]]" value="{handle}" />
 			</div>
 			<div class="col-sm-9 col-md-12">
-				<input class="title form-control" type="text" tabindex="2" placeholder="[[topic:composer.title_placeholder]]" />
+				<!-- IF isTopicOrMain -->
+				<input class="title form-control" type="text" tabindex="1" placeholder="[[topic:composer.title_placeholder]]" value="{title}"/>
+				<!-- ELSE -->
+				<span class="title form-control">[[topic:composer.replying_to, "{title}"]]</span>
+				<!-- ENDIF isTopicOrMain -->
 			</div>
 			<!-- ELSE -->
 			<div class="<!-- IF isTopic -->col-lg-9<!-- ELSE -->col-lg-12<!-- ENDIF isTopic --> col-md-12">
-				<input class="title form-control" type="text" tabindex="1" placeholder="[[topic:composer.title_placeholder]]" />
+				<!-- IF isTopicOrMain -->
+				<input class="title form-control" type="text" tabindex="1" placeholder="[[topic:composer.title_placeholder]]" value="{title}"/>
+				<!-- ELSE -->
+				<span class="title form-control">[[topic:composer.replying_to, "{title}"]]</span>
+				<!-- ENDIF isTopicOrMain -->
 			</div>
 			<!-- IF isTopic -->
 			<div class="category-list-container col-lg-3 col-md-12">
@@ -85,14 +93,14 @@
 				</div>
 
 				<div class="btn-group pull-right action-bar hidden-sm hidden-xs">
-					<button class="btn btn-default composer-discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
+					<button class="btn btn-default composer-discard" data-action="discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
 
 					<button class="btn btn-primary composer-submit" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
 					<!-- IF !isEditing -->
 					<!-- IF isAdminOrMod -->
-					<button type="button" class="btn btn-info dropdown-toggle" tabindex="7" data-toggle="dropdown">
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
+						<span class="sr-only">[[modules:composer.toggle_dropdown]]</span>
 					</button>
 					<ul class="dropdown-menu pull-right" role="menu">
 						<li><a href="#" data-switch-action="post"><i class="fa fa-fw fa-check"></i> [[topic:composer.submit]]</a></li>
@@ -102,25 +110,25 @@
 					<!-- ENDIF !isEditing -->
 				</div>
 
-				<!-- IF showTags -->
+				<!-- IF isTopicOrMain -->
 				<div class="tags-container inline-block">
 					<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here, {minimumTagLength}, {maximumTagLength}]]" tabindex="4"/>
 				</div>
-				<!-- ENDIF showTags -->
+				<!-- ENDIF isTopicOrMain -->
 			</div>
 		</div>
 
 		<div class="row write-preview-container">
 			<div class="col-md-6 col-sm-12 write-container">
 				<div class="help-text">
-					Compose <span class="help hidden"><i class="fa fa-question-circle"></i></span>
-					<span class="toggle-preview hide">Show Preview</span>
+					[[modules:composer.compose]] <span class="help hidden"><i class="fa fa-question-circle"></i></span>
+					<span class="toggle-preview hide">[[modules:composer.show_preview]]</span>
 				</div>
 				<textarea class="write" tabindex="5"></textarea>
 			</div>
 			<div class="col-md-6 hidden-sm hidden-xs preview-container">
 				<div class="help-text">
-					<span class="toggle-preview">Hide Preview</span>
+					<span class="toggle-preview">[[modules:composer.hide_preview]]</span>
 				</div>
 				<div class="preview well"></div>
 			</div>

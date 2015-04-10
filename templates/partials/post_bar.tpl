@@ -12,7 +12,7 @@
 	</span>
 
 	<div class="stats">
-		<span class="human-readable-number" title="{postcount}">{postcount}</span><br />
+		<span component="topic/post-count" class="human-readable-number" title="{postcount}">{postcount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
 	<div class="stats">
@@ -20,13 +20,8 @@
 		<small>[[global:views]]</small>
 	</div>
 
-	<!-- IF privileges.topics:reply -->
-	<a component="topic/reply" class="btn btn-primary post_reply">[[topic:reply]]</a>
-	<!-- ELSE -->
-		<!-- IF !loggedIn -->
-		<a href="/login?next=topic/{slug}" class="btn btn-primary">[[topic:guest-login-reply]]</a>
-		<!-- ENDIF !loggedIn -->
-	<!-- ENDIF privileges.topics:reply -->
+
+	<!-- IMPORT partials/topic/reply-button.tpl -->
 
 	<!-- IMPORT partials/thread_tools.tpl -->
 </div>

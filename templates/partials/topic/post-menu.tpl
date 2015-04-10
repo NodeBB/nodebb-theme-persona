@@ -10,8 +10,13 @@
 			</a>
 		</li>
 		<li role="presentation">
-			<a component="post/delete" role="menuitem" tabindex="-1" href="#">
+			<a component="post/delete" role="menuitem" tabindex="-1" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->">
 				<div class="inline menu-icon"><i class="fa fa-trash-o"></i></div> <span>[[topic:delete]]</span>
+			</a>
+		</li>
+		<li role="presentation">
+			<a component="post/restore" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
+				<div class="inline menu-icon"><i class="fa fa-history"></i></div> <span>[[topic:restore]]</span>
 			</a>
 		</li>
 		<li role="presentation">
@@ -30,14 +35,13 @@
 		<!-- ENDIF posts.display_moderator_tools -->
 
 		<li role="presentation">
-			<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}" class="favourite">
+			<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}">
+
 				<span class="favourite-text">[[topic:favourite]]</span>
 				<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
-				<!-- IF posts.favourited -->
-				<i class="fa fa-heart"></i>
-				<!-- ELSE -->
-				<i class="fa fa-heart-o"></i>
-				<!-- ENDIF posts.favourited -->
+
+				<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
+				<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
 			</a>
 		</li>
 

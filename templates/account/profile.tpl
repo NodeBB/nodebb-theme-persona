@@ -14,7 +14,7 @@
 					<div>
 						<div class="text-center">
 							<span>
-								<i class="account-online-status fa fa-circle status {status}" title="[[global:{status}]]"></i>
+								<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 								<span class="account-username"> {username}</span>
 							</span>
 

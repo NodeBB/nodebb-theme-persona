@@ -98,7 +98,7 @@
 					<div class="control-group">
 						<label class="control-label" for="inputCurrentPassword">[[user:current_password]]</label>
 						<div class="controls">
-							<input class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
+							<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
 						</div>
 					</div>
 					<!-- ENDIF isSelf -->
