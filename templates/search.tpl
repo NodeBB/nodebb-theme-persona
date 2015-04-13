@@ -35,7 +35,7 @@
 					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 
 						<div class="form-group post-search-item">
-							<label>[[search:by]]</label>
+							<label>[[search:posted-by]]</label>
 							<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
 						</div>
 
