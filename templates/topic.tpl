@@ -4,7 +4,7 @@
 	<h1 component="post/header" itemprop="name">
 
 		<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
-		<!-- IMPORT partials/thread_sort.tpl -->
+		<!-- IMPORT partials/topic/sort.tpl -->
 
 		<button component="topic/follow" class="btn hidden-xs hidden-sm <!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">
 			<span>[[topic:watch]]</span> <i class="fa fa-eye"></i>

@@ -3,30 +3,36 @@
 <div class="search">
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
-					<h3 class="panel-title"><i class="fa fa-caret-down"></i> [[global:search]]</h3>
-				</div>
-				<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
-					<form id="advanced-search">
-						<div class="form-group">
-							<div class="row">
-								<div class="col-md-6">
-									<label>[[global:search]]</label>
-									<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
-								</div>
-								<div class="col-md-6">
-									<label>[[search:in]]</label>
-									<select id="search-in" class="form-control">
-										<option value="titlesposts">[[search:titles-posts]]</option>
-										<option value="titles">[[search:titles]]</option>
-										<option value="posts">[[global:posts]]</option>
-										<option value="users">[[global:users]]</option>
-										<option value="tags">[[tags:tags]]</option>
-									</select>
-								</div>
-							</div>
+			<form id="advanced-search">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+							<label>[[global:search]]</label>
+							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
+						<div class="col-md-6">
+							<label>[[search:in]]</label>
+							<select id="search-in" class="form-control">
+								<option value="titlesposts">[[search:titles-posts]]</option>
+								<option value="titles">[[search:titles]]</option>
+								<option value="posts">[[global:posts]]</option>
+								<option value="users">[[global:users]]</option>
+								<option value="tags">[[tags:tags]]</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-default">[[global:search]]</button>
+
+				<br/>
+				<br/>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
+						<h3 class="panel-title"><i class="fa fa-caret-down"></i> [[search:advanced-search]]</h3>
+					</div>
+					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 
 						<div class="form-group post-search-item">
 							<label>[[search:by]]</label>
@@ -121,12 +127,11 @@
 						</div>
 
 
-						<button type="submit" class="btn btn-default">[[global:search]]</button>
 						<a id="save-preferences" href="#">[[search:save-preferences]]</a>
 						<a id="clear-preferences" href="#">[[search:clear-preferences]]</a>
-					</form>
+					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 
