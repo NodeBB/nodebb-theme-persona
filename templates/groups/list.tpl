@@ -21,7 +21,9 @@
 	</div>
 </div>
 
-<div class="groups list row" id="groups-list">
+<hr />
+
+<div component="groups/container" class="row" id="groups-list">
 	<!-- IF groups.length -->
 	<!-- IMPORT partials/groups/list.tpl -->
 	<!-- ELSE -->
