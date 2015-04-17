@@ -3,10 +3,12 @@
 .taskbar {
 	display: none;
 	z-index: 10001;
-	-moz-opacity: 0.75;
-	opacity: 0.75;
+
 	margin-top: 0;
 	.transition(.15s ease-in opacity);
+
+	background: none;
+	border: none;
 
 	&[data-active="1"] {
 		display: block;
@@ -21,43 +23,79 @@
 		min-height: 32px;
 	}
 
-	li {
-		float: left;
+	.navbar-nav {
+		padding-right: 15px;
+		padding-bottom: 15px;
 
-		&.new a {
-			-webkit-animation: taskbar-active 3s infinite;
-			-moz-animation: taskbar-active 3s infinite;
-			-o-animation: taskbar-active 3s infinite;
-			animation: taskbar-active 3s infinite;
-		}
+		li {
+			float: left;
 
-		a {
-			padding: 3px 15px;
-			font-size: 13px;
-
-			> span {
-				max-width: 200px;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
+			&.new a {
+				-webkit-animation: taskbar-active 3s infinite;
+				-moz-animation: taskbar-active 3s infinite;
+				-o-animation: taskbar-active 3s infinite;
+				animation: taskbar-active 3s infinite;
 			}
-		}
 
-		img {
-			max-width: 24px;
-			max-height: 24px;
-			margin-right: 1em;
-		}
+			a {
+				padding: 3px 15px;
+				font-size: 13px;
 
-		&.pulse {
-			-webkit-animation: pulsate 2500ms linear;
-			-webkit-animation-iteration-count: infinite;
-		}
+				border-radius: 50%;
+				height: 50px;
+				width: 50px;
 
-		@-webkit-keyframes pulsate {
-			0% { background: none; }
-			50% { background: #e5e5e5; }
-			100% { background: none; }
+				> span {
+					display: none;
+				}
+			}
+
+			img {
+				max-width: 24px;
+				max-height: 24px;
+				margin-right: 1em;
+			}
+
+			&.pulse {
+				-webkit-animation: pulsate 2500ms linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+
+			@-webkit-keyframes pulsate {
+				0% { background: none; }
+				50% { background: #e5e5e5; }
+				100% { background: none; }
+			}
+
+			&.taskbar-composer {
+				a, a:hover, a:focus, a:active {
+					background: #f44336;
+				}
+			}
+
+			&.taskbar-chat {
+				a, a:hover, a:focus, a:active {
+					background: none;
+					background-size: cover;
+
+					i {
+						color: @gray;
+					}
+				}
+			}
+
+			&.taskbar-composer, &.taskbar-chat {
+				a {
+					text-align: center;
+					margin-left: 15px;
+
+					i {
+						font-size: 18px;
+						margin-top: 12px;
+						color: #FFF;
+					}
+				}
+			}
 		}
 	}
 
