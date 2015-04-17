@@ -17,7 +17,7 @@
 				<span class="user-typing pull-right hide"><i class="fa fa-pencil"></i> [[modules:chat.user_typing, {meta.username}]]</span>
 			</ul>
 			<div class="input-group">
-				<textarea placeholder="[[modules:chat.placeholder]]" class="form-control chat-input" rows="1"></textarea>
+				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input" rows="1"></textarea>
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="button" data-action="send">Send</button>
 				</span>
