@@ -31,10 +31,12 @@
 			float: left;
 
 			&.new a {
-				-webkit-animation: taskbar-active 3s infinite;
-				-moz-animation: taskbar-active 3s infinite;
-				-o-animation: taskbar-active 3s infinite;
-				animation: taskbar-active 3s infinite;
+				-webkit-animation-name: bounceIn;
+  				animation-name: bounceIn;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
 			}
 
 			a {
@@ -56,15 +58,13 @@
 				margin-right: 1em;
 			}
 
-			&.pulse {
-				-webkit-animation: pulsate 2500ms linear;
-				-webkit-animation-iteration-count: infinite;
-			}
-
-			@-webkit-keyframes pulsate {
-				0% { background: none; }
-				50% { background: #e5e5e5; }
-				100% { background: none; }
+			&.pulse a {
+				-webkit-animation-name: bounceIn;
+  				animation-name: bounceIn;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
 			}
 
 			&.taskbar-composer {
