@@ -6,9 +6,15 @@
 		</li>
 
 		<!-- BEGIN pages -->
+			<!-- IF pagination.pages.separator -->
+			<li class="page select-page">
+				<a href="#"><i class="fa fa-ellipsis-h"></i></a>
+			</li>
+			<!-- ELSE -->
 			<li class="page<!-- IF pagination.pages.active --> active<!-- ENDIF pagination.pages.active -->" >
 				<a href="?{pagination.pages.qs}" data-page="{pagination.pages.page}">{pagination.pages.page}</a>
 			</li>
+			<!-- ENDIF pagination.pages.separator -->
 		<!-- END pages -->
 
 		<li class="next pull-right<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
