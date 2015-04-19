@@ -2,7 +2,7 @@
 <div class="text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="pagination">
 		<li class="previous pull-left<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
-			<a href="?page={pagination.prev.page}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
+			<a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
 		</li>
 
 		<!-- BEGIN pages -->
@@ -18,7 +18,7 @@
 		<!-- END pages -->
 
 		<li class="next pull-right<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
-			<a href="?page={pagination.next.page}" data-page="{pagination.next.page}"> <i class="fa fa-chevron-right"></i></a>
+			<a href="?{pagination.next.qs}" data-page="{pagination.next.page}"> <i class="fa fa-chevron-right"></i></a>
 		</li>
 	</ul>
 </div>
