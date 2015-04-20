@@ -48,8 +48,8 @@
 	{posts.content}
 </div>
 
-<!-- IF posts.editor.username -->
-<small class="pull-right">[[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
-<!-- ENDIF posts.editor.username -->
+
+<small component="post/editor" class="pull-right <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->">[[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
+
 
 <hr />
