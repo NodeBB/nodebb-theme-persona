@@ -33,6 +33,9 @@
 			</div>
 			<!-- END posts -->
 		</div>
+		<!-- IF config.usePagination -->
+			<!-- IMPORT partials/paginator.tpl -->
+		<!-- ENDIF config.usePagination -->
 	</div>
 </div>
 
