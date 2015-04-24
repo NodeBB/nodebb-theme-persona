@@ -6,11 +6,11 @@
 			<form id="advanced-search">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<label>[[global:search]]</label>
 							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<label>[[search:in]]</label>
 							<select id="search-in" class="form-control">
 								<option value="titlesposts">[[search:titles-posts]]</option>
@@ -20,13 +20,12 @@
 								<option value="tags">[[tags:tags]]</option>
 							</select>
 						</div>
+						<div class="col-md-2">
+							<label>&nbsp;</label>
+							<button type="submit" class="btn btn-default form-control">[[global:search]]</button>
+						</div>
 					</div>
 				</div>
-
-				<button type="submit" class="btn btn-default">[[global:search]]</button>
-
-				<br/>
-				<br/>
 
 				<div class="panel panel-default">
 					<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
@@ -35,7 +34,7 @@
 					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 
 						<div class="form-group post-search-item">
-							<label>[[search:by]]</label>
+							<label>[[search:posted-by]]</label>
 							<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
 						</div>
 

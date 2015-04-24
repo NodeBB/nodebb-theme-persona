@@ -25,7 +25,7 @@
 					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
 					<div class="col-lg-8">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" />
+							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="input-group-addon">
 								<span id="username-notify"><i class="fa fa-circle-o"></i></span>
 							</span>

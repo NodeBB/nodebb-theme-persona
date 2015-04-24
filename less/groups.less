@@ -1,27 +1,43 @@
-.groups {
-	&.list {
-		margin-top: 1em;
+[component="groups/container"] {
+	[component="groups/summary"] {
 		.panel-body {
 			min-height: 72px;
 		}
-	}
 
-	.list-cover {
-		background-size: cover;
-		min-height: 125px;
-		background-position: 50% 50%;
-		.pointer;
+		.list-cover {
+			background-size: cover;
+			min-height: 125px;
+			background-position: 50% 50%;
+			.pointer;
 
-		h3 {
-			background-color: rgba(0,0,0,0.5);
-			display: inline-block;
-			padding: 0.25em 0.5em;
-			color: white;
-			font-weight: bold;
+			h3 {
+				background-color: rgba(0,0,0,0.5);
+				display: inline-block;
+				padding: 0.25em 0.5em;
+				color: white;
+				font-weight: bold;
+			}
+		}
+
+		.members {
+			padding-left: 0;
+
+			> li {
+				list-style-type: none;
+				display: inline-block;
+
+				img {
+					width: 32px;
+				}
+			}
+
+			.truncated {
+				vertical-align: bottom;
+			}
 		}
 	}
 
-	.group-cover {
+	[component="groups/cover"] {
 		background-size: cover;
 		background-repeat: no-repeat;
 		min-height: 200px;
@@ -115,48 +131,25 @@
 		}
 	}
 
-	.members {
-		padding-left: 0;
-
-		> li {
-			list-style-type: none;
-			display: inline-block;
-
-			img {
-				width: 32px;
-			}
+	[component="groups/members"] {
+		img {
+			width: 32px;
 		}
 
-		.truncated {
-			vertical-align: bottom;
+		.member-name {
+			vertical-align: middle;
 		}
 	}
 
-	.view-full {
-		float: right;
-	}
-
-	&.details {
-		.members, .pending {
-			img {
-				width: 32px;
-			}
-
-			.member-name {
-				vertical-align: middle;
-			}
+	[component="groups/activity"] {
+		.content {
+			max-height: 250px;
+			word-break: break-word;
+			overflow: hidden;
+			position: relative;
 		}
-
-		.latest-posts {
-			.content {
-				max-height: 250px;
-				word-break: break-word;
-				overflow: hidden;
-				position: relative;
-			}
-			.user-img {
-				width: 32px;
-			}
+		.user-img {
+			width: 32px;
 		}
 	}
 }

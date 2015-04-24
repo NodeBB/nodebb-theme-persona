@@ -157,7 +157,7 @@
 					</li>
 				</ul>
 
-				<ul class="nav navbar-nav navbar-right pagination-block hidden visible-lg visible-md">
+				<ul class="nav navbar-nav navbar-right pagination-block invisible visible-lg visible-md">
 					<li class="dropdown">
 						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
 						<i class="fa fa-angle-up pointer fa-fw pageup"></i>

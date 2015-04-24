@@ -1,5 +1,5 @@
-<div class="groups details row">
-	<div class="col-xs-12 group-cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+<div component="groups/container" class="details row">
+	<div class="col-xs-12" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
@@ -29,7 +29,7 @@
 				<h3 class="panel-title"><i class="fa fa-users"></i> [[groups:details.members]]</h3>
 			</div>
 			<div class="panel-body">
-				<table class="table table-striped table-hover members">
+				<table component="groups/members" class="table table-striped table-hover">
 					<!-- BEGIN members -->
 					<tr data-uid="{group.members.uid}">
 						<td>
@@ -70,7 +70,7 @@
 				<h3 class="panel-title"><i class="fa fa-clock-o"></i> [[groups:details.pending]]</h3>
 			</div>
 			<div class="panel-body">
-				<table class="table table-striped table-hover pending">
+				<table component="groups/members" class="table table-striped table-hover">
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
@@ -109,7 +109,7 @@
 			</div>
 
 			<div class="panel-body options collapse">
-				<form role="form">
+				<form component="groups/settings" role="form">
 					<div class="form-group">
 						<label for="name">[[groups:details.group_name]]</label>
 						<input class="form-control" name="name" id="name" type="text" value="{group.name}" />
@@ -120,14 +120,14 @@
 					</div>
 					<div class="form-group user-title-option">
 						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled --> />
+						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled --> />
 					</div>
 					<div class="form-group user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
 						<span class="label<!-- IF !userTitleEnabled --> hide<!-- ENDIF !userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.name}<!-- ENDIF group.userTitle --></span>
 
-						<button type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_icon]]</button>
-						<button type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_colour]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_icon]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" style="display:none;">
@@ -173,7 +173,7 @@
 				<h3 class="panel-title"><i class="fa fa-edit"></i> [[groups:details.latest_posts]]</h3>
 			</div>
 
-			<div class="panel-body latest-posts">
+			<div component="groups/activity" class="panel-body">
 				<!-- IF !posts.length -->
 				<div class="alert alert-info">[[groups:details.has_no_posts]]</div>
 				<!-- ENDIF !posts.length -->

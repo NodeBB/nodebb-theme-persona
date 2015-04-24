@@ -10,7 +10,7 @@
 						<div class="form-group">
 							<label for="userPhoto">[[user:upload_a_picture]]</label>
 							<input type="file" id="userPhotoInput" name="files[]">
-							<p class="help-block">[[user:image_spec]] <span id="file-size-block" class="hide"> ([[user:max]] <span id="upload-file-size"></span> kbs.)</span></p>
+							<p class="help-block">[[user:image_spec]] (<span id="file-size-block" class="hide"></span>)</p>
 						</div>
 						<input type="hidden" id="params" name="params" />
 					</form>
