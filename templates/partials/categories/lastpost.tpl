@@ -16,8 +16,10 @@
 	<!-- END posts -->
 
 	<!-- IF !posts.length -->
-	<div class="post-content" component="category/posts">
-		<div class="no_posts">[[category:no_posts]]</div>
-	</div>
+	<div component="category/posts">
+		<div class="post-content">
+			No new posts.
+		</div>
+	<div>
 	<!-- ENDIF !posts.length -->
 </div>

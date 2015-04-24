@@ -1,5 +1,5 @@
 <div class="subcategory">
-	<!-- IF children.length --><p>[[header:subcategory]]</p><!-- ENDIF children.length -->
+	<!-- IF children.length --><p>Subcategories</p><!-- ENDIF children.length -->
 
 	<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 		<!-- BEGIN children -->
@@ -50,7 +50,7 @@
 
 					<!-- IF !posts.length -->
 					<div class="post-content">
-						<div class="no_posts">[[category:no_posts]]</div>
+						No new posts.
 					</div>
 					<!-- ENDIF !posts.length -->
 				</div>

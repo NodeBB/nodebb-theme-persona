@@ -1,5 +1,5 @@
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
-	<p>[[header:categories]]</p>
+	<p>Categories</p>
 
 	<!-- BEGIN categories -->
 	<li component="categories/category" data-cid="{categories.cid}" data-numRecentReplies="1" class="row clearfix">
