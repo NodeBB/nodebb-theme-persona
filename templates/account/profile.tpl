@@ -137,38 +137,13 @@
 
 		</div>
 
-
-		<div class="col-md-7 user-recent-posts" data-nextstart="{nextStart}">
-			<div class="topic-row panel panel-default clearfix">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[global:recentposts]]</h3>
-				</div>
-				<div class="panel-body">
-					<!-- IF !posts.length -->
-					<span>[[user:has_no_posts]]</span>
-					<!-- ENDIF !posts.length -->
-					<!-- BEGIN posts -->
-					<div class="user-post clearfix" data-pid="{posts.pid}">
-						<div class="content">
-							<p>{posts.content}</p>
-							<p class="fade-out"></p>
-						</div>
-						<small>
-							<span class="pull-right post-preview-footer">
-								[[global:posted_in_ago, <a href="{relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
-								<a href="{relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
-							</span>
-						</small>
-					</div>
-					<hr/>
-					<!-- END posts -->
-					<div class="loading-indicator text-center hidden">
-						<i class="fa fa-refresh fa-spin"></i>
-					</div>
-				</div>
-			</div>
-
+		<div class="col-md-7">
+		<!-- IF !posts.length -->
+		<span>[[user:has_no_posts]]</span>
+		<!-- ENDIF !posts.length -->
+		<!-- IMPORT partials/posts_list.tpl -->
 		</div>
+
 	</div>
 
 	<br/>
