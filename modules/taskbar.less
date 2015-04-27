@@ -89,6 +89,23 @@
 						color: @gray;
 					}
 				}
+
+				&.new:after {
+					content: attr(data-content);
+					position: absolute;
+					left: 52px;
+					top: 0px;
+					font-size: 10px;
+					text-align: center;
+					border: 1px solid #890405;
+					color: #fff;
+					font-weight: bold;
+					min-width: 20px;
+					.border-radius(4px);
+					background: #c91106;
+					padding: 1px 2px;
+					font-family: @font-family-sans-serif;
+				}
 			}
 
 			&.taskbar-composer, &.taskbar-chat {
