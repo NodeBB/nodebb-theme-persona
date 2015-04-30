@@ -4,7 +4,9 @@
 		<li class=''><a href='{relative_path}/users/latest'>[[users:latest_users]]</a></li>
 		<li class=''><a href='{relative_path}/users/sort-posts'>[[users:top_posters]]</a></li>
 		<li class=''><a href='{relative_path}/users/sort-reputation'>[[users:most_reputation]]</a></li>
+		<!-- IF loggedIn -->
 		<li class=''><a href='{relative_path}/users/search'>[[users:search]]</a></li>
+		<!-- ENDIF loggedIn -->
 	</ul>
 
 	<br />
