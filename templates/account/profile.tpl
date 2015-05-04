@@ -33,6 +33,12 @@
 							<span class="label label-danger">[[user:banned]]</span>
 						</div>
 						<!-- ENDIF banned -->
+						<!-- IF aboutme -->
+						<hr/>
+						<div class="text-center">
+						{aboutme}
+						</div>
+						<!-- ENDIF aboutme -->
 						<hr/>
 						<div class="text-center account-stats">
 
@@ -51,6 +57,7 @@
 								<span class="account-bio-label">[[user:profile_views]]</span>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>

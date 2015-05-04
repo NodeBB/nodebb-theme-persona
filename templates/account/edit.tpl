@@ -70,6 +70,12 @@
 						</div>
 					</div>
 
+					<div class="control-group">
+						<label class="control-label" for="inputAboutMe">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
+						<div class="controls">
+							<textarea class="form-control" id="inputAboutMe" rows="5">{aboutme}</textarea>
+						</div>
+					</div>
 					<!-- IF !disableSignatures -->
 					<div class="control-group">
 						<label class="control-label" for="inputSignature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
