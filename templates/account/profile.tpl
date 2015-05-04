@@ -35,7 +35,7 @@
 						<!-- ENDIF banned -->
 						<!-- IF aboutme -->
 						<hr/>
-						<div class="text-center">
+						<div component="aboutme" class="text-center">
 						{aboutme}
 						</div>
 						<!-- ENDIF aboutme -->
