@@ -23,11 +23,11 @@
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
-		var config = JSON.parse('{configJSON}');
+		var config = JSON.parse('{{configJSON}}');
 		var app = {
-			template: "{template.name}"
+			template: "{template.name}",
+			user: JSON.parse('{{userJSON}}')
 		};
-		app.user = JSON.parse('{userJSON}');
 	</script>
 	<script src="{relative_path}/nodebb.min.js?{script-buster}"></script>
 	<!-- IMPORT partials/requirejs-config.tpl -->
