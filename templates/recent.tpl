@@ -22,7 +22,7 @@
 		</div>
 		<!-- ENDIF !topics.length -->
 
-		<a href="{relative_path}/recent">
+		<a href="{config.relative_path}/recent">
 			<div class="alert alert-warning hide" id="new-topics-alert"></div>
 		</a>
 

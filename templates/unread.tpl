@@ -30,7 +30,7 @@
 			<strong>[[unread:no_unread_topics]]</strong>
 		</div>
 
-		<a href="{relative_path}/unread">
+		<a href="{config.relative_path}/unread">
 			<div class="alert alert-warning hide" id="new-topics-alert"></div>
 		</a>
 
