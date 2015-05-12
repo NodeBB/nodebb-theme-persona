@@ -53,16 +53,11 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 
 #content {
 	padding-bottom:20px;
-	-webkit-transition: opacity 100ms linear;
-	-moz-transition: opacity 100ms linear;
-	-ms-transition: opacity 100ms linear;
-	-o-transition: opacity 100ms linear;
-	transition: opacity 100ms linear;
 
 	&.ajaxifying {
-		-moz-opacity: 0.05;
-		opacity: 0.05;
-		-ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+		-moz-opacity: 0;
+		opacity: 0;
+		-ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	}
 }
 
