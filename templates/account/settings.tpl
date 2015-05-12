@@ -125,12 +125,12 @@
 			</div>
 
 
-			<!-- BEGIN settings -->
-			<h4>{settings.title}</h4>
+			<!-- BEGIN customSettings -->
+			<h4>{customSettings.title}</h4>
 			<div class="well">
-				{settings.content}
+				{customSettings.content}
 			</div>
-			<!-- END settings -->
+			<!-- END customSettings -->
 		</div>
 	</div>
 
