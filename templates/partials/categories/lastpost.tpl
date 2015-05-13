@@ -1,25 +1,25 @@
-<div class="card" style="border-color: {categories.bgColor}">
+<div class="card" style="border-color: {../bgColor}">
 	<!-- BEGIN posts -->
 	<!-- IF @first -->
 	<div component="category/posts">
 		<p>
-			<strong>{categories.posts.user.username}</strong>
-			<a class="permalink" href="{config.relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">
-				<small class="timeago" title="{categories.posts.relativeTime}"></small>
+			<strong>{../user.username}</strong>
+			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
+				<small class="timeago" title="{../relativeTime}"></small>
 			</a>
 		</p>
 		<div class="post-content">
-			{categories.posts.content}
+			{../content}
 		</div>
 	</div>
 	<!-- ENDIF @first -->
 	<!-- END posts -->
 
-	<!-- IF !posts.length -->
+	<!-- IF !../posts.length -->
 	<div component="category/posts">
 		<div class="post-content">
 			No new posts.
 		</div>
 	<div>
-	<!-- ENDIF !posts.length -->
+	<!-- ENDIF !../posts.length -->
 </div>
