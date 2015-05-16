@@ -33,6 +33,12 @@
 							<span class="label label-danger">[[user:banned]]</span>
 						</div>
 						<!-- ENDIF banned -->
+						<!-- IF aboutme -->
+						<hr/>
+						<div component="aboutme" class="text-center">
+						{aboutme}
+						</div>
+						<!-- ENDIF aboutme -->
 						<hr/>
 						<div class="text-center account-stats">
 
@@ -51,6 +57,7 @@
 								<span class="account-bio-label">[[user:profile_views]]</span>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -116,7 +123,7 @@
 				</div>
 				<div class="panel-body">
 				<!-- BEGIN groups -->
-					<a href="{relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
+					<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
 				<!-- END groups -->
 				</div>
 			</div>

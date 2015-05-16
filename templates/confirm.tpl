@@ -8,6 +8,6 @@
 	<p>[[notifications:email-confirm-error-message]]</p>
 <!-- ENDIF !error -->
 	<p>
-		<a href="{relative_path}/">[[notifications:back_to_home, {config.siteTitle}]]</a>
+		<a href="{config.relative_path}/">[[notifications:back_to_home, {config.siteTitle}]]</a>
 	</p>
 </div>
