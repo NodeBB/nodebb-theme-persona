@@ -2,6 +2,7 @@
 	"id": "nodebb-theme-persona",
 	"hooks": [],
 	"scripts": [
-		"lib/persona.js"
+		"lib/persona.js",
+		"lib/modules/nprogress.js"
 	]
 }

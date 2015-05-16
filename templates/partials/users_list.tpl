@@ -1,11 +1,11 @@
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
-	<a href="{relative_path}/user/{users.userslug}"><img src="{users.picture}" /></a>
+	<a href="{config.relative_path}/user/{users.userslug}"><img src="{users.picture}" /></a>
 	<br/>
 	<div class="user-info">
 		<span>
 			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
-			<a href="{relative_path}/user/{users.userslug}">{users.username}</a>
+			<a href="{config.relative_path}/user/{users.userslug}">{users.username}</a>
 		</span>
 		<br/>
 

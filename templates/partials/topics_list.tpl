@@ -12,7 +12,7 @@
 						<i class="fa fa-check"></i>
 					</div>
 				<!-- ELSE -->
-					<a href="{relative_path}/user/{topics.user.userslug}" class="pull-left">
+					<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
 						<img src="{topics.user.picture}" class="img-circle user-img" title="{topics.user.username}"/>
 					</a>
 				<!-- ENDIF showSelect -->
@@ -21,7 +21,7 @@
 			<h1 component="topic/header" class="title pull-left">
 				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
-				<a href="{relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
+				<a href="{config.relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
 
 				<!-- IF template.category -->
 				<small>
@@ -34,9 +34,9 @@
 				<!-- ELSE -->
 				<small>
 					<!-- IF topics.user.userslug -->
-					[[global:posted_in_ago_by, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
+					[[global:posted_in_ago_by, <a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
 					<!-- ELSE -->
-					[[global:posted_in_ago_by_guest, <a href="{relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
+					[[global:posted_in_ago_by_guest, <a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
 					<!-- ENDIF topics.user.userslug -->
 				</small>
 				<!-- ENDIF template.category -->
@@ -60,7 +60,7 @@
 				<!-- ELSE -->
 				<p class="hidden-xs">
 					<strong>{topics.teaser.user.username}</strong>
-					<a class="permalink" href="{relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<small class="timeago" title="{topics.teaser.timestamp}"></small>
 					</a>
 				</p>

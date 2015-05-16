@@ -8,7 +8,7 @@
 				<strong>[[error:registration-error]]</strong>
 				<p>{error}</p>
 			</div>
-			<form class="form-horizontal" role="form" action="{relative_path}/register" method="post">
+			<form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
 					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
 					<div class="col-lg-8">
@@ -61,7 +61,7 @@
 				<div class="form-group">
 					<label for="register-{regFormEntry.styleName}" class="col-lg-4 control-label">{regFormEntry.label}</label>
 					<div id="register-{regFormEntry.styleName}" class="col-lg-8">
-						{regFormEntry.html}
+						{{regFormEntry.html}}
 					</div>
 				</div>
 				<!-- END regFormEntry -->
@@ -98,7 +98,7 @@
 			<h4>[[register:alternative_registration]]</h4>
 			<ul class="alt-logins">
 				<!-- BEGIN authentication -->
-				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
+				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
 				<!-- END authentication -->
 			</ul>
 		</div>
