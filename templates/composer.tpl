@@ -97,16 +97,16 @@
 
 					<button class="btn btn-primary composer-submit" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
 					<!-- IF !isEditing -->
-					<!-- IF isAdminOrMod -->
 					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 						<span class="caret"></span>
 						<span class="sr-only">[[modules:composer.toggle_dropdown]]</span>
 					</button>
 					<ul class="dropdown-menu pull-right" role="menu">
 						<li><a href="#" data-switch-action="post"><i class="fa fa-fw fa-check"></i> [[topic:composer.submit]]</a></li>
+						<!-- IF isAdminOrMod -->
 						<li><a href="#" data-switch-action="post-lock"><i class="fa fa-fw fa-lock"></i> [[modules:composer.submit_and_lock]]</a></li>
+						<!-- ENDIF isAdminOrMod -->
 					</ul>
-					<!-- ENDIF isAdminOrMod -->
 					<!-- ENDIF !isEditing -->
 				</div>
 
