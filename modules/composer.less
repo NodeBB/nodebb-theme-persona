@@ -4,6 +4,11 @@
 html.composing {
 	&.mobile {
 		overflow: hidden;
+
+		.composer {
+			position: absolute;
+			box-shadow: none;
+		}
 	}
 
 	body {
@@ -44,6 +49,11 @@ html.composing {
 			font-size: 18px;
 		}
 
+		.write:focus {
+			outline-style: solid;
+			outline-width: 2px;
+		}
+
 		.form-control {
 			box-shadow: none;
 		}
@@ -56,6 +66,7 @@ html.composing {
 		.mobile-navbar {
 			background: @btn-primary-bg;
 			color: @btn-primary-color;
+			position: absolute;
 
 			button {
 				font-size: 20px;
