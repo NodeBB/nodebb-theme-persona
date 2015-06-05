@@ -17,7 +17,7 @@
 <!-- ELSE -->
 
 <!-- IF !privileges.topics:reply -->
-<a href="/login?next=topic/{slug}" class="btn btn-primary">[[topic:guest-login-reply]]</a>
+<a href="/login" class="btn btn-primary">[[topic:guest-login-reply]]</a>
 <!-- ENDIF !privileges.topics:reply -->
 
 <!-- ENDIF loggedIn -->
