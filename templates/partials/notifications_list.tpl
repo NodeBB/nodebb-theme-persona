@@ -7,7 +7,7 @@
 <li class="{notifications.readClass}" data-nid="{notifications.nid}">
 	<!-- IF notifications.image -->
 	<!-- IF notifications.from -->
-	<a href="{relative_path}/user/{notifications.user.userslug}"><img src="{notifications.image}" /></a>
+	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img src="{notifications.image}" /></a>
 	<!-- ENDIF notifications.from -->
 	<!-- ELSE -->
 	<img src="{notifications.image}" />

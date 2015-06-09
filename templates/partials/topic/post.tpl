@@ -1,6 +1,6 @@
 <div class="clearfix">
 	<div class="icon pull-left">
-		<a href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			<img src="{posts.user.picture}" align="left" itemprop="image" />
 			<!-- IF posts.user.banned -->
 			<span class="label label-danger">[[user:banned]]</span>
@@ -11,7 +11,7 @@
 	<small class="pull-left">
 		<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 		<strong>
-			<a href="<!-- IF posts.user.userslug -->{relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
+			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
 		</strong>
 
 		<!-- IMPORT partials/topic/badge.tpl -->
@@ -46,10 +46,13 @@
 <br />
 <div class="content" component="post/content" itemprop="text">
 	{posts.content}
+	<!-- IF posts.user.signature -->
+	<div class="post-signature">{posts.user.signature}</div>
+	<!-- ENDIF posts.user.signature -->
 </div>
 
 
-<small component="post/editor" class="pull-right <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->">[[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
+<small component="post/editor" class="pull-right <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->">[[global:last_edited_by_ago, <strong><a href="{config.relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
 
 
 <hr />

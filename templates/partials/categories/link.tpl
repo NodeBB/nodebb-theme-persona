@@ -1,7 +1,7 @@
-<!-- IF categories.link -->
-<a href="{categories.link}" itemprop="url" target="_blank">
+<!-- IF ../link -->
+<a href="{../link}" itemprop="url" target="_blank">
 <!-- ELSE -->
-<a href="{relative_path}/category/{categories.slug}" itemprop="url">
-<!-- ENDIF categories.link -->
-{categories.name}
+<a href="{config.relative_path}/category/{../slug}" itemprop="url">
+<!-- ENDIF ../link -->
+{../name}
 </a>

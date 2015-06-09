@@ -8,7 +8,7 @@
 				<ul class="members">
 					<!-- BEGIN members -->
 					<li>
-						<a href="{relative_path}/user/{groups.members.userslug}">
+						<a href="{config.relative_path}/user/{groups.members.userslug}">
 							<img src="{groups.members.picture}" title="{groups.members.userslug}" />
 						</a>
 					</li>

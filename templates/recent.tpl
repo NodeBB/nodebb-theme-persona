@@ -8,7 +8,7 @@
 			<!-- IF loggedIn -->
 			<button id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 			<!-- ELSE -->
-			<a href="/login?next=recent" class="btn btn-primary">[[category:guest-login-post]]</a>
+			<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 		</div>
 		<!-- ENDIF !topics.length -->
 
-		<a href="{relative_path}/recent">
+		<a href="{config.relative_path}/recent">
 			<div class="alert alert-warning hide" id="new-topics-alert"></div>
 		</a>
 

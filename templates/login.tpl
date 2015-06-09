@@ -37,10 +37,10 @@
 						<hr />
 						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 						<!-- IF allowRegistration -->
-						<span>[[login:dont_have_account]] <a href="{relative_path}/register">[[register:register]]</a></span>
+						<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
 						<!-- ENDIF allowRegistration -->
 						<!-- IF showResetLink -->
-						&nbsp; <a id="reset-link" href="{relative_path}/reset">[[login:forgot_password]]</a>
+						&nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
 						<!-- ENDIF showResetLink -->
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 			<h4>[[login:alternative_logins]]</h4>
 			<ul class="alt-logins">
 				<!-- BEGIN authentication -->
-				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
+				<li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
 				<!-- END authentication -->
 			</ul>
 		</div>

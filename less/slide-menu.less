@@ -20,6 +20,7 @@
 			> li {
 				.transition(.40s ease-in-out transform);
 				transform: translate3d(-50px, 0, 0);
+				-webkit-transform: translate3d(-50px, 0, 0);
 			}
 
 			border-bottom: 1px solid lighten(@gray-dark, 10%);
@@ -38,9 +39,11 @@
 
 		&.slide-in {
 			transform: translate3d(-45%, 0, 0);
+			-webkit-transform: translate3d(-45%, 0, 0);
 
 			#header-menu #nav-dropdown.navbar-slide-in > ul > li {
 				transform: translate3d(0, 0, 0);
+				-webkit-transform: translate3d(0, 0, 0);
 			}
 		}
 	}
