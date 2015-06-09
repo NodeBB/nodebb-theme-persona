@@ -46,6 +46,9 @@
 <br />
 <div class="content" component="post/content" itemprop="text">
 	{posts.content}
+	<!-- IF posts.user.signature -->
+	<div class="post-signature">{posts.user.signature}</div>
+	<!-- ENDIF posts.user.signature -->
 </div>
 
 

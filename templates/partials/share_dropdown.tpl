@@ -14,6 +14,6 @@
 	</li>
 	<!-- ENDIF !config.disableSocialButtons -->
 	<li class="text-center">
-		<input id="category-link" type="text" value="" class="form-control post-link inline-block"></input>
+		<input id="category-link" type="text" readonly="true" value="" class="form-control post-link inline-block"></input>
 	</li>
 </ul>

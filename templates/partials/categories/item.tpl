@@ -14,11 +14,11 @@
 
 	<!-- IF !../link -->
 	<div class="col-md-1 hidden-sm hidden-xs stats">
-		<span class="{../unread-class} human-readable-number" title="{../topic_count}">{../topic_count}</span><br />
+		<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
 		<small>[[global:topics]]</small>
 	</div>
 	<div class="col-md-1 hidden-sm hidden-xs stats">
-		<span class="{../unread-class} human-readable-number" title="{../post_count}">{../post_count}</span><br />
+		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
 	<div class="col-md-3 col-sm-3 col-xs-1 teaser">

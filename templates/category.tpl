@@ -9,7 +9,7 @@
 		<button id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 		<!-- ELSE -->
 			<!-- IF !loggedIn -->
-			<a href="/login?next=category/{slug}" class="btn btn-primary">[[category:guest-login-post]]</a>
+			<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF !loggedIn -->
 		<!-- ENDIF privileges.topics:create -->
 
