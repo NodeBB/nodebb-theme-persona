@@ -67,7 +67,21 @@
 		<!-- IF group.isOwner -->
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title"><i class="fa fa-clock-o"></i> [[groups:details.pending]]</h3>
+				<h3 class="panel-title clearfix">
+					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
+					<!-- IF group.pending.length -->
+					<div class="btn-group pull-right">
+						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							[[global:more]] <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
+							<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
+						</ul>
+					</div>
+					<!-- ENDIF group.pending.length -->
+				</h3>
+
 			</div>
 			<div class="panel-body">
 				<table component="groups/members" class="table table-striped table-hover">
@@ -82,7 +96,7 @@
 						<td>
 							<div class="btn-group pull-right">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									More <span class="caret"></span>
+									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
