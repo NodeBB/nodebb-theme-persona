@@ -62,15 +62,13 @@
 				<i class="fa fa-fw fa-eraser"></i> [[topic:thread_tools.purge]]
 			</a>
 		</li>
-		<!-- ENDIF privileges.deletable -->
 
-		<!-- IF privileges.editable -->
 		<!-- BEGIN thread_tools -->
 		<li>
 			<a href="#" class="{thread_tools.class}"><i class="fa fa-fw {thread_tools.icon}"></i> {thread_tools.title}</a>
 		</li>
 		<!-- END thread_tools -->
-		<!-- ENDIF privileges.editable -->
+		<!-- ENDIF privileges.deletable -->
 	</ul>
 </div>
 <!-- ENDIF privileges.view_thread_tools -->
