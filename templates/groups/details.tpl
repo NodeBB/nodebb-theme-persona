@@ -134,14 +134,15 @@
 					</div>
 					<div class="form-group user-title-option">
 						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled --> />
+						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 					</div>
+
 					<div class="form-group user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
-						<span class="label<!-- IF !userTitleEnabled --> hide<!-- ENDIF !userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.name}<!-- ENDIF group.userTitle --></span>
+						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.name}<!-- ENDIF group.userTitle --></span>
 
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_icon]]</button>
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_colour]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" style="display:none;">
