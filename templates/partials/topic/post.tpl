@@ -23,8 +23,15 @@
 				<a component="post/reply" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 			</span>
+			<span>
+				<!-- IF posts.user.custom_profile_info.length -->
+				&#124;
+				<!-- BEGIN custom_profile_info -->
+				{posts.user.custom_profile_info.content}
+				<!-- END custom_profile_info -->
+				<!-- ENDIF posts.user.custom_profile_info.length -->
+			</span>
 		</div>
-
 		<div class="votes">
 			<!-- IF !reputation:disabled -->
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
