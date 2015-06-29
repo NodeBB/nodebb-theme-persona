@@ -1,4 +1,5 @@
 <div class="users">
+
 	<ul class="nav nav-pills">
 		<li class=''><a href='{config.relative_path}/users/online'>[[global:online]]</a></li>
 		<li class=''><a href='{config.relative_path}/users/latest'>[[users:latest_users]]</a></li>
@@ -7,6 +8,9 @@
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 		<li class=''><a href='{config.relative_path}/users/search'>[[users:search]]</a></li>
 		<!-- ENDIF function.displayUserSearch -->
+		<!-- IF inviteOnly -->
+		<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+		<!-- ENDIF inviteOnly -->
 	</ul>
 
 	<br />

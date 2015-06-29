@@ -88,6 +88,7 @@
 					</div>
 				</div>
 				<input id="referrer" type="hidden" name="referrer" value="" />
+				<input id="token" type="hidden" name="token" value="" />
 			</form>
 		</div>
 	</div>
