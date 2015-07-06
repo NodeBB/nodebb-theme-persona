@@ -17,9 +17,14 @@
 			<div class="panel-body">
 				<h1>{group.name}</h1>
 				<p>{group.descriptionParsed}</p>
+				<!-- IF isAdmin -->
+				<div class="pull-right">
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
+				</div>
+				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
 				<div class="pull-right">
-					{function.membershipBtn, group}
+					{function.membershipBtn, group}&nbsp;
 				</div>
 				<!-- ENDIF loggedIn -->
 			</div>
