@@ -154,7 +154,7 @@
 
 		<div class="col-md-7">
 		<!-- IF !posts.length -->
-		<span>[[user:has_no_posts]]</span>
+		<div class="alert alert-info">[[user:has_no_posts]]</div>
 		<!-- ENDIF !posts.length -->
 		<!-- IMPORT partials/posts_list.tpl -->
 		</div>
