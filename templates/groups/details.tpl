@@ -71,6 +71,7 @@
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
+		<!-- IF group.private -->
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title clearfix">
@@ -87,10 +88,12 @@
 					</div>
 					<!-- ENDIF group.pending.length -->
 				</h3>
-
 			</div>
 			<div class="panel-body">
 				<table component="groups/pending" class="table table-striped table-hover">
+					<!-- IF !group.pending.length -->
+					<div class="alert alert-info">[[groups:pending.none]]</div>
+					<!-- ENDIF !group.pending.length -->
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
@@ -115,6 +118,42 @@
 				</table>
 			</div>
 		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title clearfix">
+					<i class="fa fa-gift"></i> [[groups:details.invited]]
+				</h3>
+			</div>
+			<div class="panel-body">
+				<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/><br/>
+				<table component="groups/invited" class="table table-striped table-hover">
+					<!-- IF !group.invited.length -->
+					<div class="alert alert-info">[[groups:invited.none]]</div>
+					<!-- ENDIF !group.invited.length -->
+					<!-- BEGIN invited -->
+					<tr data-uid="{group.invited.uid}">
+						<td>
+							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+						</td>
+						<td class="member-name">
+							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
+						</td>
+						<td>
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									[[global:more]] <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<!-- END invited -->
+				</table>
+			</div>
+		</div>
+		<!-- ENDIF group.private -->
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
