@@ -23,6 +23,12 @@
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
 				<a href="{config.relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
 
+				<span class="tag-list">
+					<!-- BEGIN tags -->
+					<span class="tag">{topics.tags.value}</span>
+					<!-- END tags -->
+				</span>
+
 				<!-- IF template.category -->
 				<small>
 					<!-- IF topics.user.userslug -->
