@@ -71,7 +71,6 @@
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
-		<!-- IF group.private -->
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title clearfix">
@@ -153,7 +152,6 @@
 				</table>
 			</div>
 		</div>
-		<!-- ENDIF group.private -->
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
