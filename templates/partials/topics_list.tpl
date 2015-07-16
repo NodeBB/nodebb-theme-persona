@@ -23,29 +23,20 @@
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
 				<a href="{config.relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
 
+				<!-- IF !template.category -->
+				<small>
+					<a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a> &bull;
+				</small>
+				<!-- ENDIF !template.category -->
+
 				<span class="tag-list">
 					<!-- BEGIN tags -->
 					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag">{topics.tags.value}</span></a>
 					<!-- END tags -->
+					<!-- IF topics.tags.length --><small>&bull;</small><!-- ENDIF topics.tags.length -->
 				</span>
 
-				<!-- IF template.category -->
-				<small>
-					<!-- IF topics.user.userslug -->
-					[[global:posted_ago_by, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
-					<!-- ELSE -->
-					[[global:posted_ago_by_guest, <span class="timeago" title="{topics.relativeTime}"></span>]]
-					<!-- ENDIF topics.user.userslug -->
-				</small>
-				<!-- ELSE -->
-				<small>
-					<!-- IF topics.user.userslug -->
-					[[global:posted_in_ago_by, <a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>, <strong>{topics.user.username}</strong>]]
-					<!-- ELSE -->
-					[[global:posted_in_ago_by_guest, <a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a>, <span class="timeago" title="{topics.relativeTime}"></span>]]
-					<!-- ENDIF topics.user.userslug -->
-				</small>
-				<!-- ENDIF template.category -->
+				<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
 			</h1>
 		</div>
 
