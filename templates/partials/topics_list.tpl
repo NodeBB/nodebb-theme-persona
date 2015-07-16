@@ -25,7 +25,7 @@
 
 				<span class="tag-list">
 					<!-- BEGIN tags -->
-					<span class="tag">{topics.tags.value}</span>
+					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag">{topics.tags.value}</span></a>
 					<!-- END tags -->
 				</span>
 
