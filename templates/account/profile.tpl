@@ -37,7 +37,6 @@
 
 						</div>
 
-
 						<div id="banLabel" class="text-center <!-- IF !banned -->hide<!-- ENDIF !banned -->">
 							<span class="label label-danger">[[user:banned]]</span>
 						</div>
