@@ -183,7 +183,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->
