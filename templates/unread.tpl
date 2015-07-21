@@ -19,6 +19,28 @@
 					<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
 				</li>
 				<li class="divider"></li>
+				<!-- BEGIN categories -->
+				<li role="presentation" class="category" data-cid="{categories.cid}">
+					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF icon --> {categories.name}</a>
+				</li>
+				<!-- END categories -->
+			</ul>
+		</div>
+
+		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
+				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li role="presentation" class="category">
+					<a role="menu-item" href="/unread"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
+				</li>
+				<!-- BEGIN categories -->
+				<li role="presentation" class="category" data-cid="{categories.cid}">
+					<a role="menu-item" href="/unread?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
+				</li>
+				<!-- END categories -->
 			</ul>
 		</div>
 	</div>

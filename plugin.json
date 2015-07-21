@@ -3,6 +3,7 @@
 	"hooks": [],
 	"scripts": [
 		"lib/persona.js",
-		"lib/modules/nprogress.js"
+		"lib/modules/nprogress.js",
+		"lib/modules/autohidingnavbar.min.js"
 	]
 }

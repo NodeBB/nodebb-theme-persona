@@ -22,13 +22,14 @@
 
 	<hr />
 
+	<p>{name}</p>
+
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning" id="category-no-topics">
 		[[category:no_topics]]
 	</div>
 	<!-- ENDIF !topics.length -->
 
-	<p>{name}</p>
 	<!-- IMPORT partials/topics_list.tpl -->
 
 	<!-- IF config.usePagination -->
@@ -37,5 +38,11 @@
 </div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
-<!-- IMPORT partials/noscript/paginator.tpl -->
+
+<!-- IF !config.usePagination -->
+<noscript>
+	<!-- IMPORT partials/paginator.tpl -->
+</noscript>
+<!-- ENDIF !config.usePagination -->
+
 <!-- IMPORT partials/variables/category.tpl -->
