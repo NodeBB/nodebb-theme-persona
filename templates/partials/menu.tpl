@@ -6,7 +6,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a href="{relative_path}/">
+				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
 					<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
 				<!-- IF showSiteTitle -->
@@ -183,7 +183,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

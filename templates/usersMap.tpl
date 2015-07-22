@@ -23,7 +23,7 @@
 		<li>
 			<a href="{config.relative_path}{rooms.link}">[[users:{rooms.room}]]</a><br/>
 			<!-- BEGIN rooms.users -->
-				<a href="{rooms.users.userslug}"><img class="user-img" src="{rooms.users.picture}" title="{rooms.users.username}"/></a>
+				<a href="{config.relative_path}/user/{rooms.users.userslug}"><img class="user-img" src="{rooms.users.picture}" title="{rooms.users.username}"/></a>
 			<!-- END rooms.users -->
 		</li>
 		<!-- ENDIF rooms.total -->
