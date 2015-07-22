@@ -12,6 +12,15 @@
 		font-size: 11px;
 
 		.user-select(none);
+
+		&.animated {
+			-webkit-animation-name: bounceIn;
+				animation-name: bounceIn;
+			-webkit-animation-duration: 0.5s;
+			animation-duration: 0.5s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
 	}
 
 	@media (min-width: @screen-md-min) {
