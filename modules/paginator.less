@@ -10,6 +10,7 @@
 		border-radius: 50%;
 		color: white;
 		font-size: 11px;
+		z-index: 1;
 
 		.user-select(none);
 
@@ -21,6 +22,15 @@
 			-webkit-animation-fill-mode: both;
 			animation-fill-mode: both;
 		}
+	}
+
+	.shadow.active {
+		border-radius: 50%;
+		width: 13px;
+		height: 13px;
+		border: 1px solid #333;
+		position: absolute;
+		bottom: 13px;
 	}
 
 	@media (min-width: @screen-md-min) {
