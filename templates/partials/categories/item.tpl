@@ -8,7 +8,7 @@
 
 		<h1 class="title pull-left">
 			<!-- IMPORT partials/categories/link.tpl --><br />
-			<small>{../description}</small>
+			<small>{../descriptionParsed}</small>
 		</h1>
 	</div>
 
