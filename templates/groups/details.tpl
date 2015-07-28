@@ -220,8 +220,8 @@
 						</label>
 					</div>
 
-					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">Delete Group</button>
-					<button class="btn btn-primary" type="button" data-action="update">Save</button>
+					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 				</form>
 			</div>
 		</div>
