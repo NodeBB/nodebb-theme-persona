@@ -8,12 +8,12 @@
 			<div class="avatar hidden-sm hidden-xs pull-left">
 				<!-- IF showSelect -->
 					<div class="select fa-square-o">
-						<img src="{topics.user.picture}" class="img-circle user-img" />
+						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" />
 						<i class="fa fa-check"></i>
 					</div>
 				<!-- ELSE -->
 					<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
-						<img src="{topics.user.picture}" class="img-circle user-img" title="{topics.user.username}"/>
+						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" title="{topics.user.username}"/>
 					</a>
 				<!-- ENDIF showSelect -->
 			</div>
