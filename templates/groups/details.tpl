@@ -48,7 +48,7 @@
 						<td>
 							<div class="btn-group pull-right">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									More <span class="caret"></span>
+									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
 									<li>
