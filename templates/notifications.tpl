@@ -29,7 +29,7 @@
 			<!-- ENDIF notifications.image -->
 
 			<p>
-				<a href="{notifications.path}">{notifications.bodyShort}</a>
+				<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 			</p>
 			<p class="timestamp">
 				<span class="timeago" title="{notifications.datetimeISO}"></span>
