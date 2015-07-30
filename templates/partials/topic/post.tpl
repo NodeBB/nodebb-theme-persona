@@ -54,10 +54,10 @@
 <br />
 <div class="content" component="post/content" itemprop="text">
 	{posts.content}
-	<!-- IF posts.user.signature -->
-	<div class="post-signature">{posts.user.signature}</div>
-	<!-- ENDIF posts.user.signature -->
 </div>
+<!-- IF posts.user.signature -->
+<div class="post-signature">{posts.user.signature}</div>
+<!-- ENDIF posts.user.signature -->
 
 
 <small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by_ago, <strong>{posts.editor.username}</strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
