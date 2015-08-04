@@ -19,7 +19,7 @@
 			<div class="input-group">
 				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input" rows="1"></textarea>
 				<span class="input-group-btn">
-					<button class="btn btn-primary" type="button" data-action="send">Send</button>
+					<button class="btn btn-primary" type="button" data-action="send">[[modules:chat.send]]</button>
 				</span>
 			</div>
 		</div>
