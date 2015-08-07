@@ -24,10 +24,5 @@
 	<div class="col-md-3 col-sm-3 col-xs-1 teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
-	<!-- ELSE -->
-	<div class="col-md-2 hidden-sm-hidden-xs"></div>
-	<div class="col-md-3 col-sm-3 col-xs-1 teaser">
-		<div class="card" style="border-color: {../bgColor}"></div>
-	</div>
 	<!-- ENDIF !../link -->
 </li>
