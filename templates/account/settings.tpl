@@ -3,6 +3,15 @@
 <div class="account">
 	<div class="row">
 		<div class="col-xs-12">
+			<h4>[[user:select-skin]]</h4>
+			<div class="well">
+				<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
+					<!-- BEGIN bootswatchSkinOptions -->
+					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
+					<!-- END bootswatchSkinOptions -->
+				</select>
+			</div>
+
 			<h4>[[user:browsing]]</h4>
 			<div class="well">
 				<div class="checkbox">
