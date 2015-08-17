@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{defaultLang}">
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->
