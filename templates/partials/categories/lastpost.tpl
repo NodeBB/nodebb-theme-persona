@@ -20,6 +20,6 @@
 		<div class="post-content">
 			[[category:no_new_posts]]
 		</div>
-	<div>
+	</div>
 	<!-- ENDIF !../posts.length -->
 </div>
