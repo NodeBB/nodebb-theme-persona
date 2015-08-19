@@ -49,7 +49,7 @@
 			<small>[[global:views]]</small>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-1 teaser hidden-xs">
-			<div class="card" style="border-color: {bgColor}">
+			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p class="hidden-xs">
 					[[category:no_replies]]
