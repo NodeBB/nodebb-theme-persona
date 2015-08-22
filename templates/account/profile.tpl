@@ -50,10 +50,12 @@
 						<hr/>
 						<div class="text-center account-stats">
 
+							<!-- IF reputation -->
 							<div class="inline-block text-center">
 								<span class="human-readable-number" title="{reputation}">{reputation}</span>
 								<span class="account-bio-label">[[global:reputation]]</span>
 							</div>
+							<!-- ENDIF reputation -->
 
 							<div class="inline-block text-center">
 								<span class="human-readable-number" title="{postcount}">{postcount}</span>
