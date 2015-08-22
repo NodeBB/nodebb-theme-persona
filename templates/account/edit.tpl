@@ -114,7 +114,7 @@
 						<div class="input-group">
 							<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
 							<span class="input-group-addon">
-								<span id="password-notify"><i class="fa fa-circle-o"></i></span>
+								<span id="password-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
 							</span>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 						<div class="input-group">
 							<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
 							<span class="input-group-addon">
-								<span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
+								<span id="password-confirm-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
 							</span>
 						</div>
 					</div>
