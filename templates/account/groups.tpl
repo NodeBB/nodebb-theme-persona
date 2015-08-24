@@ -1,7 +1,7 @@
 
 <!-- IMPORT partials/account_menu.tpl -->
 
-<div id="groups-list" class="groups row">
+<div component="groups/container" id="groups-list" class="groups row">
 	<!-- IF !groups.length -->
 	<div class="alert alert-warning">[[groups:no_groups_found]]</div>
 	<!-- ELSE -->
