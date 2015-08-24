@@ -29,7 +29,7 @@
 		<!-- IMPORT partials/users_list.tpl -->
 		<!-- IF anonymousUserCount -->
 		<li class="users-box anon-user">
-			<img src="https://secure.gravatar.com/avatar/" />
+			<img src="{defaultGravatar}" />
 			<br/>
 			<div class="user-info">
 				<span id="online_anon_count">{anonymousUserCount}</span>
