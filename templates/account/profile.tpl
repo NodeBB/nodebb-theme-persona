@@ -25,7 +25,7 @@
 							<!-- ENDIF !config.disableChat -->
  							<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
  							<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
-                            
+
                             				<!-- IF isAdmin -->
 							<br/><br/>
 
@@ -156,7 +156,7 @@
 
 		<div class="col-md-7">
 		<!-- IF !posts.length -->
-		<div class="alert alert-info">[[user:has_no_posts]]</div>
+		<div class="alert alert-warning">[[user:has_no_posts]]</div>
 		<!-- ENDIF !posts.length -->
 		<!-- IMPORT partials/posts_list.tpl -->
 		</div>

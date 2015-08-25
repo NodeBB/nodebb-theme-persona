@@ -31,7 +31,7 @@
 
 				<span class="tag-list">
 					<!-- BEGIN tags -->
-					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag">{topics.tags.value}</span></a>
+					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">{topics.tags.value}</span></a>
 					<!-- END tags -->
 					<!-- IF topics.tags.length --><small>&bull;</small><!-- ENDIF topics.tags.length -->
 				</span>
