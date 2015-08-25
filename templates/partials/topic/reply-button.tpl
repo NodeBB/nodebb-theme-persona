@@ -1,6 +1,6 @@
 
 
-<a component="topic/reply" class="btn btn-primary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+<a component="topic/reply" href="#" class="btn btn-primary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 
 <!-- IF loggedIn -->
 
