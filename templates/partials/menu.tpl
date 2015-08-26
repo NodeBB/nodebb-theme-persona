@@ -88,13 +88,13 @@
 					</li>
 
 					<!-- IF !disableChat -->
-					<li class="chats dropdown hidden-xs">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown">
+					<li class="chats dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown">
 							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
-								<ul id="chat-list">
+								<ul component="chat/list">
 									<li>
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 									</li>
@@ -102,11 +102,6 @@
 							</li>
 							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
 						</ul>
-					</li>
-					<li class="visible-xs">
-						<a href="{relative_path}/chats" id="chat_dropdown">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
-						</a>
 					</li>
 					<!-- ENDIF !disableChat -->
 				</ul>
