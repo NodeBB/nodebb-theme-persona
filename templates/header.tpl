@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{defaultLang}">
+<html lang="{function.localeToHTML, defaultLang}">
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->

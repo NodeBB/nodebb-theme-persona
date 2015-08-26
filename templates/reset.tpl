@@ -6,11 +6,11 @@
 </div>
 
 <div class="well">
-	<div class="alert alert-success" id="success" style="display:none">
+	<div class="alert alert-success hidden" id="success">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>[[reset_password:password_reset_sent]]</strong>
 	</div>
-	<div class="alert alert-danger" id="error" style="display:none">
+	<div class="alert alert-danger hidden" id="error">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>[[reset_password:invalid_email]]</strong>
 	</div>
