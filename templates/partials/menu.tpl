@@ -29,7 +29,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
 							<img component="header/userpicture" src="{user.picture}"/> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</a>
-						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
+						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
 								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
 									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
