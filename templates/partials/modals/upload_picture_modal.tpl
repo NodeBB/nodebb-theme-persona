@@ -8,7 +8,7 @@
 				<div class="modal-body">
 					<form id="uploadForm" action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							<label for="userPhoto">[[user:upload_a_picture]]</label>
+							<label for="userPhotoInput">[[user:upload_a_picture]]</label>
 							<input type="file" id="userPhotoInput" name="files[]">
 							<p class="help-block">[[user:image_spec]] (<span id="file-size-block" class="hide"></span>)</p>
 						</div>
