@@ -4,6 +4,7 @@
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
-		"lib/modules/autohidingnavbar.min.js"
+		"lib/modules/autohidingnavbar.min.js",
+		"lib/modules/slideout.min.js"
 	]
 }

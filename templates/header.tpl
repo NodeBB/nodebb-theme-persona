@@ -38,10 +38,38 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu" component="navbar">
-		<div class="container">
-			<!-- IMPORT partials/menu.tpl -->
-		</div>
+	<nav id="menu" class="visible-xs visible-sm">
+		<section class="menu-profile">
+			<img src="{user.picture}"/>
+			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i></span>
+		</section>
+
+		<section class="menu-section" data-section="navigation">
+			<h3 class="menu-section-title">[[global:header.navigation]]</h3>
+			<ul class="menu-section-list"></ul>
+		</section>
+
+		<section class="menu-section" data-section="profile">
+			<h3 class="menu-section-title">[[global:header.profile]]</h3>
+			<ul class="menu-section-list" component="header/usercontrol"></ul>
+		</section>
+
+		<section class="menu-section" data-section="notifications">
+			<h3 class="menu-section-title">[[global:header.notifications]]</h3>
+			<ul class="menu-section-list"></ul>
+		</section>
+
+		<section class="menu-section" data-section="chats">
+			<h3 class="menu-section-title">[[global:header.chats]]</h3>
+			<ul class="menu-section-list chat-list"></ul>
+		</section>
 	</nav>
-	<div class="container" id="content" component="header">
-	<!-- IMPORT partials/noscript/warning.tpl -->
+
+	<main id="panel">
+		<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu" component="navbar">
+			<div class="container">
+				<!-- IMPORT partials/menu.tpl -->
+			</div>
+		</nav>
+		<div class="container" id="content" component="header">
+		<!-- IMPORT partials/noscript/warning.tpl -->

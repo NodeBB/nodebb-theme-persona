@@ -1,4 +1,5 @@
-	</div><!--END container -->
+		</div><!--END container -->
+	</main>
 
 	<div class="hide tpl-500">
 	<!-- IMPORT 500.tpl -->

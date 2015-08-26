@@ -1,0 +1,143 @@
+@media (max-width: 980px) {
+	html {
+		height: 100%;
+		overflow-y: hidden;
+	}
+
+	body {
+		height: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	#panel {
+		background: @body-bg;
+		min-height: 100%;
+		padding-top: 80px;
+	}
+
+	#menu {
+		padding-top: 100px;
+		background-color: #1D1F20;
+		background-image: linear-gradient(145deg, #1D1F20, #404348);
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.chat-list li {
+			width: auto;
+
+			a {
+				color: white;
+
+				i {
+					left: 42px;
+				}
+			}
+		}
+	}
+
+	.menu-header-title {
+		font-weight: 400;
+		letter-spacing: 0.5px;
+		margin: 0;
+	}
+
+	.menu-section {
+		margin: 25px 0;
+	}
+
+	.menu-section-title {
+		text-transform: uppercase;
+		color: #85888d;
+		font-weight: 200;
+		font-size: 13px;
+		letter-spacing: 1px;
+		padding: 0 20px;
+		margin:0;
+	}
+
+	.menu-section-list {
+		padding:0;
+		margin: 10px 0;
+		list-style:none;
+
+		a {
+			display: block;
+			padding: 10px 20px;
+		}
+
+		a:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+			text-decoration: none;
+		}
+	}
+
+	.slideout-menu {
+		position: fixed;
+		left: auto;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 0;
+		width: 256px;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		display: none;
+	}
+
+	.slideout-panel {
+		position: relative;
+		z-index: 1;
+	}
+
+	.slideout-open,
+	.slideout-open body,
+	.slideout-open .slideout-panel {
+		overflow: hidden;
+		overflow-y: hidden !important;
+	}
+
+	.slideout-open .slideout-menu {
+		display: block;
+	}
+	
+	.slideout-open {
+		overflow-y: hidden;
+		height: 100%;
+	}
+
+	.menu-profile {
+		text-align: center;
+		background: #101010;
+		position: fixed;
+		height: 75px;
+		width: 100%;
+		top: 0px;
+		z-index: 1;
+
+		img {
+			position: absolute;
+			bottom: -22px;
+			left: 93px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+		}
+
+		i {
+			position: absolute;
+			left: 145px;
+			font-size: 21px;
+			top: 28px;
+		}
+	}
+}
