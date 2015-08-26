@@ -30,6 +30,14 @@
 		a:hover {
 			text-decoration: underline;
 		}
+
+		.chat-list li {
+			width: auto;
+
+			a {
+				color: white;
+			}
+		}
 	}
 
 	.menu-header-title {
@@ -100,5 +108,24 @@
 	.slideout-open {
 		overflow-y: hidden;
 		height: 100%;
+	}
+
+	.menu-submenu {
+		text-align: center;
+		padding-top: 15px;
+
+		span {
+			margin: 5px;
+		}
+
+		img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+
+		&.active img {
+			border: 2px solid white;
+		}
 	}
 }
