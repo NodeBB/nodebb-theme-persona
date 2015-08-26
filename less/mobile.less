@@ -19,6 +19,7 @@
 	}
 
 	#menu {
+		padding-top: 100px;
 		background-color: #1D1F20;
 		background-image: linear-gradient(145deg, #1D1F20, #404348);
 
@@ -114,29 +115,29 @@
 		height: 100%;
 	}
 
-	.menu-submenu {
+	.menu-profile {
 		text-align: center;
-		padding-top: 15px;
-
-		span {
-			margin: 5px;
-			position: relative;
-
-			i {
-				position: absolute;
-				right: -3px;
-				top: -6px;
-			}
-		}
+		background: #101010;
+		position: fixed;
+		height: 75px;
+		width: 100%;
+		top: 0px;
+		z-index: 1;
 
 		img {
-			width: 45px;
-			height: 45px;
+			position: absolute;
+			bottom: -22px;
+			left: 93px;
+			width: 70px;
+			height: 70px;
 			border-radius: 50%;
 		}
 
-		&.active img {
-			border: 2px solid white;
+		i {
+			position: absolute;
+			left: 145px;
+			font-size: 21px;
+			top: 28px;
 		}
 	}
 }

@@ -39,26 +39,29 @@
 
 <body>
 	<nav id="menu" class="visible-xs visible-sm">
-		<section class="menu-submenu">
-			<span class="pointer"><img data-submenu="navigation" src="{user.picture}"/></span>
-			<span class="pointer"><img data-submenu="profile" src="{user.picture}"/><i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i></span>
-			<span class="pointer"><img data-submenu="chats" src="{user.picture}"/></span>
-			<span class="pointer"><img data-submenu="notifications" src="{user.picture}"/></span>
-		</section>
-
-		<section class="menu-section hide" data-section="chats">
-			<h3 class="menu-section-title">[[global:header.chats]]</h3>
-			<ul class="menu-section-list chat-list"></ul>
-		</section>
-
-		<section class="menu-section hide" data-section="profile">
-			<h3 class="menu-section-title">[[global:header.profile]]</h3>
-			<ul class="menu-section-list" component="header/usercontrol"></ul>
+		<section class="menu-profile">
+			<img src="{user.picture}"/>
+			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i></span>
 		</section>
 
 		<section class="menu-section" data-section="navigation">
 			<h3 class="menu-section-title">[[global:header.navigation]]</h3>
 			<ul class="menu-section-list"></ul>
+		</section>
+
+		<section class="menu-section" data-section="profile">
+			<h3 class="menu-section-title">[[global:header.profile]]</h3>
+			<ul class="menu-section-list" component="header/usercontrol"></ul>
+		</section>
+
+		<section class="menu-section" data-section="notifications">
+			<h3 class="menu-section-title">[[global:header.notifications]]</h3>
+			<ul class="menu-section-list"></ul>
+		</section>
+
+		<section class="menu-section" data-section="chats">
+			<h3 class="menu-section-title">[[global:header.chats]]</h3>
+			<ul class="menu-section-list chat-list"></ul>
 		</section>
 	</nav>
 
