@@ -32,7 +32,7 @@
 						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
 								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-									<i class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
