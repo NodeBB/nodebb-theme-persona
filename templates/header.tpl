@@ -38,10 +38,22 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu" component="navbar">
-		<div class="container">
-			<!-- IMPORT partials/menu.tpl -->
-		</div>
+	<nav id="menu" class="visible-xs visible-sm">
+		<section class="menu-section">
+			<h3 class="menu-section-title">General</h3>
+			<ul class="menu-section-list">
+				<li><a href="{relative_path}/admin/advanced/database">Database</a></li>
+				<li><a href="{relative_path}/admin/advanced/events">Events</a></li>
+				<li><a href="{relative_path}/admin/advanced/logs">Logs</a></li>
+			</ul>
+		</section>
 	</nav>
-	<div class="container" id="content" component="header">
-	<!-- IMPORT partials/noscript/warning.tpl -->
+
+	<main id="panel">
+		<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu" component="navbar">
+			<div class="container">
+				<!-- IMPORT partials/menu.tpl -->
+			</div>
+		</nav>
+		<div class="container" id="content" component="header">
+		<!-- IMPORT partials/noscript/warning.tpl -->
