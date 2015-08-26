@@ -1,30 +1,20 @@
 @media (max-width: 980px) {
+	html {
+		height: 100%;
+		overflow-y: hidden;
+	}
+
 	body {
 		height: 100%;
 		padding-top: 0;
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 
-	.header {
-		position: fixed;
-		top: 0px;
-		z-index: 5;
-
-		#main-page-title {
-			bottom: -31px;
-			font-size: 20px;
-			color: #FFF;
-			left: 52px;
-			font-weight: 400;
-		}
-
-		#user_label {
-			right: 0px;
-			bottom: 7px;
-		}
-
-		#main-menu {
-			display: none;
-		}
+	#panel {
+		background: @body-bg;
+		min-height: 100%;
+		padding-top: 80px;
 	}
 
 	#menu {
@@ -77,12 +67,6 @@
 		}
 	}
 
-	#panel {
-		background: white;
-		min-height: 100%;
-		padding-top: 80px;
-	}
-
 	.slideout-menu {
 		position: fixed;
 		left: auto;
@@ -95,7 +79,6 @@
 		-webkit-overflow-scrolling: touch;
 		display: none;
 	}
-
 
 	.slideout-panel {
 		position: relative;
@@ -112,19 +95,9 @@
 	.slideout-open .slideout-menu {
 		display: block;
 	}
-
-	html {
-		height: 100%;
-		overflow-y: hidden;
-	}
 	
 	.slideout-open {
 		overflow-y: hidden;
 		height: 100%;
-	}
-
-	body {
-		overflow-y: scroll;
-		overflow-x: hidden;
 	}
 }
