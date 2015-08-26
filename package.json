@@ -1,8 +1,8 @@
 {
   "name": "nodebb-theme-persona",
-  "version": "2.0.28",
+  "version": "2.1.0",
   "nbbpm": {
-    "compatibility": "^0.7.1"
+    "compatibility": "^0.7.4"
   },
   "description": "Persona theme for NodeBB",
   "main": "theme.less",
