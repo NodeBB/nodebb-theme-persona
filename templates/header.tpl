@@ -40,12 +40,8 @@
 <body>
 	<nav id="menu" class="visible-xs visible-sm">
 		<section class="menu-section">
-			<h3 class="menu-section-title">General</h3>
-			<ul class="menu-section-list">
-				<li><a href="{relative_path}/admin/advanced/database">Database</a></li>
-				<li><a href="{relative_path}/admin/advanced/events">Events</a></li>
-				<li><a href="{relative_path}/admin/advanced/logs">Logs</a></li>
-			</ul>
+			<h3 class="menu-section-title">[[global:header.navigation]]</h3>
+			<ul class="menu-section-list" id="mobile-navigation"></ul>
 		</section>
 	</nav>
 
