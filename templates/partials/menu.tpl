@@ -57,7 +57,7 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
-							<li id="logout-link">
+							<li component="user/logout">
 								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
 							</li>
 						</ul>
