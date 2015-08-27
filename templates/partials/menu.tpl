@@ -20,7 +20,7 @@
 				</div>
 			</div>
 
-			<div id="nav-dropdown" class="hidden-xs hidden-sm">
+			<div id="nav-dropdown" class="hidden-xs">
 				<!-- IF !maintenanceHeader -->
 				<!-- IF loggedIn -->
 
