@@ -1,6 +1,6 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" id="mobile-menu">
-					<span class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
+					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -66,7 +66,7 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
-							<i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
+							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
