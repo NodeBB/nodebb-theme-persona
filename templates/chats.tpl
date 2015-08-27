@@ -25,6 +25,8 @@
 				<i component="user/status" title="[[global:{chats.status}]]" class="fa fa-circle status {chats.status}"></i>
 				<img class="user-img" src="{chats.picture}">
 				<span>{chats.username}</span>
+				<span class="teaser-content">{chats.teaser.content}</span>
+				<span class="teaser-time timeago" title="{messages.timestampISO}"></span>
 			</li>
 			<!-- END chats -->
 		</ul>
