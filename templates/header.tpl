@@ -64,7 +64,10 @@
 		</section>
 
 		<section class="menu-section" data-section="chats">
-			<h3 class="menu-section-title">[[global:header.chats]]</h3>
+			<h3 class="menu-section-title">
+				[[global:header.chats]]
+				<i class="chat-icon" component="chat/icon" data-content="0"></i>
+			</h3>
 			<ul class="menu-section-list chat-list"></ul>
 		</section>
 		<!-- ENDIF loggedIn -->
