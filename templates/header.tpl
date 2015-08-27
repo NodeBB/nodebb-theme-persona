@@ -38,7 +38,7 @@
 </head>
 
 <body>
-	<nav id="menu" class="visible-xs visible-sm">
+	<nav id="menu">
 		<section class="menu-profile">
 			<img src="{user.picture}"/>
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i></span>
