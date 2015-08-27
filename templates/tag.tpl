@@ -12,5 +12,3 @@
 		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 	</div>
 </div>
-
-<!-- IMPORT partials/variables/tag.tpl -->

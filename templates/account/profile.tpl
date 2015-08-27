@@ -167,6 +167,3 @@
 	<div id="user-action-alert" class="alert alert-success hide"></div>
 
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->
-<!-- IMPORT partials/variables/account/profile.tpl -->

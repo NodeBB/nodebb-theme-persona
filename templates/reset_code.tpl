@@ -30,7 +30,6 @@
 		</div>
 	</form>
 </div>
-<!-- IMPORT partials/variables/reset_code.tpl -->
 <!-- ELSE -->
 <div class="panel panel-default panel-danger">
 	<div class="panel-heading">
