@@ -56,7 +56,10 @@
 		</section>
 
 		<section class="menu-section" data-section="notifications">
-			<h3 class="menu-section-title">[[global:header.notifications]]</h3>
+			<h3 class="menu-section-title">
+				[[global:header.notifications]]
+				<span class="notification-icon" data-content="0"></span>
+			</h3>
 			<ul class="menu-section-list"></ul>
 		</section>
 
