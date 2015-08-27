@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-sm-3">
+	<div class="col-sm-4">
 	<!--
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -22,18 +22,18 @@
 		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
 			<!-- BEGIN chats -->
 			<li data-username="{chats.username}" data-uid="{chats.uid}" class="<!-- IF chats.unread -->unread<!-- ENDIF chats.unread -->">
-				<i component="user/status" title="[[global:{chats.status}]]" class="fa fa-circle status {chats.status}"></i>
 				<img class="user-img" src="{chats.picture}">
-				<span>{chats.username}</span>
+				<i component="user/status" title="[[global:{chats.status}]]" class="fa fa-circle status {chats.status}"></i>
+				<span class="username">{chats.username}</span>
 				<span class="teaser-content">{chats.teaser.content}</span>
-				<span class="teaser-time timeago" title="{messages.timestampISO}"></span>
+				<span class="teaser-timestamp timeago" title="{chats.teaser.timestampISO}"></span>
 			</li>
 			<!-- END chats -->
 		</ul>
 		
 	</div>
 
-	<div class="col-sm-9">
+	<div class="col-sm-8">
 		<!-- IF !allowed -->
 		<div class="alert alert-warning">
 			[[error:chat-restricted]]

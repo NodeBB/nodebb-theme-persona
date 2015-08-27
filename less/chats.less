@@ -8,10 +8,11 @@
 		clear: both;
 		list-style-type: none;
 		padding: 0.5em;
+		height: 70px;
 		.pointer;
 
 		&.typing {
-			span:after {
+			.username:after {
 				visibility: visible;
 			}
 		}
@@ -20,7 +21,9 @@
 			.bg-variant(@state-warning-bg);
 		}
 
-		span {
+		.username {
+			font-size: 18px;
+
 			&:after {
 				display: inline-block;
 				font-family: "FontAwesome";
@@ -28,6 +31,13 @@
 				margin-left: 0.5em;
 				visibility: hidden;
 			}
+		}
+
+		.teaser-timestamp {
+			font-size: 10px;
+			position: absolute;
+			top: 8px;
+			right: 24px;
 		}
 
 		a {
@@ -40,10 +50,20 @@
 		}
 
 		.user-img {
-			width:24px;
-			height:24px;
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-top: 4px;
+			margin-right: 13px;
 			margin-left: 0.5em;
 			border-radius: 50%;
+		}
+
+		.status {
+			position: absolute;
+			left: 65px;
+			font-size: 20px;
+			top: 11px;
 		}
 	}
 }
