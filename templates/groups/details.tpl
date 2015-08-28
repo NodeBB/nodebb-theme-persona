@@ -1,5 +1,5 @@
 <div component="groups/container" class="details row">
-	<div class="col-xs-12" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+	<div class="col-xs-12" component="groups/cover" style="background-origin: content-box; background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
@@ -48,7 +48,7 @@
 						<td>
 							<div class="btn-group pull-right">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									More <span class="caret"></span>
+									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
 									<li>
@@ -188,7 +188,7 @@
 						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
-						<div id="icons" style="display:none;">
+						<div id="icons" class="hidden">
 							<div class="icon-container">
 								<div class="row fa-icons">
 									<i class="fa fa-doesnt-exist"></i>
@@ -220,8 +220,8 @@
 						</label>
 					</div>
 
-					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">Delete Group</button>
-					<button class="btn btn-primary" type="button" data-action="update">Save</button>
+					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 				</form>
 			</div>
 		</div>
@@ -236,5 +236,3 @@
 		<div widget-area="right"></div>
 	</div>
 </div>
-
-<!-- IMPORT partials/variables/groups/details.tpl -->

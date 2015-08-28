@@ -1,11 +1,12 @@
 .topic {
 	h1 {
-
 		line-height: 24px;
 		margin-bottom: 30px;
+		
 		.topic-title {
 			font-size: 28px;
 			color:inherit;
+			line-height: 32px;
 		}
 
 		> span {
@@ -102,6 +103,7 @@
 		margin-top: -43px;
 		margin-left: 61px;
 		word-wrap: break-word;
+		overflow: hidden;
 	}
 
 	.post-tools {
@@ -170,12 +172,17 @@
 		padding-top: 5px;
 		display: inline-block;
 		font-style: italic;
+		margin-left: 61px;
 	}
 
 	@media (max-width: @screen-sm-max) {
 		.content {
 			margin-left: 0;
 			margin-top: -10px;
+		}
+
+		.post-signature {
+			margin-left: 0px;
 		}
 
 		.posts .icon {
@@ -190,12 +197,6 @@
 		}
 	}
 }
-
-
-
-
-
-
 
 
 .topic {
@@ -239,21 +240,7 @@
 		}
 
 		.content {
-			ul {
-				> li {
-					list-style-type: disc;
-
-					ul > li {
-						list-style-type: circle;
-
-						ul > li {
-							list-style-type: square;
-						}
-					}
-				}
-
-				margin-bottom: 10px;
-			}
+			.fix-lists;
 
 			blockquote {
 				font-size: 85%;

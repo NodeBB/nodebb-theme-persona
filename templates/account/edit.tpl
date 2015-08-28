@@ -3,7 +3,7 @@
 
 <div class="account">
 	<div class="row">
-		<div class="col-md-2" style="text-align: center; margin-bottom:20px;">
+		<div class="col-md-2">
 			<div class="account-picture-block text-center">
 				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
 				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
@@ -98,43 +98,41 @@
 		</div>
 
 		<div class="col-md-5">
-			<div style="vertical-align:top;">
-				<form class='form-horizontal'>
-					<!-- IF isSelf -->
-					<div class="control-group">
-						<label class="control-label" for="inputCurrentPassword">[[user:current_password]]</label>
-						<div class="controls">
-							<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
-						</div>
+			<form class='form-horizontal'>
+				<!-- IF isSelf -->
+				<div class="control-group">
+					<label class="control-label" for="inputCurrentPassword">[[user:current_password]]</label>
+					<div class="controls">
+						<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
 					</div>
-					<!-- ENDIF isSelf -->
+				</div>
+				<!-- ENDIF isSelf -->
 
-					<div class="control-group">
-						<label class="control-label" for="inputNewPassword">[[user:password]]</label>
-						<div class="input-group">
-							<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
-							<span class="input-group-addon">
-								<span id="password-notify"><i class="fa fa-circle-o"></i></span>
-							</span>
-						</div>
+				<div class="control-group">
+					<label class="control-label" for="inputNewPassword">[[user:password]]</label>
+					<div class="input-group">
+						<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
+						<span class="input-group-addon">
+							<span id="password-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
+						</span>
 					</div>
+				</div>
 
-					<div class="control-group">
-						<label class="control-label" for="inputNewPasswordAgain">[[user:confirm_password]]</label>
-						<div class="input-group">
-							<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
-							<span class="input-group-addon">
-								<span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
-							</span>
-						</div>
+				<div class="control-group">
+					<label class="control-label" for="inputNewPasswordAgain">[[user:confirm_password]]</label>
+					<div class="input-group">
+						<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
+						<span class="input-group-addon">
+							<span id="password-confirm-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
+						</span>
 					</div>
-					<br/>
-					<div class="form-actions">
-						<a id="changePasswordBtn" href="#" class="btn btn-primary"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_password]]</a>
-					</div>
+				</div>
+				<br/>
+				<div class="form-actions">
+					<a id="changePasswordBtn" href="#" class="btn btn-primary"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_password]]</a>
+				</div>
 
-				</form>
-			</div>
+			</form>
 		</div>
 	</div>
 
@@ -142,5 +140,3 @@
 	<!-- IMPORT partials/modals/upload_picture_from_url_modal.tpl -->
 </div>
 
-<!-- IMPORT partials/variables/account.tpl -->
-<!-- IMPORT partials/variables/account/edit.tpl -->

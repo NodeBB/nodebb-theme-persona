@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="row">
+<div class="row register">
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
 			<div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
@@ -72,7 +72,7 @@
 					<div class="col-lg-8">
 						<hr />
 						<strong>[[register:terms_of_use]]</strong>
-						<textarea readonly class="form-control" rows=6>{termsOfUse}</textarea>
+						<div class="tos">{termsOfUse}</div>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" name="agree-terms" id="agree-terms"> [[register:agree_to_terms_of_use]]

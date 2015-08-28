@@ -1,0 +1,41 @@
+.topic {
+	.page-number {
+		position: absolute;
+		bottom: 6px;
+		background: rgb(219, 68, 55);
+		padding: 4px;
+		width: 26px;
+		height: 26px;
+		text-align: center;
+		border-radius: 50%;
+		color: white;
+		font-size: 11px;
+		z-index: 1;
+
+		.user-select(none);
+
+		&.animated {
+			-webkit-animation-name: bounceIn;
+				animation-name: bounceIn;
+			-webkit-animation-duration: 0.5s;
+			animation-duration: 0.5s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+
+	.shadow.active {
+		border-radius: 50%;
+		width: 13px;
+		height: 13px;
+		border: 1px solid #333;
+		position: absolute;
+		bottom: 13px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		.page-number {
+			display: none;
+		}
+	}
+}

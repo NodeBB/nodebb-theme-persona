@@ -45,4 +45,3 @@
 </noscript>
 <!-- ENDIF !config.usePagination -->
 
-<!-- IMPORT partials/variables/category.tpl -->

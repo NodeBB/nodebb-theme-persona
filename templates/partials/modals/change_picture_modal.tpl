@@ -1,9 +1,9 @@
-	<div id="change-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="[[user:change_picture]]" aria-hidden="true">
+	<div id="change-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="change-picture" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="myModalLabel">[[user:change_picture]]</h3>
+					<h3 id="change-picture">[[user:change_picture]]</h3>
 				</div>
 				<div class="modal-body">
 					<div id="gravatar-box">

@@ -25,7 +25,7 @@
 							<!-- ENDIF !config.disableChat -->
  							<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
  							<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
-                            
+
                             				<!-- IF isAdmin -->
 							<br/><br/>
 
@@ -50,10 +50,12 @@
 						<hr/>
 						<div class="text-center account-stats">
 
+							<!-- IF reputation -->
 							<div class="inline-block text-center">
 								<span class="human-readable-number" title="{reputation}">{reputation}</span>
 								<span class="account-bio-label">[[global:reputation]]</span>
 							</div>
+							<!-- ENDIF reputation -->
 
 							<div class="inline-block text-center">
 								<span class="human-readable-number" title="{postcount}">{postcount}</span>
@@ -154,7 +156,7 @@
 
 		<div class="col-md-7">
 		<!-- IF !posts.length -->
-		<div class="alert alert-info">[[user:has_no_posts]]</div>
+		<div class="alert alert-warning">[[user:has_no_posts]]</div>
 		<!-- ENDIF !posts.length -->
 		<!-- IMPORT partials/posts_list.tpl -->
 		</div>
@@ -165,6 +167,3 @@
 	<div id="user-action-alert" class="alert alert-success hide"></div>
 
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->
-<!-- IMPORT partials/variables/account/profile.tpl -->

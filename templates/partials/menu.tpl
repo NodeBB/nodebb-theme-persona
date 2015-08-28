@@ -1,13 +1,13 @@
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="slide-in" data-target=".navbar-slide-in">
-					<span class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
+				<button type="button" class="navbar-toggle" id="mobile-menu">
+					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
 
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
+					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
 				<!-- IF showSiteTitle -->
 				<a href="{relative_path}/">
@@ -20,19 +20,19 @@
 				</div>
 			</div>
 
-			<div class="navbar-slide-in" id="nav-dropdown">
+			<div id="nav-dropdown" class="hidden-xs">
 				<!-- IF !maintenanceHeader -->
 				<!-- IF loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li id="user_label" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
-							<img id="user-header-picture" src="{user.picture}"/> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+							<img component="header/userpicture" src="{user.picture}" alt="{user.username}" /> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</a>
-						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
+						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
-								<a id="user-profile-link" href="{relative_path}/user/{user.userslug}">
-									<i class="fa fa-fw fa-circle status {user.status}"></i> <span id="user-header-name">{user.username}</span>
+								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
+									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
@@ -57,7 +57,7 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
-							<li id="logout-link">
+							<li component="user/logout">
 								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
 							</li>
 						</ul>
@@ -66,7 +66,7 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
-							<i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
+							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
@@ -81,20 +81,14 @@
 						</ul>
 					</li>
 
-					<li class="visible-xs">
-						<a href="{relative_path}/notifications" title="[[notifications:title]]">
-							<i class="notification-icon fa fa-bell-o fa-fw" data-content="0"></i> [[notifications:title]]
-						</a>
-					</li>
-
 					<!-- IF !disableChat -->
-					<li class="chats dropdown hidden-xs">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown">
+					<li class="chats dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown">
 							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
-								<ul id="chat-list">
+								<ul component="chat/list" class="chat-list">
 									<li>
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 									</li>
@@ -102,11 +96,6 @@
 							</li>
 							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
 						</ul>
-					</li>
-					<li class="visible-xs">
-						<a href="{relative_path}/chats" id="chat_dropdown">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
-						</a>
 					</li>
 					<!-- ENDIF !disableChat -->
 				</ul>
