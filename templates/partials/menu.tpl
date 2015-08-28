@@ -22,7 +22,7 @@
 
 			<div id="nav-dropdown" class="hidden-xs">
 				<!-- IF !maintenanceHeader -->
-				<!-- IF loggedIn -->
+				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li id="user_label" class="dropdown">
@@ -116,7 +116,7 @@
 						</a>
 					</li>
 				</ul>
-				<!-- ENDIF loggedIn -->
+				<!-- ENDIF config.loggedIn -->
 				<!-- IF searchEnabled -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
