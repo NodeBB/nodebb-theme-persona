@@ -1,9 +1,9 @@
-	<div id="upload-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Upload Picture" aria-hidden="true">
+	<div id="upload-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="upload-picture" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="myModalLabel">[[user:upload_picture]]</h3>
+					<h3 id="upload-picture">[[user:upload_picture]]</h3>
 				</div>
 				<div class="modal-body">
 					<form id="uploadForm" action="" method="post" enctype="multipart/form-data">

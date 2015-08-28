@@ -236,5 +236,3 @@
 		<div widget-area="right"></div>
 	</div>
 </div>
-
-<!-- IMPORT partials/variables/groups/details.tpl -->

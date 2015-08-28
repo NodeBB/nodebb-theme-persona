@@ -9,11 +9,11 @@
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
-				<!-- IF showSiteTitle -->
+				<!-- IF config.showSiteTitle -->
 				<a href="{relative_path}/">
 					<h1 class="navbar-brand forum-title">{title}</h1>
 				</a>
-				<!-- ENDIF showSiteTitle -->
+				<!-- ENDIF config.showSiteTitle -->
 
 				<div component="navbar/title" class="visible-xs">
 					<span></span>
@@ -22,7 +22,7 @@
 
 			<div id="nav-dropdown" class="hidden-xs">
 				<!-- IF !maintenanceHeader -->
-				<!-- IF loggedIn -->
+				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li id="user_label" class="dropdown">
@@ -81,7 +81,7 @@
 						</ul>
 					</li>
 
-					<!-- IF !disableChat -->
+					<!-- IF !config.disableChat -->
 					<li class="chats dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown">
 							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
@@ -97,18 +97,18 @@
 							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
 						</ul>
 					</li>
-					<!-- ENDIF !disableChat -->
+					<!-- ENDIF !config.disableChat -->
 				</ul>
 				<!-- ELSE -->
 				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
-					<!-- IF allowRegistration -->
+					<!-- IF config.allowRegistration -->
 					<li>
 						<a href="{relative_path}/register">
 							<i class="fa fa-pencil visible-xs-inline"></i>
 							<span>[[global:register]]</span>
 						</a>
 					</li>
-					<!-- ENDIF allowRegistration -->
+					<!-- ENDIF config.allowRegistration -->
 					<li>
 						<a href="{relative_path}/login">
 							<i class="fa fa-sign-in visible-xs-inline"></i>
@@ -116,8 +116,8 @@
 						</a>
 					</li>
 				</ul>
-				<!-- ENDIF loggedIn -->
-				<!-- IF searchEnabled -->
+				<!-- ENDIF config.loggedIn -->
+				<!-- IF config.searchEnabled -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
@@ -136,7 +136,7 @@
 						</a>
 					</li>
 				</ul>
-				<!-- ENDIF searchEnabled -->
+				<!-- ENDIF config.searchEnabled -->
 
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>

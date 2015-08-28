@@ -17,5 +17,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->
