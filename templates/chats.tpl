@@ -1,24 +1,5 @@
 <div class="row">
 	<div class="col-sm-4">
-	<!--
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h2 class="panel-title">[[modules:chat.contacts]]</h2>
-			</div>
-			<div class="panel-body">
-				<ul class="chats-list">
-					<!-- BEGIN contacts -->
-					<li data-username="{contacts.username}" data-uid="{contacts.uid}">
-						<i component="user/status" title="[[global:{contacts.status}]]" class="fa fa-circle status {contacts.status}"></i>
-						<img class="user-img" src="{contacts.picture}">
-						<span>{contacts.username}</span>
-					</li>
-					<!-- END contacts -->
-				</ul>
-			</div>
-		</div>
-	-->
-
 		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
 			<!-- BEGIN chats -->
 			<li data-username="{chats.username}" data-uid="{chats.uid}" class="<!-- IF chats.unread -->unread<!-- ENDIF chats.unread -->">
@@ -29,6 +10,13 @@
 				<span class="teaser-timestamp timeago" title="{chats.teaser.timestampISO}"></span>
 			</li>
 			<!-- END chats -->
+			<!-- BEGIN contacts -->
+			<li data-username="{contacts.username}" data-uid="{contacts.uid}">
+				<i component="user/status" title="[[global:{contacts.status}]]" class="fa fa-circle status {contacts.status}"></i>
+				<img class="user-img" src="{contacts.picture}">
+				<span>{contacts.username}</span>
+			</li>
+			<!-- END contacts -->
 		</ul>
 		
 	</div>
