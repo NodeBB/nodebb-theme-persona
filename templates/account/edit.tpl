@@ -113,7 +113,7 @@
 					<div class="input-group">
 						<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
 						<span class="input-group-addon">
-							<span id="password-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
+							<span id="password-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
 						</span>
 					</div>
 				</div>
@@ -123,7 +123,7 @@
 					<div class="input-group">
 						<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
 						<span class="input-group-addon">
-							<span id="password-confirm-notify"><span class="msg"></span><i class="fa fa-circle-o"></i></span>
+							<span id="password-confirm-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
 						</span>
 					</div>
 				</div>
