@@ -14,7 +14,7 @@
 			<li data-username="{contacts.username}" data-uid="{contacts.uid}">
 				<i component="user/status" title="[[global:{contacts.status}]]" class="fa fa-circle status {contacts.status}"></i>
 				<img class="user-img" src="{contacts.picture}">
-				<span>{contacts.username}</span>
+				<span class="username">{contacts.username}</span>
 			</li>
 			<!-- END contacts -->
 		</ul>
