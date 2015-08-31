@@ -11,6 +11,8 @@
 		height: 70px;
 		.pointer;
 
+		background: @body-bg;
+
 		&.typing {
 			.username:after {
 				visibility: visible;
@@ -18,7 +20,11 @@
 		}
 
 		&.unread {
-			.bg-variant(@state-warning-bg);
+			background: lighten(@brand-primary, 25%);
+		}
+
+		&.bg-primary {
+			background: @brand-primary;
 		}
 
 		.username {
