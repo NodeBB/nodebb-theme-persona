@@ -70,7 +70,7 @@
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
-								<ul id="notif-list">
+								<ul component="notifications/list" class="notification-list">
 									<li>
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
 									</li>
