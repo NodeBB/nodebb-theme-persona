@@ -5,7 +5,7 @@
 		<div class="well well-lg">
 			<div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<strong>[[error:registration-error]]</strong>
+				[[error:registration-error]]
 				<p>{error}</p>
 			</div>
 			<form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
