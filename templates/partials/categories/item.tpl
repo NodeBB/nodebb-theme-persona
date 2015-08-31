@@ -6,10 +6,10 @@
 			<i class="fa fa-fw {../icon}"></i>
 		</div>
 
-		<h1 class="title">
+		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl --><br />
-			<small>{../descriptionParsed}</small>
-		</h1>
+			{../descriptionParsed}
+		</h2>
 	</div>
 
 	<!-- IF !../link -->

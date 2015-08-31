@@ -18,7 +18,7 @@
 				<!-- ENDIF showSelect -->
 			</div>
 
-			<h1 component="topic/header" class="title">
+			<h2 component="topic/header" class="title">
 				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
 				<a href="{config.relative_path}/topic/{topics.slug}" itemprop="url">{topics.title}</a><br />
@@ -37,7 +37,7 @@
 				</span>
 
 				<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
-			</h1>
+			</h2>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats">
