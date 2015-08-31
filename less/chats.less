@@ -3,13 +3,20 @@
 	max-height: 608px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	border-top: 1px solid @gray-lighter;
 
 	li {
+		position: relative;
 		clear: both;
 		list-style-type: none;
 		padding: 0.5em;
 		height: 70px;
 		.pointer;
+
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+		border-color: @gray-lighter;
 
 		background: @body-bg;
 
@@ -67,9 +74,9 @@
 
 		.status {
 			position: absolute;
-			left: 65px;
+			left: 50px;
 			font-size: 20px;
-			top: 11px;
+			top: 10px;
 		}
 	}
 }
