@@ -14,7 +14,7 @@
 	<!-- ENDIF notifications.image -->
 
 	<div class="pull-right mark-read" aria-label="Mark Read"></div>
-	<a href="{notifications.path}">
+	<a href="{config.relative_path}{notifications.path}">
 		<span class="pull-right relTime">{notifications.timeago}</span>
 		<span class="text">{notifications.bodyShort}</span>
 	</a>

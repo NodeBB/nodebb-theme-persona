@@ -2,9 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IF !tags.length -->
-	<div class="alert alert-warning">
-		<strong>[[tags:no_tags]]</strong>
-	</div>
+	<div class="alert alert-warning">[[tags:no_tags]]</div>
 	<!-- ENDIF !tags.length -->
 
 	<input class="form-control" type="text" id="tag-search" placeholder="[[global:search]]"/>

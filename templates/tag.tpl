@@ -2,9 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IF !topics.length -->
-	<div class="alert alert-warning">
-		<strong>[[tags:no_tag_topics]]</strong>
-	</div>
+	<div class="alert alert-warning">[[tags:no_tag_topics]]</div>
 	<!-- ENDIF !topics.length -->
 
 	<div class="category">
