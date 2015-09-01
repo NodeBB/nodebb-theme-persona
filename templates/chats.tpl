@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-sm-4">
+	<div class="col-md-4">
 		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
 			<!-- BEGIN chats -->
 			<li data-username="{chats.username}" data-uid="{chats.uid}" class="<!-- IF chats.unread -->unread<!-- ENDIF chats.unread -->">
@@ -21,7 +21,7 @@
 		
 	</div>
 
-	<div class="col-sm-8">
+	<div class="col-md-8">
 		<!-- IF !allowed -->
 		<div class="alert alert-warning">
 			[[error:chat-restricted]]
