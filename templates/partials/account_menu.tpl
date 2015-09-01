@@ -7,7 +7,7 @@
 				<span class="caret"></span>
 				<span class="sr-only">Toggle Dropdown</span>
 			</a>
-			<ul class="dropdown-menu pull-right" role="menu">
+			<ul class="dropdown-menu" role="menu">
 				<li><a href="{config.relative_path}/user/{userslug}/following"><i class="fa fa-fw fa-users"></i> [[user:following]]</a></li>
 				<li><a href="{config.relative_path}/user/{userslug}/followers"><i class="fa fa-fw fa-users"></i> [[user:followers]]</a></li>
 				<li class="divider"></li>
