@@ -124,6 +124,7 @@
 							<div class="hide" id="search-fields">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+									<a href="#"><i id="advanced-search" class="fa fa-gears fa-fw"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
