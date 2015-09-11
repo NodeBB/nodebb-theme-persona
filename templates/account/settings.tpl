@@ -53,9 +53,9 @@
 			<div class="well">
 				<div class="form-group">
 					<label for="dailyDigestFreq">[[user:digest_label]]</label>
-					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq">
+					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						<!-- BEGIN dailyDigestFreqOptions -->
-						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
+						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						<!-- END dailyDigestFreqOptions -->
 					</select>
 					<p class="help-block">[[user:digest_description]]</p>
