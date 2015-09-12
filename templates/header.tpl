@@ -41,7 +41,7 @@
 	<nav id="menu">
 		<section class="menu-profile">
 			<img src="{user.picture}"/>
-			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i></span>
+			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 		</section>
 
 		<section class="menu-section" data-section="navigation">
