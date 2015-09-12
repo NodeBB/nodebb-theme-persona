@@ -1,3 +1,6 @@
+
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="row">
 	<div class="col-md-4">
 		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
@@ -18,7 +21,7 @@
 			</li>
 			<!-- END contacts -->
 		</ul>
-		
+
 	</div>
 
 	<div class="col-md-8">
@@ -29,11 +32,11 @@
 		<!-- ENDIF !allowed -->
 		<!-- IF meta -->
 		<div class="expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
-			
+
 			<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
 			<h1>{meta.username}</h1>
 
-		
+
 			<span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
 			<ul class="chat-content">
 				<!-- IMPORT partials/chat_messages.tpl -->

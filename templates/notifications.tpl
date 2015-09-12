@@ -1,5 +1,8 @@
 
 <div class="notifications">
+
+	<!-- IMPORT partials/breadcrumbs.tpl -->
+
 	<div class="dropdown pull-right visible-xs-block">
 		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 			<i class="fa fa-eye"></i>
@@ -9,7 +12,6 @@
 			<li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-ajaxify="false" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
 		</ul>
 	</div>
-	<h2>[[notifications:title]]</h2>
 
 	<hr />
 
