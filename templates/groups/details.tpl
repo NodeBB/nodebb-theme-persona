@@ -1,3 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div component="groups/container" class="details row">
 	<div class="col-xs-12" component="groups/cover" style="background-origin: content-box; background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>

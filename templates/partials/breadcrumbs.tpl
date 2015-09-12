@@ -1,3 +1,4 @@
+<!-- IF breadcrumbs.length -->
 <ol class="breadcrumb">
 	<!-- BEGIN breadcrumbs -->
 	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" <!-- IF @last -->class="active"<!-- ENDIF @last -->>
@@ -13,3 +14,4 @@
 	</li>
 	<!-- END breadcrumbs -->
 </ol>
+<!-- ENDIF breadcrumbs.length -->

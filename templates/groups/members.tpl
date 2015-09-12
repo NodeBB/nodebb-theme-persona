@@ -1,3 +1,4 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="users">
 
 	<ul id="users-container" class="users-container">

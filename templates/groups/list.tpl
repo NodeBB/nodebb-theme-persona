@@ -1,3 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="row">
 	<div class="col-lg-4">
 		<!-- IF allowGroupCreation -->
