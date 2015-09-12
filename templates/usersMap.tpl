@@ -1,5 +1,7 @@
 <div class="users">
 
+	<!-- IMPORT partials/breadcrumbs.tpl -->
+
 	<ul class="nav nav-pills">
 		<li><a href='{config.relative_path}/users/online'>[[global:online]]</a></li>
 		<li><a href='{config.relative_path}/users/latest'>[[users:latest_users]]</a></li>
