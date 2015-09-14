@@ -24,6 +24,15 @@
 				<span class="menu-icon"><i class="fa fa-eraser"></i></span> [[topic:purge]]
 			</a>
 		</li>
+
+		<!-- BEGIN posts.tools -->
+		<li role="presentation">
+			<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
+				<span class="menu-icon"><i class="fa {posts.tools.icon}"></i></span> {{posts.tools.html}}
+			</a>
+		</li>
+		<!-- END posts.tools -->
+
 		<!-- IF posts.display_move_tools -->
 		<li role="presentation">
 			<a component="post/move" role="menuitem" tabindex="-1" href="#">
