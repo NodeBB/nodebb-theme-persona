@@ -43,9 +43,6 @@
 							<select multiple class="form-control" id="posted-in-categories">
 								<option value="all">All Categories</option>
 								<option value="watched">Watched Categories</option>
-								<!-- BEGIN categories -->
-								<option value="{categories.cid}">{categories.name}</option>
-								<!-- END categories -->
 							</select>
 							<input type="checkbox" id="search-children"> [[search:search-child-categories]]
 						</div>
