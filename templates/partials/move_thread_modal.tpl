@@ -10,7 +10,7 @@
 				<p>
 					[[topic:disabled_categories_note]]
 				</p>
-				<div id="move-confirm" class="hidden">
+				<div id="move-confirm" class="hide">
 					<hr />
 					<div class="alert alert-info">[[topic:topic_will_be_moved_to]] <strong><span id="confirm-category-name"></span></strong></div>
 				</div>
