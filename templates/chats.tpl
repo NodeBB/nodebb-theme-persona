@@ -5,23 +5,12 @@
 	<div class="col-md-4">
 		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
 			<!-- BEGIN chats -->
-			<li data-username="{chats.username}" data-uid="{chats.uid}" class="<!-- IF chats.unread -->unread<!-- ENDIF chats.unread -->">
-				<img class="user-img" src="{chats.picture}">
-				<i component="user/status" title="[[global:{chats.status}]]" class="fa fa-circle status {chats.status}"></i>
-				<span class="username">{chats.username}</span>
-				<span class="teaser-content">{chats.teaser.content}</span>
-				<span class="teaser-timestamp timeago" title="{chats.teaser.timestampISO}"></span>
-			</li>
+			<!-- IMPORT partials/chat_contact.tpl -->
 			<!-- END chats -->
 			<!-- BEGIN contacts -->
-			<li data-username="{contacts.username}" data-uid="{contacts.uid}">
-				<i component="user/status" title="[[global:{contacts.status}]]" class="fa fa-circle status {contacts.status}"></i>
-				<img class="user-img" src="{contacts.picture}">
-				<span class="username">{contacts.username}</span>
-			</li>
+			<!-- IMPORT partials/chat_contact.tpl -->
 			<!-- END contacts -->
 		</ul>
-
 	</div>
 
 	<div class="col-md-8 hidden-sm hidden-xs">
