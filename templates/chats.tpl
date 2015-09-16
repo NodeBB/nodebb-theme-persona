@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<ul class="chats-list recent-chats" data-nextstart="{nextStart}">
+		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN chats -->
 			<!-- IMPORT partials/chat_contact.tpl -->
 			<!-- END chats -->
