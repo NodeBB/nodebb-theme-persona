@@ -24,7 +24,7 @@
 
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-8 hidden-sm hidden-xs">
 		<!-- IF !allowed -->
 		<div class="alert alert-warning">
 			[[error:chat-restricted]]
