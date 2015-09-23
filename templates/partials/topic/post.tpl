@@ -33,7 +33,7 @@
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</div>
-		<span class="badge bookmarked">new</span>
+		<span class="badge bookmarked"><i class="fa fa-star"></i></span>
 		<div class="votes">
 			<!-- IF !reputation:disabled -->
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
