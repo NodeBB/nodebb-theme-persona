@@ -62,6 +62,19 @@
 		right: 25px;
 	}
 
+	.bookmarked {
+		position: absolute;
+		top: 1px;
+		padding-top: 3px;
+		border-radius: 4px;
+		right: 72px;
+		font-size: 10px;
+		padding-bottom: 4px;
+		background: darken(@brand-info, 20%);
+		opacity: 0;
+		.transition(0.75s ease-in-out opacity);
+	}
+
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
 	}
@@ -236,6 +249,10 @@
 			&.highlight > hr {
 				border-color: darken(@brand-info, 20%);
 				box-shadow: 0px 0px 1px @brand-info;
+			}
+
+			&.highlight .bookmarked {
+				opacity: 1;
 			}
 		}
 
