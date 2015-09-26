@@ -34,13 +34,14 @@
 				<meta itemprop="dateModified" content="{posts.relativeEditTime}">
 
 				<!-- IMPORT partials/topic/post.tpl -->
+
+				<!-- IF !posts.index -->
+				<div class="post-bar" data-index="{posts.index}">
+					<!-- IMPORT partials/post_bar.tpl -->
+				</div>
+				<!-- ENDIF !posts.index -->
 			</li>
 
-			<!-- IF !posts.index -->
-			<li class="post-bar" data-index="{posts.index}">
-				<!-- IMPORT partials/post_bar.tpl -->
-			</li>
-			<!-- ENDIF !posts.index -->
 		<!-- END posts -->
 	</ul>
 
