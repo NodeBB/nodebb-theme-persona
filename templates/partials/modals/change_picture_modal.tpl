@@ -6,9 +6,9 @@
 					<h3 id="change-picture">[[user:change_picture]]</h3>
 				</div>
 				<div class="modal-body">
-					<div id="gravatar-box">
-						<img id="user-gravatar-picture" src="" class="user-profile-picture">
-						<span class="user-picture-label">[[user:gravatar]]</span>
+					<div id="default-box">
+						<div class="user-icon user-profile-picture"></div>
+						<span class="user-picture-label">[[user:default_picture]]</span>
 						<i class='fa fa-check fa-2x'></i>
 					</div>
 					<br/>
