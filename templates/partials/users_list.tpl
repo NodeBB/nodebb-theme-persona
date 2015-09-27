@@ -1,6 +1,12 @@
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
-	<a href="{config.relative_path}/user/{users.userslug}"><img src="{users.picture}" /></a>
+	<a href="{config.relative_path}/user/{users.userslug}">
+		<!-- IF users.picture -->
+		<img src="{users.picture}" />
+		<!-- ELSE -->
+		<div class="user-icon" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
+		<!-- ENDIF users.picture -->
+	</a>
 	<br/>
 	<div class="user-info">
 		<span>

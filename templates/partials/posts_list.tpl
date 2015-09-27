@@ -6,7 +6,11 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
+					<!-- IF posts.user.picture -->
 					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
+					<!-- ELSE -->
+					<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};" title="{posts.user.username}">{posts.user.icon:text}</div>
+					<!-- ENDIF posts.user.picture -->
 				</a>
 
 				<a href="{config.relative_path}/user/{posts.user.userslug}">

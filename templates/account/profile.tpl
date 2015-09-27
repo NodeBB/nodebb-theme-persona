@@ -8,7 +8,11 @@
 			<div class="account-picture-block panel panel-default">
 				<div class="panel-body">
 					<div class="text-center">
+						<!-- IF picture -->
 						<img src="{picture}" class="user-profile-picture" />
+						<!-- ELSE -->
+						<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
+						<!-- ENDIF picture -->
 					</div>
 
 					<div>

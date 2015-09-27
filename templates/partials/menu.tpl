@@ -27,7 +27,12 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li id="user_label" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
-							<img component="header/userpicture" src="{user.picture}" alt="{user.username}" /> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+							<!-- IF user.picture -->
+							<img component="header/userpicture" src="{user.picture}" alt="{user.username}" />
+							<!-- ELSE -->
+							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
+							<!-- ENDIF user.picture -->
+							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</a>
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
