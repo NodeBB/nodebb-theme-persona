@@ -1,4 +1,4 @@
-<div id="move-post-modal" class="hide" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="none">
+<div id="move-post-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

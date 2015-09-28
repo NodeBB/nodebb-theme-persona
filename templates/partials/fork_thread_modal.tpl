@@ -1,4 +1,4 @@
-<div id="fork-thread-modal" class="hide" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="none">
+<div id="fork-thread-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
