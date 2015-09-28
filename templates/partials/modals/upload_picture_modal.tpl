@@ -29,6 +29,6 @@
 					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
 					<button id="pictureUploadSubmitBtn" class="btn btn-primary">[[user:upload_picture]]</button>
 				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+			</div>
+		</div>
+	</div>
