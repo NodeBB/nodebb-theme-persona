@@ -28,7 +28,7 @@
 	<ul component="topic" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="clearfix <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-				<a component="post/anchor" name="{posts.index}"></a>
+				<a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
 
 				<meta itemprop="datePublished" content="{posts.relativeTime}">
 				<meta itemprop="dateModified" content="{posts.relativeEditTime}">
