@@ -58,9 +58,6 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
-	<!-- IF posts.toPid -->
-	<div class="well hidden" data-topid="{posts.toPid}" component="post/parent/content"></div>
-	<!-- ENDIF posts.toPid -->
 	{posts.content}
 </div>
 <!-- IF posts.user.signature -->
