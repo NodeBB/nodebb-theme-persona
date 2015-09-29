@@ -24,7 +24,7 @@
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 				<!-- IF posts.toPid -->
-				<button component="post/parent" class="btn btn-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username} <i class="fa fa-caret-down"></i></button>
+				<button component="post/parent" class="btn btn-xs btn-default" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username} <i class="fa fa-caret-down"></i></button>
 				<!-- ENDIF posts.toPid -->
 			</span>
 			<span>
