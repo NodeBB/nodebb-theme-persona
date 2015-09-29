@@ -23,7 +23,9 @@
 			<span class="post-tools">
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-				<!-- IF posts.toPid --><a component="post/parent" href="#" class="no-select" data-index="{posts.parent.index}"><i class="fa fa-reply"></i> @{posts.parent.username}</a><!-- ENDIF posts.toPid -->
+				<!-- IF posts.toPid -->
+				<button component="post/parent" class="btn btn-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username} <i class="fa fa-caret-down"></i></button>
+				<!-- ENDIF posts.toPid -->
 			</span>
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
@@ -54,7 +56,11 @@
 </div>
 
 <br />
+
 <div class="content" component="post/content" itemprop="text">
+	<!-- IF posts.toPid -->
+	<div class="well hidden" data-topid="{posts.toPid}" component="post/parent/content"></div>
+	<!-- ENDIF posts.toPid -->
 	{posts.content}
 </div>
 <!-- IF posts.user.signature -->
