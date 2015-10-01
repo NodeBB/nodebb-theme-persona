@@ -28,20 +28,20 @@
 				<!-- IMPORT partials/topic/post.tpl -->
 
 				<!-- IF !posts.index -->
-				<div class="post-bar clearfix" data-index="{posts.index}">
+				<div class="post-bar" data-index="{posts.index}">
 					<!-- IMPORT partials/post_bar.tpl -->
 				</div>
-				<hr />
+
 				<!-- ENDIF !posts.index -->
 			</li>
 
 		<!-- END posts -->
 	</ul>
 
-	<div class="post-bar bottom-post-bar clearfix <!-- IF unreplied -->hidden<!-- ENDIF unreplied -->">
+	<div class="post-bar bottom-post-bar <!-- IF unreplied -->hidden<!-- ENDIF unreplied -->">
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
-	<hr />
+
 
 	<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
