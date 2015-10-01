@@ -42,7 +42,7 @@
 
 				<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
 
-				<small class="clearfix"><span class="visible-xs"><span class="pull-right"><i class="fa fa-pencil"></i> {topics.postcount} &bull; <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-mail-forward"></i></a></span>
+				<small class="clearfix"><span class="visible-xs"><span class="pull-right"><i class="fa fa-pencil"></i> {topics.postcount} &bull; <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a></span>
 				</span></small>
 			</h2>
 		</div>
