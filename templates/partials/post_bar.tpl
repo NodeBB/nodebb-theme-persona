@@ -11,20 +11,16 @@
 		<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 	</span>
 
-	<div class="stats">
-		<span component="topic/post-count" class="human-readable-number" title="{postcount}">{postcount}</span><br />
-		<small>[[global:posts]]</small>
-	</div>
-	<div class="stats">
-		<span class="human-readable-number" title="{viewcount}">{viewcount}</span><br />
-		<small>[[global:views]]</small>
-	</div>
+	<!-- IMPORT partials/topic/stats.tpl -->
 
+	<br class="visible-xs"/>
 
 	<!-- IMPORT partials/topic/reply-button.tpl -->
 
+	<!-- IMPORT partials/topic/watch.tpl -->
+
+	<!-- IMPORT partials/topic/sort.tpl -->
+
 	<!-- IMPORT partials/thread_tools.tpl -->
 </div>
-<div class="clearfix"></div>
 
-<hr />
