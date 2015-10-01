@@ -153,7 +153,7 @@
 						<i class="fa fa-angle-up pointer fa-fw pageup"></i>
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<span id="pagination"></span>
+							<span class="pagination-text"></span>
 						</a>
 
 						<i class="fa fa-angle-down pointer fa-fw pagedown"></i>
