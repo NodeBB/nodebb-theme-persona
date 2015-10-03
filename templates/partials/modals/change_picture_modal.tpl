@@ -1,4 +1,4 @@
-	<div id="change-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="change-picture" aria-hidden="true">
+	<div id="change-picture-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="change-picture" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -31,6 +31,6 @@
 					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
 					<button id="savePictureChangesBtn" class="btn btn-primary">[[global:save_changes]]</button>
 				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+			</div>
+		</div>
+	</div>
