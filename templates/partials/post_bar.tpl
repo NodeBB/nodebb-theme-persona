@@ -1,11 +1,11 @@
 <div class="clearfix">
-	<span class="tags">
+	<div class="tags pull-left">
 		<!-- BEGIN tags -->
 		<a href="{config.relative_path}/tags/{tags.value}">
 		<span class="tag-item" data-tag="{tags.value}" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">{tags.value}</span>
 		<span class="tag-topic-count human-readable-number" title="{tags.score}">{tags.score}</span></a>
 		<!-- END tags -->
-	</span>
+	</div>
 
 	<div class="topic-main-buttons pull-right">
 		<span class="loading-indicator btn pull-left hidden" done="0">
@@ -13,8 +13,6 @@
 		</span>
 
 		<!-- IMPORT partials/topic/stats.tpl -->
-
-		<br class="visible-xs"/>
 
 		<!-- IMPORT partials/topic/reply-button.tpl -->
 

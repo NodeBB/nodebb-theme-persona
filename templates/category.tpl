@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<!-- IMPORT partials/category/subcategory.tpl -->
 
-	<!-- IF children.length --><hr /><!-- ENDIF children.length -->
+	<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
 
 	<div class="clearfix">
 		<!-- IF privileges.topics:create -->
@@ -20,9 +20,9 @@
 		</span>
 	</div>
 
-	<hr />
+	<hr class="hidden-xs" />
 
-	<p>{name}</p>
+	<p class="hidden-xs">{name}</p>
 
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning" id="category-no-topics">

@@ -1,7 +1,7 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<h1 component="post/header" itemprop="name">
+	<h1 component="post/header" class="hidden-xs" itemprop="name">
 
 		<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
@@ -16,6 +16,8 @@
 	</h1>
 
 	<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
+
+	<hr class="visible-xs" />
 
 	<ul component="topic" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->

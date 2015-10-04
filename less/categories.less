@@ -4,11 +4,20 @@
 
 	> li {
 
-		margin-bottom: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		@media (max-width: @screen-xs-max) {
+			border-top: 1px solid #eee;
+			&:last-child {
+				border-bottom: 1px solid #eee;
+			};
+		}
+
 		min-height: 53px;
 
 		.content {
-			margin-top: 7px;
+			padding-right: 0px;
 
 			.icon {
 				font-size: 17px;
@@ -28,7 +37,7 @@
 			}
 
 			h2 {
-				font-size: 20px;
+				font-size: 18px;
 				line-height: 22px;
 				margin: 0;
 				margin-left: 62px;
@@ -57,6 +66,10 @@
 			}
 		}
 
+		.mobile-stat {
+			padding-left: 0px;
+		}
+
 		.card {
 			border-left: 4px solid #ccc;
 			text-align: left;
@@ -70,8 +83,8 @@
 
 			img {
 				border-radius: 50%;
-				width: 30px;
-				height: 30px;
+				width: 24px;
+				height: 24px;
 			}
 
 			p {
