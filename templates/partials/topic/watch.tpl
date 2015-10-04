@@ -1,4 +1,4 @@
-<!-- loggedIn -->
+<!-- IF loggedIn -->
 <button component="topic/follow" class="btn btn-info <!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">
 	<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:watch]]</span> <i class="fa fa-eye"></i>
 </button>
