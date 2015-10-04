@@ -155,7 +155,7 @@
 						<i class="fa fa-angle-up pointer fa-fw pageup"></i>
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<span id="pagination"></span>
+							<span class="pagination-text"></span>
 						</a>
 
 						<i class="fa fa-angle-down pointer fa-fw pagedown"></i>
@@ -175,7 +175,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+						<a href="{relative_path}{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

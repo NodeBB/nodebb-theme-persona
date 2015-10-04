@@ -1,7 +1,16 @@
-#menu {
+
+.slideout-menu {
+	position: fixed;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+	width: 256px;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 	display: none;
 }
-
 
 @media (max-width: 980px) {
 	body {
@@ -20,6 +29,7 @@
 	}
 
 	#menu {
+
 		padding-top: 100px;
 		background-color: #1D1F20;
 		background-image: linear-gradient(145deg, #1D1F20, #404348);
@@ -69,7 +79,7 @@
 
 		.counter {
 			font-style: normal;
-			
+
 			&:after {
 				left: 5px;
 				top: -1px;
@@ -120,19 +130,6 @@
 		}
 	}
 
-	.slideout-menu {
-		position: fixed;
-		left: auto;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 0;
-		width: 256px;
-		overflow-y: auto;
-		-webkit-overflow-scrolling: touch;
-		display: none;
-	}
-
 	.slideout-panel {
 		position: relative;
 		z-index: 1;
@@ -148,7 +145,7 @@
 	.slideout-open .slideout-menu {
 		display: block;
 	}
-	
+
 	.slideout-open {
 		overflow-y: hidden;
 		height: 100%;

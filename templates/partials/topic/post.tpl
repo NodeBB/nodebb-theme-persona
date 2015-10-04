@@ -27,6 +27,9 @@
 			<span class="post-tools">
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+				<!-- IF posts.toPid -->
+				<button component="post/parent" class="btn btn-xs btn-default" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username} <i class="fa fa-caret-down"></i></button>
+				<!-- ENDIF posts.toPid -->
 			</span>
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
@@ -37,6 +40,7 @@
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</div>
+		<span class="badge bookmarked"><i class="fa fa-star"></i></span>
 		<div class="votes">
 			<!-- IF !reputation:disabled -->
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
@@ -56,15 +60,13 @@
 </div>
 
 <br />
+
 <div class="content" component="post/content" itemprop="text">
 	{posts.content}
 </div>
 <!-- IF posts.user.signature -->
 <div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 <!-- ENDIF posts.user.signature -->
-
-
-<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by_ago, <strong>{posts.editor.username}</strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>
 
 
 <hr />

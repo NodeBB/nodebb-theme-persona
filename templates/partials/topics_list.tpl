@@ -4,7 +4,7 @@
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="col-md-7 col-sm-9 col-xs-11 content">
+		<div class="col-md-7 col-sm-9 col-xs-12 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 					<div class="select fa-square-o">
@@ -37,7 +37,7 @@
 
 				<!-- IF !template.category -->
 				<small>
-					<a href="{config.relative_path}/category/{topics.category.slug}"><i class="fa {topics.category.icon}"></i> {topics.category.name}</a> &bull;
+					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
 				</small>
 				<!-- ENDIF !template.category -->
 
@@ -49,6 +49,9 @@
 				</span>
 
 				<small>[[global:posted_ago, <span class="timeago" title="{topics.relativeTime}"></span>]]</small>
+
+				<small class="clearfix"><span class="visible-xs"><span class="pull-right"><i class="fa fa-pencil"></i> {topics.postcount} &bull; <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a></span>
+				</span></small>
 			</h2>
 		</div>
 
@@ -60,7 +63,7 @@
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
 			<small>[[global:views]]</small>
 		</div>
-		<div class="col-md-3 col-sm-3 col-xs-1 teaser hidden-xs">
+		<div class="col-md-3 col-sm-3 teaser hidden-xs">
 			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p class="hidden-xs">

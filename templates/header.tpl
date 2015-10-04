@@ -38,7 +38,7 @@
 </head>
 
 <body>
-	<nav id="menu">
+	<nav id="menu" class="hidden">
 		<section class="menu-profile">
 			<!-- IF user.picture -->
 			<img src="{user.picture}"/>
