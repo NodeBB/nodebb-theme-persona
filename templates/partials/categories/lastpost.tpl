@@ -3,7 +3,7 @@
 	<!-- IF @first -->
 	<div component="category/posts">
 		<p>
-			<strong>{../user.username}</strong>
+			<a href="{config.relative_path}/user/{../user.userslug}"><img class="user-img" title="{../user.username}" src="{../user.picture}" /></a>
 			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
 				<small class="timeago" title="{../relativeTime}"></small>
 			</a>
