@@ -57,9 +57,7 @@
 	}
 
 	.votes {
-		position: absolute;
-		top: 1px;
-		right: 25px;
+		padding-right: 10px;
 	}
 
 	.bookmarked {
@@ -67,7 +65,7 @@
 		top: 1px;
 		padding-top: 3px;
 		border-radius: 4px;
-		right: 72px;
+		right: 0px;
 		font-size: 10px;
 		padding-bottom: 4px;
 		background: darken(@brand-info, 20%);
@@ -85,8 +83,8 @@
 
 	.stats {
 		width: 60px;
+		margin: 0px 10px 0px 10px;
 		float: left;
-		margin-top: -5px;
 	}
 
 	.title {
@@ -117,19 +115,14 @@
 
 	.post-tools {
 		text-transform: lowercase;
-		a::before {
-			content: "\2022\0020";
-		}
 
 		a {
+			padding-right: 10px;
 			.pointer;
 		}
 	}
 
 	.moderator-tools {
-		position: absolute;
-		right: -5px;
-		top: 0;
 		font-size: 14px;
 
 		> a {

@@ -16,17 +16,14 @@
 
 		<!-- IMPORT partials/topic/badge.tpl -->
 
-		<div class="visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			[[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
+		<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+			<a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>
 			<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-			<span class="post-tools">
-				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-				<!-- IF posts.toPid -->
-				<button component="post/parent" class="btn btn-xs btn-default" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username}</button>
-				<!-- ENDIF posts.toPid -->
-			</span>
+			<!-- IF posts.toPid -->
+			<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username}</button>
+			<!-- ENDIF posts.toPid -->
+
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
 				&#124;
@@ -37,7 +34,29 @@
 			</span>
 		</div>
 		<span class="badge bookmarked"><i class="fa fa-star"></i></span>
-		<div class="votes">
+
+	</small>
+</div>
+
+<br />
+
+<div class="content" component="post/content" itemprop="text">
+	{posts.content}
+</div>
+
+<div class="clearfix">
+	<!-- IF posts.user.signature -->
+	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
+	<!-- ENDIF posts.user.signature -->
+
+
+	<small class="pull-right">
+		<span class="post-tools">
+			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+		</span>
+
+		<span class="votes">
 			<!-- IF !reputation:disabled -->
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
 				<i class="fa fa-chevron-up"></i>
@@ -49,19 +68,10 @@
 			</a>
 			<!-- ENDIF !downvote:disabled -->
 			<!-- ENDIF !reputation:disabled -->
-		</div>
+		</span>
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
 </div>
-
-<br />
-
-<div class="content" component="post/content" itemprop="text">
-	{posts.content}
-</div>
-<!-- IF posts.user.signature -->
-<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
-<!-- ENDIF posts.user.signature -->
 
 <hr />
