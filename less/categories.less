@@ -31,12 +31,8 @@
 			}
 
 			img, .user-icon {
+				.user-icon-style(46px, 2.4rem, 50%);
 				margin-right: 15px;
-				width: 46px;
-				height: 46px;
-				line-height: 46px;
-				font-size: 2.4rem;
-				border-radius: 50%;
 			}
 
 			h2 {
@@ -52,10 +48,7 @@
 
 			@media (max-width: @screen-sm-max) {
 				.user-img, .user-icon {
-					width: 32px;
-					height: 32px;
-					line-height: 32px;
-					font-size: 1.5rem;
+					.user-icon-style(@border-radius: 50%);
 					margin-right: 8px;
 				}
 				h2 {
@@ -110,11 +103,7 @@
 
 			.user-icon {
 				display: inline-block;
-				border-radius: 50%;
-				height: 24px;
-				width: 24px;
-				line-height: 24px;
-				font-size: 1.5rem;
+				.user-icon-style(24px, 1.5rem, 50%);
 			}
 		}
 	}

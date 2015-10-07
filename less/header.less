@@ -16,12 +16,8 @@
 			clear: both;
 
 			img, .user-icon {
-				width: 32px;
-				height: 32px;
-				line-height: 32px;
-				font-size: 1.5rem;
+				.user-icon-style(@border-radius: 50%);
 				float: left;
-				border-radius: 50%;
 			}
 
 			a {
@@ -98,12 +94,8 @@
 				}
 
 				img, .user-icon {
-					width: 32px;
-					height: 32px;
-					line-height: 32px;
-					font-size: 1.6rem;
+					.user-icon-style(@border-radius: 50%);
 					margin-right: 1em;
-					border-radius: 50%;
 				}
 			}
 
@@ -137,12 +129,8 @@
 		padding: 10px 15px;
 
 		img, .user-icon {
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
+			.user-icon-style(30px, 1.8rem, 50%);
 			border: 0px none;
-			font-size: 1.8rem;
-			line-height: 30px;
 
 			span {
 				font-size: 14px;
