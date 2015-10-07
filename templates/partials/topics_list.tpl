@@ -7,22 +7,22 @@
 		<div class="col-md-7 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
-					<div class="select fa-square-o">
-						<!-- IF topics.user.picture -->
-						{function.renderTopicImage}
-						<!-- ELSE -->
-						<div class="user-icon" style="background-color: {topics.user.icon:bgColor};" title="{topics.user.username}">{topics.user.icon:text}</div>
-						<!-- ENDIF topics.user.picture -->
-						<i class="fa fa-check"></i>
-					</div>
+				<div class="select fa-square-o">
+					<!-- IF topics.user.picture -->
+					{function.renderTopicImage}
+					<!-- ELSE -->
+					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};" title="{topics.user.username}">{topics.user.icon:text}</div>
+					<!-- ENDIF topics.user.picture -->
+					<i class="fa fa-check"></i>
+				</div>
 				<!-- ELSE -->
-					<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
-						<!-- IF topics.user.picture -->
-						{function.renderTopicImage}
-						<!-- ELSE -->
-						<div class="user-icon" style="background-color: {topics.user.icon:bgColor};" title="{topics.user.username}">{topics.user.icon:text}</div>
-						<!-- ENDIF topics.user.picture -->
-					</a>
+				<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
+					<!-- IF topics.user.picture -->
+					{function.renderTopicImage}
+					<!-- ELSE -->
+					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};" title="{topics.user.username}">{topics.user.icon:text}</div>
+					<!-- ENDIF topics.user.picture -->
+				</a>
 				<!-- ENDIF showSelect -->
 			</div>
 
@@ -50,11 +50,11 @@
 
 				<small class="hidden-xs"><span class="timeago" title="{topics.relativeTime}"></span></small>
 				<small class="visible-xs-inline">
-				<!-- IF topics.teaser.timestamp -->
-				<span class="timeago" title="{topics.teaser.timestamp}"></span>
-				<!-- ELSE -->
-				<span class="timeago" title="{topics.relativeTime}"></span>
-				<!-- ENDIF topics.teaser.timestamp -->
+					<!-- IF topics.teaser.timestamp -->
+					<span class="timeago" title="{topics.teaser.timestamp}"></span>
+					<!-- ELSE -->
+					<span class="timeago" title="{topics.relativeTime}"></span>
+					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
 			</h2>
 		</div>
@@ -81,7 +81,13 @@
 				</p>
 				<!-- ELSE -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}"><img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" /></a>
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
+						<!-- IF topics.teaser.user.picture -->
+						<img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" />
+						<!-- ELSE -->
+						<span class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
+						<!-- ENDIF topics.teaser.user.picture -->
+					</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestamp}"></span>
 					</a>
