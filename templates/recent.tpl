@@ -13,7 +13,7 @@
 		</div>
 	</div>
 
-	<hr />
+	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<!-- IF !topics.length -->

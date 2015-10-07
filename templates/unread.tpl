@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	<hr />
+	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>

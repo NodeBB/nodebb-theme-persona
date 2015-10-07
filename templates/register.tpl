@@ -8,7 +8,7 @@
 				[[error:registration-error]]
 				<p>{error}</p>
 			</div>
-			<form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
+			<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
 					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
 					<div class="col-lg-8">
