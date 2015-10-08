@@ -60,7 +60,7 @@
 				[[global:header.notifications]]
 				<span class="counter" component="notifications/icon" data-content="0"></span>
 			</h3>
-			<ul class="menu-section-list" component="notifications/list"></ul>
+			<ul class="menu-section-list notification-list-mobile" component="notifications/list"></ul>
 		</section>
 
 		<section class="menu-section" data-section="chats">
