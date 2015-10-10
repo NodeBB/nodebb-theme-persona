@@ -60,19 +60,21 @@
 			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 		</span>
 
+		<!-- IF !reputation:disabled -->
+		<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+
 		<span class="votes">
-			<!-- IF !reputation:disabled -->
-			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
-				<i class="fa fa-chevron-up"></i>
-			</a>
 			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
-			<!-- IF !downvote:disabled -->
-			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
-				<i class="fa fa-chevron-down"></i>
-			</a>
-			<!-- ENDIF !downvote:disabled -->
-			<!-- ENDIF !reputation:disabled -->
 		</span>
+
+		<!-- IF !downvote:disabled -->
+		<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
+			<i class="fa fa-chevron-down"></i>
+		</a>
+		<!-- ENDIF !downvote:disabled -->
+		<!-- ENDIF !reputation:disabled -->
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
