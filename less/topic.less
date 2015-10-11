@@ -252,27 +252,15 @@
 			}
 
 			> blockquote {
-				> *:not(:first-child) {
-					display: none;
-				}
-
 				> blockquote {
-					display: block!important;
-					> *:not(:first-child) {
+					> *:not(.blockquote) {
 						display: none;
 					}
 				}
-			}
 
-			> blockquote.uncollapsed {
-				> *:not(:first-child) {
-					display: block;
-				}
-
-				> blockquote {
-					display: block!important;
-					> *:not(:first-child) {
-						display: block;
+				> blockquote.uncollapsed {
+					> *:not(.blockquote) {
+							display: block;
 					}
 				}
 			}
