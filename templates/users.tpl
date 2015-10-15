@@ -6,7 +6,7 @@
 
 	<br />
 
-	<div class="search {search_display} well">
+	<div class="search {search_display}">
 		<div class="input-group">
 			<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
 			<span class="input-group-addon">
