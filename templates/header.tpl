@@ -37,7 +37,7 @@
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body>
+<body class="{bodyClass}">
 	<nav id="menu" class="hidden">
 		<section class="menu-profile">
 			<img src="{user.picture}"/>
