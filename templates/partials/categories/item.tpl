@@ -8,7 +8,9 @@
 
 		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl --><br />
+			<span class="description">
 			{../descriptionParsed}
+			</span>
 		</h2>
 		<span class="visible-xs pull-right">
 			<a class="permalink" href="{../teaser.url}">
