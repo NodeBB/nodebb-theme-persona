@@ -1,4 +1,4 @@
-<div class="topic">
+<div class="topic row">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
