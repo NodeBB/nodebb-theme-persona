@@ -1,4 +1,5 @@
-<div class="topic row">
+<div class="row">
+<div class="topic col-lg-12">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
@@ -61,7 +62,7 @@
 	</div>
 
 </div>
-
+</div>
 <!-- IF !config.usePagination -->
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->
