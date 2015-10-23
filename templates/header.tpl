@@ -2,14 +2,10 @@
 <html lang="{function.localeToHTML, defaultLang}">
 <head>
 	<title>{browserTitle}</title>
-	<!-- BEGIN metaTags -->
-	{function.buildMetaTag}
-	<!-- END metaTags -->
+	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
 	<!-- IF bootswatchCSS --><link id="bootswatchCSS" href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
-	<!-- BEGIN linkTags -->
-	{function.buildLinkTag}
-	<!-- END linkTags -->
+	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 
 	<!--[if lt IE 9]>
   		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
