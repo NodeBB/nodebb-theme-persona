@@ -1,4 +1,4 @@
-		</div><!--END container -->
+		</div><!-- END container -->
 	</main>
 
 	<div class="hide">
