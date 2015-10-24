@@ -21,7 +21,7 @@
 				<li class="divider"></li>
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF icon --> {categories.name}</a>
+					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
