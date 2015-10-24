@@ -1,7 +1,6 @@
 <span class="dropdown moderator-tools">
 	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
 	<ul class="dropdown-menu dropdown-menu-right" role="menu">
-
 		<!-- IF posts.display_moderator_tools -->
 		<li role="presentation" class="dropdown-header">[[topic:tools]]</li>
 		<li role="presentation">
