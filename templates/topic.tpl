@@ -1,9 +1,10 @@
-<div class="topic">
+<div class="row">
+<div class="topic col-lg-12">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
 
-		<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
+		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
 
 		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
@@ -33,7 +34,6 @@
 				<div class="post-bar" data-index="{posts.index}">
 					<!-- IMPORT partials/post_bar.tpl -->
 				</div>
-
 				<!-- ENDIF !posts.index -->
 			</li>
 
@@ -61,7 +61,7 @@
 	</div>
 
 </div>
-
+</div>
 <!-- IF !config.usePagination -->
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->

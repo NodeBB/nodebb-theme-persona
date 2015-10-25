@@ -2,7 +2,14 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IF tags.length -->
-	<input class="form-control" type="text" id="tag-search" placeholder="[[global:search]]"/>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="[[global:search]]" id="tag-search">
+				<span id="search-button" class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+			</div>
+		</div>
+	</div>
 	<!-- ENDIF tags.length -->
 
 	<!-- IF !tags.length -->

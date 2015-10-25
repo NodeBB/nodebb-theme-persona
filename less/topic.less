@@ -4,6 +4,8 @@
 		margin-bottom: 30px;
 
 		.topic-title {
+			display: block;
+			word-wrap: break-word;
 			font-size: 28px;
 			color:inherit;
 			line-height: 32px;
@@ -54,19 +56,12 @@
 		}
 	}
 
-	.votes {
-		padding-right: 10px;
-	}
-
 	.bookmarked {
 		position: absolute;
 		top: 1px;
-		padding-top: 3px;
-		border-radius: 4px;
 		right: 0px;
-		font-size: 10px;
-		padding-bottom: 4px;
-		background: darken(@brand-info, 20%);
+		font-size: 16px;
+		color: darken(@brand-info, 20%);
 		opacity: 0;
 		.transition(0.75s ease-in-out opacity);
 	}
@@ -120,6 +115,7 @@
 	}
 
 	.moderator-tools {
+		margin-left: 10px;
 		font-size: 14px;
 
 		> a {
@@ -250,27 +246,15 @@
 			}
 
 			> blockquote {
-				> *:not(:first-child) {
-					display: none;
-				}
-
 				> blockquote {
-					display: block!important;
-					> *:not(:first-child) {
+					> *:not(.blockquote) {
 						display: none;
 					}
 				}
-			}
 
-			> blockquote.uncollapsed {
-				> *:not(:first-child) {
-					display: block;
-				}
-
-				> blockquote {
-					display: block!important;
-					> *:not(:first-child) {
-						display: block;
+				> blockquote.uncollapsed {
+					> *:not(.blockquote) {
+							display: block;
 					}
 				}
 			}

@@ -19,7 +19,7 @@
 		[[notifications:no_notifs]]
 	</div>
 
-	<ul class="notifications-list">
+	<ul class="notifications-list" data-nextstart="{nextStart}">
 	<!-- BEGIN notifications -->
 		<li data-nid="{notifications.nid}" class="{notifications.readClass}" component="notifications/item">
 			<!-- IF notifications.image -->

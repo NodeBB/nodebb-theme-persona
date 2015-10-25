@@ -50,22 +50,6 @@
 				width: auto;
 				padding: 0;
 
-				&.unread {
-					background-color: inherit;
-
-					a:after {
-						content: "new";
-						text-transform: uppercase;
-						color: #FFF;
-						margin-left: 5px;
-						font-size: 10px;
-						background: #C91106;
-						border: 1px solid #890405;
-						padding: 2px 3px;
-						border-radius: 5px;
-					}
-				}
-
 				a {
 					color: white;
 
@@ -73,6 +57,24 @@
 						left: 44px;
 						top: 9px;
 					}
+				}
+			}
+		}
+
+		.menu-section .chat-list, .menu-section .notification-list-mobile {
+			.unread {
+				background-color: inherit;
+
+				a:after {
+					content: "new";
+					text-transform: uppercase;
+					color: #FFF;
+					margin-left: 5px;
+					font-size: 10px;
+					background: #C91106;
+					border: 1px solid #890405;
+					padding: 2px 3px;
+					border-radius: 5px;
 				}
 			}
 		}

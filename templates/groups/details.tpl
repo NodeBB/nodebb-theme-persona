@@ -36,44 +36,7 @@
 				<h3 class="panel-title"><i class="fa fa-users"></i> [[groups:details.members]]</h3>
 			</div>
 			<div class="panel-body">
-				<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/><br/>
-				<table component="groups/members" class="table table-striped table-hover" data-nextstart="{group.membersNextStart}">
-					<!-- BEGIN members -->
-					<tr data-uid="{group.members.uid}">
-						<td>
-							<!-- IF group.members.picture -->
-							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
-							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
-							<!-- ENDIF group.members.picture -->
-						</td>
-						<td class="member-name">
-							<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
-						</td>
-						<!-- IF group.isOwner -->
-						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="#" data-ajaxify="false" data-action="toggleOwnership">
-											[[groups:details.grant]]
-										</a>
-									</li>
-									<li>
-										<a href="#" data-ajaxify="false" data-action="kick">
-											[[groups:details.kick]]
-										</a>
-									</li>
-								</ul>
-							</div>
-						</td>
-						<!-- ENDIF group.isOwner -->
-					</tr>
-					<!-- END members -->
-				</table>
+				<!-- IMPORT partials/groups/memberlist.tpl -->
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
@@ -214,12 +177,12 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <strong>[[groups:details.userTitleEnabled]]</strong>
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->> <strong>[[groups:details.userTitleEnabled]]</strong>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> <strong>[[groups:details.private]]</strong>
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> <strong>[[groups:details.private]]</strong>
 							<p class="help-block">
 								[[groups:details.private_help]]
 							</p>
@@ -227,7 +190,7 @@
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->> <strong>[[groups:details.hidden]]</strong>
+							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->> <strong>[[groups:details.hidden]]</strong>
 							<p class="help-block">
 								[[groups:details.hidden_help]]
 							</p>
