@@ -3,7 +3,7 @@
 
 <div class="account">
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
 				<div class="row">
 					<div class="col-xs-12">
@@ -14,16 +14,14 @@
 						<!-- ENDIF picture -->
 					</div>
 				</div>
-				<a id="changePictureBtn" href="#" class="btn btn-default">[[user:change_picture]]</a>
-				<br/><br/>
-
-				<!-- IF !username:disableEdit -->
-				<a href="{config.relative_path}/user/{userslug}/edit/username" class="btn btn-default">[[user:change_username]]</a><br/><br/>
-				<!-- ENDIF !username:disableEdit -->
-
-				<a href="{config.relative_path}/user/{userslug}/edit/email" class="btn btn-default">[[user:change_email]]</a><br/><br/>
-
-				<a href="{config.relative_path}/user/{userslug}/edit/password" class="btn btn-default">[[user:change_password]]</a><br/><br/>
+				<ul class="list-group">
+					<a id="changePictureBtn" href="#" class="list-group-item">[[user:change_picture]]</a>
+					<!-- IF !username:disableEdit -->
+					<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change_username]]</a>
+					<!-- ENDIF !username:disableEdit -->
+					<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change_email]]</a>
+					<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
+				</ul>
 
 				<!-- IF config.requireEmailConfirmation -->
 				<!-- IF email -->
@@ -42,7 +40,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-5 col-sm-4">
 			<div>
 				<form class='form-horizontal'>
 
@@ -101,7 +99,7 @@
 			<hr class="visible-xs visible-sm"/>
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-5 col-sm-4">
 			<!-- IF sso.length -->
 			<label class="control-label">[[user:sso.title]]</label>
 			<div class="list-group">
