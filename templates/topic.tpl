@@ -28,23 +28,16 @@
 				<meta itemprop="dateModified" content="{posts.relativeEditTime}">
 
 				<!-- IMPORT partials/topic/post.tpl -->
-
-				<!-- IF !posts.index -->
-				<div class="post-bar" data-index="{posts.index}">
-					<!-- IMPORT partials/post_bar.tpl -->
-				</div>
-				<!-- ENDIF !posts.index -->
 			</li>
-
 		<!-- END posts -->
 	</ul>
 
-	<div class="post-bar bottom-post-bar <!-- IF unreplied -->hidden<!-- ENDIF unreplied -->">
+	<div class="post-bar">
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
 
 	<!-- IF config.usePagination -->
-		<!-- IMPORT partials/paginator.tpl -->
+	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 
 	<div class="visible-xs visible-sm pagination-block text-center">
