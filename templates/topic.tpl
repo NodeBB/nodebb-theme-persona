@@ -6,7 +6,6 @@
 
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
-
 		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
 			<span>[[category:browsing]]</span>
 			<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
@@ -44,7 +43,6 @@
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
 
-
 	<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
@@ -59,7 +57,6 @@
 			<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
 		</div>
 	</div>
-
 </div>
 </div>
 <!-- IF !config.usePagination -->
@@ -67,4 +64,3 @@
 	<!-- IMPORT partials/paginator.tpl -->
 </noscript>
 <!-- ENDIF !config.usePagination -->
-
