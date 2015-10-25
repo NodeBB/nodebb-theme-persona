@@ -23,5 +23,4 @@
 		<!-- IMPORT partials/thread_tools.tpl -->
 	</div>
 </div>
-
 <hr/>

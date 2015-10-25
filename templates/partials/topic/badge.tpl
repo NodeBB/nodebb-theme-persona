@@ -1,9 +1,3 @@
-<!-- IF posts.user.groups.length -->
-<!-- BEGIN groups -->
-<!-- IF ../selected -->
-<!-- IF ../userTitleEnabled -->
-<a href="{config.relative_path}/groups/{../slug}"><small class="label group-label inline-block" style="background-color: {../labelColor};"><!-- IF ../icon --><i class="fa {../icon}"></i> <!-- ENDIF ../icon -->{../userTitle}</small></a>
-<!-- ENDIF ../userTitleEnabled -->
-<!-- ENDIF ../selected -->
-<!-- END groups -->
-<!-- ENDIF posts.user.groups.length -->
+<!-- IF posts.user.selectedGroup.slug -->
+<a href="{config.relative_path}/groups/{posts.user.selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {posts.user.selectedGroup.labelColor};"><!-- IF posts.user.selectedGroup.icon --><i class="fa {posts.user.selectedGroup.icon}"></i> <!-- ENDIF posts.user.selectedGroup.icon -->{posts.user.selectedGroup.userTitle}</small></a>
+<!-- ENDIF posts.user.selectedGroup.slug -->
