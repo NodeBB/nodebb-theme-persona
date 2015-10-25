@@ -27,7 +27,7 @@
 			<a class="pull-left" href="{config.relative_path}/user/{notifications.user.userslug}"><img class="user-img" src="{notifications.image}" /></a>
 			<!-- ENDIF notifications.from -->
 			<!-- ELSE -->
-			<div class="pull-left user-icon user-img" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div>
+			<a class="pull-left" href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left user-icon user-img" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 			<!-- ENDIF notifications.image -->
 
 			<p>
