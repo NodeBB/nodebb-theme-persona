@@ -10,7 +10,7 @@
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img src="{notifications.image}" /></a>
 	<!-- ENDIF notifications.from -->
 	<!-- ELSE -->
-	<div class="user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div>
+	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 	<!-- ENDIF notifications.image -->
 
 	<div class="pull-right mark-read" aria-label="Mark Read"></div>
