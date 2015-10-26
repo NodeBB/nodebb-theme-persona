@@ -36,12 +36,14 @@
 <body class="{bodyClass}">
 	<nav id="menu" class="hidden">
 		<section class="menu-profile">
+			<!-- IF user.uid -->
 			<!-- IF user.picture -->
 			<img src="{user.picture}"/>
 			<!-- ELSE -->
 			<div class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
 			<!-- ENDIF user.picture -->
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+			<!-- ENDIF user.uid -->
 		</section>
 
 		<section class="menu-section" data-section="navigation">
