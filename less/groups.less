@@ -54,9 +54,9 @@
 		left: auto;
 		right: 0px;
 
-		&.initialised:hover {
+		&:hover {
 			.controls {
-				opacity: 0.5;
+				.opacity(0.8);
 			}
 		}
 
@@ -71,6 +71,14 @@
 
 			> * {
 				pointer-events: all;
+			}
+
+			.fa {
+				color: white;
+				background-color: #333;
+				opacity: 1;
+				margin: 15px;
+				padding: 5px;
 			}
 		}
 
