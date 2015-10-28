@@ -24,10 +24,10 @@
 		<li data-nid="{notifications.nid}" class="{notifications.readClass}" component="notifications/item">
 			<!-- IF notifications.image -->
 			<!-- IF notifications.from -->
-			<a class="pull-left" href="{config.relative_path}/user/{notifications.user.userslug}"><img class="user-img" src="{notifications.image}" /></a>
+			<a class="pull-left" href="{config.relative_path}/user/{notifications.user.userslug}"><img class="user-img" src="{notifications.image}" alt="{notifications.user.username}" /></a>
 			<!-- ENDIF notifications.from -->
 			<!-- ELSE -->
-			<img class="pull-left" src="{notifications.image}" />
+			<img class="pull-left" src="{notifications.image}" alt="{notifications.user.username}" />
 			<!-- ENDIF notifications.image -->
 
 			<p>

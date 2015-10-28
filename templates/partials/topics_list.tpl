@@ -8,12 +8,12 @@
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 					<div class="select fa-square-o">
-						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" />
+						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" alt="{topics.user.username}" />
 						<i class="fa fa-check"></i>
 					</div>
 				<!-- ELSE -->
 					<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
-						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" title="{topics.user.username}"/>
+						<img src="<!-- IF topics.thumb -->{topics.thumb}<!-- ELSE -->{topics.user.picture}<!-- ENDIF topics.thumb -->" class="img-circle user-img" title="{topics.user.username}" alt="{topics.user.username}" />
 					</a>
 				<!-- ENDIF showSelect -->
 			</div>
@@ -73,7 +73,7 @@
 				</p>
 				<!-- ELSE -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}"><img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" /></a>
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}"><img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" alt="{topics.teaser.user.username}" /></a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestamp}"></span>
 					</a>

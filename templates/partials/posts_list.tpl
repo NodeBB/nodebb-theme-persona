@@ -6,7 +6,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
-					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
+					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}" alt="{posts.user.username}" />
 				</a>
 
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
