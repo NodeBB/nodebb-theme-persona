@@ -1,5 +1,5 @@
 [component="groups/container"] {
-	margin-top: 300px;
+	margin-top: 200px;
 
 	[component="groups/summary"] {
 		.panel-body {
@@ -74,15 +74,6 @@
 			}
 		}
 
-		@media (min-width: @screen-md-min) {
-			min-height: 300px;
-
-			.controls {
-				min-height: 300px;
-				line-height: 300px;
-			}
-		}
-
 		&.active {
 			&:hover {
 				cursor: move;
@@ -151,6 +142,19 @@
 			overflow-y: auto;
 			.member-name {
 				width: 100%;
+			}
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		margin-top: 300px;
+		
+		[component="groups/cover"] {
+			min-height: 300px;
+
+			.controls {
+				min-height: 300px;
+				line-height: 300px;
 			}
 		}
 	}
