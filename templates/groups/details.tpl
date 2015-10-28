@@ -1,4 +1,4 @@
-<div component="groups/container" class="details row">
+<div component="groups/container" class="groups details row">
 	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
