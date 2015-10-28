@@ -1,6 +1,6 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<div class="account">
+	<!-- IMPORT partials/account_menu.tpl -->
 
-<div>
 	<!-- IF !topics.length -->
 		<div class="alert alert-warning">[[user:has_no_watched_topics]]</div>
 	<!-- ENDIF !topics.length -->
