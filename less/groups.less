@@ -1,4 +1,6 @@
 [component="groups/container"] {
+	margin-top: 300px;
+
 	[component="groups/summary"] {
 		.panel-body {
 			min-height: 72px;
@@ -45,9 +47,15 @@
 		min-height: 200px;
 		position: relative;
 		margin-bottom: 1em;
+		background-origin: content-box;
+		width: 100%;
+		top: 50px;
+		position: absolute;
+		left: auto;
+		right: 0px;
 
 		@media (min-width: @screen-md-min) {
-			min-height: 250px;
+			min-height: 300px;
 		}
 
 		&.initialised:hover {
@@ -141,6 +149,4 @@
 			}
 		}
 	}
-
-
 }
