@@ -54,10 +54,6 @@
 		left: auto;
 		right: 0px;
 
-		@media (min-width: @screen-md-min) {
-			min-height: 300px;
-		}
-
 		&.initialised:hover {
 			.controls {
 				opacity: 0.5;
@@ -66,8 +62,8 @@
 
 		.controls {
 			text-align: center;
-			min-height: 250px;
-			line-height: 250px;
+			min-height: 200px;
+			line-height: 200px;
 			.opacity(0);
 			.transition(opacity .15s linear);
 			cursor: pointer;
@@ -75,6 +71,15 @@
 
 			> * {
 				pointer-events: all;
+			}
+		}
+
+		@media (min-width: @screen-md-min) {
+			min-height: 300px;
+
+			.controls {
+				min-height: 300px;
+				line-height: 300px;
 			}
 		}
 
