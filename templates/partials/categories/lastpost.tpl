@@ -7,7 +7,7 @@
 				<!-- IF ../user.picture -->
 				<img class="user-img" title="{../user.username}" src="{../user.picture}" />
 				<!-- ELSE -->
-				<span class="user-icon user-img" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</span>
+				<span class="user-icon user-img" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</span>
 				<!-- ENDIF ../user.picture -->
 			</a>
 			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
