@@ -1,6 +1,6 @@
-<!-- IMPORT partials/account_menu.tpl -->
-
 <div class="account">
+	<!-- IMPORT partials/account_menu.tpl -->
+	
 	<div class="row">
 		<div class="col-xs-12">
 			<!-- IF !disableCustomUserSkins -->

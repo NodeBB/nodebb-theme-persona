@@ -1,7 +1,6 @@
-
-<!-- IMPORT partials/account_menu.tpl -->
-
 <div class="account">
+	<!-- IMPORT partials/account_menu.tpl -->
+	
 	<div class="row">
 		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
