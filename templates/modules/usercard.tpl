@@ -22,7 +22,7 @@
 				<span class="human-readable-number">{reputation}</span>
 			</div>
 			
-			<button class="btn-morph fab plus">
+			<button class="btn-morph fab">
 				<span>
 					<span class="s1"></span>
 					<span class="s2"></span>
