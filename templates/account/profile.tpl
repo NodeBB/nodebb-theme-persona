@@ -91,7 +91,7 @@
 
 					<!-- IF websiteName -->
 					<span class="account-bio-label">[[user:website]]</span>
-					<span class="account-bio-value"><a href="{websiteLink}">{websiteName}</a></span>
+					<span class="account-bio-value"><a href="{websiteLink}" rel="nofollow">{websiteName}</a></span>
 					<!-- ENDIF websiteName -->
 
 					<!-- IF location -->
