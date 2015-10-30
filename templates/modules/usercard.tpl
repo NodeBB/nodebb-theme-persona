@@ -15,11 +15,11 @@
 		<div class="row usercard-info">
 			<div class="col-xs-4">
 				<small>Posts</small>
-				{postcount}
+				<span class="human-readable-number">{postcount}</span>
 			</div>
 			<div class="col-xs-4">
 				<small>Reputation</small>
-				{reputation}
+				<span class="human-readable-number">{reputation}</span>
 			</div>
 			
 			<button class="btn-morph fab plus">
