@@ -15,11 +15,11 @@
 
 		<div class="row usercard-info">
 			<div class="col-xs-4">
-				<small>Posts</small>
+				<small>[[global:posts]]</small>
 				<span class="human-readable-number">{postcount}</span>
 			</div>
 			<div class="col-xs-4">
-				<small>Reputation</small>
+				<small>[[global:reputation]]</small>
 				<span class="human-readable-number">{reputation}</span>
 			</div>
 			
