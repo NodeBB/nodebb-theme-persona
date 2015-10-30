@@ -1,12 +1,16 @@
 <div class="persona-usercard">
-	<!-- IF picture -->
-	<div class="usercard-picture" style="background-image:url({picture})"></div>
-	<!-- ELSE -->
-	<div class="usercard-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
-	<!-- ENDIF picture -->
+	<a href="{config.relative_path}/user/{userslug}">
+		<!-- IF picture -->
+		<div class="usercard-picture" style="background-image:url({picture})"></div>
+		<!-- ELSE -->
+		<div class="usercard-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
+		<!-- ENDIF picture -->
+	</a>
 	<div class="usercard-body">
-		<span class="usercard-name"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></span><br />
-		<span class="usercard-username">@{username}</span><br />
+		<a href="{config.relative_path}/user/{userslug}">
+			<span class="usercard-name"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></span><br />
+			<span class="usercard-username">@{username}</span>
+		</a>
 
 		<div class="row usercard-info">
 			<div class="col-xs-4">
