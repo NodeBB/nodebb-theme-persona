@@ -110,11 +110,11 @@
 					<!-- BEGIN invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
-							<!-- IF group.members.picture -->
-							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
+							<!-- IF group.invited.picture -->
+							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
 							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
-							<!-- ENDIF group.members.picture -->
+							<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
+							<!-- ENDIF group.invited.picture -->
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
