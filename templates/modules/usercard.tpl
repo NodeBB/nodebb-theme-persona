@@ -10,6 +10,7 @@
 		<a href="{config.relative_path}/user/{userslug}">
 			<span class="usercard-name"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></span><br />
 			<span class="usercard-username">@{username}</span>
+			<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 		</a>
 
 		<div class="row usercard-info">
