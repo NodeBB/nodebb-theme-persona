@@ -317,9 +317,6 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	#search-fields.hidden {
-		max-width: 0;
-	}
 	#search-fields {
 		width: auto;
 		max-width: 100%;
@@ -329,8 +326,20 @@
 		float: right;
 		display: inline-block !important;
 		visibility: visible !important;
-	}
-	#search-fields input.form-control {
-		width: 100%;
+
+		&.hidden {
+			max-width: 0;
+		}
+
+		input.form-control {
+			width: 98%;
+		}
+
+		.form-group .advanced-search-link {
+			margin: 0;
+			width: 0;
+			position: relative;
+			left: -30px;
+		}
 	}
 }
