@@ -299,3 +299,38 @@
 	padding: 1px 2px;
 	font-family: @font-family-sans-serif;
 }
+
+#search-form {
+	#search-button {
+		float: right;
+		max-width: 60px;
+		width: auto;
+		transition-property: max-width, padding-left, padding-right;
+		transition-duration: .2s;
+		transition-timing-function: ease;
+		overflow: hidden;
+	}
+	#search-button.hidden {
+		display: inline-block !important;
+		visibility: visible !important;
+		max-width: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#search-fields.hidden {
+		max-width: 0;
+	}
+	#search-fields {
+		width: auto;
+		max-width: 100%;
+		overflow: hidden;
+		transition: max-width 0.2s ease 0s;
+		max-height: 42px;
+		float: right;
+		display: inline-block !important;
+		visibility: visible !important;
+	}
+	#search-fields input.form-control {
+		width: 100%;
+	}
+}

@@ -123,14 +123,14 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
-							<div class="hide" id="search-fields">
+							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+							<div class="hidden" id="search-fields">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
-							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 						</form>
 					</li>
 					<li class="visible-xs">
