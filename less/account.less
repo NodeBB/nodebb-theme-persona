@@ -12,6 +12,15 @@
 		left: auto;
 		right: 0px;
 
+		.avatar {
+			position: absolute;
+			left: 50%;
+			margin-left: -64px;
+			top: 230px;
+			border: 4px solid white;
+			border-radius: 50%;
+		}
+
 		&:hover {
 			.controls {
 				.opacity(0.8);
@@ -108,17 +117,19 @@
 }
 
 
+.account-fab {
+	.open #profile {
+		background-color: lighten(@brand-primary, 10%);
+	}
 
-
-
-// 
-.nav-pills.account-sub-links {
-	border:none;
-
-	> li {
-		float:right;
+	.fab {
+		color: white;
+		font-size: 20px;
 	}
 }
+
+
+//
 
 .account-picture-block{
 	vertical-align:top;
@@ -159,13 +170,7 @@
 }
 
 
-.account-username-box {
-	margin-bottom:10px;
 
-	.open #profile {
-		background-color: lighten(@brand-primary, 10%);
-	}
-}
 
 .account-username{
   font-size:20px;
