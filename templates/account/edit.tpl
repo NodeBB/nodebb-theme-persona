@@ -67,7 +67,7 @@
 					<div class="control-group">
 						<label class="control-label" for="inputBirthday">[[user:birthday]]</label>
 						<div class="controls">
-							<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="yyyy-mm-dd">
+							<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy">
 						</div>
 					</div>
 
