@@ -1,5 +1,5 @@
 <div class="account">
-	<!-- IMPORT partials/account_menu.tpl -->
+	<!-- IMPORT partials/account/header.tpl -->
 
 	<!-- IF !topics.length -->
 		<div class="alert alert-warning">[[user:has_no_topics]]</div>

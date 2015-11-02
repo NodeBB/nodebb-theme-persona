@@ -1,4 +1,4 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/account/header.tpl -->
 
 <div class="col-md-5">
 	<form class="form-horizontal">

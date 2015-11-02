@@ -1,5 +1,5 @@
 <div class="account">
-	<!-- IMPORT partials/account_menu.tpl -->
+	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="groups list">
 		<div component="groups/container" id="groups-list" class="row">
