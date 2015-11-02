@@ -102,7 +102,11 @@
 				</h3>
 			</div>
 			<div class="panel-body">
-				<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/><br/>
+				<div class="input-group">
+					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
+					<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+				</div><br />
+				
 				<table component="groups/invited" class="table table-striped table-hover">
 					<!-- IF !group.invited.length -->
 					<div class="alert alert-info">[[groups:invited.none]]</div>

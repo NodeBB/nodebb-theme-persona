@@ -1,4 +1,8 @@
-<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/><br/>
+<div class="input-group">
+	<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+	<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+</div><br />
+
 <table component="groups/members" class="table table-striped table-hover" data-nextstart="{group.membersNextStart}">
 	<!-- BEGIN members -->
 	<tr data-uid="{group.members.uid}">
