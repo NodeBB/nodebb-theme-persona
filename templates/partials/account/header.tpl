@@ -18,5 +18,7 @@
 		<!-- ENDIF picture -->
 	</div>
 
-	<!-- IMPORT partials/account/menu.tpl -->
+	<div class="container">
+		<!-- IMPORT partials/account/menu.tpl -->
+	</div>
 </div>
