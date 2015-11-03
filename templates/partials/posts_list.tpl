@@ -2,10 +2,10 @@
 
 	<!-- BEGIN posts -->
 	<li component="post" class="posts-list-item row" data-pid="{posts.pid}" data-uid="{posts.uid}">
-		<div class="col-xs-9 post-body">
-			<strong><a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">{posts.topic.title}</a></strong>
+		<div class="col-lg-11 col-sm-10 col-xs-9 post-body">
+			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">{posts.topic.title}</a>
 			<div component="post/content" class="content">
-				<p>{posts.content}</p>
+				{posts.content}
 			</div>
 
 			<div class="post-info">
@@ -17,15 +17,16 @@
 					<!-- ENDIF posts.user.picture -->
 				</a>
 
-				<div class="post-meta">
+				<div class="post-author">
 					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
 					<span class="timeago" title="{posts.relativeTime}"></span>
 				</div>
-			</div>
-		</div>
 
-		<div class="col-xs-3">
-			<!--<a href="{config.relative_path}/category/{posts.category.slug}">{posts.category.name}</a><br />-->
+			</div>
+
+			<div class="post-meta">
+				
+			</div>
 		</div>
 	</li>
 	<!-- END posts -->
