@@ -1,13 +1,18 @@
 .posts-list {
 	list-style-type: none;
 	padding-left: 0px;
+
 	.posts-list-item {
+		@icon-diameter: 12px;
 		width: 100%;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 
 		.user-img {
-			.user-icon-style(24px, 1.5rem, 50%);
-			float: left;
+			.user-icon-style(@icon-diameter * 2px, 1.5rem, 50%);
+			position: absolute;
+			top: 50%;
+			margin-top: -1 * @icon-diameter;
+			margin-left: -1 * @icon-diameter;
 		}
 
 		a {
@@ -24,6 +29,34 @@
 			clear: left;
 			display: block;
 			overflow: hidden;
+		}
+
+		.post-body {
+			border-right: 2px solid @brand-primary;
+			min-height: 100px;
+		}
+
+		.post-info {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			width: 175px;
+			height: 28px;
+			margin-top: -14px;
+			font-size: 10px;
+
+			.post-meta {
+				padding-left: 28px;
+				color: #aaa;
+
+				a {
+					color: @gray-light;
+					font-weight: 900;
+
+				}
+
+				text-transform: uppercase;
+			}
 		}
 	}
 }

@@ -1,28 +1,32 @@
 <ul component="posts" class="posts-list" data-nextstart="{nextStart}">
 
 	<!-- BEGIN posts -->
-	<li component="post" class="posts-list-item" data-pid="{posts.pid}" data-uid="{posts.uid}">
-		<a href="{config.relative_path}/user/{posts.user.userslug}">
-			<!-- IF posts.user.picture -->
-			<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
-			<!-- ELSE -->
-			<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};" title="{posts.user.username}">{posts.user.icon:text}</div>
-			<!-- ENDIF posts.user.picture -->
-		</a>
+	<li component="post" class="posts-list-item row" data-pid="{posts.pid}" data-uid="{posts.uid}">
+		<div class="col-xs-9 post-body">
+			<strong><a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">{posts.topic.title}</a></strong>
+			<div component="post/content" class="content">
+				<p>{posts.content}</p>
+			</div>
 
-		<a href="{config.relative_path}/user/{posts.user.userslug}">
-			<strong><span>{posts.user.username}</span></strong>
-		</a>
-		<div component="post/content" class="content">
-			<p>{posts.content}</p>
-			<p class="fade-out"></p>
+			<div class="post-info">
+				<a href="{config.relative_path}/user/{posts.user.userslug}">
+					<!-- IF posts.user.picture -->
+					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
+					<!-- ELSE -->
+					<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};" title="{posts.user.username}">{posts.user.icon:text}</div>
+					<!-- ENDIF posts.user.picture -->
+				</a>
+
+				<div class="post-meta">
+					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
+					<span class="timeago" title="{posts.relativeTime}"></span>
+				</div>
+			</div>
 		</div>
-		<small>
-			<span class="pull-right">
-				[[global:posted_in_ago, <a href="{config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
-				<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
-			</span>
-		</small>
+
+		<div class="col-xs-3">
+			<!--<a href="{config.relative_path}/category/{posts.category.slug}">{posts.category.name}</a><br />-->
+		</div>
 	</li>
 	<!-- END posts -->
 </ul>

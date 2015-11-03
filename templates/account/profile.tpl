@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12 account-block">
+		<div class="col-xs-12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
 					<span class="account-username"> {username}</span>
