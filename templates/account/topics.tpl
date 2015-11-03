@@ -2,6 +2,8 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
+		<h1>[[pages:{template.name}, {username}]]</h1>
+		
 		<!-- IF !topics.length -->
 		<div class="alert alert-warning">[[user:has_no_topics]]</div>
 		<!-- ENDIF !topics.length -->

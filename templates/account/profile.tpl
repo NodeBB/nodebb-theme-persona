@@ -142,6 +142,8 @@
 
 		</div>
 
+		<h1>[[pages:account/posts, {username}]]</h1>
+
 		<div class="col-xs-12">
 		<!-- IF !posts.length -->
 		<div class="alert alert-warning">[[user:has_no_posts]]</div>

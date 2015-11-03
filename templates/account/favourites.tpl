@@ -2,7 +2,8 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="favourites row">
-
+		<h1>[[pages:{template.name}, {username}]]</h1>
+		
 		<!-- IF !posts.length -->
 			<div class="alert alert-warning text-center">[[topic:favourites.has_no_favourites]]</div>
 		<!-- ENDIF !posts.length -->
