@@ -57,25 +57,13 @@
 				<!-- ENDIF !isSelf -->
 
 			</div>
-
-			<div id="banLabel" class="text-center <!-- IF !banned -->hide<!-- ENDIF !banned -->">
-				<span class="label label-danger">[[user:banned]]</span>
-			</div>
-
-			
-			<hr/>
-			
+		
 
 			<div class="hidden">
 				<!-- IF email -->
 				<span class="account-bio-label">[[user:email]]</span>
 				<span class="account-bio-value"><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</span>
 				<!-- ENDIF email -->
-
-				<!-- IF fullname -->
-				<span class="account-bio-label">[[user:fullname]]</span>
-				<span class="account-bio-value">{fullname}</span>
-				<!-- ENDIF fullname -->
 
 				<!-- IF websiteName -->
 				<span class="account-bio-label">[[user:website]]</span>
@@ -92,28 +80,11 @@
 				<span class="account-bio-value">{age}</span>
 				<!-- ENDIF age -->
 
-
-				<span class="account-bio-label">[[user:followers]]</span>
-				<span class="human-readable-number account-bio-value" title="{followerCount}">{followerCount}</span>
-
-				<span class="account-bio-label">[[user:following]]</span>
-				<span class="human-readable-number account-bio-value"  title="{followingCount}">{followingCount}</span>
-
 				<span class="account-bio-label">[[user:joined]]</span>
 				<span class="timeago account-bio-value" title="{joindate}"></span>
 
 				<span class="account-bio-label">[[user:lastonline]]</span>
 				<span class="timeago account-bio-value" title="{lastonline}"></span>
-
-				<!-- IF !disableSignatures -->
-				<!-- IF signature -->
-				<hr/>
-				<span class="account-bio-label">[[user:signature]]</span>
-				<div class="post-signature">
-					<span id='signature'>{signature}</span>
-				</div>
-				<!-- ENDIF signature -->
-				<!-- ENDIF !disableSignatures -->
 			</div>
 
 			<!-- IF groups.length -->
@@ -137,7 +108,6 @@
 				</div>
 			</div>
 			<!-- ENDIF ips.length -->
-
 		</div>
 
 		<h1>[[pages:account/posts, {username}]]</h1>
