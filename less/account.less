@@ -2,11 +2,11 @@
 	.breadcrumb {
 		margin-bottom: 30px;
 	}
-	
+
 	.cover {
 		background-size: cover;
 		background-repeat: no-repeat;
-		min-height: 200px;
+		height: 200px;
 		position: relative;
 		margin-bottom: 1em;
 		background-origin: content-box;
@@ -23,6 +23,13 @@
 			top: 94px;
 			border: 4px solid white;
 			border-radius: 50%;
+
+			.status {
+				position: absolute;
+				font-size: 23px;
+				top: 17px;
+				right: -3px;
+			}
 		}
 
 		&:hover {
@@ -33,7 +40,7 @@
 
 		.controls {
 			text-align: center;
-			min-height: 200px;
+			height: 200px;
 			line-height: 200px;
 			.opacity(0);
 			.transition(opacity .15s linear);
@@ -107,7 +114,7 @@
 	margin-top: 200px;
 
 	.container {
-		min-height: 200px;
+		height: 200px;
 		position: relative;
 	}
 	
@@ -115,10 +122,10 @@
 		margin-top: 300px;
 		
 		.cover,  .container {
-			min-height: 300px;
+			height: 300px;
 
 			.controls {
-				min-height: 300px;
+				height: 300px;
 				line-height: 300px;
 			}
 
@@ -158,10 +165,6 @@
 
 	.dropdown-toggle {
 		cursor: pointer;
-	}
-
-	.status {
-		padding-bottom: 5px;
 	}
 }
 

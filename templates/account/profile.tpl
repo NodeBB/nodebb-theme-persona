@@ -6,18 +6,9 @@
 
 			<div class="account-picture-block panel panel-default">
 				<div class="panel-body">
-					<div class="text-center">
-						<!-- IF picture -->
-						<img src="{picture}" class="user-profile-picture" />
-						<!-- ELSE -->
-						<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
-						<!-- ENDIF picture -->
-					</div>
-
 					<div>
 						<div class="text-center">
 							<span>
-								<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 								<span class="account-username"> {username}</span>
 							</span>
 
