@@ -7,7 +7,38 @@
 		<!-- IF aboutme -->
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
+
+		<div class="account-stats">
+			<!-- IF reputation -->
+			<div class="stat">
+				<div class="human-readable-number" title="{reputation}">{reputation}</div>
+				<span class="stat-label">[[global:reputation]]</span>
+			</div>
+			<!-- ENDIF reputation -->
+
+			<div class="stat">
+				<div class="human-readable-number" title="{postcount}">{postcount}</div>
+				<span class="stat-label">[[global:posts]]</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number" title="{profileviews}">{profileviews}</div>
+				<span class="stat-label">[[user:profile_views]]</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number" title="{followerCount}">{followerCount}</div>
+				<span class="stat-label">[[user:followers]]</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number"  title="{followingCount}">{followingCount}</div>
+				<span class="stat-label">[[user:following]]</span>
+			</div>
+		</div>
 	</div>
+
+	
 	<hr />
 
 	<div class="row">
@@ -33,35 +64,7 @@
 
 			
 			<hr/>
-			<div class="text-center account-stats">
-
-				<!-- IF reputation -->
-				<div class="inline-block text-center">
-					<span class="human-readable-number" title="{reputation}">{reputation}</span>
-					<span class="account-bio-label">[[global:reputation]]</span>
-				</div>
-				<!-- ENDIF reputation -->
-
-				<div class="inline-block text-center">
-					<span class="human-readable-number" title="{postcount}">{postcount}</span>
-					<span class="account-bio-label">[[global:posts]]</span>
-				</div>
-
-				<div class="inline-block text-center">
-					<span class="human-readable-number" title="{profileviews}">{profileviews}</span>
-					<span class="account-bio-label">[[user:profile_views]]</span>
-				</div>
-
-				<div class="inline-block text-center">
-					<span class="human-readable-number" title="{followerCount}">{followerCount}</span>
-					<span class="account-bio-label">[[user:followers]]</span>
-				</div>
-
-				<div class="inline-block text-center">
-				<span class="human-readable-number"  title="{followingCount}">{followingCount}</span>
-					<span class="account-bio-label">[[user:following]]</span>
-				</div>
-			</div>
+			
 
 			<div class="hidden">
 				<!-- IF email -->

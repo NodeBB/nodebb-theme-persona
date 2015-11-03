@@ -173,10 +173,10 @@
 	}
 
 	.profile {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 
 		.fullname {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 			font-size: 32px;
 		}
 
@@ -192,6 +192,24 @@
 			margin-left: auto;
 			margin-right: auto;
 			color: @gray-light;
+		}
+
+		.account-stats {
+			text-align: center;
+			font-size: 35px;
+			line-height: 25px;
+			margin-top: 25px;
+
+			.stat {
+				display: inline-block;
+				min-width: 100px;
+			}
+
+			.stat-label {
+				font-size: 12px;
+				text-transform: uppercase;
+				color: @gray-light;
+			}
 		}
 	}
 }
@@ -239,36 +257,9 @@
 }
 
 
-.account-bio-label{
-	display:block;
-	font-size:14px;
-	opacity:0.8;
-}
-
-.account-bio-value {
-	display:block;
-	margin-bottom:10px;
-	font-size:18px;
-}
-
-
-
-
 .account-username{
   font-size:20px;
   font-weight:bold;
-}
-
-
-.account-stats {
-	.formatted-number, .human-readable-number {
-		font-size:30px;
-	}
-
-	.account-bio-label {
-		font-size:16px;
-		width:100px;
-	}
 }
 
 .picture-switcher {
