@@ -12,7 +12,7 @@
 		<!-- IMPORT partials/breadcrumbs.tpl -->
 	</div>
 
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-4 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -141,7 +141,7 @@
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-8 col-xs-12">
 		<!-- IF group.isOwner -->
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
