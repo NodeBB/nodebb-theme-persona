@@ -138,11 +138,7 @@
 				</table>
 			</div>
 		</div>
-		<!-- ENDIF group.isOwner -->
-		<div widget-area="left"></div>
-	</div>
-	<div class="col-lg-8 col-xs-12">
-		<!-- IF group.isOwner -->
+
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
 				<h3 class="panel-title">
@@ -212,8 +208,10 @@
 			</div>
 		</div>
 		<!-- ENDIF group.isOwner -->
-
-		<div>
+		<div widget-area="left"></div>
+	</div>
+	<div class="col-lg-8 col-xs-12">
+		<div class="col-lg-11">
 			<!-- IF !posts.length -->
 			<div class="alert alert-info">[[groups:details.has_no_posts]]</div>
 			<!-- ENDIF !posts.length -->
