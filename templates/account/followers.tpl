@@ -1,14 +1,14 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="users">
+	<div class="users row">
 
 		<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 			<!-- IMPORT partials/users_list.tpl -->
 		</ul>
 
 		<!-- IF !users.length -->
-		<div class="alert alert-warning">[[user:has_no_follower]]</div>
+		<div class="alert alert-warning text-center">[[user:has_no_follower]]</div>
 		<!-- ENDIF !users.length -->
 	</div>
 
