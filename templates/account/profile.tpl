@@ -9,16 +9,15 @@
 				</span>
 
 				<!-- IF !isSelf -->
-				<br/>
-				<!-- IF !config.disableChat -->
-				<a id="chat-btn" href="#" class="btn btn-primary btn-sm">[[user:chat]]</a>
-				<!-- ENDIF !config.disableChat -->
-					<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
-					<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
+				<!-- IF isFollowing -->
+				<a component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a>
+				<!-- ELSE -->
+				<a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
+				<!-- ENDIF isFollowing -->
+				<!-- ENDIF !isSelf -->
 
+				<!-- IF !isSelf -->
 				<!-- IF isAdmin -->
-				<br/><br/>
-
 				<a id="banAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF banned -->hide<!-- ENDIF banned -->">[[user:ban_account]]</a>
 				<a id="unbanAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF !banned -->hide<!-- ENDIF !banned -->">[[user:unban_account]]</a>
 				<a id="deleteAccountBtn" href="#" class="btn btn-danger btn-sm">[[user:delete_account]]</a><br/><br/>

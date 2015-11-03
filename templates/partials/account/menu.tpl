@@ -3,23 +3,31 @@
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
 	<ul class="dropdown-menu dropdown-menu-right">
+		<!-- IF !isSelf -->
+		<!-- IF !config.disableChat -->
 		<li>
-			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile"><i class="fa fa-user"></i> [[user:profile]]</a>
+			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
+		</li>
+		<li class="divider"></li>
+		<!-- ENDIF !config.disableChat -->
+		<!-- ENDIF !isSelf -->
+		<li>
+			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
 		</li>
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-gear"></i> [[user:settings]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-pencil-square-o"></i> [[user:edit]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
 		<!-- ENDIF showHidden -->
 		<li class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/following"><i class="fa fa-fw fa-users"></i> [[user:following]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/followers"><i class="fa fa-fw fa-users"></i> [[user:followers]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
 		<li class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/topics"><i class="fa fa-fw fa-book"></i> [[global:topics]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/posts"><i class="fa fa-fw fa-pencil"></i> [[global:posts]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/groups"><i class="fa fa-fw fa-users"></i> [[global:header.groups]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/favourites"><i class="fa fa-fw fa-heart"></i> [[user:favourites]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/watched"><i class="fa fa-fw fa-eye"></i> [[user:watched]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/favourites">[[user:favourites]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
 		<!-- ENDIF showHidden -->
 		<!-- BEGIN profile_links -->
 		<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><i class="fa fa-fw {profile_links.icon}"></i> {profile_links.name}</a></li>
