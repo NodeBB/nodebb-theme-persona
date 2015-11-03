@@ -1,7 +1,11 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="row">
+	<div class="profile row">
+		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
+		<h2 class="username">@{username}</h2>
+
+
 		<div class="col-xs-12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
