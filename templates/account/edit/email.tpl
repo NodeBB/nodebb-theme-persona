@@ -1,8 +1,7 @@
-<!-- IMPORT partials/account/header.tpl -->
+<div class="account">
+	<!-- IMPORT partials/account/header.tpl -->
 
-<div class="col-md-5">
-	<form class="form-horizontal">
-
+	<form class="form-horizontal edit-form">
 		<div class="control-group">
 			<label class="control-label" for="inputNewEmail">[[user:email]]</label>
 			<div class="controls">
@@ -25,7 +24,7 @@
 
 		<br/>
 		<div class="form-actions">
-			<a id="submitBtn" href="#" class="btn btn-primary"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_email]]</a>
+			<a id="submitBtn" href="#" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_email]]</a>
 		</div>
 	</form>
 </div>
