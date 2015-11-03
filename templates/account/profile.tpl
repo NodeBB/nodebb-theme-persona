@@ -4,8 +4,13 @@
 	<div class="profile row">
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
 		<h2 class="username">@{username}</h2>
+		<!-- IF aboutme -->
+		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
+		<!-- ENDIF aboutme -->
+	</div>
+	<hr />
 
-
+	<div class="row">
 		<div class="col-xs-12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
@@ -34,12 +39,7 @@
 				<span class="label label-danger">[[user:banned]]</span>
 			</div>
 
-			<!-- IF aboutme -->
-			<hr/>
-			<div component="aboutme" class="text-center">
-			{aboutme}
-			</div>
-			<!-- ENDIF aboutme -->
+			
 			<hr/>
 			<div class="text-center account-stats">
 
