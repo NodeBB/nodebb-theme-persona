@@ -25,14 +25,6 @@
 				<!-- ENDIF isFollowing -->
 				<!-- ENDIF !isSelf -->
 
-				<!-- IF !isSelf -->
-				<!-- IF isAdmin -->
-				<a id="banAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF banned -->hide<!-- ENDIF banned -->">[[user:ban_account]]</a>
-				<a id="unbanAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF !banned -->hide<!-- ENDIF !banned -->">[[user:unban_account]]</a>
-				<a id="deleteAccountBtn" href="#" class="btn btn-danger btn-sm">[[user:delete_account]]</a><br/><br/>
-				<!-- ENDIF isAdmin -->
-				<!-- ENDIF !isSelf -->
-
 			</div>
 
 			<div id="banLabel" class="text-center <!-- IF !banned -->hide<!-- ENDIF !banned -->">

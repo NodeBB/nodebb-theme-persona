@@ -18,6 +18,21 @@
 		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
 		<!-- ENDIF showHidden -->
+
+		<!-- IF !isSelf -->
+		<!-- IF isAdmin -->
+		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
+			<a component="account/ban" href="#">[[user:ban_account]]</a>
+		</li>
+		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
+			<a component="account/unban" href="#">[[user:unban_account]]</a>
+		</li>
+		<li>
+			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
+		</li>
+		<!-- ENDIF isAdmin -->
+		<!-- ENDIF !isSelf -->
+
 		<li class="divider"></li>
 		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
