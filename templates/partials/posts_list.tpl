@@ -3,7 +3,9 @@
 	<!-- BEGIN posts -->
 	<li component="post" class="posts-list-item row" data-pid="{posts.pid}" data-uid="{posts.uid}">
 		<div class="col-lg-11 col-sm-10 col-xs-9 post-body">
-			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">{posts.topic.title}</a>
+			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">
+				<!-- IF !posts.isMainPost -->RE: <!-- ENDIF !posts.isMainPost -->{posts.topic.title}
+			</a>
 			<div component="post/content" class="content">
 				{posts.content}
 			</div>
