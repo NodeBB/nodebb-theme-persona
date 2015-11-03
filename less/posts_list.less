@@ -3,16 +3,16 @@
 	padding-left: 0px;
 
 	.posts-list-item {
-		@icon-diameter: 12px;
+		@icon-radius: 14px;
 		width: 100%;
 		margin-bottom: 0px;
 
 		.user-img {
-			.user-icon-style(@icon-diameter * 2px, 1.5rem, 50%);
+			.user-icon-style(@icon-radius * 2px, 1.5rem, 50%);
 			position: absolute;
 			top: 50%;
-			margin-top: -1 * @icon-diameter;
-			margin-left: -1 * @icon-diameter;
+			margin-top: -1 * @icon-radius;
+			margin-left: -1 * @icon-radius;
 		}
 
 		a {
@@ -27,6 +27,23 @@
 			color: @gray-dark;
 			font-weight: 900;
 			font-size: 125%;
+			text-decoration: underline;
+		}
+
+		.topic-category {
+			text-transform: uppercase;
+			font-size: 10px;
+			color: lighten(@gray-base, 65%);
+			margin-top: 6px;
+			margin-right: 10px;
+			margin-bottom: 25px;
+			display: inline-block;
+			margin-top: 10px;
+
+			a {
+				font-weight: 900;
+				color: @gray-light;
+			}
 		}
 
 		.content {
@@ -36,7 +53,8 @@
 			display: block;
 			overflow: hidden;
 			padding-right: 10px;
-			margin-bottom: 30px;
+			margin-top: 5px;
+			clear: both;
 
 			h1, h2, h3, h4, h5, h6 {
 				margin: 0;

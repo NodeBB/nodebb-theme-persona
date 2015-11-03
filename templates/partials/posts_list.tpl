@@ -6,9 +6,12 @@
 			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">
 				<!-- IF !posts.isMainPost -->RE: <!-- ENDIF !posts.isMainPost -->{posts.topic.title}
 			</a>
+
 			<div component="post/content" class="content">
 				{posts.content}
 			</div>
+
+			<small class="topic-category">[[global:posted_in, <a href="{config.relative_path}/category/{posts.category.slug}">{posts.category.name}</a>]]</small>
 
 			<div class="post-info">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
@@ -23,11 +26,6 @@
 					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
 					<span class="timeago" title="{posts.relativeTime}"></span>
 				</div>
-
-			</div>
-
-			<div class="post-meta">
-				
 			</div>
 		</div>
 	</li>
