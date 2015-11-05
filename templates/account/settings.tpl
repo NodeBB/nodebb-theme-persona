@@ -26,11 +26,11 @@
 						<!-- END homePageRoutes -->
 					</select>
 					<p class="help-block">[[user:homepage_description]]</p>
-					<div id="homePageCustom" style="display: none;">
-						<br>
-						<label>[[user:custom_route]]</label>
-						<input type="text" class="form-control" data-property="homePageCustom"/>
-					</div>
+				</div>
+				<div id="homePageCustom" class="form-group" style="display: none;">
+					<label for="homePageCustom">[[user:custom_route]]</label>
+					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
+					<p class="help-block">[[user:custom_route_help]]</p>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
