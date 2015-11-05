@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
-	<div class="avatar">
+	<div class="avatar" data-uid="{uid}">
 		<!-- IF picture -->
 		<img src="{picture}" class="user-profile-picture" />
 		<!-- ELSE -->
