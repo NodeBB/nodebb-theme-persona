@@ -4,9 +4,12 @@
 	<div class="profile row">
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
 		<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
+
 		<!-- IF aboutme -->
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
+
+		
 
 		<div class="account-stats">
 			<!-- IF reputation -->
@@ -36,6 +39,34 @@
 				<span class="stat-label">[[user:following]]</span>
 			</div>
 		</div>
+
+		<div class="text-center profile-meta">
+			<span>[[user:joined]]</span>
+			<strong class="timeago" title="{joindate}"></strong>
+
+			<span>[[user:lastonline]]</span>
+			<strong class="timeago" title="{lastonline}"></strong><br />
+
+			<!-- IF email -->
+			<span>[[user:email]]</span>
+			<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
+			<!-- ENDIF email -->
+
+			<!-- IF websiteName -->
+			<span>[[user:website]]</span>
+			<strong><a href="{websiteLink}" rel="nofollow">{websiteName}</a></strong>
+			<!-- ENDIF websiteName -->
+
+			<!-- IF location -->
+			<span>[[user:location]]</span>
+			<strong>{location}</strong>
+			<!-- ENDIF location -->
+
+			<!-- IF age -->
+			<span>[[user:age]]</span>
+			<strong>{age}</strong>
+			<!-- ENDIF age -->
+		</div>
 	</div>
 
 	
@@ -56,35 +87,6 @@
 				<!-- ENDIF isFollowing -->
 				<!-- ENDIF !isSelf -->
 
-			</div>
-		
-
-			<div class="hidden">
-				<!-- IF email -->
-				<span class="account-bio-label">[[user:email]]</span>
-				<span class="account-bio-value"><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</span>
-				<!-- ENDIF email -->
-
-				<!-- IF websiteName -->
-				<span class="account-bio-label">[[user:website]]</span>
-				<span class="account-bio-value"><a href="{websiteLink}" rel="nofollow">{websiteName}</a></span>
-				<!-- ENDIF websiteName -->
-
-				<!-- IF location -->
-				<span class="account-bio-label">[[user:location]]</span>
-				<span class="account-bio-value">{location}</span>
-				<!-- ENDIF location -->
-
-				<!-- IF age -->
-				<span class="account-bio-label">[[user:age]]</span>
-				<span class="account-bio-value">{age}</span>
-				<!-- ENDIF age -->
-
-				<span class="account-bio-label">[[user:joined]]</span>
-				<span class="timeago account-bio-value" title="{joindate}"></span>
-
-				<span class="account-bio-label">[[user:lastonline]]</span>
-				<span class="timeago account-bio-value" title="{lastonline}"></span>
 			</div>
 
 			<!-- IF groups.length -->
