@@ -4,7 +4,6 @@
 	<!-- IF !reputation:disabled -->
 	<li><a href='{config.relative_path}/users/sort-reputation'>[[users:most_reputation]]</a></li>
 	<!-- ENDIF !reputation:disabled -->
-	<li <!-- IF template.usersMap -->class="active"<!-- ENDIF template.usersMap -->><a href='{config.relative_path}/users/map'>[[users:map]]</a></li>
 	<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 	<li><a href='{config.relative_path}/users/search'>[[users:search]]</a></li>
 	<!-- ENDIF function.displayUserSearch -->
