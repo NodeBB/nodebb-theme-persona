@@ -14,6 +14,27 @@
 			</div>
 			<!-- ENDIF !disableCustomUserSkins -->
 
+			<!-- IF allowUserHomePage -->
+			<h4>[[user:select-homepage]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="dailyDigestFreq">[[user:homepage]]</label>
+					<select class="form-control" data-property="homePageRoute">
+						<option value="none">None</option>
+						<!-- BEGIN homePageRoutes -->
+						<option value="{homePageRoutes.route}">{homePageRoutes.name}</option>
+						<!-- END homePageRoutes -->
+					</select>
+					<p class="help-block">[[user:homepage_description]]</p>
+					<div id="homePageCustom" style="display: none;">
+						<br>
+						<label>[[user:custom_route]]</label>
+						<input type="text" class="form-control" data-property="homePageCustom"/>
+					</div>
+				</div>
+			</div>
+			<!-- ENDIF allowUserHomePage -->
+
 			<h4>[[user:browsing]]</h4>
 			<div class="well">
 				<div class="checkbox">
