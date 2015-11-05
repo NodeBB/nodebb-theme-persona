@@ -45,7 +45,7 @@
 			<strong class="timeago" title="{joindate}"></strong>
 
 			<span>[[user:lastonline]]</span>
-			<strong class="timeago" title="{lastonline}"></strong><br />
+			<strong class="timeago" title="{lastonlineISO}"></strong><br />
 
 			<!-- IF email -->
 			<span>[[user:email]]</span>
