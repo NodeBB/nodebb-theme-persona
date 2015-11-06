@@ -8,6 +8,16 @@
 		<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
 		<!-- ENDIF picture -->
 		<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
+
+		<!-- IF !isSelf -->
+		<button class="btn-morph fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->">
+			<span>
+				<span class="s1"></span>
+				<span class="s2"></span>
+				<span class="s3"></span>
+			</span>
+		</button>
+		<!-- ENDIF !isSelf -->
 	</div>
 
 	<div class="container">
