@@ -12,7 +12,6 @@
 
 	> .row {
 		max-width: @screen-sm-min;
-		overflow: hidden;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -22,10 +21,6 @@
 			color: @gray-light;
 			font-weight: 300;
 			margin-bottom: 24px;
-		}
-
-		@media (max-width: @screen-md-min - 1) {
-			overflow: hidden;
 		}
 	}
 
@@ -254,6 +249,11 @@
 }
 
 
+@media (max-width: @screen-md-min) {
+	.account > .row {
+		overflow: hidden;
+	}
+}
 
 
 //
