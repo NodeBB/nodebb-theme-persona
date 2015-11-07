@@ -73,11 +73,11 @@
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<!-- IF group.members.picture -->
-							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
+							<!-- IF group.pending.picture -->
+							<a href="{config.relative_path}/user/{group.pending.userslug}"><img src="{group.pending.picture}" /></a>
 							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
-							<!-- ENDIF group.members.picture -->
+							<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
+							<!-- ENDIF group.pending.picture -->
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -109,7 +109,7 @@
 					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 					<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
 				</div><br />
-				
+
 				<table component="groups/invited" class="table table-striped table-hover">
 					<!-- IF !group.invited.length -->
 					<div class="alert alert-info">[[groups:invited.none]]</div>
