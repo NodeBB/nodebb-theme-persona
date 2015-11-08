@@ -9,7 +9,7 @@
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
 
-		
+
 
 		<div class="account-stats">
 			<!-- IF reputation -->
@@ -42,7 +42,7 @@
 
 		<div class="text-center profile-meta">
 			<span>[[user:joined]]</span>
-			<strong class="timeago" title="{joindate}"></strong>
+			<strong class="timeago" title="{joindateISO}"></strong>
 
 			<span>[[user:lastonline]]</span>
 			<strong class="timeago" title="{lastonlineISO}"></strong><br />
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 
-	
+
 	<hr />
 
 	<div class="row">
