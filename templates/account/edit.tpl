@@ -2,10 +2,10 @@
 	<!-- IMPORT partials/account/header.tpl -->
 	<!-- IF sso.length --><div><!-- ENDIF sso.length -->
 		<div class="row">
-			<div class="col-md-3 col-sm-4">
+			<div class="col-md-2 col-sm-4">
 				<div class="account-picture-block text-center">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-12 hidden-xs">
 							<!-- IF picture -->
 							<img id="user-current-picture" class="user-profile-picture" src="{picture}" />
 							<!-- ELSE -->
