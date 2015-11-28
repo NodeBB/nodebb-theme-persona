@@ -7,9 +7,18 @@
 	<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 	<li><a href='{config.relative_path}/users/search'>[[users:search]]</a></li>
 	<!-- ENDIF function.displayUserSearch -->
-	<!-- IF inviteOnly -->
+
 	<!-- IF loggedIn -->
+	<!-- IF invites.only -->
+
+	<!-- IF isAdmin -->
 	<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+	<!-- ENDIF isAdmin -->
+
+	<!-- IF !invites.adminOnly -->
+	<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+	<!-- ENDIF !invites.adminOnly -->
+
+	<!-- ENDIF invites.only -->
 	<!-- ENDIF loggedIn -->
-	<!-- ENDIF inviteOnly -->
 </ul>
