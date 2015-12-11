@@ -14,7 +14,7 @@
 			<div class="modal-body">
 				<span class="since-bar">
 				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
-				<ul class="chat-content"></ul>
+				<ul class="chat-content" component="chat/messages"></ul>
 
 				<div class="input-group">
 					<textarea component="chat/input" id="chat-message-input" rows="1" placeholder="[[modules:chat.placeholder]]" name="chat-message" class="form-control"></textarea>
