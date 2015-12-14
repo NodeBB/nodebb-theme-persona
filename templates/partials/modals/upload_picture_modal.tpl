@@ -10,12 +10,17 @@
 						<div class="form-group">
 							<label for="userPhotoInput">[[user:upload_a_picture]]</label>
 							<input type="file" id="userPhotoInput" name="files[]">
-							<p class="help-block">[[user:image_spec]] (<span id="file-size-block" class="hide"></span>)</p>
+							<!-- IF showHelp -->
+							<p class="help-block">
+								[[user:image_spec]]
+								<!-- IF fileSize --><span id="file-size-block">([[uploads:maximum-file-size, {fileSize}]])</span><!-- ENDIF fileSize -->
+							</p>
+							<!-- ENDIF showHelp -->
 						</div>
 						<input type="hidden" id="params" name="params" />
 					</form>
 
-					<div id="upload-progress-box" class="progress progress-striped">
+					<div id="upload-progress-box" class="progress progress-striped hide">
 						<div id="upload-progress-bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0">
 							<span class="sr-only"> [[success:success]]</span>
 						</div>
