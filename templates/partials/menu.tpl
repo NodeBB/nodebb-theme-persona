@@ -133,7 +133,7 @@
 							</div>
 						</form>
 					</li>
-					<li class="visible-xs">
+					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
 							<i class="fa fa-search fa-fw"></i> [[global:search]]
 						</a>
