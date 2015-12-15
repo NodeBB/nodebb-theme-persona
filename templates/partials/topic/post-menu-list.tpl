@@ -39,6 +39,7 @@
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
 
+<!-- IF !posts.deleted -->
 <li role="presentation">
 	<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}">
 
@@ -73,3 +74,4 @@
 	</a>
 </li>
 <!-- ENDIF !posts.selfPost -->
+<!-- ENDIF !posts.deleted -->
