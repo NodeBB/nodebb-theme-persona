@@ -1,9 +1,5 @@
-<div class="row">
-<div class="topic col-lg-12">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
-
-	<h1 component="post/header" class="hidden-xs" itemprop="name">
-
+<div class="topic-jumbotron" style="background-color: {category.bgColor}; color: {category.color}">
+	<h1 component="post/header" class="container" itemprop="name">
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
 		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
@@ -14,6 +10,11 @@
 			</small>
 		</span>
 	</h1>
+</div>
+
+<div class="row">
+<div class="topic col-lg-12">
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
 
