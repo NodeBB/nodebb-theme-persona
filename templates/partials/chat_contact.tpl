@@ -1,4 +1,4 @@
-			<li data-username="{../username}" data-uid="{../uid}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
+			<div data-username="{../username}" data-uid="{../uid}" >
 				<!-- IF ../picture -->
 				<img class="user-img" src="{../picture}">
 				<!-- ELSE -->
@@ -8,4 +8,4 @@
 				<span class="username">{../username}</span>
 				<span class="teaser-content">{../teaser.content}</span>
 				<span class="teaser-timestamp timeago" title="{../teaser.timestampISO}"></span>
-			</li>
+			</div>
