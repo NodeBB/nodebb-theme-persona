@@ -9,6 +9,8 @@
 			<!-- BEGIN rooms.users -->
 			<!-- IMPORT partials/chat_contact.tpl -->
 			<!-- END rooms.users -->
+			<span class="teaser-content">{rooms.teaser.content}</span>
+			<span class="teaser-timestamp timeago" title="{rooms.teaser.timestampISO}"></span>
 			</li>
 			<!-- END rooms -->
 		</ul>
