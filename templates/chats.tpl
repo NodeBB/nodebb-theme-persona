@@ -26,6 +26,9 @@
 			<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
 			<h1 component="chat/title">{usernames}</h1>
 
+			<div class="users-tag-container">
+				<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+			</div>
 
 			<span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
 			<ul class="chat-content">
