@@ -4,13 +4,12 @@
 <div class="row">
 	<div class="col-md-4">
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
-			<!-- BEGIN rooms -->
-			<div component="chat/recent/room" data-roomid="{rooms.roomId}">
-			<!-- BEGIN rooms.users -->
+			<!-- BEGIN chats -->
 			<!-- IMPORT partials/chat_contact.tpl -->
-			<!-- END rooms.users -->
-			</div>
-			<!-- END rooms -->
+			<!-- END chats -->
+			<!-- BEGIN contacts -->
+			<!-- IMPORT partials/chat_contact.tpl -->
+			<!-- END contacts -->
 		</ul>
 	</div>
 
@@ -20,11 +19,11 @@
 			[[error:chat-restricted]]
 		</div>
 		<!-- ENDIF !allowed -->
-		<!-- IF roomId -->
-		<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
+		<!-- IF meta -->
+		<div component="chat/messages" class="expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
 
 			<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
-			<h1 component="chat/title">{usernames}</h1>
+			<h1 component="chat/title">{meta.username}</h1>
 
 
 			<span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
@@ -42,6 +41,6 @@
 		<div class="alert alert-info">
 			[[modules:chat.no-messages]]
 		</div>
-		<!-- ENDIF roomId -->
+		<!-- ENDIF meta -->
 	</div>
 </div>
