@@ -6,11 +6,7 @@
 			<div class="modal-header">
 				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<button type="button" class="close" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4>
-					<i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i>
-					[[modules:chat.chatting_with]]
-					<span class="user-typing hide"><i class="fa fa-keyboard-o fa-fw"></i></span>
-				</h4>
+				<h4>[[modules:chat.chatting_with]]</h4>
 
 				<div class="users-tag-container inline-block">
 					<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>

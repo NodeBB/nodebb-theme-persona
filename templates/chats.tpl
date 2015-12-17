@@ -6,11 +6,19 @@
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
 			<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
-			<!-- BEGIN rooms.users -->
-			<!-- IMPORT partials/chat_contact.tpl -->
-			<!-- END rooms.users -->
+
+			<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
+				<!-- IF rooms.lastUser.picture -->
+				<img class="user-img" src="{rooms.lastUser.picture}">
+				<!-- ELSE -->
+				<div class="user-icon user-img" style="background-color: {rooms.lastUser.icon:bgColor};">{rooms.lastUser.icon:text}</div>
+				<!-- ENDIF rooms.lastUser.picture -->
+				<i component="user/status" title="[[global:{rooms.lastUser.status}]]" class="fa fa-circle status {rooms.lastUser.status}"></i>
+				<span class="username">{rooms.usernames}</span>
+			</div>
+
 			<span class="teaser-content">{rooms.teaser.content}</span>
-			<span class="teaser-timestamp timeago" title="{rooms.teaser.timestampISO}"></span>
+			<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
 			</li>
 			<!-- END rooms -->
 		</ul>
@@ -26,7 +34,7 @@
 		<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 
 			<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
-			<h1 component="chat/title">{usernames}</h1>
+			<h4 component="chat/title">[[modules:chat.chatting_with]]</h4>
 
 			<div class="users-tag-container">
 				<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
