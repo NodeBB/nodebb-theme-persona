@@ -7,18 +7,18 @@
 			<!-- BEGIN rooms -->
 			<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
 
-			<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
-				<!-- IF rooms.lastUser.picture -->
-				<img class="user-img" src="{rooms.lastUser.picture}">
-				<!-- ELSE -->
-				<div class="user-icon user-img" style="background-color: {rooms.lastUser.icon:bgColor};">{rooms.lastUser.icon:text}</div>
-				<!-- ENDIF rooms.lastUser.picture -->
-				<i component="user/status" title="[[global:{rooms.lastUser.status}]]" class="fa fa-circle status {rooms.lastUser.status}"></i>
-				<span class="username">{rooms.usernames}</span>
-			</div>
+				<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
+					<!-- IF rooms.lastUser.picture -->
+					<img class="user-img" src="{rooms.lastUser.picture}">
+					<!-- ELSE -->
+					<div class="user-icon user-img" style="background-color: {rooms.lastUser.icon:bgColor};">{rooms.lastUser.icon:text}</div>
+					<!-- ENDIF rooms.lastUser.picture -->
+					<i component="user/status" title="[[global:{rooms.lastUser.status}]]" class="fa fa-circle status {rooms.lastUser.status}"></i>
+					<span class="username">{rooms.usernames}</span>
+				</div>
 
-			<span class="teaser-content">{rooms.teaser.content}</span>
-			<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
+				<span class="teaser-content">{rooms.teaser.content}</span>
+				<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
 			</li>
 			<!-- END rooms -->
 		</ul>
