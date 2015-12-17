@@ -1,10 +1,8 @@
 <!-- IF privileges.view_thread_tools -->
-<div class="btn-group thread-tools">
+<span class="thread-tools">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-		<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:thread_tools.title]]</span>
-		<span class="visible-xs-inline"><i class="fa fa-fw fa-gear"></i></span>
-		<span class="caret"></span>
+		<i class="fa fa-fw fa-gear"></i>
 	</button>
-	<ul class="dropdown-menu dropdown-menu-right"></ul>
-</div>
+	<ul class="dropdown-menu dropdown-menu-left"></ul>
+</span>
 <!-- ENDIF privileges.view_thread_tools -->

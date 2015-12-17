@@ -2,12 +2,10 @@
 	<h1 component="post/header" class="container" itemprop="name">
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
-		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
-			<span>[[category:browsing]]</span>
-			<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
-			<small class="hidden">
-				<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
-			</small>
+		<span class="pull-right thread-actions">
+			<!-- IMPORT partials/topic/watch.tpl -->
+			<!-- IMPORT partials/topic/sort.tpl -->
+			<!-- IMPORT partials/thread_tools.tpl -->
 		</span>
 	</h1>
 </div>
