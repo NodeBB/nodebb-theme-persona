@@ -1,3 +1,37 @@
 .unread {
+	margin-top: 90px;
 
+	.personatron {
+		background-color: @gray-dark;
+		color: @body-bg;
+		overflow: hidden;
+
+		height: 90px;
+
+		.category-menu {
+			padding: 0;
+			list-style-type: none;
+
+			overflow-x: scroll;
+    		white-space: nowrap;
+
+			li {
+				display: inline-block;
+
+				a {
+					text-transform: uppercase;
+					font-size: 12px;
+					margin-top: 65px;
+					display: inline-block;
+					padding: 0 9px 5px;
+					color: lighten(@gray-light, 10%);
+
+					&.selected {
+						color: @body-bg;
+						border-bottom: 3px solid @body-bg;
+					}
+				}
+			}
+		}
+	}
 }

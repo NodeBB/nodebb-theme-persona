@@ -1,5 +1,24 @@
 <div class="unread">
 
+	<div class="personatron">
+		<div class="container">
+			<ul class="category-menu">
+				<li>
+					<a href="{config.relative_path}/unread" class="<!-- IF !selectedCategory -->selected<!-- ENDIF !selectedCategory -->">
+						[[unread:all]]
+					</a>
+				</li>
+				<!-- BEGIN categories -->
+				<li>
+					<a href="{config.relative_path}/unread?cid={categories.cid}" style="<!-- IF categories.selected -->color: {categories.bgColor}; border-bottom: 3px solid {categories.bgColor}<!-- ENDIF categories.selected -->">
+						{categories.name}
+					</a>
+				</li>
+				<!-- END categories -->
+			</ul>
+		</div>
+	</div>
+
 	<div class="clearfix">
 		<div class="pull-left">
 		<!-- IMPORT partials/breadcrumbs.tpl -->
@@ -22,23 +41,6 @@
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}">
 					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
-				</li>
-				<!-- END categories -->
-			</ul>
-		</div>
-
-		<div class="btn-group pull-right">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
-				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li role="presentation" class="category">
-					<a role="menu-item" href="{config.relative_path}/unread"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
-				</li>
-				<!-- BEGIN categories -->
-				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="{config.relative_path}/unread?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
