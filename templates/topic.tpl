@@ -1,4 +1,4 @@
-<div class="topic-jumbotron" style="background-color: {category.bgColor}; color: {category.color}">
+<div class="personatron topic-personatron" style="background-color: {category.bgColor}; color: {category.color}">
 	<h1 component="post/header" class="container" itemprop="name">
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 
