@@ -25,11 +25,6 @@
 	</div>
 
 	<div class="col-md-8 hidden-sm hidden-xs">
-		<!-- IF !allowed -->
-		<div class="alert alert-warning">
-			[[error:chat-restricted]]
-		</div>
-		<!-- ENDIF !allowed -->
 		<!-- IF roomId -->
 		<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 
