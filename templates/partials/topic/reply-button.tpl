@@ -1,4 +1,12 @@
-<a component="topic/reply" href="#" class="btn btn-primary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+<div class="btn-group action-bar <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">
+	<button class="btn btn-primary" component="topic/reply">[[topic:reply]]</button>
+	<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right" role="menu">
+		<li><a href="#" component="topic/reply-as-topic">[[topic:reply-as-topic]]</a></li>
+	</ul>
+</div>
 
 <!-- IF loggedIn -->
 <!-- IF !privileges.topics:reply -->
