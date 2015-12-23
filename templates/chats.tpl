@@ -6,7 +6,7 @@
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
 			<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
-
+				<!-- IF rooms.lastUser.uid -->
 				<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
 					<!-- IF rooms.lastUser.picture -->
 					<img class="user-img" src="{rooms.lastUser.picture}">
@@ -16,6 +16,9 @@
 					<i component="user/status" title="[[global:{rooms.lastUser.status}]]" class="fa fa-circle status {rooms.lastUser.status}"></i>
 					<span class="username">{rooms.usernames}</span>
 				</div>
+				<!-- ELSE -->
+				[[modules:chat.no-users-in-room]]
+				<!-- ENDIF rooms.lastUser.uid -->
 
 				<span class="teaser-content">{rooms.teaser.content}</span>
 				<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
@@ -32,7 +35,7 @@
 			<h4 component="chat/title">[[modules:chat.chatting_with]]</h4>
 
 			<div class="users-tag-container">
-				<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+				<input class="users-tag-input" type="text" class="form-control" placeholder="[[modules:chat.add-users-to-room]]" tabindex="4"/>
 			</div>
 
 			<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
