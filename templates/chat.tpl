@@ -11,6 +11,8 @@
 				<div class="users-tag-container inline-block">
 					<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
 				</div>
+
+				<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 			</div>
 
 			<div class="modal-body">
