@@ -32,11 +32,12 @@
 		<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 
 			<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
-			<h4 component="chat/title">[[modules:chat.chatting_with]]</h4>
 
+			<!-- IF showUserInput -->
 			<div class="users-tag-container">
 				<input class="users-tag-input" type="text" class="form-control" placeholder="[[modules:chat.add-users-to-room]]" tabindex="4"/>
 			</div>
+			<!-- ENDIF showUserInput -->
 
 			<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 

@@ -6,11 +6,12 @@
 			<div class="modal-header">
 				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<button type="button" class="close" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4>[[modules:chat.chatting_with]]</h4>
 
+				<!-- IF showUserInput -->
 				<div class="users-tag-container inline-block">
 					<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
 				</div>
+				<!-- ENDIF showUserInput -->
 
 				<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 			</div>
