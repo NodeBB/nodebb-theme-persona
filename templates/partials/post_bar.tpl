@@ -18,6 +18,10 @@
 
 		<!-- IMPORT partials/topic/watch.tpl -->
 
+		<!-- IF loggedIn -->
+		<button component="topic/mark-unread" class="btn btn-default">[[topic:mark_unread]]</button>
+		<!-- ENDIF loggedIn -->
+
 		<!-- IMPORT partials/topic/sort.tpl -->
 
 		<!-- IMPORT partials/thread_tools.tpl -->
