@@ -67,6 +67,7 @@
 
 <li role="presentation" class="divider"></li>
 
+<!-- IF config.loggedIn -->
 <!-- IF !posts.selfPost -->
 <li role="presentation">
 	<a component="post/flag" role="menuitem" tabindex="-1" href="#">
@@ -74,4 +75,5 @@
 	</a>
 </li>
 <!-- ENDIF !posts.selfPost -->
+<!-- ENDIF config.loggedIn -->
 <!-- ENDIF !posts.deleted -->
