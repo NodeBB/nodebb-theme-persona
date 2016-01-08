@@ -18,7 +18,7 @@
 		<!-- IF route_users:joindate -->
 		<div title="joindate" class="joindate">
 			<i class='fa fa-clock'></i>
-			<span class='timeago' title="{users.joindateISO}"></span>
+			<span class='timeago' title="{users.lastonlineISO}"></span>
 		</div>
 		<!-- ENDIF route_users:joindate -->
 
