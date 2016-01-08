@@ -46,7 +46,13 @@
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 
 	</small>
+	<br>
+	<small class="pull-left">
+	<!-- IMPORT partials/awards_topic.tpl -->
+	<br>
+	</small>
 </div>
+
 
 <br />
 
