@@ -6,6 +6,7 @@
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
 			<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
+				<i class="fa fa-times pull-right leave" component="chat/leave"></i>
 				<!-- IF rooms.lastUser.uid -->
 				<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
 					<!-- IF rooms.lastUser.picture -->
