@@ -86,44 +86,47 @@
 				<a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
 				<!-- ENDIF isFollowing -->
 				<!-- ENDIF !isSelf -->
-
 			</div>
-
-			<!-- IF groups.length -->
-			<div class="hidden">
-				<!-- BEGIN groups -->
-				<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
-				<!-- END groups -->
-			</div>
-			<!-- ENDIF groups.length -->
-			<br /><br />
-
-			<!-- IF ips.length -->
-			<div class="hidden">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[global:recentips]]</h3>
-				</div>
-				<div class="panel-body">
-				<!-- BEGIN ips -->
-					<div>{ips.ip}</div>
-				<!-- END ips -->
-				</div>
-			</div>
-			<!-- ENDIF ips.length -->
 		</div>
-
-		<h1>[[pages:account/posts, {username}]]</h1>
-
-		<div class="col-xs-12">
-		<!-- IF !posts.length -->
-		<div class="alert alert-warning">[[user:has_no_posts]]</div>
-		<!-- ENDIF !posts.length -->
-		<!-- IMPORT partials/posts_list.tpl -->
-		</div>
-
 	</div>
 
-	<br/>
-	<div id="user-action-alert" class="alert alert-success hide"></div>
+	<!-- IF groups.length -->
+	<div class="row">
+		<div class="col-xs-12 hidden">
+			<!-- BEGIN groups -->
+			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
+			<!-- END groups -->
+		</div>
+	</div>
+	<!-- ENDIF groups.length -->
 
+	<!-- IF ips.length -->
+	<div class="row">
+		<div class="col-xs-12 hidden">
+			<div class="panel-heading">
+				<h3 class="panel-title">[[global:recentips]]</h3>
+			</div>
+			<div class="panel-body">
+			<!-- BEGIN ips -->
+				<div>{ips.ip}</div>
+			<!-- END ips -->
+			</div>
+		</div>
+	</div>
+	<!-- ENDIF ips.length -->
+
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>[[pages:account/posts, {username}]]</h1>
+
+			<div class="col-xs-12">
+				<!-- IF !posts.length -->
+				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<!-- ENDIF !posts.length -->
+				<!-- IMPORT partials/posts_list.tpl -->
+			</div>
+		</div>
+	</div>
+
+	<div id="user-action-alert" class="alert alert-success hide"></div>
 </div>
