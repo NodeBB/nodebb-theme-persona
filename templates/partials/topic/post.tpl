@@ -78,8 +78,8 @@
 				<i class="fa fa-chevron-down"></i>
 			</a>
 			<!-- ENDIF !downvote:disabled -->
-			<!-- ENDIF !reputation:disabled -->
 		</span>
+		<!-- ENDIF !reputation:disabled -->
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>

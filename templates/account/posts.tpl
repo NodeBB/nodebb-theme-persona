@@ -1,11 +1,11 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="favourites row">
-		<h1>[[pages:{template.name}, {username}]]</h1>
-		
+	<div class="row">
+		<h1>{title}</h1>
+
 		<!-- IF !posts.length -->
-		<div class="alert alert-warning text-center">[[user:has_no_posts]]</div>
+			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
 		<!-- ENDIF !posts.length -->
 
 		<div class="col-xs-12">

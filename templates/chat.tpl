@@ -2,15 +2,20 @@
 <div id="chat-modal" class="chat-modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
 		<div class="modal-content">
+
 			<div class="modal-header">
 				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<button type="button" class="close" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4>
-					<i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i>
-					[[modules:chat.chatting_with]]
-					<span class="user-typing hide"><i class="fa fa-keyboard-o fa-fw"></i></span>
-				</h4>
+
+				<!-- IF showUserInput -->
+				<div class="users-tag-container inline-block">
+					<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+				</div>
+				<!-- ENDIF showUserInput -->
+
+				<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 			</div>
+
 			<div class="modal-body">
 				<span class="since-bar">
 				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>

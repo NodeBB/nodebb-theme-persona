@@ -44,6 +44,7 @@
 				</li>
 				<!-- END categories -->
 			</ul>
+
 		</div>
 	</div>
 

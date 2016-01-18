@@ -1,7 +1,7 @@
 	<!-- BEGIN groups -->
 	<div class="col-lg-4 col-md-6 col-sm-12" component="groups/summary" data-slug="{groups.slug}">
 		<div class="panel panel-default">
-			<div class="panel-heading list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url});<!-- ENDIF groups.cover:url -->">
+			<div class="panel-heading list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
 				<h3 class="panel-title">{groups.displayName} <small>{groups.memberCount}</small></h3>
 			</div>
 			<div class="panel-body">
