@@ -7,7 +7,7 @@
 		<div class="col-md-7 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
-				<div class="select fa-square-o">
+				<div class="select" component="topic/select">
 					<!-- IF topics.user.picture -->
 					{function.renderTopicImage}
 					<!-- ELSE -->
