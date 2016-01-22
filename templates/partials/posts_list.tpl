@@ -11,7 +11,7 @@
 				{posts.content}
 			</div>
 
-			<small class="topic-category">[[global:posted_in, <a href="{config.relative_path}/category/{posts.category.slug}">{posts.category.name}</a>]]</small>
+			<small class="topic-category"><a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]]</a></small>
 
 			<div class="post-info">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
