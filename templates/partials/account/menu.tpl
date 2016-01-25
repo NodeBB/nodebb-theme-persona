@@ -20,13 +20,15 @@
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->
-		<!-- IF isAdmin -->
+		<!-- IF canBan -->
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
 			<a component="account/ban" href="#">[[user:ban_account]]</a>
 		</li>
 		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
 			<a component="account/unban" href="#">[[user:unban_account]]</a>
 		</li>
+		<!-- ENDIF canBan -->
+		<!-- IF isAdmin -->
 		<li>
 			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
 		</li>
