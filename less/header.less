@@ -169,9 +169,11 @@
 		margin-right: 10px !important;
 		transition: opacity 250ms ease-in;
 		opacity: 0;
+		pointer-events: none;
 
 		&.ready {
 			opacity: 1;
+			pointer-events: inherit;
 		}
 
 		.progress-container {
