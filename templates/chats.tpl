@@ -3,6 +3,12 @@
 
 <div class="row">
 	<div class="col-md-4">
+		<div class="chat-search hidden-xs">
+			<input class="form-control" type="text" component="chat/search" placeholder="[[users:enter_username]]" />
+		</div>
+		<ul component="chat/search/list" class="chat-search-list">
+			
+		</ul>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
 			<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
