@@ -32,11 +32,11 @@
 					<!-- ENDIF email -->
 					<!-- ENDIF config.requireEmailConfirmation -->
 
-					<!-- IF config.allowAccountDelete -->
+					<!-- IF allowAccountDelete -->
 					<!-- IF isSelf -->
 					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
 					<!-- ENDIF isSelf -->
-					<!-- ENDIF config.allowAccountDelete -->
+					<!-- ENDIF allowAccountDelete -->
 
 				</div>
 			</div>

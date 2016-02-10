@@ -20,11 +20,11 @@
 </div>
 
 <div class="btn-group btn-group-justified" role="group">
-	<!-- IF config.allowProfileImageUploads -->
+	<!-- IF allowProfileImageUploads -->
 	<div class="btn-group" role="group">
 		<button type="button" class="btn btn-default" data-action="upload">[[user:upload_new_picture]]</button>
 	</div>
-	<!-- ENDIF config.allowProfileImageUploads -->
+	<!-- ENDIF allowProfileImageUploads -->
 	<!-- IF config.hasImageUploadPlugin -->
 	<div class="btn-group" role="group">
 		<button type="button" class="btn btn-default" data-action="upload-url">[[user:upload_new_picture_from_url]]</button>
