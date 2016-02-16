@@ -21,7 +21,9 @@
 						<!-- IF !email:disableEdit -->
 						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change_email]]</a>
 						<!-- ENDIF !email:disableEdit -->
+						<!-- IF canChangePassword -->
 						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
+						<!-- ENDIF canChangePassword -->
 					</ul>
 
 					<!-- IF config.requireEmailConfirmation -->
