@@ -2,9 +2,9 @@
 <!-- BEGIN upvoters -->
 <a href="{config.relative_path}/user/{upvoters.userslug}">
 <!-- IF upvoters.picture -->
-<img class="profile-image small" src="{upvoters.picture}" title="{upvoters.username}"/>
+<img class="avatar avatar-sm" src="{upvoters.picture}" title="{upvoters.username}"/>
 <!-- ELSE -->
-<div class="profile-image small user-icon" style="background-color: {upvoters.icon:bgColor};">{upvoters.icon:text}</div>
+<div class="avatar avatar-sm" style="background-color: {upvoters.icon:bgColor};">{upvoters.icon:text}</div>
 <!-- ENDIF upvoters.picture -->
 </a>
 <!-- END upvoters -->
@@ -13,9 +13,9 @@
 <!-- BEGIN downvoters -->
 <a href="{config.relative_path}/user/{downvoters.userslug}">
 <!-- IF downvoters.picture -->
-<img class="profile-image small" src="{downvoters.picture}" title="{downvoters.username}"/>
+<img class="avatar avatar-sm" src="{downvoters.picture}" title="{downvoters.username}"/>
 <!-- ELSE -->
-<div class="profile-image small user-icon" style="background-color: {downvoters.icon:bgColor};">{downvoters.icon:text}</div>
+<div class="avatar avatar-sm" style="background-color: {downvoters.icon:bgColor};">{downvoters.icon:text}</div>
 <!-- ENDIF downvoters.picture -->
 </a>
 <!-- END downvoters -->
