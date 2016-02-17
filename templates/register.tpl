@@ -83,7 +83,6 @@
 				<!-- ENDIF termsOfUse -->
 				<div class="form-group">
 					<div class="col-lg-offset-4 col-lg-8">
-						<hr />
 						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
 					</div>
 				</div>
