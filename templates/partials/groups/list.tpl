@@ -10,9 +10,9 @@
 					<li>
 						<a href="{config.relative_path}/user/{groups.members.userslug}">
 							<!-- IF groups.members.picture -->
-							<img src="{groups.members.picture}" title="{groups.members.username}" />
+							<img class="avatar avatar-sm" src="{groups.members.picture}" title="{groups.members.username}" />
 							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {groups.members.icon:bgColor};" title="{groups.members.username}">{groups.members.icon:text}</div>
+							<div class="avatar avatar-sm" style="background-color: {groups.members.icon:bgColor};" title="{groups.members.username}">{groups.members.icon:text}</div>
 							<!-- ENDIF groups.members.picture -->
 						</a>
 					</li>
