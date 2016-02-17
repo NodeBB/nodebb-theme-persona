@@ -34,7 +34,6 @@
 				</div>
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
-						<hr />
 						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 						<!-- IF allowRegistration -->
 						<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
