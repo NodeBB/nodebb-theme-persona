@@ -74,9 +74,9 @@
 					<tr data-uid="{group.pending.uid}">
 						<td>
 							<!-- IF group.pending.picture -->
-							<a href="{config.relative_path}/user/{group.pending.userslug}"><img src="{group.pending.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.pending.userslug}"><img class="avatar avatar-sm" src="{group.pending.picture}" /></a>
 							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
+							<div class="avatar avatar-sm" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
 							<!-- ENDIF group.pending.picture -->
 						</td>
 						<td class="member-name">
@@ -84,7 +84,7 @@
 						</td>
 						<td>
 							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
@@ -118,9 +118,9 @@
 					<tr data-uid="{group.invited.uid}">
 						<td>
 							<!-- IF group.invited.picture -->
-							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.invited.userslug}"><img class="avatar avatar-sm" src="{group.invited.picture}" /></a>
 							<!-- ELSE -->
-							<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
+							<div class="avatar avatar-sm" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
 							<!-- ENDIF group.invited.picture -->
 						</td>
 						<td class="member-name">
