@@ -2,7 +2,7 @@
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
-		<meta itemprop="name" content="{function.stripTags, title}">
+		<meta itemprop="name" content="{function.stripTags, titleEscaped}">
 
 		<div class="col-md-7 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
