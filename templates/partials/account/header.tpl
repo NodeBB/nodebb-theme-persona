@@ -10,7 +10,7 @@
 		<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 
 		<!-- IF !isSelf -->
-		<button class="btn-morph fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->">
+		<button class="btn-morph fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing --><!-- IF banned --> hide<!-- ENDIF banned -->">
 			<span>
 				<span class="s1"></span>
 				<span class="s2"></span>
