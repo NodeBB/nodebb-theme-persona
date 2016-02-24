@@ -24,6 +24,9 @@
 						<!-- IF canChangePassword -->
 						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
 						<!-- ENDIF canChangePassword -->
+						<!-- BEGIN editButtons -->
+						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
+						<!-- END editButtons -->
 					</ul>
 
 					<!-- IF config.requireEmailConfirmation -->
