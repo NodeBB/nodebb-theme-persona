@@ -80,6 +80,7 @@
 					[[category:no_replies]]
 				</p>
 				<!-- ELSE -->
+				<!-- IF topics.teaser.pid -->
 				<p>
 					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
 						<!-- IF topics.teaser.user.picture -->
@@ -95,6 +96,7 @@
 				<div class="post-content">
 					{topics.teaser.content}
 				</div>
+				<!-- ENDIF topics.teaser.pid -->
 				<!-- ENDIF topics.unreplied -->
 			</div>
 		</div>
