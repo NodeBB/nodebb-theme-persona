@@ -1,18 +1,23 @@
-	<div id="upload-picture-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-picture" aria-hidden="true">
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="upload-file" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="upload-picture">[[user:upload_picture]]</h3>
+					<h3>{title}</h3>
 				</div>
 				<div class="modal-body">
 					<form id="uploadForm" action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							<label for="userPhotoInput">[[user:upload_a_picture]]</label>
-							<input type="file" id="userPhotoInput" name="files[]">
+							<!-- IF description -->
+							<label for="fileInput">{description}</label>
+							<!-- ENDIF description -->
+							<input type="file" id="fileInput" name="files[]" <!-- IF accept -->accept="{accept}"<!-- ENDIF accept -->>
 							<!-- IF showHelp -->
 							<p class="help-block">
-								[[user:image_spec]]
+								<!-- IF accept -->
+								[[global:allowed-file-types, {accept}]]
+								<!-- ENDIF accept -->
+
 								<!-- IF fileSize --><span id="file-size-block">([[uploads:maximum-file-size, {fileSize}]])</span><!-- ENDIF fileSize -->
 							</p>
 							<!-- ENDIF showHelp -->
@@ -32,7 +37,7 @@
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-					<button id="pictureUploadSubmitBtn" class="btn btn-primary">[[user:upload_picture]]</button>
+					<button id="fileUploadSubmitBtn" class="btn btn-primary">{button}</button>
 				</div>
 			</div>
 		</div>
