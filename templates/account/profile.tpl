@@ -12,12 +12,10 @@
 
 
 		<div class="account-stats">
-			<!-- IF reputation -->
 			<div class="stat">
 				<div class="human-readable-number" title="{reputation}">{reputation}</div>
 				<span class="stat-label">[[global:reputation]]</span>
 			</div>
-			<!-- ENDIF reputation -->
 
 			<div class="stat">
 				<div class="human-readable-number" title="{postcount}">{postcount}</div>
