@@ -43,14 +43,20 @@
 		<li class="divider"></li>
 		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
+		<!-- IF !reputation:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a></li>
+		<!-- ENDIF !reputation:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
 
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/favourites">[[user:favourites]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
+		<!-- IF !reputation:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
+		<!-- IF !downvote:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
+		<!-- ENDIF !downvote:disabled -->
+		<!-- ENDIF !reputation:disabled -->
 		<!-- ENDIF showHidden -->
 
 		<!-- BEGIN profile_links -->
