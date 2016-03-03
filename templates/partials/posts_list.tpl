@@ -24,7 +24,7 @@
 
 				<div class="post-author">
 					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
-					<span class="timeago" title="{posts.relativeTime}"></span>
+					<span class="timeago" title="{posts.timestampISO}"></span>
 				</div>
 			</div>
 		</div>
