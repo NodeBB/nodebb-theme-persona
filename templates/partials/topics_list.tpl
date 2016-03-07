@@ -16,7 +16,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 				<!-- ELSE -->
-				<a href="{config.relative_path}/user/{topics.user.userslug}" class="pull-left">
+				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
 					<!-- IF topics.user.picture -->
 					{function.renderTopicImage}
 					<!-- ELSE -->
