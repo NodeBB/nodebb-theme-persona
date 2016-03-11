@@ -15,7 +15,9 @@
 					<!-- ENDIF topics.user.picture -->
 					<i class="fa fa-check"></i>
 				</div>
-				<!-- ELSE -->
+				<!-- ENDIF showSelect -->
+
+				<!-- IF !showSelect -->
 				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
 					<!-- IF topics.user.picture -->
 					{function.renderTopicImage}
@@ -23,7 +25,8 @@
 					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};" title="{topics.user.username}">{topics.user.icon:text}</div>
 					<!-- ENDIF topics.user.picture -->
 				</a>
-				<!-- ENDIF showSelect -->
+				<!-- ENDIF !showSelect -->
+
 			</div>
 
 			<h2 component="topic/header" class="title">
