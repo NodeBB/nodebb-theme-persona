@@ -7,10 +7,14 @@
 		</div>
 
 		<h2 class="title">
-			<!-- IMPORT partials/categories/link.tpl --><br />
+			<!-- IMPORT partials/categories/link.tpl -->
+			<!-- IF ../descriptionParsed -->
+			<br />
 			<span class="description">
 			{../descriptionParsed}
 			</span>
+			<!-- ENDIF ../descriptionParsed -->
+			{function.generateChildrenCategories}
 		</h2>
 		<span class="visible-xs pull-right">
 			<a class="permalink" href="{../teaser.url}">
