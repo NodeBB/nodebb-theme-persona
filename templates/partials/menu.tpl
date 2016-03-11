@@ -96,6 +96,7 @@
 									</li>
 								</ul>
 							</li>
+							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
 							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
 						</ul>
 					</li>
