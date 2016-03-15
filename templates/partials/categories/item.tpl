@@ -7,7 +7,7 @@
 		</div>
 
 		<h2 class="title">
-			<!-- IMPORT partials/categories/link.tpl -->
+			<!-- IMPORT partials/categories/link.tpl --><br/>
 			<!-- IF ../descriptionParsed -->
 			<div class="description">
 			{../descriptionParsed}
