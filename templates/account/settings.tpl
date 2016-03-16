@@ -48,6 +48,11 @@
 					</label>
 				</div>
 				<p class="help-block">[[user:topic_search_help]]</p>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/> <strong>[[user:scroll_to_my_post]]</strong>
+					</label>
+				</div>
 			</div>
 
 			<h4>[[global:privacy]]</h4>
