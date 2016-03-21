@@ -4,6 +4,7 @@
 </div><br />
 
 <table component="groups/members" class="table table-striped table-hover" data-nextstart="{group.membersNextStart}">
+	<tbody>
 	<!-- BEGIN members -->
 	<tr data-uid="{group.members.uid}">
 		<td>
@@ -32,4 +33,5 @@
 		</td>
 	</tr>
 	<!-- END members -->
+	</tbody>
 </table>
