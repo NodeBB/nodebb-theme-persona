@@ -59,6 +59,17 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
+							<li>
+								<a href="{relative_path}/user/{user.userslug}/edit">
+									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
+								</a>
+							</li>
+							<li>
+								<a href="{relative_path}/user/{user.userslug}/settings">
+									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
+								</a>
+							</li>
+							<li role="presentation" class="divider"></li>
 							<li component="user/logout">
 								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
 							</li>
