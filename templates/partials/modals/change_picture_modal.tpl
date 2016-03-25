@@ -22,17 +22,42 @@
 <div class="btn-group btn-group-justified" role="group">
 	<!-- IF allowProfileImageUploads -->
 	<div class="btn-group" role="group">
-		<button type="button" class="btn btn-default" data-action="upload">[[user:upload_new_picture]]</button>
+		<button type="button" class="btn btn-default" data-action="upload">
+			<span class="hidden-xs">
+				[[user:upload_new_picture]]
+			</span>
+			<span class="visible-xs-inline">
+				<i class="fa fa-plus"></i>
+				<i class="fa fa-upload"></i>
+			</span>
+		</button>
 	</div>
 	<!-- ENDIF allowProfileImageUploads -->
 	<!-- IF config.hasImageUploadPlugin -->
 	<div class="btn-group" role="group">
-		<button type="button" class="btn btn-default" data-action="upload-url">[[user:upload_new_picture_from_url]]</button>
+		<button type="button" class="btn btn-default" data-action="upload-url">
+			<span class="hidden-xs">
+				[[user:upload_new_picture_from_url]]
+			</span>
+			<span class="visible-xs-inline">
+				<i class="fa fa-plus"></i>
+				<i class="fa fa-link"></i>
+			</span>
+		</button>
 	</div>
 	<!-- ENDIF config.hasImageUploadPlugin -->
 	<!-- IF uploaded -->
 	<div class="btn-group" role="group">
-		<button type="button" class="btn btn-default" data-action="remove-uploaded">[[user:remove_uploaded_picture]]</button>
+		<button type="button" class="btn btn-default" data-action="remove-uploaded">
+			<span class="hidden-xs">
+				[[user:remove_uploaded_picture]]
+			</span>
+			<span class="visible-xs-inline">
+				<i class="fa fa-picture-o"></i>
+				<i class="fa fa-long-arrow-right"></i>
+				<i class="fa fa-trash-o"></i>
+			</span>
+		</button>
 	</div>
 	<!-- ENDIF uploaded -->
 </div>
