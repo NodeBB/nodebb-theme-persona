@@ -111,6 +111,11 @@
 		.transition(0.75s ease-in-out opacity);
 	}
 
+	[component="post/anchor"] {
+		position: relative;
+		top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
+	}
+
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
 
