@@ -15,7 +15,7 @@
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
 
-				<div component="navbar/title" class="visible-xs">
+				<div component="navbar/title" class="visible-xs hidden">
 					<span></span>
 				</div>
 			</div>
