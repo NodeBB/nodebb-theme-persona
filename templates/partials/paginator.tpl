@@ -10,7 +10,7 @@
 				<a href="#"><i class="fa fa-ellipsis-h"></i></a>
 			</li>
 			<!-- ELSE -->
-			<li class="page<!-- IF pagination.pages.active --> active<!-- ENDIF pagination.pages.active -->" >
+			<li class="page<!-- IF pagination.pages.active --> active<!-- ELSE --> hidden-xs<!-- ENDIF pagination.pages.active -->" >
 				<a href="?{pagination.pages.qs}" data-page="{pagination.pages.page}">{pagination.pages.page}</a>
 			</li>
 			<!-- ENDIF pagination.pages.separator -->
