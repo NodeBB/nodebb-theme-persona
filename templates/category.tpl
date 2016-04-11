@@ -34,6 +34,8 @@
 
 	<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
+	<!-- ELSE -->
+		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 	<!-- ENDIF config.usePagination -->
 </div>
 
