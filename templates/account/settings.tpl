@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-6">
 			<!-- IF !disableCustomUserSkins -->
 			<h4>[[user:select-skin]]</h4>
 			<div class="well">
@@ -107,66 +107,6 @@
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
-			<h4>[[user:follow]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/> <strong>[[user:follow_topics_you_create]]</strong>
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/> <strong>[[user:follow_topics_you_reply_to]]</strong>
-					</label>
-				</div>
-			</div>
-
-			<h4>[[groups:groups]]</h4>
-			<div class="well">
-				<div class="form-group">
-					<label for="grouptitle">[[user:grouptitle]]</label>
-					<select class="form-control" id="grouptitle" data-property="groupTitle">
-						<option value="">[[user:no-group-title]]</option>
-						<!-- BEGIN userGroups -->
-						<!-- IF userGroups.userTitleEnabled -->
-						<option value="{userGroups.name}" <!-- IF userGroups.selected -->selected<!-- ENDIF userGroups.selected -->>{userGroups.userTitle}</option>
-						<!-- ENDIF userGroups.userTitleEnabled -->
-						<!-- END userGroups -->
-					</select>
-				</div>
-			</div>
-
-
-			<h4>[[global:pagination]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
-					</label>
-				</div>
-
-				<strong>[[user:topics_per_page]]</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}"><br />
-				<strong>[[user:posts_per_page]]</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
-			</div>
-
-			<h4>[[global:header.notifications]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="notificationSounds" <!-- IF settings.notificationSounds -->checked<!-- ENDIF settings.notificationSounds -->> <strong>[[user:notification_sounds]]</strong>
-					</label>
-				</div>
-			</div>
-
-			<h4>[[global:language]]</h4>
-			<div class="well">
-				<select data-property="userLang" class="form-control">
-					<!-- BEGIN languages -->
-					<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
-					<!-- END languages -->
-				</select>
-			</div>
-
 			<!-- IF sessions.length -->
 			<h4>[[global:sessions]]</h4>
 			<ul class="list-group" component="user/sessions">
@@ -209,8 +149,40 @@
 				<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
 			</div>
 		</div>
+
+		<div class="col-xs-6">
+			<h4>[[global:language]]</h4>
+			<div class="well">
+				<select data-property="userLang" class="form-control">
+					<!-- BEGIN languages -->
+					<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
+					<!-- END languages -->
+				</select>
+			</div>
+
+
+			<h4>[[global:pagination]]</h4>
+			<div class="well">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
+					</label>
+				</div>
+
+				<strong>[[user:topics_per_page]]</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}"><br />
+				<strong>[[user:posts_per_page]]</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
+			</div>
+
+
+			<h4>[[global:header.notifications]]</h4>
+			<div class="well">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="notificationSounds" <!-- IF settings.notificationSounds -->checked<!-- ENDIF settings.notificationSounds -->> <strong>[[user:notification_sounds]]</strong>
+					</label>
+				</div>
+			</div>
+		</div>
 	</div>
-
-
 </div>
 

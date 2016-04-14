@@ -79,6 +79,20 @@
 						</div>
 
 						<div class="control-group">
+							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
+							<div class="controls">
+								<select class="form-control" id="groupTitle" data-property="groupTitle">
+									<option value="">[[user:no-group-title]]</option>
+									<!-- BEGIN groups -->
+									<!-- IF groups.userTitleEnabled -->
+									<option value="{groups.name}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
+									<!-- ENDIF groups.userTitleEnabled -->
+									<!-- END groups -->
+								</select>
+							</div>
+						</div>
+
+						<div class="control-group">
 							<label class="control-label" for="inputAboutMe">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
 							<div class="controls">
 								<textarea class="form-control" id="inputAboutMe" rows="5">{aboutme}</textarea>
