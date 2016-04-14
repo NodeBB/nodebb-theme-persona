@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
-		<div class="col-xs-6">
+		<div class="col-xs-12 col-md-6">
 			<!-- IF !disableCustomUserSkins -->
 			<h4>[[user:select-skin]]</h4>
 			<div class="well">
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 
-		<div class="col-xs-6">
+		<div class="col-xs-12 col-md-6">
 			<h4>[[global:language]]</h4>
 			<div class="well">
 				<select data-property="userLang" class="form-control">
