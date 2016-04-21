@@ -84,7 +84,7 @@
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-md-3 col-sm-3 teaser hidden-xs">
+		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="teaser">
 			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>
