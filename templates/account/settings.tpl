@@ -29,7 +29,7 @@
 				</div>
 				<div id="homePageCustom" class="form-group" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
-					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
+					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
 					<p class="help-block">[[user:custom_route_help]]</p>
 				</div>
 			</div>
