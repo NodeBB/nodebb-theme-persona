@@ -61,25 +61,6 @@
 				<p class="help-block">[[user:image_load_delay_help]]</p>
 			</div>
 
-			<h4>[[global:privacy]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
-					</label>
-				</div>
-			</div>
-
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
 			<div class="well">
@@ -145,9 +126,6 @@
 			</div>
 			<!-- END customSettings -->
 
-			<div class="form-actions">
-				<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
-			</div>
 		</div>
 
 		<div class="col-xs-12 col-md-6">
@@ -173,6 +151,25 @@
 				<strong>[[user:posts_per_page]]</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
 			</div>
 
+			<h4>[[global:privacy]]</h4>
+			<div class="well">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
+					</label>
+				</div>
+			</div>
+
 
 			<h4>[[global:header.notifications]]</h4>
 			<div class="well">
@@ -183,6 +180,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="form-actions">
+		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
 	</div>
 </div>
 
