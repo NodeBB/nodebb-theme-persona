@@ -1,6 +1,9 @@
 {
 	"id": "nodebb-theme-persona",
-	"hooks": [],
+	"library": "library.js",
+	"hooks": [
+		{ "hook": "filter:teasers.get", "method": "getTeasers" }
+	],
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",

@@ -28,6 +28,9 @@
 				<meta itemprop="dateModified" content="{posts.editedISO}">
 
 				<!-- IMPORT partials/topic/post.tpl -->
+				<!-- IF !posts.index -->
+				<div class="post-bar-placeholder"></div>
+				<!-- ENDIF !posts.index -->
 			</li>
 		<!-- END posts -->
 	</ul>
