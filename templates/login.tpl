@@ -20,7 +20,7 @@
 				<div class="form-group">
 					<label for="password" class="col-lg-2 control-label">[[user:password]]</label>
 					<div class="col-lg-10">
-						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" />
+						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
 					</div>
 				</div>
 				<div class="form-group">
