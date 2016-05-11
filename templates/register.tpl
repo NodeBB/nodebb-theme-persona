@@ -4,7 +4,7 @@
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
 			<div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify" >
-				[[error:registration-error]]
+				<strong>[[error:registration-error]]</strong>
 				<p>{error}</p>
 			</div>
 			<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">

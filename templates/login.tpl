@@ -6,7 +6,7 @@
 		<div class="well well-lg">
 			<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				[[login:failed_login_attempt]]
+				<strong>[[login:failed_login_attempt]]</strong>
 				<p>{error}</p>
 			</div>
 
@@ -20,7 +20,7 @@
 				<div class="form-group">
 					<label for="password" class="col-lg-2 control-label">[[user:password]]</label>
 					<div class="col-lg-10">
-						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" />
+						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
 					</div>
 				</div>
 				<div class="form-group">
