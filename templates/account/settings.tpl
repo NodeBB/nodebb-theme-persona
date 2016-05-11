@@ -42,12 +42,14 @@
 						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/> <strong>[[user:open_links_in_new_tab]]</strong>
 					</label>
 				</div>
+				<!-- IF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/> <strong>[[user:enable_topic_searching]]</strong>
 					</label>
 				</div>
 				<p class="help-block">[[user:topic_search_help]]</p>
+				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/> <strong>[[user:scroll_to_my_post]]</strong>
