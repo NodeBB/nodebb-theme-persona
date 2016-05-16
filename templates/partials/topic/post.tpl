@@ -1,4 +1,4 @@
-<div class="clearfix">
+<div class="clearfix post-header">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			<!-- IF posts.user.picture -->
@@ -53,7 +53,7 @@
 	{posts.content}
 </div>
 
-<div class="clearfix">
+<div class="clearfix post-footer">
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
