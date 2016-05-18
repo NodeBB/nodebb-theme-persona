@@ -18,7 +18,7 @@
 
 		<!-- IF loggedIn -->
 		<button component="topic/mark-unread" class="btn btn-default">
-			<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:mark_unread]]</span> <i class="fa fa-inbox"></i>
+			<i class="fa fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"> [[topic:mark_unread]]</span>
 		</button>
 		<!-- ENDIF loggedIn -->
 
