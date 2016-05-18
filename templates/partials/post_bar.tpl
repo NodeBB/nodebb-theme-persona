@@ -16,13 +16,13 @@
 
 		<!-- IMPORT partials/topic/reply-button.tpl -->
 
-		<!-- IMPORT partials/topic/watch.tpl -->
-
 		<!-- IF loggedIn -->
 		<button component="topic/mark-unread" class="btn btn-default">
 			<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:mark_unread]]</span> <i class="fa fa-inbox"></i>
 		</button>
 		<!-- ENDIF loggedIn -->
+
+		<!-- IMPORT partials/topic/watch.tpl -->
 
 		<!-- IMPORT partials/topic/sort.tpl -->
 
