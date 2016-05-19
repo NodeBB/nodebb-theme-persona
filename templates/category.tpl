@@ -13,7 +13,7 @@
 			<!-- ENDIF !loggedIn -->
 		<!-- ENDIF privileges.topics:create -->
 
-		<span class="pull-right">
+		<span class="pull-right" component="category/controls">
 			<!-- IMPORT partials/category/watch.tpl -->
 			<!-- IMPORT partials/category/sort.tpl -->
 			<!-- IMPORT partials/category/tools.tpl -->
