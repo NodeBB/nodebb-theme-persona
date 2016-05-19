@@ -15,8 +15,8 @@
 
 		<span class="pull-right">
 			<!-- IMPORT partials/category/watch.tpl -->
-			<!-- IMPORT partials/category/tools.tpl -->
 			<!-- IMPORT partials/category/sort.tpl -->
+			<!-- IMPORT partials/category/tools.tpl -->
 		</span>
 	</div>
 
