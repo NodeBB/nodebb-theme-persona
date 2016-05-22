@@ -2,7 +2,8 @@
 	"id": "nodebb-theme-persona",
 	"library": "library.js",
 	"hooks": [
-		{ "hook": "filter:teasers.get", "method": "getTeasers" }
+		{ "hook": "filter:teasers.get", "method": "getTeasers" },
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" }
 	],
 	"scripts": [
 		"lib/persona.js",
