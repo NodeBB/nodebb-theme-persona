@@ -291,21 +291,27 @@
 
 .unread-count:after {
 	content: attr(data-content);
-	position: relative;
-	left: -6px;
-	top: -7px;
+	position: absolute;
+    	left: 23px;
+    	top: 10px;
 	font-size: 10px;
 	text-align: center;
 	border: 1px solid #890405;
 	color: #fff;
 	font-weight: bold;
-	min-width: 20px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	min-width: 16px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	background: #c91106;
 	padding: 1px 2px;
 	font-family: @font-family-sans-serif;
+}
+
+#mobile-menu [component="notifications/icon"].unread-count:after {
+	position: relative;
+    	left: -6px;
+    	top: -7px;
 }
 
 #search-form {
