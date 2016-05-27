@@ -14,5 +14,8 @@
 		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout.min.js",
 		"lib/client/chats.js"
+	],
+	"acpScripts": [
+		"lib/admin.js"
 	]
 }

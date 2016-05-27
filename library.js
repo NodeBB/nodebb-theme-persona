@@ -87,7 +87,10 @@ library.defineWidgetAreas = function(areas, callback) {
 };
 
 library.getThemeConfig = function(config, callback) {
-	config.hideSubCategories = !!parseInt(meta.config.hideSubCategories, 10);
+	
+	meta.settings.get('persona', function(err, settings) {
+		config.hideSubCategories = settings.hideSubCategories === 'on';
+	});
 	
 	callback(false, config);
 };
