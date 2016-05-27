@@ -1,8 +1,29 @@
 'use strict';
 
 var S = require.main.require('string');
+var	meta = module.parent.require('./meta');
 
 var library = {};
+
+library.init = function(params, callback) {
+	var app = params.router;
+	var	middleware = params.middleware;
+
+	app.get('/admin/plugins/persona', middleware.admin.buildHeader, renderAdmin);
+	app.get('/api/admin/plugins/persona', renderAdmin);
+
+	callback();
+};
+
+library.addAdminNavigation = function(header, callback) {
+	header.plugins.push({
+		route: '/plugins/persona',
+		icon: 'fa-paint-brush',
+		name: 'Persona Theme'
+	});
+
+	callback(null, header);
+};
 
 library.getTeasers = function(data, callback) {
 	data.teasers.forEach(function(teaser) {
@@ -64,5 +85,15 @@ library.defineWidgetAreas = function(areas, callback) {
 
 	callback(null, areas);
 };
+
+library.getThemeConfig = function(config, callback) {
+	config.hideSubCategories = !!parseInt(meta.config.hideSubCategories, 10);
+	
+	callback(false, config);
+};
+
+function renderAdmin(req, res, next) {
+	res.render('admin/plugins/persona', {});
+}
 
 module.exports = library;

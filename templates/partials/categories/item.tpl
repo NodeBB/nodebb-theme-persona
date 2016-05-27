@@ -13,7 +13,9 @@
 			{../descriptionParsed}
 			</div>
 			<!-- ENDIF ../descriptionParsed -->
+			<!-- IF !config.hideSubCategories -->
 			{function.generateChildrenCategories}
+			<!-- ENDIF !config.hideSubCategories -->
 		</h2>
 		<span class="visible-xs pull-right">
 			<a class="permalink" href="{../teaser.url}">
