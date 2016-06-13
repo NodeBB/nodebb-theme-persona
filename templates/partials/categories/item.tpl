@@ -33,8 +33,10 @@
 		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
+	<!-- IF !config.hideCategoryLastPost -->
 	<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
+	<!-- ENDIF !config.hideCategoryLastPost -->
 	<!-- ENDIF !../link -->
 </li>

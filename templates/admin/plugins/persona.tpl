@@ -8,6 +8,12 @@
 					<span class="mdl-switch__label"><strong>Hide subcategories on categories view</strong></span>
 				</label>
 			</div>
+			<div class="checkbox">
+				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+					<input class="mdl-switch__input" type="checkbox" id="hideCategoryLastPost" name="hideCategoryLastPost">
+					<span class="mdl-switch__label"><strong>Hide last post on categories view</strong></span>
+				</label>
+			</div>
 		</form>
 	</div>
 </div>
