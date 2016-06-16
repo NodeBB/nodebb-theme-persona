@@ -37,7 +37,7 @@
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body class="{bodyClass}">
+<body class="{bodyClass} skin-{config.bootswatchSkin}">
 	<nav id="menu" class="hidden">
 		<section class="menu-profile">
 			<!-- IF user.uid -->
