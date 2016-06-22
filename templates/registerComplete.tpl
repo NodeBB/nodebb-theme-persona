@@ -22,6 +22,7 @@
 	<!-- END sections -->
 
 	<div class="row">
+		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="col-xs-6 col-xs-offset-3">
 			<button class="btn btn-primary btn-block">Submit</button>
 		</div>
