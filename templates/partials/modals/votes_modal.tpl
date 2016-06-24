@@ -1,4 +1,4 @@
-<h3>Upvoters <small>({upvoteCount})</small></h3>
+<h3>[[global:upvoters]] <small>({upvoteCount})</small></h3>
 <!-- BEGIN upvoters -->
 <a href="{config.relative_path}/user/{upvoters.userslug}">
 <!-- IF upvoters.picture -->
@@ -9,7 +9,7 @@
 </a>
 <!-- END upvoters -->
 
-<h3>Downvoters <small>({downvoteCount})</small></h3>
+<h3>[[global:downvoters]] <small>({downvoteCount})</small></h3>
 <!-- BEGIN downvoters -->
 <a href="{config.relative_path}/user/{downvoters.userslug}">
 <!-- IF downvoters.picture -->
