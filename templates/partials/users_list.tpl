@@ -1,3 +1,7 @@
+<!-- IF !users.length -->
+<br/>
+<div class="alert alert-warning">[[users:no-users-found]]</div>
+<!-- ENDIF !users.length -->
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
 	<a href="{config.relative_path}/user/{users.userslug}">
@@ -34,6 +38,13 @@
 			<span class="formatted-number">{users.postcount}</span>
 		</div>
 		<!-- ENDIF route_users:postcount -->
+
+		<!-- IF route_users:flags -->
+		<div title="flag count" class="flag-count">
+			<i class="fa fa-flag"></i>
+			<span class="formatted-number"><a href="{config.relative_path}/posts/flags?byUsername={users.username}">{users.flags}</a></span>
+		</div>
+		<!-- ENDIF route_users:flags -->
 	</div>
 </li>
 <!-- END users -->
