@@ -1,7 +1,3 @@
-<!-- IF !users.length -->
-<br/>
-<div class="alert alert-warning">[[users:no-users-found]]</div>
-<!-- ENDIF !users.length -->
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
 	<a href="{config.relative_path}/user/{users.userslug}">
