@@ -19,6 +19,7 @@
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/info">[[user:account_info]] <i class="fa fa-lock"></i></a></li>
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->

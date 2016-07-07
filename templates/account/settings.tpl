@@ -112,15 +112,6 @@
 			</ul>
 			<!-- ENDIF sessions.length -->
 
-			<!-- IF ips.length -->
-			<h4>[[global:recentips]]</h4>
-			<div class="well">
-				<!-- BEGIN ips -->
-					<div>{ips.ip}</div>
-				<!-- END ips -->
-			</div>
-			<!-- ENDIF ips.length -->
-
 			<!-- BEGIN customSettings -->
 			<h4>{customSettings.title}</h4>
 			<div class="well">
