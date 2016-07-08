@@ -61,18 +61,6 @@
 				float: left;
 			}
 
-			&.selected {
-				.select .user-img, .select .user-icon {
-					opacity: 0;
-				}
-
-				.fa-check {
-					opacity: 1;
-					border: 1px solid @brand-success !important;
-					color: @brand-success !important;
-				}
-			}
-			
 			.avatar .select:hover {
 				.user-img, .user-icon {
 					opacity: 0;
@@ -82,6 +70,18 @@
 					border: 1px solid @brand-primary;
 					color: @brand-primary;
 					opacity: 1;
+				}
+			}
+			
+			&.selected {
+				.select .user-img, .select .user-icon {
+					opacity: 0;
+				}
+
+				.avatar .select .fa-check {
+					opacity: 1;
+					border: 1px solid @brand-success;
+					color: @brand-success;
 				}
 			}
 
