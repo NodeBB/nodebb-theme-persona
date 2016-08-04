@@ -7,8 +7,8 @@
 			</div>
 			<div class="modal-body">
 				<div class="form-group">
-					<label for="topicId">Topic ID</label>
-					<input id="topicId" type="text" class="form-control" placeholder="Enter topic ID"><br/>
+					<label for="topicId">[[topic:topic_id]]</label>
+					<input id="topicId" type="text" class="form-control" placeholder="[[topic:topic_id_placeholder]]"><br/>
 				</div>
 			</div>
 
