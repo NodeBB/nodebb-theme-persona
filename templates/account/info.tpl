@@ -41,7 +41,14 @@
 
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">[[user:info.ban-history]]</h3>
+					<h3 class="panel-title">
+						[[user:info.ban-history]]
+						<!-- IF !banned -->
+						<button class="btn btn-xs pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+						<!-- ELSE -->
+						<button class="btn btn-xs pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+						<!-- ENDIF !banned -->
+					</h3>
 				</div>
 				<div class="panel-body">
 					<!-- IF history.bans.length -->
