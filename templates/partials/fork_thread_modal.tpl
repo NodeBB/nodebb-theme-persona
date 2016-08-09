@@ -5,7 +5,7 @@
 	<div class="panel-body">
 		<div class="form-group">
 			<label for="title">Title</label>
-			<input id="fork-title" type="text" class="form-control" placeholder="Enter new thread title">
+			<input id="fork-title" type="text" class="form-control" placeholder="Enter new topic title">
 		</div>
 		<p>
 			[[topic:fork_topic_instruction]]<br />
@@ -16,7 +16,7 @@
 		&nbsp;
 		<div class="btn-group pull-right">
 			<button class="btn btn-link btn-xs" id="fork_thread_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-xs" id="fork_thread_commit">[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button>
+			<button class="btn btn-primary btn-xs" id="fork_thread_commit" disabled>[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button>
 		</div>
 	</div>
 </div>
