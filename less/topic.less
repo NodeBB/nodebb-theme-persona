@@ -435,3 +435,36 @@
 		max-width: 33%;
 	}
 }
+
+[component="post"] {
+	
+	[component="user/picture"], [component="user/status"] {
+		opacity: 1;
+	}
+	
+	.icon:before {
+		opacity: 0;
+	}
+	
+	&.bg-success {
+		background-color: initial;
+		
+		.icon:before {
+			border: 1px solid #5cb85c;
+    		color: #5cb85c;
+    		-webkit-transition: .2s ease-in-out all;
+    		transition: .2s ease-in-out all;
+    		content: "\f00c";
+    		padding: 14px;
+		    border-radius: 50%;
+		    opacity: 1;
+		    position: absolute;
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		}
+		
+		[component="user/picture"], [component="user/status"] {
+			opacity: 0;
+		}
+	}
+}
