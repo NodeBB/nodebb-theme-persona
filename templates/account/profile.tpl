@@ -9,7 +9,7 @@
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
 
-
+		<div widget-area="middle"></div>
 
 		<div class="account-stats">
 			<!-- IF !reputation:disabled -->
