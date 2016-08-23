@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<!-- ENDIF sessions.length -->
-	
+
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
@@ -53,7 +53,7 @@
 						<!-- BEGIN history.flags -->
 						<li>
 							<p>
-								<a class="title" href="{config.relative_path}/post/{../value}">{../title}</a><br />
+								<a class="title" href="{config.relative_path}/post/{../pid}">{../title}</a><br />
 								<span class="timestamp">Flagged <span class="timeago" title="{../timestampISO}"></span> ({../timestampReadable})</span>
 							</p>
 						</li>
