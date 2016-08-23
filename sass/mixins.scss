@@ -1,0 +1,51 @@
+@mixin no-select {
+	@include user-select(none);
+}
+
+@mixin pointer {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+@mixin inline-block {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+@mixin clear {
+	clear: both;
+}
+
+@mixin zebra {
+	&:nth-child(even) {
+		background: rgba(191,191,191,0.2);
+	}
+
+	&:nth-child(odd) {
+		background: rgba(223,223,223,0.2);
+	}
+}
+
+@mixin opacity($opacity: 1)
+{
+	-moz-opacity: $opacity;
+	opacity: $opacity;
+	//-ms-filter: ~`"progid:DXImageTransform.Microsoft.Alpha(opacity=(" + "${opacity}" * 100 + "))"`;
+	//filter: ~`"alpha(opacity = (" + "${opacity}" * 100 + "))"`;
+}
+
+@mixin border-radius($radius: 5px)
+{
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -22,16 +22,16 @@
 						</div>
 						<div class="col-md-2">
 							<label>&nbsp;</label>
-							<button type="submit" class="btn btn-default form-control">[[global:search]]</button>
+							<button type="submit" class="btn btn-secondary form-control">[[global:search]]</button>
 						</div>
 					</div>
 				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
+				<div class="card">
+					<div class="card-header" data-toggle="collapse" data-target=".search-options">
 						<h3 class="panel-title"><i class="fa fa-caret-down"></i> [[search:advanced-search]]</h3>
 					</div>
-					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
+					<div class="card-block search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 
 						<div class="form-group post-search-item">
 							<label>[[search:posted-by]]</label>
@@ -144,8 +144,8 @@
 			<!-- ENDIF matchCount -->
 
 			<!-- BEGIN posts -->
-			<div class="topic-row panel panel-default clearfix">
-				<div class="panel-body">
+			<div class="topic-row card clearfix">
+				<div class="card-block">
 
 					<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}" class="search-result-text">
 						<h4>{posts.topic.title}</h4>
@@ -158,7 +158,7 @@
 					<!-- ENDIF showAsPosts -->
 
 					<small>
-						<span class="pull-right post-preview-footer">
+						<span class="pull-xs-right post-preview-footer">
 							<a href="{config.relative_path}/user/{posts.user.userslug}">
 								<!-- IF posts.user.picture -->
 								<img class="user-img" title="{posts.user.username}" src="{posts.user.picture}"/>

@@ -16,45 +16,45 @@
 	</div>
 
 	<div class="col-lg-4 col-xs-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
+		<div class="card">
+			<div class="card-header">
+				
 					<i class="fa fa-list-ul"></i> [[groups:details.title]]
 					<!-- IF group.private --><span class="label label-info">[[groups:details.private]]</span><!-- ENDIF group.private -->
 					<!-- IF group.hidden --><span class="label label-info">[[groups:details.hidden]]</span>&nbsp;<!-- ENDIF group.hidden -->
-				</h3>
+				
 			</div>
-			<div class="panel-body">
-				<h1>{group.displayName}</h1>
+			<div class="card-block">
+				<h4>{group.displayName}</h4>
 				<p>{group.descriptionParsed}</p>
 				<!-- IF isAdmin -->
-				<div class="pull-right">
+				<div class="pull-xs-right">
 					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
 				</div>
 				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
-				<div class="pull-right">
+				<div class="pull-xs-right">
 					{function.membershipBtn, group}&nbsp;
 				</div>
 				<!-- ENDIF loggedIn -->
 			</div>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title"><i class="fa fa-users"></i> [[groups:details.members]]</h3>
+		<div class="card">
+			<div class="card-header">
+				<i class="fa fa-users"></i> [[groups:details.members]]
 			</div>
-			<div class="panel-body">
+			<div class="card-block">
 				<!-- IMPORT partials/groups/memberlist.tpl -->
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title clearfix">
+		<div class="card">
+			<div class="card-header">
+				
 					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 					<!-- IF group.pending.length -->
-					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					<div class="btn-group pull-xs-right">
+						<button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
@@ -63,9 +63,9 @@
 						</ul>
 					</div>
 					<!-- ENDIF group.pending.length -->
-				</h3>
+				
 			</div>
-			<div class="panel-body">
+			<div class="card-block">
 				<table component="groups/pending" class="table table-striped table-hover">
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
@@ -83,8 +83,8 @@
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
 						</td>
 						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<div class="btn-group pull-xs-right">
+								<button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
@@ -98,13 +98,13 @@
 				</table>
 			</div>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title clearfix">
+		<div class="card">
+			<div class="card-header">
+				
 					<i class="fa fa-gift"></i> [[groups:details.invited]]
-				</h3>
+				
 			</div>
-			<div class="panel-body">
+			<div class="card-block">
 				<div class="input-group">
 					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 					<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
@@ -127,8 +127,8 @@
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
 						</td>
 						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<div class="btn-group pull-xs-right">
+								<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
@@ -142,15 +142,15 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default">
-			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
-				<h3 class="panel-title">
-					<i class="fa fa-caret-down pull-right"></i>
+		<div class="card">
+			<div class="card-header pointer" data-toggle="collapse" data-target=".options">
+				
+					<i class="fa fa-caret-down pull-xs-right"></i>
 					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
-				</h3>
+				
 			</div>
 
-			<div class="panel-body options collapse">
+			<div class="card-block options collapse">
 				<form component="groups/settings" role="form">
 					<div class="form-group">
 						<label for="name">[[groups:details.group_name]]</label>
@@ -169,8 +169,8 @@
 						<label>[[groups:details.badge_preview]]</label><br />
 						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon -->"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
 
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-secondary btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-secondary btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" class="hidden">
@@ -215,7 +215,7 @@
 						</label>
 					</div>
 
-					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+					<button class="btn btn-link btn-sm pull-xs-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 				</form>
 			</div>

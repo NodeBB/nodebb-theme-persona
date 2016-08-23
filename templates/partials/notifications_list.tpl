@@ -13,9 +13,9 @@
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left avatar avatar-md avatar-rounded" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 	<!-- ENDIF notifications.image -->
 
-	<div class="pull-right mark-read" aria-label="Mark Read"></div>
+	<div class="pull-xs-right mark-read" aria-label="Mark Read"></div>
 	<a href="{config.relative_path}{notifications.path}">
-		<span class="pull-right relTime">{notifications.timeago}</span>
+		<span class="pull-xs-right relTime">{notifications.timeago}</span>
 		<span class="text">{notifications.bodyShort}</span>
 	</a>
 	<div class="clear"></div>

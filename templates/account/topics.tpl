@@ -5,7 +5,7 @@
 		<h1>{title}</h1>
 
 		<!-- IF !topics.length -->
-			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
+			<div class="alert alert-warning text-xs-center">{noItemsFoundKey}</div>
 		<!-- ENDIF !topics.length -->
 
 		<div class="category">

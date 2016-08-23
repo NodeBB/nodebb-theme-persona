@@ -1,6 +1,6 @@
-<div component="pagination" class="text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-	<ul class="pagination hidden-xs">
-		<li class="previous pull-left<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
+<div component="pagination" class="text-center pagination-container<!-- IF !pagination.pages.length --> hidden-xs-up<!-- ENDIF !pagination.pages.length -->">
+	<ul class="pagination hidden-sm-down">
+		<li class="previous pull-xs-left<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
 			<a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
 		</li>
 
@@ -16,12 +16,12 @@
 			<!-- ENDIF pagination.pages.separator -->
 		<!-- END pages -->
 
-		<li class="next pull-right<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
+		<li class="next pull-xs-right<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
 			<a href="?{pagination.next.qs}" data-page="{pagination.next.page}"> <i class="fa fa-chevron-right"></i></a>
 		</li>
 	</ul>
 
-	<ul class="pagination hidden-sm hidden-md hidden-lg">
+	<ul class="pagination hidden-md-up">
 		<li class="first<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
 			<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
 		</li>

@@ -5,10 +5,10 @@
 		<h1>{title}</h1>
 
 		<!-- IF !posts.length -->
-			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
+			<div class="alert alert-warning text-xs-center">{noItemsFoundKey}</div>
 		<!-- ENDIF !posts.length -->
 
-		<div class="col-xs-12">
+		<div class="col-sm-12">
 			<!-- IMPORT partials/posts_list.tpl -->
 
 			<!-- IF config.usePagination -->

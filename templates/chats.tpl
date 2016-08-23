@@ -1,9 +1,8 @@
-
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
-	<div class="col-md-4">
-		<div class="chat-search hidden-xs">
+	<div class="col-lg-4">
+		<div class="chat-search hidden-sm-down">
 			<input class="form-control" type="text" component="chat/search" placeholder="[[users:enter_username]]" />
 		</div>
 		<ul component="chat/search/list" class="chat-search-list">
@@ -16,7 +15,7 @@
 		</ul>
 	</div>
 
-	<div class="col-md-8 hidden-sm hidden-xs">
+	<div class="col-lg-8 hidden-md-down">
 		<!-- IF roomId -->
 		<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 
