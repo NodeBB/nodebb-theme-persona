@@ -1,10 +1,10 @@
 	<!-- BEGIN groups -->
-	<div class="col-lg-4 col-md-6 col-sm-12" component="groups/summary" data-slug="{groups.slug}">
-		<div class="panel panel-default">
-			<a href="{config.relative_path}/groups/{groups.slug}" class="panel-heading list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
-				<h3 class="panel-title">{groups.displayName} <small>{groups.memberCount}</small></h3>
+	<div class="col-xl-4 col-lg-6 col-md-12" component="groups/summary" data-slug="{groups.slug}">
+		<div class="card">
+			<a href="{config.relative_path}/groups/{groups.slug}" class="card-header list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
+				<h4 class="panel-title">{groups.displayName} <small>{groups.memberCount}</small></h4>
 			</a>
-			<div class="panel-body">
+			<div class="card-block">
 				<ul class="members">
 					<!-- BEGIN members -->
 					<li>

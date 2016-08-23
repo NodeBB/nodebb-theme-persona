@@ -3,18 +3,18 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-xl-7">
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
-		<div class="col-lg-3">
+		<div class="col-xl-2">
 			<!-- IF inviteOnly -->
 			<!-- IF loggedIn -->
-			<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+			<button component="user/invite" class="btn btn-success pull-xs-right"><i class="fa fa-users"></i> [[users:invite]]</button>
 			<!-- ENDIF loggedIn -->
 			<!-- ENDIF inviteOnly -->
 		</div>
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
-		<div class="col-lg-3">
+		<div class="col-xl-3">
 			<div class="search">
 				<div class="input-group">
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
@@ -32,7 +32,7 @@
 		<!-- IF anonymousUserCount -->
 		<li class="users-box anon-user">
 			<div class="user-icon">G</div>
-			<br/>
+			
 			<div class="user-info">
 				<span id="online_anon_count">{anonymousUserCount}</span>
 				<span>[[global:guests]]</span>

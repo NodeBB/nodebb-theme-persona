@@ -38,7 +38,7 @@
 </head>
 
 <body class="{bodyClass} skin-{config.bootswatchSkin}">
-	<nav id="menu" class="hidden">
+	<nav id="menu" class="hidden-xs-up">
 		<section class="menu-profile">
 			<!-- IF user.uid -->
 			<!-- IF user.picture -->
@@ -81,7 +81,7 @@
 	</nav>
 
 	<main id="panel">
-		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
+		<nav class="navbar navbar-fixed-top navbar-light bg-faded header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>

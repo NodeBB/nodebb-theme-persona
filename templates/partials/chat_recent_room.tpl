@@ -1,5 +1,5 @@
 <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF rooms.unread -->unread<!-- ENDIF rooms.unread -->">
-	<i class="fa fa-times pull-right leave" component="chat/leave"></i>
+	<i class="fa fa-times pull-xs-right leave" component="chat/leave"></i>
 	<!-- IF rooms.lastUser.uid -->
 	<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
 		<!-- IF rooms.lastUser.picture -->
@@ -15,5 +15,5 @@
 	<!-- ENDIF rooms.lastUser.uid -->
 
 	<span class="teaser-content">{rooms.teaser.content}</span>
-	<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
+	<span class="teaser-timestamp timeago pull-xs-right" title="{rooms.teaser.timestampISO}"></span>
 </li>

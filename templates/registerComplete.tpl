@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
-	<div class="col-xs-6 col-xs-offset-3">
-		<p class="lead text-center">
+	<div class="col-sm-6 offset-sm-3">
+		<p class="lead text-xs-center">
 			[[register:interstitial.intro]]
 		</p>
 
@@ -24,9 +24,9 @@
 <form role="form" method="post">
 	<!-- BEGIN sections -->
 	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
+		<div class="col-sm-6 offset-sm-3">
+			<div class="card">
+				<div class="card-block">
 					@value
 				</div>
 			</div>
@@ -36,9 +36,9 @@
 
 	<div class="row">
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
-		<div class="col-xs-6 col-xs-offset-3">
+		<div class="col-sm-6 offset-sm-3">
 			<button class="btn btn-primary btn-block">Submit</button>
-			<p class="text-center">
+			<p class="text-xs-center">
 				<br />
 				<a target="_top" href="{config.relative_path}/register/abort">[[register:cancel_registration]]</a>
 			</p>

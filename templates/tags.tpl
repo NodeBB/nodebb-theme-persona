@@ -17,7 +17,7 @@
 	<!-- ENDIF !tags.length -->
 
 	<div class="category row">
-		<div class="col-md-12 clearfix tag-list" data-nextstart="{nextStart}">
+		<div class="col-md-12 clearfix tag-list m-t-1" data-nextstart="{nextStart}">
 			<!-- IMPORT partials/tags_list.tpl -->
 		</div>
 	</div>

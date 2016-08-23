@@ -1,4 +1,4 @@
-<div class="card" style="border-color: {../bgColor}">
+<div class="last-post-card" style="border-color: {../bgColor}">
 	<!-- BEGIN posts -->
 	<!-- IF @first -->
 	<div component="category/posts">

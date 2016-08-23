@@ -1,10 +1,10 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header"></div>
 <div class="row">
-	<div class="category col-lg-9 col-sm-12" no-widget-class="category col-lg-12 col-sm-12" no-widget-target="sidebar">
+	<div class="category col-xl-9 col-md-12" no-widget-class="category col-xl-12 col-md-12" no-widget-target="sidebar">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
-		<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
+		<!-- IF children.length --><hr class="hidden-sm-down"/><!-- ENDIF children.length -->
 
 		<div class="clearfix">
 			<!-- IF privileges.topics:create -->
@@ -15,16 +15,16 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
-			<span class="pull-right" component="category/controls">
+			<span class="pull-xs-right" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools.tpl -->
 			</span>
 		</div>
 
-		<hr class="hidden-xs" />
+		<hr class="hidden-sm-down" />
 
-		<p class="hidden-xs">{name}</p>
+		<p class="hidden-sm-down">{name}</p>
 
 		<!-- IF !topics.length -->
 		<div class="alert alert-warning" id="category-no-topics">
@@ -38,7 +38,7 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12"></div>
+	<div widget-area="sidebar" class="col-xl-3 col-md-12"></div>
 </div>
 <div widget-area="footer"></div>
 

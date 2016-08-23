@@ -7,13 +7,12 @@
 		<div class="user-icon" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
 		<!-- ENDIF users.picture -->
 	</a>
-	<br/>
+	
 	<div class="user-info">
 		<span>
 			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
 			<a href="{config.relative_path}/user/{users.userslug}">{users.username}</a>
 		</span>
-		<br/>
 
 		<!-- IF route_users:joindate -->
 		<div title="joindate" class="joindate">

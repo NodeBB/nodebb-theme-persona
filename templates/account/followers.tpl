@@ -9,7 +9,7 @@
 		</ul>
 
 		<!-- IF !users.length -->
-		<div class="alert alert-warning text-center">[[user:has_no_follower]]</div>
+		<div class="alert alert-warning text-xs-center">[[user:has_no_follower]]</div>
 		<!-- ENDIF !users.length -->
 	</div>
 
