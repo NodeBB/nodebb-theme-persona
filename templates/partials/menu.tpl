@@ -122,28 +122,6 @@
 					</ul>
     				<!-- ENDIF config.loggedIn -->
     				
-    				<!-- IF config.searchEnabled -->
-					<ul class="nav navbar-nav pull-xs-right">
-						<li>
-							<form id="search-form" class="navbar-form pull-xs-right hidden-sm-down" role="search" method="GET" action="">
-								<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw"></i></button>
-								<div class="hidden-xs-up" id="search-fields">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-										<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
-									</div>
-									<button type="submit" class="btn btn-secondary hide">[[global:search]]</button>
-								</div>
-							</form>
-						</li>
-						<li class="hidden-md-up" id="search-menu">
-							<a href="{relative_path}/search">
-								<i class="fa fa-search fa-fw"></i> [[global:search]]
-							</a>
-						</li>
-					</ul>
-					<!-- ENDIF config.searchEnabled -->
-    				
     				<ul class="nav navbar-nav pull-xs-right hidden-sm-down">
 						<li class="nav-item">
 							<a href="#" id="reconnect" class="nav-link hide" title="Connection to {title} has been lost, attempting to reconnect...">
