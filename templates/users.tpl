@@ -6,7 +6,7 @@
 		<div class="col-lg-6">
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
-		<div class="col-lg-3 col-xs-3 text-right">
+		<div class="col-xs-3 text-right">
 			<!-- IF inviteOnly -->
 			<!-- IF loggedIn -->
 			<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
