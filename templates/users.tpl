@@ -19,7 +19,7 @@
 				<div class="input-group">
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
 					<span class="input-group-addon">
-						<i class="fa fa-search"></i>
+						<i component="user/search/icon" class="fa fa-search"></i>
 					</span>
 				</div>
 			</div>
@@ -41,8 +41,5 @@
 		<!-- ENDIF anonymousUserCount -->
 	</ul>
 
-	<div class="text-center {loadmore_display}">
-		<button id="load-more-users-btn" class="btn btn-primary">[[users:load_more]]</button>
-	</div>
-	<br/>
+	<!-- IMPORT partials/paginator.tpl -->
 </div>
