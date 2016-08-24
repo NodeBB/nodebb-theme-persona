@@ -98,6 +98,8 @@
 }
 
 .header {
+	
+	min-height: 50px;
 
 	[component="navbar/title"] {
 		display: none !important; //temp
@@ -187,11 +189,19 @@
 			opacity: 1;
 			pointer-events: inherit;
 		}
+		
+		.dropdown-toggle {
+			color: $gray;
+			
+			&:after {
+				content: none;
+			}
+		}
 
 		.progress-container {
 			height: 2px;
 			position: absolute;
-			bottom: 8px;
+			bottom: -8px;
 			left: 8px;
 			background: #666;
 			width: 90%;
@@ -354,7 +364,7 @@
 		display: inline-block !important;
 		visibility: visible !important;
 
-		&.hidden {
+		&.hidden-xs-up {
 			max-width: 0;
 		}
 
@@ -387,5 +397,14 @@ body.skin-default .header {
 		.dropdown-item {
 			padding: 0;
 		}
+	}
+}
+
+
+.header {
+	.navbar-nav {
+		.nav-item + .nav-item {
+    		margin-left: 2rem;
+  		}
 	}
 }
