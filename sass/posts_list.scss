@@ -38,7 +38,7 @@
 		.topic-category {
 			text-transform: uppercase;
 			font-size: 10px;
-			color: lighten($gray-base, 65%);
+			color: lighten(#000, 65%);
 			margin-top: 6px;
 			margin-right: 10px;
 			margin-bottom: 25px;
@@ -93,7 +93,7 @@
 
 			.post-author {
 				padding-left: 25px;
-				color: lighten($gray-base, 65%);
+				color: lighten(#000, 65%);
 
 				a {
 					color: $gray-light;

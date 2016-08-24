@@ -124,7 +124,7 @@
     				
     				<ul class="nav navbar-nav pull-xs-right hidden-sm-down">
 						<li class="nav-item">
-							<a href="#" id="reconnect" class="nav-link hide" title="Connection to {title} has been lost, attempting to reconnect...">
+							<a href="#" id="reconnect" class="nav-link hidden-xs-up" title="Connection to {title} has been lost, attempting to reconnect...">
 								<i class="fa fa-check"></i>
 							</a>
 						</li>

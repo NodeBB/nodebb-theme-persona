@@ -21,7 +21,7 @@
 		<!-- ENDIF !topics.length -->
 
 		<a href="{config.relative_path}/recent">
-			<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			<div class="alert alert-warning hidden-xs-up" id="new-topics-alert"></div>
 		</a>
 
 		<!-- IMPORT partials/topics_list.tpl -->
