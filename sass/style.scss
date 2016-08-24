@@ -195,3 +195,10 @@ a.permalink {
 .disabled a {
 	pointer-events: none;
 }
+
+
+.dropdown-item {
+	a {
+  		color: $gray-dark;
+  	}
+}
