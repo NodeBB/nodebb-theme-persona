@@ -2,11 +2,6 @@
 	@include user-select(none);
 }
 
-@mixin pointer {
-	cursor: pointer;
-	*cursor: hand;
-}
-
 @mixin inline-block {
 	display: inline-block;
 	*display: inline;

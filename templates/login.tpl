@@ -10,15 +10,15 @@
 				<p>{error}</p>
 			</div>
 
-			<form class="form-horizontal" role="form" method="post" target="login" id="login-form">
+			<form role="form" method="post" target="login" id="login-form">
 				<div class="form-group row">
-					<label for="username" class="col-xl-2 form-control-label text-xs-right">{allowLoginWith}</label>
+					<label for="username" class="col-xl-2 col-form-label text-xs-right">{allowLoginWith}</label>
 					<div class="col-xl-10">
 						<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="password" class="col-xl-2 form-control-label text-xs-right">[[user:password]]</label>
+					<label for="password" class="col-xl-2 col-form-label text-xs-right">[[user:password]]</label>
 					<div class="col-xl-10">
 						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
 					</div>

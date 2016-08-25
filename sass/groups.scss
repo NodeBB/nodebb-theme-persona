@@ -140,7 +140,7 @@
 			background-size: cover;
 			min-height: 125px;
 			background-position: 50% 50%;
-			@include pointer;
+			cursor: pointer;
 
 			h4 {
 				background-color: rgba(0,0,0,0.5);
