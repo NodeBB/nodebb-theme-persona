@@ -25,6 +25,42 @@
 				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+					<li class="notifications dropdown text-center hidden-xs" component="notifications">
+						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
+							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
+							<li>
+								<ul component="notifications/list" class="notification-list">
+									<li>
+										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
+									</li>
+								</ul>
+							</li>
+							<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
+							<li class="notif-dropdown-link"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></li>
+						</ul>
+					</li>
+
+					<!-- IF !config.disableChat -->
+					<li class="chats dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown">
+							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
+							<li>
+								<ul component="chat/list" class="chat-list">
+									<li>
+										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
+									</li>
+								</ul>
+							</li>
+							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
+							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
+						</ul>
+					</li>
+					<!-- ENDIF !config.disableChat -->
+
 					<li id="user_label" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
 							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
@@ -75,43 +111,7 @@
 							</li>
 						</ul>
 					</li>
-				</ul>
-				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
-					<li class="notifications dropdown text-center hidden-xs" component="notifications">
-						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
-							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
-							<li>
-								<ul component="notifications/list" class="notification-list">
-									<li>
-										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
-									</li>
-								</ul>
-							</li>
-							<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
-							<li class="notif-dropdown-link"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></li>
-						</ul>
-					</li>
 
-					<!-- IF !config.disableChat -->
-					<li class="chats dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
-							<li>
-								<ul component="chat/list" class="chat-list">
-									<li>
-										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
-									</li>
-								</ul>
-							</li>
-							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
-							<li class="notif-dropdown-link"><a href="{relative_path}/chats">[[modules:chat.see_all]]</a></li>
-						</ul>
-					</li>
-					<!-- ENDIF !config.disableChat -->
 				</ul>
 				<!-- ELSE -->
 				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
