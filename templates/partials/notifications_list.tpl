@@ -7,10 +7,10 @@
 <li class="{notifications.readClass}" data-nid="{notifications.nid}">
 	<!-- IF notifications.image -->
 	<!-- IF notifications.from -->
-	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img src="{notifications.image}" /></a>
+	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="pull-left user-img avatar avatar-md avatar-rounded"src="{notifications.image}" /></a>
 	<!-- ENDIF notifications.from -->
 	<!-- ELSE -->
-	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
+	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left avatar avatar-md avatar-rounded" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 	<!-- ENDIF notifications.image -->
 
 	<div class="pull-right mark-read" aria-label="Mark Read"></div>
