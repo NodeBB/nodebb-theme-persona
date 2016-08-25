@@ -6,7 +6,7 @@
 			<!-- IF !disableCustomUserSkins -->
 			<h5>[[user:select-skin]]</h5>
 			<div class="card card-block">
-				<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
+				<select class="form-control custom-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					<!-- BEGIN bootswatchSkinOptions -->
 					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
 					<!-- END bootswatchSkinOptions -->
@@ -19,18 +19,18 @@
 			<div class="card card-block">
 				<div class="form-group">
 					<label for="dailyDigestFreq">[[user:homepage]]</label>
-					<select class="form-control" data-property="homePageRoute">
+					<select class="form-control custom-select" data-property="homePageRoute">
 						<option value="none">None</option>
 						<!-- BEGIN homePageRoutes -->
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
 						<!-- END homePageRoutes -->
 					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
+					<small class="form-text text-muted">[[user:homepage_description]]</small>
 				</div>
 				<div id="homePageCustom" class="form-group" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
+					<small class="form-text text-muted">[[user:custom_route_help]]</small>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
@@ -48,7 +48,7 @@
 						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/> <strong>[[user:enable_topic_searching]]</strong>
 					</label>
 				</div>
-				<p class="help-block">[[user:topic_search_help]]</p>
+				<small class="form-text text-muted">[[user:topic_search_help]]</small>
 				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
@@ -60,7 +60,7 @@
 						<input type="checkbox" data-property="delayImageLoading" <!-- IF settings.delayImageLoading -->checked<!-- ENDIF settings.delayImageLoading -->/> <strong>[[user:delay_image_loading]]</strong>
 					</label>
 				</div>
-				<p class="help-block">[[user:image_load_delay_help]]</p>
+				<small class="form-text text-muted">[[user:image_load_delay_help]]</small>
 			</div>
 
 			<!-- IF !disableEmailSubscriptions -->
@@ -68,12 +68,12 @@
 			<div class="card card-block">
 				<div class="form-group">
 					<label for="dailyDigestFreq">[[user:digest_label]]</label>
-					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
+					<select class="form-control custom-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						<!-- BEGIN dailyDigestFreqOptions -->
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						<!-- END dailyDigestFreqOptions -->
 					</select>
-					<p class="help-block">[[user:digest_description]]</p>
+					<small class="form-text text-muted">[[user:digest_description]]</small>
 				</div>
 
 				<div class="checkbox">
@@ -102,7 +102,7 @@
 		<div class="col-sm-12 col-lg-6">
 			<h5>[[global:language]]</h5>
 			<div class="card card-block">
-				<select data-property="userLang" class="form-control">
+				<select data-property="userLang" class="form-control custom-select">
 					<!-- BEGIN languages -->
 					<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
 					<!-- END languages -->

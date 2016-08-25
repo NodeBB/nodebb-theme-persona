@@ -25,7 +25,7 @@
 
 			.select {
 				position: relative;
-				@include pointer;
+				cursor: pointer;
 
 				&:before {
 					content: "";
@@ -42,7 +42,7 @@
 					left: 0px;
 
 					&:before {
-						@include pointer;
+						cursor: pointer;
 					}
 
 					@include media-breakpoint-down(md) {

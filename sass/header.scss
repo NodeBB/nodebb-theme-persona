@@ -61,7 +61,7 @@
 
 				&:hover {
 					color: $gray-dark;
-					@include pointer;
+					cursor: pointer;
 
 					&:after {
 						content: "\f111";
@@ -75,13 +75,12 @@
 		@include notification-list;
 
 		li {
-			@include pointer;
+			cursor: pointer;
 			width: 200px;
 
 			a {
 				display: block;
 				line-height: 30px;
-
 				position: relative;
 
 				.avatar {
@@ -99,7 +98,9 @@
 
 .header {
 	
+	background-color: #fff;
 	min-height: 50px;
+	border-bottom: 1px solid #eee;
 
 	[component="navbar/title"] {
 		display: none !important; //temp
@@ -109,7 +110,7 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-
+	
 	.navbar-toggler {
 		.notification-icon {
 			position: absolute;
@@ -121,6 +122,10 @@
 			}
 		}
 	}
+	
+	#user_label {
+		margin-top: 3px;
+	}
 
 	#user_dropdown {
 		
@@ -129,7 +134,7 @@
 		}
 
 		img, .user-icon {
-			@include user-icon-style(30px, 1.3rem, 50%);
+			@include user-icon-style(30px, 1.6rem, 50%);
 			border: 0px none;
 
 			span {
@@ -391,15 +396,6 @@ body.skin-default .header {
 		}
 	}
 }
-
-#menu {
-	[component="header/usercontrol"] {
-		.dropdown-item {
-			padding: 0;
-		}
-	}
-}
-
 
 .header {
 	.navbar-nav {

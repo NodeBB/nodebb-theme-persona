@@ -21,49 +21,33 @@
 								<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;"<!-- ENDIF user.picture -->">{user.icon:text}</div>
 								<span id="user-header-name" class="hidden-md-up">{user.username}</span>
 							</a>
-							<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu dropdown-menu-right" aria-labelledby="user_dropdown">
-								<li class="dropdown-item">
-									<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-										<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
-									</a>
-								</li>
+							<div id="user-control-list" component="header/usercontrol" class="dropdown-menu dropdown-menu-right" aria-labelledby="user_dropdown">
+								<a class="dropdown-item" component="header/profilelink" href="{relative_path}/user/{user.userslug}">
+									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+								</a>
 								<div class="dropdown-divider"></div>
-								<li class="dropdown-item">
-									<a href="#" class="user-status" data-status="online">
-										<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
-									</a>
-								</li>
-								<li class="dropdown-item">
-									<a href="#" class="user-status" data-status="away">
-										<i class="fa fa-fw fa-circle status away"></i><span> [[global:away]]</span>
-									</a>
-								</li>
-								<li class="dropdown-item">
-									<a href="#" class="user-status" data-status="dnd">
-										<i class="fa fa-fw fa-circle status dnd"></i><span> [[global:dnd]]</span>
-									</a>
-								</li>
-								<li class="dropdown-item">
-									<a href="#" class="user-status" data-status="offline">
-										<i class="fa fa-fw fa-circle status offline"></i><span> [[global:invisible]]</span>
-									</a>
-								</li>
+								<a href="#" class="dropdown-item user-status" data-status="online">
+									<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
+								</a>
+								<a href="#" class="dropdown-item user-status" data-status="away">
+									<i class="fa fa-fw fa-circle status away"></i><span> [[global:away]]</span>
+								</a>
+								<a href="#" class="dropdown-item user-status" data-status="dnd">
+									<i class="fa fa-fw fa-circle status dnd"></i><span> [[global:dnd]]</span>
+								</a>
+								<a href="#" class="dropdown-item user-status" data-status="offline">
+									<i class="fa fa-fw fa-circle status offline"></i><span> [[global:invisible]]</span>
+								</a>
 								<div class="dropdown-divider"></div>
-								<li class="dropdown-item">
-									<a href="{relative_path}/user/{user.userslug}/edit">
-										<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
-									</a>
-								</li>
-								<li class="dropdown-item">
-									<a href="{relative_path}/user/{user.userslug}/settings">
-										<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
-									</a>
-								</li>
+								<a class="dropdown-item" href="{relative_path}/user/{user.userslug}/edit">
+									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
+								</a>
+								<a class="dropdown-item" href="{relative_path}/user/{user.userslug}/settings">
+									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
+								</a>
 								<div class="dropdown-divider"></div>
-								<li class="dropdown-item" component="user/logout">
-									<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
-								</li>
-							</ul>
+								<a class="dropdown-item" component="user/logout" href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
+							</div>
     					</li>
     				</ul>
     				<ul id="logged-in-menu" class="nav navbar-nav pull-xs-right">

@@ -104,8 +104,7 @@
 
 			.user-icon {
 				display: inline-block;
-				@include user-icon-style(24px, 1.1rem, 50%);
-				color: #fff;
+				@include user-icon-style(24px, 1.3rem, 50%);
 			}
 		}
 
@@ -124,7 +123,7 @@
 	text-align: center;
 	margin: 0;
 	padding-top:25px;
-	@include pointer;
+	cursor: pointer;
 	margin-bottom: 10px;
 	overflow:hidden;
 

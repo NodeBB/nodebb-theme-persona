@@ -81,7 +81,7 @@
 	</nav>
 
 	<main id="panel">
-		<nav class="navbar navbar-fixed-top navbar-light bg-faded header" id="header-menu" component="navbar">
+		<nav class="navbar navbar-fixed-top navbar-light header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>

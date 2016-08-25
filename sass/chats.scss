@@ -10,7 +10,7 @@
 		list-style-type: none;
 		padding: 0.5em;
 		height: 70px;
-		@include pointer;
+		cursor: pointer;
 
 		border-left: 1px solid;
 		border-right: 1px solid;
@@ -203,10 +203,6 @@
 		}
 	}
 
-	.chat-input {
-		height: 42px;
-	}
-
 	.user-typing {
 		color: $gray-light;
 		margin: 1.428rem 0;
@@ -222,7 +218,6 @@
 
 	textarea {
 		resize: none;
-		height: 42px;
 	}
 
 	.since-bar {
