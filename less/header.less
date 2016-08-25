@@ -9,9 +9,6 @@
 		li {
 			width: 300px;
 			text-align: left;
-			margin-bottom: 5px;
-			margin-right: 5px;
-			margin-left: 5px;
 			list-style-type: none;
 			padding: 0.5em;
 			clear: both;
@@ -67,17 +64,38 @@
 	.chat-list {
 		.notification-list;
 
-		li {
+		> li {
 			.pointer;
 			width: 300px;
+			padding-bottom: 1rem;
+			margin: 0;
 
-			a {
-				position: relative;
+			&:hover {
+				background: @gray-lighter;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid @gray-lighter;
 			}
 
 			&.no_active a {
 				text-align: center;
 				white-space: normal;
+			}
+
+			a {
+				line-height: 24px;
+			}
+
+			.members {
+				padding-left: 1rem;
+
+				li {
+					display: inline-block;
+					width: 16px;
+					padding: 0;
+					margin: 0;
+				}
 			}
 		}
 	}
