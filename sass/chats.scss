@@ -1,0 +1,275 @@
+.chats-list {
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-top: 1px solid $gray-lighter;
+
+	> li {
+		position: relative;
+		clear: both;
+		list-style-type: none;
+		padding: 0.5em;
+		height: 70px;
+		cursor: pointer;
+
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+		border-color: $gray-lighter;
+
+		&.typing {
+			.username:after {
+				visibility: visible;
+			}
+		}
+
+		&.unread {
+			background: lighten($brand-primary, 25%);
+		}
+
+		.teaser-content {
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&.bg-primary {
+			background: $brand-primary;
+		}
+
+		.username {
+			font-size: 14px;
+
+			&:after {
+				display: inline-block;
+				font-family: "FontAwesome";
+				content: "\f11c";
+				margin-left: 0.5em;
+				visibility: hidden;
+			}
+		}
+
+		.teaser-timestamp {
+			font-size: 10px;
+		}
+
+		a {
+			@include text-ellipsis;
+		}
+
+		p {
+			margin: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 20px;
+		}
+
+
+		.status {
+			position: absolute;
+			left: 60px;
+			font-size: 20px;
+			top: 10px;
+		}
+
+		.leave {
+			opacity: 0.5;
+			&:hover {
+				opacity: 1.0;
+			}
+		}
+
+		.members {
+			padding-left: 1rem;
+
+			li {
+				display: inline-block;
+				width: 16px;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.chat-modal {
+	z-index: 10000 !important;
+}
+
+.expanded-chat, .chat-modal {
+	.modal-header {
+		padding: 0.25em 1em;
+
+		h4 {
+			font-size: 1.5rem;
+			font-weight: bold;
+
+			i {
+				font-size: 14px;
+				vertical-align: center;
+
+				&.fa-keyboard-o {
+					-webkit-animation: topic-reply-pulse 2s ease-in infinite;
+		            -o-animation: topic-reply-pulse 2s ease-in infinite;
+		            animation: topic-reply-pulse 2s ease-in infinite;
+				}
+			}
+		}
+
+		.close {
+			padding: 0.5em;
+		}
+	}
+
+	.chat-content {
+		@include fix-lists;
+		height: 250px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		resize: none;
+		word-wrap: break-word;
+		margin: 0;
+		padding: 0;
+
+		li.chat-message {
+			list-style-type: none;
+			font-weight: 300;
+			padding: 0 .428rem;
+			margin-right: 1.428rem;
+
+			&:first-child {
+				padding-top: .428rem;
+			}
+
+			&:last-child {
+				padding-bottom: .428rem;
+			}
+
+			&[data-break="true"] {
+				padding-top: 1rem;
+				margin-top: 1rem;
+				border-top: 1px solid $gray-lighter;
+			}
+
+			.chat-user-image {
+				@include user-icon-style(32px, 1.2rem, 50%);
+				float: left;
+			}
+
+			.chat-user {
+				display: inline-block;
+				margin-left: 13px;
+			}
+
+			.chat-timestamp {
+				color: $gray-light;
+				font-size: 1rem;
+				display: inline-block;
+				margin-left: 10px;
+				
+				-webkit-user-select: none;
+			     -moz-user-select: none;
+			      -ms-user-select: none; // IE10+
+			          user-select: none;
+			}
+
+			.message-body {
+				margin-left: 45px;
+
+				p {
+					margin: 7px 0 0 0;
+					line-height: 2rem;
+				}
+			}
+
+			&[data-self="0"] + [data-self="0"], &[data-self="1"] + [data-self="1"] {
+				&[data-break="false"] {
+					.message-header {
+						display: none;
+					}
+				}
+			}
+
+			.controls {
+				display: none;
+			}
+
+			&:hover {
+				.controls {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.user-typing {
+		color: $gray-light;
+		margin: 1.428rem 0;
+	}
+
+	.selected[data-since] {
+		font-weight: bold;
+	}
+
+	.modal-dialog {
+		margin: 0 auto;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	.since-bar {
+		display: block;
+		padding: 1rem 0;
+		text-align: center;
+	}
+}
+
+.expanded-chat {
+	h1 {
+		margin: 0px;
+		padding-bottom: 20px;
+	}
+
+	.input-group {
+		z-index: 1;
+	}
+}
+
+[component="chat/search/list"] {
+
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	li {
+		position: relative;
+		clear: both;
+		list-style-type: none;
+		padding: .5em;
+		height: 70px;
+		cursor: pointer;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-bottom: 1px solid;
+		border-color: #eee;
+		background: #fff;
+
+		i {
+			position: relative;
+			left: -30px;
+			font-size: 20px;
+			top: -20px;
+		}
+
+		img, .user-icon {
+			@include user-icon-style(50px, 2rem, 50%);
+			margin-top: 4px;
+			margin-right: 13px;
+			margin-left: .5em;
+		}
+	}
+}

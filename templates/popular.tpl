@@ -2,9 +2,9 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<ul class="nav nav-pills" component="popular/tab">
-		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>
-		<li><a href='{config.relative_path}/popular/weekly'>[[recent:week]]</a></li>
-		<li><a href='{config.relative_path}/popular/monthly'>[[recent:month]]</a></li>
+		<li class="nav-item"><a class="nav-link" href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>
+		<li class="nav-item"><a class="nav-link" href='{config.relative_path}/popular/weekly'>[[recent:week]]</a></li>
+		<li class="nav-item"><a class="nav-link" href='{config.relative_path}/popular/monthly'>[[recent:month]]</a></li>
 	</ul>
 
 	<br />

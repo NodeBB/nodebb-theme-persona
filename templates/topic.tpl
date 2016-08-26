@@ -1,21 +1,21 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header"></div>
 <div class="row">
-	<div class="topic col-lg-9 col-sm-12" no-widget-class="topic col-lg-12 col-sm-12" no-widget-target="sidebar">
+	<div class="topic col-xl-9 col-md-12" no-widget-class="topic col-xl-12 col-md-12" no-widget-target="sidebar">
 
 		<h1 component="post/header" class="hidden-xs" itemprop="name">
 
-			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
-			<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
+			<i class="pull-xs-left fa fa-thumb-tack <!-- IF !pinned -->hidden-xs-up<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
+			<i class="pull-xs-left fa fa-lock <!-- IF !locked -->hidden-xs-up<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
+			<i class="pull-xs-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden-xs-up<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
 			<!-- BEGIN icons -->@value<!-- END icons -->
 
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
 
-		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
+		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden-xs-up<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
 
-		<hr class="visible-xs" />
+		<hr class="hidden-md-up" />
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			<!-- BEGIN posts -->
@@ -41,7 +41,7 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 
-		<div class="visible-xs visible-sm pagination-block text-center">
+		<div class="hidden-lg-up pagination-block text-center">
 			<div class="progress-bar"></div>
 			<div class="wrapper">
 				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12"></div>
+	<div widget-area="sidebar" class="col-xl-3 col-md-12"></div>
 </div>
 <div widget-area="footer"></div>
 

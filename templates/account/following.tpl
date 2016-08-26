@@ -9,7 +9,7 @@
 		</ul>
 
 		<!-- IF !users.length -->
-		<div class="alert alert-warning text-center">[[user:follows_no_one]]</div>
+		<div class="alert alert-warning text-xs-center">[[user:follows_no_one]]</div>
 		<!-- ENDIF !users.length -->
 
 		<!-- IMPORT partials/paginator.tpl -->

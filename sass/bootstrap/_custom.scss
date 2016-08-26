@@ -1,0 +1,21 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$enable-rounded:            false;
+
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$font-size-root: 14px;
+
+$navbar-light-color:                rgba(0,0,0,.6) !default;
+$navbar-light-hover-color:          rgba(0,0,0,.9) !default;
+$navbar-light-active-color:         rgba(0,0,0,1.0) !default;
+$navbar-light-disabled-color:       rgba(0,0,0,.15) !default;
+
+$brand-primary:         darken(#428bca, 6.5%);
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;

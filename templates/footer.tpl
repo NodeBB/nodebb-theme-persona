@@ -5,11 +5,12 @@
 	<!-- IMPORT 500-embed.tpl -->
 	</div>
 
-	<div class="topic-search hidden">
+
+	<div class="topic-search hidden-xs-up">
 		<div class="btn-group">
-			<button type="button" class="btn btn-default count"></button>
-			<button type="button" class="btn btn-default prev"><i class="fa fa-fw fa-angle-up"></i></button>
-			<button type="button" class="btn btn-default next"><i class="fa fa-fw fa-angle-down"></i></button>
+			<button type="button" class="btn btn-secondary count"></button>
+			<button type="button" class="btn btn-secondary prev"><i class="fa fa-fw fa-angle-up"></i></button>
+			<button type="button" class="btn btn-secondary next"><i class="fa fa-fw fa-angle-down"></i></button>
 		</div>
 	</div>
 

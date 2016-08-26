@@ -2,67 +2,59 @@
 	<button type="button" class="fab dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
-	<ul class="dropdown-menu dropdown-menu-right">
+	<div class="dropdown-menu dropdown-menu-right">
 		<!-- IF !isSelf -->
 		<!-- IF !config.disableChat -->
 		<!-- IF !banned -->
-		<li>
-			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
-		</li>
-		<li class="divider"></li>
+		<a class="dropdown-item" component="account/chat" href="#">[[user:chat_with, {username}]]</a>
+		
+		<div class="dropdown-divider"></div>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !config.disableChat -->
 		<!-- ENDIF !isSelf -->
-		<li>
-			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
-		</li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}" id="profile">[[user:profile]]</a>
+
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/info">[[user:account_info]] <i class="fa fa-lock"></i></a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/info">[[user:account_info]] <i class="fa fa-lock"></i></a>
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->
 		<!-- IF canBan -->
-		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
-			<a component="account/ban" href="#">[[user:ban_account]]</a>
-		</li>
-		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
-			<a component="account/unban" href="#">[[user:unban_account]]</a>
-		</li>
+		<a class="dropdown-item <!-- IF banned -->hidden-xs-up<!-- ENDIF banned -->" component="account/ban" href="#">[[user:ban_account]]</a>
+		<a class="dropdown-item <!-- IF !banned -->hidden-xs-up<!-- ENDIF !banned -->" component="account/unban" href="#">[[user:unban_account]]</a>
 		<!-- ENDIF canBan -->
 		<!-- IF isAdmin -->
-		<li>
-			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
-		</li>
+		<a class="dropdown-item" component="account/delete" href="#" class="">[[user:delete_account]]</a>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->
 
-		<li class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
-		<li class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a>
 		<!-- IF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a>
 		<!-- ENDIF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a>
 
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/favourites">[[user:favourites]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/favourites">[[user:favourites]]</a>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a>
 		<!-- IF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a>
 		<!-- IF !downvote:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
+		<a class="dropdown-item" href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a>
 		<!-- ENDIF !downvote:disabled -->
 		<!-- ENDIF !reputation:disabled -->
 		<!-- ENDIF showHidden -->
 
 		<!-- BEGIN profile_links -->
-		<li class="divider"></li>
-		<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><i class="fa fa-fw {profile_links.icon}"></i> {profile_links.name}</a></li>
+		<div class="dropdown-divider"></div>
+		<a id="{profile_links.id}" class="dropdown-item plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->" href="{config.relative_path}/user/{userslug}/{profile_links.route}"><i class="fa fa-fw {profile_links.icon}"></i> {profile_links.name}</a>
 		<!-- END profile_links -->
-	</ul>
+	</div>
 </div>

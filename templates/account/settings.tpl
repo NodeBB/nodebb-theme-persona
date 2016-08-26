@@ -2,11 +2,11 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12 col-md-6">
+		<div class="col-sm-12 col-lg-6">
 			<!-- IF !disableCustomUserSkins -->
-			<h4>[[user:select-skin]]</h4>
-			<div class="well">
-				<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
+			<h5>[[user:select-skin]]</h5>
+			<div class="card card-block">
+				<select class="form-control custom-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					<!-- BEGIN bootswatchSkinOptions -->
 					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
 					<!-- END bootswatchSkinOptions -->
@@ -15,28 +15,28 @@
 			<!-- ENDIF !disableCustomUserSkins -->
 
 			<!-- IF allowUserHomePage -->
-			<h4>[[user:select-homepage]]</h4>
-			<div class="well">
+			<h5>[[user:select-homepage]]</h5>
+			<div class="card card-block">
 				<div class="form-group">
 					<label for="dailyDigestFreq">[[user:homepage]]</label>
-					<select class="form-control" data-property="homePageRoute">
+					<select class="form-control custom-select" data-property="homePageRoute">
 						<option value="none">None</option>
 						<!-- BEGIN homePageRoutes -->
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
 						<!-- END homePageRoutes -->
 					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
+					<small class="form-text text-muted">[[user:homepage_description]]</small>
 				</div>
 				<div id="homePageCustom" class="form-group" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
+					<small class="form-text text-muted">[[user:custom_route_help]]</small>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
 
-			<h4>[[user:browsing]]</h4>
-			<div class="well">
+			<h5>[[user:browsing]]</h5>
+			<div class="card card-block">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/> <strong>[[user:open_links_in_new_tab]]</strong>
@@ -48,7 +48,7 @@
 						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/> <strong>[[user:enable_topic_searching]]</strong>
 					</label>
 				</div>
-				<p class="help-block">[[user:topic_search_help]]</p>
+				<small class="form-text text-muted">[[user:topic_search_help]]</small>
 				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
@@ -60,20 +60,20 @@
 						<input type="checkbox" data-property="delayImageLoading" <!-- IF settings.delayImageLoading -->checked<!-- ENDIF settings.delayImageLoading -->/> <strong>[[user:delay_image_loading]]</strong>
 					</label>
 				</div>
-				<p class="help-block">[[user:image_load_delay_help]]</p>
+				<small class="form-text text-muted">[[user:image_load_delay_help]]</small>
 			</div>
 
 			<!-- IF !disableEmailSubscriptions -->
-			<h4>[[global:email]]</h4>
-			<div class="well">
+			<h5>[[global:email]]</h5>
+			<div class="card card-block">
 				<div class="form-group">
 					<label for="dailyDigestFreq">[[user:digest_label]]</label>
-					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
+					<select class="form-control custom-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						<!-- BEGIN dailyDigestFreqOptions -->
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						<!-- END dailyDigestFreqOptions -->
 					</select>
-					<p class="help-block">[[user:digest_description]]</p>
+					<small class="form-text text-muted">[[user:digest_description]]</small>
 				</div>
 
 				<div class="checkbox">
@@ -91,18 +91,18 @@
 			<!-- ENDIF !disableEmailSubscriptions -->
 
 			<!-- BEGIN customSettings -->
-			<h4>{customSettings.title}</h4>
-			<div class="well">
+			<h5>{customSettings.title}</h5>
+			<div class="card card-block">
 				{customSettings.content}
 			</div>
 			<!-- END customSettings -->
 
 		</div>
 
-		<div class="col-xs-12 col-md-6">
-			<h4>[[global:language]]</h4>
-			<div class="well">
-				<select data-property="userLang" class="form-control">
+		<div class="col-sm-12 col-lg-6">
+			<h5>[[global:language]]</h5>
+			<div class="card card-block">
+				<select data-property="userLang" class="form-control custom-select">
 					<!-- BEGIN languages -->
 					<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
 					<!-- END languages -->
@@ -110,8 +110,8 @@
 			</div>
 
 
-			<h4>[[global:pagination]]</h4>
-			<div class="well">
+			<h5>[[global:pagination]]</h5>
+			<div class="card card-block">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
@@ -122,8 +122,8 @@
 				<strong>[[user:posts_per_page]]</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
 			</div>
 
-			<h4>[[global:privacy]]</h4>
-			<div class="well">
+			<h5>[[global:privacy]]</h5>
+			<div class="card card-block">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
@@ -141,8 +141,8 @@
 				</div>
 			</div>
 
-			<h4>[[topic:watch]]</h4>
-			<div class="well">
+			<h5>[[topic:watch]]</h5>
+			<div class="card card-block">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/> <strong>[[user:follow_topics_you_create]]</strong>
@@ -155,9 +155,8 @@
 				</div>
 			</div>
 
-
-			<h4>[[global:header.notifications]]</h4>
-			<div class="well">
+			<h5>[[global:header.notifications]]</h5>
+			<div class="card card-block">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="notificationSounds" <!-- IF settings.notificationSounds -->checked<!-- ENDIF settings.notificationSounds -->> <strong>[[user:notification_sounds]]</strong>
@@ -170,4 +169,3 @@
 		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
 	</div>
 </div>
-

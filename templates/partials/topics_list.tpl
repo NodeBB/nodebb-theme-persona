@@ -4,8 +4,8 @@
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="col-md-7 col-sm-9 col-xs-10 content">
-			<div class="avatar pull-left" title="{topics.user.username}">
+		<div class="col-lg-7 col-md-9 col-sm-10 content">
+			<div class="avatar pull-xs-left" title="{topics.user.username}">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
 					<!-- IF topics.thumb -->
@@ -22,7 +22,7 @@
 				<!-- ENDIF showSelect -->
 
 				<!-- IF !showSelect -->
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
+				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-xs-left">
 					<!-- IF topics.thumb -->
 					<img src="{topics.thumb}" class="user-img" />
 					<!-- ELSE -->
@@ -38,9 +38,9 @@
 			</div>
 
 			<h2 component="topic/header" class="title">
-				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
-				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
-				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
+				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hidden-xs-up<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
+				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hidden-xs-up<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
+				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hidden-xs-up<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 				<!-- BEGIN icons -->@value<!-- END icons -->
 
 				<!-- IF !topics.noAnchor -->
@@ -55,15 +55,15 @@
 				</small>
 				<!-- ENDIF !template.category -->
 
-				<span class="tag-list hidden-xs">
+				<span class="tag-list hidden-sm-down">
 					<!-- BEGIN tags -->
 					<a href="{config.relative_path}/tags/{topics.tags.value}"><span class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">{topics.tags.value}</span></a>
 					<!-- END tags -->
 					<!-- IF topics.tags.length --><small>&bull;</small><!-- ENDIF topics.tags.length -->
 				</span>
 
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
-				<small class="visible-xs-inline">
+				<small class="hidden-sm-down"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
+				<small class="hidden-md-up">
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					<!-- ELSE -->
@@ -73,22 +73,22 @@
 			</h2>
 		</div>
 
-		<div class="mobile-stat col-xs-2 visible-xs text-right">
+		<div class="mobile-stat col-sm-2 hidden-md-up text-xs-right">
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats">
+		<div class="col-lg-1 hidden-md-down stats">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
 			<small>[[global:posts]]</small>
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats">
+		<div class="col-lg-1 hidden-md-down stats">
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
-			<div class="card" style="border-color: {topics.category.bgColor}">
+		<div class="col-lg-3 col-md-3 teaser hidden-sm-down" component="topic/teaser">
+			<div class="last-post-card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>
 					[[category:no_replies]]
