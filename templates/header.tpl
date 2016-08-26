@@ -22,8 +22,8 @@
 			user: JSON.parse('{{userJSON}}')
 		};
 	</script>
+
 	<script src="{relative_path}/nodebb.min.js?{config.cache-buster}"></script>
-	<!-- IMPORT partials/requirejs-config.tpl -->
 
 	<!-- BEGIN scripts -->
 	<script type="text/javascript" src="{scripts.src}"></script>
