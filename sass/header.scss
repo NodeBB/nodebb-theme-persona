@@ -13,14 +13,6 @@
 			padding: 0.5em;
 			clear: both;
 
-<<<<<<< HEAD:sass/header.scss
-=======
-			img, .user-icon {
-				@include user-icon-style($border-radius: 50%);
-				float: left;
-			}
-
->>>>>>> b5b7b1246eb97ba8f8fede0bec74d95a2ce8616a:sass/header.scss
 			a {
 				white-space: normal;
 				margin: 0;
@@ -76,16 +68,12 @@
 			cursor: pointer;
 			width: 200px;
 
-			a {
-				display: block;
-				line-height: 30px;
-
 			&:hover {
-				background: @gray-lighter;
+				background: $gray-lighter;
 			}
 
 			&:not(:last-child) {
-				border-bottom: 1px solid @gray-lighter;
+				border-bottom: 1px solid $gray-lighter;
 			}
 
 			&.no_active a {

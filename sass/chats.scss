@@ -55,17 +55,7 @@
 		}
 
 		a {
-<<<<<<< HEAD:sass/chats.scss
-<<<<<<< 066c3f821e667b8016a6a745c1f299134ea2478e:less/chats.less
-			.text-ellipsis;
-=======
-			display: block;
 			@include text-ellipsis;
->>>>>>> less2sass:sass/chats.scss
-=======
-			display: block;
-			@include text-ellipsis;
->>>>>>> b5b7b1246eb97ba8f8fede0bec74d95a2ce8616a:sass/chats.scss
 		}
 
 		p {
@@ -76,17 +66,7 @@
 			height: 20px;
 		}
 
-<<<<<<< 066c3f821e667b8016a6a745c1f299134ea2478e:less/chats.less
-=======
-		.user-img {
-			@include user-icon-style(50px, 2rem, 50%);
-			float: left;
-			margin-top: 4px;
-			margin-right: 13px;
-			margin-left: 0.5em;
-		}
 
->>>>>>> less2sass:sass/chats.scss
 		.status {
 			position: absolute;
 			left: 60px;
@@ -264,16 +244,7 @@
 	padding: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
-<<<<<<< HEAD:sass/chats.scss
-<<<<<<< 066c3f821e667b8016a6a745c1f299134ea2478e:less/chats.less
-	border-top: 1px solid @gray-lighter;
 
-=======
-=======
->>>>>>> b5b7b1246eb97ba8f8fede0bec74d95a2ce8616a:sass/chats.scss
-	border-top: 1px solid $gray-lighter;
-	
->>>>>>> less2sass:sass/chats.scss
 	li {
 		position: relative;
 		clear: both;
