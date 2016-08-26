@@ -13,6 +13,14 @@
 			padding: 0.5em;
 			clear: both;
 
+<<<<<<< HEAD:sass/header.scss
+=======
+			img, .user-icon {
+				@include user-icon-style($border-radius: 50%);
+				float: left;
+			}
+
+>>>>>>> b5b7b1246eb97ba8f8fede0bec74d95a2ce8616a:sass/header.scss
 			a {
 				white-space: normal;
 				margin: 0;
