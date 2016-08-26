@@ -14,7 +14,7 @@
 				<div class="form-group row">
 					<label for="username" class="col-xl-2 col-form-label text-xs-right">{allowLoginWith}</label>
 					<div class="col-xl-10">
-						<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
+						<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}" />
 					</div>
 				</div>
 				<div class="form-group row">
