@@ -90,10 +90,11 @@
 							<p>
 								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
 								<!-- IF ../until -->
-								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span>
+								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
 								<!-- ELSE -->
-								<span class="expiry">[[user:info.banned-permanently]]</span>
+								<span class="expiry">[[user:info.banned-permanently]]</span><br />
 								<!-- ENDIF ../until -->
+								<span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
 							</p>
 						</li>
 						<!-- END history.bans -->
