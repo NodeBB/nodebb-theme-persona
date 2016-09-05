@@ -162,7 +162,7 @@
 				<div class="row">
 					<div class="form-group col-xs-9">
 						<select class="form-control" id="notification" name="notification" data-property="notificationSound">
-							<option value=""></option>
+							<option value="">[[user:no-sound]]</option>
 							<!-- BEGIN notificationSound -->
 							<option value="{notificationSound.name}" <!-- IF notificationSound.selected -->selected<!-- ENDIF notificationSound.selected -->>{notificationSound.name}</option>
 							<!-- END notificationSound -->
@@ -177,7 +177,7 @@
 				<div class="row">
 					<div class="form-group col-xs-9">
 						<select class="form-control" id="chat-incoming" name="chat-incoming" data-property="incomingChatSound">
-							<option value=""></option>
+							<option value="">[[user:no-sound]]</option>
 							<!-- BEGIN incomingChatSound -->
 							<option value="{incomingChatSound.name}" <!-- IF incomingChatSound.selected -->selected<!-- ENDIF incomingChatSound.selected -->>{incomingChatSound.name}</option>
 							<!-- END incomingChatSound -->
@@ -192,7 +192,7 @@
 				<div class="row">
 					<div class="form-group col-xs-9">
 						<select class="form-control" id="chat-outgoing" name="chat-outgoing" data-property="outgoingChatSound">
-							<option value=""></option>
+							<option value="">[[user:no-sound]]</option>
 							<!-- BEGIN outgoingChatSound -->
 							<option value="{outgoingChatSound.name}" <!-- IF outgoingChatSound.selected -->selected<!-- ENDIF outgoingChatSound.selected -->>{outgoingChatSound.name}</option>
 							<!-- END outgoingChatSound -->
