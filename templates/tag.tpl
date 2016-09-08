@@ -1,5 +1,19 @@
 <div class="tag">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
+	<div class="clearfix">
+		<div class="pull-left">
+		<!-- IMPORT partials/breadcrumbs.tpl -->
+		</div>
+
+		<div class="pull-right">
+			<!-- IF loggedIn -->
+			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+			<!-- ELSE -->
+			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+			<!-- ENDIF loggedIn -->
+		</div>
+	</div>
+
+	<hr class="hidden-xs"/>
 
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning">[[tags:no_tag_topics]]</div>
