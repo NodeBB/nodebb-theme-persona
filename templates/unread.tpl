@@ -19,7 +19,7 @@
 				<li class="divider"></li>
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
+					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
@@ -36,7 +36,7 @@
 				</li>
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="{config.relative_path}/{selectedFilter.url}?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
+					<a role="menu-item" href="{config.relative_path}/{selectedFilter.url}?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
