@@ -41,6 +41,38 @@
 					</ul>
 				</div>
 			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">[[user:info.username-history]]</h3>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group">
+						<!-- BEGIN usernames -->
+						<li class="list-group-item">
+							{../value}
+							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+						</li>
+						<!-- END usernames -->
+					</ul>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">[[user:info.email-history]]</h3>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group">
+						<!-- BEGIN emails -->
+						<li class="list-group-item">
+							{../value}
+							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+						</li>
+						<!-- END emails -->
+					</ul>
+				</div>
+			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="panel panel-default">
