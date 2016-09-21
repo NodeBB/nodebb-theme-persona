@@ -136,6 +136,18 @@
 					<!-- ENDIF history.bans.length -->
 				</div>
 			</div>
+			<!-- IF isAdminOrGlobalModerator -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">[[user:info.moderation-note]]</h3>
+				</div>
+				<div class="panel-body">
+					<textarea component="account/moderation-note" class="form-control">{moderationNote}</textarea>
+					<br/>
+					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[global:save]]</button>
+				</div>
+			</div>
+			<!-- ENDIF isAdminOrGlobalModerator -->
 		</div>
 	</div>
 </div>
