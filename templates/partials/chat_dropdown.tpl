@@ -1,7 +1,7 @@
 <!-- IF rooms.length -->
 <!-- BEGIN rooms -->
-<li class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
-	<a data-ajaxify="false" data-roomid="{rooms.roomId}">{rooms.roomName}</a>
+<li class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->" data-roomid="{rooms.roomId}">
+	<a data-ajaxify="false">{rooms.roomName}</a>
 
 	<ul class="members">
 		<!-- BEGIN rooms.users -->
