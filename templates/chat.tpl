@@ -21,7 +21,9 @@
 			</div>
 
 			<div class="modal-body">
-				<ul class="chat-content" component="chat/messages"></ul>
+				<ul class="chat-content" component="chat/messages">
+					<!-- IMPORT partials/chat_messages.tpl -->
+				</ul>
 
 				<div class="input-group">
 					<textarea component="chat/input" id="chat-message-input" rows="1" placeholder="[[modules:chat.placeholder]]" name="chat-message" class="form-control"></textarea>
