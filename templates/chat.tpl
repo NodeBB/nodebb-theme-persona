@@ -17,12 +17,6 @@
 					</div>
 					<!-- ENDIF showUserInput -->
 					<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
-					<span class="since-bar">
-						<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull;
-						<a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull;
-						<a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull;
-						<a href="#" data-since="threemonths">[[modules:chat.three_months]]</a>
-					</span>
 				</form>
 			</div>
 

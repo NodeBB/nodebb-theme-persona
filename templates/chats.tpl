@@ -7,7 +7,7 @@
 			<input class="form-control" type="text" component="chat/search" placeholder="[[users:enter_username]]" />
 		</div>
 		<ul component="chat/search/list" class="chat-search-list">
-			
+
 		</ul>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
@@ -30,7 +30,6 @@
 
 			<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 
-			<span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
 			<ul class="chat-content">
 				<!-- IMPORT partials/chat_messages.tpl -->
 			</ul>
