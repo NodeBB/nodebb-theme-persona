@@ -147,7 +147,7 @@
 			<div class="topic-row panel panel-default clearfix">
 				<div class="panel-body">
 
-					<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}" class="search-result-text">
+					<a href="{config.relative_path}/post/{posts.pid}" class="search-result-text">
 						<h4>{posts.topic.title}</h4>
 					</a>
 					<!-- IF showAsPosts -->

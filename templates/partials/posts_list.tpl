@@ -3,7 +3,7 @@
 	<!-- BEGIN posts -->
 	<li component="post" class="posts-list-item row<!-- IF posts.deleted --> deleted<!-- ELSE --><!-- IF posts.topic.deleted --> deleted<!-- ENDIF posts.topic.deleted --><!-- ENDIF posts.deleted -->" data-pid="{posts.pid}" data-uid="{posts.uid}">
 		<div class="col-lg-11 col-sm-10 col-xs-9 post-body">
-			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">
+			<a class="topic-title" href="{config.relative_path}/post/{posts.pid}">
 				<!-- IF !posts.isMainPost -->RE: <!-- ENDIF !posts.isMainPost -->{posts.topic.title}
 			</a>
 
