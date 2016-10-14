@@ -8,7 +8,7 @@
 				<button type="button" class="close hidden-xs hidden-sm" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
 				<button class="close" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
 
-				<h4>{roomName}</h4>
+				<h4><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></h4>
 
 				<form component="chat/controls" style="display: none;">
 					<!-- IF showUserInput -->
