@@ -20,8 +20,10 @@ body {
 	min-height: 100%;
 }
 
-#panel.slideout-panel {
-	min-height: 100vh;
+@media (max-width: @screen-xs-max) {
+	#panel.slideout-panel {
+		min-height: 100vh;
+	}
 }
 
 button, a {
