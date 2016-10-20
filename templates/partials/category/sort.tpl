@@ -1,5 +1,5 @@
 <!-- IF loggedIn -->
-<div class="btn-group" component="thread/sort">
+<div class="btn-group bottom-sheet" component="thread/sort">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 		<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:sort_by]]</span>
 		<span class="visible-xs-inline"><i class="fa fa-fw fa-sort"></i></span>

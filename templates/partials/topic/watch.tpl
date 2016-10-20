@@ -1,5 +1,5 @@
 <!-- IF config.loggedIn -->
-<div class="btn-group topic-watch-dropdown" component="topic/watch">
+<div class="btn-group topic-watch-dropdown bottom-sheet" component="topic/watch">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 		<span component="topic/following/menu" <!-- IF !isFollowing -->class="hidden"<!-- ENDIF !isFollowing -->><i class="fa fa-fw fa-bell-o"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:watching]]</span></span>
 
