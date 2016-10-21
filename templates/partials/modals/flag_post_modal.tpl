@@ -3,7 +3,11 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3>[[topic:flag]]</h3>
+				<h4 class="modal-title">
+					[[topic:flag]]
+					<a href="{config.relative_path}/post/{pid}">Post #{pid}</a> by
+					<a href="{config.relative_path}/user/{userslug}">{username}</a>
+				</h4>
 			</div>
 			<div class="modal-body">
 				<div class="form-group">
