@@ -22,7 +22,7 @@
 
 			<div class="modal-body">
 				<ul class="chat-content" component="chat/messages">
-					<!-- IMPORT partials/chat_messages.tpl -->
+					<!-- IMPORT partials/chats/messages.tpl -->
 				</ul>
 
 				<div class="input-group">
