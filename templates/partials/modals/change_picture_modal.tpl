@@ -23,10 +23,10 @@
 	<!-- IF allowProfileImageUploads -->
 	<div class="btn-group" role="group">
 		<button type="button" class="btn btn-default" data-action="upload">
-			<span class="hidden-xs">
+			<span class="hidden-xs hidden-sm">
 				[[user:upload_new_picture]]
 			</span>
-			<span class="visible-xs-inline">
+			<span class="visible-xs-inline visible-sm-inline">
 				<i class="fa fa-plus"></i>
 				<i class="fa fa-upload"></i>
 			</span>
@@ -36,10 +36,10 @@
 	<!-- IF config.hasImageUploadPlugin -->
 	<div class="btn-group" role="group">
 		<button type="button" class="btn btn-default" data-action="upload-url">
-			<span class="hidden-xs">
+			<span class="hidden-xs hidden-sm">
 				[[user:upload_new_picture_from_url]]
 			</span>
-			<span class="visible-xs-inline">
+			<span class="visible-xs-inline visible-sm-inline">
 				<i class="fa fa-plus"></i>
 				<i class="fa fa-link"></i>
 			</span>
@@ -49,10 +49,10 @@
 	<!-- IF uploaded -->
 	<div class="btn-group" role="group">
 		<button type="button" class="btn btn-default" data-action="remove-uploaded">
-			<span class="hidden-xs">
+			<span class="hidden-xs hidden-sm">
 				[[user:remove_uploaded_picture]]
 			</span>
-			<span class="visible-xs-inline">
+			<span class="visible-xs-inline visible-sm-inline">
 				<i class="fa fa-picture-o"></i>
 				<i class="fa fa-long-arrow-right"></i>
 				<i class="fa fa-trash-o"></i>
