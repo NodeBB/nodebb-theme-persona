@@ -1,3 +1,7 @@
+.chats-page {
+	margin-top: 10px;
+}
+
 .chats-list {
 	padding: 0;
 	overflow-x: hidden;
@@ -9,15 +13,13 @@
 		clear: both;
 		list-style-type: none;
 		padding: 0.5em;
-		height: 90px;
+		height: 80px;
 		.pointer;
 
 		border-left: 1px solid;
 		border-right: 1px solid;
 		border-bottom: 1px solid;
 		border-color: @gray-lighter;
-
-
 
 		&.typing {
 			.username:after {
@@ -26,7 +28,9 @@
 		}
 
 		&.unread {
-			background: lighten(@brand-primary, 25%);
+			background: lighten(@brand-primary, 35%);
+			border-bottom: 0;
+			
 		}
 
 		.teaser-content {
@@ -34,10 +38,24 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			font-size: 13px;
+			opacity: 0.8;
+		}
+
+		.room-name {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: block;
+		}
+
+		.teaser-content, .room-name {
+			padding-left: 80px;
 		}
 
 		&.bg-primary {
 			background: @brand-primary;
+			border-bottom: 0;
 		}
 
 		.username {
@@ -54,6 +72,7 @@
 
 		.teaser-timestamp {
 			font-size: 10px;
+			margin-top: 10px;
 		}
 
 		a {
@@ -84,13 +103,54 @@
 
 		.members {
 			padding-left: 1rem;
+			z-index: 1;
+			position: absolute;
+			bottom: 2px;
+			left: 53px;
 
 			li {
 				display: inline-block;
 				width: 16px;
 				padding: 0;
 				margin: 0;
+
+				&:first-child {
+					display: none;
+				}
+
+				.avatar {
+					border: 2px solid white;
+					width: 28px;
+					height: 28px;
+					line-height: 26px;
+				}
+
+				img {
+					margin-top: -4px;
+				}
 			}
+		}
+
+		.main-avatar {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			div, img {				
+				height: 80px;
+				width: 80px;
+				font-size: 40px;
+				border-radius: 0;
+			}
+		}
+
+		.avatar-placeholder {
+			height: 80px;
+			width: 80px;
+			background: @gray-lighter;
+			position: absolute;
+			top: 0px;
+			left: 0px;
 		}
 	}
 }
@@ -150,6 +210,11 @@
 				padding-top: 1rem;
 				margin-top: 1rem;
 				border-top: 1px solid @gray-lighter;
+			}
+
+			&[data-break="true"]:first-child {
+				border-top: 0;
+				margin-top: -1.5px;
 			}
 
 			.chat-user-image {
@@ -225,6 +290,10 @@
 		display: block;
 		padding: 1rem 0;
 		text-align: center;
+	}
+
+	.controlsToggle {
+		margin-right: 10px;
 	}
 }
 
