@@ -11,7 +11,7 @@
 		</ul>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
-			<!-- IMPORT partials/chat_recent_room.tpl -->
+			<!-- IMPORT partials/chats/recent_room.tpl -->
 			<!-- END rooms -->
 		</ul>
 	</div>
@@ -31,7 +31,7 @@
 			<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 
 			<ul class="chat-content">
-				<!-- IMPORT partials/chat_messages.tpl -->
+				<!-- IMPORT partials/chats/messages.tpl -->
 			</ul>
 			<div class="input-group">
 				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>

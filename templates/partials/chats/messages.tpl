@@ -1,3 +1,3 @@
 <!-- BEGIN messages -->
-<!-- IMPORT partials/chat_message.tpl -->
+<!-- IMPORT partials/chats/message.tpl -->
 <!-- END messages -->
