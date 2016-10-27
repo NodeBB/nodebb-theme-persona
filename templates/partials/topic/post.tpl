@@ -82,6 +82,14 @@
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
+
+	<!-- IF posts.replies -->
+	<br />
+	<a component="post/reply-count" href="#" class="no-select">
+		<i class="fa fa-plus"></i>
+		[[topic:replies_to_this_post, {posts.replies}]]
+	</a>
+	<!-- ENDIF posts.replies -->
 </div>
 
 <hr />
