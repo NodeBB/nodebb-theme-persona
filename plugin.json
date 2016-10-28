@@ -11,7 +11,7 @@
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
-		"lib/modules/autohidingnavbar.js",
+		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout.min.js",
 		"lib/client/chats.js"
 	],
