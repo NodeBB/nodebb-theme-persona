@@ -142,6 +142,11 @@
 		margin-left: 61px;
 	}
 
+	[component="post/replies"] {
+		margin-left: 61px;
+		margin-top: 20px;
+	}
+
 	.stats {
 		margin: 0px 10px 0px 10px;
 		float: left;
@@ -446,18 +451,18 @@
 }
 
 [component="post"] {
-	
+
 	[component="user/picture"], [component="user/status"] {
 		opacity: 1;
 	}
-	
+
 	.icon:before {
 		opacity: 0;
 	}
-	
+
 	&.bg-success {
 		background-color: initial;
-		
+
 		.icon:before {
 			border: 1px solid #5cb85c;
     		color: #5cb85c;
@@ -471,7 +476,7 @@
 		    display: inline-block;
 		    font: normal normal normal 14px/1 FontAwesome;
 		}
-		
+
 		[component="user/picture"], [component="user/status"] {
 			opacity: 0;
 		}
