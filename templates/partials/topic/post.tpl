@@ -84,7 +84,6 @@
 	</small>
 
 	<!-- IF posts.replies -->
-	<br />
 	<a component="post/reply-count" href="#" class="no-select">
 		<i class="fa fa-plus" component="post/replies/open"></i>
 		<i class="fa fa-minus hidden" component="post/replies/close"></i>
