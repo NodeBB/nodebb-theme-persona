@@ -83,16 +83,14 @@
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
 
-	<!-- IF posts.replies -->
 	<!-- IF !hideReplies -->
-	<a component="post/reply-count" href="#" class="no-select">
-		<i class="fa fa-plus" component="post/replies/open"></i>
-		<i class="fa fa-minus hidden" component="post/replies/close"></i>
-		<i class="fa fa-spin fa-spinner hidden" component="post/replies/loading"></i>
-		[[topic:replies_to_this_post, {posts.replies}]]
+	<a component="post/reply-count" href="#" class="no-select <!-- IF !posts.replies -->hidden<!-- ENDIF !posts.replies -->">
+		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
+		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
+		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
+		<span component="post/reply-count/text" data-replies="{posts.replies}">[[topic:replies_to_this_post, {posts.replies}]]</span>
 	</a>
 	<!-- ENDIF !hideReplies -->
-	<!-- ENDIF posts.replies -->
 </div>
 
 <hr />
