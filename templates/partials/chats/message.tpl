@@ -14,8 +14,8 @@
 		<!-- IF messages.edited -->
 		<small class="text-muted pull-right" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
 		<!-- ENDIF messages.edited -->
-		<!-- IF messages.self -->
 		<!-- IF !config.disableChatMessageEditing -->
+		<!-- IF messages.self -->
 		<div class="pull-right btn-group controls">
 			<button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 			<button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
