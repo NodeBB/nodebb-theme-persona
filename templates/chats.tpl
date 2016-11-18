@@ -37,9 +37,9 @@
 				<!-- IMPORT partials/chats/messages.tpl -->
 			</ul>
 			<div class="input-group">
-				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>
+				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1" <!-- IF !canReply -->readonly<!-- ENDIF !canReply -->></textarea>
 				<span class="input-group-btn">
-					<button class="btn btn-primary" type="button" data-action="send">[[modules:chat.send]]</button>
+					<button class="btn btn-primary" type="button" data-action="send" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->>[[modules:chat.send]]</button>
 				</span>
 			</div>
 		</div>
