@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
-	<div class="col-xs-6 col-xs-offset-3">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 		<p class="lead text-center">
 			[[register:interstitial.intro]]
 		</p>
@@ -24,7 +24,7 @@
 <form role="form" method="post">
 	<!-- BEGIN sections -->
 	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					@value
@@ -36,7 +36,7 @@
 
 	<div class="row">
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
-		<div class="col-xs-6 col-xs-offset-3">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<button class="btn btn-primary btn-block">Submit</button>
 			<p class="text-center">
 				<br />
