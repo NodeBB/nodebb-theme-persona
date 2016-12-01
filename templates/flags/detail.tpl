@@ -66,6 +66,9 @@
 				</form>
 
 				<div component="flag/notes">
+					<!-- IF !notes.length -->
+					<div class="alert alert-success text-center">[[flags:no-notes]]</div>
+					<!-- ENDIF !notes.length --> 
 					<!-- BEGIN notes -->
 					<div class="media">
 						<div class="media-left">
@@ -91,6 +94,9 @@
 			<div class="col-sm-6">
 				<label>[[flags:history]]</label>
 				<div component="flag/history">
+					<!-- IF !history.length -->
+					<div class="alert alert-success text-center">[[flags:no-history]]</div>
+					<!-- ENDIF !history.length -->
 					<!-- BEGIN history -->
 					<div class="media">
 						<div class="media-left">

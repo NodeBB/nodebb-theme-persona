@@ -24,7 +24,7 @@
 				<!-- ENDIF !flags.length -->
 				<!-- BEGIN flags -->
 				<tr data-flag-id="{../flagId}">
-					<td><span class="label label-{../labelClass}">{../state}</span></td>
+					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 					<td>
 						<a href="{config.relative_path}/flags/{../flagId}">
 							<strong>{../target_readable}</strong> &mdash; <span component="flags/list/description">{../description}</span>
