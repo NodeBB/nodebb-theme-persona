@@ -30,10 +30,10 @@
 
 		<div class="row">
 			<div class="col-sm-6">
-				<form role="form">
+				<form role="form" id="attributes">
 					<div class="form-group">
 						<label for="state">[[flags:state]]</label>
-						<select class="form-control" name="state">
+						<select class="form-control" id="state" name="state" disabled>
 							<option value="open">[[flags:state-open]]</option>
 							<option value="wip">[[flags:state-wip]]</option>
 							<option value="resolved">[[flags:state-resolved]]</option>
@@ -42,7 +42,7 @@
 					</div>
 					<div class="form-group">
 						<label for="assignee">[[flags:assignee]]</label>
-						<select class="form-control" name="assignee">
+						<select class="form-control" id="assignee" name="assignee" disabled>
 							<option value="">[[flags:no-assignee]]</option>
 							<!-- BEGIN assignees -->
 							<option value="{../userslug}">{../username}</option>
@@ -58,30 +58,32 @@
 					<div class="form-group">
 						<label for="note">[[flags:notes]]</label>
 						<textarea id="note" class="form-control"></textarea>
+						<button type="button" class="btn btn-block btn-primary" data-action="appendNote">[[flags:add-note]]</button>
 					</div>
-					<button type="button" class="btn btn-block btn-primary">[[flags:add-note]]</button>
 				</form>
 
-				<!-- BEGIN notes -->
-				<div class="media">
-					<div class="media-left">
-						<a href="{config.relative_path}/user/{../user.userslug}">
-							<!-- IF ../user.picture -->
-							<img class="media-object avatar avatar-lg" src="{../user.picture}" alt="{../user.username}" />
-							<!-- ELSE -->
-							<div class="media-object avatar avatar-lg" style="background-color: {../user.icon:bgColor}">{../user.icon:text}</div>
-							<!-- ENDIF ../user.picture -->
-						</a>
+				<div component="flag/notes">
+					<!-- BEGIN notes -->
+					<div class="media">
+						<div class="media-left">
+							<a href="{config.relative_path}/user/{../user.userslug}">
+								<!-- IF ../user.picture -->
+								<img class="media-object avatar avatar-md" src="{../user.picture}" alt="{../user.username}" />
+								<!-- ELSE -->
+								<div class="media-object avatar avatar-md" style="background-color: {../user.icon:bgColor}">{../user.icon:text}</div>
+								<!-- ENDIF ../user.picture -->
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
+								<small><span class="timeago" title="{../datetimeISO}"></span></small>
+							</h4>
+							{../content}
+						</div>
 					</div>
-					<div class="media-body">
-						<h4 class="media-heading">
-							<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
-							<small><span class="timeago" title="{../datetimeISO}"></span></small>
-						</h4>
-						{../content}
-					</div>
+					<!-- END notes -->
 				</div>
-				<!-- END notes -->
 			</div>
 		</div>
 	</div>
