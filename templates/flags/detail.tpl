@@ -4,6 +4,9 @@
 	</div>
 	<div class="col-sm-6 col-md-9">
 		<h2>
+			<div class="pull-right">
+				<a class="btn btn-link" href="{config.relative_path}/flags"><i class="fa fa-chevron-left"></i> [[flags:back]]</a>
+			</div>
 			{target_readable}
 			<small><span class="timeago" title="{datetimeISO}"></span></small>
 		</h2>
@@ -83,6 +86,32 @@
 						</div>
 					</div>
 					<!-- END notes -->
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<label>[[flags:history]]</label>
+				<div component="flag/history">
+					<!-- BEGIN history -->
+					<div class="media">
+						<div class="media-left">
+							<a href="{config.relative_path}/user/{../user.userslug}">
+								<!-- IF ../user.picture -->
+								<img class="media-object avatar avatar-md" src="{../user.picture}" alt="{../user.username}" />
+								<!-- ELSE -->
+								<div class="media-object avatar avatar-md" style="background-color: {../user.icon:bgColor}">{../user.icon:text}</div>
+								<!-- ENDIF ../user.picture -->
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
+								<small><span class="timeago" title="{../datetimeISO}"></span></small>
+							</h4>
+							[[flags:updated]]:
+							<!-- BEGIN fields --><span class="label label-primary">@value</span>&nbsp;<!-- END fields -->
+						</div>
+					</div>
+					<!-- END history -->
 				</div>
 			</div>
 		</div>
