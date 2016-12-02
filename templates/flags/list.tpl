@@ -2,7 +2,7 @@
 	<div class="col-sm-4 col-md-3">
 		<!-- IMPORT partials/flags/quick-filters.tpl -->
 	</div>
-	<div class="col-sm-6 col-md-9">
+	<div class="col-sm-8 col-md-9">
 		<table class="table table-striped table-hover" component="flags/list">
 			<thead>
 				<tr>

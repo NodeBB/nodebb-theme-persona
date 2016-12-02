@@ -2,7 +2,7 @@
 	<div class="col-sm-4 col-md-3">
 		<!-- IMPORT partials/flags/quick-filters.tpl -->
 	</div>
-	<div class="col-sm-6 col-md-9">
+	<div class="col-sm-8 col-md-9">
 		<h2>
 			<div class="pull-right">
 				<a class="btn btn-link" href="{config.relative_path}/flags"><i class="fa fa-chevron-left"></i> [[flags:back]]</a>
@@ -32,7 +32,7 @@
 		<hr />
 
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-md-8">
 				<form role="form" id="attributes">
 					<div class="form-group row">
 						<div class="col-sm-6">
@@ -67,7 +67,7 @@
 						<select class="form-control" id="assignee" name="assignee" disabled>
 							<option value="">[[flags:no-assignee]]</option>
 							<!-- BEGIN assignees -->
-							<option value="{../userslug}">{../username}</option>
+							<option value="{../uid}">{../username}</option>
 							<!-- END assignees -->
 						</select>
 					</div>
@@ -110,7 +110,7 @@
 					<!-- END notes -->
 				</div>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-md-4">
 				<label>[[flags:history]]</label>
 				<div component="flag/history">
 					<!-- IF !history.length -->
@@ -132,11 +132,10 @@
 								<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 								<small><span class="timeago" title="{../datetimeISO}"></span></small>
 							</h4>
-							[[flags:updated]]:
 							<ul>
 								<!-- BEGIN fields -->
 								<li>
-									<span class="label label-primary">{../attribute}</span> &rarr; {../value}
+									<span class="label label-primary">{history.fields.attribute}</span><!-- IF history.fields.value --> &rarr; {history.fields.value}<!-- ENDIF history.fields.value -->
 								</li>
 								<!-- END fields -->
 							</ul>
