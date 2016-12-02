@@ -34,6 +34,25 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<form role="form" id="attributes">
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<label>[[flags:reporter]]</label>
+							<div>
+								<!-- IF reporter.picture -->
+								<img class="media-object avatar avatar-sm" src="{reporter.picture}" alt="{reporter.username}" />
+								<!-- ELSE -->
+								<div class="media-object avatar avatar-sm" style="background-color: {reporter.icon:bgColor}">{reporter.icon:text}</div>
+								<!-- ENDIF reporter.picture -->
+								<a href="{config.relative_path}/user/{reporter.userslug}">{reporter.username}</a>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<label>[[flags:reported-at]]</label>
+							<p>
+								{datetimeISO}
+							</p>
+						</div>
+					</div>
 					<div class="form-group">
 						<label for="state">[[flags:state]]</label>
 						<select class="form-control" id="state" name="state" disabled>
