@@ -54,6 +54,10 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label>[[flags:description]]</label>
+						<blockquote>{description}</blockquote>
+					</div>
+					<div class="form-group">
 						<label for="state">[[flags:state]]</label>
 						<select class="form-control" id="state" name="state" disabled>
 							<option value="open">[[flags:state-open]]</option>
