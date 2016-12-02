@@ -133,7 +133,13 @@
 								<small><span class="timeago" title="{../datetimeISO}"></span></small>
 							</h4>
 							[[flags:updated]]:
-							<!-- BEGIN fields --><span class="label label-primary">@value</span>&nbsp;<!-- END fields -->
+							<ul>
+								<!-- BEGIN fields -->
+								<li>
+									<span class="label label-primary">{../attribute}</span> &rarr; {../value}
+								</li>
+								<!-- END fields -->
+							</ul>
 						</div>
 					</div>
 					<!-- END history -->
