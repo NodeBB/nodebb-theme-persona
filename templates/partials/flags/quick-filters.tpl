@@ -4,8 +4,7 @@
 	</div>
 	<div class="panel-body">
 		<ul>
-			<li>Unresolved flags</li>
-			<li>Assigned to you</li>
+			<li><a href="{config.relative_path}/flags?quick=mine">[[flags:filter-quick-mine]]</a></li>
 		</ul>
 	</div>
 </div>

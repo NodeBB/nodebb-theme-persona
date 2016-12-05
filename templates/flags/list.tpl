@@ -3,6 +3,14 @@
 		<!-- IMPORT partials/flags/quick-filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
+		<!-- IF hasFilter -->
+		<div class="alert alert-warning">
+			<p class="pull-right">
+				<a href="{config.relative_path}/flags">[[flags:filter-reset]]</a>
+			</p>
+			[[flags:filter-active]]
+		</div>
+		<!-- ENDIF hasFilter -->
 		<table class="table table-striped table-hover" component="flags/list">
 			<thead>
 				<tr>
