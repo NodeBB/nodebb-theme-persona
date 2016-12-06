@@ -39,6 +39,11 @@
 			</div>
 
 			<div class="form-group">
+				<label for="filter-targetUid">[[flags:filter-targetUid]]</label>
+				<input type="number" class="form-control" id="filter-targetUid" name="targetUid" min="0" />
+			</div>
+
+			<div class="form-group">
 				<label for="filter-reporterId">[[flags:filter-reporterId]]</label>
 				<input type="number" class="form-control" id="filter-reporterId" name="reporterId" min="0" />
 			</div>

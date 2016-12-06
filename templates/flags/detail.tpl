@@ -115,6 +115,27 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-4">
+				<label>[[flags:quick-links]]</label>
+				<ul>
+					<li><a href="{config.relative_path}/{type}/{targetId}">[[flags:go-to-target]]</a></li>
+					<li>
+						[[flags:flagged-user]]
+						<ul>
+							<li><a href="{config.relative_path}/uid/{target.user.uid}">[[flags:view-profile]]</a></li>
+							<li><a href="#" data-chat="{target.user.uid}">[[flags:start-new-chat]]</a></li>
+						</ul>
+					</li>
+					<li>
+						[[flags:reporter]]
+						<ul>
+							<li><a href="{config.relative_path}/uid/{reporter.uid}">[[flags:view-profile]]</a></li>
+							<li><a href="#" data-chat="{reporter.uid}">[[flags:start-new-chat]]</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<hr />
+
 				<label>[[flags:history]]</label>
 				<div component="flag/history">
 					<!-- IF !history.length -->
