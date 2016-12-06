@@ -9,9 +9,11 @@
 				<!-- BEGIN sessions -->
 				<li class="list-group-item" data-uuid="{../uuid}">
 					<div class="pull-right">
+						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
 						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
 						<!-- ENDIF !../current -->
+						<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 						{function.userAgentIcons}
 						<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
 					</div>
