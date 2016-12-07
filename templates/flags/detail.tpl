@@ -183,7 +183,8 @@
 							<ul>
 								<!-- BEGIN fields -->
 								<li>
-									<span class="label label-primary">{history.fields.attribute}</span><!-- IF history.fields.value --> &rarr; {history.fields.value}<!-- ENDIF history.fields.value -->
+									<span class="label label-primary">@key</span>
+									<span class="label label-default">@value</span>
 								</li>
 								<!-- END fields -->
 							</ul>
