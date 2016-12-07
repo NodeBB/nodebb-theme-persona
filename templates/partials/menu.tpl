@@ -110,7 +110,7 @@
 							<li class="dropdown-header">Moderator Tools</li>
 							<li>
 								<a href="{relative_path}/flags">
-									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-posts]]</span>
+									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
 								</a>
 							</li>
 							<!-- IF isAdmin -->
