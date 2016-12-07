@@ -13,6 +13,7 @@
 
 		<hr />
 
+		<!-- IF type_bool.post -->
 		<div class="media">
 			<div class="media-left">
 				<a href="{config.relative_path}/user/{target.user.userslug}">
@@ -28,6 +29,28 @@
 				{target.content}
 			</div>
 		</div>
+		<!-- ENDIF type_bool.post -->
+
+		<!-- IF type_bool.user -->
+		<div class="media">
+			<div class="media-left">
+				<a href="{config.relative_path}/user/{target.userslug}">
+					<!-- IF target.picture -->
+					<img class="media-object avatar avatar-lg" src="{target.picture}" alt="{target.username}" />
+					<!-- ELSE -->
+					<div class="media-object avatar avatar-lg" style="background-color: {target.icon:bgColor}">{target.icon:text}</div>
+					<!-- ENDIF target.picture -->
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.userslug}">{target.username}</a></h4>
+				<p class="lead">
+					<a href="{config.relative_path}/uid/{target.uid}">[[flags:user-view]]</a> |
+					<a href="{config.relative_path}/uid/{target.uid}/edit">[[flags:user-edit]]</a>
+				</p>
+			</div>
+		</div>
+		<!-- ENDIF type_bool.user -->
 
 		<hr />
 
