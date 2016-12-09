@@ -3,6 +3,18 @@
 		<!-- IMPORT partials/flags/quick-filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
+		<div class="text-center">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div><canvas id="flags:daily" height="250"></canvas></div>
+					<p>
+
+					</p>
+				</div>
+				<div class="panel-footer"><small>Daily flags</small></div>
+			</div>
+		</div>
+
 		<!-- IF hasFilter -->
 		<div class="alert alert-warning">
 			<p class="pull-right">
