@@ -1,14 +1,14 @@
 'use strict';
 
 var S = require.main.require('string');
-var	meta = module.parent.require('./meta');
+var meta = module.parent.require('./meta');
 var user = module.parent.require('./user');
 
 var library = {};
 
 library.init = function(params, callback) {
 	var app = params.router;
-	var	middleware = params.middleware;
+	var middleware = params.middleware;
 
 	app.get('/admin/plugins/persona', middleware.admin.buildHeader, renderAdmin);
 	app.get('/api/admin/plugins/persona', renderAdmin);
