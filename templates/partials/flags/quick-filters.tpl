@@ -18,6 +18,7 @@
 			<div class="form-group">
 				<label for="filter-state">[[flags:filter-state]]</label>
 				<select class="form-control" id="filter-state" name="state">
+					<option value="">[[flags:state-all]]</option>
 					<option value="open">[[flags:state-open]]</option>
 					<option value="wip">[[flags:state-wip]]</option>
 					<option value="resolved">[[flags:state-resolved]]</option>
