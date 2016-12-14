@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-sm-4 col-md-3">
-		<!-- IMPORT partials/flags/quick-filters.tpl -->
+		<!-- IMPORT partials/flags/filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
 		<h2>

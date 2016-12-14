@@ -40,6 +40,16 @@
 			</div>
 
 			<div class="form-group">
+				<label for="filter-cid">[[flags:filter-cid]]</label>
+				<select class="form-control" id="filter-cid" name="cid">
+					<option value="">[[flags:filter-cid-all]]</option>
+					<!-- BEGIN categories -->
+					<option value="@key">@value</option>
+					<!-- END categories -->
+				</select>
+			</div>
+
+			<div class="form-group">
 				<label for="filter-targetUid">[[flags:filter-targetUid]]</label>
 				<input type="number" class="form-control" id="filter-targetUid" name="targetUid" min="0" />
 			</div>
