@@ -52,6 +52,10 @@
 		</div>
 		<!-- ENDIF type_bool.user -->
 
+		<!-- IF type_bool.empty -->
+		<div class="alert alert-warning">[[flags:target-purged]]</div>
+		<!-- ENDIF type_bool.empty -->
+
 		<hr />
 
 		<div class="row">
