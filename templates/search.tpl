@@ -49,6 +49,11 @@
 						</div>
 
 						<div class="form-group post-search-item">
+							<label>[[search:has-tags]]</label>
+							<input type="text" class="form-control" id="has-tags">
+						</div>
+
+						<div class="form-group post-search-item">
 							<label>[[search:reply-count]]</label>
 							<div class="row">
 								<div class="col-md-6">
