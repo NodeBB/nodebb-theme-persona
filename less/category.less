@@ -23,6 +23,12 @@
 				opacity: 0.30;
 			}
 
+			&.pinned {
+				[component="topic/pinned"] {
+					cursor: move;
+				}
+			}
+
 			.select {
 				position: relative;
 				.pointer;
@@ -65,14 +71,14 @@
 				.user-img, .user-icon {
 					opacity: 0;
 				}
-				
+
 				.fa-check {
 					border: 1px solid @brand-primary;
 					color: @brand-primary;
 					opacity: 1;
 				}
 			}
-			
+
 			&.selected {
 				.select .user-img, .select .user-icon {
 					opacity: 0;
