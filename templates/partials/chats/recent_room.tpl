@@ -24,6 +24,8 @@
 		<!-- END rooms.users -->
 	</ul>
 
+	<!-- IF rooms.teaser.content -->
 	<span class="teaser-content">{rooms.teaser.content}</span>
 	<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
+	<!-- ENDIF rooms.teaser.content -->
 </li>

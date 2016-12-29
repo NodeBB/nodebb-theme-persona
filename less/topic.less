@@ -273,6 +273,51 @@
 			margin-left: 0;
 		}
 	}
+	
+	.quick-reply {
+		.icon {
+			position: relative;
+			border-radius: 50%;
+			min-width: 46px;
+			min-height: 46px;
+			margin-top: 2px;
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+
+				@media (min-width: @screen-md-min) {
+					top: 2px;
+					font-size: 16px;
+				}
+			}
+
+			img, .user-icon {
+				margin-right: 15px;
+				.user-icon-style(46px, 2.4rem, 50%);
+			}
+		}
+		
+		.quickreply-message {
+			margin-left: 61px;
+			margin-bottom: 5px;
+			
+			@media (max-width: @screen-sm-max) {
+				margin-left: 0;
+				
+				[component="topic/quickreply/text"] {
+					font-size: 16px;
+					padding: 10px;
+				}
+			}
+		}
+		
+		[component="topic/quickreply/button"] {
+			margin-bottom: 10px;
+		}
+	}
 }
 
 
