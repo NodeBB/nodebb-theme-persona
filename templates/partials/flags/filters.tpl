@@ -41,7 +41,7 @@
 
 			<div class="form-group">
 				<label for="filter-cid">[[flags:filter-cid]]</label>
-				<select class="form-control" id="filter-cid" name="cid">
+				<select class="form-control" id="filter-cid" name="cid" multiple="true">
 					<option value="">[[flags:filter-cid-all]]</option>
 					<!-- BEGIN categories -->
 					<option value="@key">@value</option>
