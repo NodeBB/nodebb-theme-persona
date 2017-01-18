@@ -22,7 +22,7 @@
 						</div>
 						<div class="col-md-2">
 							<label>&nbsp;</label>
-							<button type="submit" class="btn btn-default form-control">[[global:search]]</button>
+							<button type="submit" class="btn btn-primary form-control">[[global:search]]</button>
 						</div>
 					</div>
 				</div>
