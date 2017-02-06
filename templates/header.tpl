@@ -3,7 +3,7 @@
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
-	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/stylesheet.css?{config.cache-buster}" />
 	<!-- IF bootswatchCSS --><link id="bootswatchCSS" href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 
@@ -23,7 +23,7 @@
 		};
 	</script>
 
-	<script src="{relative_path}/nodebb.min.js?{config.cache-buster}"></script>
+	<script src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
 
 	<!-- BEGIN scripts -->
 	<script type="text/javascript" src="{scripts.src}"></script>
