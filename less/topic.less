@@ -142,13 +142,63 @@
 		font-size: 10px;
 	}
 
-	[component="post/reply-count"] {
+	.threaded-replies {
 		margin-left: 61px;
+		text-decoration: none;
+		margin-left: 60px;
+		font-size: 11px;
+
+
+		img, .user-icon {
+			.user-icon-style(15px, 10px, 50%);
+			vertical-align: 1px;
+		}
+
+		img {
+			vertical-align: -3px;
+		}
+
+		.replies-count {
+			margin-left: 3px;
+		}
+
+		.replies-last {
+			color: @gray-light;
+		}
+
+		.fa {
+			font-size: 80%;
+		}
+
+		.avatars {
+			position: relative;
+
+			&.hasMore > *:last-child:after {
+				content: "\2022\2022\2022";
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				background: #000;
+				opacity: .5;
+				position: absolute;
+				right: 2px;
+				border-radius: 50%;
+				bottom: -1px;
+				text-align: center;
+				font-size: 12px;
+			}
+		}
 	}
 
 	[component="post/replies"] {
 		margin-left: 61px;
 		margin-top: 20px;
+		border-left: 4px solid #eee;
+		padding-left: 20px;
+
+		[component="post"]:last-child > hr {
+			display: none;
+		}
 	}
 
 	.stats {
@@ -247,6 +297,8 @@
 		display: inline-block;
 		font-style: italic;
 		margin-left: 61px;
+		max-width: 100%;
+		word-wrap: break-word;
 	}
 
 	@media (max-width: @screen-sm-max) {
@@ -271,6 +323,10 @@
 
 		[component="post/reply-count"] {
 			margin-left: 0;
+		}
+
+		[component="post/replies"] {
+			margin-left: 15px;
 		}
 	}
 	
