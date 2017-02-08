@@ -14,6 +14,9 @@
 		<li>
 			<a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
 		</li>
+		<li>
+			<a component="account/flag" href="#">[[user:flag-profile]]</a>
+		</li>
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !config.disableChat -->
