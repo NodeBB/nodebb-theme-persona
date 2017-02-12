@@ -5,7 +5,7 @@
 		<p>
 			<a href="{config.relative_path}/user/{../user.userslug}">
 				<!-- IF ../user.picture -->
-				<img class="user-img" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" title="{../user.username}"/>
+				<img class="user-img" title="{../user.username}" alt="{../user.username}" src="{../user.picture}">
 				<!-- ELSE -->
 				<span class="user-icon user-img" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</span>
 				<!-- ENDIF ../user.picture -->
