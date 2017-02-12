@@ -194,8 +194,10 @@
 						</div>
 
 						<ul class="dropdown-menu" role="menu">
-  							<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
-  						</ul>
+							<li>
+  								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+  							</li>
+						</ul>
 					</li>
 				</ul>
 
