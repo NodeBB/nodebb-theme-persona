@@ -1,6 +1,6 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+<div widget-area="header"></div>
 <div class="groups list">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
-
 	<div class="row">
 		<div class="col-lg-4">
 			<!-- IF allowGroupCreation -->

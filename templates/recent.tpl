@@ -1,6 +1,6 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+<div widget-area="header"></div>
 <div class="recent">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
-
 	<div class="btn-toolbar">
 		<div class="pull-left">
 			<!-- IF loggedIn -->
