@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div data-widget-area="header"></div>
 <div class="unread">
 	<div class="btn-toolbar">
 		<div class="pull-left">

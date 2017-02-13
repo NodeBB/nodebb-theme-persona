@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div data-widget-area="header"></div>
 <div class="popular">
 	<ul class="nav nav-pills" component="popular/tab">
 		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>

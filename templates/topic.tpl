@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div data-widget-area="header"></div>
 <div class="row">
-	<div class="topic col-lg-12 col-sm-12" has-widget-class="topic col-lg-9 col-sm-12" has-widget-target="sidebar">
+	<div class="topic col-lg-12 col-sm-12" data-has-widget-class="topic col-lg-9 col-sm-12" data-has-widget-target="sidebar">
 
 		<h1 component="post/header" class="hidden-xs" itemprop="name">
 
@@ -56,9 +56,9 @@
 			</div>
 		</div>
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12 hidden"></div>
+	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 hidden"></div>
 </div>
-<div widget-area="footer"></div>
+<div data-widget-area="footer"></div>
 
 <!-- IF !config.usePagination -->
 <noscript>

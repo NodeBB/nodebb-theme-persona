@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div data-widget-area="header"></div>
 <div class="groups list">
 	<div class="row">
 		<div class="col-lg-4">

@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div data-widget-area="header"></div>
 <div class="row">
-	<div class="category col-lg-12 col-sm-12" has-widget-class="category col-lg-9 col-sm-12" has-widget-target="sidebar">
+	<div class="category col-lg-12 col-sm-12" data-has-widget-class="category col-lg-9 col-sm-12" data-has-widget-target="sidebar">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
 		<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
@@ -38,9 +38,9 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12 hidden"></div>
+	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 hidden"></div>
 </div>
-<div widget-area="footer"></div>
+<div data-widget-area="footer"></div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
 
