@@ -30,5 +30,5 @@
 </li>
 <!-- END rooms -->
 <!-- ELSE -->
-<li class="no_active"><a href="#">No active chats</a></li>
+<li class="no_active"><a href="#">[[modules:chat.no_active]]</a></li>
 <!-- ENDIF rooms.length -->
