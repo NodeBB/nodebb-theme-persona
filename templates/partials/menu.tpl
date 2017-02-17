@@ -179,15 +179,15 @@
 
 				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
 					<li class="dropdown">
-						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
-						<i class="fa fa-angle-up pointer fa-fw pageup"></i>
+						<a><i class="fa fa-angle-double-up pointer fa-fw pagetop"></i></a>
+						<a><i class="fa fa-angle-up pointer fa-fw pageup"></i></a>
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<span class="pagination-text"></span>
 						</a>
 
-						<i class="fa fa-angle-down pointer fa-fw pagedown"></i>
-						<i class="fa fa-angle-double-down pointer fa-fw pagebottom"></i>
+						<a><i class="fa fa-angle-down pointer fa-fw pagedown"></i></a>
+						<a><i class="fa fa-angle-double-down pointer fa-fw pagebottom"></i></a>
 
 						<div class="progress-container">
 							<div class="progress-bar"></div>
