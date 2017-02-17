@@ -6,11 +6,9 @@
 		<!-- IF !isSelf -->
 		<!-- IF !config.disableChat -->
 		<!-- IF !banned -->
-		<!-- IF hasPrivateChat -->
-		<li>
+		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
 			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
 		</li>
-		<!-- ENDIF hasPrivateChat -->
 		<li>
 			<a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
 		</li>
