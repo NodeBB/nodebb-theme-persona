@@ -88,7 +88,7 @@
 		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
 			<!-- BEGIN posts.replies.users -->
 			<!-- IF posts.replies.users.picture -->
-			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" src="{posts.replies.users.picture}"  itemprop="image" /></span>
+			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
 			<!-- ENDIF posts.replies.users.picture -->
