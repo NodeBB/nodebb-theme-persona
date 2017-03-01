@@ -5,10 +5,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
+				<!-- IF brand:logo -->
+				<a href="{brand:logo:url}">
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
+				<!-- ENDIF brand:logo -->
 				<!-- IF config.showSiteTitle -->
 				<a href="{relative_path}/">
 					<h1 class="navbar-brand forum-title">{title}</h1>
