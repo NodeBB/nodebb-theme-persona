@@ -1,4 +1,4 @@
-<li component="chat/message" class="chat-message clear" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}">
+<li component="chat/message" class="chat-message clear" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
 	<div class="message-header">
 		<a href="{config.relative_path}/user/{messages.fromUser.userslug}">
 			<!-- IF messages.fromUser.picture -->
