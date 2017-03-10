@@ -20,7 +20,7 @@
 				<a href="{config.relative_path}/user/{deleter.userslug}">
 					<strong>{deleter.username}</strong>
 				</a>
-				<small class="timeago" title="{deleter.timestampISO}"></small>
+				<small class="timeago" title="{deletedTimestamp}"></small>
 				<!-- ENDIF deleter -->
 			</span>
 		</div>
