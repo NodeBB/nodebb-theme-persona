@@ -3,14 +3,33 @@
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div class="dropdown pull-right visible-xs-block">
-		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-			<i class="fa fa-eye"></i>
-			<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-ajaxify="false" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
-		</ul>
+	<div class="btn-toolbar">
+		<div class="dropdown pull-right">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+				<i class="fa fa-eye"></i>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-ajaxify="false" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown pull-right">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+				<!-- IF selectedFilter -->{selectedFilter.name}<!-- ENDIF selectedFilter --> <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<!-- BEGIN filters -->
+				<!-- IF filters.separator -->
+				<li role="separator" class="divider"></li>
+				<!-- ELSE -->
+				<li role="presentation" class="category">
+					<a role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
+				</li>
+				<!-- ENDIF filters.separator -->
+				<!-- END filters -->
+			</ul>
+		</div>
 	</div>
 
 	<hr />
@@ -39,6 +58,7 @@
 		</li>
 	<!-- END notifications -->
 	</ul>
+	<!-- IMPORT partials/paginator.tpl -->
 </div>
 
 
