@@ -5,6 +5,7 @@
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/stylesheet.css?{config.cache-buster}" />
 	<!-- IF bootswatchCSS --><link id="bootswatchCSS" href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
+	<noscript><style type="text/css">.noscript{display:block!important}.noscript.btn{display:inline-block!important}.yescript{display:none!important}</style></noscript>
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 
 	<script>

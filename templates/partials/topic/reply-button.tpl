@@ -1,5 +1,6 @@
 <div component="topic/reply/container" class="btn-group action-bar <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">
-	<button class="btn btn-primary" component="topic/reply">[[topic:reply]]</button>
+	<a href="{config.relative_path}/compose?tid={tid}&title={title}" component="topic/reply" class="btn btn-primary noscript">[[topic:reply]]</a>
+	<button class="btn btn-primary yescript" component="topic/reply">[[topic:reply]]</button>
 	<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 		<span class="caret"></span>
 	</button>
