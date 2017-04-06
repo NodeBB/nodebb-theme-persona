@@ -158,7 +158,7 @@
 									<!-- IF moderationNotes.user.picture -->
 									<img class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
 									<!-- ELSE -->
-									<div component="user/picture" data-uid="{moderationNotes.user.uid}" class="user-icon" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
+									<div class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
 									<!-- ENDIF moderationNotes.user.picture -->
 								</a>
 							</div>
