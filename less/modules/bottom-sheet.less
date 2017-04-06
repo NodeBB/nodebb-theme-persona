@@ -3,16 +3,16 @@
         .dropdown-menu {
             display: block;
         	visibility: hidden;
-        	
+
         	position: fixed;
         	left: 0;
         	right: 0;
         	bottom: 0;
-        
+
         	margin: 0;
         	padding: 0 5px;
         	max-height: 60%;
-        
+
         	box-shadow: 0 2px 6px rgba(0,0,0,0.35);
         	overflow: auto;
         	-webkit-overflow-scrolling: touch;
@@ -20,32 +20,32 @@
         	transition: transform 0.3s, visibility 0s 0.3s;
         	z-index: 995;
         	padding: 5px 0 10px;
-        	
-        	li {    
+
+        	li {
         	    a {
         	        padding: 10px 20px;
         	    }
-        		
+
         		&.divider {
         		    padding: 0;
         		}
-        
+
         		&.active {
         			background-color: @btn-primary-bg;
         			color: @btn-primary-color;
         		}
         	}
         }
-        
+
         &.open {
             .dropdown-menu {
                 transform: none;
             	visibility: visible;
             	transition-delay: 0s;
-            	top: initial;
+            	top: auto;
         	}
         }
-        
+
         .dropdown-backdrop {
             background-color: rgba(0, 0, 0, .3);
         }
