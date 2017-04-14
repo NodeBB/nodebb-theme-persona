@@ -3,9 +3,9 @@
 <div class="cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 	<div class="avatar-wrapper" data-uid="{uid}">
 		<!-- IF picture -->
-		<img src="{picture}" class="avatar avatar-rounded" />
+		<img src="{picture}" class="avatar avatar-lg avatar-rounded" />
 		<!-- ELSE -->
-		<div class="avatar avatar-rounded" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
+		<div class="avatar avatar-lg avatar-rounded" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
 		<!-- ENDIF picture -->
 		<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 
