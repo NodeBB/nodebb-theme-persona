@@ -42,6 +42,7 @@
 					<button class="btn btn-primary" type="button" data-action="send" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->>[[modules:chat.send]]</button>
 				</span>
 			</div>
+			<span component="chat/message/length">0</span>/<span>{maximumChatMessageLength}</span>
 		</div>
 		<!-- ELSE -->
 		<div class="alert alert-info">
