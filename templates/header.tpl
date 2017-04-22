@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{function.localeToHTML, defaultLang}">
+<html lang="{function.localeToHTML, userLang, defaultLang}">
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
