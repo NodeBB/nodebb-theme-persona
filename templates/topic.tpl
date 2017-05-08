@@ -20,7 +20,7 @@
 				<a href="{config.relative_path}/user/{deleter.userslug}">
 					<strong>{deleter.username}</strong>
 				</a>
-				<small class="timeago" title="{deletedTimestamp}"></small>
+				<small class="timeago" title="{deletedTimestampISO}"></small>
 				<!-- ENDIF deleter -->
 			</span>
 		</div>
@@ -42,11 +42,11 @@
 				</li>
 			<!-- END posts -->
 		</ul>
-		
+
 		<!-- IF config.enableQuickReply -->
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		<!-- ENDIF config.enableQuickReply -->
-		
+
 		<div class="post-bar">
 			<!-- IMPORT partials/post_bar.tpl -->
 		</div>

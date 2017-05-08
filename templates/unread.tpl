@@ -13,7 +13,7 @@
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				[[unread:mark_as_read]] <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
+			<ul class="dropdown-menu category-dropdown-menu" role="menu">
 
 				<li role="presentation">
 					<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
@@ -36,7 +36,7 @@
 				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
 				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
+			<ul class="dropdown-menu category-dropdown-menu" role="menu">
 				<li role="presentation" class="category">
 					<a role="menu-item" href="{config.relative_path}/{selectedFilter.url}"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
 				</li>
