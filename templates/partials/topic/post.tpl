@@ -95,7 +95,7 @@
 			<!-- END posts.replies.users -->
 		</span>
 
-		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">[[topic:replies_to_this_post, {posts.replies.count}]]</span>
+		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
 		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
