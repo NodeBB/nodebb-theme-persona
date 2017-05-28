@@ -3,7 +3,11 @@
 		<div class="list-group media">
 			<button type="button" class="list-group-item" data-type="default">
 				<div class="media-left">
-					<div class="user-icon media-object"></div>
+					<!-- IF defaultAvatar -->
+					<img class="media-object" src="{defaultAvatar}"  />
+					<!-- ELSE -->
+					<div class="user-icon media-object" style="background-color: {icon.bgColor};">{icon.text}</div>
+					<!-- ENDIF defaultAvatar -->
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">[[user:default_picture]]</h4>
