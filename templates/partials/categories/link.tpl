@@ -1,3 +1,6 @@
+<!-- IF ../isSection -->
+{../name}
+<!-- ELSE -->
 <!-- IF ../link -->
 <a href="{../link}" itemprop="url" target="_blank">
 <!-- ELSE -->
@@ -5,3 +8,4 @@
 <!-- ENDIF ../link -->
 {../name}
 </a>
+<!-- ENDIF ../isSection -->
