@@ -6,11 +6,14 @@
 				<h3>[[topic:move_topic]]</h3>
 			</div>
 			<div class="modal-body">
-				<!-- IMPORT partials/category_list.tpl -->
+				<label for="select-cid">[[topic:thread_tools.select_category]]</label>
+				<select class="form-control" name="select-cid" id="select-cid">
+					<option>[[topic:thread_tools.select_category]]</option>
+					<!-- BEGIN categories -->
+					<option value="{categories.cid}" data-name="{categories.name}" data-icon="{categories.icon}">{categories.text} <!-- IF categories.disabled -->([[global:disabled]])<!-- ENDIF categories.disabled --></option>
+					<!-- END categories -->
+				</select>
 
-				<p>
-					[[topic:disabled_categories_note]]
-				</p>
 				<div id="move-confirm" class="hide">
 					<hr />
 					<div class="alert alert-info">[[topic:topic_will_be_moved_to]] <strong><span id="confirm-category-name"></span></strong></div>
