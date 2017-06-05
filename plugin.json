@@ -13,10 +13,12 @@
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/slideout.min.js",
 		"lib/modules/quickreply.js",
 		"lib/client/chats.js"
 	],
+	"modules": {
+		"slideout.js": "node_modules/slideout/dist/slideout.min.js"
+	},
 	"acpScripts": [
 		"lib/admin.js"
 	]
