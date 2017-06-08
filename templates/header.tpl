@@ -31,7 +31,7 @@
 </head>
 
 <body class="{bodyClass} skin-{config.bootswatchSkin}">
-	<nav id="menu" class="hidden">
+	<nav id="menu" class="hidden slideout-menu">
 		<section class="menu-profile">
 			<!-- IF user.uid -->
 			<!-- IF user.picture -->
@@ -65,7 +65,7 @@
 		<!-- ENDIF config.loggedIn -->
 	</nav>
 
-	<nav class="hidden" id="chats-menu">
+	<nav id="chats-menu" class="hidden slideout-menu">
 		<!-- IF config.loggedIn -->
 		<section class="menu-section">
 			<h3 class="menu-section-title">

@@ -37,8 +37,5 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
-  },
-  "dependencies": {
-    "slideout": "^1.0.1"
   }
 }

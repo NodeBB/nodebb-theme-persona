@@ -1,13 +1,7 @@
 
 .slideout-menu {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	z-index: 0;
-	width: 256px;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	display: none;
 }
 
 /* iPhone 5 and other such devices */
@@ -74,8 +68,10 @@
 		}
 	}
 
-	#chats-menu {
-		right: 0;
+	.slit-open {
+		&, body {
+			overflow: hidden;
+		}
 	}
 
 	#menu {

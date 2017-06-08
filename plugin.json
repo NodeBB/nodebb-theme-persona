@@ -17,7 +17,7 @@
 		"lib/client/chats.js"
 	],
 	"modules": {
-		"slideout.js": "node_modules/slideout/dist/slideout.min.js"
+		"slit.js": "lib/slit.js"
 	},
 	"acpScripts": [
 		"lib/admin.js"
