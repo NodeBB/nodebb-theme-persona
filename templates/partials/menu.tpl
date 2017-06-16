@@ -96,12 +96,12 @@
 							</li>
 							<li role="presentation" class="divider"></li>
 							<li>
-								<a href="{relative_path}/user/{user.userslug}/edit">
+								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
 								</a>
 							</li>
 							<li>
-								<a href="{relative_path}/user/{user.userslug}/settings">
+								<a component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
 									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
 								</a>
 							</li>
