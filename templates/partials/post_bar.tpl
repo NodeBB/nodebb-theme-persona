@@ -7,6 +7,8 @@
 		<!-- END tags -->
 	</div>
 
+	<!-- IMPORT partials/topic/browsing-users.tpl -->
+
 	<div class="topic-main-buttons pull-right">
 		<span class="loading-indicator btn pull-left hidden" done="0">
 			<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
