@@ -4,20 +4,20 @@
 	</button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<!-- IF !isSelf -->
-		<!-- IF !config.disableChat -->
 		<!-- IF !banned -->
+		<!-- IF !config.disableChat -->
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
 			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
 		</li>
 		<li>
 			<a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
 		</li>
+		<!-- ENDIF !config.disableChat -->
 		<li>
 			<a component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
-		<!-- ENDIF !config.disableChat -->
 		<!-- ENDIF !isSelf -->
 		<li>
 			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
