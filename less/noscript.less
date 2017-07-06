@@ -81,37 +81,3 @@ noscript {
 		}
 	}
 }
-.noscript {
-	display: none !important;
-}
-#user-control-list-check:checked + #user-control-list {
-	display: block;
-}
-label.dropdown-toggle {
-	cursor: pointer;
-}
-.dropdown-menu > li > form > button {
-	text-align: left;
-	width: 100%;
-	background: none;
-	border: none;
-	display: block;
-	padding: 3px 20px;
-	clear: both;
-	font-weight: normal;
-	line-height: @line-height-base;
-	color: @dropdown-link-color;
-	white-space: nowrap; // prevent links from randomly breaking onto new lines
-
-	&:hover,
-	&:focus {
-		text-decoration: none;
-		color: @dropdown-link-hover-color;
-		background-color: @dropdown-link-hover-bg;
-	}
-}
-html[data-dir="rtl"] {
-	.dropdown-menu > li > form > button {
-		text-align: right;
-	}
-}
