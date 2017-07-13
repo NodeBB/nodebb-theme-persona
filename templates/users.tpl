@@ -1,5 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div widget-area="header">
+	<!-- BEGIN widgets.header -->
+	{{widgets.header.html}}
+	<!-- END widgets.header -->
+</div>
 <div class="users">
 	<div class="row">
 		<div class="col-lg-6">
