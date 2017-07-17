@@ -10,9 +10,13 @@
 			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
 		</a>
 	</div>
-	<div class="quickreply-message">
-		<textarea component="topic/quickreply/text" class="form-control" rows="5"></textarea>
-	</div>
-	<button component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
+	<form method="post" action="{config.relative_path}/compose">
+		<input type="hidden" name="tid" value="{tid}" />
+		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
+		<div class="quickreply-message">
+			<textarea name="content" component="topic/quickreply/text" class="form-control" rows="5"></textarea>
+		</div>
+		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
+	</form>
 </div>
 <!-- ENDIF loggedIn -->
