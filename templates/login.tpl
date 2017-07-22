@@ -2,7 +2,7 @@
 
 <div class="row">
 	<!-- IF allowLocalLogin -->
-	<div class="<!-- IF alternate_logins.length -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF alternate_logins.length -->">
+	<div class="<!-- IF alternate_logins -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF alternate_logins -->">
 		<div class="login-block">
 			<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -47,7 +47,7 @@
 	</div>
 	<!-- ENDIF allowLocalLogin -->
 
-	<!-- IF alternate_logins.length -->
+	<!-- IF alternate_logins -->
 	<div class="<!-- IF allowLocalLogin -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF allowLocalLogin -->">
 		<div class="alt-login-block">
 			<h4>[[login:alternative_logins]]</h4>
@@ -58,5 +58,5 @@
 			</ul>
 		</div>
 	</div>
-	<!-- ENDIF alternate_logins.length -->
+	<!-- ENDIF alternate_logins -->
 </div>
