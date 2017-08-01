@@ -118,7 +118,7 @@
 				<div component="flag/notes">
 					<!-- IF !notes.length -->
 					<div class="alert alert-success text-center">[[flags:no-notes]]</div>
-					<!-- ENDIF !notes.length --> 
+					<!-- ENDIF !notes.length -->
 					<!-- BEGIN notes -->
 					<div class="media">
 						<div class="media-left">
@@ -144,12 +144,12 @@
 			<div class="col-sm-6 col-md-4">
 				<label>[[flags:quick-links]]</label>
 				<ul>
-					<li><a href="{config.relative_path}/{type}/{targetId}">[[flags:go-to-target]]</a></li>
+					<li><a href="{config.relative_path}/{type_path}/{targetId}">[[flags:go-to-target]]</a></li>
 					<li>
 						[[flags:flagged-user]]
 						<ul>
-							<li><a href="{config.relative_path}/uid/{target.user.uid}">[[flags:view-profile]]</a></li>
-							<li><a href="#" data-chat="{target.user.uid}">[[flags:start-new-chat]]</a></li>
+							<li><a href="{config.relative_path}/uid/{target.uid}">[[flags:view-profile]]</a></li>
+							<li><a href="#" data-chat="{target.uid}">[[flags:start-new-chat]]</a></li>
 						</ul>
 					</li>
 					<li>
