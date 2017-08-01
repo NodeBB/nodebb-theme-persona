@@ -107,7 +107,7 @@
 							</li>
 							<!-- IF showModMenu -->
 							<li role="presentation" class="divider"></li>
-							<li class="dropdown-header">Moderator Tools</li>
+							<li class="dropdown-header">[[pages:moderator-tools]]</li>
 							<li>
 								<a href="{relative_path}/flags">
 									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
