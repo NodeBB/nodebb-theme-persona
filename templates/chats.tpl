@@ -1,6 +1,3 @@
-
-<!-- IMPORT partials/breadcrumbs.tpl -->
-
 <div class="row chats-page">
 	<div class="col-md-4" component="chat/nav-wrapper">
 		<div class="chat-search hidden-xs">
