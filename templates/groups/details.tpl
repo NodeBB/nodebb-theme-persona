@@ -70,7 +70,7 @@
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
 					<!-- ENDIF !group.pending.length -->
-					<!-- BEGIN pending -->
+					<!-- BEGIN group.pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
 							<!-- IF group.pending.picture -->
@@ -94,7 +94,7 @@
 							</div>
 						</td>
 					</tr>
-					<!-- END pending -->
+					<!-- END group.pending -->
 				</table>
 			</div>
 		</div>
@@ -122,7 +122,7 @@
 					<!-- IF !group.invited.length -->
 					<div class="alert alert-info">[[groups:invited.none]]</div>
 					<!-- ENDIF !group.invited.length -->
-					<!-- BEGIN invited -->
+					<!-- BEGIN group.invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
 							<!-- IF group.invited.picture -->
@@ -145,7 +145,7 @@
 							</div>
 						</td>
 					</tr>
-					<!-- END invited -->
+					<!-- END group.invited -->
 				</table>
 			</div>
 		</div>
