@@ -4,7 +4,7 @@
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
-<li class="{notifications.readClass}" data-nid="{notifications.nid}">
+<li class="{notifications.readClass}" data-nid="{notifications.nid}"<!-- IF ../index --> data-index="{../index}" data-tid="{../tid}"<!-- ENDIF ../index -->>
 	<!-- IF notifications.image -->
 	<!-- IF notifications.from -->
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="pull-left user-img avatar avatar-md avatar-rounded"src="{notifications.image}" /></a>
