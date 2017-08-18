@@ -63,14 +63,12 @@
 	</li>
 <!-- END postSharing -->
 
-<!-- IF config.loggedIn -->
-<!-- IF !posts.selfPost -->
+<!-- IF posts.display_flag_tools -->
 <li role="presentation" class="divider"></li>
 <li role="presentation">
 	<a component="post/flag" role="menuitem" tabindex="-1" href="#">
 		[[topic:flag_title]]
 	</a>
 </li>
-<!-- ENDIF !posts.selfPost -->
-<!-- ENDIF config.loggedIn -->
+<!-- ENDIF posts.display_flag_tools -->
 <!-- ENDIF !posts.deleted -->
