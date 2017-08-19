@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-persona",
-    "name": "Persona",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona",
+    "id": "nodebb-theme-soleclub",
+    "name": "Soleclub",
+    "description": "Custom theme for https://www.soleclub.de. Based on persona theme.",
+    "url": "https://github.com/psychobunny/nodebb-theme-soleclub",
     "screenshot": "screenshot.png"
 }

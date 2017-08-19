@@ -1,6 +1,6 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "5.0.30",
+  "name": "nodebb-theme-soleclub",
+  "version": "0.0.01",
   "nbbpm": {
     "compatibility": "^1.4.4"
   },
@@ -8,7 +8,7 @@
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/AlexGalax/nodebb-theme-soleclub"
   },
   "keywords": [
     "nodebb",
@@ -19,23 +19,13 @@
   ],
   "contributors": [
     {
-      "name": "Andrew Rodrigues",
-      "email": "andrew@designcreateplay.com",
-      "url": "https://github.com/psychobunny"
-    },
-    {
-      "name": "Julian Lam",
-      "email": "julian@designcreateplay.com",
-      "url": "https://github.com/julianlam"
-    },
-    {
-      "name": "Barış Soner Uşaklı",
-      "email": "baris@designcreateplay.com",
-      "url": "https://github.com/barisusakli"
+      "name": "Alex Galax",
+      "email": "alexgalax@protonmail.com",
+      "url": "https://github.com/AlexGalax"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/AlexGalax/nodebb-theme-soleclub/issues"
   }
 }
