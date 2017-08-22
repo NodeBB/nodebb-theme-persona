@@ -10,7 +10,7 @@
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
 				<!-- IF config.showSiteTitle -->
-				<a href="{relative_path}/">
+				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
 					<h1 class="navbar-brand forum-title">{title}</h1>
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
