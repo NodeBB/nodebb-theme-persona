@@ -1,15 +1,7 @@
 
 .slideout-menu {
-	position: fixed;
-	left: auto;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 0;
-	width: 256px;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	display: none;
 }
 
 /* iPhone 5 and other such devices */
@@ -57,9 +49,50 @@
 		-webkit-overflow-scrolling: touch;
 	}
 
-	#menu {
+	.navbar-toggle {
+		line-height: 10px;
 
+		&.pull-left {
+			margin-left: @navbar-padding-horizontal;
+			margin-right: 0;
+		}
+
+		.header & .notification-icon {
+			left: auto;
+			top: -3px;
+			right: -8px;
+
+			&.unread-count::after {
+				position: static;
+			}
+		}
+	}
+
+	html[data-slit=opening], html[data-slit=opened], html[data-slit=closing] {
+		&, body {
+			overflow: hidden;
+		}
+
+		#panel {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1040;
+				content: ' ';
+			}
+		}
+	}
+
+	#menu {
 		padding-top: 100px;
+	}
+
+	.slideout-menu {
 		background-color: #1D1F20;
 		background-image: linear-gradient(145deg, #1D1F20, #404348);
 
@@ -81,15 +114,15 @@
 				color: #fff;
 				position: relative;
 				height: 60px;
-				
+
 				&:hover {
 					background: none;
 				}
-	
+
 				&:not(:last-child) {
 					border-bottom: none;
 				}
-				
+
 				.main-avatar {
 					position: absolute;
 					top: 0;
@@ -102,11 +135,11 @@
 						border-radius: 0;
 					}
 				}
-				
+
 				.members {
 					display: none;
 				}
-				
+
 				.room-name {
 					display: block;
 					overflow: hidden;
@@ -114,7 +147,7 @@
 					text-overflow: ellipsis;
 					padding-left: 60px;
 				}
-				
+
 				.teaser-content {
 					padding-left: 60px;
 					display: block;
@@ -127,24 +160,26 @@
 			}
 		}
 
-		.menu-section .chat-list, .menu-section .notification-list-mobile {
-			.user-link {
-				display: inline;
-			}
-			.unread {
-				background-color: inherit;
-
-				a:after {
-					content: "new";
-					text-transform: uppercase;
-					color: #FFF;
-					margin-left: 5px;
-					font-size: 10px;
-					background: #C91106;
-					border: 1px solid #890405;
-					padding: 2px 3px;
-					border-radius: 5px;
+		.menu-section {
+			.chat-list, .notification-list-mobile {
+				.user-link {
+					display: inline;
 				}
+				.unread {
+					background-color: inherit;
+				}
+			}
+			.chat-list .unread .room-name::after,
+			.notification-list-mobile .unread a::after {
+				content: "new";
+				text-transform: uppercase;
+				color: #FFF;
+				margin-left: 5px;
+				font-size: 10px;
+				background: #C91106;
+				border: 1px solid #890405;
+				padding: 2px 3px;
+				border-radius: 5px;
 			}
 		}
 
@@ -186,7 +221,7 @@
 	}
 
 	.menu-section-list {
-		padding:0;
+		padding: 0;
 		margin: 10px 0;
 		list-style:none;
 
