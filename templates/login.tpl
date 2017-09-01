@@ -10,7 +10,7 @@
 				<p>{error}</p>
 			</div>
 
-			<form class="form-horizontal" role="form" method="post" target="login" id="login-form">
+			<form class="form-horizontal" role="form" method="post" id="login-form">
 				<div class="form-group">
 					<label for="username" class="col-lg-2 control-label">{allowLoginWith}</label>
 					<div class="col-lg-10">
@@ -32,6 +32,8 @@
 						</div>
 					</div>
 				</div>
+				<input type="hidden" name="_csrf" value="{config.csrf_token}" />
+				<input type="hidden" name="noscript" id="noscript" value="true" />
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
 						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
