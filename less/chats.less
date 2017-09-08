@@ -36,7 +36,7 @@
 		&.unread {
 			background: lighten(@brand-primary, 35%);
 			border-bottom: 0;
-			
+
 		}
 
 		.teaser-content {
@@ -162,7 +162,7 @@
 }
 
 .chat-modal {
-	z-index: 10000 !important;
+	z-index: 10000;
 }
 
 .expanded-chat, .chat-modal {
@@ -172,6 +172,7 @@
 		h4 {
 			font-size: 1.5rem;
 			font-weight: bold;
+			min-height: 20px;
 
 			i {
 				font-size: 14px;
@@ -185,6 +186,10 @@
 
 		.close {
 			padding: 0.5em;
+		}
+
+		.users-tag-container span:only-of-type [data-role="remove"] {
+			display: none;
 		}
 	}
 

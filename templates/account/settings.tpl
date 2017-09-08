@@ -124,16 +124,21 @@
 
 			<h4>[[global:privacy]]</h4>
 			<div class="well">
+				<!-- IF !hideEmail -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
 					</label>
 				</div>
+				<!-- ENDIF !hideEmail -->
+
+				<!-- IF !hideFullname -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
 					</label>
 				</div>
+				<!-- ENDIF !hideFullname -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>

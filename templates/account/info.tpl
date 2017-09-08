@@ -144,9 +144,43 @@
 					<h3 class="panel-title">[[user:info.moderation-note]]</h3>
 				</div>
 				<div class="panel-body">
-					<textarea component="account/moderation-note" class="form-control">{moderationNote}</textarea>
+					<textarea component="account/moderation-note" class="form-control"></textarea>
 					<br/>
-					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[global:save]]</button>
+					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+					<br/>
+					<div component="account/moderation-note/list">
+						<!-- BEGIN moderationNotes -->
+						<hr/>
+
+						<div class="clearfix">
+							<div class="icon pull-left">
+								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">
+									<!-- IF moderationNotes.user.picture -->
+									<img class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
+									<!-- ELSE -->
+									<div class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
+									<!-- ENDIF moderationNotes.user.picture -->
+								</a>
+							</div>
+
+							<div class="pull-left">
+								<strong>
+									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>
+								</strong>
+
+								<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+									<span class="timeago" title="{moderationNotes.timestampISO}"></span>
+								</div>
+								<br />
+
+								<div class="content">
+									{moderationNotes.note}
+								</div>
+							</div>
+						</div>
+						<!-- END moderationNotes -->
+					</div>
+					<!-- IMPORT partials/paginator.tpl -->
 				</div>
 			</div>
 			<!-- ENDIF isAdminOrGlobalModerator -->

@@ -1,7 +1,11 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header"></div>
+<div widget-area="header">
+	<!-- BEGIN widgets.header -->
+	{{widgets.header.html}}
+	<!-- END widgets.header -->
+</div>
 <div class="row">
-	<div class="topic col-lg-12 col-sm-12" has-widget-class="topic col-lg-9 col-sm-12" has-widget-target="sidebar">
+	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 
 		<h1 component="post/header" class="hidden-xs" itemprop="name">
 
@@ -13,7 +17,17 @@
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
 
-		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
+		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
+			<span class="pull-left">[[topic:deleted_message]]</span>
+			<span class="pull-right">
+				<!-- IF deleter -->
+				<a href="{config.relative_path}/user/{deleter.userslug}">
+					<strong>{deleter.username}</strong>
+				</a>
+				<small class="timeago" title="{deletedTimestampISO}"></small>
+				<!-- ENDIF deleter -->
+			</span>
+		</div>
 
 		<hr class="visible-xs" />
 
@@ -32,11 +46,11 @@
 				</li>
 			<!-- END posts -->
 		</ul>
-		
+
 		<!-- IF config.enableQuickReply -->
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		<!-- ENDIF config.enableQuickReply -->
-		
+
 		<div class="post-bar">
 			<!-- IMPORT partials/post_bar.tpl -->
 		</div>
@@ -56,9 +70,17 @@
 			</div>
 		</div>
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12 hidden"></div>
+	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+		<!-- BEGIN widgets.sidebar -->
+		{{widgets.sidebar.html}}
+		<!-- END widgets.sidebar -->
+	</div>
 </div>
-<div widget-area="footer"></div>
+<div widget-area="footer">
+	<!-- BEGIN widgets.footer -->
+	{{widgets.footer.html}}
+	<!-- END widgets.footer -->
+</div>
 
 <!-- IF !config.usePagination -->
 <noscript>

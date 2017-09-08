@@ -1,6 +1,10 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+<div widget-area="header">
+	<!-- BEGIN widgets.header -->
+	{{widgets.header.html}}
+	<!-- END widgets.header -->
+</div>
 <div class="tags">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
-
 	<!-- IF tags.length -->
 	<div class="row">
 		<div class="col-lg-12">

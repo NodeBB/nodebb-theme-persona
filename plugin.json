@@ -14,8 +14,7 @@
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout.min.js",
-		"lib/modules/quickreply.js",
-		"lib/client/chats.js"
+		"lib/modules/quickreply.js"
 	],
 	"acpScripts": [
 		"lib/admin.js"
