@@ -9,9 +9,7 @@
 		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl --><br/>
 			<!-- IF ../descriptionParsed -->
-			<span class="description">
-			{../descriptionParsed}
-			</span>
+			<span class="description">{../descriptionParsed}</span>
 			<!-- ENDIF ../descriptionParsed -->
 			<!-- IF !config.hideSubCategories -->
 			{function.generateChildrenCategories}
