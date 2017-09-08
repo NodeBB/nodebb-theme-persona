@@ -114,7 +114,7 @@
 					<textarea class="form-control" component="groups/members/bulk-invite" placeholder="[[groups:bulk-invite-instructions]]"></textarea>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group clearfix">
 					<button class="btn btn-default btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
 				</div>
 
