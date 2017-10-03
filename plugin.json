@@ -7,7 +7,8 @@
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
-		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
+		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
+		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags"}
 	],
 	"scripts": [
 		"lib/persona.js",

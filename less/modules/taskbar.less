@@ -137,11 +137,9 @@
 		}
 	}
 
-
-	@media (max-width: 979px) {
-		/*
-	 		Gets in the way of entering text when writing posts
-		*/
-		display: none !important;
+	@media (max-width: @screen-sm) {
+		.nav.navbar-nav {
+			margin: 0;
+		}
 	}
 }
