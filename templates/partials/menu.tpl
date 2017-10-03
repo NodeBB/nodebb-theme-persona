@@ -64,7 +64,7 @@
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
 							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
-							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;"<!-- ENDIF user.picture -->">{user.icon:text}</div>
+							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;<!-- ENDIF user.picture -->">{user.icon:text}</div>
 							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
@@ -157,7 +157,7 @@
 				<!-- IF config.searchEnabled -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
+						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET">
 							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 							<div class="hidden" id="search-fields">
 								<div class="form-group">
@@ -201,8 +201,10 @@
 						</div>
 
 						<ul class="dropdown-menu" role="menu">
-  							<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
-  						</ul>
+							<li>
+  								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+  							</li>
+						</ul>
 					</li>
 				</ul>
 
