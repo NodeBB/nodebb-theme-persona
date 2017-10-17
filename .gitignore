@@ -6,3 +6,4 @@ sftp-config.json
 *.sublime-workspace
 .idea
 .vscode
+node_modules/
