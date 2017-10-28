@@ -7,14 +7,18 @@
 		</div>
 
 		<h2 class="title">
-			<!-- IMPORT partials/categories/link.tpl --><br/>
+			<!-- IMPORT partials/categories/link.tpl -->
+		</h2>
+		<div>
 			<!-- IF ../descriptionParsed -->
-			<span class="description">{../descriptionParsed}</span>
+			<div class="description">
+				{../descriptionParsed}
+			</div>
 			<!-- ENDIF ../descriptionParsed -->
 			<!-- IF !config.hideSubCategories -->
 			{function.generateChildrenCategories}
 			<!-- ENDIF !config.hideSubCategories -->
-		</h2>
+		</div>
 		<span class="visible-xs pull-right">
 			<!-- IF ../teaser.timestampISO -->
 			<a class="permalink" href="{../teaser.url}">
