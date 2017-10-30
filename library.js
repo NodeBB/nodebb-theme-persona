@@ -1,6 +1,6 @@
 'use strict';
 
-var S = require.main.require('string');
+var S = require('string');
 var meta = module.parent.require('./meta');
 var user = module.parent.require('./user');
 
@@ -108,7 +108,7 @@ library.addUserToTopic = function(data, callback) {
 			if (err) {
 				return callback(err);
 			}
-			
+
 			data.templateData.loggedInUser = userdata;
 			callback(null, data);
 		});

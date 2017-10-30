@@ -31,6 +31,7 @@
 		<p class="hidden-xs">{name}</p>
 
 		<!-- IF !topics.length -->
+		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
 			[[category:no_topics]]
 		</div>
