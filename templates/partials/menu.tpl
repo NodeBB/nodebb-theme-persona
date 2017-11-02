@@ -114,6 +114,11 @@
 									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
 								</a>
 							</li>
+							<li>
+								<a href="{relative_path}/post-queue">
+									<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
+								</a>
+							</li>
 							<!-- IF isAdmin -->
 							<li>
 								<a href="{relative_path}/ip-blacklist">

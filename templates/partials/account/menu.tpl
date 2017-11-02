@@ -58,6 +58,7 @@
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>
 		<!-- IF !reputation:disabled -->
 		<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
 		<!-- IF !downvote:disabled -->
