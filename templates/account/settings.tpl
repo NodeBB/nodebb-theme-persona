@@ -111,18 +111,6 @@
 					</select>
 					<p class="help-block">[[user:digest_description]]</p>
 				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendChatNotifications" <!-- IF settings.sendChatNotifications -->checked<!-- ENDIF settings.sendChatNotifications -->/> <strong>[[user:send_chat_notifications]]</strong>
-					</label>
-				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendPostNotifications" <!-- IF settings.sendPostNotifications -->checked<!-- ENDIF settings.sendPostNotifications -->/> <strong>[[user:send_post_notifications]]</strong>
-					</label>
-				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
