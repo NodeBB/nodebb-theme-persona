@@ -1,9 +1,13 @@
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" id="mobile-menu">
+				<button type="button" class="navbar-toggle pull-left" id="mobile-menu">
 					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
+				</button>
+				<button type="button" class="navbar-toggle hidden" id="mobile-chats">
+					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments" data-content="0"></span>
+					<i class="fa fa-comment-o"></i>
 				</button>
 
 				<!-- IF brand:logo -->
