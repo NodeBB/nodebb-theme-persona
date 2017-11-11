@@ -25,7 +25,7 @@
 </head>
 
 <body class="{bodyClass} skin-{config.bootswatchSkin}">
-	<nav id="menu" class="hidden">
+	<nav id="menu" class="slideout-menu hidden">
 		<div class="menu-profile">
 			<!-- IF user.uid -->
 			<!-- IF user.picture -->
@@ -56,7 +56,10 @@
 			<ul class="menu-section-list notification-list-mobile" component="notifications/list"></ul>
 			<p class="menu-section-list"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></p>
 		</section>
-
+		<!-- ENDIF config.loggedIn -->
+	</nav>
+	<nav id="chats-menu" class="slideout-menu hidden">
+		<!-- IF config.loggedIn -->
 		<section class="menu-section" data-section="chats">
 			<h3 class="menu-section-title">
 				[[global:header.chats]]
@@ -67,7 +70,7 @@
 		<!-- ENDIF config.loggedIn -->
 	</nav>
 
-	<main id="panel">
+	<main id="panel" class="slideout-panel">
 		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->

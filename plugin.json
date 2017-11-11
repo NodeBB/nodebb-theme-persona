@@ -14,9 +14,11 @@
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/slideout.min.js",
 		"lib/modules/quickreply.js"
 	],
+	"modules": {
+		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
+	},
 	"acpScripts": [
 		"lib/admin.js"
 	]
