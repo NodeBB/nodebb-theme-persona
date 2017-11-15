@@ -7,6 +7,39 @@
 	bottom: 0px;
 
 	.alert {
+		&::before {
+			position: relative;
+			top: -15px;
+			left: -15px;
+			display: block;
+			height: 2px;
+			width: 0;
+			transition: inherit;
+		}
+
+		&.alert-info::before {
+			background-color: @material-info;
+		}
+
+		&.alert-warning::before {
+			background-color: @material-warning;
+		}
+
+		&.alert-success::before {
+			background-color: @material-success;
+		}
+
+		&.alert-danger::before {
+			background-color: @material-danger;
+		}
+
+		&.animate {
+			&::before {
+				width: ~"calc(100% + 50px)";
+				background-color: lighten(@material-info, 50%);
+			}
+		}
+
 		background-color: white;
 		border: 0;
 		border-left: 5px solid !important;
