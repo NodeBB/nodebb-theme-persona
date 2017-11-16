@@ -35,6 +35,30 @@
 			</div>
 			<!-- ENDIF allowUserHomePage -->
 
+			<h4>[[global:privacy]]</h4>
+			<div class="well">
+				<!-- IF !hideEmail -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !hideEmail -->
+
+				<!-- IF !hideFullname -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !hideFullname -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
+					</label>
+				</div>
+			</div>
+
 			<h4>[[user:browsing]]</h4>
 			<div class="well">
 				<div class="checkbox">
@@ -63,6 +87,18 @@
 				<p class="help-block">[[user:image_load_delay_help]]</p>
 			</div>
 
+			<h4>[[global:pagination]]</h4>
+			<div class="well">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
+					</label>
+				</div>
+
+				<strong>[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}"><br />
+				<strong>[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
+			</div>
+
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
 			<div class="well">
@@ -74,18 +110,6 @@
 						<!-- END dailyDigestFreqOptions -->
 					</select>
 					<p class="help-block">[[user:digest_description]]</p>
-				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendChatNotifications" <!-- IF settings.sendChatNotifications -->checked<!-- ENDIF settings.sendChatNotifications -->/> <strong>[[user:send_chat_notifications]]</strong>
-					</label>
-				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendPostNotifications" <!-- IF settings.sendPostNotifications -->checked<!-- ENDIF settings.sendPostNotifications -->/> <strong>[[user:send_post_notifications]]</strong>
-					</label>
 				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
@@ -109,43 +133,6 @@
 				</select>
 			</div>
 
-
-			<h4>[[global:pagination]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
-					</label>
-				</div>
-
-				<strong>[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}"><br />
-				<strong>[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
-			</div>
-
-			<h4>[[global:privacy]]</h4>
-			<div class="well">
-				<!-- IF !hideEmail -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
-					</label>
-				</div>
-				<!-- ENDIF !hideEmail -->
-
-				<!-- IF !hideFullname -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
-					</label>
-				</div>
-				<!-- ENDIF !hideFullname -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
-					</label>
-				</div>
-			</div>
-
 			<h4>[[topic:watch]]</h4>
 			<div class="well">
 				<div class="checkbox">
@@ -163,6 +150,23 @@
 
 			<h4>[[user:notifications_and_sounds]]</h4>
 			<div class="well">
+
+				<!-- BEGIN notificationSettings -->
+				<div class="row">
+					<div class="form-group col-xs-7">
+						<label>{notificationSettings.label}</label>
+					</div>
+					<div class="form-group col-xs-5">
+						<select class="form-control" data-property="{notificationSettings.name}">
+							<option value="none" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:none]]</option>
+							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
+							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
+							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+						</select>
+					</div>
+				</div>
+				<!-- END notificationSettings -->
+
 				<label for="notification">[[user:notification-sound]]</label>
 				<div class="row">
 					<div class="form-group col-xs-9">
