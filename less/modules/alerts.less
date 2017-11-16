@@ -34,9 +34,24 @@
 		}
 
 		&.animate {
+			&.alert-info::before {
+				background-color: lighten(@brand-info, 25%);
+			}
+			
+			&.alert-warning::before {
+				background-color: lighten(@brand-warning, 25%);
+			}
+			
+			&.alert-success::before {
+				background-color: lighten(@brand-success, 25%);
+			}
+			
+			&.alert-danger::before {
+				background-color: lighten(@brand-danger, 25%);
+			}
+			
 			&::before {
 				width: ~"calc(100% + 50px)";
-				background-color: lighten(@material-info, 50%);
 			}
 		}
 
