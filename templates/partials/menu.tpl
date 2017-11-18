@@ -7,7 +7,7 @@
 				</button>
 				<button type="button" class="navbar-toggle hidden" id="mobile-chats">
 					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments" data-content="0"></span>
-					<i class="fa fa-comment-o"></i>
+					<i class="fa fa-comment-o fa-fw"></i>
 				</button>
 
 				<!-- IF brand:logo -->
