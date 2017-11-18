@@ -167,6 +167,19 @@
 				</div>
 				<!-- END notificationSettings -->
 
+				<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
+				<div class="row">
+					<div class="form-group col-xs-9">
+						<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+							<!-- BEGIN upvoteNotifFreq -->
+							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
+								[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]
+							</option>
+							<!-- END upvoteNotifFreq -->
+						</select>
+					</div>
+				</div>
+
 				<label for="notification">[[user:notification-sound]]</label>
 				<div class="row">
 					<div class="form-group col-xs-9">
