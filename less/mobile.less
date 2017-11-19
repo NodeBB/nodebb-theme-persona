@@ -51,17 +51,15 @@
 	}
 
 	.navbar-toggle {
-		line-height: 10px;
-
-		&.pull-left {
-			margin-left: @navbar-padding-horizontal;
-			margin-right: 0;
-		}
+		padding: 10px 17px;
+		margin: 0;
+		line-height: 30px;
+		border: none;
 
 		.header & .notification-icon {
 			left: auto;
-			top: -3px;
-			right: -8px;
+			right: 7px;
+			top: 10px;
 
 			&.unread-count::after {
 				position: static;
@@ -249,7 +247,7 @@
 			right: 0;
 			z-index: 1040;
 			content: ' ';
-			background: rgba(0, 0, 0, 0.300);
+			background: rgba(256, 256, 256, 0.5);
 
 			opacity: 0;
 			visibility: hidden;
