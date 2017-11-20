@@ -238,7 +238,7 @@
 		animation: fade 250ms ease-in-out both;
 	}
 
-	.slideout-panel {
+	.slideout-open .slideout-panel {
 		&::after {
 			position: fixed;
 			top: 0;
@@ -247,19 +247,8 @@
 			right: 0;
 			z-index: 1040;
 			content: ' ';
-			background: rgba(256, 256, 256, 0.5);
 
 			opacity: 0;
-			visibility: hidden;
-			transition-property: opacity, visibility;
-			transition-duration: 200ms, 0s;
-			transition-delay: 0s, 100ms;
-			transition-timing-function: ease-in-out;
-		}
-
-		.slideout-open &::after {
-			opacity: 1;
-			visibility: visible;
 		}
 	}
 
