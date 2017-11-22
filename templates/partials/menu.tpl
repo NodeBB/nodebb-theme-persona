@@ -6,12 +6,14 @@
 					<span class="icon-bar"></span>
 				</button>
 
+				<!-- IF brand:logo -->
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
+				<!-- ENDIF brand:logo -->
 				<!-- IF config.showSiteTitle -->
 				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
-					<h1 class="navbar-brand forum-title">{title}</h1>
+					<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
 
@@ -63,8 +65,11 @@
 
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
-							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
-							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;<!-- ENDIF user.picture -->">{user.icon:text}</div>
+							<!-- IF user.picture -->
+							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"/>
+							<!-- ELSE -->
+							<span component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor}; display: block;">{user.icon:text}</span>
+							<!-- ENDIF user.picture --> 
 							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
@@ -183,7 +188,7 @@
 
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
-						<a href="#" id="reconnect" class="hide" title="Connection to {title} has been lost, attempting to reconnect...">
+						<a href="#" id="reconnect" class="hide" title="Connection to {config.siteTitle} has been lost, attempting to reconnect...">
 							<i class="fa fa-check"></i>
 						</a>
 					</li>

@@ -22,7 +22,7 @@
 		<span class="label label-danger">[[user:banned]]</span>
 		<!-- ENDIF posts.user.banned -->
 
-		<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 
 			<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
@@ -41,7 +41,7 @@
 				<!-- END custom_profile_info -->
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
-		</div>
+		</span>
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 
 	</small>

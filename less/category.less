@@ -130,13 +130,24 @@
 		color: @gray-light;
 	}
 
-	h2.title .description {
-		font-size: 65%;
+	.description {
+		font-size: 0.73125rem;
 		font-weight: normal;
 		line-height: 1;
 		color: @gray-light;
 		margin-top: 5px;
-		display: block;
+	}
+	
+	.description, .category-children {
+		margin-left: 62px;
+	}
+	
+	.category-children {
+		font-size: 15px;
+		
+		small {
+			color: #999999;
+		}
 	}
 }
 
