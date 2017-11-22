@@ -39,6 +39,6 @@
     "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
   },
   "dependencies": {
-    "string": "^3.3.3"
+    "striptags": "^3.1.0"
   }
 }
