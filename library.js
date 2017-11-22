@@ -29,7 +29,7 @@ library.addAdminNavigation = function(header, callback) {
 library.getTeasers = function(data, callback) {
 	data.teasers.forEach(function(teaser) {
 		if (teaser && teaser.content) {
-			teaser.content = striptags(teaser.content);
+			teaser.content = striptags(teaser.content, ['img']);
 		}
 	});
 	callback(null, data);
