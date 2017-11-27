@@ -1,15 +1,7 @@
 
 .slideout-menu {
-	position: fixed;
-	left: auto;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 0;
-	width: 256px;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	display: none;
 }
 
 /* iPhone 5 and other such devices */
@@ -58,9 +50,29 @@
 		-webkit-overflow-scrolling: touch;
 	}
 
-	#menu {
+	.navbar-toggle {
+		padding: 10px 17px;
+		margin: 0;
+		line-height: 30px;
+		border: none;
 
+		.header & .notification-icon {
+			left: auto;
+			right: 7px;
+			top: 10px;
+
+			&.unread-count::after {
+				position: static;
+			}
+		}
+	}
+
+	#menu {
 		padding-top: 100px;
+	}
+
+	.slideout-menu {
+		z-index: 10000 !important;
 		background-color: #1D1F20;
 		background-image: linear-gradient(145deg, #1D1F20, #404348);
 
@@ -128,24 +140,26 @@
 			}
 		}
 
-		.menu-section .chat-list, .menu-section .notification-list-mobile {
-			.user-link {
-				display: inline;
-			}
-			.unread {
-				background-color: inherit;
-
-				a:after {
-					content: "new";
-					text-transform: uppercase;
-					color: #FFF;
-					margin-left: 5px;
-					font-size: 10px;
-					background: #C91106;
-					border: 1px solid #890405;
-					padding: 2px 3px;
-					border-radius: 5px;
+		.menu-section {
+			.chat-list, .notification-list-mobile {
+				.user-link {
+					display: inline;
 				}
+				.unread {
+					background-color: inherit;
+				}
+			}
+			.chat-list .unread .room-name::after,
+			.notification-list-mobile .unread a::after {
+				content: "new";
+				text-transform: uppercase;
+				color: #FFF;
+				margin-left: 5px;
+				font-size: 10px;
+				background: #C91106;
+				border: 1px solid #890405;
+				padding: 2px 3px;
+				border-radius: 5px;
 			}
 		}
 
@@ -204,11 +218,6 @@
 		}
 	}
 
-	.slideout-panel {
-		position: relative;
-		z-index: 1;
-	}
-
 	.slideout-open,
 	.slideout-open body,
 	.slideout-open .slideout-panel {
@@ -216,13 +225,31 @@
 		overflow-y: hidden !important;
 	}
 
-	.slideout-open .slideout-menu {
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: .3;
+		}
+	}
+	.subnav-is-opened .main-nav__secondary-nav {
 		display: block;
+		animation: fade 250ms ease-in-out both;
 	}
 
-	.slideout-open {
-		overflow-y: hidden;
-		height: 100%;
+	.slideout-open .slideout-panel {
+		&::after {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1040;
+			content: ' ';
+
+			opacity: 0;
+		}
 	}
 
 	.menu-profile {
