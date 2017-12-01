@@ -20,7 +20,7 @@
 	{{customHTML}}
 	<!-- END -->
 	<!-- IF useCustomCSS -->
-	<style type="text/css">{{customCSS}}</style>
+	<style>{{customCSS}}</style>
 	<!-- END -->
 </head>
 
