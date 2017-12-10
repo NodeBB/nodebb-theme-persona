@@ -1,10 +1,8 @@
-<div class="tag">
-	<div class="clearfix">
-		<div class="pull-left">
-		<!-- IMPORT partials/breadcrumbs.tpl -->
-		</div>
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
-		<div class="pull-right">
+<div class="tag">
+	<div class="btn-toolbar">
+		<div class="pull-left">
 			<!-- IF loggedIn -->
 			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 			<!-- ELSE -->
