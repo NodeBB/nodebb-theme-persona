@@ -31,10 +31,12 @@
 		<p class="hidden-xs">{name}</p>
 
 		<!-- IF !topics.length -->
+		<!-- IF privileges.topics:create -->
 		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
 			[[category:no_topics]]
 		</div>
+		<!-- ENDIF privileges.topics:create -->
 		<!-- ENDIF !topics.length -->
 
 		<a href="{url}">

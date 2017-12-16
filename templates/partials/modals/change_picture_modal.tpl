@@ -38,7 +38,6 @@
 				</span>
 			</button>
 			<!-- ENDIF allowProfileImageUploads -->
-			<!-- IF config.hasImageUploadPlugin -->
 			<button type="button" class="btn btn-default" data-action="upload-url">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture_from_url]]
@@ -48,7 +47,6 @@
 					<i class="fa fa-link"></i>
 				</span>
 			</button>
-			<!-- ENDIF config.hasImageUploadPlugin -->
 			<!-- IF uploaded -->
 			<button type="button" class="btn btn-default" data-action="remove-uploaded">
 				<span class="hidden-xs hidden-sm">

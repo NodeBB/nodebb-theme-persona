@@ -31,8 +31,35 @@ html[data-dir="rtl"] {
 		margin-left: 15px;
 		margin-right: 0px;
 	}
-	
+
+	.categories .description, .categories .category-children {
+		margin-left: auto;
+		margin-right: 62px;
+	}
+
 	.page-user .posts-list .posts-list-item .user-img {
 		left: 0;
+	}
+
+	.slideout-menu .menu-section-list a, .slideout-menu .menu-section-list button {
+		text-align: right;
+	}
+
+	[component="chat/list"] {
+		.avatar-placeholder, .main-avatar {
+			right: 0;
+			left: auto;
+		}
+
+		.room-name, .teaser-content {
+			padding-right: 80px;
+			padding-left: 0;
+			text-align: right;
+		}
+
+	}
+
+	.slideout-menu .chat-list li .teaser-content, .slideout-menu .chat-list li .room-name {
+		padding-right: 60px;
 	}
 }

@@ -45,6 +45,11 @@
 				<i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move_all]]
 			</a>
 		</li>
+		<li>
+			<a component="topic/merge" href="#">
+				<i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.merge]]
+			</a>
+		</li>
 
 		<li class="divider"></li>
 

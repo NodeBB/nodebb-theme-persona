@@ -172,3 +172,19 @@
 	max-height: 500px;
 	overflow-y: auto;
 }
+
+.merge-topic-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+	.topics-section {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.merge-topic-card {
+		max-width: 33%;
+	}
+}
