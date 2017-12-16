@@ -295,7 +295,7 @@
 	}
 }
 
-.unread-count:after {
+.unread-count[data-content]:not([data-content=""]):not([data-content="0"]):after {
 	content: attr(data-content);
 	position: absolute;
 	left: 23px;
