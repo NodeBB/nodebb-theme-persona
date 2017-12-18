@@ -1,4 +1,4 @@
-<li component="chat/message" class="chat-message clear" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
+<li component="chat/message" class="chat-message clear<!-- IF ../deleted --> deleted<!-- END -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
 	<div class="message-header">
 		<a href="{config.relative_path}/user/{messages.fromUser.userslug}">
 			<!-- IF messages.fromUser.picture -->
@@ -25,6 +25,7 @@
 		<div class="pull-right btn-group controls">
 			<button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 			<button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
+			<button class="btn btn-xs btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
 		</div>
 		<!-- ENDIF messages.self -->
 		<!-- ENDIF !config.disableChatMessageEditing -->

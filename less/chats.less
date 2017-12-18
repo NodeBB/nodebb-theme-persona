@@ -208,6 +208,7 @@
 			font-weight: 300;
 			padding: 0 1.428rem;
 			margin-right: 1.428rem;
+			transition: opacity .5s ease;
 
 			&:first-child {
 				padding-top: 1.428rem;
@@ -226,6 +227,20 @@
 			&[data-break="true"]:first-child {
 				border-top: 0;
 				margin-top: -1.5px;
+			}
+
+			&.deleted {
+				opacity: 0.3;
+
+				.controls {
+					[data-action] {
+						display: none;
+					}
+
+					[data-action="restore"] {
+						display: inline;
+					}
+				}
 			}
 
 			.chat-user-image {
@@ -269,6 +284,10 @@
 
 			.controls {
 				display: none;
+
+				[data-action="restore"] {
+					display: none;
+				}
 			}
 
 			&:hover {
