@@ -1,10 +1,10 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle pull-left" id="mobile-menu">
-					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
+					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 					<i class="fa fa-lg fa-bars"></i>
 				</button>
 				<button type="button" class="navbar-toggle hidden" id="mobile-chats">
-					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments" data-content="0"></span>
+					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
 					<i class="fa fa-lg fa-comment-o"></i>
 				</button>
 
@@ -31,7 +31,7 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs" component="notifications">
 						<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
-							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
+							<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
@@ -49,7 +49,7 @@
 					<!-- IF !config.disableChat -->
 					<li class="chats dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
+							<i component="chat/icon" class="fa fa-comment-o fa-fw unread-count" data-content="{unreadCount.chat}"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
@@ -226,7 +226,7 @@
 					<li class="{navigation.class}">
 						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
-							<i class="fa fa-fw {navigation.iconClass}"></i>
+							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
 							<!-- ENDIF navigation.iconClass -->
 
 							<!-- IF navigation.text -->
