@@ -1,24 +1,42 @@
 
-<div id="chat-modal" class="chat-modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
+<div id="chat-modal" class="chat-modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none" data-name="{roomName}">
 	<div class="modal-dialog">
 		<div class="modal-content">
-
 			<div class="modal-header">
 				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<button type="button" class="close hidden-xs hidden-sm" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
 				<button type="button" class="close hidden-xs hidden-sm" data-action="minimize"><span aria-hidden="true"><i class="fa fa-minus"></i></span><span class="sr-only">[[modules:chat.minimize]]</span></button>
-				<button class="close" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
+				<div class="dropdown">
+					<button class="close" data-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
+					<ul class="dropdown-menu dropdown-menu-right" component="chat/controls">
+						<!-- IF users.length -->
+						<li class="dropdown-header">[[modules:chat.in-room]]</li>
+						<!-- BEGIN users -->
+						<li>
+							<a href="{config.relative_path}/uid/{../uid}">
+								<!-- IF ../picture -->
+								<img class="avatar avatar-sm" component="user/picture" src="{../picture}" align="left" itemprop="image" />
+								<!-- ELSE -->
+								<div class="avatar avatar-sm" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
+							</a>
+						</li>
+						<!-- END -->
+						<li role="separator" class="divider"></li>
+						<!-- END -->
+						<li class="dropdown-header">[[modules:chat.options]]</li>
+						<li>
+							<a href="#" data-action="members"><i class="fa fa-fw fa-plus"></i> [[modules:chat.add-users-to-room]]</a>
+						</li>
+						<li>
+							<a href="#" data-action="rename"><i class="fa fa-fw fa-edit"></i> [[modules:chat.rename-room]]</a>
+						</li>
+						<li>
+							<a href="#" data-action="leave"><i class="fa fa-fw fa-sign-out"></i> [[modules:chat.leave]]</a>
+						</li>
+					</ul>
+				</div>
 
-				<h4><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></h4>
-
-				<form component="chat/controls" style="display: none;">
-					<!-- IF showUserInput -->
-					<div class="users-tag-container">
-						<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
-					</div>
-					<!-- ENDIF showUserInput -->
-					<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
-				</form>
+				<h4 component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></h4>
 			</div>
 
 			<div class="modal-body">
@@ -26,13 +44,11 @@
 					<!-- IMPORT partials/chats/messages.tpl -->
 				</ul>
 
-				<div class="input-group">
-					<textarea component="chat/input" id="chat-message-input" rows="1" placeholder="[[modules:chat.placeholder]]" name="chat-message" class="form-control" <!-- IF !canReply -->readonly<!-- ENDIF !canReply -->></textarea>
-					<span class="input-group-btn">
-						<button id="chat-message-send-btn" class="btn btn-primary" href="#" type="button" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->>[[modules:chat.send]]</button>
-					</span>
+				<div component="chat/composer">
+					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>
+					<button class="btn btn-primary" type="button" data-action="send">[[modules:chat.send]]</button>
+					<span component="chat/message/remaining">{maximumChatMessageLength}</span>
 				</div>
-				<span component="chat/message/length">0</span>/<span>{maximumChatMessageLength}</span>
 			</div>
 		</div>
 	</div>
