@@ -15,6 +15,10 @@
 		padding-top: 0px;
 		padding-bottom: 0px;
 	}
+
+	[widget-area="header"], [widget-area="footer"] {
+		display: none;
+	}
 }
 
 /* Styles common to both full chat and chat modal */
@@ -104,8 +108,9 @@
 
 	[component="chat/header"] {
 		padding: @panel-heading-padding;
-		background-color: @panel-default-heading-bg;
-		border-bottom: 1px solid @gray-dark;
+		background-color: @gray-dark;
+		border-bottom: none;
+		color: @gray-lighter;
 
 		span {
 			font-weight: 500;
@@ -113,12 +118,13 @@
 
 		.close {
 			margin-left: 0.5em;
+			color: @gray-lighter;
 		}
 
 		.members {
 			a {
 				font-weight: 600;
-				color: @gray-dark;
+				color: @gray-lighter;
 			}
 		}
 
