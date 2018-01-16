@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-pulling@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pulling/-/pulling-1.1.0.tgz#d1460833b623fedcb73c71efb4cbb6824d990749"
+pulling@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pulling/-/pulling-1.1.1.tgz#948c72ec75d76c4ff41d6cec1ef1208c8d9d18f6"
 
-striptags@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.0.tgz#763e534338d9cf542f004a4b1eb099e32d295e44"
+striptags@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.1.tgz#c8c3e7fdd6fb4bb3a32a3b752e5b5e3e38093ebd"
