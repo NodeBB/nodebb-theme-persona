@@ -80,8 +80,10 @@
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats">
+			<!-- IF !reputation:disabled -->
 			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
 			<small>[[global:votes]]</small>
+			<!-- END -->
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats">
