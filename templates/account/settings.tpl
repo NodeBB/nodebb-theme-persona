@@ -126,11 +126,29 @@
 		<div class="col-xs-12 col-md-6">
 			<h4>[[global:language]]</h4>
 			<div class="well">
-				<select data-property="userLang" class="form-control">
-					<!-- BEGIN languages -->
-					<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
-					<!-- END languages -->
-				</select>
+				<div class="row">
+					<div class="form-group col-lg-12">
+						<select data-property="userLang" class="form-control">
+							<!-- BEGIN languages -->
+							<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
+							<!-- END languages -->
+						</select>
+					</div>
+				</div>
+				<!-- IF isAdmin -->
+				<!-- IF isSelf -->
+				<label>[[user:acp_language]]</label>
+				<div class="row">
+					<div class="form-group col-lg-12">
+						<select data-property="acpLang" class="form-control">
+							<!-- BEGIN acpLanguages -->
+							<option value="{acpLanguages.code}" <!-- IF acpLanguages.selected -->selected<!-- ENDIF acpLanguages.selected -->>{acpLanguages.name} ({acpLanguages.code})</option>
+							<!-- END acpLanguages -->
+						</select>
+					</div>
+				</div>
+				<!-- ENDIF isSelf -->
+				<!-- ENDIF isAdmin -->
 			</div>
 
 			<h4>[[topic:watch]]</h4>
