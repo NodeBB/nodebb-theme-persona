@@ -111,7 +111,7 @@
 							</div>
 						</div>
 						<!-- ENDIF !disableSignatures -->
-						<!-- allowSignature -->
+						<!-- ENDIF allowSignature -->
 
 						<input type="hidden" id="inputUID" value="{uid}"><br />
 
