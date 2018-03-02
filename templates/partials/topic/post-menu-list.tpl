@@ -29,6 +29,14 @@
 </li>
 <!-- END posts.tools -->
 
+<!-- IF posts.display_history -->
+<li role="presentation">
+	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa fa-history"></i></span> [[topic:view-history]]
+	</a>
+</li>
+<!-- END -->
+
 <!-- IF posts.display_move_tools -->
 <li role="presentation">
 	<a component="post/move" role="menuitem" tabindex="-1" href="#">
