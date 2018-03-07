@@ -45,6 +45,9 @@
   },
   "dependencies": {
     "striptags": "^3.1.1",
-    "pulling": "^1.1.1"
+    "pulling": "^1.1.1",
+    "request": "^2",
+    "lodash": "^4",
+    "bluebird": "^2"
   }
 }

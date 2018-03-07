@@ -8,7 +8,9 @@
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
-		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags"}
+		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags"},
+		{ "hook": "filter:middleware.renderHeader", "method": "renderHeader" },
+		{ "hook": "filter:middleware.renderFooter", "method": "renderFooter" }
 	],
 	"scripts": [
 		"lib/persona.js",

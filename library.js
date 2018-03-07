@@ -1,8 +1,14 @@
 'use strict';
 
+var Promise = require('bluebird');
 var striptags = require('striptags');
+var request = require('request');
+var nconf = require('nconf');
+var _ = require('lodash');
 var meta = module.parent.require('./meta');
 var user = module.parent.require('./user');
+
+Promise.promisifyAll(request);
 
 var library = {};
 
@@ -125,6 +131,54 @@ library.getLinkTags = function (data, callback) {
 	});
 
 	callback(null, data);
+};
+
+var url = nconf.get('websites:r1:url');
+
+var getHeader = _.throttle(function () {
+	return request.getAsync(url + '/partials/header').timeout(2000)
+		.spread(function (response, body) {
+			if (response.statusCode != 200) throw new Error();
+
+			return body;
+		})
+		.catch(function (err) {
+			getHeader.cancel();
+			return '';
+		});
+}, 1000 * 60 * 60);
+
+var getFooter = _.throttle(function () {
+	return request.getAsync(url + '/partials/footer').timeout(2000)
+		.spread(function (response, body) {
+			if (response.statusCode != 200) throw new Error();
+
+			return body;
+		})
+		.catch(function () {
+			getFooter.cancel();
+			return '';
+		});
+}, 1000 * 60 * 60);
+
+library.renderHeader = function(data, callback) {
+	return getHeader().then(header => {
+			data.templateValues.r1Header = header;
+			callback(null, data);
+	})
+	.catch(function () {
+			callback(null, data);
+	});
+};
+
+library.renderFooter = function(data, callback) {
+	return getFooter().then(footer => {
+			data.templateValues.r1Footer = footer.replace(/loginFpp/g, 'login?local=1');
+			callback(null, data);
+	})
+	.catch(err => {
+			callback(null, data);
+	});
 };
 
 module.exports = library;

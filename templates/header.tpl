@@ -24,7 +24,7 @@
 	<!-- END -->
 </head>
 
-<body class="{bodyClass} skin-{config.bootswatchSkin}">
+<body class="{bodyClass} skin-{config.bootswatchSkin} remove-top-padding">
 	<nav id="menu" class="slideout-menu hidden">
 		<div class="menu-profile">
 			<!-- IF user.uid -->
@@ -70,8 +70,9 @@
 		<!-- ENDIF config.loggedIn -->
 	</nav>
 
-	<main id="panel" class="slideout-panel">
-		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
+	<main id="panel" class="slideout-panel remove-top-padding">
+		<div class="hidden-xs">{r1Header}</div>
+		<nav class="navbar navbar-default header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
