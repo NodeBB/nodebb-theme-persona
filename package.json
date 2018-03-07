@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "8.0.0",
+  "name": "nodebb-theme-persona-ifsta",
+  "version": "0.1.0",
   "nbbpm": {
     "compatibility": "^1.8.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Persona theme for NodeBB, Customized for IFSTA",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/osufpp/nodebb-theme-persona-ifsta"
   },
   "keywords": [
     "nodebb",
@@ -32,11 +32,16 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Chase Meadors",
+      "email": "c.ed.mead@gmail.com",
+      "url": "https://github.com/cemulate"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/osufpp/nodebb-theme-persona-ifsta/issues"
   },
   "dependencies": {
     "striptags": "^3.1.1",
