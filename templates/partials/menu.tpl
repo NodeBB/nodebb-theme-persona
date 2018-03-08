@@ -150,18 +150,10 @@
 				</ul>
 				<!-- ELSE -->
 				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
-					<!-- IF allowRegistration -->
 					<li>
-						<a href="{relative_path}/register">
-							<i class="fa fa-pencil visible-xs-inline"></i>
-							<span>[[global:register]]</span>
-						</a>
-					</li>
-					<!-- ENDIF allowRegistration -->
-					<li>
-						<a href="{relative_path}/login">
+						<a href="{relative_path}/auth/ifsta" target="_top">
 							<i class="fa fa-sign-in visible-xs-inline"></i>
-							<span>[[global:login]]</span>
+							<span>Sign In / Register</span>
 						</a>
 					</li>
 				</ul>
