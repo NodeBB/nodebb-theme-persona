@@ -26,12 +26,7 @@
 }
 
 .footer-zone {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #a7a9ac;
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
 }
 
 .footer-zone .block-menu {
@@ -48,19 +43,12 @@
     font-size: 22px;
 }
 
-.footer-zone h5 {
+.footer-zone .block-menu .block-title {
     color: #000;
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.footer-zone h5 a {
-    color: #222;
-}
-
-.footer-zone h5 a:hover {
-    color: #000;
+    font-size: 14px;
 }
 
 .footer-zone ul {
@@ -69,7 +57,13 @@
 }
 
 .footer-zone li a {
+    padding: 0;
     color: #222;
+}
+
+.footer-zone li a:hover, .footer-zone li a:focus {
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 .footer-zone input#email {
