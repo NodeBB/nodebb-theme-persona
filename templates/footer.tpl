@@ -1,6 +1,7 @@
+{isSpider}
 		</div><!-- END container -->
 	</main>
-
+	<!-- IF !isSpider -->
 	<div class="topic-search hidden">
 		<div class="btn-group">
 			<button type="button" class="btn btn-default count"></button>
@@ -15,6 +16,8 @@
 			<p>[[global:reconnecting-message, {config.siteTitle}]]</p>
 		</div>
 	</div>
+	<!-- ENDIF !isSpider -->
+
 
 	<script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
 

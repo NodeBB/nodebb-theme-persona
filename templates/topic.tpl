@@ -17,17 +17,17 @@
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
 
-		<div component="topic/merged/message" class="alert alert-warning<!-- IF !merger --> hidden<!-- ENDIF !merger --> clearfix">
+		<!-- IF merger -->
+		<div component="topic/merged/message" class="alert alert-warning clearfix">
 			<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
 			<span class="pull-right">
-				<!-- IF merger -->
 				<a href="{config.relative_path}/user/{merger.userslug}">
 					<strong>{merger.username}</strong>
 				</a>
 				<small class="timeago" title="{mergedTimestampISO}"></small>
-				<!-- ENDIF merger -->
 			</span>
 		</div>
+		<!-- ENDIF merger -->
 
 		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
 			<span class="pull-left">[[topic:deleted_message]]</span>
