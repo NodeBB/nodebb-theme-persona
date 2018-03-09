@@ -1,5 +1,6 @@
 {isSpider}
 		</div><!-- END container -->
+		{r1Footer}
 	</main>
 	<!-- IF !isSpider -->
 	<div class="topic-search hidden">
