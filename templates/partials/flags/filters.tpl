@@ -31,6 +31,7 @@
 				<select class="form-control" id="filter-type" name="type">
 					<option value="">[[flags:filter-type-all]]</option>
 					<option value="post">[[flags:filter-type-post]]</option>
+					<option value="user">[[flags:filter-type-user]]</option>
 				</select>
 			</div>
 

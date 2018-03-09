@@ -63,5 +63,7 @@
 				<!-- END flags -->
 			</tbody>
 		</table>
+
+		<!-- IMPORT partials/paginator.tpl -->
 	</div>
 </div>
