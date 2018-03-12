@@ -36,7 +36,7 @@
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
 								<ul component="notifications/list" class="notification-list">
-									<li>
+									<li class="loading-text">
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
 									</li>
 								</ul>
@@ -54,8 +54,8 @@
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
 								<ul component="chat/list" class="chat-list chats-list">
-									<li>
-										<i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]
+									<li class="loading-text">
+										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 									</li>
 								</ul>
 							</li>
