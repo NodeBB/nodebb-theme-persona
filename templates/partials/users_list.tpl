@@ -38,7 +38,7 @@
 		<!-- IF section_flagged -->
 		<div title="flag count" class="flag-count">
 			<i class="fa fa-flag"></i>
-			<span class="formatted-number"><a href="{config.relative_path}/flags?targetUid={users.uid}">{users.flags}</a></span>
+			<span><a class="formatted-number" href="{config.relative_path}/flags?targetUid={users.uid}">{users.flags}</a></span>
 		</div>
 		<!-- ENDIF section_flagged -->
 	</div>
