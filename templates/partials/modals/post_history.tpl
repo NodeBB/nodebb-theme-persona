@@ -19,6 +19,6 @@
 
 	<hr />
 
-	<ul class="posts-list"></ul>
+	<ul class="posts-list diffs"></ul>
 </div>
 <!-- END -->
