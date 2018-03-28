@@ -34,8 +34,23 @@
 					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 
 						<div class="form-group post-search-item">
-							<label>[[search:posted-by]]</label>
-							<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+							<div class="row">
+								<div class="col-md-3">
+									<label>[[search:match-words]]</label>
+									<select id="match-words-filter" class="form-control">
+										<option value="all">[[search:all]]</option>
+										<option value="any">[[search:any]]</option>
+									</select>
+								</div>
+								<div class="col-md-3">
+									<label>[[search:posted-by]]</label>
+									<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+								</div>
+								<div class="col-md-6">
+									<label>[[search:has-tags]]</label>
+									<input type="text" class="form-control" id="has-tags">
+								</div>
+							</div>
 						</div>
 
 						<div class="form-group post-search-item">
@@ -48,10 +63,6 @@
 							<input type="checkbox" id="search-children"> [[search:search-child-categories]]
 						</div>
 
-						<div class="form-group post-search-item">
-							<label>[[search:has-tags]]</label>
-							<input type="text" class="form-control" id="has-tags">
-						</div>
 
 						<div class="form-group post-search-item">
 							<label>[[search:reply-count]]</label>
