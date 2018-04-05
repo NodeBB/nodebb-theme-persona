@@ -82,7 +82,8 @@
 						<div class="control-group">
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
-								<select class="form-control" id="groupTitle" data-property="groupTitle">
+
+								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMutlipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									<!-- BEGIN groups -->
 									<!-- IF groups.userTitleEnabled -->
