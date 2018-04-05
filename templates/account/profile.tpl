@@ -70,7 +70,7 @@
 
 			<!-- IF websiteName -->
 			<span>[[user:website]]</span>
-			<strong><a href="{websiteLink}" rel="nofollow">{websiteName}</a></strong>
+			<strong><a href="{websiteLink}" rel="nofollow noopener noreferrer">{websiteName}</a></strong>
 			<!-- ENDIF websiteName -->
 
 			<!-- IF location -->

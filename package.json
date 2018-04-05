@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-persona",
-  "version": "8.0.0",
+  "version": "8.0.9",
   "nbbpm": {
     "compatibility": "^1.8.0"
   },
@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "striptags": "^3.1.1",
-    "pulling": "^1.1.1"
+    "pulling": "^1.1.2"
   }
 }
