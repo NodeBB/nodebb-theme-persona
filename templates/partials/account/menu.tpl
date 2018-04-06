@@ -64,6 +64,7 @@
 		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
 		<!-- ENDIF !downvote:disabled -->
 		<!-- ENDIF !reputation:disabled -->
+		<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
 		<!-- ENDIF showHidden -->
 
 		<!-- BEGIN profile_links -->
