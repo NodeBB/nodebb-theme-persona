@@ -1,4 +1,3 @@
-{isSpider}
 		</div><!-- END container -->
 	</main>
 	<!-- IF !isSpider -->
