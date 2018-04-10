@@ -3,6 +3,12 @@
 	<div class="row">
 		<h1>{title}</h1>
 
+        <!-- IF privateUploads -->
+        <div class="alert alert-info text-center">[[uploads:private-uploads-info]]</div>
+        <!-- ELSE -->
+        <div class="alert alert-info text-center">[[uploads:public-uploads-info]]</div>
+        <!-- ENDIF privateUploads -->
+
 		<!-- IF !uploads.length -->
 			<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
 		<!-- ENDIF !uploads.length -->
