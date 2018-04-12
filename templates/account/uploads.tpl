@@ -23,7 +23,7 @@
                 </thead>
                 <tbody>
                     <!-- BEGIN uploads -->
-                    <tr data-url="{uploads.url}">
+                    <tr data-name="{uploads.name}">
                         <td>
                             <a href="{config.relative_path}{uploads.url}">{uploads.url}</a>
                         </td>
