@@ -43,13 +43,27 @@
 		<div class="col-sm-6">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<p class="lead">[[user:consent.right_of_access]]</p>
+					<p><strong>[[user:consent.right_of_access]]</strong></p>
 					<p>[[user:consent.right_of_access_description]]</p>
-					<p class="lead">[[user:consent.right_to_rectification]]</p>
+					<p><strong>[[user:consent.right_to_rectification]]</strong></p>
 					<p>[[user:consent.right_to_rectification_description]]</p>
-					<p class="lead">[[user:consent.right_to_erasure]]</p>
+					<p><strong>[[user:consent.right_to_erasure]]</strong></p>
 					<p>[[user:consent.right_to_erasure_description]]</p>
-					<p class="lead">[[user:consent.right_to_data_portability]]</p>
+					<p><strong>[[user:consent.right_to_data_portability]]</strong></p>
 					<p>[[user:consent.right_to_data_portability_description]]</p>
+
+					<div class="btn-group-vertical btn-block">
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/profile">
+							<i class="fa fa-download"></i> [[user:consent.export_profile]]
+						</a>
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/posts">
+							<i class="fa fa-download"></i> [[user:consent.export_posts]]
+						</a>
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/uploads">
+							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
+						</a>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
