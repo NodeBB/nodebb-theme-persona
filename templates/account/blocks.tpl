@@ -7,11 +7,11 @@
 			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 				<!-- IMPORT partials/users_list.tpl -->
 			</ul>
-			
+
 			<!-- IF !users.length -->
 			<div class="alert alert-warning text-center">[[user:has_no_blocks]]</div>
 			<!-- ENDIF !users.length -->
-			
+
 			<!-- IMPORT partials/paginator.tpl -->
 		</div>
 		<div class="col-sm-4 col-xs-12">
