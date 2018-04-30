@@ -22,7 +22,7 @@
 				<!-- END -->
 				<li class="dropdown-header">[[modules:chat.options]]</li>
 				<li>
-					<a href="#" data-action="members"><i class="fa fa-fw fa-plus"></i> [[modules:chat.add-users-to-room]]</a>
+					<a href="#" data-action="members"><i class="fa fa-fw fa-cog"></i> [[modules:chat.manage-room]]</a>
 				</li>
 				<li>
 					<a href="#" data-action="rename"><i class="fa fa-fw fa-edit"></i> [[modules:chat.rename-room]]</a>
