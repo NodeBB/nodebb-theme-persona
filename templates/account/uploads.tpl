@@ -37,9 +37,7 @@
                 </tbody>
             </table>
 
-			<!-- IF config.usePagination -->
-				<!-- IMPORT partials/paginator.tpl -->
-			<!-- ENDIF config.usePagination -->
+			<!-- IMPORT partials/paginator.tpl -->
 		</div>
 	</div>
 </div>
