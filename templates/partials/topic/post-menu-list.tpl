@@ -21,14 +21,6 @@
 	</a>
 </li>
 
-<!-- BEGIN posts.tools -->
-<li role="presentation">
-	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
-		<span class="menu-icon"><i class="fa {posts.tools.icon}"></i></span> {{posts.tools.html}}
-	</a>
-</li>
-<!-- END posts.tools -->
-
 <!-- IF posts.display_history -->
 <li role="presentation">
 	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
@@ -59,9 +51,18 @@
 </li>
 <!-- ENDIF posts.display_ip_ban -->
 <!-- ENDIF posts.ip -->
-
-<li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
+
+<!-- BEGIN posts.tools -->
+<li role="presentation">
+	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa {posts.tools.icon}"></i></span> {{posts.tools.html}}
+	</a>
+</li>
+<!-- END posts.tools -->
+<!-- IF posts.toolsVisible -->
+<li role="presentation" class="divider"></li>
+<!-- ENDIF posts.toolsVisible -->
 
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
