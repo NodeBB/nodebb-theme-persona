@@ -1,4 +1,4 @@
-		</div><!-- END container -->
+		</div><!-- /.container#content -->
 	</main>
 	<!-- IF !isSpider -->
 	<div class="topic-search hidden">

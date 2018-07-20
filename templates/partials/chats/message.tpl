@@ -15,6 +15,9 @@
 		<span class="label label-danger">[[user:deleted]]</span>
 		<!-- END -->
 		<span class="chat-timestamp timeago" title="{messages.timestampISO}"></span>
+		<!-- IF isAdminOrGlobalMod -->
+		<small class="chat-ip pull-right" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></small>
+		<!-- ENDIF isAdminOrGlobalMod -->
 	</div>
 	<div component="chat/message/body" class="message-body">
 		<!-- IF messages.edited -->

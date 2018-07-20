@@ -14,7 +14,9 @@
 						</div>
 					</div>
 					<ul class="list-group">
+						<!-- IF allowProfilePicture -->
 						<a id="changePictureBtn" href="#" class="list-group-item">[[user:change_picture]]</a>
+						<!-- ENDIF allowProfilePicture -->
 						<!-- IF !username:disableEdit -->
 						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change_username]]</a>
 						<!-- ENDIF !username:disableEdit -->
@@ -83,7 +85,7 @@
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
 
-								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMutlipleBadges -->>
+								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									<!-- BEGIN groups -->
 									<!-- IF groups.userTitleEnabled -->

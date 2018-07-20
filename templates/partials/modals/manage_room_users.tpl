@@ -1,5 +1,6 @@
 <!-- BEGIN users -->
 <li class="list-group-item">
+	<!-- IF ../canKick --><button class="pull-right btn btn-xs btn-link" data-action="kick" data-uid="{../uid}">[[modules:chat.kick]]</button><!-- END -->
 	<!-- IF ../picture -->
 	<img class="avatar avatar-sm" component="user/picture" data-uid="{../uid}" src="{../picture}" align="left" itemprop="image" />
 	<!-- ELSE -->

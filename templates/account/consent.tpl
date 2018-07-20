@@ -3,7 +3,7 @@
 	<h2>[[user:consent.title]]</h2>
 	<p class="lead">[[user:consent.lead]]</p>
 	<p>[[user:consent.intro]]</p>
-	
+
 	<hr />
 
 	<div class="row">
@@ -53,13 +53,13 @@
 					<p>[[user:consent.right_to_data_portability_description]]</p>
 
 					<div class="btn-group-vertical btn-block">
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/profile">
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/profile">
 							<i class="fa fa-download"></i> [[user:consent.export_profile]]
 						</a>
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/posts">
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/posts">
 							<i class="fa fa-download"></i> [[user:consent.export_posts]]
 						</a>
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/uploads">
+						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/uploads">
 							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
 						</a>
 					</div>
