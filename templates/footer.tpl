@@ -17,8 +17,21 @@
 	</div>
 	<!-- ENDIF !isSpider -->
 
+
+	<script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
+
+	<!-- BEGIN scripts -->
+	<script defer type="text/javascript" src="{scripts.src}"></script>
+	<!-- END scripts -->
+
 	<script>
-		require(['forum/footer']);
+		window.addEventListener('load', function () {
+			require(['forum/footer']);
+
+			<!-- IF useCustomJS -->
+			{{customJS}}
+			<!-- ENDIF useCustomJS -->
+		});
 	</script>
 
 	<div class="hide">
