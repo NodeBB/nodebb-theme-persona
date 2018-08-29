@@ -13,7 +13,7 @@
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
 		</div>
-		<div class="markread btn-group pull-right category-dropdown-container<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
+		<div class="markread btn-group pull-right category-dropdown-container bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				[[unread:mark_as_read]] <span class="caret"></span>
 			</button>
@@ -35,7 +35,7 @@
 			</ul>
 		</div>
 
-		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container">
+		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
 				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
@@ -52,7 +52,7 @@
 			</ul>
 		</div>
 
-		<div class="btn-group pull-right">
+		<div class="btn-group pull-right bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			{selectedFilter.name} <span class="caret"></span>
 			</button>
