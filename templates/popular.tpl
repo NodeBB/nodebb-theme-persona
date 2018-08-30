@@ -14,7 +14,7 @@
 			<!-- ENDIF loggedIn -->
 		</div>
 
-		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
+		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container bottom-sheet <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
 				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
@@ -31,7 +31,7 @@
 			</ul>
 		</div>
 
-		<div class="btn-group pull-right <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
+		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			{selectedFilter.name} <span class="caret"></span>
 			</button>
@@ -44,7 +44,7 @@
 			</ul>
 		</div>
 
-		<div class="btn-group pull-right <!-- IF !terms.length -->hidden<!-- ENDIF !terms.length -->">
+		<div class="btn-group pull-right bottom-sheet <!-- IF !terms.length -->hidden<!-- ENDIF !terms.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			{selectedTerm.name} <span class="caret"></span>
 			</button>
