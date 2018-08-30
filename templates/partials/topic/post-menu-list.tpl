@@ -15,11 +15,13 @@
 		<div class="inline menu-icon"><i class="fa fa-history"></i></div> <span>[[topic:restore]]</span>
 	</a>
 </li>
+<!-- IF posts.display_purge_tools -->
 <li role="presentation">
 	<a component="post/purge" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
 		<span class="menu-icon"><i class="fa fa-eraser"></i></span> [[topic:purge]]
 	</a>
 </li>
+<!-- END -->
 
 <!-- IF posts.display_history -->
 <li role="presentation">
