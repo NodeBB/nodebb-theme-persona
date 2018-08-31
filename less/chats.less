@@ -60,7 +60,7 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			border-top: 1px solid @gray-lighter;
-		
+
 			li {
 				position: relative;
 				clear: both;
@@ -73,14 +73,14 @@
 				border-bottom: 1px solid;
 				border-color: #eee;
 				background: #fff;
-		
+
 				i {
 					position: relative;
 					left: -30px;
 					font-size: 20px;
 					top: -20px;
 				}
-		
+
 				img, .user-icon {
 					.user-icon-style(50px, 2.4rem, 50%);
 					margin-top: 4px;
@@ -186,6 +186,12 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	border-top: 1px solid @gray-lighter;
+
+	> li.no_active {
+		height: initial;
+    	padding-bottom: 0.5rem;
+    	text-align: center;
+	}
 
 	> li {
 		position: relative;
