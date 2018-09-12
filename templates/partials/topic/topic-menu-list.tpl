@@ -14,7 +14,9 @@
 <!-- IF privileges.deletable -->
 <li><a component="topic/delete" href="#" class="<!-- IF deleted -->hidden<!-- ENDIF deleted -->"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]</a></li>
 <li><a component="topic/restore" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->"><i class="fa fa-fw fa-history"></i> [[topic:thread_tools.restore]]</a></li>
+<!-- IF privileges.purge -->
 <li><a component="topic/purge" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->"><i class="fa fa-fw fa-eraser"></i> [[topic:thread_tools.purge]]</a></li>
+<!-- END -->
 <!-- IF privileges.isAdminOrMod -->
 <li><a component="topic/delete/posts" href="#"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
 <!-- ENDIF privileges.isAdminOrMod -->

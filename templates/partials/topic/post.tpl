@@ -36,9 +36,9 @@
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
 				&#124;
-				<!-- BEGIN custom_profile_info -->
+				<!-- BEGIN posts.user.custom_profile_info -->
 				{posts.user.custom_profile_info.content}
-				<!-- END custom_profile_info -->
+				<!-- END posts.user.custom_profile_info -->
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</span>
