@@ -122,6 +122,13 @@
 						<!-- BEGIN history.bans -->
 						<li>
 							<p>
+								<a href="{config.relative_path}/user/{history.bans.user.userslug}">
+									<!-- IF history.bans.user.picture -->
+									<img title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded" src="{history.bans.user.picture}" />
+									<!-- ELSE -->
+									<span title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded user-icon" style="background-color: {history.bans.user.icon:bgColor};">{history.bans.user.icon:text}</span>
+									<!-- ENDIF history.bans.user.picture -->
+								</a>
 								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
 								<!-- IF ../until -->
 								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
