@@ -37,7 +37,7 @@
 	<div class="row">
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-			<button class="btn btn-primary btn-block">Submit</button>
+			<button class="btn btn-primary btn-block">[[topic:composer.submit]]</button>
 			<p class="text-center">
 				<br />
 				<a target="_top" href="{config.relative_path}/register/abort">[[register:cancel_registration]]</a>
