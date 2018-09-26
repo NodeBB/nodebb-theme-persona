@@ -7,7 +7,9 @@
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{loggedInUser.uid}" class="user-icon" style="background-color: {loggedInUser.icon:bgColor};">{loggedInUser.icon:text}</div>
 			<!-- ENDIF loggedInUser.picture -->
+			<!-- IF loggedInUser.status -->
 			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
+			<!-- ENDIF loggedInUser.status -->
 		</a>
 	</div>
 	<form method="post" action="{config.relative_path}/compose">
