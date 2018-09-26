@@ -37,11 +37,12 @@
 	<div class="row">
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-			<button class="btn btn-primary btn-block">Submit</button>
-			<p class="text-center">
-				<br />
-				<a target="_top" href="{config.relative_path}/register/abort">[[register:cancel_registration]]</a>
-			</p>
+			<button class="btn btn-primary btn-block">[[topic:composer.submit]]</button>
 		</div>
 	</div>
+</form>
+<form role="form" method="post" action="{config.relative_path}/register/abort">
+	<p class="text-center">
+		<button class="btn btn-link">[[register:cancel_registration]]</button>
+	</p>
 </form>
