@@ -28,7 +28,6 @@
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]]</a></li>
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->
@@ -62,6 +61,7 @@
 		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
 
 		<!-- IF showHidden -->
+		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>
