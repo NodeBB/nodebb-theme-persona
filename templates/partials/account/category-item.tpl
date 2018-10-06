@@ -1,7 +1,7 @@
 <li component="categories/category" data-cid="{../cid}" data-parent-cid="{../parentCid}" class="row clearfix">
 	<meta itemprop="name" content="{../name}">
 
-	<div class="content col-xs-12 col-md-10 col-sm-12">
+	<div class="content col-xs-12 col-md-10 col-sm-12 depth-{../depth}">
 		<div class="icon pull-left" style="{function.generateCategoryBackground}">
 			<i class="fa fa-fw {../icon}"></i>
 		</div>

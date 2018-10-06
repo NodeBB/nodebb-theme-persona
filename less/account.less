@@ -168,7 +168,7 @@
 
 	@media (min-width: @screen-md-min) {
 		margin-top: 300px;
-		
+
 		.cover,  .container {
 			height: 300px;
 
@@ -236,7 +236,7 @@
 			}
 		}
 	}
-	
+
 	.show-success {
 		.form-control {
 			border-color: #5cb85c;
@@ -247,14 +247,14 @@
 		    -webkit-background-size: 1.25rem 1.25rem;
 		    background-size: 1.25rem 1.25rem;
 		}
-		
+
 		.form-feedback {
 			color: #5cb85c;
 			display: block;
 			margin-top: .25rem;
 		}
 	}
-	
+
 	.show-danger {
 		.form-control {
 			border-color: #d9534f;
@@ -265,7 +265,7 @@
 		    -webkit-background-size: 1.25rem 1.25rem;
 		    background-size: 1.25rem 1.25rem;
 		}
-		
+
 		.form-feedback {
 			color: #d9534f;
 			display: block;
@@ -275,6 +275,23 @@
 
 	[component="account/moderation-note/list"] .icon {
 		margin-right: 10px;
+	}
+
+	.categories {
+		[component="categories/category"] {
+			.depth-1 {
+				padding-left: 50px;
+			}
+			.depth-2 {
+				padding-left: 100px;
+			}
+			.depth-3 {
+				padding-left: 150px;
+			}
+			.depth-4 {
+				padding-left: 150px;
+			}
+		}
 	}
 }
 
@@ -346,7 +363,7 @@
 		line-height: 46px;
 		margin: 0;
 	}
-	
+
 	.modal-body .btn {
 		padding: 10px 5px;
 		font-size: 13px;
