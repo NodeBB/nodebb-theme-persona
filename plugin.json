@@ -21,5 +21,6 @@
 	},
 	"acpScripts": [
 		"lib/admin.js"
-	]
+	],
+	"languages": "languages"
 }
