@@ -269,7 +269,7 @@
 	padding: 0;
 	background: none;
 
-	@media (max-width: @screen-sm-max) {
+	@media (max-width: @screen-xs-max) {
 		li {
 			display: none;
 		}
@@ -280,6 +280,10 @@
 
 		li:nth-last-child(2):before {
 			display: none;
+		}
+
+		li:last-child {
+			white-space: normal;
 		}
 	}
 }
