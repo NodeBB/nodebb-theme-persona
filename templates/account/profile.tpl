@@ -87,6 +87,7 @@
 			<strong>{age}</strong>
 			<!-- ENDIF age -->
 		</div>
+		<!-- IMPORT partials/account/custom_fields_flex.tpl -->
 	</div>
 
 
