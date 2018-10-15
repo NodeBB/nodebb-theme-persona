@@ -457,14 +457,15 @@
 				.user-select(none);
 			}
 
-			.chat-ip, .chat-edited {
-				margin-left: 5px;
-				margin-top: 2px;
+			.chat-edited {
+				position: absolute;
+				top: 2px;
+				left: -20px;
 			}
 
 			.message-body {
+				position: relative;
 				margin-left: 45px;
-				overflow-y: hidden;
 
 				p {
 					margin: 7px 0 0 0;
@@ -482,6 +483,9 @@
 
 			.controls {
 				display: none;
+				position: absolute;
+				top: 0;
+				left: -43px;
 
 				[data-action="restore"] {
 					display: none;
@@ -491,6 +495,9 @@
 			&:hover {
 				.controls {
 					display: block;
+				}
+				.chat-edited {
+					display: none;
 				}
 			}
 		}
