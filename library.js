@@ -111,6 +111,13 @@ library.addUserToTopic = function(data, callback) {
 			callback(null, data);
 		});
 	} else {
+		data.templateData.loggedInUser =  {
+			uid: 0,
+			username: '[[global:guest]]',
+			picture: user.getDefaultAvatar(),
+			'icon:text': '?',
+			'icon:bgColor': '#aaa',
+		};
 		callback(null, data);
 	}
 };

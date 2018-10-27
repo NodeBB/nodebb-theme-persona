@@ -1,4 +1,4 @@
-<!-- IF loggedIn -->
+<!-- IF privileges.topics:reply -->
 <div class="clearfix quick-reply">
 	<div class="icon pull-left hidden-xs">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
@@ -21,4 +21,4 @@
 		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
 	</form>
 </div>
-<!-- ENDIF loggedIn -->
+<!-- ENDIF privileges.topics:reply -->
