@@ -5,7 +5,7 @@
 		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-6 col-sm-9 col-xs-10 content">
-			<div class="avatar pull-left" title="{topics.user.username}">
+			<div class="avatar pull-left" title="{function.showDisplayName, topics.user}">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
 					<!-- IF topics.thumb -->
@@ -64,7 +64,7 @@
 				</span>
 				<!-- ENDIF topics.tags.length -->
 
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
+				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{function.showDisplayName, topics.user}</a></small>
 				<small class="visible-xs-inline">
 					<i class="fa fa-reply"></i> &nbsp;
 					<!-- IF topics.teaser.timestamp -->
@@ -108,9 +108,9 @@
 				<p>
 					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
 						<!-- IF topics.teaser.user.picture -->
-						<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
+						<img title="{function.showDisplayName, topics.teaser.user}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
 						<!-- ELSE -->
-						<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
+						<span title="{function.showDisplayName, topics.teaser.user}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
 						<!-- ENDIF topics.teaser.user.picture -->
 					</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">

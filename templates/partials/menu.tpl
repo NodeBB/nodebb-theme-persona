@@ -68,17 +68,17 @@
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
 							<!-- IF user.picture -->
-							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"/>
+							<img component="header/userpicture" src="{user.picture}" alt="{function.showDisplayName, user}"/>
 							<!-- ELSE -->
 							<span component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor}; display: block;">{user.icon:text}</span>
 							<!-- ENDIF user.picture -->
-							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+							<span id="user-header-name" class="visible-xs-inline">{function.showDisplayName, user}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
 								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{function.showDisplayName, user}</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
