@@ -71,7 +71,11 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 
-		<div id="a" class="visible-xs visible-sm pagination-block text-center" data-toggle="tooltip" data-placement="top" title="[[global:pagination.out_of, 0, 0]]">
+		<div class="navigator-thumb text-center hidden">
+			<strong class="text"></strong><br/>
+			<span class="time"></span>
+		</div>
+		<div class="visible-xs visible-sm pagination-block text-center">
 			<div class="progress-bar"></div>
 			<div class="wrapper">
 				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
