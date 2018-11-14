@@ -26,7 +26,6 @@
 		<!-- IMPORT partials/account/menu.tpl -->
 
 		<!-- IF allowCoverPicture -->
-		<!-- IF loggedIn -->
 		<!-- IF canEdit -->
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
@@ -36,7 +35,6 @@
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
 		<!-- ENDIF canEdit -->
-		<!-- ENDIF loggedIn -->
 		<!-- ENDIF allowCoverPicture -->
 	</div>
 </div>
