@@ -79,12 +79,6 @@
 						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/> <strong>[[user:scroll_to_my_post]]</strong>
 					</label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="delayImageLoading" <!-- IF settings.delayImageLoading -->checked<!-- ENDIF settings.delayImageLoading -->/> <strong>[[user:delay_image_loading]]</strong>
-					</label>
-				</div>
-				<p class="help-block">[[user:image_load_delay_help]]</p>
 			</div>
 
 			<h4>[[global:pagination]]</h4>
