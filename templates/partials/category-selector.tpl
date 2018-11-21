@@ -2,6 +2,9 @@
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 		<span component="category-selector-selected">[[topic:thread_tools.select_category]]</span> <span class="caret"></span>
 	</button>
+	<div component="category-selector-search" class="hidden">
+		<input type="text" class="form-control" autocomplete="off">
+	</div>
 	<ul class="dropdown-menu category-dropdown-menu" role="menu">
 		<!-- BEGIN categories -->
 		<li role="presentation" class="category <!-- IF categories.disabledClass -->disabled<!-- ENDIF categories.disabledClass -->" data-cid="{categories.cid}" data-name="{categories.name}">
