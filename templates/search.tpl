@@ -6,11 +6,11 @@
 			<form id="advanced-search">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-6">
 							<label>[[global:search]]</label>
 							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-2">
 							<label>[[search:in]]</label>
 							<select id="search-in" class="form-control">
 								<option value="titlesposts">[[search:titles-posts]]</option>
@@ -20,7 +20,7 @@
 								<option value="tags">[[tags:tags]]</option>
 							</select>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-2">
 							<label>[[search:match-words]]</label>
 							<select id="match-words-filter" class="form-control">
 								<option value="all">[[search:all]]</option>
