@@ -1,7 +1,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<h2>[[pages:account/blocks, {username}]]</h2>
+	<h2>[[pages:account/blocks, {displayname}]]</h2>
 	<div class="users row">
 		<div class="col-sm-8 col-xs-12">
 			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">

@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="users row">
-		<h1>[[pages:{template.name}, {username}]]</h1>
+		<h1>[[pages:{template.name}, {displayname}]]</h1>
 
 		<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 			<!-- IMPORT partials/users_list.tpl -->
