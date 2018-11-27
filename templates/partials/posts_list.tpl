@@ -16,14 +16,14 @@
 			<div class="post-info">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
 					<!-- IF posts.user.picture -->
-					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
+					<img title="{function.showDisplayName, posts.user}" class="img-rounded user-img" src="{posts.user.picture}">
 					<!-- ELSE -->
-					<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};" title="{posts.user.username}">{posts.user.icon:text}</div>
+					<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};" title="{function.showDisplayName, posts.user}">{posts.user.icon:text}</div>
 					<!-- ENDIF posts.user.picture -->
 				</a>
 
 				<div class="post-author">
-					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
+					<a href="{config.relative_path}/user/{posts.user.userslug}">{function.showDisplayName, posts.user}</a><br />
 					<span class="timeago" title="{posts.timestampISO}"></span>
 				</div>
 			</div>
