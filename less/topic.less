@@ -307,7 +307,7 @@
 		.content {
 			margin-left: 0;
 			margin-top: -10px;
-			
+
 			.table {
 				overflow-x: auto;
 				display: block;
@@ -336,7 +336,7 @@
 			margin-left: 1px;
 		}
 	}
-	
+
 	.quick-reply {
 		.icon {
 			position: relative;
@@ -362,21 +362,21 @@
 				.user-icon-style(46px, 2.4rem, 50%);
 			}
 		}
-		
+
 		.quickreply-message {
 			margin-left: 61px;
 			margin-bottom: 5px;
-			
+
 			@media (max-width: @screen-sm-max) {
 				margin-left: 0;
-				
+
 				[component="topic/quickreply/text"] {
 					font-size: 16px;
 					padding: 10px;
 				}
 			}
 		}
-		
+
 		[component="topic/quickreply/button"] {
 			margin-bottom: 10px;
 		}
@@ -481,6 +481,17 @@
 		}
 	}
 
+	.navigator-thumb {
+		position: fixed;
+		background-color: @gray-lighter;
+		bottom: 60px;
+		left: 0px;
+		padding: 10px;
+		border-radius: 5px;
+		white-space: nowrap;
+		z-index: 100;
+	}
+
 	.pagination-block {
 		position: fixed;
 		width: 100%;
@@ -503,6 +514,7 @@
 			display:block;
 			z-index: -1;
 			position: absolute;
+			transition: width 50ms ease-in;
 		}
 	}
 }
