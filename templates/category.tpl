@@ -19,6 +19,10 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
+			<a href="{url}">
+				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			</a>
+
 			<span class="pull-right" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
@@ -38,10 +42,6 @@
 		</div>
 		<!-- ENDIF privileges.topics:create -->
 		<!-- ENDIF !topics.length -->
-
-		<a href="{url}">
-			<div class="alert alert-warning hide" id="new-topics-alert"></div>
-		</a>
 
 		<!-- IMPORT partials/topics_list.tpl -->
 

@@ -12,6 +12,9 @@
 			<!-- ELSE -->
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
+			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
+				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			</a>
 		</div>
 		<div class="markread btn-group pull-right category-dropdown-container bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -55,10 +58,6 @@
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>
-
-		<a href="{config.relative_path}/{selectedFilter.url}{querystring}">
-			<div class="alert alert-warning hide" id="new-topics-alert"></div>
-		</a>
 
 		<!-- IMPORT partials/topics_list.tpl -->
 		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
