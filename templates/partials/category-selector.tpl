@@ -1,6 +1,7 @@
 <div component="category-selector" class="btn-group <!-- IF pullRight -->pull-right<!-- ENDIF pullRight -->">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		<span component="category-selector-selected">[[topic:thread_tools.select_category]]</span> <span class="caret"></span>
+		<span component="category-selector-selected"><!-- IF selectedCategory --><span class="fa-stack" style="{function.generateCategoryBackground, selectedCategory}"><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span> {selectedCategory.name}<!-- ELSE -->
+		[[topic:thread_tools.select_category]]<!-- ENDIF selectedCategory --></span> <span class="caret"></span>
 	</button>
 	<div component="category-selector-search" class="hidden">
 		<input type="text" class="form-control" autocomplete="off">
