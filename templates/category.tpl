@@ -61,8 +61,6 @@
 	<!-- END widgets.footer -->
 </div>
 
-<!-- IMPORT partials/move_thread_modal.tpl -->
-
 <!-- IF !config.usePagination -->
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->
