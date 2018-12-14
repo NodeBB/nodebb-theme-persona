@@ -19,7 +19,7 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
-			<a href="{url}">
+			<a href="{url}" class="inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 
