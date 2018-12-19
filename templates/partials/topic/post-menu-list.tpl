@@ -5,18 +5,18 @@
 		<span class="menu-icon"><i class="fa fa-fw fa-pencil"></i></span> [[topic:edit]]
 	</a>
 </li>
-<li role="presentation">
+<li role="presentation" <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->>
 	<a component="post/delete" role="menuitem" tabindex="-1" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->">
 		<div class="inline menu-icon"><i class="fa fa-fw fa-trash-o"></i></div> <span>[[topic:delete]]</span>
 	</a>
 </li>
-<li role="presentation">
+<li role="presentation" <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a component="post/restore" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
 		<div class="inline menu-icon"><i class="fa fa-fw fa-history"></i></div> <span>[[topic:restore]]</span>
 	</a>
 </li>
 <!-- IF posts.display_purge_tools -->
-<li role="presentation">
+<li role="presentation" <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a component="post/purge" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
 		<span class="menu-icon"><i class="fa fa-fw fa-eraser"></i></span> [[topic:purge]]
 	</a>
