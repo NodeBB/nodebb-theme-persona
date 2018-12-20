@@ -19,6 +19,10 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
+			<a href="{url}" class="inline-block">
+				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			</a>
+
 			<span class="pull-right" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
@@ -39,10 +43,6 @@
 		<!-- ENDIF privileges.topics:create -->
 		<!-- ENDIF !topics.length -->
 
-		<a href="{url}">
-			<div class="alert alert-warning hide" id="new-topics-alert"></div>
-		</a>
-
 		<!-- IMPORT partials/topics_list.tpl -->
 
 		<!-- IF config.usePagination -->
@@ -60,8 +60,6 @@
 	{{widgets.footer.html}}
 	<!-- END widgets.footer -->
 </div>
-
-<!-- IMPORT partials/move_thread_modal.tpl -->
 
 <!-- IF !config.usePagination -->
 <noscript>
