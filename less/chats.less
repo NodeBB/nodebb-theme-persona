@@ -567,3 +567,10 @@
 		display: none;
 	}
 }
+
+/* Mobile handling of chat modal */
+@media (max-width: @screen-sm-max)  {
+	.chat-modal {
+		z-index: @zindex-popover + 10;
+	}
+}
