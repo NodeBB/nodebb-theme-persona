@@ -23,7 +23,7 @@
 	<!-- END -->
 </head>
 
-<body class="{bodyClass} skin-{config.bootswatchSkin}">
+<body class="{bodyClass} skin-<!-- IF bootswatchSkin -->{bootswatchSkin}<!-- ELSE -->noskin<!-- END -->">
 	<nav id="menu" class="slideout-menu hidden">
 		<!-- IMPORT partials/slideout-menu.tpl -->
 	</nav>
