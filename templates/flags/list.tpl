@@ -11,7 +11,7 @@
 
 					</p>
 				</div>
-				<div class="panel-footer"><small>Daily flags</small></div>
+				<div class="panel-footer"><small>[[flags:graph-label]]</small></div>
 			</div>
 		</div>
 
