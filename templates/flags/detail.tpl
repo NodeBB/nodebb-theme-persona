@@ -187,7 +187,7 @@
 							<ul>
 								<!-- BEGIN fields -->
 								<li>
-									<span class="label label-primary">@key</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
+									<span class="label label-primary">[[flags:@key]]</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
 								</li>
 								<!-- END fields -->
 							</ul>
