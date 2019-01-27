@@ -7,11 +7,11 @@
 <div class="recent">
 	<div class="btn-toolbar">
 		<div class="pull-left">
-			<!-- IF loggedIn -->
+			<!-- IF canPost -->
 			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 			<!-- ELSE -->
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-			<!-- ENDIF loggedIn -->
+			<!-- ENDIF canPost -->
 			<a href="{config.relative_path}/{selectedFilter.url}" class="inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>

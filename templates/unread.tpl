@@ -7,11 +7,7 @@
 <div class="unread">
 	<div class="btn-toolbar">
 		<div class="pull-left">
-			<!-- IF loggedIn -->
 			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
-			<!-- ELSE -->
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-			<!-- ENDIF loggedIn -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
