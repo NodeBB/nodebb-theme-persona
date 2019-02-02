@@ -15,23 +15,26 @@
 		<span class="label label-danger">[[user:deleted]]</span>
 		<!-- END -->
 		<span class="chat-timestamp timeago" title="{messages.timestampISO}"></span>
-		<!-- IF isAdminOrGlobalMod -->
-		<div class="chat-ip pull-right" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></div>
-		<!-- ENDIF isAdminOrGlobalMod -->
 		<!-- IF messages.edited -->
 		<div class="text-muted pull-right" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></div>
 		<!-- ENDIF messages.edited -->
+	</div>
+	<div class="message-body-wrapper">
+		<div component="chat/message/body" class="message-body">
+			{messages.content}
+		</div>
+
 		<!-- IF !config.disableChatMessageEditing -->
 		<!-- IF messages.self -->
-		<div class="pull-right btn-group controls">
+		<div class="btn-group controls">
 			<button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 			<button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
 			<button class="btn btn-xs btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
+			<!-- IF isAdminOrGlobalMod -->
+			<button class="btn btn-xs btn-link chat-ip" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></button>
+			<!-- ENDIF isAdminOrGlobalMod -->
 		</div>
 		<!-- ENDIF messages.self -->
 		<!-- ENDIF !config.disableChatMessageEditing -->
-	</div>
-	<div component="chat/message/body" class="message-body">
-		{messages.content}
 	</div>
 </li>
