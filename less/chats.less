@@ -395,6 +395,7 @@
 		padding: 0;
 
 		li.chat-message {
+			position: relative;
 			list-style-type: none;
 			font-weight: 300;
 			padding: 0 1.428rem;
@@ -406,7 +407,7 @@
 			}
 
 			&:last-child {
-				padding-bottom: 1.428rem;
+				margin-bottom: 1.428rem;
 			}
 
 			&[data-break="true"] {
@@ -421,9 +422,7 @@
 			}
 
 			&.deleted {
-				opacity: 0.3;
-
-				.controls {
+				.message-body-wrapper .controls {
 					[data-action] {
 						display: none;
 					}
@@ -431,6 +430,10 @@
 					[data-action="restore"] {
 						display: inline;
 					}
+				}
+
+				.message-body {
+					opacity: 0.3;
 				}
 			}
 
@@ -456,19 +459,9 @@
 				.user-select(none);
 			}
 
-			.chat-ip, .chat-edited {
+			.chat-edited {
 				margin-left: 5px;
 				margin-top: 2px;
-			}
-
-			.message-body {
-				margin-left: 45px;
-				overflow-y: hidden;
-
-				p {
-					margin: 7px 0 0 0;
-					line-height: 2rem;
-				}
 			}
 
 			&[data-self="0"] + [data-self="0"], &[data-self="1"] + [data-self="1"] {
@@ -479,17 +472,45 @@
 				}
 			}
 
-			.controls {
-				display: none;
+			.message-body-wrapper {
+				margin-left: 45px;
 
-				[data-action="restore"] {
-					display: none;
+				.message-body {
+					padding: 7px 10px;
+					overflow-y: hidden;
+
+					p {
+						margin: 7px 0 0 0;
+						line-height: 2rem;
+					}
+
+					p:first-child {
+						margin: 0;
+					}
 				}
-			}
 
-			&:hover {
 				.controls {
-					display: block;
+					display: none;
+
+					position: absolute;
+					bottom: 5px;
+					right: 30px;
+					border: 1px solid @dropdown-border;
+					.box-shadow(0 6px 12px rgba(0,0,0,.175));
+
+					[data-action="restore"] {
+						display: none;
+					}
+				}
+
+				&:hover {
+					.message-body {
+						background: @dropdown-link-hover-bg;
+					}
+
+					.controls {
+						display: block;
+					}
 				}
 			}
 		}
