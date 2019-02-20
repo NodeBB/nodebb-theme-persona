@@ -29,3 +29,29 @@
 	}
 }
 
+.quick-search-results {
+	max-width: 400px;
+	max-height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	a {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden
+	}
+	.quick-search-title {
+		font-weight: 600;
+	}
+	.post-info {
+		font-size: 12px;
+		.fa-stack {
+			font-size: 10px;
+			border-radius: 50%;
+		}
+	}
+
+	.snippet {
+		word-break: break-word;
+		white-space: normal;
+	}
+}
