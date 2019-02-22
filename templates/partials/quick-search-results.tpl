@@ -17,7 +17,9 @@
         </small>
      </a>
 </li>
+<!-- IF !@last -->
 <li role="separator" class="divider"></li>
+<!-- ENDIF -->
 <!-- END posts -->
 <!-- IF multiplePages -->
 <li class="text-center">
