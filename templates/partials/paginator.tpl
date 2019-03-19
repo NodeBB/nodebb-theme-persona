@@ -23,7 +23,7 @@
 
 	<ul class="pagination hidden-sm hidden-md hidden-lg">
 		<li class="first<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
-			<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
+			<a href="?{pagination.first.qs}" data-page="1"><i class="fa fa-fast-backward"></i> </a>
 		</li>
 
 		<li class="previous<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
@@ -39,7 +39,7 @@
 		</li>
 
 		<li class="last<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
-			<a href="?page={pagination.pageCount}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
+			<a href="?{pagination.last.qs}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
 		</li>
 	</ul>
 </div>
