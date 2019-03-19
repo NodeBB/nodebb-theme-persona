@@ -191,7 +191,7 @@
 
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
-						<a href="#" id="reconnect" class="hide" title="Connection to {config.siteTitle} has been lost, attempting to reconnect...">
+						<a href="#" id="reconnect" class="hide" title="[[global:reconnecting-message, {config.siteTitle}]]">
 							<i class="fa fa-check"></i>
 						</a>
 					</li>

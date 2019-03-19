@@ -1,3 +1,15 @@
+.group-label {
+	display: inline-block;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding: 4px;
+	border-radius: 2px;
+	max-width: 150px;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .groups.details {
 	margin-top: 200px;
 
@@ -104,6 +116,11 @@
 		}
 	}
 
+	h1 {
+		overflow-wrap: break-word;
+		margin-top: 0;
+	}
+
 	.owner-controls {
 		margin-top: -6px;
 	}
@@ -133,6 +150,12 @@
 			padding: .2em .3em .1em;
 		}
 	}
+
+	.options {
+		.user-title-option span.label {
+			.group-label;
+		}
+	}
 }
 
 .groups.list {
@@ -155,6 +178,10 @@
 				color: white;
 				font-weight: bold;
 				text-transform: capitalize;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow-x: hidden;
+				max-width: 100%;
 			}
 		}
 

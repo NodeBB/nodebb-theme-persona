@@ -1,6 +1,6 @@
 <!-- BEGIN posts -->
 <li>
-    <a href="/post/{posts.pid}">
+    <a href="{config.relative_path}/post/{posts.pid}">
         <!-- IF posts.user.picture -->
         <img title="{posts.user.username}" class="avatar avatar-sm avatar-rounded" src="{posts.user.picture}" />
         <!-- ELSE -->
@@ -17,7 +17,9 @@
         </small>
      </a>
 </li>
+<!-- IF !@last -->
 <li role="separator" class="divider"></li>
+<!-- ENDIF -->
 <!-- END posts -->
 <!-- IF multiplePages -->
 <li class="text-center">
