@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<form role="form" method="post">
+<form role="form" method="post" enctype="multipart/form-data">
 	<!-- BEGIN sections -->
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
