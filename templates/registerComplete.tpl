@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}">
+<form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}" enctype="multipart/form-data">
 	<!-- BEGIN sections -->
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -35,7 +35,6 @@
 	<!-- END sections -->
 
 	<div class="row">
-		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<button class="btn btn-primary btn-block">[[topic:composer.submit]]</button>
 		</div>
