@@ -24,7 +24,7 @@
 
 		<br/>
 		<div class="form-actions">
-			<a id="submitBtn" href="#" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_email]]</a>
+			<button id="submitBtn" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_email]]</button>
 		</div>
 	</form>
 </div>
