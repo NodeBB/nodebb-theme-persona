@@ -8,7 +8,7 @@
 <!-- ENDIF upvoters.picture -->
 </a>
 <!-- END upvoters -->
-
+<!-- IF showDownvotes -->
 <h3>[[global:downvoters]] <small>({downvoteCount})</small></h3>
 <!-- BEGIN downvoters -->
 <a href="{config.relative_path}/user/{downvoters.userslug}">
@@ -19,3 +19,4 @@
 <!-- ENDIF downvoters.picture -->
 </a>
 <!-- END downvoters -->
+<!-- ENDIF showDownvotes -->
