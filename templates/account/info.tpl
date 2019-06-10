@@ -122,7 +122,7 @@
 						<!-- BEGIN history.bans -->
 						<li>
 							<p>
-								<a href="{config.relative_path}/user/{history.bans.user.userslug}">{buildAvatar(history.bans.user, "sm", "1")}</a>
+								<a href="{config.relative_path}/user/{history.bans.user.userslug}">{buildAvatar(history.bans.user, "sm", true)}</a>
 								<strong>
 									<a href="<!-- IF history.bans.user.userslug -->{config.relative_path}/user/{history.bans.user.userslug}<!-- ELSE -->#<!-- ENDIF history.bans.user.userslug -->" itemprop="author" data-username="{history.bans.user.username}" data-uid="{history.bans.user.uid}">{history.bans.user.username}</a>
 								</strong>
@@ -158,7 +158,7 @@
 
 						<div class="clearfix">
 							<div class="pull-left">
-								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "sm", "1")}</a>
+								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "sm", true)}</a>
 								<strong>
 									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>
 								</strong>

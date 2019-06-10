@@ -1,6 +1,6 @@
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
-	<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "lg", "1")}</a>
+	<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "lg", true)}</a>
 	<br/>
 	<div class="user-info">
 		<span>

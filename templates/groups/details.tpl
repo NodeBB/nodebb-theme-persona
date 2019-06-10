@@ -73,11 +73,7 @@
 					<!-- BEGIN group.pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<!-- IF group.pending.picture -->
-							<a href="{config.relative_path}/user/{group.pending.userslug}"><img class="avatar avatar-sm avatar-rounded" src="{group.pending.picture}" /></a>
-							<!-- ELSE -->
-							<div class="avatar avatar-sm avatar-rounded" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
-							<!-- ENDIF group.pending.picture -->
+							<a href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "sm", true)}</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -125,11 +121,7 @@
 					<!-- BEGIN group.invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
-							<!-- IF group.invited.picture -->
-							<a href="{config.relative_path}/user/{group.invited.userslug}"><img class="avatar avatar-sm avatar-rounded" src="{group.invited.picture}" /></a>
-							<!-- ELSE -->
-							<div class="avatar avatar-sm avatar-rounded" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
-							<!-- ENDIF group.invited.picture -->
+							<a href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "sm", true)}</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>

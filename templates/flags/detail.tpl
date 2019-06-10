@@ -16,7 +16,7 @@
 		<!-- IF type_bool.post -->
 		<div class="media">
 			<div class="media-left">
-				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "lg", "0", "media-object")}</a>
+				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "lg", false, "media-object")}</a>
 			</div>
 			<div class="media-body">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.user.userslug}">{target.user.username}</a></h4>
@@ -28,7 +28,7 @@
 		<!-- IF type_bool.user -->
 		<div class="media">
 			<div class="media-left">
-				<a href="{config.relative_path}/user/{target.userslug}">{buildAvatar(target, "lg", "0", "media-object")}</a>
+				<a href="{config.relative_path}/user/{target.userslug}">{buildAvatar(target, "lg", false, "media-object")}</a>
 			</div>
 			<div class="media-body">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.userslug}">{target.username}</a></h4>
@@ -53,7 +53,7 @@
 						<div class="col-sm-6">
 							<label>[[flags:reporter]]</label>
 							<div>
-								{buildAvatar(reporter, "sm", "0", "media-object")}
+								{buildAvatar(reporter, "sm", false, "media-object")}
 								<a href="{config.relative_path}/user/{reporter.userslug}">{reporter.username}</a>
 							</div>
 						</div>
@@ -106,7 +106,7 @@
 					<!-- BEGIN notes -->
 					<div class="media">
 						<div class="media-left">
-							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "md", "0", "media-object")}</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "md", false, "media-object")}</a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">
@@ -149,7 +149,7 @@
 					<!-- BEGIN history -->
 					<div class="media">
 						<div class="media-left">
-							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(history.user, "md", "0", "media-object")}</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(history.user, "md", false, "media-object")}</a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">
