@@ -39,13 +39,14 @@
 				}
 
 				.fa-check {
-					padding: 14px;
+					padding: 14.5px;	/* 14.5*2 + 15 + 2px border = 46px */
 					border-radius: 50%;
 					position: absolute;
 					font-size: 15px;
 					opacity: 0;
 					top: 0px;
 					left: 0px;
+					border: 1px solid transparent;
 
 					&:before {
 						.pointer;
@@ -56,11 +57,11 @@
 					}
 				}
 
-				.user-img, .user-icon {
+				.avatar {
 					opacity: 1;
 				}
 
-				.fa-check, .user-img, .user-icon {
+				.fa-check, .avatar {
 					.transition(.2s ease-in-out all);
 				}
 
@@ -68,7 +69,7 @@
 			}
 
 			.avatar .select:hover {
-				.user-img, .user-icon {
+				.avatar {
 					opacity: 0;
 				}
 
@@ -80,7 +81,7 @@
 			}
 
 			&.selected {
-				.select .user-img, .select .user-icon {
+				.select .avatar {
 					opacity: 0;
 				}
 

@@ -11,11 +11,7 @@
 					<!-- IF topics.thumb -->
 					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
-					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
-					<!-- ENDIF topics.user.picture -->
+					{buildAvatar(topics.user, "46", true, "not-responsive")}
 					<!-- ENDIF topics.thumb -->
 					<i class="fa fa-check"></i>
 				</div>
@@ -26,11 +22,7 @@
 					<!-- IF topics.thumb -->
 					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
-					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
-					<!-- ENDIF topics.user.picture -->
+					{buildAvatar(topics.user, "46", true, "not-responsive")}
 					<!-- ENDIF topics.thumb -->
 				</a>
 				<!-- ENDIF !showSelect -->
@@ -106,13 +98,7 @@
 				<!-- ELSE -->
 				<!-- IF topics.teaser.pid -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
-						<!-- IF topics.teaser.user.picture -->
-						<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
-						<!-- ELSE -->
-						<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
-						<!-- ENDIF topics.teaser.user.picture -->
-					</a>
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24", true, "not-responsive")}</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>

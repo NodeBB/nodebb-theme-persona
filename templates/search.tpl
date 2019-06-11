@@ -188,13 +188,7 @@
 
 					<small>
 						<span class="pull-right post-preview-footer">
-							<a href="{config.relative_path}/user/{posts.user.userslug}">
-								<!-- IF posts.user.picture -->
-								<img class="user-img" title="{posts.user.username}" src="{posts.user.picture}"/>
-								<!-- ELSE -->
-								<div class="user-icon user-img" title="{posts.user.username}" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-								<!-- ENDIF posts.user.picture -->
-							</a>
+							<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "sm", true)}</a>
 							<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i> <span class="timeago" title="{posts.timestampISO}"></span></a>
 						</span>
 					</small>

@@ -1,13 +1,8 @@
 <div class="clearfix post-header">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			<!-- IF posts.user.picture -->
-			<img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" align="left" itemprop="image" />
-			<!-- ELSE -->
-			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-			<!-- ENDIF posts.user.picture -->
+			{buildAvatar(posts.user, "46", true, "", "user/picture")}
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
-
 		</a>
 	</div>
 
@@ -87,11 +82,7 @@
 	<a component="post/reply-count" href="#" class="threaded-replies no-select <!-- IF !posts.replies.count -->hidden<!-- ENDIF !posts.replies.count -->">
 		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
 			<!-- BEGIN posts.replies.users -->
-			<!-- IF posts.replies.users.picture -->
-			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
-			<!-- ELSE -->
-			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
-			<!-- ENDIF posts.replies.users.picture -->
+			{buildAvatar(posts.replies.users, "xs", true, "")}
 			<!-- END posts.replies.users -->
 		</span>
 
