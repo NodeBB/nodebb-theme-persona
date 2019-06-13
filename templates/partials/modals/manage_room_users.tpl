@@ -4,4 +4,4 @@
 	{buildAvatar(users, "sm", true)}
 	<span>{../username} <!-- IF ../isOwner --><i class="fa fa-star text-warning" title="[[modules:chat.owner]]"></i><!-- END --></span>
 </li>
-<!-- END -->
+{{{end}}}

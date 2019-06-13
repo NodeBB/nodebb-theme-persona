@@ -14,7 +14,7 @@
 			<!-- IF @first -->([[topic:diffs.current-revision]])<!-- END -->
 			<!-- IF @last -->([[topic:diffs.original-revision]])<!-- END -->
 		</option>
-		<!-- END -->
+		{{{end}}}
 	</select>
 
 	<hr />

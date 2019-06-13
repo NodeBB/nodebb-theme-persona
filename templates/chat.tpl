@@ -15,7 +15,7 @@
 						<li>
 							<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(users, "sm", true)} {../username}</a>
 						</li>
-						<!-- END -->
+						{{{end}}}
 						<li role="separator" class="divider"></li>
 						<!-- END -->
 						<li class="dropdown-header">[[modules:chat.options]]</li>
