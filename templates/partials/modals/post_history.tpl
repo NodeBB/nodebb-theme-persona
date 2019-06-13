@@ -8,7 +8,7 @@
 <!-- IF numDiffs -->
 <div class="form-group">
 	<select class="form-control">
-		<!-- BEGIN diffs -->
+		{{{each diffs}}}
 		<option value="{../timestamp}">
 			{../pretty}
 			<!-- IF @first -->([[topic:diffs.current-revision]])<!-- END -->

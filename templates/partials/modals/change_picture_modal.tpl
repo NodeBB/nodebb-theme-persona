@@ -13,7 +13,7 @@
 					<h4 class="media-heading">[[user:default_picture]]</h4>
 				</div>
 			</button>
-			<!-- BEGIN pictures -->
+			{{{each pictures}}}
 			<button type="button" class="list-group-item" data-type="{pictures.type}">
 				<div class="media-left">
 					<img class="media-object" src="{pictures.url}" title="{pictures.text}" />
@@ -22,7 +22,7 @@
 					<h4 class="media-heading">{pictures.text}</h4>
 				</div>
 			</button>
-			<!-- END pictures -->
+			{{{end}}}
 		</div>
 	</div>
 	<div class="col-xs-6 col-sm-4 col-md-6">

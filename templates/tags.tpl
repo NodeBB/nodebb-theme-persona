@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="tags">
 	<!-- IF displayTagSearch -->

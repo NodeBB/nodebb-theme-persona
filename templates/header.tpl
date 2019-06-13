@@ -2,9 +2,9 @@
 <html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};" <!-- ENDIF languageDirection --> >
 <head>
 	<title>{browserTitle}</title>
-	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
+	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
-	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
+	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";

@@ -1,4 +1,4 @@
-	<!-- BEGIN groups -->
+	{{{each groups}}}
 	<div class="col-lg-4 col-md-6 col-sm-12" component="groups/summary" data-slug="{groups.slug}">
 		<div class="panel panel-default">
 			<a href="{config.relative_path}/groups/{groups.slug}" class="panel-heading list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
@@ -6,11 +6,11 @@
 			</a>
 			<div class="panel-body">
 				<ul class="members">
-					<!-- BEGIN members -->
+					{{{each members}}}
 					<li>
 						<a href="{config.relative_path}/user/{groups.members.userslug}">{buildAvatar(groups.members, "sm", true)}</a>
 					</li>
-					<!-- END members -->
+					{{{end}}}
 					<!-- IF groups.truncated -->
 					<li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
 					<!-- ENDIF groups.truncated -->
@@ -18,4 +18,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- END groups -->
+	{{{end}}}

@@ -1,5 +1,5 @@
 <div component="topic/browsing-users">
-	<!-- BEGIN browsingUsers -->
+	{{{each browsingUsers}}}
 	<div class="pull-left">
 		<a href="<!-- IF browsingUsers.userslug -->{config.relative_path}/user/{browsingUsers.userslug}<!-- ELSE -->#<!-- ENDIF browsingUsers.userslug -->">
 			<!-- IF browsingUsers.picture -->
@@ -9,5 +9,5 @@
 			<!-- ENDIF browsingUsers.picture -->
 		</a>
 	</div>
-	<!-- END browsingUsers -->
+	{{{end}}}
 </div>

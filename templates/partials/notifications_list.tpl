@@ -3,7 +3,7 @@
 <li class="no-notifs"><a href="#">[[notifications:no_notifs]]</a></li>
 <!-- ENDIF !notifications.length -->
 
-<!-- BEGIN notifications -->
+{{{each notifications}}}
 <li class="{notifications.readClass}" data-nid="{notifications.nid}" data-path="{config.relative_path}{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
 	<!-- IF notifications.image -->
 	<!-- IF notifications.from -->
@@ -20,4 +20,4 @@
 	</a>
 	<div class="clear"></div>
 </li>
-<!-- END notifications -->
+{{{end}}}

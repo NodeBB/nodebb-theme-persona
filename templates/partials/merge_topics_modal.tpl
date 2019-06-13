@@ -6,12 +6,12 @@
 		<p>
 			[[topic:merge_topics_instruction]]<br />
 			<div class="topics-section">
-				<!-- BEGIN topics -->
+				{{{each topics}}}
 				<!-- IF @index -->
 				<i class="fa fa-chevron-up"></i><br/>
 				<!-- ENDIF @index -->
 				<span>{topics.title}</span><br/>
-				<!-- END topics -->
+				{{{end}}}
 			</div>
 		</p>
 	</div>

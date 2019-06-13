@@ -9,7 +9,7 @@
 			<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
 				<!-- IF users.length -->
 				<li class="dropdown-header">[[modules:chat.in-room]]</li>
-				<!-- BEGIN users -->
+				{{{each users}}}
 				<li>
 					<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(users, "sm", true)} {../username}</a>
 				</li>
@@ -30,7 +30,7 @@
 		</div>
 		<span class="members">
 			[[modules:chat.chatting_with]]:
-			<!-- BEGIN users -->
+			{{{each users}}}
 			<a href="{config.relative_path}/uid/{../uid}">{../username}</a><!-- IF !@last -->,<!-- END -->
 			<!-- END -->
 		</span>

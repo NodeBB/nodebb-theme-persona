@@ -1,3 +1,3 @@
-<!-- BEGIN messages -->
+{{{each messages}}}
 <!-- IMPORT partials/chats/message.tpl -->
-<!-- END messages -->
+{{{end}}}
