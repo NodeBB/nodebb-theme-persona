@@ -16,13 +16,7 @@
 		<!-- IF type_bool.post -->
 		<div class="media">
 			<div class="media-left">
-				<a href="{config.relative_path}/user/{target.user.userslug}">
-					<!-- IF target.user.picture -->
-					<img class="media-object avatar avatar-lg" src="{target.user.picture}" alt="{target.user.username}" />
-					<!-- ELSE -->
-					<div class="media-object avatar avatar-lg" style="background-color: {target.user.icon:bgColor}">{target.user.icon:text}</div>
-					<!-- ENDIF target.user.picture -->
-				</a>
+				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "lg", false, "media-object")}</a>
 			</div>
 			<div class="media-body">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.user.userslug}">{target.user.username}</a></h4>
@@ -34,13 +28,7 @@
 		<!-- IF type_bool.user -->
 		<div class="media">
 			<div class="media-left">
-				<a href="{config.relative_path}/user/{target.userslug}">
-					<!-- IF target.picture -->
-					<img class="media-object avatar avatar-lg" src="{target.picture}" alt="{target.username}" />
-					<!-- ELSE -->
-					<div class="media-object avatar avatar-lg" style="background-color: {target.icon:bgColor}">{target.icon:text}</div>
-					<!-- ENDIF target.picture -->
-				</a>
+				<a href="{config.relative_path}/user/{target.userslug}">{buildAvatar(target, "lg", false, "media-object")}</a>
 			</div>
 			<div class="media-body">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.userslug}">{target.username}</a></h4>
@@ -65,11 +53,7 @@
 						<div class="col-sm-6">
 							<label>[[flags:reporter]]</label>
 							<div>
-								<!-- IF reporter.picture -->
-								<img class="media-object avatar avatar-sm" src="{reporter.picture}" alt="{reporter.username}" />
-								<!-- ELSE -->
-								<div class="media-object avatar avatar-sm" style="background-color: {reporter.icon:bgColor}">{reporter.icon:text}</div>
-								<!-- ENDIF reporter.picture -->
+								{buildAvatar(reporter, "sm", false, "media-object")}
 								<a href="{config.relative_path}/user/{reporter.userslug}">{reporter.username}</a>
 							</div>
 						</div>
@@ -122,13 +106,7 @@
 					<!-- BEGIN notes -->
 					<div class="media">
 						<div class="media-left">
-							<a href="{config.relative_path}/user/{../user.userslug}">
-								<!-- IF ../user.picture -->
-								<img class="media-object avatar avatar-md" src="{../user.picture}" alt="{../user.username}" />
-								<!-- ELSE -->
-								<div class="media-object avatar avatar-md" style="background-color: {../user.icon:bgColor}">{../user.icon:text}</div>
-								<!-- ENDIF ../user.picture -->
-							</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "md", false, "media-object")}</a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">
@@ -171,13 +149,7 @@
 					<!-- BEGIN history -->
 					<div class="media">
 						<div class="media-left">
-							<a href="{config.relative_path}/user/{../user.userslug}">
-								<!-- IF ../user.picture -->
-								<img class="media-object avatar avatar-md" src="{../user.picture}" alt="{../user.username}" />
-								<!-- ELSE -->
-								<div class="media-object avatar avatar-md" style="background-color: {../user.icon:bgColor}">{../user.icon:text}</div>
-								<!-- ENDIF ../user.picture -->
-							</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(history.user, "md", false, "media-object")}</a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">

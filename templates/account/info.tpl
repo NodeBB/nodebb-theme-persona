@@ -122,13 +122,10 @@
 						<!-- BEGIN history.bans -->
 						<li>
 							<p>
-								<a href="{config.relative_path}/user/{history.bans.user.userslug}">
-									<!-- IF history.bans.user.picture -->
-									<img title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded" src="{history.bans.user.picture}" />
-									<!-- ELSE -->
-									<span title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded user-icon" style="background-color: {history.bans.user.icon:bgColor};">{history.bans.user.icon:text}</span>
-									<!-- ENDIF history.bans.user.picture -->
-								</a>
+								<a href="{config.relative_path}/user/{history.bans.user.userslug}">{buildAvatar(history.bans.user, "sm", true)}</a>
+								<strong>
+									<a href="<!-- IF history.bans.user.userslug -->{config.relative_path}/user/{history.bans.user.userslug}<!-- ELSE -->#<!-- ENDIF history.bans.user.userslug -->" itemprop="author" data-username="{history.bans.user.username}" data-uid="{history.bans.user.uid}">{history.bans.user.username}</a>
+								</strong>
 								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
 								<!-- IF ../until -->
 								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
@@ -160,17 +157,8 @@
 						<hr/>
 
 						<div class="clearfix">
-							<div class="icon pull-left">
-								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">
-									<!-- IF moderationNotes.user.picture -->
-									<img class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
-									<!-- ELSE -->
-									<div class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
-									<!-- ENDIF moderationNotes.user.picture -->
-								</a>
-							</div>
-
 							<div class="pull-left">
+								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "sm", true)}</a>
 								<strong>
 									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>
 								</strong>

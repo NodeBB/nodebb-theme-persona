@@ -8,13 +8,7 @@
 				<ul class="members">
 					<!-- BEGIN members -->
 					<li>
-						<a href="{config.relative_path}/user/{groups.members.userslug}">
-							<!-- IF groups.members.picture -->
-							<img class="avatar avatar-sm avatar-rounded" src="{groups.members.picture}" title="{groups.members.username}" />
-							<!-- ELSE -->
-							<div class="avatar avatar-sm avatar-rounded" style="background-color: {groups.members.icon:bgColor};" title="{groups.members.username}">{groups.members.icon:text}</div>
-							<!-- ENDIF groups.members.picture -->
-						</a>
+						<a href="{config.relative_path}/user/{groups.members.userslug}">{buildAvatar(groups.members, "sm", true)}</a>
 					</li>
 					<!-- END members -->
 					<!-- IF groups.truncated -->

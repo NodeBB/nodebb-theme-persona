@@ -51,11 +51,7 @@
 						</a>
 					</td>
 					<td>
-						<!-- IF ../reporter.picture -->
-						<img class="avatar avatar-sm" src="{../reporter.picture}" />
-						<!-- ELSE -->
-						<div class="avatar avatar-sm" style="background-color: {../reporter.icon:bgColor};">{../reporter.icon:text}</div>
-						<!-- ENDIF ../reporter.picture -->
+						{buildAvatar(../reporter, "sm")}
 						{../reporter.username}
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>

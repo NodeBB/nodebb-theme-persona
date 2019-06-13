@@ -34,7 +34,7 @@
 		<!-- IMPORT partials/users_list.tpl -->
 		<!-- IF anonymousUserCount -->
 		<li class="users-box anon-user">
-			<div class="user-icon">G</div>
+			<div class="avatar avatar-lg avatar-rounded">G</div>
 			<br/>
 			<div class="user-info">
 				<span id="online_anon_count">{anonymousUserCount}</span>

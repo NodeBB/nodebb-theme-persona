@@ -43,10 +43,6 @@
 		vertical-align: top;
 		width: 104px;
 
-		img, .user-icon {
-			.user-icon-style(80px, 4rem, 50%);
-		}
-
 		a {
 			max-width: 94px;
 			text-overflow: ellipsis;
@@ -70,10 +66,8 @@
 		vertical-align: middle;
 	}
 
-	.anon-user {
-		.user-icon {
-			background: @gray-lighter;
-			color: white;
-		}
+	.anon-user .avatar {
+		background: @gray-lighter;
+		color: white;
 	}
 }
