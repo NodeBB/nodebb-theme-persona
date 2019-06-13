@@ -13,12 +13,7 @@
 						<li class="dropdown-header">[[modules:chat.in-room]]</li>
 						<!-- BEGIN users -->
 						<li>
-							<a href="{config.relative_path}/uid/{../uid}">
-								<!-- IF ../picture -->
-								<img class="avatar avatar-sm" component="user/picture" src="{../picture}" itemprop="image" />
-								<!-- ELSE -->
-								<div class="avatar avatar-sm" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
-							</a>
+							<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(users, "sm", true)} {../username}</a>
 						</li>
 						<!-- END -->
 						<li role="separator" class="divider"></li>

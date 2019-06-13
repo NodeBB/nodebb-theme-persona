@@ -22,12 +22,7 @@
 							<hr />
 							<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
 							<div class="pull-left">
-								<a href="{config.relative_path}/uid/{../uid}">
-									<!-- IF ../picture -->
-									<img class="avatar avatar-sm" component="user/picture" src="{../picture}" itemprop="image" />
-									<!-- ELSE -->
-									<div class="avatar avatar-sm" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
-								</a>
+								<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
 							</div>
 							<!-- END -->
 							<!-- END -->
