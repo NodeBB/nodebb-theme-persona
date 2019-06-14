@@ -227,7 +227,7 @@
 			</div>
 		</div>
 		<!-- ENDIF group.isOwner -->
-		<div widget-area="left">
+		<div data-widget-area="left">
 			<!-- BEGIN widgets.left -->
 			{{widgets.left.html}}
 			<!-- END widgets.left -->
@@ -240,7 +240,7 @@
 			<!-- ENDIF !posts.length -->
 			<!-- IMPORT partials/posts_list.tpl -->
 		</div>
-		<div widget-area="right">
+		<div data-widget-area="right">
 			<!-- BEGIN widgets.right -->
 			{{widgets.right.html}}
 			<!-- END widgets.right -->

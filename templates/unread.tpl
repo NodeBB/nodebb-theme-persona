@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
+<div data-widget-area="header">
 	<!-- BEGIN widgets.header -->
 	{{widgets.header.html}}
 	<!-- END widgets.header -->

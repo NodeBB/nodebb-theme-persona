@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
+<div data-widget-area="header">
 	<!-- BEGIN widgets.header -->
 	{{widgets.header.html}}
 	<!-- END widgets.header -->
@@ -49,13 +49,13 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		<!-- BEGIN widgets.sidebar -->
 		{{widgets.sidebar.html}}
 		<!-- END widgets.sidebar -->
 	</div>
 </div>
-<div widget-area="footer">
+<div data-widget-area="footer">
 	<!-- BEGIN widgets.footer -->
 	{{widgets.footer.html}}
 	<!-- END widgets.footer -->
