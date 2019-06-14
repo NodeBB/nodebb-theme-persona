@@ -18,11 +18,11 @@
 
 		<!-- IF selectedGroup.length -->
 		<div class="text-center">
-		<!-- BEGIN selectedGroup -->
+		{{{each selectedGroup}}}
 		<!-- IF selectedGroup.slug -->
 			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};"><!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
 		<!-- ENDIF selectedGroup.slug -->
-		<!-- END selectedGroup -->
+		{{{end}}}
 		</div>
 		<br/>
 		<!-- ENDIF selectedGroup.length -->
@@ -113,9 +113,9 @@
 	<!-- IF groups.length -->
 	<div class="row">
 		<div class="col-xs-12 hidden">
-			<!-- BEGIN groups -->
+			{{{each groups}}}
 			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
-			<!-- END groups -->
+			{{{end}}}
 		</div>
 	</div>
 	<!-- ENDIF groups.length -->
@@ -127,9 +127,9 @@
 				<h3 class="panel-title">[[global:recentips]]</h3>
 			</div>
 			<div class="panel-body">
-			<!-- BEGIN ips -->
+			{{{each ips}}}
 				<div>{ips}</div>
-			<!-- END ips -->
+			{{{end}}}
 			</div>
 		</div>
 	</div>

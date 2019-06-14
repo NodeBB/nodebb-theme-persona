@@ -69,11 +69,11 @@
 			</a>
 		</li>
 
-		<!-- BEGIN thread_tools -->
+		{{{each thread_tools}}}
 		<li>
 			<a href="#" class="{thread_tools.class}"><i class="fa fa-fw {thread_tools.icon}"></i> {thread_tools.title}</a>
 		</li>
-		<!-- END thread_tools -->
+		{{{end}}}
 	</ul>
 </div>
 <!-- ENDIF privileges.editable -->

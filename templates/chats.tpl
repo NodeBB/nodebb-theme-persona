@@ -5,9 +5,9 @@
 			<ul component="chat/search/list" class="dropdown-menu"></ul>
 		</div>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
-			<!-- BEGIN rooms -->
+			{{{each rooms}}}
 			<!-- IMPORT partials/chats/recent_room.tpl -->
-			<!-- END rooms -->
+			{{{end}}}
 		</ul>
 	</div>
 	<div component="chat/main-wrapper">

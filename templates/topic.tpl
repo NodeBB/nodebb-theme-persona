@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
@@ -12,7 +12,7 @@
 			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
 			<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
 			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
-			<!-- BEGIN icons -->@value<!-- END icons -->
+			{{{each icons}}}@value{{{end}}}
 
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
@@ -34,7 +34,7 @@
 		<hr class="visible-xs" />
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
-			<!-- BEGIN posts -->
+			{{{each posts}}}
 				<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
 
@@ -46,7 +46,7 @@
 					<div class="post-bar-placeholder"></div>
 					<!-- ENDIF !posts.index -->
 				</li>
-			<!-- END posts -->
+			{{{end}}}
 		</ul>
 
 		<!-- IF config.enableQuickReply -->
@@ -77,15 +77,15 @@
 		</div>
 	</div>
 	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
-		<!-- BEGIN widgets.sidebar -->
+		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
-		<!-- END widgets.sidebar -->
+		{{{end}}}
 	</div>
 </div>
 <div widget-area="footer">
-	<!-- BEGIN widgets.footer -->
+	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
-	<!-- END widgets.footer -->
+	{{{end}}}
 </div>
 
 <!-- IF !config.usePagination -->

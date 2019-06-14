@@ -17,15 +17,13 @@
 						<label for="user-search">[[users:search]]</label>
 						<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" />
 						<div class="block-edit">
-							<!-- IF edit -->
-							<!-- BEGIN edit -->
+							{{{ each edit }}}
 							<hr />
 							<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
 							<div class="pull-left">
 								<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
 							</div>
-							<!-- END -->
-							<!-- END -->
+							{{{ end }}}
 						</div>
 					</div>
 				</div>

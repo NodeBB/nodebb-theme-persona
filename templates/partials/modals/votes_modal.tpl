@@ -1,10 +1,10 @@
 <h3>[[global:upvoters]] <small>({upvoteCount})</small></h3>
-<!-- BEGIN upvoters -->
+{{{each upvoters}}}
 <a href="{config.relative_path}/user/{upvoters.userslug}">{buildAvatar(upvoters, "sm", false)}</a>
-<!-- END upvoters -->
+{{{end}}}
 <!-- IF showDownvotes -->
 <h3>[[global:downvoters]] <small>({downvoteCount})</small></h3>
-<!-- BEGIN downvoters -->
+{{{each downvoters}}}
 <a href="{config.relative_path}/user/{downvoters.userslug}">{buildAvatar(downvoters, "sm", false)}</a>
-<!-- END downvoters -->
+{{{end}}}
 <!-- ENDIF showDownvotes -->

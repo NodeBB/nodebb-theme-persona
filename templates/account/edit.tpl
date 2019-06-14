@@ -26,9 +26,9 @@
 						<!-- IF canChangePassword -->
 						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
 						<!-- ENDIF canChangePassword -->
-						<!-- BEGIN editButtons -->
+						{{{each editButtons}}}
 						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
-						<!-- END editButtons -->
+						{{{end}}}
 					</ul>
 
 					<!-- IF config.requireEmailConfirmation -->
@@ -87,11 +87,11 @@
 
 								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
-									<!-- BEGIN groups -->
+									{{{each groups}}}
 									<!-- IF groups.userTitleEnabled -->
 									<option value="{groups.name}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
 									<!-- ENDIF groups.userTitleEnabled -->
-									<!-- END groups -->
+									{{{end}}}
 								</select>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 			<div class="col-md-5 col-sm-4">
 				<label class="control-label">[[user:sso.title]]</label>
 				<div class="list-group">
-					<!-- BEGIN sso -->
+					{{{each sso}}}
 					<div class="list-group-item">
 						<!-- IF ../deauthUrl -->
 						<a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
@@ -143,7 +143,7 @@
 							{../name}
 						</a>
 					</div>
-					<!-- END sso -->
+					{{{end}}}
 				</div>
 			</div>
 			<!-- ENDIF sso.length -->

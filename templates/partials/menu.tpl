@@ -218,7 +218,7 @@
 				</ul>
 
 				<ul id="main-nav" class="nav navbar-nav">
-					<!-- BEGIN navigation -->
+					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
 						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
@@ -232,7 +232,7 @@
 						</a>
 					</li>
 					<!-- ENDIF function.displayMenuItem -->
-					<!-- END navigation -->
+					{{{end}}}
 				</ul>
 
 				<!-- ELSE -->

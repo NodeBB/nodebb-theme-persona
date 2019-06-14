@@ -7,19 +7,19 @@
 		<!-- ENDIF !rooms.lastUser.uid -->
 	</strong>
 	<div class="avatar-placeholder"></div>
-	<!-- BEGIN rooms.users -->
+	{{{each rooms.users}}}
 	<!-- IF @first -->
 	<div class="main-avatar">
 		<!-- IMPORT partials/chats/user.tpl -->
 	</div>
 	<!-- ENDIF @first -->
-	<!-- END rooms.users -->
+	{{{end}}}
 
 	<ul class="members">
-		<!-- BEGIN rooms.users -->
+		{{{each rooms.users}}}
 		<li>
 			<!-- IMPORT partials/chats/user.tpl -->
 		</li>
-		<!-- END rooms.users -->
+		{{{end}}}
 	</ul>
 </li>

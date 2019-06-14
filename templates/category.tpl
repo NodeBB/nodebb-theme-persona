@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="row">
 	<div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
@@ -50,15 +50,15 @@
 		<!-- ENDIF config.usePagination -->
 	</div>
 	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
-		<!-- BEGIN widgets.sidebar -->
+		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
-		<!-- END widgets.sidebar -->
+		{{{end}}}
 	</div>
 </div>
 <div widget-area="footer">
-	<!-- BEGIN widgets.footer -->
+	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
-	<!-- END widgets.footer -->
+	{{{end}}}
 </div>
 
 <!-- IF !config.usePagination -->

@@ -1,6 +1,6 @@
 <ul component="posts" class="posts-list" data-nextstart="{nextStart}">
 
-	<!-- BEGIN posts -->
+	{{{each posts}}}
 	<li component="post" class="posts-list-item row<!-- IF posts.deleted --> deleted<!-- ELSE --><!-- IF posts.topic.deleted --> deleted<!-- ENDIF posts.topic.deleted --><!-- ENDIF posts.deleted -->" data-pid="{posts.pid}" data-uid="{posts.uid}">
 		<div class="col-lg-11 col-sm-10 col-xs-9 post-body">
 			<a class="topic-title" href="{config.relative_path}/post/{posts.pid}">
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	</li>
-	<!-- END posts -->
+	{{{end}}}
 </ul>
 <div component="posts/loading" class="loading-indicator text-center hidden">
 	<i class="fa fa-refresh fa-spin"></i>

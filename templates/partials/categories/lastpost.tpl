@@ -1,5 +1,5 @@
 <div class="card" style="border-color: {../bgColor}">
-	<!-- BEGIN posts -->
+	{{{each ./posts}}}
 	<!-- IF @first -->
 	<div component="category/posts">
 		<p>
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<!-- ENDIF @first -->
-	<!-- END posts -->
+	{{{end}}}
 
 	<!-- IF !../posts.length -->
 	<div component="category/posts">
