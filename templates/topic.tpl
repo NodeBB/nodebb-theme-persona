@@ -1,5 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
+<div data-widget-area="header">
 	{{{each widgets.header}}}
 	{{widgets.header.html}}
 	{{{end}}}
@@ -76,13 +76,14 @@
 			</div>
 		</div>
 	</div>
-	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
 		{{{end}}}
 	</div>
 </div>
-<div widget-area="footer">
+
+<div data-widget-area="footer">
 	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
 	{{{end}}}
