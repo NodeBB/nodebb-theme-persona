@@ -44,9 +44,9 @@
 								<div class="col-md-6">
 									<label>[[search:in-categories]]</label>
 									<select multiple class="form-control" id="posted-in-categories" size="{categoriesCount}">
-										<!-- BEGIN categories -->
+										{{{each categories}}}
 										<option value="{categories.value}">{categories.text}</option>
-										<!-- END categories -->
+										{{{end}}}
 									</select>
 									<input type="checkbox" id="search-children"> [[search:search-child-categories]]
 								</div>
@@ -172,7 +172,7 @@
 			<!-- ENDIF search_query -->
 			<!-- ENDIF matchCount -->
 
-			<!-- BEGIN posts -->
+			{{{each posts}}}
 			<div class="topic-row panel panel-default clearfix">
 				<div class="panel-body">
 
@@ -194,7 +194,7 @@
 					</small>
 				</div>
 			</div>
-			<!-- END posts -->
+			{{{end}}}
 
 			<!-- IF users.length -->
 			<ul id="users-container" class="users-container">

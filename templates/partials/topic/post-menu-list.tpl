@@ -55,13 +55,13 @@
 <!-- ENDIF posts.ip -->
 <!-- ENDIF posts.display_moderator_tools -->
 
-<!-- BEGIN posts.tools -->
+{{{each posts.tools}}}
 <li role="presentation">
 	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
 		<span class="menu-icon"><i class="fa fa-fw {posts.tools.icon}"></i></span> {{posts.tools.html}}
 	</a>
 </li>
-<!-- END posts.tools -->
+{{{end}}}
 <!-- IF posts.toolsVisible -->
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.toolsVisible -->
@@ -84,11 +84,11 @@
 <li role="presentation" class="divider"></li>
 <li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
 <!-- ENDIF postSharing.length -->
-<!-- BEGIN postSharing -->
+{{{each postSharing}}}
 	<li role="presentation">
 		<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
 	</li>
-<!-- END postSharing -->
+{{{end}}}
 
 <!-- IF posts.display_flag_tools -->
 <li role="presentation" class="divider"></li>

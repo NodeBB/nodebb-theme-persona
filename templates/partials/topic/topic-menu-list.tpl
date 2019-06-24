@@ -20,7 +20,7 @@
 <li><a component="topic/delete/posts" href="#"><i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
 <!-- ENDIF privileges.isAdminOrMod -->
 
-<!-- BEGIN thread_tools -->
+{{{each thread_tools}}}
 <li><a href="#" class="{thread_tools.class}"><i class="fa fa-fw {thread_tools.icon}"></i> {thread_tools.title}</a></li>
-<!-- END thread_tools -->
+{{{end}}}
 <!-- ENDIF privileges.deletable -->

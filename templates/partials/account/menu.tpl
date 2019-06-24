@@ -76,11 +76,11 @@
 		<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
 		<!-- ENDIF showHidden -->
 
-		<!-- BEGIN profile_links -->
+		{{{each profile_links}}}
 		<!-- IF @first -->
 		<li class="divider"></li>
 		<!-- ENDIF @first -->
 		<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF ../icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- END -->{profile_links.name}</a></li>
-		<!-- END profile_links -->
+		{{{end}}}
 	</ul>
 </div>

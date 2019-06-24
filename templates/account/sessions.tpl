@@ -7,7 +7,7 @@
 			<p class="lead">[[user:sessions.description]]</p>
 			<hr />
 			<ul class="list-group" component="user/sessions">
-				<!-- BEGIN sessions -->
+				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
 					<div class="pull-right">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
@@ -24,7 +24,7 @@
 						<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
 					</ul>
 				</li>
-				<!-- END sessions -->
+				{{{end}}}
 			</ul>
 		</div>
 	</div>

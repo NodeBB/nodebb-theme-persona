@@ -40,14 +40,14 @@
 					</div>
 				</div>
 
-				<!-- BEGIN regFormEntry -->
+				{{{each regFormEntry}}}
 				<div class="form-group">
 					<label for="register-{regFormEntry.styleName}" class="col-lg-4 control-label">{regFormEntry.label}</label>
 					<div id="register-{regFormEntry.styleName}" class="col-lg-8">
 						{{regFormEntry.html}}
 					</div>
 				</div>
-				<!-- END regFormEntry -->
+				{{{end}}}
 
 				<div class="form-group">
 					<div class="col-lg-offset-4 col-lg-8">
@@ -67,9 +67,9 @@
 		<div class="alt-register-block">
 			<h4>[[register:alternative_registration]]</h4>
 			<ul class="alt-logins">
-				<!-- BEGIN authentication -->
+				{{{each authentication}}}
 				<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>
-				<!-- END authentication -->
+				{{{end}}}
 			</ul>
 		</div>
 	</div>

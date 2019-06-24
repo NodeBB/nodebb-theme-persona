@@ -18,11 +18,11 @@
 
 		<!-- IF selectedGroup.length -->
 		<div class="text-center">
-		<!-- BEGIN selectedGroup -->
+		{{{each selectedGroup}}}
 		<!-- IF selectedGroup.slug -->
-			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};"><!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
+			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="color:{selectedGroup.textColor};background-color: {selectedGroup.labelColor};"><!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
 		<!-- ENDIF selectedGroup.slug -->
-		<!-- END selectedGroup -->
+		{{{end}}}
 		</div>
 		<br/>
 		<!-- ENDIF selectedGroup.length -->
@@ -113,9 +113,9 @@
 	<!-- IF groups.length -->
 	<div class="row">
 		<div class="col-xs-12 hidden">
-			<!-- BEGIN groups -->
+			{{{each groups}}}
 			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
-			<!-- END groups -->
+			{{{end}}}
 		</div>
 	</div>
 	<!-- ENDIF groups.length -->
@@ -127,26 +127,42 @@
 				<h3 class="panel-title">[[global:recentips]]</h3>
 			</div>
 			<div class="panel-body">
-			<!-- BEGIN ips -->
+			{{{each ips}}}
 				<div>{ips}</div>
-			<!-- END ips -->
+			{{{end}}}
 			</div>
 		</div>
 	</div>
 	<!-- ENDIF ips.length -->
 
 	<div class="row">
-		<div class="col-xs-12">
-			<h1>[[pages:account/posts, {username}]]</h1>
+		<div class="col-xs-6">
+			<h1>[[pages:account/best, {username}]]</h1>
 
 			<div class="col-xs-12">
-				<!-- IF !posts.length -->
+				<!-- IF !bestPosts.length -->
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
-				<!-- ENDIF !posts.length -->
-				<!-- IMPORT partials/posts_list.tpl -->
-				<!-- IF config.usePagination -->
-					<!-- IMPORT partials/paginator.tpl -->
-				<!-- ENDIF config.usePagination -->
+				<!-- ENDIF !bestPosts.length -->
+
+				<ul component="posts" class="posts-list">
+				{{{each bestPosts}}}
+				<!-- IMPORT partials/posts_list_item.tpl -->
+				{{{end}}}
+				</ul>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<h1>[[pages:account/latest-posts, {username}]]</h1>
+
+			<div class="col-xs-12">
+				<!-- IF !latestPosts.length -->
+				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<!-- ENDIF !latestPosts.length -->
+				<ul component="posts" class="posts-list">
+				{{{each latestPosts}}}
+				<!-- IMPORT partials/posts_list_item.tpl -->
+				{{{end}}}
+				</ul>
 			</div>
 		</div>
 	</div>

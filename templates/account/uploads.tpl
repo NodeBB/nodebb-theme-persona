@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- BEGIN uploads -->
+                    {{{each uploads}}}
                     <tr data-name="{uploads.name}">
                         <td>
                             <a href="{config.relative_path}{uploads.url}">{uploads.url}</a>
@@ -33,7 +33,7 @@
                             </div>
                         </td>
                     </tr>
-                    <!-- END uploads -->
+                    {{{end}}}
                 </tbody>
             </table>
 

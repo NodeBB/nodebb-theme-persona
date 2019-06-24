@@ -1,8 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div data-widget-area="header">
-	<!-- BEGIN widgets.header -->
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="users">
 	<div class="row">
