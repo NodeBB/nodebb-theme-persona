@@ -7,7 +7,7 @@
 <div class="unread">
 	<div class="btn-toolbar">
 		<div class="pull-left">
-			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
