@@ -65,7 +65,6 @@
 			margin-top: 15px
 		}
 
-
 		.icon {
 			position: relative;
 			border-radius: 50%;
@@ -96,6 +95,12 @@
 		}
 	}
 
+	.login-required {
+		display: inline-block;
+		padding: 0 0.5em;
+		border: 1px dashed @gray-light;
+	}
+
 	.bookmarked {
 		position: absolute;
 		top: -2px;
@@ -120,9 +125,9 @@
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
 
-        	&:focus {
-            		text-decoration: none;
-        	}
+		&:focus {
+				text-decoration: none;
+		}
 	}
 
 	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
