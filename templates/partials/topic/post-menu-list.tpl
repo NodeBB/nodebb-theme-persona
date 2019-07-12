@@ -39,6 +39,12 @@
 </li>
 <!-- ENDIF posts.display_move_tools -->
 
+<li role="presentation">
+	<a component="post/change-owner" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa fa-fw fa-user"></i></span> [[topic:change-owner]]
+	</a>
+</li>
+
 <!-- IF posts.ip -->
 <li role="presentation">
 	<a component="post/copy-ip" role="menuitem" tabindex="-1" href="#" data-clipboard-text="{posts.ip}">
