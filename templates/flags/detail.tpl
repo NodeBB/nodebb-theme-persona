@@ -157,7 +157,7 @@
 								<small><span class="timeago" title="{../datetimeISO}"></span></small>
 							</h4>
 							<ul>
-								{{{each fields}}}
+								{{{each ./fields}}}
 								<li>
 									<span class="label label-primary">[[flags:@key]]</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
 								</li>
