@@ -6,7 +6,7 @@
 			</a>
 			<div class="panel-body">
 				<ul class="members">
-					{{{each members}}}
+					{{{each groups.members}}}
 					<li>
 						<a href="{config.relative_path}/user/{groups.members.userslug}">{buildAvatar(groups.members, "sm", true)}</a>
 					</li>
