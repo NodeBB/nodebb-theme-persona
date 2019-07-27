@@ -104,7 +104,7 @@
 	.post-header {
 		position: relative;
 	}
-	
+
 	.bookmarked {
 		position: absolute;
 		top: -2px;
@@ -575,18 +575,18 @@
 
 [component="post"] {
 
-	[component="user/picture"], [component="user/status"] {
+	>.post-header [component="user/picture"], >.post-header [component="user/status"] {
 		opacity: 1;
 	}
 
-	.icon:before {
+	>.post-header .icon:before {
 		opacity: 0;
 	}
 
 	&.bg-success {
 		background-color: initial;
 
-		.icon:before {
+		>.post-header .icon:before {
 			border: 1px solid #5cb85c;
     		color: #5cb85c;
     		-webkit-transition: .2s ease-in-out all;
@@ -600,7 +600,7 @@
 		    font: normal normal normal 14px/1 FontAwesome;
 		}
 
-		[component="user/picture"], [component="user/status"] {
+		>.post-header [component="user/picture"], >.post-header [component="user/status"] {
 			opacity: 0;
 		}
 	}
