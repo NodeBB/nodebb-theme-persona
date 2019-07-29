@@ -5,7 +5,7 @@
 
 	h1 {
 		line-height: 40px;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 
 		.topic-title {
 			word-wrap: break-word;
@@ -29,6 +29,14 @@
 
 		.topic-title {
 			text-transform: initial;
+		}
+	}
+
+	.category {
+		.text { color: @text-muted; }
+		.icon {
+			border-radius: 50%;
+			font-size: 90%;
 		}
 	}
 
@@ -270,9 +278,17 @@
 		}
 	}
 
-	.tags {
-		vertical-align: -40%;
-		margin-bottom: 20px;
+	.tag-list {
+		display: inline-block;
+		a { color: @text-muted; }
+		font-weight: 500;
+		.tag {
+			text-transform: uppercase;
+			font-size: 10px;
+			background: lighten(@gray-lighter, 2.5%);
+			padding: 5px;
+			white-space: nowrap;
+		}
 	}
 
 	h1 {

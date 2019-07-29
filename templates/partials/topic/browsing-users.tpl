@@ -1,3 +1,5 @@
+<hr/>
+<label>Browsing Users</label>
 <div component="topic/browsing-users">
 	{{{each browsingUsers}}}
 	<div class="pull-left">
