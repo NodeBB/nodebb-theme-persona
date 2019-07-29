@@ -111,7 +111,7 @@
 
 		<!-- IMPORT partials/topic/browsing-users.tpl -->
 
-		<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+		<div data-widget-area="sidebar" class="<!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 			{{{each widgets.sidebar}}}
 			{{widgets.sidebar.html}}
 			{{{end}}}

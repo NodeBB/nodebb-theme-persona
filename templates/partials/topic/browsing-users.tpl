@@ -1,6 +1,6 @@
 <hr/>
 <label>Browsing Users</label>
-<div component="topic/browsing-users">
+<div component="topic/browsing-users" class="clearfix">
 	{{{each browsingUsers}}}
 	<div class="pull-left">
 		<a href="<!-- IF browsingUsers.userslug -->{config.relative_path}/user/{browsingUsers.userslug}<!-- ELSE -->#<!-- ENDIF browsingUsers.userslug -->">
@@ -13,3 +13,4 @@
 	</div>
 	{{{end}}}
 </div>
+<br/>
