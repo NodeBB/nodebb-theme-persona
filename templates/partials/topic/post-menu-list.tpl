@@ -45,7 +45,7 @@
 		<span class="menu-icon"><i class="fa fa-fw fa-user"></i></span> [[topic:change-owner]]
 	</a>
 </li>
-<!-- ENDIF posts.display_change_owner_tools-->
+<!-- ENDIF posts.display_change_owner_tools -->
 
 <!-- IF posts.ip -->
 <li role="presentation">
