@@ -23,7 +23,7 @@
 						<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group form-group-remember_me">
 					<div class="col-lg-offset-2 col-lg-10">
 						<div class="checkbox">
 							<label>
@@ -32,6 +32,14 @@
 						</div>
 					</div>
 				</div>
+				{{{each loginFormEntry}}}
+                <div class="form-group loginFormEntry">
+                    <label for="login-{loginFormEntry.styleName}" class="col-lg-4 control-label">{loginFormEntry.label}</label>
+                    <div id="login-{loginFormEntry.styleName}" class="col-lg-8">
+                        {{loginFormEntry.html}}
+                    </div>
+                </div>
+                {{{end}}}
 				<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 				<input type="hidden" name="noscript" id="noscript" value="true" />
 				<div class="form-group">
