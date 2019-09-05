@@ -214,6 +214,11 @@
 					</div>
 					<div class="checkbox">
 						<label>
+							<input name="disableLeave" type="checkbox"{{{if group.disableLeave}}} checked{{{end}}}> <strong>[[groups:details.disableLeave]]</strong>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
 							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->> <strong>[[groups:details.hidden]]</strong>
 							<p class="help-block">
 								[[groups:details.hidden_help]]
