@@ -85,14 +85,18 @@
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
 
-								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
+								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									{{{each groups}}}
 									<!-- IF groups.userTitleEnabled -->
-									<option value="{groups.name}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
+									<option value="{groups.displayName}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
 									<!-- ENDIF groups.userTitleEnabled -->
 									{{{end}}}
 								</select>
+								<!-- IF allowMultipleBadges -->
+								<span>[[user:group-order-help]]</span>
+								<i role="button" component="group/order/up" class="fa fa-chevron-up"></i> <i role="button" component="group/order/down" class="fa fa-chevron-down"></i>
+								<!-- ENDIF -->
 							</div>
 						</div>
 

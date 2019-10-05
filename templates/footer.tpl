@@ -25,7 +25,7 @@
 	{{{end}}}
 
 	<script>
-		window.addEventListener('load', function () {
+		window.addEventListener('DOMContentLoaded', function () {
 			require(['forum/footer']);
 
 			<!-- IF useCustomJS -->
