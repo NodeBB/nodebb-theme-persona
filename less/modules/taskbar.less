@@ -50,6 +50,21 @@
 				animation-fill-mode: both;
 			}
 
+			&.active a {
+				&::after {
+					content: '\f06e';
+					font-family: "FontAwesome";
+					font-size: .75em;
+					background: black;
+					border-radius: 50%;
+					padding: 0.5em;
+					color: white;
+					position: relative;
+					top: -100%;
+					right: -100%;
+				}
+			}
+
 			a {
 				padding: 3px 15px;
 				font-size: 13px;
@@ -87,21 +102,14 @@
 
 			&.taskbar-composer {
 				a, a:hover, a:focus, a:active {
-					background: #f44336;
+					background-color: #f44336;
+					background-size: cover;
 				}
 			}
 
 			&.taskbar-chat {
 				a, a:hover, a:focus, a:active {
-					.user-icon-style(50px, 2.4rem, 50%) !important;
-					padding: 0;
-					color: white;
 					background: @brand-primary;
-					background-size: cover;
-
-					i {
-						color: @gray;
-					}
 				}
 
 				&.new:after {
