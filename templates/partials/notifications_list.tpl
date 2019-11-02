@@ -4,7 +4,7 @@
 <!-- ENDIF !notifications.length -->
 
 {{{each notifications}}}
-<li class="{notifications.readClass}" data-nid="{notifications.nid}" data-path="{config.relative_path}{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
+<li class="{notifications.readClass}" data-nid="{notifications.nid}" data-path="{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
 	<!-- IF notifications.image -->
 	<!-- IF notifications.from -->
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="pull-left user-img avatar avatar-md avatar-rounded"src="{notifications.image}" /></a>
@@ -14,7 +14,7 @@
 	<!-- ENDIF notifications.image -->
 
 	<div class="pull-right mark-read" aria-label="Mark Read"></div>
-	<a href="{config.relative_path}{notifications.path}">
+	<a href="{notifications.path}">
 		<span class="pull-right relTime">{notifications.timeago}</span>
 		<span class="text">{notifications.bodyShort}</span>
 	</a>

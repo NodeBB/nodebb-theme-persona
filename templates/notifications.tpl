@@ -50,7 +50,7 @@
 			<!-- ENDIF notifications.image -->
 
 			<p>
-				<a component="notifications/item/link" href="{config.relative_path}{notifications.path}">{notifications.bodyShort}</a>
+				<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 			</p>
 			<p class="timestamp">
 				<span class="timeago" title="{notifications.datetimeISO}"></span>
