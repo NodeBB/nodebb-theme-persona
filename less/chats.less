@@ -231,6 +231,13 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			display: block;
+			[component="chat/title"] {
+				overflow: hidden;
+    			white-space: nowrap;
+    			text-overflow: ellipsis;
+    			max-width: 350px;
+    			display: inline-block;
+			}
 		}
 
 		.teaser-content, .room-name {
