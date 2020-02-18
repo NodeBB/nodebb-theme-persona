@@ -10,10 +10,9 @@
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
+		"lib/modules/quickreply.js",
 		"lib/persona.js",
-		"lib/modules/nprogress.js",
-		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/quickreply.js"
+		"lib/modules/autohidingnavbar.min.js"
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
