@@ -9,10 +9,17 @@
 		</div>
 	</div>
 
-	<div component="toaster/tray" class="alert-window">
-		<div id="reconnect-alert" class="alert alert-dismissable alert-warning clearfix hide" component="toaster/toast">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			<p>[[global:reconnecting-message, {config.siteTitle}]]</p>
+	<div data-component="toaster/tray" aria-live="polite" aria-atomic="true" style="position: absolute; top: 4.5rem; right: 1rem; min-height: 200px;">
+		<div id="reconnect-alert" class="toast bg-warning" component="toaster/toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+			<div class="toast-header">
+				<strong class="mr-auto">[[global:500.title]]</strong>
+				<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="toast-body">
+				<p>[[global:reconnecting-message, {config.siteTitle}]]</p>
+			</div>
 		</div>
 	</div>
 	<!-- ENDIF !isSpider -->
