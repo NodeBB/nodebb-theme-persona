@@ -1,7 +1,7 @@
 <div class="form-group">
 	<input class="form-control" type="text" placeholder="[[global:user-search-prompt]]" />
 	<p class="text-danger"></p>
-	<p class="help-block">[[modules:chat.add-user-help]]</p>
+	<small class="form-text text-muted">[[modules:chat.add-user-help]]</small>
 
 	<hr />
 
