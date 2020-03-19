@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div data-component="toaster/tray" aria-live="polite" aria-atomic="true" style="position: absolute; top: 4.5rem; right: 1rem; min-height: 200px;">
+	<div class="position-fixed" data-component="toaster/tray" aria-live="polite" aria-atomic="true" style="position: absolute; top: 4.5rem; right: 1rem; min-height: 200px;">
 		<div id="reconnect-alert" class="toast bg-warning" component="toaster/toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
 			<div class="toast-header">
 				<strong class="mr-auto">[[global:500.title]]</strong>
