@@ -17,17 +17,7 @@
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
 
-		<!-- IF merger -->
-		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="pull-right">
-				<a href="{config.relative_path}/user/{merger.userslug}">
-					<strong>{merger.username}</strong>
-				</a>
-				<small class="timeago" title="{mergedTimestampISO}"></small>
-			</span>
-		</div>
-		<!-- ENDIF merger -->
+		<!-- IMPORT partials/topic/merged-message.tpl -->
 
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 

@@ -10,15 +10,13 @@
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
-		"lib/modules/quickreply.js",
-		"lib/persona.js",
-		"lib/modules/autohidingnavbar.min.js"
+		"lib/modules/autohidingnavbar.min.js",
+		"lib/persona.js"
 	],
 	"modules": {
-		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
+		"pulling.js": "node_modules/pulling/build/pulling-drawer.js",
+		"admin/plugins/persona.js": "lib/admin.js",
+		"persona/quickreply.js": "lib/modules/quickreply.js"
 	},
-	"acpScripts": [
-		"lib/admin.js"
-	],
 	"languages": "languages"
 }
