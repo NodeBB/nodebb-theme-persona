@@ -1,0 +1,513 @@
+.topic {
+	[data-component="post/header"] {
+		margin-top: 0px;
+	}
+
+	h1 {
+		line-height: 40px;
+		margin-bottom: 30px;
+
+		.topic-title {
+			word-wrap: break-word;
+			font-size: 28px;
+			color:inherit;
+			line-height: 36px;
+		}
+
+		> span {
+			text-transform: uppercase;
+			font-size: 12px;
+			display: inline-block;
+			margin-top: 8px;
+
+			> span {
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+		}
+
+		.topic-title {
+			text-transform: initial;
+		}
+	}
+
+	.posts {
+		h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+			margin-top: 0px;
+		}
+
+		h1 {
+			font-size: 22px;
+			margin: 10px 0;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 900;
+		}
+
+		h4 {
+			font-size: 17px;
+		}
+
+		h5 {
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+
+		h4, h5, h6 {
+			margin-top: 15px
+		}
+
+		.icon {
+			position: relative;
+			border-radius: 50%;
+			min-width: 46px;
+			min-height: 46px;
+			margin-top: 2px;
+
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+
+				@include media-breakpoint-up(md) {
+					top: 2px;
+					font-size: 16px;
+				}
+			}
+
+			.avatar {
+				margin-right: 15px;
+			}
+		}
+
+		.status {
+			vertical-align: 0%;
+		}
+	}
+
+	.login-required {
+		display: inline-block;
+		padding: 0 0.5em;
+		border: 1px dashed;
+	}
+
+	.bookmarked {
+		position: absolute;
+		top: -2px;
+		right: 6px;
+		font-size: 16px;
+		opacity: 0;
+	}
+
+	[data-component="post/header"] {
+		.fa {
+			margin-top: 7px;
+		}
+	}
+
+	[data-component="post/anchor"] {
+		position: relative;
+		top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
+	}
+
+	[data-component="post/upvote"], [component="post/downvote"] {
+		&:focus {
+				text-decoration: none;
+		}
+	}
+
+	[data-component="post/upvote"].upvoted, [data-component="post/downvote"].downvoted {
+		font-weight: bolder;
+	}
+
+	[data-component="post/parent"] {
+		border: 0;
+		font-size: 8px;
+		background-color: #f0f0f0;
+		vertical-align: 1px;
+	}
+
+	.threaded-replies {
+		margin-left: 61px;
+		text-decoration: none;
+		margin-left: 60px;
+		font-size: 11px;
+
+		img {
+			vertical-align: -4px;
+		}
+
+		.replies-count {
+			margin-left: 3px;
+		}
+
+		.fa {
+			font-size: 80%;
+		}
+
+		.avatars {
+			position: relative;
+
+			&.hasMore > *:last-child:after {
+				content: "\2022\2022\2022";
+				width: 16px;
+				height: 16px;
+				line-height: 16px;
+				background: #000;
+				opacity: .6;
+				color: white;
+				position: absolute;
+				right: 2px;
+				border-radius: 50%;
+				bottom: -1px;
+				text-align: center;
+				font-size: 12px;
+			}
+		}
+	}
+
+	[data-component="post/replies"] {
+		margin-left: 61px;
+		margin-top: 20px;
+		border-left: 5px solid #eee;
+		padding-left: 20px;
+
+		[data-component="post"]:last-child > hr {
+			display: none;
+		}
+	}
+
+	.stats {
+		margin: 0px 10px 0px 10px;
+		float: left;
+	}
+
+	.title {
+		p {
+			margin-bottom: 4px;
+		}
+
+		small {
+			margin-top: 2px;
+			display: block;
+		}
+	}
+
+	.content {
+		margin-top: 20px;
+		padding-bottom: 1px;
+		margin-top: -43px;
+		margin-left: 61px;
+		word-wrap: break-word;
+		overflow: hidden;
+	}
+
+	.post-tools {
+		a {
+			padding-right: 10px;
+			cursor: pointer;
+		}
+	}
+
+	.moderator-tools {
+		margin-left: 10px;
+		font-size: 14px;
+
+		> a {
+			padding: 0.25em;
+		}
+
+		a {
+			outline: none;
+
+			&[role="menuitem"] {
+				color: inherit;
+			}
+		}
+
+		// temporary until we build component toggling
+		.favourite.btn-warning, .follow.btn-success {
+			background: white !important;
+			color: #333;
+		}
+	}
+
+	.tags {
+		vertical-align: -40%;
+		margin-bottom: 20px;
+	}
+
+	.post-signature {
+		font-size: 12px;
+		border-top: 1px dashed #dedede;
+		padding: 1px;
+		padding-top: 5px;
+		display: block;
+		font-style: italic;
+		margin-left: 61px;
+		max-width: 100%;
+		word-wrap: break-word;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.content {
+			margin-left: 0;
+			margin-top: -10px;
+
+			.table {
+				overflow-x: auto;
+				display: block;
+			}
+		}
+
+		.post-signature {
+			margin-left: 0px;
+		}
+
+		.posts .icon {
+			min-width: 0;
+			min-height: 0;
+			margin-top: -3px;
+
+			.avatar {
+				@include user-icon-style(23px, 1.3rem, 50%);
+			}
+		}
+
+		[data-component="post/reply-count"] {
+			margin-left: 0;
+		}
+
+		[data-component="post/replies"] {
+			margin-left: 1px;
+		}
+	}
+
+	.quick-reply {
+		.icon {
+			position: relative;
+			border-radius: 50%;
+			min-width: 46px;
+			min-height: 46px;
+			margin-top: 2px;
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+				@include media-breakpoint-up(md) {
+					top: 2px;
+					font-size: 16px;
+				}
+			}
+
+			.avatar {
+				margin-right: 15px;
+			}
+		}
+
+		.quickreply-message {
+			margin-left: 61px;
+			margin-bottom: 5px;
+			@include media-breakpoint-down(sm) {
+				margin-left: 0;
+
+				[data-component="topic/quickreply/text"] {
+					font-size: 16px;
+					padding: 10px;
+				}
+			}
+		}
+
+		[data-component="topic/quickreply/button"] {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+.topic {
+	&.deleted {
+		@include opacity(0.3);
+
+		.votes {
+			display: none;
+		}
+	}
+
+	.posts {
+		list-style-type: none;
+		padding: 0;
+
+		[component="post"] {
+			position: relative;
+
+			.edit-icon {
+				vertical-align: -2%;
+			}
+
+			&.deleted {
+				> .content {
+					@include opacity(0.3);
+				}
+
+				.votes {
+					display: none;
+				}
+			}
+
+			> hr {
+				@include transition(0.75s ease-in-out border-color);
+			}
+
+			// &.highlight > hr {
+			// 	border-color: darken(@brand-info, 20%);
+			// 	box-shadow: 0px 0px 1px @brand-info;
+			// }
+
+			&.highlight .bookmarked {
+				opacity: 1;
+			}
+		}
+
+		.content {
+			@include fix-lists;
+
+			blockquote {
+				font-size: 12px;
+			}
+
+			> blockquote {
+				> blockquote {
+					> *:not(.blockquote) {
+						display: none;
+					}
+				}
+
+				> blockquote.uncollapsed {
+					> *:not(.blockquote) {
+							display: block;
+					}
+				}
+			}
+
+			iframe, .img-responsive {
+				max-width: 85%;
+				display: inline;
+			}
+
+			.toggle {
+				padding: 0px 5px;
+				border: 1px solid #e0e0e0;
+				background: #fcfcfc;
+				width: 50px;
+				text-align: center;
+				display:block!important;
+			}
+
+			pre {
+				max-height: 350px;
+
+				code {
+					white-space: pre;
+					word-wrap: normal;
+					min-width: 100%;
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				pre {
+					max-height: 250px;
+				}
+			}
+		}
+	}
+
+	.navigator-thumb {
+		position: fixed;
+		bottom: 60px;
+		left: 0px;
+		padding: 10px;
+		border-radius: 5px;
+		white-space: nowrap;
+		z-index: 100;
+	}
+
+	.pagination-block {
+		position: fixed;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		z-index: 100;
+		transition: opacity 250ms ease-in;
+		opacity: 0;
+
+		&.ready {
+			opacity: 1;
+		}
+
+		.wrapper {
+			padding: 5px 0px 5px 0px;
+		}
+		.progress-bar {
+			display:block;
+			z-index: -1;
+			position: absolute;
+			transition: width 50ms ease-in;
+		}
+	}
+}
+
+.fork-thread-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+}
+@include media-breakpoint-up(sm) {
+	.fork-thread-card {
+		max-width: 33%;
+	}
+}
+
+[data-component="post"] {
+
+	>.post-header [data-component="user/picture"], >.post-header [data-component="user/status"] {
+		opacity: 1;
+	}
+
+	>.post-header .icon:before {
+		opacity: 0;
+	}
+
+	&.bg-success {
+		background-color: initial;
+
+		>.post-header .icon:before {
+			border: 1px solid #5cb85c;
+    		color: #5cb85c;
+    		-webkit-transition: .2s ease-in-out all;
+    		transition: .2s ease-in-out all;
+    		content: "\f00c";
+    		padding: 14px;
+		    border-radius: 50%;
+		    opacity: 1;
+		    position: absolute;
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		}
+
+		>.post-header [data-component="user/picture"], >.post-header [data-component="user/status"] {
+			opacity: 0;
+		}
+	}
+}

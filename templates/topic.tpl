@@ -7,14 +7,14 @@
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 
-		<h1 component="post/header" class="hidden-xs" itemprop="name">
+		<h1 data-component="post/header" class="hidden-xs" itemprop="name">
 
 			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
 			<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
 			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
 			{{{each icons}}}@value{{{end}}}
 
-			<span class="topic-title" component="topic/title">{title}</span>
+			<span class="topic-title" data-component="topic/title">{title}</span>
 		</h1>
 
 		<!-- IMPORT partials/topic/merged-message.tpl -->
@@ -23,10 +23,10 @@
 
 		<hr class="visible-xs" />
 
-		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
+		<ul data-component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			{{{each posts}}}
-				<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-					<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
+				<li data-component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
+					<a data-component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
 
 					<meta itemprop="datePublished" content="{posts.timestampISO}">
 					<meta itemprop="dateModified" content="{posts.editedISO}">
