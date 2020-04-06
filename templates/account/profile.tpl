@@ -101,9 +101,9 @@
 
 				<!-- IF !isSelf -->
 				<!-- IF isFollowing -->
-				<a component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a>
+				<a data-component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a>
 				<!-- ELSE -->
-				<a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
+				<a data-component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
 				<!-- ENDIF isFollowing -->
 				<!-- ENDIF !isSelf -->
 			</div>
