@@ -5,7 +5,7 @@
 		<h1>{title}</h1>
 		<!-- IF showSort -->
 		<div class="row clearfix">
-			<div class="pull-right btn-group bottom-sheet" component="thread/sort">
+			<div class="pull-right btn-group bottom-sheet" data-component="thread/sort">
 				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span>[[topic:sort_by]]</span> <span class="caret"></span></button>
 				<ul class="dropdown-menu dropdown-menu-right">
 					{{{each sortOptions }}}

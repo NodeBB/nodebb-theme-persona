@@ -32,7 +32,7 @@
 
 	<hr />
 
-	<div component="groups/container" class="row" id="groups-list" data-nextstart={nextStart}>
+	<div data-component="groups/container" class="row" id="groups-list" data-nextstart={nextStart}>
 		<!-- IF groups.length -->
 		<!-- IMPORT partials/groups/list.tpl -->
 		<!-- ELSE -->

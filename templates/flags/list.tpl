@@ -23,7 +23,7 @@
 			[[flags:filter-active]]
 		</div>
 		<!-- ENDIF hasFilter -->
-		<table class="table table-striped table-hover" component="flags/list">
+		<table class="table table-striped table-hover" data-component="flags/list">
 			<thead>
 				<tr>
 					<th>[[flags:state]]</th>
@@ -47,7 +47,7 @@
 					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 					<td>
 						<a href="{config.relative_path}/flags/{../flagId}">
-							<strong>{../target_readable}</strong> &mdash; <span component="flags/list/description">{../description}</span>
+							<strong>{../target_readable}</strong> &mdash; <span data-component="flags/list/description">{../description}</span>
 						</a>
 					</td>
 					<td>

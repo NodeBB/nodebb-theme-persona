@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-12">
 			<h4>[[global:sessions]]</h4>
-			<ul class="list-group" component="user/sessions">
+			<ul class="list-group" data-component="user/sessions">
 				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
 					<div class="pull-right">
@@ -107,11 +107,11 @@
 
 						<!-- IF !banned -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+						<button class="btn btn-xs pull-right btn-danger" data-component="account/ban">[[user:ban_account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ELSE -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+						<button class="btn btn-xs pull-right btn-success" data-component="account/unban">[[user:unban_account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ENDIF !banned -->
 					</h3>
@@ -148,11 +148,11 @@
 					<h3 class="panel-title">[[user:info.moderation-note]]</h3>
 				</div>
 				<div class="panel-body">
-					<textarea component="account/moderation-note" class="form-control"></textarea>
+					<textarea data-component="account/moderation-note" class="form-control"></textarea>
 					<br/>
-					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+					<button class="btn btn-sm pull-right btn-success" data-component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
 					<br/>
-					<div component="account/moderation-note/list">
+					<div data-component="account/moderation-note/list">
 						{{{each moderationNotes}}}
 						<hr/>
 

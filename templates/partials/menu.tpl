@@ -1,10 +1,10 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle pull-left" id="mobile-menu">
-					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
+					<span data-component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 					<i class="fa fa-lg fa-fw fa-bars"></i>
 				</button>
 				<button type="button" class="navbar-toggle hidden" id="mobile-chats">
-					<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
+					<span data-component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
 					<i class="fa fa-lg fa-comment-o"></i>
 				</button>
 
@@ -19,7 +19,7 @@
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
 
-				<div component="navbar/title" class="visible-xs hidden">
+				<div data-component="navbar/title" class="visible-xs hidden">
 					<span></span>
 				</div>
 			</div>
@@ -29,13 +29,13 @@
 				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
-					<li class="notifications dropdown text-center hidden-xs" component="notifications">
+					<li class="notifications dropdown text-center hidden-xs" data-component="notifications">
 						<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
-							<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
+							<i data-component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
-								<ul component="notifications/list" class="notification-list">
+								<ul data-component="notifications/list" class="notification-list">
 									<li class="loading-text">
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
 									</li>
@@ -48,18 +48,18 @@
 
 					<!-- IF !config.disableChat -->
 					<li class="chats dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" title="[[global:header.chats]]" id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw unread-count" data-content="{unreadCount.chat}"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" title="[[global:header.chats]]" id="chat_dropdown" data-component="chat/dropdown" data-ajaxify="false" role="button">
+							<i data-component="chat/icon" class="fa fa-comment-o fa-fw unread-count" data-content="{unreadCount.chat}"></i> <span class="visible-xs-inline">[[global:header.chats]]</span>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
-								<ul component="chat/list" class="chat-list chats-list">
+								<ul data-component="chat/list" class="chat-list chats-list">
 									<li class="loading-text">
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 									</li>
 								</ul>
 							</li>
-							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
+							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" data-component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
 							<li class="notif-dropdown-link"><a href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see_all]]</a></li>
 						</ul>
 					</li>
@@ -71,10 +71,10 @@
 							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
-						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
+						<ul id="user-control-list" data-component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
-								<a component="header/profilelink" href="{relative_path}/user/{user.userslug}">
-									<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+								<a data-component="header/profilelink" href="{relative_path}/user/{user.userslug}">
+									<i data-component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span data-component="header/username">{user.username}</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
@@ -100,12 +100,12 @@
 							</li>
 							<li role="presentation" class="divider"></li>
 							<li>
-								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
+								<a data-component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
 								</a>
 							</li>
 							<li>
-								<a component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
+								<a data-component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
 									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
 								</a>
 							</li>
@@ -129,7 +129,7 @@
 							</li>
 							<!-- ENDIF showModMenu -->
 							<li role="presentation" class="divider"></li>
-							<li component="user/logout">
+							<li data-component="user/logout">
 								<form method="post" action="{relative_path}/logout">
 									<input type="hidden" name="_csrf" value="{config.csrf_token}">
 									<input type="hidden" name="noscript" value="true">

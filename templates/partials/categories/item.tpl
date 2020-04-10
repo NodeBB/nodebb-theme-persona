@@ -1,4 +1,4 @@
-<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="row clearfix">
+<li data-component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="row clearfix">
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-xs-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
@@ -38,7 +38,7 @@
 		<small>[[global:posts]]</small>
 	</div>
 	<!-- IF !config.hideCategoryLastPost -->
-	<div class="col-md-3 col-sm-3 teaser d-none d-sm-block" component="topic/teaser">
+	<div class="col-md-3 col-sm-3 teaser d-none d-sm-block" data-component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
 	<!-- ENDIF !config.hideCategoryLastPost -->

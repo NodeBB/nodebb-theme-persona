@@ -7,10 +7,8 @@
 	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 
 	<script>
-		var RELATIVE_PATH = "{relative_path}";
 		var config = JSON.parse('{{configJSON}}');
 		var app = {
-			template: "{template.name}",
 			user: JSON.parse('{{userJSON}}')
 		};
 	</script>
@@ -32,7 +30,7 @@
 	</nav>
 
 	<main id="panel" class="slideout-panel">
-		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
+		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" data-component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>

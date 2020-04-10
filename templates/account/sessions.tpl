@@ -6,7 +6,7 @@
 		<div class="col-xs-12 col-md-12">
 			<p class="lead">[[user:sessions.description]]</p>
 			<hr />
-			<ul class="list-group" component="user/sessions">
+			<ul class="list-group" data-component="user/sessions">
 				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
 					<div class="pull-right">

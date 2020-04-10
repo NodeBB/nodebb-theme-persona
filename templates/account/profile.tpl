@@ -28,7 +28,7 @@
 		<!-- ENDIF selectedGroup.length -->
 
 		<!-- IF aboutme -->
-		<span component="aboutme" class="text-center aboutme">{aboutmeParsed}</span>
+		<span data-component="aboutme" class="text-center aboutme">{aboutmeParsed}</span>
 		<!-- ENDIF aboutme -->
 
 		<div class="account-stats">
@@ -144,7 +144,7 @@
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
 				<!-- ENDIF !bestPosts.length -->
 
-				<ul component="posts" class="posts-list">
+				<ul data-component="posts" class="posts-list">
 				{{{each bestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}
@@ -158,7 +158,7 @@
 				<!-- IF !latestPosts.length -->
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
 				<!-- ENDIF !latestPosts.length -->
-				<ul component="posts" class="posts-list">
+				<ul data-component="posts" class="posts-list">
 				{{{each latestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}

@@ -8,17 +8,17 @@
 		<!-- IF !banned -->
 		<!-- IF !config.disableChat -->
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
-			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
+			<a data-component="account/chat" href="#">[[user:chat_with, {username}]]</a>
 		</li>
 		<li>
-			<a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
+			<a data-component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
 		</li>
 		<!-- ENDIF !config.disableChat -->
 		<li>
-			<a component="account/flag" href="#">[[user:flag-profile]]</a>
+			<a data-component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
 		<li>
-			<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
+			<a data-component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
 		</li>
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
@@ -35,15 +35,15 @@
 		<!-- IF !isSelf -->
 		<!-- IF canBan -->
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
-			<a component="account/ban" href="#">[[user:ban_account]]</a>
+			<a data-component="account/ban" href="#">[[user:ban_account]]</a>
 		</li>
 		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
-			<a component="account/unban" href="#">[[user:unban_account]]</a>
+			<a data-component="account/unban" href="#">[[user:unban_account]]</a>
 		</li>
 		<!-- ENDIF canBan -->
 		<!-- IF isAdmin -->
 		<li>
-			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
+			<a data-component="account/delete" href="#" class="">[[user:delete_account]]</a>
 		</li>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->

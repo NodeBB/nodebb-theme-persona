@@ -1,5 +1,5 @@
 	{{{each groups}}}
-	<div class="col-lg-4 col-md-6 col-sm-12" component="groups/summary" data-slug="{groups.slug}">
+	<div class="col-lg-4 col-md-6 col-sm-12" data-component="groups/summary" data-slug="{groups.slug}">
 		<div class="panel panel-default">
 			<a href="{config.relative_path}/groups/{groups.slug}" class="panel-heading list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
 				<h3 class="panel-title">{groups.displayName} <small>{groups.memberCount}</small></h3>

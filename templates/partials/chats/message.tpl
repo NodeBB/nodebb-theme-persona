@@ -1,4 +1,4 @@
-<li component="chat/message" class="chat-message clear<!-- IF ../deleted --> deleted<!-- END -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
+<li data-component="chat/message" class="chat-message clear<!-- IF ../deleted --> deleted<!-- END -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
 	<div class="message-header">
 		<a href="{config.relative_path}/user/{messages.fromUser.userslug}">{buildAvatar(messages.fromUser, "md", true, "not-responsive")}</a>
 		<strong><span class="chat-user"><a href="{config.relative_path}/user/{messages.fromUser.userslug}">{messages.fromUser.username}</a></span></strong>
@@ -14,7 +14,7 @@
 		<!-- ENDIF messages.edited -->
 	</div>
 	<div class="message-body-wrapper">
-		<div component="chat/message/body" class="message-body">
+		<div data-component="chat/message/body" class="message-body">
 			{messages.content}
 		</div>
 

@@ -119,7 +119,7 @@
 		top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
 	}
 
-	[data-component="post/upvote"], [component="post/downvote"] {
+	[data-component="post/upvote"], [data-component="post/downvote"] {
 		&:focus {
 				text-decoration: none;
 		}
@@ -349,7 +349,7 @@
 		list-style-type: none;
 		padding: 0;
 
-		[component="post"] {
+		[data-component="post"] {
 			position: relative;
 
 			.edit-icon {

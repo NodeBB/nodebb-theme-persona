@@ -1,12 +1,12 @@
 <!-- IF roomId -->
-<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
-	<div component="chat/header">
+<div data-component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
+	<div data-component="chat/header">
 		<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
 		<button type="button" class="close" aria-label="Close" data-action="close"><span aria-hidden="true">&times;</span></button>
 
 		<div class="dropdown pull-right">
-			<button class="close" data-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
-			<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
+			<button class="close" data-toggle="dropdown" data-component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
+			<ul class="dropdown-menu dropdown-menu-right pull-right" data-component="chat/controls">
 				<li class="dropdown-header">[[modules:chat.options]]</li>
 				<li>
 					<a href="#" data-action="members"><i class="fa fa-fw fa-cog"></i> [[modules:chat.manage-room]]</a>
@@ -38,10 +38,10 @@
 	<ul class="chat-content">
 		<!-- IMPORT partials/chats/messages.tpl -->
 	</ul>
-	<div component="chat/composer">
-		<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="2"></textarea>
+	<div data-component="chat/composer">
+		<textarea data-component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="2"></textarea>
 		<button class="btn btn-primary" type="button" data-action="send"><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
-		<span component="chat/message/remaining">{maximumChatMessageLength}</span>
+		<span data-component="chat/message/remaining">{maximumChatMessageLength}</span>
 	</div>
 </div>
 <!-- ELSE -->

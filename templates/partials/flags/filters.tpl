@@ -14,7 +14,7 @@
 		<h3 class="panel-title">[[flags:filters]]</h3>
 	</div>
 	<div class="panel-body">
-		<form role="form" component="flags/filters">
+		<form role="form" data-component="flags/filters">
 			<div class="form-group">
 				<label for="filter-state">[[flags:filter-state]]</label>
 				<select class="form-control" id="filter-state" name="state">

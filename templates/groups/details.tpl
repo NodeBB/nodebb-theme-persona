@@ -1,5 +1,5 @@
-<div component="groups/container" class="groups details row">
-	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+<div data-component="groups/container" class="groups details row">
+	<div data-component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<!-- IF group.isOwner -->
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
@@ -66,7 +66,7 @@
 				</h3>
 			</div>
 			<div class="panel-body">
-				<table component="groups/pending" class="table table-striped table-hover">
+				<table data-component="groups/pending" class="table table-striped table-hover">
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
 					<!-- ENDIF !group.pending.length -->
@@ -102,19 +102,19 @@
 			</div>
 			<div class="panel-body">
 				<div class="input-group">
-					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
+					<input class="form-control" type="text" data-component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 					<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
 				</div>
 
 				<div class="form-group">
-					<textarea class="form-control" component="groups/members/bulk-invite" placeholder="[[groups:bulk-invite-instructions]]"></textarea>
+					<textarea class="form-control" data-component="groups/members/bulk-invite" placeholder="[[groups:bulk-invite-instructions]]"></textarea>
 				</div>
 
 				<div class="form-group clearfix">
-					<button class="btn btn-default btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
+					<button class="btn btn-default btn-sm pull-right" data-component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
 				</div>
 
-				<table component="groups/invited" class="table table-striped table-hover">
+				<table data-component="groups/invited" class="table table-striped table-hover">
 					<!-- IF !group.invited.length -->
 					<div class="alert alert-info">[[groups:invited.none]]</div>
 					<!-- ENDIF !group.invited.length -->
@@ -151,7 +151,7 @@
 			</div>
 
 			<div class="panel-body options collapse">
-				<form component="groups/settings" role="form">
+				<form data-component="groups/settings" role="form">
 					<div class="form-group">
 						<label for="name">[[groups:details.group_name]]</label>
 						<input <!-- IF group.system -->readonly<!-- ENDIF group.system --> class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
@@ -162,18 +162,18 @@
 					</div>
 					<div class="form-group user-title-option">
 						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
+						<input data-component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 					</div>
 
 					<div class="form-group user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
 						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="color: {group.textColor}; background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon -->"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
 						<hr/>
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
+						<button data-component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
 
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="label-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_label_colour]]</button>
+						<button data-component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="label-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_label_colour]]</button>
 
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="text-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_text_colour]]</button>
+						<button data-component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="text-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_text_colour]]</button>
 
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="textColor" value="<!-- IF group.textColor -->{group.textColor}<!-- ENDIF group.textColor -->" />

@@ -1,10 +1,10 @@
-<li component="post" class="posts-list-item row<!-- IF ../deleted --> deleted<!-- ELSE --><!-- IF ../topic.deleted --> deleted<!-- ENDIF --><!-- ENDIF -->" data-pid="{../pid}" data-uid="{../uid}">
+<li data-component="post" class="posts-list-item row<!-- IF ../deleted --> deleted<!-- ELSE --><!-- IF ../topic.deleted --> deleted<!-- ENDIF --><!-- ENDIF -->" data-pid="{../pid}" data-uid="{../uid}">
     <div class="col-lg-11 col-sm-10 col-xs-9 post-body">
         <a class="topic-title" href="{config.relative_path}/post/{../pid}">
             <!-- IF !../isMainPost -->RE: <!-- ENDIF -->{../topic.title}
         </a>
 
-        <div component="post/content" class="content">
+        <div data-component="post/content" class="content">
             {../content}
         </div>
 

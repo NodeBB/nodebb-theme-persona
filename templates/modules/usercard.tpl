@@ -11,7 +11,7 @@
 			<span class="usercard-name"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></span><br />
 			<span class="usercard-username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></span>
 			<!-- IF !banned -->
-			<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
+			<i data-component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 			<!-- ENDIF !banned -->
 		</a>
 
@@ -24,7 +24,7 @@
 				<small>[[global:reputation]]</small>
 				<span class="human-readable-number">{reputation}</span>
 			</div>
-			
+
 			<button class="btn-morph fab <!-- IF banned --> hide<!-- ENDIF banned -->">
 				<span>
 					<span class="s1"></span>

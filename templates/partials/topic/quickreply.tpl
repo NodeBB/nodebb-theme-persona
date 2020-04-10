@@ -4,7 +4,7 @@
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{buildAvatar(loggedInUser, "46", true, "", "user/picture")}
 			<!-- IF loggedInUser.status -->
-			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
+			<i data-component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
 			<!-- ENDIF loggedInUser.status -->
 		</a>
 	</div>
@@ -12,9 +12,9 @@
 		<input type="hidden" name="tid" value="{tid}" />
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="quickreply-message">
-			<textarea name="content" component="topic/quickreply/text" class="form-control" rows="5"></textarea>
+			<textarea name="content" data-component="topic/quickreply/text" class="form-control" rows="5"></textarea>
 		</div>
-		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
+		<button type="submit" data-component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
 	</form>
 </div>
 <!-- ENDIF privileges.topics:reply -->

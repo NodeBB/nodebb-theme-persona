@@ -1,4 +1,4 @@
-<li component="categories/category" data-cid="{../cid}" data-parent-cid="{../parentCid}" class="row clearfix">
+<li data-component="categories/category" data-cid="{../cid}" data-parent-cid="{../parentCid}" class="row clearfix">
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-xs-12 col-md-10 col-sm-12 depth-{../depth}">
