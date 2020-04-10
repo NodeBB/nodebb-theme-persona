@@ -5,31 +5,29 @@
 	{{{end}}}
 </div>
 <div class="recent">
-	<div class="btn-toolbar">
-		<div class="pull-left">
+	<div class="clearfix">
+		<div class="float-left">
 			<!-- IF canPost -->
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<!-- ELSE -->
 			<a data-component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF canPost -->
-			<a href="{config.relative_path}/{selectedFilter.url}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			<a href="{config.relative_path}/{selectedFilter.url}" class="d-inline-block">
+				<div id="new-topics-alert" class="alert alert-warning hidden"></div>
 			</a>
 		</div>
 
 		<!-- IMPORT partials/category-filter.tpl -->
 
-		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedFilter.name} <span class="caret"></span>
+		<div class="btn-group float-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
+			<button type="button" class="btn btn-default" data-toggle="dropdown">
+			{selectedFilter.name} <i class="fa fa-chevron-down"></i>
 			</button>
-			<ul class="dropdown-menu" role="menu">
+			<div class="dropdown-menu" role="menu">
 				{{{each filters}}}
-				<li role="presentation" class="category">
-					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				</li>
+				<a class="dropdown-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				{{{end}}}
-			</ul>
+			</div>
 		</div>
 	</div>
 
