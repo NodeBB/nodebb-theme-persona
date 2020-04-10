@@ -9,7 +9,7 @@
 		<div class="pull-left">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+				<div class="alert alert-warning hidden" id="new-topics-alert"></div>
 			</a>
 		</div>
 		<div class="markread btn-group pull-right category-dropdown-container bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
@@ -35,28 +35,16 @@
 		</div>
 
 		<!-- IMPORT partials/category-filter.tpl -->
-
-		<div class="btn-group pull-right bottom-sheet">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedFilter.name} <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				{{{each filters}}}
-				<li role="presentation" class="category">
-					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				</li>
-				{{{end}}}
-			</ul>
-		</div>
+		<!-- IMPORT partials/topic-filter.tpl -->
 	</div>
 
-	<hr class="hidden-xs"/>
+	<hr class="d-none d-md-block"/>
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>
 
 		<!-- IMPORT partials/topics_list.tpl -->
-		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
+		<button id="load-more-btn" class="btn btn-primary hidden">[[unread:load_more]]</button>
 		<!-- IF config.usePagination -->
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->

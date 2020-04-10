@@ -19,19 +19,10 @@
 
 		<!-- IMPORT partials/category-filter.tpl -->
 
-		<div class="btn-group float-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-			<button type="button" class="btn btn-default" data-toggle="dropdown">
-			{selectedFilter.name} <i class="fa fa-chevron-down"></i>
-			</button>
-			<div class="dropdown-menu" role="menu">
-				{{{each filters}}}
-				<a class="dropdown-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				{{{end}}}
-			</div>
-		</div>
+		<!-- IMPORT partials/topic-filter.tpl -->
 	</div>
 
-	<hr class="hidden-xs"/>
+	<hr class="d-none d-md-block"/>
 
 	<div class="category">
 		<!-- IF !topics.length -->
