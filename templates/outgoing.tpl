@@ -14,6 +14,7 @@
 </div>
 
 <script>
+	// TODO: doesnt work since jquery isn't loaded yet
 	$('#return-btn').on('click', function() {
 		history.back();
 		return false;
