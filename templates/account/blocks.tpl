@@ -5,7 +5,7 @@
 	<div class="users row">
 		<div class="col-sm-8 col-xs-12">
 			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
-				<!-- IMPORT partials/users_list.tpl -->
+				<!-- IMPORT partials/users-list.tpl -->
 			</ul>
 			<div class="alert alert-warning text-center"<!-- IF users.length --> style="display: none;"<!-- END -->>[[user:has_no_blocks]]</div>
 			<!-- IMPORT partials/paginator.tpl -->

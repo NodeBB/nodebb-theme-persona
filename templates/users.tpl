@@ -8,7 +8,7 @@
 <div class="users">
 	<div class="row">
 		<div class="col-lg-6">
-		<!-- IMPORT partials/users_list_menu.tpl -->
+		<!-- IMPORT partials/users-list-menu.tpl -->
 		</div>
 		<div class="col-xs-3 text-right">
 			<!-- IF showInviteButton -->
@@ -30,7 +30,7 @@
 	</div>
 
 	<ul id="users-container" class="users-container">
-		<!-- IMPORT partials/users_list.tpl -->
+		<!-- IMPORT partials/users-list.tpl -->
 		<!-- IF anonymousUserCount -->
 		<li class="users-box anon-user">
 			<div class="avatar avatar-lg avatar-rounded">G</div>

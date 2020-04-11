@@ -44,7 +44,7 @@
 		<!-- ENDIF config.enableQuickReply -->
 
 		<div class="post-bar">
-			<!-- IMPORT partials/post_bar.tpl -->
+			<!-- IMPORT partials/post-bar.tpl -->
 		</div>
 
 		<!-- IF config.usePagination -->

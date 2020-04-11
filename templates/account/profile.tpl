@@ -146,7 +146,7 @@
 
 				<ul data-component="posts" class="posts-list">
 				{{{each bestPosts}}}
-				<!-- IMPORT partials/posts_list_item.tpl -->
+				<!-- IMPORT partials/posts-list-item.tpl -->
 				{{{end}}}
 				</ul>
 			</div>
@@ -160,7 +160,7 @@
 				<!-- ENDIF !latestPosts.length -->
 				<ul data-component="posts" class="posts-list">
 				{{{each latestPosts}}}
-				<!-- IMPORT partials/posts_list_item.tpl -->
+				<!-- IMPORT partials/posts-list-item.tpl -->
 				{{{end}}}
 				</ul>
 			</div>

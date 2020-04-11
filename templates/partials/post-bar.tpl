@@ -29,7 +29,7 @@
 		<!-- IMPORT partials/topic/sort.tpl -->
 
 		<div class="pull-right">&nbsp;
-		<!-- IMPORT partials/thread_tools.tpl -->
+		<!-- IMPORT partials/topic/tools.tpl -->
 		</div>
 	</div>
 </div>

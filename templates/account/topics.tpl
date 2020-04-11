@@ -21,7 +21,7 @@
 		<!-- ENDIF !topics.length -->
 
 		<div class="category">
-			<!-- IMPORT partials/topics_list.tpl -->
+			<!-- IMPORT partials/topics-list.tpl -->
 			<!-- IF config.usePagination -->
 				<!-- IMPORT partials/paginator.tpl -->
 			<!-- ENDIF config.usePagination -->

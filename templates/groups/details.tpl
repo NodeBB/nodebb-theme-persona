@@ -237,7 +237,7 @@
 			<!-- IF !posts.length -->
 			<div class="alert alert-info">[[groups:details.has_no_posts]]</div>
 			<!-- ENDIF !posts.length -->
-			<!-- IMPORT partials/posts_list.tpl -->
+			<!-- IMPORT partials/posts-list.tpl -->
 		</div>
 		<div data-widget-area="right">
 			{{{each widgets.right}}}

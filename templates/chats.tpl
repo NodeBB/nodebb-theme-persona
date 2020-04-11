@@ -6,7 +6,7 @@
 		</div>
 		<ul data-component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			{{{each rooms}}}
-			<!-- IMPORT partials/chats/recent_room.tpl -->
+			<!-- IMPORT partials/chats/recent-room.tpl -->
 			{{{end}}}
 		</ul>
 	</div>

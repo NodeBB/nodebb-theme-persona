@@ -26,7 +26,7 @@
 		<div class="alert alert-warning" id="category-no-topics">[[recent:no_popular_topics]]</div>
 		<!-- ENDIF !topics.length -->
 
-		<!-- IMPORT partials/topics_list.tpl -->
+		<!-- IMPORT partials/topics-list.tpl -->
 
 		<!-- IF config.usePagination -->
 			<!-- IMPORT partials/paginator.tpl -->

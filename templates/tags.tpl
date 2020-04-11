@@ -24,7 +24,7 @@
 
 	<div class="category row">
 		<div class="col-md-12 clearfix tag-list" data-nextstart="{nextStart}">
-			<!-- IMPORT partials/tags_list.tpl -->
+			<!-- IMPORT partials/tags-list.tpl -->
 		</div>
 	</div>
 </div>

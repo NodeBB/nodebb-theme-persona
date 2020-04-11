@@ -2,7 +2,7 @@
 <div class="users">
 
 	<ul id="users-container" class="users-container">
-		<!-- IMPORT partials/users_list.tpl -->
+		<!-- IMPORT partials/users-list.tpl -->
 	</ul>
 
 	<!-- IMPORT partials/paginator.tpl -->

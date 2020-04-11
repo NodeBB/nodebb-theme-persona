@@ -195,12 +195,12 @@
 
 			<!-- IF users.length -->
 			<ul id="users-container" class="users-container">
-			<!-- IMPORT partials/users_list.tpl -->
+			<!-- IMPORT partials/users-list.tpl -->
 			</ul>
 			<!-- ENDIF users.length -->
 
 			<!-- IF tags.length -->
-			<!-- IMPORT partials/tags_list.tpl -->
+			<!-- IMPORT partials/tags-list.tpl -->
 			<!-- ENDIF tags.length -->
 
 			<!-- IMPORT partials/paginator.tpl -->
