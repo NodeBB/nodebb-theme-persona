@@ -7,7 +7,7 @@
 <div class="unread">
 	<div class="btn-toolbar">
 		<div class="pull-left">
-			<!-- IMPORT partials/buttons/newTopic.tpl -->
+			<!-- IMPORT partials/buttons/new-topic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
 				<div class="alert alert-warning hidden" id="new-topics-alert"></div>
 			</a>

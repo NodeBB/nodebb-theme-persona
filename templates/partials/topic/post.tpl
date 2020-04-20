@@ -11,7 +11,7 @@
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
 		</strong>
 
-		<!-- IMPORT partials/topic/badge.tpl -->
+		<!-- IMPORT partials/post/user-groups.tpl -->
 
 		<!-- IF posts.user.banned -->
 		<span class="label label-danger">[[user:banned]]</span>
@@ -22,7 +22,7 @@
 
 			<i data-component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-			<small data-editor="{posts.editor.userslug}" data-component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
+			<!-- IMPORT partials/post/editor.tpl -->
 
 			<!-- IF posts.toPid -->
 			<a data-component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
@@ -75,7 +75,7 @@
 		</span>
 		<!-- ENDIF !reputation:disabled -->
 
-		<!-- IMPORT partials/topic/post-menu.tpl -->
+		<!-- IMPORT partials/post/tools.tpl -->
 	</small>
 
 	<!-- IF !hideReplies -->

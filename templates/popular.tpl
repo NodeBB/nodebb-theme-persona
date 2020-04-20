@@ -8,7 +8,7 @@
 	<div class="clearfix">
 		<div class="float-left">
 			<!-- IF canPost -->
-			<!-- IMPORT partials/buttons/newTopic.tpl -->
+			<!-- IMPORT partials/buttons/new-topic.tpl -->
 			<!-- ELSE -->
 			<a data-component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF canPost -->
