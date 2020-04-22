@@ -101,6 +101,34 @@
 	}
 }
 
+.category, .categories, .subcategory {
+	> p {
+		text-transform: uppercase;
+		// color: $gray-700;
+	}
+
+	.description {
+		font-size: 0.8rem;
+		font-weight: normal;
+		// color: $gray-700;
+		margin-top: 5px;
+		min-height: 25px
+	}
+
+	.description, .category-children {
+		margin-left: 62px;
+	}
+
+	.category-children {
+		display: block;
+		font-size: 15px;
+
+		small {
+			color: #999999;
+		}
+	}
+}
+
 .category-header {
 	cursor: pointer;
 	width: 100%;
