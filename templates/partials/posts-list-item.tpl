@@ -8,7 +8,7 @@
             {../content}
         </div>
 
-        <small class="topic-category"><a href="{config.relative_path}/category/{../category.slug}">[[global:posted_in, {../category.name}]]</a></small>
+        <small class="topic-category"><a href="{config.relative_path}/category/{../category.slug}">[[global:posted-in, {../category.name}]]</a></small>
 
         <div class="post-info">
             <a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(../user, "md", true, "user-img")}</a>

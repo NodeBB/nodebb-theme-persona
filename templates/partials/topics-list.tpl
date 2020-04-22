@@ -92,7 +92,7 @@
 			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>
-					[[category:no_replies]]
+					[[category:no-replies]]
 				</p>
 				<!-- ELSE -->
 				<!-- IF topics.teaser.pid -->

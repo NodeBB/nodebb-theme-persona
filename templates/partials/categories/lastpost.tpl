@@ -18,7 +18,7 @@
 	<!-- IF !../posts.length -->
 	<div data-component="category/posts">
 		<div class="post-content">
-			[[category:no_new_posts]]
+			[[category:no-new-posts]]
 		</div>
 	</div>
 	<!-- ENDIF !../posts.length -->

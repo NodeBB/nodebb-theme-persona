@@ -252,7 +252,7 @@
 		</div>
 	</div>
 	<div class="form-actions">
-		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
+		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save-changes]]</a>
 	</div>
 </div>
 
