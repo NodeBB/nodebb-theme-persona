@@ -104,13 +104,13 @@
 .category, .categories, .subcategory {
 	> p {
 		text-transform: uppercase;
-		// color: $gray-700;
+		color: $gray-600;
 	}
 
 	.description {
 		font-size: 0.8rem;
 		font-weight: normal;
-		// color: $gray-700;
+		color: $gray-600;
 		margin-top: 5px;
 		min-height: 25px
 	}
@@ -124,7 +124,7 @@
 		font-size: 15px;
 
 		small {
-			color: #999999;
+			color: $gray-600;
 		}
 	}
 }
