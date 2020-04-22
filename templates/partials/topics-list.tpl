@@ -29,9 +29,9 @@
 			</div>
 
 			<h2 data-component="topic/header" class="title">
-				<i data-component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
-				<i data-component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
-				<i data-component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
+				<i data-component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hidden<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
+				<i data-component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hidden<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
+				<i data-component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hidden<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 				{{{each icons}}}@value{{{end}}}
 
 				<!-- IF !topics.noAnchor -->
@@ -47,7 +47,7 @@
 				<!-- ENDIF !template.category -->
 
 				<!-- IF topics.tags.length -->
-				<span class="tag-list hidden-xs">
+				<span class="tag-list d-none d-sm-inline-block">
 					{{{each topics.tags}}}
 					<a href="{config.relative_path}/tags/{topics.tags.valueEscaped}"><span class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">{topics.tags.valueEscaped}</span></a>
 					{{{end}}}
@@ -55,8 +55,8 @@
 				</span>
 				<!-- ENDIF topics.tags.length -->
 
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
-				<small class="visible-xs-inline">
+				<small class="d-none d-sm-inline-block"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
+				<small class="d-block d-sm-none d-inline">
 					<i class="fa fa-reply"></i> &nbsp;
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
@@ -67,29 +67,29 @@
 			</h2>
 		</div>
 
-		<div class="mobile-stat col-xs-2 visible-xs text-right">
+		<div class="mobile-stat col-xs-2 d-block d-sm-none text-right">
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
+		<div class="col-md-1 d-none d-md-block stats stats-votes">
 			<!-- IF !reputation:disabled -->
 			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
 			<small>[[global:votes]]</small>
 			<!-- END -->
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
+		<div class="col-md-1 d-none d-md-block stats stats-postcount">
 			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
 			<small>[[global:posts]]</small>
 		</div>
 
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
+		<div class="col-md-1 d-none d-md-block stats stats-viewcount">
 			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" data-component="topic/teaser">
-			<div class="card" style="border-color: {topics.category.bgColor}">
+		<div class="col-md-3 col-sm-3 teaser d-none d-sm-block" data-component="topic/teaser">
+			<div class="last-post" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>
 					[[category:no-replies]]

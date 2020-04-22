@@ -1,0 +1,116 @@
+.topic-list {
+    margin-top: 10px;
+
+    > li {
+        list-style: none;
+
+        &:not(.unread) {
+            .last-post {
+                border-color: $gray-600 !important;
+            }
+
+            h2 a {
+                color: $text-muted;
+            }
+        }
+
+        &.deleted {
+            -moz-opacity: 0.30;
+            opacity: 0.30;
+        }
+
+        &.pinned {
+            [component="topic/pinned"] {
+                cursor: move;
+            }
+        }
+
+        .select {
+            position: relative;
+            @include pointer;
+
+            &:before {
+                content: "";
+                display: none;
+            }
+
+            .fa-check {
+                padding: 14.5px;	/* 14.5*2 + 15 + 2px border = 46px */
+                border-radius: 50%;
+                position: absolute;
+                font-size: 15px;
+                opacity: 0;
+                top: 0px;
+                left: 0px;
+                border: 1px solid transparent;
+                background: white;
+                width: 100%;
+                height: 100%;
+                padding: 14px;
+
+                &:before {
+                    @include pointer;
+                }
+            }
+
+            .avatar {
+                opacity: 1;
+            }
+
+            .fa-check, .avatar {
+                @include transition(.2s ease-in-out all);
+            }
+
+            float: left;
+        }
+
+        .avatar .select:hover {
+            .avatar {
+                opacity: 0;
+            }
+
+            .fa-check {
+                border: 1px solid $primary;
+                color: $primary;
+                opacity: 1;
+            }
+        }
+
+        &.selected {
+            .select .avatar {
+                opacity: 0;
+            }
+
+            .avatar .select .fa-check {
+                opacity: 1;
+                border: 1px solid $success;
+                color: $success;
+            }
+        }
+
+        .tag-list {
+            display: inline-block;
+            .tag {
+                text-transform: uppercase;
+                font-size: 10px;
+                background: $gray-300;
+                padding: 5px;
+                white-space: nowrap;
+            }
+        }
+
+        .fa-stack {
+            font-size: 90%;
+            border-radius: 50%;
+        }
+
+        .last-post .user-icon {
+            display: inline-block;
+            @include user-icon-style(24px, 1.5rem, 50%);
+        }
+    }
+
+    &:last-child li {
+        border-bottom: 0;
+    }
+}
