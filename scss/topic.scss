@@ -467,18 +467,6 @@
 	}
 }
 
-.fork-thread-card {
-	position: fixed;
-	bottom: 10%;
-	right: 2rem;
-	z-index: 1;
-}
-@include media-breakpoint-up(sm) {
-	.fork-thread-card {
-		max-width: 33%;
-	}
-}
-
 [data-component="post"] {
 
 	>.post-header [data-component="user/picture"], >.post-header [data-component="user/status"] {
