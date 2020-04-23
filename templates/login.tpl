@@ -6,7 +6,7 @@
 		<div class="login-block">
 			<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<strong>[[login:failed_login_attempt]]</strong>
+				<strong>[[login:failed-login-attempt]]</strong>
 				<p>{error}</p>
 			</div>
 
@@ -27,7 +27,7 @@
 					<div class="col-lg-offset-2 col-lg-10">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
+								<input type="checkbox" name="remember" id="remember" checked /> [[login:remember-me]]
 							</label>
 						</div>
 					</div>
@@ -44,10 +44,10 @@
 					<div class="col-lg-offset-2 col-lg-10">
 						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 						<!-- IF allowRegistration -->
-						<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
+						<span>[[login:dont-have-account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
 						<!-- ENDIF allowRegistration -->
 						<!-- IF allowPasswordReset -->
-						&nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
+						&nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot-password]]</a>
 						<!-- ENDIF allowPasswordReset -->
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 	<!-- IF alternate_logins -->
 	<div class="<!-- IF allowLocalLogin -->col-md-6<!-- ELSE -->col-md-12<!-- ENDIF allowLocalLogin -->">
 		<div class="alt-login-block">
-			<h4>[[login:alternative_logins]]</h4>
+			<h4>[[login:alternative-logins]]</h4>
 			<ul class="alt-logins">
 				{{{each authentication}}}
 				<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
