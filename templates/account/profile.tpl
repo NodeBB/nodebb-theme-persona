@@ -46,7 +46,7 @@
 
 			<div class="stat">
 				<div class="human-readable-number" title="{profileviews}">{profileviews}</div>
-				<span class="stat-label">[[user:profile_views]]</span>
+				<span class="stat-label">[[user:profile-views]]</span>
 			</div>
 
 			<div class="stat">
@@ -69,7 +69,7 @@
 
 			<!-- IF email -->
 			<span>[[user:email]]</span>
-			<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
+			<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email-hidden]]"></i> {email}</strong>
 			<!-- ENDIF email -->
 
 			<!-- IF websiteName -->
@@ -141,7 +141,7 @@
 
 			<div class="col-xs-12">
 				<!-- IF !bestPosts.length -->
-				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<div class="alert alert-warning">[[user:has-no-posts]]</div>
 				<!-- ENDIF !bestPosts.length -->
 
 				<ul data-component="posts" class="posts-list">
@@ -156,7 +156,7 @@
 
 			<div class="col-xs-12">
 				<!-- IF !latestPosts.length -->
-				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<div class="alert alert-warning">[[user:has-no-posts]]</div>
 				<!-- ENDIF !latestPosts.length -->
 				<ul data-component="posts" class="posts-list">
 				{{{each latestPosts}}}

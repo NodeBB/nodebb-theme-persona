@@ -8,17 +8,17 @@
 		<!-- IF !banned -->
 		<!-- IF !config.disableChat -->
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
-			<a data-component="account/chat" href="#">[[user:chat_with, {username}]]</a>
+			<a data-component="account/chat" href="#">[[user:chat-with, {username}]]</a>
 		</li>
 		<li>
-			<a data-component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
+			<a data-component="account/new-chat" href="#">[[user:new-chat-with, {username}]]</a>
 		</li>
 		<!-- ENDIF !config.disableChat -->
 		<li>
 			<a data-component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
 		<li>
-			<a data-component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
+			<a data-component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block-user]]<!-- ELSE -->[[user:unblock-user]]<!-- END --></a>
 		</li>
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
@@ -35,15 +35,15 @@
 		<!-- IF !isSelf -->
 		<!-- IF canBan -->
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
-			<a data-component="account/ban" href="#">[[user:ban_account]]</a>
+			<a data-component="account/ban" href="#">[[user:ban-account]]</a>
 		</li>
 		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
-			<a data-component="account/unban" href="#">[[user:unban_account]]</a>
+			<a data-component="account/unban" href="#">[[user:unban-account]]</a>
 		</li>
 		<!-- ENDIF canBan -->
 		<!-- IF isAdmin -->
 		<li>
-			<a data-component="account/delete" href="#" class="">[[user:delete_account]]</a>
+			<a data-component="account/delete" href="#" class="">[[user:delete-account]]</a>
 		</li>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->
@@ -63,7 +63,7 @@
 		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
 
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched-categories]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>

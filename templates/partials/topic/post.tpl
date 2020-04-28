@@ -87,7 +87,7 @@
 		</span>
 
 		<span class="replies-count" data-component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
-		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
+		<span class="replies-last hidden-xs">[[topic:last-reply-time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-right" data-component="post/replies/open"></i>
 		<i class="fa fa-fw fa-chevron-down hidden" data-component="post/replies/close"></i>

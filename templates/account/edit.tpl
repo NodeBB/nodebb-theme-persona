@@ -15,16 +15,16 @@
 					</div>
 					<ul class="list-group">
 						<!-- IF allowProfilePicture -->
-						<a id="changePictureBtn" href="#" class="list-group-item">[[user:change_picture]]</a>
+						<a id="changePictureBtn" href="#" class="list-group-item">[[user:change-picture]]</a>
 						<!-- ENDIF allowProfilePicture -->
 						<!-- IF !username:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change_username]]</a>
+						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change-username]]</a>
 						<!-- ENDIF !username:disableEdit -->
 						<!-- IF !email:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change_email]]</a>
+						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change-email]]</a>
 						<!-- ENDIF !email:disableEdit -->
 						<!-- IF canChangePassword -->
-						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
+						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change-password]]</a>
 						<!-- ENDIF canChangePassword -->
 						{{{each editButtons}}}
 						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
@@ -34,14 +34,14 @@
 					<!-- IF config.requireEmailConfirmation -->
 					<!-- IF email -->
 					<!-- IF isSelf -->
-					<a id="confirm-email" href="#" class="btn btn-warning <!-- IF email:confirmed -->hide<!-- ENDIF email:confirmed -->">[[user:confirm_email]]</a><br/><br/>
+					<a id="confirm-email" href="#" class="btn btn-warning <!-- IF email:confirmed -->hide<!-- ENDIF email:confirmed -->">[[user:confirm-email]]</a><br/><br/>
 					<!-- ENDIF isSelf -->
 					<!-- ENDIF email -->
 					<!-- ENDIF config.requireEmailConfirmation -->
 
 					<!-- IF allowAccountDelete -->
 					<!-- IF isSelf -->
-					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
+					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete-account]]</a><br/><br/>
 					<!-- ENDIF isSelf -->
 					<!-- ENDIF allowAccountDelete -->
 

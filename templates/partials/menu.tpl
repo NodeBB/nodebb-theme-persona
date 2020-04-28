@@ -41,8 +41,8 @@
 							</li>
 						</ul>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#" class="mark-all-read">[[notifications:mark_all_read]]</a>
-						<a class="dropdown-item" href="{relative_path}/notifications">[[notifications:see_all]]</a>
+						<a class="dropdown-item" href="#" class="mark-all-read">[[notifications:mark-all-read]]</a>
+						<a class="dropdown-item" href="{relative_path}/notifications">[[notifications:see-all]]</a>
 					</div>
 				</li>
 
@@ -58,8 +58,8 @@
 							</li>
 						</ul>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#" class="mark-all-read" data-component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a>
-						<a class="dropdown-item" href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see_all]]</a>
+						<a class="dropdown-item" href="#" class="mark-all-read" data-component="chats/mark-all-read">[[modules:chat.mark-all-read]]</a>
+						<a class="dropdown-item" href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see-all]]</a>
 					</div>
 				</li>
 				{{{end}}}

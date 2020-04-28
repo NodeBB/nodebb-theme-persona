@@ -5,7 +5,7 @@
 		<i class="counter unread-count" data-component="chat/icon" data-content="{unreadCount.chat}"></i>
 	</h3>
 	<ul class="menu-section-list chat-list" data-component="chat/list">
-		<a class="navigation-link" href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see_all]]</a>
+		<a class="navigation-link" href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see-all]]</a>
 	</ul>
 </section>
 <!-- ENDIF config.loggedIn -->

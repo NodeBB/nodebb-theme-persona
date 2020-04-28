@@ -9,9 +9,9 @@
 			</div>
 			<form data-component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
-					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
+					<label for="email" class="col-lg-4 control-label">[[register:email-address]]</label>
 					<div class="col-lg-8">
-						<input class="form-control" type="email" placeholder="[[register:email_address_placeholder]]" name="email" id="email" autocorrect="off" autocapitalize="off" />
+						<input class="form-control" type="email" placeholder="[[register:email-address-placeholder]]" name="email" id="email" autocorrect="off" autocapitalize="off" />
 						<span class="register-feedback" id="email-notify"></span>
 						<span class="help-block">[[register:help.email]]</span>
 					</div>
@@ -19,23 +19,23 @@
 				<div class="form-group">
 					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
 					<div class="col-lg-8">
-						<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
+						<input class="form-control" type="text" placeholder="[[register:username-placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 						<span class="register-feedback" id="username-notify"></span>
-						<span class="help-block">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
+						<span class="help-block">[[register:help.username-restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="password" class="col-lg-4 control-label">[[register:password]]</label>
 					<div class="col-lg-8">
-						<input class="form-control" type="password" placeholder="[[register:password_placeholder]]" name="password" id="password" />
+						<input class="form-control" type="password" placeholder="[[register:password-placeholder]]" name="password" id="password" />
 						<span class="register-feedback" id="password-notify"></span>
-						<span class="help-block">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
+						<span class="help-block">[[register:help.minimum-password-length, {minimumPasswordLength}]]</span>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="password-confirm" class="col-lg-4 control-label">[[register:confirm_password]]</label>
+					<label for="password-confirm" class="col-lg-4 control-label">[[register:confirm-password]]</label>
 					<div class="col-lg-8">
-						<input class="form-control" type="password" placeholder="[[register:confirm_password_placeholder]]" name="password-confirm" id="password-confirm" />
+						<input class="form-control" type="password" placeholder="[[register:confirm-password-placeholder]]" name="password-confirm" id="password-confirm" />
 						<span class="register-feedback" id="password-confirm-notify"></span>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 
 				<div class="form-group">
 					<div class="col-lg-offset-4 col-lg-8">
-						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
+						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register-now-button]]</button>
 					</div>
 				</div>
 				<input id="referrer" type="hidden" name="referrer" value="" />
@@ -65,7 +65,7 @@
 	<!-- IF alternate_logins -->
 	<div class="col-md-6">
 		<div class="alt-register-block">
-			<h4>[[register:alternative_registration]]</h4>
+			<h4>[[register:alternative-registration]]</h4>
 			<ul class="alt-logins">
 				{{{each authentication}}}
 				<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></li>

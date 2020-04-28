@@ -107,11 +107,11 @@
 
 						<!-- IF !banned -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-danger" data-component="account/ban">[[user:ban_account]]</button>
+						<button class="btn btn-xs pull-right btn-danger" data-component="account/ban">[[user:ban-account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ELSE -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-success" data-component="account/unban">[[user:unban_account]]</button>
+						<button class="btn btn-xs pull-right btn-success" data-component="account/unban">[[user:unban-account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ENDIF !banned -->
 					</h3>

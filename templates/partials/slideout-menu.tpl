@@ -22,6 +22,6 @@
 		<span class="counter unread-count" data-component="notifications/icon" data-content="{unreadCount.notification}"></span>
 	</h3>
 	<ul class="menu-section-list notification-list-mobile" data-component="notifications/list"></ul>
-	<p class="menu-section-list"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></p>
+	<p class="menu-section-list"><a href="{relative_path}/notifications">[[notifications:see-all]]</a></p>
 </section>
 <!-- ENDIF config.loggedIn -->

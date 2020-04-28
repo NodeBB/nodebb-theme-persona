@@ -19,7 +19,7 @@
 	<!-- ENDIF displayTagSearch -->
 
 	<!-- IF !tags.length -->
-	<div class="alert alert-warning">[[tags:no_tags]]</div>
+	<div class="alert alert-warning">[[tags:no-tags]]</div>
 	<!-- ENDIF !tags.length -->
 
 	<div class="category row">
