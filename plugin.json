@@ -1,13 +1,31 @@
 {
-	"id": "nodebb-theme-persona",
+	"id": "nodebb-theme-persona-netdata",
 	"library": "library.js",
 	"hooks": [
-		{ "hook": "filter:teasers.get", "method": "getTeasers" },
-		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
-		{ "hook": "filter:config.get", "method": "getThemeConfig" },
-		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
-		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
+		{
+			"hook": "filter:teasers.get",
+			"method": "getTeasers"
+		},
+		{
+			"hook": "filter:widgets.getAreas",
+			"method": "defineWidgetAreas"
+		},
+		{
+			"hook": "filter:config.get",
+			"method": "getThemeConfig"
+		},
+		{
+			"hook": "static:app.load",
+			"method": "init"
+		},
+		{
+			"hook": "filter:admin.header.build",
+			"method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:topic.build",
+			"method": "addUserToTopic"
+		}
 	],
 	"scripts": [
 		"lib/persona.js",

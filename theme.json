@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-persona",
-    "name": "Persona",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona",
+    "id": "nodebb-theme-persona-netdata",
+    "name": "Persona for Netdata",
+    "description": "Customized Persona theme for the Netdata community",
+    "url": "https://github.com/netdata/nodebb-theme-persona-netdata",
     "screenshot": "screenshot.png"
 }

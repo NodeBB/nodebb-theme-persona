@@ -1,14 +1,15 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "10.1.37",
+  "name": "nodebb-theme-persona-netdata",
+  "version": "1.0.0",
+  "upstream-version": "10.1.37",
   "nbbpm": {
     "compatibility": "^1.13.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Customized NodeBB Persona theme for Netdata's Community",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/netdata/nodebb-theme-persona-netdata"
   },
   "keywords": [
     "nodebb",
@@ -32,11 +33,16 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Zack Shoylev",
+      "email": "zack@netdata.cloud",
+      "url": "https://github.com/zack-shoylev"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/netdata/nodebb-theme-persona-netdata/issues"
   },
   "dependencies": {
     "pulling": "^2.0.0",
