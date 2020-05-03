@@ -1,6 +1,8 @@
 Persona theme for NodeBB
 ====================
 
+Note: This fork is for Netdata's community.
+
 Persona is the new default theme for NodeBB as of v0.7.1
 
 ## Addons
