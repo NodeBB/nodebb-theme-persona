@@ -32,7 +32,6 @@
 				<i data-component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hidden<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
 				<i data-component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hidden<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
 				<i data-component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hidden<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
-				{{{each icons}}}@value{{{end}}}
 
 				<!-- IF !topics.noAnchor -->
 				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a><br />
