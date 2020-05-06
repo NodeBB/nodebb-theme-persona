@@ -113,6 +113,41 @@
 			}
 		}
 	}
+
+	&.sortable-enabled > li .content h2 {
+		> [component="topic/pinned"] {
+			&:after {
+				position: absolute;
+				top: 0.5rem;
+				left: calc(62px + 2rem);
+				width: 4rem;
+				height: 3rem;
+				background: rgba(0, 0, 0, 0.5);
+				color: rgba(255, 255, 255, 0.9);
+				font-family: "FontAwesome";
+				content: "\f07d  \f255";
+				text-align: center;
+				font-size: 1.5rem;
+				padding-top: 0.66rem;
+				cursor: move;
+				opacity: 0;
+
+				-webkit-transition: opacity 100ms linear;
+				-moz-transition: opacity 100ms linear;
+				-ms-transition: opacity 100ms linear;
+				-o-transition: opacity 100ms linear;
+				transition: opacity 100ms linear;
+			}
+		}
+
+		&:hover {
+			> [component="topic/pinned"] {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
 
 
