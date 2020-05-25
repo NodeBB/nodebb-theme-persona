@@ -173,9 +173,7 @@
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
 						</form>
-						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden">
-							<!-- IMPORT partials/quick-search-results.tpl -->
-						</ul>
+						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden"></ul>
 					</li>
 					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
