@@ -3,7 +3,7 @@
 		<!-- IMPORT partials/flags/filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
-		<h2>
+		<h2 class="h4">
 			<div class="pull-right">
 				<a class="btn btn-link" href="{config.relative_path}/flags"><i class="fa fa-chevron-left"></i> [[flags:back]]</a>
 			</div>
@@ -47,29 +47,29 @@
 		<hr />
 
 		<div class="row">
-			<div class="col-sm-6 col-md-8">
+			<div class="col-sm-6">
 				<form role="form" id="attributes">
 					<div class="form-group row">
 						<div class="col-sm-6">
-							<label>[[flags:reporter]]</label>
+							<h2 class="h4">[[flags:reporter]]</h2>
 							<div>
 								{buildAvatar(reporter, "sm", false, "media-object")}
 								<a href="{config.relative_path}/user/{reporter.userslug}">{reporter.username}</a>
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<label>[[flags:reported-at]]</label>
+							<h2 class="h4">[[flags:reported-at]]</h2>
 							<p>
 								{datetimeISO}
 							</p>
 						</div>
 					</div>
 					<div class="form-group">
-						<label>[[flags:description]]</label>
+						<h2 class="h4">[[flags:description]]</h2>
 						<blockquote>{description}</blockquote>
 					</div>
 					<div class="form-group">
-						<label for="state">[[flags:state]]</label>
+						<h2 class="h4" for="state">[[flags:state]]</h2>
 						<select class="form-control" id="state" name="state" disabled>
 							<option value="open">[[flags:state-open]]</option>
 							<option value="wip">[[flags:state-wip]]</option>
@@ -78,7 +78,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="assignee">[[flags:assignee]]</label>
+						<h2 class="h4" for="assignee">[[flags:assignee]]</h2>
 						<select class="form-control" id="assignee" name="assignee" disabled>
 							<option value="">[[flags:no-assignee]]</option>
 							{{{each assignees}}}
@@ -93,7 +93,7 @@
 
 				<form role="form">
 					<div class="form-group">
-						<label for="note">[[flags:notes]]</label>
+						<h2 class="h4" for="note">[[flags:notes]]</h2>
 						<textarea id="note" class="form-control"></textarea>
 						<button type="button" class="btn btn-block btn-primary" data-action="appendNote">[[flags:add-note]]</button>
 					</div>
@@ -119,29 +119,44 @@
 					{{{end}}}
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
-				<label>[[flags:quick-links]]</label>
-				<ul>
-					<li><a href="{config.relative_path}/{type_path}/{targetId}">[[flags:go-to-target]]</a></li>
-					<li>
+			<div class="col-sm-6">
+				<h2 class="h4">[[flags:quick-actions]]</h2>
+
+				<a class="btn btn-default btn-block" href="{config.relative_path}/{type_path}/{targetId}">
+					<i class="fa fa-external-link"></i>
+					[[flags:go-to-target]]
+				</a>
+
+				<div class="btn-group btn-block" data-uid="{target.uid}">
+					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-street-view"></i>
 						[[flags:flagged-user]]
-						<ul>
-							<li><a href="{config.relative_path}/uid/{target.uid}">[[flags:view-profile]]</a></li>
-							<li><a href="#" data-chat="{target.uid}">[[flags:start-new-chat]]</a></li>
-						</ul>
-					</li>
-					<li>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="{config.relative_path}/uid/{target.uid}">[[flags:view-profile]]</a></li>
+						<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>
+						<li><a href="#" data-action="delete">[[user:delete_account]]</a></li>
+					</ul>
+				</div>
+
+				<div class="btn-group btn-block">
+					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-user"></i>
 						[[flags:reporter]]
-						<ul>
-							<li><a href="{config.relative_path}/uid/{reporter.uid}">[[flags:view-profile]]</a></li>
-							<li><a href="#" data-chat="{reporter.uid}">[[flags:start-new-chat]]</a></li>
-						</ul>
-					</li>
-				</ul>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="{config.relative_path}/uid/{reporter.uid}">[[flags:view-profile]]</a></li>
+						<li><a href="#" data-chat="{reporter.uid}">[[flags:start-new-chat]]</a></li>
+					</ul>
+				</div>
 
 				<hr />
 
-				<label>[[flags:history]]</label>
+				<h2 class="h4">[[flags:history]]</h2>
 				<div component="flag/history">
 					<!-- IF !history.length -->
 					<div class="alert alert-success text-center">[[flags:no-history]]</div>
@@ -162,6 +177,11 @@
 									<span class="label label-primary">[[flags:@key]]</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
 								</li>
 								{{{end}}}
+								{{{ each ./meta }}}
+								<li>
+									<span class="label label-{{./labelClass}}">{{./key}}</span>{{{ if ./value }}} &rarr; <span class="label label-default">{{ ./value }}</span>{{{ end }}}
+								</li>
+								{{{ end }}}
 							</ul>
 						</div>
 					</div>
