@@ -80,6 +80,27 @@
 						</a>
 						<a  class="dropdown-item"href="#" data-status="away">
 							<i class="fa fa-fw fa-circle text-warning"></i><span <!-- IF user.away -->class="bold"<!-- ENDIF user.away -->> [[global:away]]</span>
+					</li>
+				</ul>
+				<!-- ENDIF config.loggedIn -->
+				<!-- IF config.searchEnabled -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET">
+							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+							<div class="hidden" id="search-fields">
+								<div class="form-group">
+									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
+								</div>
+								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
+							</div>
+						</form>
+						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden"></ul>
+					</li>
+					<li class="visible-xs" id="search-menu">
+						<a href="{relative_path}/search">
+							<i class="fa fa-search fa-fw"></i> [[global:search]]
 						</a>
 						<a class="dropdown-item" href="#" data-status="dnd">
 							<i class="fa fa-fw fa-circle text-danger"></i><span <!-- IF user.dnd -->class="bold"<!-- ENDIF user.dnd -->> [[global:dnd]]</span>

@@ -2,6 +2,8 @@
 
 	.topic-list {
 		margin-top: 10px;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
 	> ul {
@@ -21,12 +23,6 @@
 			&.deleted {
 				-moz-opacity: 0.30;
 				opacity: 0.30;
-			}
-
-			&.pinned {
-				[component="topic/pinned"] {
-					cursor: move;
-				}
 			}
 
 			.select {
