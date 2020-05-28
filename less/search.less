@@ -33,23 +33,39 @@
 	}
 }
 
-.quick-search-results {
-	max-width: 400px;
-	max-height: 500px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	a {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden
-	}
-	.quick-search-title {
-		font-weight: 600;
-	}
+.quick-search-container {
+	.dropdown-menu;
+	display: block;
+	left: auto;
+	right: 0px;
+	.quick-search-results {
+		max-width: 400px;
+		max-height: 500px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 0px 0px;
+		li {
+			list-style: none;
+			a {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				display: block;
+				padding: 3px 20px;
+				clear: both;
+				font-weight: 400;
+				line-height: 1.42857143;
+				white-space: nowrap;
+				color: @gray-dark;
+			}
+		}
+		.quick-search-title {
+			font-weight: 600;
+		}
 
-	.snippet {
-		word-break: break-word;
-		white-space: normal;
+		.snippet {
+			word-break: break-word;
+			white-space: normal;
+		}
 	}
 }
 
