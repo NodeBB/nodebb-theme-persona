@@ -173,7 +173,9 @@
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
 						</form>
-						<div id="quick-search-container" class="quick-search-container hidden"></div>
+						<div id="quick-search-container" class="quick-search-container hidden">
+							<div id="quick-search-results-container"></div>
+						</div>
 					</li>
 					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
