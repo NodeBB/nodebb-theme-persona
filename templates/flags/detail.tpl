@@ -127,6 +127,15 @@
 					[[flags:go-to-target]]
 				</a>
 
+				{{{ if type_bool.post }}}
+				{{{ if !target.deleted}}}
+				<a class="btn btn-danger btn-block" href="#" data-action="delete-post">[[flags:delete-post]]</a>
+				{{{ else }}}
+				<a class="btn btn-danger btn-block" href="#" data-action="purge-post">[[flags:purge-post]]</a>
+				<a class="btn btn-success btn-block" href="#" data-action="restore-post">[[flags:restore-post]]</a>
+				{{{ end }}}
+				{{{ end }}}
+
 				<div class="btn-group btn-block" data-uid="{target.uid}">
 					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-street-view"></i>
@@ -138,7 +147,7 @@
 						<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>
-						<li><a href="#" data-action="delete">[[user:delete_account]]</a></li>
+						<li><a href="#" data-action="delete-account">[[user:delete_account]]</a></li>
 					</ul>
 				</div>
 
