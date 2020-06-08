@@ -42,7 +42,7 @@
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				{{{each filters}}}
-				<li role="presentation" class="category">
+				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
 					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				</li>
 				{{{end}}}
