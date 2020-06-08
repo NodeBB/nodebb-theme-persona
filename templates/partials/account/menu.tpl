@@ -20,7 +20,7 @@
 		<li>
 			<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
 		</li>
-		<li class="divider"></li>
+		<li role="separator" class="divider"></li>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
 		<!-- ENDIF loggedIn -->
@@ -34,6 +34,8 @@
 
 		<!-- IF !isSelf -->
 		<!-- IF canBan -->
+		<li role="separator" class="divider"></li>
+		<li class="dropdown-header">[[user:admin_actions_label]]</li>
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
 			<a component="account/ban" href="#">[[user:ban_account]]</a>
 		</li>
@@ -43,18 +45,20 @@
 		<!-- ENDIF canBan -->
 		<!-- IF isAdmin -->
 		<li>
-			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
+			<a component="account/delete-account" href="#" class="">[[user:delete_account_as_admin]]</a>
+			<a component="account/delete-content" href="#" class="">[[user:delete_content]]</a>
+			<a component="account/delete-all" href="#" class="">[[user:delete_all]]</a>
 		</li>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->
 
-		<li class="divider"></li>
+		<li role="separator" class="divider"></li>
 		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]]</a></li>
 		<!-- ENDIF showHidden -->
-		<li class="divider"></li>
+		<li role="separator" class="divider"></li>
 		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
 		<!-- IF !reputation:disabled -->
@@ -78,7 +82,7 @@
 
 		{{{each profile_links}}}
 		<!-- IF @first -->
-		<li class="divider"></li>
+		<li role="separator" class="divider"></li>
 		<!-- ENDIF @first -->
 		<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF ../icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- END -->{profile_links.name}</a></li>
 		{{{end}}}
