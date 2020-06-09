@@ -8,12 +8,17 @@
 		</p>
 		<p>
 			<div class="input-group">
-				<input class="form-control" type="text">
+				<input class="form-control topic-search-input" type="text">
 				<span class="input-group-addon">
 					<i class="fa fa-search"></i>
 				</span>
 			</div>
 		</p>
+		<div style="position: relative;">
+			<div class="quick-search-container hidden">
+				<div id="quick-search-results-container"></div>
+			</div>
+		</div>
 		<p><strong>[[topic:merge-topic-list-title]]</strong></p>
 		<ul class="topics-section">
 			{{{each topics}}}

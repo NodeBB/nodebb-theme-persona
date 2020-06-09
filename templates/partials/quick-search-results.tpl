@@ -1,6 +1,6 @@
 <ul id="quick-search-results" class="quick-search-results">
 {{{each posts}}}
-<li>
+<li data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 	<a href="{config.relative_path}/post/{posts.pid}">
 		{buildAvatar(posts.user, "sm", true)}
 		<span class="quick-search-title">{posts.topic.title}</span>
