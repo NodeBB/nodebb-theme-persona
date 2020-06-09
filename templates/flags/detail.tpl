@@ -147,10 +147,12 @@
 						<li><a href="{config.relative_path}/uid/{target.uid}">[[flags:view-profile]]</a></li>
 						<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>
+						{{{ if privileges.ban }}}<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>{{{ end }}}
+						{{{ if privileges.admin:users }}}
 						<li><a href="#" data-action="delete-account">[[user:delete_account_as_admin]]</a></li>
 						<li><a href="#" data-action="delete-content">[[user:delete_content]]</a></li>
 						<li><a href="#" data-action="delete-all">[[user:delete_all]]</a></li>
+						{{{ end }}}
 					</ul>
 				</div>
 				{{{ end }}}
