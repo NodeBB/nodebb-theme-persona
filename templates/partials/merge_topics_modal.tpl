@@ -22,7 +22,7 @@
 		<p><strong>[[topic:merge-topic-list-title]]</strong></p>
 		<ul class="topics-section">
 			{{{each topics}}}
-			<li><a href="{config.relative_path}/topic/{topics.tid}">{topics.title}</a></li>
+			<li><a href="{config.relative_path}/topic/{topics.tid}"><strong>{topics.title}</strong></a></li>
 			{{{end}}}
 		</ul>
 		<p>
@@ -30,20 +30,20 @@
 		</p>
 		<form>
 			<p>
-				<input type="radio" name="merge-topic-option" id="abbas" checked="true"> [[topic:merge-select-main-topic]]
+				<input class="merge-main-topic-radio" type="radio" name="merge-topic-option" checked="true"> [[topic:merge-select-main-topic]]
 			</p>
 			<p>
-				<select class="form-control main-topic-select">
+				<select class="form-control merge-main-topic-select">
 					{{{each topics}}}
 					<option value="{topics.tid}">{topics.title}</option>
 					{{{end}}}
 				</select>
 			</p>
 			<p>
-				<input type="radio" name="merge-topic-option" id="allalal"> [[topic:merge-new-title-for-topic]]
+				<input class="merge-new-title-radio" type="radio" name="merge-topic-option"> [[topic:merge-new-title-for-topic]]
 			</p>
 			<p>
-				<input type="text" class="form-control">
+				<input class="merge-new-title-input form-control" type="text">
 			</p>
 		</form>
 	</div>
