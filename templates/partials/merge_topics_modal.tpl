@@ -16,7 +16,7 @@
 		</p>
 		<div style="position: relative;">
 			<div class="quick-search-container hidden">
-				<div id="quick-search-results-container"></div>
+				<div class="quick-search-results-container"></div>
 			</div>
 		</div>
 		<p><strong>[[topic:merge-topic-list-title]]</strong></p>

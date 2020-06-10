@@ -174,7 +174,7 @@
 							</div>
 						</form>
 						<div id="quick-search-container" class="quick-search-container hidden">
-							<div id="quick-search-results-container"></div>
+							<div class="quick-search-results-container"></div>
 						</div>
 					</li>
 					<li class="visible-xs" id="search-menu">
