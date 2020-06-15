@@ -127,6 +127,11 @@
 					[[flags:go-to-target]]
 				</a>
 
+				<a class="btn btn-default btn-block" href="#" data-action="assign">
+					<i class="fa fa-id-card-o"></i>
+					[[flags:assign-to-me]]
+				</a>
+
 				{{{ if type_bool.post }}}
 				{{{ if !target.deleted}}}
 				<a class="btn btn-danger btn-block" href="#" data-action="delete-post">[[flags:delete-post]]</a>
