@@ -20,5 +20,10 @@
 	<hr />
 
 	<ul class="posts-list diffs"></ul>
+
+	{{{ if editable }}}
+	<button class="btn btn-primary" data-action="restore">[[topic:diffs.restore]]</button>
+	<p class="help-block">[[topic:diffs.restore-description]]</p>
+	{{{ end }}}
 </div>
 <!-- END -->
