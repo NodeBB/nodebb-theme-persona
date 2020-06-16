@@ -1,3 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="row">
 	<div class="col-sm-4 col-md-3">
 		<!-- IMPORT partials/flags/filters.tpl -->
