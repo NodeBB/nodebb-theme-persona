@@ -19,7 +19,7 @@
 
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+			<span class="pull-left">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
 			<span class="pull-right">
 				<a href="{config.relative_path}/user/{merger.userslug}">
 					<strong>{merger.username}</strong>
