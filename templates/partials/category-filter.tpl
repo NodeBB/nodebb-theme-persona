@@ -1,7 +1,7 @@
 <div component="category/dropdown" class="btn-group pull-right category-dropdown-container bottom-sheet <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <!-- IF selectedCategory --><span class="fa-stack" style="{function.generateCategoryBackground, selectedCategory}"><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span> {selectedCategory.name}<!-- ELSE -->
-        [[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+        <!-- IF selectedCategory --><span class="fa-stack" style="{function.generateCategoryBackground, selectedCategory}"><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span> <span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedCategory.name}</span><!-- ELSE -->
+        <span class="visible-sm-inline visible-md-inline visible-lg-inline">[[unread:all_categories]]</span><span class="visible-xs-inline"><i class="fa fa-fw fa-list"></i></span><!-- ENDIF selectedCategory --> <span class="caret"></span>
     </button>
     <div component="category-selector-search" class="hidden">
         <input type="text" class="form-control" autocomplete="off">
