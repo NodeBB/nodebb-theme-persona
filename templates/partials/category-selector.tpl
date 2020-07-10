@@ -6,7 +6,7 @@
 	<div component="category-selector-search" class="hidden">
 		<input type="text" class="form-control" autocomplete="off">
 	</div>
-	<ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
+	<ul component="category/list" class="dropdown-menu category-dropdown-menu {{{if pullRight}}}dropdown-menu-right{{{end}}}" role="menu">
 		<li component="category/no-matches" role="presentation" class="category hidden">
 			<a role="menu-item">[[search:no-matches]]</a>
 		</li>
