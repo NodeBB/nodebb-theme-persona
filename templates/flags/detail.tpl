@@ -103,7 +103,7 @@
 					<div class="alert alert-success text-center">[[flags:no-notes]]</div>
 					<!-- ENDIF !notes.length -->
 					{{{each notes}}}
-					<div class="media">
+					<div class="media" data-datetime="{../datetime}" data-index="@index">
 						<div class="media-left">
 							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "md", false, "media-object")}</a>
 						</div>
@@ -113,6 +113,10 @@
 								<small><span class="timeago" title="{../datetimeISO}"></span></small>
 							</h4>
 							{../content}
+						</div>
+						<div class="media-right">
+							<a href="#" data-action="prepare-edit"><i class="fa fa-pencil"></i></a>
+							<a href="#" data-action="delete-note"><i class="fa fa-trash text-danger"></i></a>
 						</div>
 					</div>
 					{{{end}}}
