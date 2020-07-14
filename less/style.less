@@ -199,6 +199,30 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	background-image: -o-linear-gradient(top, transparent, #2b3e50);
 }
 
+.skin-darkly, .skin-cyborg {
+	[component="composer"] {
+		background: #333;
+
+		.title, .preview, textarea {
+			background-color: #303030;
+			color: #fff;
+		}
+
+		textarea {
+			outline: none;
+			border-color: #000;
+		}
+
+		.formatting-bar .formatting-group li, .formatting-bar span {
+			color: #fff;
+		}
+
+		.formatting-bar .formatting-group li:focus, .formatting-bar .formatting-group li:hover {
+			background-color: #444; 
+		}
+	}
+}
+
 .icon-container {
 	.row {
 		margin: 0;
