@@ -47,7 +47,7 @@
 				</div>
 			</fieldset>
 
-			<fieldset class="collapse" id="more-filters">
+			<fieldset class="collapse" id="more-filters" aria-expanded="false">
 				<div class="form-group">
 					<label for="filter-assignee">[[flags:filter-assignee]]</label>
 					<input type="number" class="form-control" id="filter-assignee" name="assignee" min="0" />
@@ -64,7 +64,7 @@
 				</div>
 			</fieldset>
 
-			<button type="button" class="btn btn-link btn-block" data-toggle="collapse" data-target="#more-filters">[[flags:more-filters]]&nbsp;<span class="caret"></span></button>
+			<button type="button" class="btn btn-link btn-block" data-toggle="collapse" data-target="#more-filters" aria-controls="#more-filters">[[flags:more-filters]]&nbsp;<span class="caret"></span></button>
 			<button type="button" id="apply-filters" class="btn btn-primary btn-block">[[flags:apply-filters]]</button>
 		</form>
 	</div>
