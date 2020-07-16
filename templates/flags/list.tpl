@@ -7,13 +7,13 @@
 	<div class="col-sm-8 col-md-9">
 		<div class="text-center">
 			<div class="panel panel-default">
-				<div class="panel-body">
+				<div class="panel-body collapse" id="flags-daily-wrapper">
 					<div><canvas id="flags:daily" height="250"></canvas></div>
 					<p>
 
 					</p>
 				</div>
-				<div class="panel-footer"><small>[[flags:graph-label]]</small></div>
+				<div class="panel-footer"><small>[[flags:graph-label]]</small>&nbsp;<span class="caret"></span></div>
 			</div>
 		</div>
 
