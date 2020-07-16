@@ -1,0 +1,40 @@
+.categories {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.categories li {
+    display        : flex;
+    justify-content: center;
+}
+
+#mobile-menu {
+    float: right !important;
+}
+
+@media (min-width: 1200px) {
+
+    #logged-in-menu,
+    #search-form {
+        position: absolute;
+    }
+
+    #logged-in-menu {
+        margin-right: 15vw;
+    }
+
+    #search-form {
+        margin-right: 3vw;
+    }
+}
+
+.navbar-default.navbar-nav>li>a,
+.fa-search {
+    color: #aeb3b7;
+}
+
+.navbar-default.navbar-nav>li>a:hover,
+.navbar-default.navbar-nav>li.active>a .fa-search:hover {
+    color: #ffffff;
+}
