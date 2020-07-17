@@ -50,7 +50,7 @@
 				<form role="form" id="attributes">
 					<div class="form-group">
 						<h2 class="h4">[[flags:reports]]</h2>
-						<ul class="list-group">
+						<ul class="list-group" component="flag/reports">
 							{{{ each reports }}}
 							<li class="list-group-item">
 								<a href="{config.relative_path}/user/{reporter.userslug}">{buildAvatar(./reporter, "sm", false)}</a>
