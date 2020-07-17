@@ -30,8 +30,8 @@
 				<tr>
 					<th>[[flags:state]]</th>
 					<th></th>
-					<th><span class="hidden-xs">[[flags:reporter]] </span><i class="fa fa-user-plus"></i></th>
-					<th><span class="hidden-xs">[[flags:reported-at]] </span><i class="fa fa-clock-o"></i></th>
+					<th><span class="hidden-xs">[[flags:reports]] </span><i class="fa fa-user-plus"></i></th>
+					<th><span class="hidden-xs">[[flags:first-reported]] </span><i class="fa fa-clock-o"></i></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -49,12 +49,11 @@
 					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 					<td>
 						<a href="{config.relative_path}/flags/{../flagId}">
-							<strong>{../target_readable}</strong> &mdash; <span component="flags/list/description">{../description}</span>
+							<strong>{../target_readable}</strong>
 						</a>
 					</td>
 					<td>
-						{buildAvatar(../reporter, "sm")}
-						{../reporter.username}
+						{./heat}
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>
 				</tr>
