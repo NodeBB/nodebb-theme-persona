@@ -158,18 +158,6 @@
 				</div>
 				{{{ end }}}
 
-				<div class="btn-group btn-block">
-					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fa fa-user"></i>
-						[[flags:reporter]]
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="{config.relative_path}/uid/{reporter.uid}">[[flags:view-profile]]</a></li>
-						<li><a href="#" data-chat="{reporter.uid}">[[flags:start-new-chat]]</a></li>
-					</ul>
-				</div>
-
 				<hr />
 
 				<h2 class="h4">[[flags:history]]</h2>
