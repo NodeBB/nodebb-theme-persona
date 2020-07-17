@@ -130,10 +130,10 @@
 
 				{{{ if type_bool.post }}}
 				{{{ if !target.deleted}}}
-				<a class="btn btn-danger btn-block" href="#" data-action="delete-post">[[flags:delete-post]]</a>
+				<a class="btn btn-danger btn-block" href="#" data-action="delete-post"><i class="fa fa-trash"></i> [[flags:delete-post]]</a>
 				{{{ else }}}
-				<a class="btn btn-danger btn-block" href="#" data-action="purge-post">[[flags:purge-post]]</a>
-				<a class="btn btn-success btn-block" href="#" data-action="restore-post">[[flags:restore-post]]</a>
+				<a class="btn btn-danger btn-block" href="#" data-action="purge-post"><i class="fa fa-trash"></i> [[flags:purge-post]]</a>
+				<a class="btn btn-success btn-block" href="#" data-action="restore-post"><i class="fa fa-reply"></i><i class="fa fa-trash"></i> [[flags:restore-post]]</a>
 				{{{ end }}}
 				{{{ end }}}
 
