@@ -35,6 +35,7 @@
 			{{{end}}}
 		</span>
 	</div>
+	<div component="chat/messages/scroll-up-alert" class="scroll-up-alert alert alert-info" role="button">[[modules:chat.scroll-up-alert]]</div>
 	<ul class="chat-content">
 		<!-- IMPORT partials/chats/messages.tpl -->
 	</ul>
