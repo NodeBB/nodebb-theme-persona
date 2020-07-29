@@ -28,10 +28,10 @@
 		<table class="table table-striped table-hover" component="flags/list">
 			<thead>
 				<tr>
-					<th>[[flags:state]]</th>
 					<th></th>
 					<th><span class="hidden-xs">[[flags:reports]] </span><i class="fa fa-user-plus"></i></th>
 					<th><span class="hidden-xs">[[flags:first-reported]] </span><i class="fa fa-clock-o"></i></th>
+					<th>[[flags:state]]</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -46,7 +46,6 @@
 				<!-- ENDIF !flags.length -->
 				{{{each flags}}}
 				<tr data-flag-id="{../flagId}">
-					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 					<td>
 						<a href="{config.relative_path}/flags/{../flagId}">
 							<strong>{../target_readable}</strong>
@@ -56,6 +55,7 @@
 						{./heat}
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>
+					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 				</tr>
 				{{{end}}}
 			</tbody>
