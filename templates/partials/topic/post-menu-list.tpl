@@ -97,10 +97,20 @@
 		<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
 	</li>
 {{{end}}}
+<!-- ENDIF !posts.deleted -->
 
 <!-- IF posts.display_flag_tools -->
 <li class="divider"></li>
-<li><a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag_post]]</a></li>
-<li><a component="post/flagUser" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag_user]]</a></li>
+{{{ if !posts.flagId }}}
+<li><a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a></li>
+<li><a component="post/flagUser" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-user]]</a></li>
+{{{ else }}}
+<li class="disabled text-muted"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:already-flagged]]</li>
+{{{ end }}}
 <!-- ENDIF posts.display_flag_tools -->
-<!-- ENDIF !posts.deleted -->
+<!-- IF posts.display_moderator_tools -->
+<li class="divider"></li>
+{{{ if posts.flagId }}}
+<li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
+{{{ end }}}
+<!-- ENDIF posts.display_moderator_tools -->
