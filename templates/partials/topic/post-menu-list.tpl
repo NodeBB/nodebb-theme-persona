@@ -101,7 +101,7 @@
 
 <!-- IF posts.display_flag_tools -->
 <li class="divider"></li>
-{{{ if !posts.flagId }}}
+{{{ if !posts.flags.flagged }}}
 <li><a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a></li>
 <li><a component="post/flagUser" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-user]]</a></li>
 {{{ else }}}
@@ -110,7 +110,7 @@
 <!-- ENDIF posts.display_flag_tools -->
 <!-- IF posts.display_moderator_tools -->
 <li class="divider"></li>
-{{{ if posts.flagId }}}
-<li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
+{{{ if posts.flags.exists }}}
+<li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flags.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
 {{{ end }}}
 <!-- ENDIF posts.display_moderator_tools -->
