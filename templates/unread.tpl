@@ -43,7 +43,7 @@
 
 		<div class="btn-group pull-right bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw fa-filter"></i></span> <span class="caret"></span>
+				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				{{{each filters}}}
