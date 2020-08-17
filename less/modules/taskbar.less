@@ -54,7 +54,7 @@
 				&::after {
 					content: '\f06e';
 					font-family: "FontAwesome";
-					font-size: .75em;
+					font-size: 13px;
 					background: black;
 					border-radius: 50%;
 					color: white;
@@ -66,12 +66,20 @@
 				}
 			}
 
+			&.new a::after {
+				display: none;
+			}
+
 			a {
 				padding: 3px 15px;
-				font-size: 13px;
+				font-size: 20px;
 
 				&.user-icon {
 					overflow: visible;
+				}
+
+				&:focus, &:hover {
+					color: @gray-lighter;
 				}
 
 				border-radius: 50%;
