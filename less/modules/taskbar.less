@@ -57,17 +57,22 @@
 					font-size: .75em;
 					background: black;
 					border-radius: 50%;
-					padding: 0.5em;
 					color: white;
-					position: relative;
-					top: -100%;
-					right: -100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 20px;
+					height: 20px;
 				}
 			}
 
 			a {
 				padding: 3px 15px;
 				font-size: 13px;
+
+				&.user-icon {
+					overflow: visible;
+				}
 
 				border-radius: 50%;
 				height: 50px;
