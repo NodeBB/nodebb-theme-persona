@@ -5,18 +5,6 @@
 		<!-- IMPORT partials/flags/filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
-		<div class="text-center">
-			<div class="panel panel-default">
-				<div class="panel-body collapse" id="flags-daily-wrapper" aria-expanded="false">
-					<div><canvas id="flags:daily" height="250"></canvas></div>
-					<p>
-
-					</p>
-				</div>
-				<div class="panel-footer" aria-controls="#flags-daily-wrapper"><small>[[flags:graph-label]]</small>&nbsp;<span class="caret"></span></div>
-			</div>
-		</div>
-
 		<!-- IF hasFilter -->
 		<div class="alert alert-warning">
 			<p class="pull-right">

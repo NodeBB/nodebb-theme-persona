@@ -1,10 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
-	<div class="col-sm-4 col-md-3">
-		<!-- IMPORT partials/flags/filters.tpl -->
-	</div>
-	<div class="col-sm-8 col-md-9">
+	<div class="col-sm-12">
 		<h2 class="h4">
 			{target_readable}
 			<small><span class="timeago" title="{datetimeISO}"></span></small>

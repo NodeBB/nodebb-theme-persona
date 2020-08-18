@@ -1,3 +1,12 @@
+<div class="text-center">
+	<div class="panel panel-default">
+		<div class="panel-body collapse" id="flags-daily-wrapper" aria-expanded="false">
+			<div><canvas id="flags:daily" height="150"></canvas></div>
+		</div>
+		<div class="panel-footer" aria-controls="#flags-daily-wrapper"><small>[[flags:graph-label]]</small>&nbsp;<span class="caret"></span></div>
+	</div>
+</div>
+
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">[[flags:quick-filters]]</h3>
