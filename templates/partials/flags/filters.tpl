@@ -26,6 +26,14 @@
 		<form role="form" component="flags/filters">
 			<fieldset>
 				<div class="form-group">
+					<label for="sort">[[flags:sort]]</label>
+					<select class="form-control" id="sort" name="sort">
+						<option value="newest">[[flags:sort-newest]]</option>
+						<option value="oldest">[[flags:sort-oldest]]</option>
+						<option value="reports">[[flags:sort-reports]]</option>
+					</select>
+				</div>
+				<div class="form-group">
 					<label for="filter-state">[[flags:filter-state]]</label>
 					<select class="form-control" id="filter-state" name="state">
 						<option value="">[[flags:state-all]]</option>
