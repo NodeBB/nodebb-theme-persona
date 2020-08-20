@@ -13,9 +13,23 @@
 			[[flags:filter-active]]
 		</div>
 		<!-- ENDIF hasFilter -->
+
+		<div class="btn-group pull-right" component="flags/bulk-actions">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
+				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#" data-action="bulk-assign">[[flags:assign-to-me]]</a></li>
+				<li><a href="#" data-action="bulk-mark-resolved">[[flags:bulk-resolve]]</a></li>
+			</ul>
+		</div>
+
 		<table class="table table-striped table-hover" component="flags/list">
 			<thead>
 				<tr>
+					<th>
+						<input type="checkbox" data-action="toggle-all" autocomplete="off" />
+					</th>
 					<th></th>
 					<th><span class="hidden-xs">[[flags:reports]] </span><i class="fa fa-user-plus"></i></th>
 					<th><span class="hidden-xs">[[flags:first-reported]] </span><i class="fa fa-clock-o"></i></th>
@@ -34,6 +48,9 @@
 				<!-- ENDIF !flags.length -->
 				{{{each flags}}}
 				<tr data-flag-id="{../flagId}">
+					<td>
+						<input type="checkbox" autocomplete="off" />
+					</td>
 					<td>
 						<a href="{config.relative_path}/flags/{../flagId}">
 							<strong>{../target_readable}</strong>
