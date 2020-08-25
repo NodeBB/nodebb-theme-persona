@@ -17,15 +17,16 @@
 					<div class="form-group">
 						<label for="user-search">[[users:search]]</label>
 						<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" />
-						<div class="block-edit">
+						<ul class="block-edit list-group">
 							{{{ each edit }}}
-							<hr />
-							<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
-							<div class="pull-left">
-								<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
-							</div>
+							<li class="list-group-item clearfix">
+								<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
+								<div class="pull-left">
+									<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
+								</div>
+							</li>
 							{{{ end }}}
-						</div>
+						</ul>
 					</div>
 				</div>
 			</div>
