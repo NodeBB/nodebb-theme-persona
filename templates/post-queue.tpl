@@ -59,7 +59,7 @@
 							<td class="col-md-1">
 								<div class="btn-group pull-right">
 									<button class="btn btn-success btn-xs" data-action="accept"><i class="fa fa-check"></i></button>
-									<button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-times"></i></button>
+									<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-times"></i></button>
 								</div>
 							</td>
 						</tr>
