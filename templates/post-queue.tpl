@@ -4,12 +4,12 @@
 	<div class="col-xs-12">
 		<div class="post-queue panel panel-primary preventSlideout">
 			<div class="panel-heading">
-				[[admin/manage/post-queue:post-queue]]
+				[[post-queue:post-queue]]
 			</div>
 
 			<!-- IF !posts.length -->
 			<p class="panel-body">
-				[[admin/manage/post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
+				[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
 			</p>
 			<!-- ENDIF !posts.length -->
 
@@ -17,11 +17,11 @@
 				<table class="table table-striped posts-list">
 					<thead>
 						<tr>
-							<th>[[admin/manage/post-queue:user]]</th>
-							<th>[[admin/manage/post-queue:category]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[admin/manage/post-queue:content-editable]]"></i></th>
-							<th>[[admin/manage/post-queue:title]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[admin/manage/post-queue:content-editable]]"></i></th>
-							<th>[[admin/manage/post-queue:content]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[admin/manage/post-queue:content-editable]]"></i></th>
-							<th>[[admin/manage/post-queue:posted]]</th>
+							<th>[[post-queue:user]]</th>
+							<th>[[post-queue:category]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
+							<th>[[post-queue:title]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
+							<th>[[post-queue:content]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
+							<th>[[post-queue:posted]]</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -40,7 +40,7 @@
 							</td>
 							<td class="col-md-2 topic-title">
 								<!-- IF posts.data.tid -->
-								<a href="{config.relative_path}/topic/{posts.data.tid}">[[admin/manage/post-queue:reply-to, {posts.topic.title}]]</a>
+								<a href="{config.relative_path}/topic/{posts.data.tid}">[[post-queue:reply-to, {posts.topic.title}]]</a>
 								<!-- ENDIF posts.data.tid -->
 								{posts.data.title}
 							</td>
