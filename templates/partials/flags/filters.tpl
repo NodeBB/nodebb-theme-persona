@@ -28,9 +28,16 @@
 				<div class="form-group">
 					<label for="sort">[[flags:sort]]</label>
 					<select class="form-control" id="sort" name="sort">
-						<option value="newest">[[flags:sort-newest]]</option>
-						<option value="oldest">[[flags:sort-oldest]]</option>
-						<option value="reports">[[flags:sort-reports]]</option>
+						<optgroup label="[[flags:sort-all]]">
+							<option value="newest">[[flags:sort-newest]]</option>
+							<option value="oldest">[[flags:sort-oldest]]</option>
+							<option value="reports">[[flags:sort-reports]]</option>
+						</optgroup>
+						<optgroup label="[[flags:sort-posts-only]]">
+							<option value="downvotes">[[flags:sort-downvotes]]</option>
+							<option value="upvotes">[[flags:sort-upvotes]]</option>
+							<option value="replies">[[flags:sort-replies]]</option>
+						</optgroup>
 					</select>
 				</div>
 				<div class="form-group">
