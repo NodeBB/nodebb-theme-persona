@@ -14,7 +14,7 @@
 			<div class="media-left">
 				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "lg", false, "media-object")}</a>
 			</div>
-			<div class="media-body">
+			<div class="media-body" data-pid="{target.pid}">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.user.userslug}">{target.user.username}</a></h4>
 				{target.content}
 			</div>
