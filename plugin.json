@@ -10,16 +10,16 @@
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
-		"lib/persona.js",
-		"lib/modules/nprogress.js",
-		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/quickreply.js"
+		"public/persona.js",
+		"public/modules/nprogress.js",
+		"public/modules/autohidingnavbar.min.js",
+		"public/modules/quickreply.js"
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
 	},
 	"acpScripts": [
-		"lib/admin.js"
+		"public/admin.js"
 	],
 	"languages": "languages"
 }
