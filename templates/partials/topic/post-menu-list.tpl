@@ -64,7 +64,7 @@
 <!-- ENDIF posts.display_moderator_tools -->
 
 {{{each posts.tools}}}
-<li>
+<li {{{ if ./disabled }}}class="disabled" {{{ end }}}>
 	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
 		<span class="menu-icon"><i class="fa fa-fw {posts.tools.icon}"></i></span> {{posts.tools.html}}
 	</a>
