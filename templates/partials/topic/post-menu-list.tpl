@@ -70,9 +70,6 @@
 	</a>
 </li>
 {{{end}}}
-<!-- IF posts.toolsVisible -->
-<li class="divider"></li>
-<!-- ENDIF posts.toolsVisible -->
 
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
@@ -109,7 +106,6 @@
 {{{ end }}}
 <!-- ENDIF posts.display_flag_tools -->
 <!-- IF posts.display_moderator_tools -->
-<li class="divider"></li>
 {{{ if posts.flags.exists }}}
 <li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flags.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
 {{{ end }}}
