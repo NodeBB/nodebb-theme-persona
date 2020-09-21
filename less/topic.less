@@ -389,6 +389,8 @@
 			padding-bottom: 20px;
 			margin-bottom: 20px;
 
+			.transition(0.75s ease-in-out border-color);
+
 			.edit-icon {
 				vertical-align: -2%;
 			}
@@ -403,17 +405,13 @@
 				}
 			}
 
-			> hr {
-				.transition(0.75s ease-in-out border-color);
-			}
-
-			&.highlight > hr {
+			&.highlight {
 				border-color: darken(@brand-info, 20%);
-				box-shadow: 0px 0px 1px @brand-info;
-			}
+				box-shadow: 0px 2px 2px -2px @brand-info;
 
-			&.highlight .bookmarked {
-				opacity: 1;
+				.bookmarked {
+					opacity: 1;
+				}
 			}
 		}
 
