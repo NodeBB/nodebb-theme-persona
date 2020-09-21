@@ -95,5 +95,3 @@
 	</a>
 	<!-- ENDIF !hideReplies -->
 </div>
-
-<hr />
