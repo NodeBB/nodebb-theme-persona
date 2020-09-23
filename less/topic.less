@@ -5,7 +5,7 @@
 
 	h1 {
 		line-height: 40px;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 
 		.topic-title {
 			word-wrap: break-word;
@@ -29,6 +29,22 @@
 
 		.topic-title {
 			text-transform: initial;
+		}
+	}
+	.topic-info {
+		border-bottom: 1px solid @post-border-color;
+		margin-bottom: 10px;
+    	padding-bottom: 10px;
+	}
+	.category-item {
+		.icon {
+			min-width: 23px;
+    		min-height: 23px;
+    		font-size: 10px;
+    		line-height: 12px;
+    		padding: 5px;
+			margin-right: 5px;
+			border-radius: 50%;
 		}
 	}
 
@@ -202,7 +218,8 @@
 	}
 
 	.stats {
-		margin: 0px 10px 0px 10px;
+		font-size: 12px;
+		margin: 0px 5px 0px 5px;
 		float: left;
 	}
 
@@ -255,11 +272,6 @@
 				background: @brand-primary !important;
 			}
 		}
-	}
-
-	.tags {
-		vertical-align: -40%;
-		margin-bottom: @post-padding;
 	}
 
 	h1 {
