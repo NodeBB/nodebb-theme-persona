@@ -28,6 +28,10 @@ $(document).ready(function () {
 	}
 
 	function configureNavbarHiding() {
+		if (!$.fn.autoHidingNavbar) {
+			return;
+		}
+
 		var navbarEl = $(".navbar-fixed-top");
 		navbarEl.autoHidingNavbar('destroy');
 		navbarEl.css('top', '');
@@ -41,6 +45,10 @@ $(document).ready(function () {
 	}
 
 	function setupNProgress() {
+		if (typeof NProgress === 'undefined') {
+			return;
+		}
+
 		$(window).on('action:ajaxify.start', function () {
 			NProgress.set(0.7);
 		});
@@ -140,7 +148,6 @@ $(document).ready(function () {
 		if (!window.addEventListener) {
 			return;
 		}
-
 
 		require(['pulling', 'storage'], function (Pulling, Storage) {
 			if (!Pulling) {
@@ -425,7 +432,9 @@ $(document).ready(function () {
 		$(window).on('action:ajaxify.end', function (ev, data) {
 			if (data.url && data.url.match('^topic/') && config.enableQuickReply) {
 				require(['persona/quickreply'], function (quickreply) {
-					quickreply.init();
+					if (quickreply) {
+						quickreply.init();
+					}
 				});
 			}
 		});
