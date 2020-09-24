@@ -2,7 +2,7 @@
 
 /*globals ajaxify, config, utils, app, socket, NProgress*/
 
-$(document).ready(function() {
+$(document).ready(function () {
 	setupNProgress();
 	setupTaskbar();
 	setupEditedByIcon();
@@ -27,13 +27,13 @@ $(document).ready(function() {
 		}
 	}
 
-	function configureNavbarHiding () {
+	function configureNavbarHiding() {
 		var navbarEl = $(".navbar-fixed-top");
 		navbarEl.autoHidingNavbar('destroy');
 		navbarEl.css('top', '');
 
 		var env = utils.findBootstrapEnvironment();
-		if (env === 'xs' || env ==='sm') {
+		if (env === 'xs' || env === 'sm') {
 			navbarEl.autoHidingNavbar({
 				showOnBottom: false,
 			});
@@ -41,11 +41,11 @@ $(document).ready(function() {
 	}
 
 	function setupNProgress() {
-		$(window).on('action:ajaxify.start', function() {
+		$(window).on('action:ajaxify.start', function () {
 			NProgress.set(0.7);
 		});
 
-		$(window).on('action:ajaxify.end', function(ev, data) {
+		$(window).on('action:ajaxify.end', function (ev, data) {
 			NProgress.done();
 			setupHoverCards();
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	}
 
 	function setupTaskbar() {
-		$(window).on('filter:taskbar.push', function(ev, data) {
+		$(window).on('filter:taskbar.push', function (ev, data) {
 			data.options.className = 'taskbar-' + data.module;
 			if (data.module === 'composer') {
 				data.options.icon = 'fa-commenting-o';
@@ -66,7 +66,7 @@ $(document).ready(function() {
 				}
 			}
 		});
-		$(window).on('action:taskbar.pushed', function(ev, data) {
+		$(window).on('action:taskbar.pushed', function (ev, data) {
 			if (data.module === 'chat') {
 				createChatIcon(data);
 				var elData = data.element.data();
@@ -76,14 +76,14 @@ $(document).ready(function() {
 			}
 		});
 
-		socket.on('event:chats.markedAsRead', function(data) {
+		socket.on('event:chats.markedAsRead', function (data) {
 			$('#taskbar [data-roomid="' + data.roomId + '"]')
 				.removeClass('new')
 				.attr('data-content', 0);
 		});
 
 		function createChatIcon(data) {
-			$.getJSON(config.relative_path + '/api/user/' + app.user.userslug + '/chats/' + data.options.roomId, function(chatObj) {
+			$.getJSON(config.relative_path + '/api/user/' + app.user.userslug + '/chats/' + data.options.roomId, function (chatObj) {
 				var el = $('#taskbar [data-uuid="' + data.uuid + '"] a');
 				el.parent('[data-uuid]').attr('data-roomId', data.options.roomId);
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
 						el.css('background-image', 'url(' + user.picture + ')');
 						el.css('background-size', 'cover');
 					} else {
-						el	.css('background-color', user['icon:bgColor'])
+						el.css('background-color', user['icon:bgColor'])
 							.text(user['icon:text'])
 							.addClass('user-icon');
 					}
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
 	function setupEditedByIcon() {
 		function activateEditedTooltips() {
-			$('[data-pid] [component="post/editor"]').each(function() {
+			$('[data-pid] [component="post/editor"]').each(function () {
 				var el = $(this), icon;
 
 				if (!el.attr('data-editor')) {
@@ -123,7 +123,7 @@ $(document).ready(function() {
 			});
 		}
 
-		$(window).on('action:posts.edited', function(ev, data) {
+		$(window).on('action:posts.edited', function (ev, data) {
 			var parent = $('[data-pid="' + data.post.pid + '"]');
 			var icon = parent.find('.edit-icon').filter(function (index, el) {
 				return parseInt($(el).closest('[data-pid]').attr('data-pid'), 10) === parseInt(data.post.pid, 10);
@@ -236,7 +236,7 @@ $(document).ready(function() {
 			}
 
 			function loadNotifications() {
-				require(['notifications'], function(notifications) {
+				require(['notifications'], function (notifications) {
 					notifications.loadNotifications($('#menu [data-section="notifications"] ul'));
 				});
 			}
@@ -256,7 +256,7 @@ $(document).ready(function() {
 
 			$('#user-control-list').children().clone(true, true).appendTo($('#menu [data-section="profile"] ul'));
 
-			socket.on('event:user_status_change', function(data) {
+			socket.on('event:user_status_change', function (data) {
 				if (parseInt(data.uid, 10) === app.user.uid) {
 					app.updateUserStatus($('#menu [component="user/status"]'), data.status);
 					navSlideout.close();
@@ -272,7 +272,7 @@ $(document).ready(function() {
 			}
 
 			if (chatMenuVisible) {
-				$('#mobile-chats').removeClass('hidden').on('click', function() {
+				$('#mobile-chats').removeClass('hidden').on('click', function () {
 					navSlideout.close();
 					chatsSlideout.enable().toggle();
 				});
@@ -319,12 +319,12 @@ $(document).ready(function() {
 	}
 
 	function setupHoverCards() {
-		require(['components'], function(components) {
+		require(['components'], function (components) {
 			components.get('topic')
 				.on('click', '[component="user/picture"],[component="user/status"]', generateUserCard);
 		});
 
-		$(window).on('action:posts.loading', function(ev, data) {
+		$(window).on('action:posts.loading', function (ev, data) {
 			for (var i = 0, ii = data.posts.length; i < ii; i++) {
 				(ajaxify.data.topics || ajaxify.data.posts)[data.posts[i].index] = data.posts[i];
 			}
@@ -349,8 +349,8 @@ $(document).ready(function() {
 			return false;
 		}
 
-		socket.emit('user.isFollowing', {uid: data.uid}, function(err, isFollowing) {
-			app.parseAndTranslate('modules/usercard', data, function(html) {
+		socket.emit('user.isFollowing', { uid: data.uid }, function (err, isFollowing) {
+			app.parseAndTranslate('modules/usercard', data, function (html) {
 				var card = $(html);
 				avatar.parents('a').after(card.hide());
 
@@ -383,7 +383,7 @@ $(document).ready(function() {
 	function setupCardRemoval(card) {
 		function removeCard(ev) {
 			if ($(ev.target).closest('.persona-usercard').length === 0) {
-				card.fadeOut(function() {
+				card.fadeOut(function () {
 					card.remove();
 				});
 
@@ -395,10 +395,10 @@ $(document).ready(function() {
 	}
 
 	function setupFavouriteMorph(parent, uid, username) {
-		parent.find('.btn-morph').click(function(ev) {
+		parent.find('.btn-morph').click(function (ev) {
 			var type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
 
-			socket.emit('user.' + type, {uid: uid}, function(err) {
+			socket.emit('user.' + type, { uid: uid }, function (err) {
 				if (err) {
 					return app.alertError(err.message);
 				}
@@ -407,7 +407,7 @@ $(document).ready(function() {
 			});
 
 			$(this).toggleClass('plus').toggleClass('heart');
-			$(this).translateAttr('title', type  === 'follow' ? '[[global:unfollow]]' : '[[global:follow]]');
+			$(this).translateAttr('title', type === 'follow' ? '[[global:unfollow]]' : '[[global:follow]]');
 
 			if ($(this).find('b.drop').length === 0) {
 				$(this).prepend('<b class="drop"></b>');
@@ -417,14 +417,14 @@ $(document).ready(function() {
 				x = ev.pageX - drop.width() / 2 - $(this).offset().left,
 				y = ev.pageY - drop.height() / 2 - $(this).offset().top;
 
-			drop.css({top: y + 'px', left: x + 'px'}).addClass('animate');
+			drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 		});
 	}
 
 	function setupQuickReply() {
-		$(window).on('action:ajaxify.end', function(ev, data) {
+		$(window).on('action:ajaxify.end', function (ev, data) {
 			if (data.url && data.url.match('^topic/') && config.enableQuickReply) {
-				require(['persona/quickreply'], function(quickreply) {
+				require(['persona/quickreply'], function (quickreply) {
 					quickreply.init();
 				});
 			}
