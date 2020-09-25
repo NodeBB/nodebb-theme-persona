@@ -9,9 +9,14 @@
 
 		.topic-title {
 			word-wrap: break-word;
-			font-size: 28px;
+			font-size: 24px;
 			color:inherit;
-			line-height: 36px;
+			line-height: 32px;
+			@media (max-width: @screen-sm-max) {
+				font-size: 18px;
+				line-height: 24px;
+				margin-top: 0px;
+			}
 		}
 
 		> span {
@@ -31,10 +36,22 @@
 			text-transform: initial;
 		}
 	}
+	[component="topic/browsing-users"] {
+		margin-bottom: -15px;
+	}
+	.topic-header {
+		position: sticky;
+		top: @navbar-height;
+		background-color: @body-bg;
+		z-index: @zindex-navbar;
+	}
+
 	.topic-info {
 		border-bottom: 1px solid @post-border-color;
 		margin-bottom: 10px;
-    	padding-bottom: 10px;
+		> * {
+			padding-bottom: 10px;
+		}
 	}
 	.category-item {
 		.icon {
@@ -220,7 +237,7 @@
 	.stats {
 		font-size: 12px;
 		margin: 0px 5px 0px 5px;
-		float: left;
+		display: inline-block;
 	}
 
 	.title {

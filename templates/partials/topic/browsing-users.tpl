@@ -1,4 +1,4 @@
-<div component="topic/browsing-users">
+<div component="topic/browsing-users" class="inline-block hidden-xs">
 	{{{each browsingUsers}}}
 	<div class="pull-left" data-uid="{browsingUsers.uid}">
 		<a href="<!-- IF browsingUsers.userslug -->{config.relative_path}/user/{browsingUsers.userslug}<!-- ELSE -->#<!-- ENDIF browsingUsers.userslug -->">

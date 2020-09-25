@@ -42,6 +42,16 @@ $(document).ready(function () {
 				showOnBottom: false,
 			});
 		}
+		navbarEl.on('show.autoHidingNavbar', function() {
+			if (ajaxify.data.template.topic) {
+				$('.topic .topic-header').css({top: '' });
+			}
+		});
+		navbarEl.on('hide.autoHidingNavbar', function() {
+			if (ajaxify.data.template.topic) {
+				$('.topic .topic-header').css('top', '0px');
+			}
+		});
 	}
 
 	function setupNProgress() {

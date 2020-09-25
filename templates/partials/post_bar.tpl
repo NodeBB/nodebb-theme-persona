@@ -1,27 +1,20 @@
-<div class="clearfix">
+<div class="topic-main-buttons pull-right inline-block">
+	<span class="loading-indicator btn pull-left hidden" done="0">
+		<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
+	</span>
 
-	<!-- IMPORT partials/topic/browsing-users.tpl -->
+	<!-- IF loggedIn -->
+	<button component="topic/mark-unread" class="btn btn-sm btn-default" title="[[topic:mark_unread]]">
+		<i class="fa fa-fw fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"></span>
+	</button>
+	<!-- ENDIF loggedIn -->
 
-	<div class="topic-main-buttons pull-right">
-		<span class="loading-indicator btn pull-left hidden" done="0">
-			<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
-		</span>
+	<!-- IMPORT partials/topic/watch.tpl -->
 
-		<!-- IMPORT partials/topic/reply-button.tpl -->
+	<!-- IMPORT partials/topic/sort.tpl -->
 
-		<!-- IF loggedIn -->
-		<button component="topic/mark-unread" class="btn btn-default">
-			<i class="fa fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"> [[topic:mark_unread]]</span>
-		</button>
-		<!-- ENDIF loggedIn -->
-
-		<!-- IMPORT partials/topic/watch.tpl -->
-
-		<!-- IMPORT partials/topic/sort.tpl -->
-
-		<div class="pull-right">&nbsp;
-		<!-- IMPORT partials/thread_tools.tpl -->
-		</div>
+	<div class="inline-block">
+	<!-- IMPORT partials/thread_tools.tpl -->
 	</div>
+	<!-- IMPORT partials/topic/reply-button.tpl -->
 </div>
-<hr/>
