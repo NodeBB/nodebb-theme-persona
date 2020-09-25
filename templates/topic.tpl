@@ -6,35 +6,37 @@
 </div>
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+		<div class="topic-header">
+			<h1 component="post/header" class="" itemprop="name">
+				<i component="topic/pinned" class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
+				<i component="topic/locked" class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
+				<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
+				{{{each icons}}}@value{{{end}}}
+				<span class="topic-title" component="topic/title">{title}</span>
+			</h1>
 
-		<h1 component="post/header" class="hidden-xs" itemprop="name">
-			<i component="topic/pinned" class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
-			<i component="topic/locked" class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
-			{{{each icons}}}@value{{{end}}}
-			<span class="topic-title" component="topic/title">{title}</span>
-		</h1>
-
-		<div class="topic-info clearfix">
-			<div class="category-item inline-block">
-				{{{ if category.icon }}}
-				<div role="presentation" class="icon pull-left" style="{{{ if category.bgColor }}}background-color: {category.bgColor};{{{end}}}; {{{ if category.color}}}color: {category.color};{{{end}}}">
-					<i class="fa fa-fw {category.icon}"></i>
+			<div class="topic-info clearfix">
+				<div class="category-item inline-block">
+					{{{ if category.icon }}}
+					<div role="presentation" class="icon pull-left" style="{{{ if category.bgColor }}}background-color: {category.bgColor};{{{end}}}; {{{ if category.color}}}color: {category.color};{{{end}}}">
+						<i class="fa fa-fw {category.icon}"></i>
+					</div>
+					{{{ end }}}
+					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
-				{{{ end }}}
-				<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
-			</div>
-			{{{ if tags.length }}}
-			&bull;
-			{{{ end}}}
-			<div class="tags tag-list inline-block">
-				<!-- IMPORT partials/topic/tags.tpl -->
-			</div>
-			<div class="pull-right">
-				<!-- IMPORT partials/topic/stats.tpl -->
+
+				<div class="tags tag-list inline-block">
+					<!-- IMPORT partials/topic/tags.tpl -->
+				</div>
+				<div class="inline-block">
+					<!-- IMPORT partials/topic/stats.tpl -->
+				</div>
+
+				<!-- IMPORT partials/topic/browsing-users.tpl -->
+
+				<!-- IMPORT partials/post_bar.tpl -->
 			</div>
 		</div>
-
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
 			<span class="pull-left">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
@@ -59,21 +61,12 @@
 
 					<!-- IMPORT partials/topic/post.tpl -->
 				</li>
-				<!-- IF !posts.index -->
-				<li>
-					<div class="post-bar-placeholder"></div>
-				</li>
-				<!-- ENDIF !posts.index -->
 			{{{end}}}
 		</ul>
 
 		<!-- IF config.enableQuickReply -->
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		<!-- ENDIF config.enableQuickReply -->
-
-		<div class="post-bar">
-			<!-- IMPORT partials/post_bar.tpl -->
-		</div>
 
 		<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
