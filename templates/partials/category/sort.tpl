@@ -1,4 +1,3 @@
-<!-- IF loggedIn -->
 <div class="btn-group bottom-sheet" component="thread/sort">
 	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 		<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:sort_by]]</span>
@@ -13,4 +12,3 @@
 		<li><a href="#" class="most_votes" data-sort="most_votes"><i class="fa fa-fw"></i> [[topic:most_votes]]</a></li>
 	</ul>
 </div>
-<!-- ENDIF loggedIn -->
