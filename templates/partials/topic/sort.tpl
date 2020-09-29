@@ -1,4 +1,3 @@
-<!-- IF config.loggedIn -->
 <div class="btn-group bottom-sheet" component="thread/sort">
 	<button title="[[topic:sort_by]]" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 	<span><i class="fa fa-fw fa-sort"></i></span></button>
@@ -8,4 +7,3 @@
 		<li><a href="#" class="most_votes" data-sort="most_votes"><i class="fa fa-fw"></i> [[topic:most_votes]]</a></li>
 	</ul>
 </div>
-<!-- ENDIF config.loggedIn -->
