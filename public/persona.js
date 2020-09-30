@@ -247,11 +247,6 @@ $(document).ready(function () {
 				navSlideout.enable().toggle();
 			});
 
-			// Handle sidebar clicks while page still loading
-			if (document.getElementById('mobile-menu') === document.activeElement) {
-				navSlideout.enable().toggle();
-			}
-
 			function loadNotifications() {
 				require(['notifications'], function (notifications) {
 					notifications.loadNotifications($('#menu [data-section="notifications"] ul'));
