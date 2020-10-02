@@ -1,4 +1,4 @@
-<div component="category/dropdown" class="btn-group pull-right category-dropdown-container bottom-sheet {{{ if !categories.length }}]hidden{{{end}}}">
+<div component="category/dropdown" class="btn-group pull-right category-dropdown-container bottom-sheet {{{ if !categories.length }}}hidden{{{end}}}">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         {{{ if selectedCategory }}}<span class="fa-stack" style="{function.generateCategoryBackground, selectedCategory}"><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span> <span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedCategory.name}</span>{{{ else }}}
         <span class="visible-sm-inline visible-md-inline visible-lg-inline">[[unread:all_categories]]</span><span class="visible-xs-inline"><i class="fa fa-fw fa-list"></i></span>{{{ end }}} <span class="caret"></span>
