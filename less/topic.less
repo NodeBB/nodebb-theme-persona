@@ -22,14 +22,8 @@
 		> span {
 			text-transform: uppercase;
 			color: @gray-light;
-			font-size: 12px;
 			display: inline-block;
 			margin-top: 8px;
-
-			> span {
-				vertical-align: middle;
-				margin-right: 8px;
-			}
 		}
 
 		.topic-title {
@@ -38,8 +32,7 @@
 	}
 
 	[component="topic/labels"] {
-		vertical-align: -3px;
-		font-size: 16px;
+		font-size: 20px;
 		color: @text-muted;
 	}
 
@@ -147,12 +140,6 @@
 		color: darken(@post-highlight, 20%);
 		opacity: 0;
 		.transition(0.75s ease-in-out opacity);
-	}
-
-	[component="post/header"] {
-		.fa {
-			margin-top: 7px;
-		}
 	}
 
 	[component="post/anchor"] {
