@@ -34,6 +34,9 @@
 
 	</small>
 	<small class="pull-right">
+		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
+	</small>
+	<small class="pull-right">
 		<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
 		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
@@ -41,7 +44,6 @@
 		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 		</span>
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 	</small>
 </div>
 
