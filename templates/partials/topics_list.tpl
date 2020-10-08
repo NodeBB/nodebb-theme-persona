@@ -2,6 +2,7 @@
 	<meta itemprop="itemListOrder" content="descending">
 	{{{each topics}}}
 	<li component="category/topic" class="row clearfix category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-6 col-sm-9 col-xs-10 content">
