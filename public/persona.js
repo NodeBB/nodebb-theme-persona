@@ -437,12 +437,16 @@ $(document).ready(function () {
 
 	function setupQuickReply() {
 		$(window).on('action:ajaxify.end', function (ev, data) {
-			if (data.url && data.url.match('^topic/') && config.enableQuickReply) {
-				require(['persona/quickreply'], function (quickreply) {
-					if (quickreply) {
-						quickreply.init();
-					}
-				});
+			if (data.url && data.url.match('^topic/')) {
+				if (config.enableQuickReply) {
+					require(['persona/quickreply'], function (quickreply) {
+						if (quickreply) {
+							quickreply.init();
+						}
+					}); 
+				}
+
+				$('.topic-main-buttons [title]').tooltip();
 			}
 		});
 	}

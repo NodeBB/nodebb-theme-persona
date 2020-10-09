@@ -1,5 +1,5 @@
-<div class="btn-group bottom-sheet" component="thread/sort">
-	<button title="[[topic:sort_by]]" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+<div title="[[topic:sort_by]]" class="btn-group bottom-sheet" component="thread/sort">
+	<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 	<span><i class="fa fa-fw fa-sort"></i></span></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li><a href="#" class="oldest_to_newest" data-sort="oldest_to_newest"><i class="fa fa-fw"></i> [[topic:oldest_to_newest]]</a></li>
