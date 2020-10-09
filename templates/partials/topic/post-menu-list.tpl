@@ -23,14 +23,6 @@
 </li>
 <!-- END -->
 
-<!-- IF posts.display_history -->
-<li>
-	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
-		<span class="menu-icon"><i class="fa fa-fw fa-history"></i></span> [[topic:view-history]]
-	</a>
-</li>
-<!-- END -->
-
 <!-- IF posts.display_move_tools -->
 <li>
 	<a component="post/move" role="menuitem" tabindex="-1" href="#">
@@ -72,28 +64,36 @@
 {{{end}}}
 
 <!-- IF !posts.deleted -->
-<!-- IF config.loggedIn -->
-<li>
-	<a component="post/bookmark" role="menuitem" tabindex="-1" href="#" data-bookmarked="{posts.bookmarked}">
-		<span class="menu-icon">
-			<i component="post/bookmark/on" class="fa fa-fw fa-heart <!-- IF !posts.bookmarked -->hidden<!-- ENDIF !posts.bookmarked -->"></i>
-			<i component="post/bookmark/off" class="fa fa-fw fa-heart-o <!-- IF posts.bookmarked -->hidden<!-- ENDIF posts.bookmarked -->"></i>
-		</span>
-		<span class="bookmark-text">[[topic:bookmark]]</span>
-		<span component="post/bookmark-count" class="bookmarkCount badge" data-bookmarks="{posts.bookmarks}">{posts.bookmarks}</span>&nbsp;
-	</a>
-</li>
-<!-- ENDIF config.loggedIn -->
-
-<!-- IF postSharing.length -->
-<!-- IF config.loggedIn --><li class="divider"></li><!-- ENDIF config.loggedIn -->
-<li class="dropdown-header">[[topic:share_this_post]]</li>
-<!-- ENDIF postSharing.length -->
-{{{each postSharing}}}
+	<!-- IF posts.display_history -->
 	<li>
-		<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
+		<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
+			<span class="menu-icon"><i class="fa fa-fw fa-history"></i></span> [[topic:view-history]]
+		</a>
 	</li>
-{{{end}}}
+	<!-- END -->
+
+	<!-- IF config.loggedIn -->
+	<li>
+		<a component="post/bookmark" role="menuitem" tabindex="-1" href="#" data-bookmarked="{posts.bookmarked}">
+			<span class="menu-icon">
+				<i component="post/bookmark/on" class="fa fa-fw fa-heart <!-- IF !posts.bookmarked -->hidden<!-- ENDIF !posts.bookmarked -->"></i>
+				<i component="post/bookmark/off" class="fa fa-fw fa-heart-o <!-- IF posts.bookmarked -->hidden<!-- ENDIF posts.bookmarked -->"></i>
+			</span>
+			<span class="bookmark-text">[[topic:bookmark]]</span>
+			<span component="post/bookmark-count" class="bookmarkCount badge" data-bookmarks="{posts.bookmarks}">{posts.bookmarks}</span>&nbsp;
+		</a>
+	</li>
+	<!-- ENDIF config.loggedIn -->
+
+	<!-- IF postSharing.length -->
+	<!-- IF config.loggedIn --><li class="divider"></li><!-- ENDIF config.loggedIn -->
+	<li class="dropdown-header">[[topic:share_this_post]]</li>
+	<!-- ENDIF postSharing.length -->
+	{{{each postSharing}}}
+		<li>
+			<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
+		</li>
+	{{{end}}}
 <!-- ENDIF !posts.deleted -->
 
 <!-- IF posts.display_flag_tools -->
