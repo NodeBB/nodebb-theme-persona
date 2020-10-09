@@ -1,6 +1,6 @@
 "use strict";
 
-/*globals ajaxify, config, utils, app, socket, NProgress*/
+/*globals ajaxify, config, utils, app, socket*/
 
 $(document).ready(function () {
 	setupNProgress();
@@ -55,21 +55,23 @@ $(document).ready(function () {
 	}
 
 	function setupNProgress() {
-		if (typeof NProgress === 'undefined') {
-			return;
-		}
-
-		$(window).on('action:ajaxify.start', function () {
-			NProgress.set(0.7);
-		});
-
-		$(window).on('action:ajaxify.end', function (ev, data) {
-			NProgress.done();
-			setupHoverCards();
-
-			if (data.url && data.url.match('user/')) {
-				setupFavouriteButtonOnProfile();
+		require(['nprogress'], function (NProgress) {
+			if (typeof NProgress === 'undefined') {
+				return;
 			}
+
+			$(window).on('action:ajaxify.start', function () {
+				NProgress.set(0.7);
+			});
+
+			$(window).on('action:ajaxify.end', function (ev, data) {
+				NProgress.done();
+				setupHoverCards();
+
+				if (data.url && data.url.match('user/')) {
+					setupFavouriteButtonOnProfile();
+				}
+			});
 		});
 	}
 
