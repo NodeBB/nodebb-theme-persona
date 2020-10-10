@@ -4,9 +4,7 @@
 
 $(document).ready(function () {
 	setupNProgress();
-	setupTaskbar();
 	setupEditedByIcon();
-	setupMobileMenu();
 	setupQuickReply();
 	configureNavbarHiding();
 	fixHeaderPadding();
@@ -15,6 +13,11 @@ $(document).ready(function () {
 	$(window).on('resize', fixHeaderPadding);
 
 	$(window).on('action:app.loggedIn', function () {
+		setupMobileMenu();
+	});
+
+	$(window).on('action:app.load', function () {
+		setupTaskbar();
 		setupMobileMenu();
 	});
 
@@ -443,7 +446,7 @@ $(document).ready(function () {
 						if (quickreply) {
 							quickreply.init();
 						}
-					}); 
+					});
 				}
 
 				$('.topic-main-buttons [title]').tooltip();
