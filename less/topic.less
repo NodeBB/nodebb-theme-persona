@@ -150,6 +150,16 @@
 
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
+		display: inline-block;
+		padding: 1rem;
+
+		&:first-child {
+			padding-right: 0.5rem;
+		}
+
+		&:last-child {
+			padding-left: 0.5rem;
+		}
 
 		&:focus {
 				text-decoration: none;
@@ -158,6 +168,11 @@
 
 	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
 		color: @brand-primary;
+	}
+
+	[component="post/vote-count"] {
+		display: inline-block;
+		padding: 1rem 0.5rem;
 	}
 
 	[component="post/parent"] {
