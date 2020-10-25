@@ -412,29 +412,28 @@ $(document).ready(function () {
 	}
 
 	function setupFavouriteMorph(parent, uid, username) {
-		parent.find('.btn-morph').click(function (ev) {
-			var type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
+		require(['api'], function (api) {
+			parent.find('.btn-morph').click(function (ev) {
+				var type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
+				var method = $(this).hasClass('plus') ? 'put' : 'del';
 
-			socket.emit('user.' + type, { uid: uid }, function (err) {
-				if (err) {
-					return app.alertError(err.message);
+				api[method]('/users/' + uid + '/follow').then(() => {
+					app.alertSuccess('[[global:alert.' + type + ', ' + username + ']]');
+				});
+
+				$(this).toggleClass('plus').toggleClass('heart');
+				$(this).translateAttr('title', type === 'follow' ? '[[global:unfollow]]' : '[[global:follow]]');
+
+				if ($(this).find('b.drop').length === 0) {
+					$(this).prepend('<b class="drop"></b>');
 				}
 
-				app.alertSuccess('[[global:alert.' + type + ', ' + username + ']]');
+				var drop = $(this).find('b.drop').removeClass('animate'),
+					x = ev.pageX - drop.width() / 2 - $(this).offset().left,
+					y = ev.pageY - drop.height() / 2 - $(this).offset().top;
+
+				drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 			});
-
-			$(this).toggleClass('plus').toggleClass('heart');
-			$(this).translateAttr('title', type === 'follow' ? '[[global:unfollow]]' : '[[global:follow]]');
-
-			if ($(this).find('b.drop').length === 0) {
-				$(this).prepend('<b class="drop"></b>');
-			}
-
-			var drop = $(this).find('b.drop').removeClass('animate'),
-				x = ev.pageX - drop.width() / 2 - $(this).offset().left,
-				y = ev.pageY - drop.height() / 2 - $(this).offset().top;
-
-			drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 		});
 	}
 
