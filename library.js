@@ -26,15 +26,6 @@ library.addAdminNavigation = function(header, callback) {
 	callback(null, header);
 };
 
-library.getTeasers = function(data, callback) {
-	data.teasers.forEach(function(teaser) {
-		if (teaser && teaser.content) {
-			teaser.content = striptags(teaser.content, ['img']);
-		}
-	});
-	callback(null, data);
-};
-
 library.defineWidgetAreas = function(areas, callback) {
 	areas = areas.concat([
 		{
