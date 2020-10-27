@@ -39,7 +39,7 @@
 			<tbody>
 				<!-- IF !flags.length -->
 				<tr>
-					<td colspan="4">
+					<td colspan="5">
 						<div class="alert alert-success text-center">
 							[[flags:no-flags]]
 						</div>
