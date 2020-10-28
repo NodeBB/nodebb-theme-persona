@@ -1,6 +1,6 @@
 <div class="stats hidden-xs text-muted">
 	<i class="fa fa-fw fa-user" title="[[global:posters]]"></i>
-	<span title="{posterCount}" class="human-readable-number">{postercount}</span>
+	<span title="{postercount}" class="human-readable-number">{postercount}</span>
 </div>
 <div class="stats hidden-xs text-muted">
 	<i class="fa fa-fw fa-pencil" title="[[global:posts]]"></i>
