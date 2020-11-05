@@ -26,7 +26,7 @@
 	</ul>
 
 	<span class="teaser-content">{rooms.teaser.content}</span>
-	<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
+	<span class="teaser-timestamp pull-right">{rooms.teaser.timeago}</span>
 </li>
 {{{end}}}
 <!-- ELSE -->
