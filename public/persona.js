@@ -1,6 +1,6 @@
 "use strict";
 
-/*globals ajaxify, config, utils, app, socket*/
+/*globals ajaxify, config, utils, app, socket, window, document, $*/
 
 $(document).ready(function () {
 	setupNProgress();
@@ -367,6 +367,10 @@ $(document).ready(function () {
 		}
 
 		socket.emit('user.isFollowing', { uid: data.uid }, function (err, isFollowing) {
+			if (err) {
+				return err;
+			}
+
 			app.parseAndTranslate('modules/usercard', data, function (html) {
 				var card = $(html);
 				avatar.parents('a').after(card.hide());
