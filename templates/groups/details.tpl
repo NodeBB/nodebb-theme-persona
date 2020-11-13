@@ -160,6 +160,22 @@
 						<label for="name">[[groups:details.description]]</label>
 						<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
 					</div>
+
+					<hr />
+					<div class="form-group">
+						<label for="memberPostCids">[[groups:details.member-post-cids]]</label>
+						<select multiple="true" name="memberPostCids" id="memberPostCids" class="form-control" size="15">
+							{{{each group.categories}}}
+							<option value="{categories.cid}"{{{ if ../selected }}} selected{{{ end }}}>
+								{../level}{../name}
+							</option>
+							{{{end}}}
+						</select>
+						<p class="help-block">[[groups:details.member-post-cids-help]]</p>
+					</div>
+
+					<hr />
+
 					<div class="form-group user-title-option">
 						<label for="userTitle">[[groups:details.badge_text]]</label>
 						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
