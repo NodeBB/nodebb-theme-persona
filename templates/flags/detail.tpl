@@ -93,7 +93,7 @@
 					<div class="alert alert-success text-center">[[flags:no-notes]]</div>
 					<!-- ENDIF !notes.length -->
 					{{{each notes}}}
-					<div class="media" data-datetime="{../datetime}" data-index="@index">
+					<div class="media" data-datetime="{../datetime}" data-index="{@index}">
 						<div class="media-left">
 							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "md", false, "media-object")}</a>
 						</div>
@@ -175,7 +175,7 @@
 							<ul>
 								{{{each ./fields}}}
 								<li>
-									<span class="label label-primary">[[flags:@key]]</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
+									<span class="label label-primary">[[flags:{@key}]]</span><!-- IF @value --> &rarr; <span class="label label-default">{@value}</span><!-- ENDIF @value -->
 								</li>
 								{{{end}}}
 								{{{ each ./meta }}}

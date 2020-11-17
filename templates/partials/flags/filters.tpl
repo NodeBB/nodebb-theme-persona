@@ -65,7 +65,7 @@
 					<select class="form-control" id="filter-cid" name="cid" multiple="true">
 						<option value="">[[flags:filter-cid-all]]</option>
 						{{{each categories}}}
-						<option value="@key">@value</option>
+						<option value="{@key}">{@value}</option>
 						{{{end}}}
 					</select>
 				</div>

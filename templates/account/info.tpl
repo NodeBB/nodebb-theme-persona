@@ -38,7 +38,7 @@
 				<div class="panel-body">
 					<ul>
 						{{{each ips}}}
-						<li>@value</li>
+						<li>{@value}</li>
 						{{{end}}}
 					</ul>
 				</div>

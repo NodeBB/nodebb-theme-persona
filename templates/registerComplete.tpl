@@ -13,7 +13,7 @@
 			</p>
 			<ul>
 				{{{each errors}}}
-				<li>@value</li>
+				<li>{@value}</li>
 				{{{end}}}
 			</ul>
 		</div>
@@ -27,7 +27,7 @@
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					@value
+					{@value}
 				</div>
 			</div>
 		</div>
