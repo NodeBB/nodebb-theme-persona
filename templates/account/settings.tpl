@@ -78,7 +78,7 @@
 				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" data-property="updatePostIndexUrl" {{{ if settings.updatePostIndexUrl }}}checked{{{ end }}}/> <strong>[[user:update_post_index_url]]</strong>
+						<input type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/> <strong>[[user:update_url_with_post_index]]</strong>
 					</label>
 				</div>
 				<div class="checkbox">
