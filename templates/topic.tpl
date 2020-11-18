@@ -26,6 +26,7 @@
 					</div>
 					{{{ end }}}
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
+
 				</div>
 
 				<div class="tags tag-list inline-block">
@@ -34,7 +35,7 @@
 				<div class="inline-block">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
-
+				{{{ if rssFeedUrl }}}<a target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
 
 				<!-- IMPORT partials/post_bar.tpl -->
