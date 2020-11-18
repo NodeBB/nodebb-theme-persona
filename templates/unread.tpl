@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="unread">
-	<div class="btn-toolbar">
+	<div class="topic-list-header btn-toolbar">
 		<div class="pull-left">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
@@ -54,8 +54,6 @@
 			</ul>
 		</div>
 	</div>
-
-	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>

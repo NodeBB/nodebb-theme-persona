@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="top">
-	<div class="btn-toolbar">
+	<div class="topic-list-header btn-toolbar">
 		<div class="pull-left">
 			<!-- IF loggedIn -->
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
@@ -46,8 +46,6 @@
 			</ul>
 		</div>
 	</div>
-
-	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<!-- IF !topics.length -->
