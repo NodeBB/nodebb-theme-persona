@@ -14,7 +14,7 @@
             <a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(../user, "md", true, "user-img")}</a>
 
             <div class="post-author">
-                <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a><br />
+                <a href="{config.relative_path}/user/{../user.userslug}">{../user.displayname}</a><br />
                 <span class="timeago" title="{../timestampISO}"></span>
             </div>
         </div>

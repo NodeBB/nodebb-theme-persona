@@ -136,7 +136,7 @@
 	<!-- ENDIF ips.length -->
 
 	<div class="row">
-		<div class="col-lg-6 col-xs-12">
+		<div class="col-lg-12 col-xs-12">
 			<h1>[[pages:account/best, {username}]]</h1>
 
 			<div class="col-xs-12">
@@ -151,7 +151,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-lg-6 col-xs-12">
+		<div class="col-lg-12 col-xs-12">
 			<h1>[[pages:account/latest-posts, {username}]]</h1>
 
 			<div class="col-xs-12">
