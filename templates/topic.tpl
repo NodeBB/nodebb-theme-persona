@@ -29,13 +29,13 @@
 
 				</div>
 
-				<div class="tags tag-list inline-block">
+				<div class="tags tag-list inline-block hidden-xs">
 					<!-- IMPORT partials/topic/tags.tpl -->
 				</div>
-				<div class="inline-block">
+				<div class="inline-block hidden-xs">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
-				{{{ if rssFeedUrl }}}<a target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
+				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
 
 				<!-- IMPORT partials/post_bar.tpl -->
