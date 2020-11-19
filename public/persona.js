@@ -45,15 +45,23 @@ $(document).ready(function () {
 				showOnBottom: false,
 			});
 		}
-		navbarEl.on('show.autoHidingNavbar', function() {
+
+		function fixTopCss(topValue) {
 			if (ajaxify.data.template.topic) {
-				$('.topic .topic-header').css({top: '' });
+				$('.topic .topic-header').css({top: topValue });
+			} else {
+				var topicListHeader = $('.topic-list-header');
+				if (topicListHeader.length) {
+					topicListHeader.css({ top: topValue });
+				}
 			}
+		}
+
+		navbarEl.on('show.autoHidingNavbar', function() {
+			fixTopCss('');
 		});
 		navbarEl.on('hide.autoHidingNavbar', function() {
-			if (ajaxify.data.template.topic) {
-				$('.topic .topic-header').css('top', '0px');
-			}
+			fixTopCss('0px');
 		});
 	}
 
