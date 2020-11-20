@@ -10,7 +10,7 @@
 	],
 	"scripts": [
 		"public/persona.js",
-		"public/modules/autohidingnavbar.min.js",
+		"public/modules/autohidingnavbar.js",
 		"public/modules/quickreply.js"
 	],
 	"modules": {
