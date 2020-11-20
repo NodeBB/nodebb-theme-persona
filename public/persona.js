@@ -30,16 +30,21 @@ $(document).ready(function () {
 		}
 	}
 
+	var lastBSEnv = '';
 	function configureNavbarHiding() {
 		if (!$.fn.autoHidingNavbar) {
 			return;
 		}
-
+		var env = utils.findBootstrapEnvironment();
+		// if env didn't change don't destroy and recreate
+		if (env === lastBSEnv) {
+			return;
+		}
+		lastBSEnv = env;
 		var navbarEl = $(".navbar-fixed-top");
 		navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 		navbarEl.css('top', '');
 
-		var env = utils.findBootstrapEnvironment();
 		if (env === 'xs' || env === 'sm') {
 			navbarEl.autoHidingNavbar({
 				showOnBottom: false,
