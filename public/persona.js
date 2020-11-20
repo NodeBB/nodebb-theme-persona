@@ -36,7 +36,7 @@ $(document).ready(function () {
 		}
 
 		var navbarEl = $(".navbar-fixed-top");
-		navbarEl.autoHidingNavbar('destroy');
+		navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 		navbarEl.css('top', '');
 
 		var env = utils.findBootstrapEnvironment();
@@ -57,12 +57,15 @@ $(document).ready(function () {
 			}
 		}
 
-		navbarEl.on('show.autoHidingNavbar', function() {
-			fixTopCss('');
-		});
-		navbarEl.on('hide.autoHidingNavbar', function() {
-			fixTopCss('0px');
-		});
+		navbarEl.off('show.autoHidingNavbar')
+			.on('show.autoHidingNavbar', function() {
+				fixTopCss('');
+			});
+
+		navbarEl.off('hide.autoHidingNavbar')
+			.on('hide.autoHidingNavbar', function() {
+				fixTopCss('0px');
+			});
 	}
 
 	function setupNProgress() {
