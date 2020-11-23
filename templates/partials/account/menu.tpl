@@ -53,31 +53,31 @@
 		<!-- ENDIF !isSelf -->
 
 		<li role="separator" class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]] <span class="badge badge-default pull-right formatted-number" title="{counts.following}">{counts.following}</span></a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]] <span class="badge badge-default pull-right formatted-number" title="{counts.followers}">{counts.followers}</span></a></li>
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]] <span class="badge badge-default pull-right formatted-number" title="{counts.blocks}">{counts.blocks}</span></a></li>
 		<!-- ENDIF showHidden -->
 		<li role="separator" class="divider"></li>
-		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]] <span class="badge badge-default pull-right formatted-number" title="{counts.topics}">{counts.topics}</span></a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]] <span class="badge badge-default pull-right formatted-number" title="{counts.posts}">{counts.posts}</span></a></li>
 		<!-- IF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]] <span class="badge badge-default pull-right formatted-number" title="{counts.best}">{counts.best}</span></a></li>
 		<!-- ENDIF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]] <span class="badge badge-default pull-right formatted-number" title="{counts.groups}">{counts.groups}</span></a></li>
 
 		<!-- IF showHidden -->
-		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
-		<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]] <span class="badge badge-default pull-right formatted-number" title="{counts.categoriesWatched}">{counts.categoriesWatched}</span></a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]] <span class="badge badge-default pull-right formatted-number" title="{counts.bookmarks}">{counts.bookmarks}</span></a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]] <span class="badge badge-default pull-right formatted-number" title="{counts.watched}">{counts.watched}</span></a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]] <span class="badge badge-default pull-right formatted-number" title="{counts.ignored}">{counts.ignored}</span></a></li>
 		<!-- IF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]] <span class="badge badge-default pull-right formatted-number" title="{counts.upvoted}">{counts.upvoted}</span></a></li>
 		<!-- IF !downvote:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]] <span class="badge badge-default pull-right formatted-number" title="{counts.downvoted}">{counts.downvoted}</span></a></li>
 		<!-- ENDIF !downvote:disabled -->
 		<!-- ENDIF !reputation:disabled -->
-		<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]] <span class="badge badge-default pull-right formatted-number" title="{counts.uploaded}">{counts.uploaded}</span></a></li>
 		<!-- ENDIF showHidden -->
 
 		{{{each profile_links}}}
