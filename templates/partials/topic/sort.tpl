@@ -1,4 +1,4 @@
-<div title="[[topic:sort_by]]" class="btn-group bottom-sheet" component="thread/sort">
+<div title="[[topic:sort_by]]" class="btn-group bottom-sheet hidden-xs" component="thread/sort">
 	<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 	<span><i class="fa fa-fw fa-sort"></i></span></button>
 	<ul class="dropdown-menu dropdown-menu-right">

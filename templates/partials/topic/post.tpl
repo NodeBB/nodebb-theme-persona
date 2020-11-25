@@ -58,6 +58,23 @@
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
 
+	{{{ if !hideReplies }}}
+	<a component="post/reply-count" href="#" class="threaded-replies no-select pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
+		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
+			{{{each posts.replies.users}}}
+			{buildAvatar(posts.replies.users, "xs", true, "")}
+			{{{end}}}
+		</span>
+
+		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
+		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
+
+		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
+		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
+		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
+	</a>
+	{{{ end }}}
+
 	<small class="pull-right">
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
@@ -82,21 +99,4 @@
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
-
-	<!-- IF !hideReplies -->
-	<a component="post/reply-count" href="#" class="threaded-replies no-select <!-- IF !posts.replies.count -->hidden<!-- ENDIF !posts.replies.count -->">
-		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
-			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "xs", true, "")}
-			{{{end}}}
-		</span>
-
-		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
-		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
-
-		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
-		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
-		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
-	</a>
-	<!-- ENDIF !hideReplies -->
 </div>
