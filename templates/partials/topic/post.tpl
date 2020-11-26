@@ -53,13 +53,14 @@
 	{posts.content}
 </div>
 
-<div class="clearfix post-footer">
-	<!-- IF posts.user.signature -->
+<div class="post-footer">
+	{{{ if posts.user.signature }}}
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
-	<!-- ENDIF posts.user.signature -->
+	{{{ end }}}
 
+	<div class="clearfix">
 	{{{ if !hideReplies }}}
-	<a component="post/reply-count" href="#" class="threaded-replies no-select pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
+	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies no-select pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
 			{buildAvatar(posts.replies.users, "xs", true, "")}
@@ -99,4 +100,6 @@
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
+	</div>
+	<div component="post/replies/container"></div>
 </div>
