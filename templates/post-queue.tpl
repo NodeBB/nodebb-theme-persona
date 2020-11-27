@@ -21,8 +21,8 @@
 					<thead>
 						<tr>
 							<th>[[post-queue:user]]</th>
-							<th>[[post-queue:category]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
-							<th>[[post-queue:title]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
+							<th>[[post-queue:category]]</th>
+							<th>[[post-queue:title]]</th>
 							<th>[[post-queue:content]] <i class="fa fa-info-circle" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></th>
 							<th>[[post-queue:posted]]</th>
 							<th></th>
@@ -39,21 +39,23 @@
 								<!-- ENDIF posts.user.userslug -->
 							</td>
 							<td class="col-md-2 topic-category" {{{if posts.data.cid}}}data-editable="editable"{{{end}}}">
-								<a href="{config.relative_path}/category/{posts.category.slug}"><!-- IF posts.category.icon --><span class="fa-stack"><i style="color: {posts.category.bgColor};" class="fa fa-circle fa-stack-2x"></i><i style="color: {posts.category.color};" class="fa fa-stack-1x fa-fw {posts.category.icon}"></i></span><!-- ENDIF posts.category.icon --> {posts.category.name}</a>
+								<i class="pointer fa fa-fw {{{ if posts.data.cid}}}fa-edit{{{ end }}}" data-toggle="tooltip" title="[[post-queue:category-editable]]"></i>
+								<a href="{config.relative_path}/category/{posts.category.slug}"><span class="category-text">{posts.category.name}</span></a>
 							</td>
-							<td class="col-md-2 topic-title">
+							<td class="col-md-3 topic-title">
+								<i class="pointer fa fa-fw {{{ if !posts.data.tid}}}fa-edit{{{ end }}}" data-toggle="tooltip" title="[[post-queue:title-editable]]"></i>
 								<!-- IF posts.data.tid -->
 								<a href="{config.relative_path}/topic/{posts.data.tid}">[[post-queue:reply-to, {posts.topic.title}]]</a>
 								<!-- ENDIF posts.data.tid -->
-								{posts.data.title}
+								<span class="title-text">{posts.data.title}</span>
 							</td>
 							{{{if !posts.data.tid}}}
-							<td class="col-md-2 topic-title-editable hidden">
+							<td class="col-md-3 topic-title-editable hidden">
 								<input class="form-control" type="text" value="{posts.data.title}"/>
 							</td>
 							{{{end}}}
-							<td class="col-md-5 post-content">{posts.data.content}</td>
-							<td class="col-md-5 post-content-editable hidden">
+							<td class="col-md-4 post-content">{posts.data.content}</td>
+							<td class="col-md-4 post-content-editable hidden">
 								<textarea class="form-control">{posts.data.rawContent}</textarea>
 							</td>
 							<td class="col-md-1">
