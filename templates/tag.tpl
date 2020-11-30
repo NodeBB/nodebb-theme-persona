@@ -1,5 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-
+<div data-widget-area="header">
+	{{{each widgets.header}}}
+	{{widgets.header.html}}
+	{{{end}}}
+</div>
 <div class="tag">
 	<div class="topic-list-header btn-toolbar">
 		<div class="pull-left">
