@@ -243,6 +243,14 @@
 							</p>
 						</label>
 					</div>
+					<div class="checkbox">
+						<label>
+							<input name="autojoin" type="checkbox"<!-- IF group.autojoin --> checked<!-- ENDIF group.autojoin -->> <strong>[[groups:details.autojoin]]</strong>
+							<p class="help-block">
+								[[groups:details.autojoin_help]]
+							</p>
+						</label>
+					</div>
 
 					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
