@@ -11,11 +11,13 @@
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
                 <div class="row">
-                    <div class="col-xs-9 post-content"></div>
-                    <div class="col-xs-3">
+                    <div class="col-xs-8 post-content"></div>
+                    <div class="col-xs-4">
                         <span class="pointer pagetop"><i class="fa fa-angle-double-up"></i> [[topic:first-post]]</span>
-                        <div class="scroller-bg">
+                        <div class="scroller-container">
+                            <div class="scroller-line"></div>
                             <div class="scroller-thumb">
+                                <div class="scroller-thumb-icon"></div>
                                 <span class="thumb-text"></span>
                             </div>
                         </div>

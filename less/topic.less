@@ -531,11 +531,11 @@
 		.wrapper {
 			padding: 5px 0px 5px 0px;
 			.dropdown-toggle {
-				padding-left:20px;
+				padding-left: 20px;
 				padding-right: 20px;
 			}
 			.dropdown-menu {
-				width: 400px;
+				width: 475px;
 
 				li {
 					padding: 10px;
@@ -544,25 +544,33 @@
 					height: 350px;
 					overflow: hidden;
 				}
-				.scroller-bg {
-					width: 3px;
+				.scroller-container {
 					height: 300px;
-					margin-left: 3px;
-					background-color: @gray-lighter;
+					.scroller-line {
+						width: 3px;
+						height: 300px;
+						margin-left: 3px;
+						background-color: @gray-lighter;
+					}
+
 					.scroller-thumb {
-						width: 9px;
 						height: 30px;
-						background-color: @brand-primary;
-						position: relative;
-						left: -3px;
 						cursor: pointer;
-						border-radius: 3px;
+
+						.scroller-thumb-icon {
+							width: 9px;
+							height: 30px;
+							background-color: @brand-primary;
+							position: relative;
+							display: inline-block;
+							border-radius: 3px;
+						}
 						.thumb-text {
 							font-weight: bolder;
-							margin-left: 20px;
 							user-select: none;
 							position: relative;
-							top: 5px;
+							top: -10px;
+							padding-left: 5px;
 						}
 					}
 				}
