@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-persona",
-  "version": "10.3.2",
+  "version": "10.3.3",
   "nbbpm": {
     "compatibility": "^1.16.0"
   },
