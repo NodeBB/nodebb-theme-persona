@@ -511,26 +511,18 @@
 		}
 	}
 
-	.navigator-thumb {
-		position: fixed;
-		background-color: @gray-lighter;
-		bottom: 60px;
-		left: 0px;
-		padding: 10px;
-		border-radius: 5px;
-		white-space: nowrap;
-		z-index: 100;
-	}
-
 	.pagination-block {
 		position: fixed;
-		width: 100%;
 		background-color: @gray-lighter;
 		bottom: 0px;
-		left: 0px;
+		right: 0px;
 		z-index: 100;
 		transition: opacity 250ms ease-in;
 		opacity: 0;
+
+		.pagination-text {
+			color: @text-color;
+		}
 
 		&.ready {
 			opacity: 1;
@@ -538,6 +530,45 @@
 
 		.wrapper {
 			padding: 5px 0px 5px 0px;
+			.dropdown-toggle {
+				padding-left:20px;
+				padding-right: 20px;
+			}
+			.dropdown-menu {
+				width: 400px;
+
+				li {
+					padding: 10px;
+				}
+				.post-content {
+					height: 350px;
+					overflow: hidden;
+				}
+				.scroller-bg {
+					width: 3px;
+					height: 300px;
+					margin-left: 3px;
+					background-color: @gray-lighter;
+					.scroller-thumb {
+						width: 9px;
+						height: 20px;
+						background-color: @brand-primary;
+						position: relative;
+						left: -3px;
+						cursor: pointer;
+						border-radius: 3px;
+						.thumb-text {
+							font-weight: bolder;
+							margin-left: 20px;
+						}
+					}
+				}
+			}
+			@media (max-width: @screen-sm-min) {
+				.dropdown-menu {
+					width: 100%;
+				}
+			}
 		}
 		.progress-bar {
 			background-color: @brand-info;
@@ -545,6 +576,11 @@
 			z-index: -1;
 			position: absolute;
 			transition: width 50ms ease-in;
+		}
+	}
+	@media (max-width: @screen-sm-min) {
+		.pagination-block {
+			width: 100%;
 		}
 	}
 }

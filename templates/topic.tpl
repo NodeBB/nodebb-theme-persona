@@ -78,20 +78,7 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 
-		<div class="navigator-thumb text-center hidden">
-			<strong class="text"></strong><br/>
-			<span class="time"></span>
-		</div>
-		<div class="visible-xs visible-sm pagination-block text-center">
-			<div class="progress-bar"></div>
-			<div class="wrapper">
-				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
-				<i class="fa fa-2x fa-angle-up pointer fa-fw pageup"></i>
-				<span class="pagination-text"></span>
-				<i class="fa fa-2x fa-angle-down pointer fa-fw pagedown"></i>
-				<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
-			</div>
-		</div>
+		<!-- IMPORT partials/topic/navigator.tpl -->
 	</div>
 	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		{{{each widgets.sidebar}}}
