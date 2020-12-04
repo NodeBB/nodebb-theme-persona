@@ -82,14 +82,30 @@
 			<strong class="text"></strong><br/>
 			<span class="time"></span>
 		</div>
-		<div class="visible-xs visible-sm pagination-block text-center">
+
+		<div class="pagination-block text-center">
 			<div class="progress-bar"></div>
-			<div class="wrapper">
+			<div class="wrapper dropup">
 				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
-				<i class="fa fa-2x fa-angle-up pointer fa-fw pageup"></i>
-				<span class="pagination-text"></span>
-				<i class="fa fa-2x fa-angle-down pointer fa-fw pagedown"></i>
+
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<span class="pagination-text"></span>
+				</a>
+
 				<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu">
+					<li>
+						<div class="row">
+							<div class="col-xs-10 post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero et ex feugiat eleifend. Sed tincidunt sem ut nunc luctus suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eros ligula, elementum vel fermentum at, placerat a nibh. Cras sit amet consectetur ex, ac convallis mauris. Nulla ut ipsum vel nisl suscipit ultricies ac eu ligula. Suspendisse nibh justo, semper vel arcu malesuada, mattis accumsan dolor. Ut ut euismod lectus, et molestie libero. Sed vel feugiat enim.
+
+	Suspendisse sit amet massa aliquam, molestie elit sit amet, maximus justo. Morbi in lectus tortor. Nam pulvinar risus ac posuere porttitor. Quisque purus eros, bibendum a magna suscipit, blandit fringilla enim. Vestibulum viverra ac felis vitae mattis. Cras fringilla condimentum vulputate. Suspendisse ac scelerisque neque, quis dapibus purus. Cras gravida enim eu nisi congue molestie. Donec placerat facilisis nulla, vitae congue ipsum imperdiet elementum. Nunc diam elit, tristique in dictum eget, accumsan at libero. Donec sed pellentesque magna. Donec eget venenatis mi. Cras feugiat lacus id odio fringilla, sed ornare enim posuere. Nam dui sem, pulvinar id lacinia in, dictum id purus. Aliquam eget velit lectus.</div>
+							<div class="col-xs-2"><div class="scroller-bg"><div class="scroller-thumb"></div></div></div>
+						</div>
+					</li>
+					<li>
+						<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

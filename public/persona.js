@@ -8,6 +8,7 @@ $(document).ready(function () {
 	setupQuickReply();
 	configureNavbarHiding();
 	fixHeaderPadding();
+	setupNavigator();
 
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', fixHeaderPadding);
@@ -469,6 +470,20 @@ $(document).ready(function () {
 				}
 
 				$('.topic-main-buttons [title]').tooltip();
+			}
+		});
+	}
+
+	function setupNavigator() {
+		$(window).on('action:ajaxify.end', function (ev, data) {
+			if (ajaxify.data.template.topic) {
+				// draggable
+				app.loadJQueryUI(function() {
+					$('.scroller-thumb').draggable({
+						axis: 'y',
+						containment: 'parent',
+					})
+				});
 			}
 		});
 	}

@@ -198,7 +198,7 @@
 						</a>
 					</li>
 				</ul>
-
+				<!--
 				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
 					<li class="dropdown">
 						<a><i class="fa fa-angle-double-up pointer fa-fw pagetop"></i></a>
@@ -222,7 +222,7 @@
 						</ul>
 					</li>
 				</ul>
-
+-->
 				<ul id="main-nav" class="nav navbar-nav">
 					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
