@@ -511,17 +511,6 @@
 		}
 	}
 
-	.navigator-thumb {
-		position: fixed;
-		background-color: @gray-lighter;
-		bottom: 60px;
-		left: 0px;
-		padding: 10px;
-		border-radius: 5px;
-		white-space: nowrap;
-		z-index: 100;
-	}
-
 	.pagination-block {
 		position: fixed;
 		background-color: @gray-lighter;
@@ -530,6 +519,10 @@
 		z-index: 100;
 		transition: opacity 250ms ease-in;
 		opacity: 0;
+
+		.pagination-text {
+			color: @text-color;
+		}
 
 		&.ready {
 			opacity: 1;
@@ -548,7 +541,7 @@
 					padding: 10px;
 				}
 				.post-content {
-					height: 400px;
+					height: 350px;
 					overflow: hidden;
 				}
 				.scroller-bg {

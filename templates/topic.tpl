@@ -93,13 +93,13 @@
 						<div class="row">
 							<div class="col-xs-9 post-content"></div>
 							<div class="col-xs-3">
-								<span class="pointer pagetop"><i class="fa fa-angle-double-up"></i> First Post</span>
+								<span class="pointer pagetop"><i class="fa fa-angle-double-up"></i> [[topic:first-post]]</span>
 								<div class="scroller-bg">
 									<div class="scroller-thumb">
 										<span class="thumb-text"></span>
 									</div>
 								</div>
-								<span class="pointer pagebottom"><i class="fa fa-angle-double-down"></i> Last Post</span>
+								<span class="pointer pagebottom"><i class="fa fa-angle-double-down"></i> [[topic:last-post]]</span>
 							</div>
 						</div>
 					</li>
