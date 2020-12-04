@@ -96,10 +96,18 @@
 				<ul class="dropdown-menu dropdown-menu-right" role="menu">
 					<li>
 						<div class="row">
-							<div class="col-xs-10 post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero et ex feugiat eleifend. Sed tincidunt sem ut nunc luctus suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eros ligula, elementum vel fermentum at, placerat a nibh. Cras sit amet consectetur ex, ac convallis mauris. Nulla ut ipsum vel nisl suscipit ultricies ac eu ligula. Suspendisse nibh justo, semper vel arcu malesuada, mattis accumsan dolor. Ut ut euismod lectus, et molestie libero. Sed vel feugiat enim.
+							<div class="col-xs-9 post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero et ex feugiat eleifend. Sed tincidunt sem ut nunc luctus suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eros ligula, elementum vel fermentum at, placerat a nibh. Cras sit amet consectetur ex, ac convallis mauris. Nulla ut ipsum vel nisl suscipit ultricies ac eu ligula. Suspendisse nibh justo, semper vel arcu malesuada, mattis accumsan dolor. Ut ut euismod lectus, et molestie libero. Sed vel feugiat enim.
 
 	Suspendisse sit amet massa aliquam, molestie elit sit amet, maximus justo. Morbi in lectus tortor. Nam pulvinar risus ac posuere porttitor. Quisque purus eros, bibendum a magna suscipit, blandit fringilla enim. Vestibulum viverra ac felis vitae mattis. Cras fringilla condimentum vulputate. Suspendisse ac scelerisque neque, quis dapibus purus. Cras gravida enim eu nisi congue molestie. Donec placerat facilisis nulla, vitae congue ipsum imperdiet elementum. Nunc diam elit, tristique in dictum eget, accumsan at libero. Donec sed pellentesque magna. Donec eget venenatis mi. Cras feugiat lacus id odio fringilla, sed ornare enim posuere. Nam dui sem, pulvinar id lacinia in, dictum id purus. Aliquam eget velit lectus.</div>
-							<div class="col-xs-2"><div class="scroller-bg"><div class="scroller-thumb"></div></div></div>
+							<div class="col-xs-3">
+								<span class="pointer pagetop"><i class="fa fa-angle-double-up"></i> First Post</span>
+								<div class="scroller-bg">
+									<div class="scroller-thumb">
+										<span class="thumb-text"></span>
+									</div>
+								</div>
+								<span class="pointer pagebottom"><i class="fa fa-angle-double-down"></i> Last Post</span>
+							</div>
 						</div>
 					</li>
 					<li>

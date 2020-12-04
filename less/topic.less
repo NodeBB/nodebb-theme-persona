@@ -554,17 +554,26 @@
 				.scroller-bg {
 					width: 3px;
 					height: 300px;
+					margin-left: 3px;
 					background-color: @gray-lighter;
 					.scroller-thumb {
 						width: 9px;
 						height: 20px;
 						background-color: @brand-primary;
 						position: relative;
-						top: 20px;
 						left: -3px;
 						cursor: pointer;
 						border-radius: 3px;
+						.thumb-text {
+							font-weight: bolder;
+							margin-left: 20px;
+						}
 					}
+				}
+			}
+			@media (max-width: @screen-sm-min) {
+				.dropdown-menu {
+					width: initial;
 				}
 			}
 		}
