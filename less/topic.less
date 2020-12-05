@@ -522,6 +522,9 @@
 
 		.pagination-text {
 			color: @text-color;
+			position: relative;
+    		top: -3px;
+    		font-weight: bolder;
 		}
 
 		&.ready {
@@ -540,7 +543,7 @@
 				width: 475px;
 
 				li {
-					padding: 10px;
+					padding: 15px;
 				}
 				.post-content {
 					height: 350px;
@@ -548,15 +551,13 @@
 				}
 				.scroller-container {
 					height: 300px;
-					.scroller-line {
-						width: 3px;
-						height: 300px;
-						margin-left: 3px;
-						background-color: @gray-lighter;
-					}
+					border-right: 3px solid @gray-lighter;
+					margin-right: 3px;
 
 					.scroller-thumb {
 						height: 30px;
+						position: relative;
+						right: -6px;
 						cursor: pointer;
 
 						.scroller-thumb-icon {
@@ -572,7 +573,7 @@
 							user-select: none;
 							position: relative;
 							top: -10px;
-							padding-left: 5px;
+							padding-right: 10px;
 						}
 					}
 				}
