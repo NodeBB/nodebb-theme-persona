@@ -14,3 +14,21 @@
     border-top: 1px solid @post-border-color;
     border-bottom: 1px solid @post-border-color;
 }
+
+.topic-stats-container {
+    padding-top: 5px;
+    .topic-stat {
+        //min-width: 50px;
+        padding: 5px;
+        border-radius: 6px;
+        border: 1px solid @gray-lighter;
+        display: inline-block;
+        text-align: right;
+        cursor: pointer;
+        background: lighten(@gray-lighter, 2.5%);
+        .human-readable-number {
+            // min-width: 28px;
+            display: inline-block;
+        }
+    }
+}

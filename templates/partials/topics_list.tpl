@@ -5,7 +5,7 @@
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="col-md-6 col-sm-9 col-xs-10 content">
+		<div class="col-md-9 col-sm-9 col-xs-12 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -64,29 +64,14 @@
 					<span class="timeago" title="{topics.timestampISO}"></span>
 					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
+				<small class="topic-stats-container pull-right">
+					<span class="topic-stat"><i class="fa fa-chevron-up"></i> <span class="human-readable-number" title="{topics.votes}">{topics.votes}</span> <i class="fa fa-chevron-down"></i></span>
+					<span class="topic-stat"><i class="fa fa-pencil"></i> <span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span></span>
+					<span class="topic-stat"><i class="fa fa-eye"></i> <span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span></span>
+				</small>
 			</h2>
 		</div>
 
-		<div class="mobile-stat col-xs-2 visible-xs text-right">
-			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
-			<!-- IF !reputation:disabled -->
-			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
-			<small>[[global:votes]]</small>
-			<!-- END -->
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
-			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
-			<small>[[global:posts]]</small>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
-			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
-			<small>[[global:views]]</small>
-		</div>
 
 		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
 			<div class="card" style="border-color: {topics.category.bgColor}">
