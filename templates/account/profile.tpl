@@ -136,14 +136,11 @@
 	<!-- ENDIF ips.length -->
 
 	<div class="row">
+		{{{ if bestsPosts.length }}}
 		<div class="col-lg-12 col-xs-12">
 			<h1>[[pages:account/best, {username}]]</h1>
 
 			<div class="col-xs-12">
-				<!-- IF !bestPosts.length -->
-				<div class="alert alert-warning">[[user:has_no_posts]]</div>
-				<!-- ENDIF !bestPosts.length -->
-
 				<ul component="posts" class="posts-list">
 				{{{each bestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
@@ -151,13 +148,11 @@
 				</ul>
 			</div>
 		</div>
+		{{{ end }}}
+		{{{ if latestPosts.length}}}
 		<div class="col-lg-12 col-xs-12">
 			<h1>[[pages:account/latest-posts, {username}]]</h1>
-
 			<div class="col-xs-12">
-				<!-- IF !latestPosts.length -->
-				<div class="alert alert-warning">[[user:has_no_posts]]</div>
-				<!-- ENDIF !latestPosts.length -->
 				<ul component="posts" class="posts-list">
 				{{{each latestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
@@ -165,6 +160,7 @@
 				</ul>
 			</div>
 		</div>
+		{{{ end }}}
 	</div>
 
 	<div id="user-action-alert" class="alert alert-success hide"></div>
