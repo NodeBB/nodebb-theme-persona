@@ -136,7 +136,7 @@
 	<!-- ENDIF ips.length -->
 
 	<div class="row">
-		{{{ if bestsPosts.length }}}
+		{{{ if bestPosts.length }}}
 		<div class="col-lg-12 col-xs-12">
 			<h1>[[pages:account/best, {username}]]</h1>
 
