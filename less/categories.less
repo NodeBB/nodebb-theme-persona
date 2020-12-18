@@ -114,12 +114,14 @@
 				margin-right: 5px;
 			}
 		}
+
+		[component="topic/header"] > i[component="topic/pinned"] {
+			color: @brand-danger;
+		}
 	}
 
 	&.ui-sortable > li .content h2 {
 		> [component="topic/pinned"] {
-			color: rgb(200, 0, 0);
-
 			&:after {
 				position: absolute;
 				top: 0.5rem;
