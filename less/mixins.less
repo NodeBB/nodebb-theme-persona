@@ -49,17 +49,19 @@
 }
 
 .timeline {
-	.posts [component="post"], .necro-post {
-		border-left: 2px solid lighten(@brand-primary, 30%);
+	@media (min-width: @screen-md-min) {
+		.posts [component="post"], .necro-post {
+			border-left: 2px solid lighten(@brand-primary, 30%);
 
-		margin-left: 2.5rem;
+			margin-left: 2.5rem;
 
-		&:not(:last-child) {
-			padding-bottom: @post-padding;
-		}
+			&:not(:last-child) {
+				padding-bottom: @post-padding;
+			}
 
-		> div {
-			margin-left: -2.5rem;
+			> div {
+				margin-left: -2.5rem;
+			}
 		}
 	}
 }
