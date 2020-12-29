@@ -277,13 +277,7 @@
 		min-height: 60px;
 	}
 
-	[component="post/metadata"] {
-		.fadeInStart;
-	}
-
 	.post-tools {
-		.fadeInStart;
-
 		a {
 			padding: 1rem 10px;
 			.pointer;
@@ -291,8 +285,6 @@
 	}
 
 	.moderator-tools {
-		.fadeInStart;
-
 		margin-left: 10px;
 		font-size: 14px;
 
@@ -442,9 +434,16 @@
 
 			.transition(0.75s ease-in-out border-color);
 
-			&:hover {
-				.moderator-tools, .post-tools, [component="post/metadata"] {
-					opacity: 1;
+			@media (min-width: @screen-md-min) {
+				[component="post/metadata"], .post-tools, .moderator-tools {
+					.transition(250ms ease-in-out opacity);
+					opacity: 0;
+				}
+
+				&:hover {
+					.moderator-tools, .post-tools, [component="post/metadata"] {
+						opacity: 1;
+					}
 				}
 			}
 
