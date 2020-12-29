@@ -1,6 +1,8 @@
 .topic .necro-post {
 	text-align: center;
 	color: rgba(127,127,127,.5);
+	margin-bottom: 0;
+	font-size: 1.5em;
 
 	&:not(:last-child) {
 		padding-bottom: calc(@post-padding * 2);
@@ -11,12 +13,14 @@
 	}
 
 	span {
-		font-size: 1.5em;
 		text-transform: uppercase;
 	}
+}
 
-	@media (min-width: @screen-md-min) {
+@media (min-width: @screen-md-min) {
+	.topic .necro-post {
 		text-align: left;
+		font-size: 1em;
 
 		.timeline-badge {
 			float: left;
@@ -34,7 +38,6 @@
 		}
 
 		span {
-			font-size: 1em;
 			line-height: 32px;
 		}
 	}
