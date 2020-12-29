@@ -47,3 +47,19 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+.timeline {
+	.posts [component="post"], .necro-post {
+		border-left: 2px solid lighten(@brand-primary, 30%);
+
+		margin-left: 2.5rem;
+
+		&:not(:last-child) {
+			padding-bottom: @post-padding;
+		}
+
+		> div {
+			margin-left: -2.5rem;
+		}
+	}
+}

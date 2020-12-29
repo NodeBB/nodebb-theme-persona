@@ -411,6 +411,8 @@
 
 
 .topic {
+	.timeline;
+
 	&.deleted {
 		.opacity(0.3);
 
@@ -422,16 +424,9 @@
 	.posts {
 		list-style-type: none;
 		padding: 0;
-		[component="post"][data-index="0"] {
-			border-bottom: 5px solid @post-border-color;
-		}
+
 		[component="post"] {
 			position: relative;
-			border-bottom: 1px solid @post-border-color;
-
-			padding-bottom: @post-padding;
-			margin-bottom: @post-padding;
-
 			.transition(0.75s ease-in-out border-color);
 
 			.edit-icon {
