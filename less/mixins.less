@@ -62,6 +62,13 @@
 			> div {
 				margin-left: -2.5rem;
 			}
+
+			.avatar, .timeline-badge {
+				// Opaque ring
+				position: relative;
+				z-index: 1;
+				box-shadow: 0 0 0 .5rem @body-bg;
+			}
 		}
 	}
 }

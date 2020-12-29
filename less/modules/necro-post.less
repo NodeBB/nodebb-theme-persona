@@ -1,7 +1,10 @@
 .topic .necro-post {
 	text-align: center;
 	color: rgba(127,127,127,.5);
-	padding-bottom: @post-padding;
+
+	&:not(:last-child) {
+		padding-bottom: calc(@post-padding * 2);
+	}
 
 	.timeline-badge {
 		display: none;
