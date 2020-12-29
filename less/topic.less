@@ -277,7 +277,13 @@
 		min-height: 60px;
 	}
 
+	[component="post/metadata"] {
+		.fadeInStart;
+	}
+
 	.post-tools {
+		.fadeInStart;
+
 		a {
 			padding-right: 10px;
 			.pointer;
@@ -285,6 +291,8 @@
 	}
 
 	.moderator-tools {
+		.fadeInStart;
+
 		margin-left: 10px;
 		font-size: 14px;
 
@@ -433,6 +441,12 @@
 			margin-bottom: @post-padding;
 
 			.transition(0.75s ease-in-out border-color);
+
+			&:hover {
+				.moderator-tools, .post-tools, [component="post/metadata"] {
+					opacity: 1;
+				}
+			}
 
 			.edit-icon {
 				vertical-align: -2%;
