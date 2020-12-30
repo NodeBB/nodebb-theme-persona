@@ -438,6 +438,10 @@
 				[component="post/metadata"], .post-tools, .moderator-tools {
 					.transition(250ms ease-in-out opacity);
 					opacity: 0;
+
+					&:focus-within {
+						opacity: 1;
+					}
 				}
 
 				&:hover {
