@@ -426,6 +426,12 @@
 		list-style-type: none;
 		padding: 0;
 
+		@media (max-width: @screen-sm-max) {
+			[component="post"] {
+				margin-bottom: @post-padding;
+			}
+		}
+
 		[component="post"] {
 			position: relative;
 			.transition(0.75s ease-in-out border-color);
