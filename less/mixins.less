@@ -50,7 +50,7 @@
 
 .timeline {
 	@media (min-width: @screen-md-min) {
-		.posts > [component="post"], .necro-post {
+		.posts > [component="post"], .timeline-event {
 			border-left: 2px solid lighten(@brand-primary, 30%);
 
 			margin-left: 2.5rem;
@@ -68,6 +68,30 @@
 				position: relative;
 				z-index: 1;
 				box-shadow: 0 0 0 .5rem @body-bg;
+			}
+		}
+
+		.posts .timeline-event {
+			text-align: left;
+			font-size: 1em;
+
+			.timeline-badge {
+				float: left;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				margin-left: -17px;
+				margin-right: 17px;
+				color: lighten(@brand-primary, 30%);
+				background-color: @body-bg;
+				border: 2px solid lighten(@brand-primary, 30%);
+				border-radius: 50%;
+			}
+
+			.timeline-text {
+				line-height: 32px;
 			}
 		}
 	}
