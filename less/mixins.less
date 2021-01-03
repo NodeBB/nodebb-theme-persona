@@ -74,6 +74,15 @@
 			}
 		}
 
+		.posts [component="post"]:last-child:after {
+			content: '';
+			width: 1rem;
+			position: absolute;
+			bottom: 0;
+			left: calc(-0.5rem - 1px);
+			border-bottom: 2px solid lighten(@brand-primary, 30%);
+		}
+
 		.posts .timeline-event {
 			display: flex;
 			align-items: center;
