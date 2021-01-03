@@ -58,6 +58,9 @@
 			&:not(:last-child) {
 				padding-bottom: @post-padding;
 			}
+			&:not(:first-child) {
+				padding-top: @post-padding;
+			}
 
 			> div {
 				margin-left: -2.5rem;
@@ -72,6 +75,8 @@
 		}
 
 		.posts .timeline-event {
+			display: flex;
+			align-items: center;
 			text-align: left;
 			font-size: 1em;
 
@@ -92,6 +97,12 @@
 
 			.timeline-text {
 				line-height: 32px;
+				text-transform: initial;
+				color: rgba(127,127,127,.5);
+
+				&:not(:last-child) {
+					margin-right: .5rem;
+				}
 			}
 		}
 	}
