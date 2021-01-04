@@ -434,23 +434,6 @@
 
 			.transition(0.75s ease-in-out border-color);
 
-			@media (min-width: @screen-md-min) {
-				[component="post/metadata"], .post-tools, .moderator-tools {
-					.transition(250ms ease-in-out opacity);
-					opacity: 0;
-
-					&:focus-within {
-						opacity: 1;
-					}
-				}
-
-				&:hover {
-					.moderator-tools, .post-tools, [component="post/metadata"] {
-						opacity: 1;
-					}
-				}
-			}
-
 			.edit-icon {
 				vertical-align: -2%;
 			}
