@@ -2,8 +2,9 @@
 
 var meta = require.main.require('./src/meta');
 var user = require.main.require('./src/user');
+var Posts = require.main.require('./src/posts');
 
-var library = {};
+var library = module.exports;
 
 library.init = function(params, callback) {
 	var app = params.router;
@@ -132,4 +133,16 @@ library.addUserToTopic = function(data, callback) {
 	}
 };
 
-module.exports = library;
+library.getTopics = async (data) => {
+	const pids = data.topics.map(x => x.mainPid);
+	const [{ upvotes, downvotes }, bookmarked] = await Promise.all([
+		Posts.getVoteStatusByPostIDs(pids, data.uid),
+		Posts.hasBookmarked(pids, data.uid),
+	]);
+	data.topics.forEach((topic, i) => {
+		topic.upvoted = upvotes[i];
+		topic.downvoted = downvotes[i];
+		topic.bookmarked = bookmarked[i];
+	});
+	return data;
+};

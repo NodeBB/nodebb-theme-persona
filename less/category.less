@@ -3,6 +3,35 @@
 	.topic-list {
 		margin-top: 10px;
 		overflow: visible;
+
+		.votes {
+			[component="post/upvote"], [component="post/downvote"] {
+				color: @gray-light;
+				display: block;
+				padding: 0;
+				margin: -7px 0;
+		
+				&:focus {
+					text-decoration: none;
+				}
+			}
+
+			[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
+				color: @brand-primary;
+			}
+
+			span.human-readable-number {
+				display: block;
+				margin-top: 5px;
+			}
+		}
+		.stats-votes, .stats-bookmark {
+			float: left;
+			width: 50%;
+		}
+		.stats-bookmark {
+			padding-top: 13px;
+		}
 	}
 
 	> ul {

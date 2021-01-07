@@ -5,6 +5,27 @@
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
+		<div class="col-md-1 hidden-sm hidden-xs" data-pid="{./mainPid}">
+			<div class="stats stats-votes votes">
+			{{{ if !reputation:disabled }}}
+				<a component="post/upvote" href="#" class="{{{ if ./upvoted }}}upvoted{{{ end }}}">
+					<i class="fa fa-chevron-up"></i>
+				</a>
+				<span class="human-readable-number" component="post/vote-count" data-votes="1" title="{./votes}">{./votes}</span>
+				{{{ if !downvote:disabled }}}
+				<a component="post/downvote" href="#" class="{{{ if ./downvoted }}}downvoted{{{ end }}}">
+					<i class="fa fa-chevron-down"></i>
+				</a>
+				{{{ end }}}
+			{{{ end }}}
+			</div>
+			<div class="stats stats-bookmark">
+				<a component="post/bookmark" data-bookmarked="{{{ if ./bookmarked }}}true{{{ else }}}false{{{ end }}}" href="#">
+					<i component="post/bookmark/on" class="fa fa-fw fa-heart {{{ if !./bookmarked }}}hidden{{{ end }}}"></i>
+					<i component="post/bookmark/off" class="fa fa-fw fa-heart-o {{{ if ./bookmarked }}}hidden{{{ end }}}"></i>
+				</a>
+			</div>
+		</div>
 		<div class="col-md-6 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
@@ -70,13 +91,6 @@
 
 		<div class="mobile-stat col-xs-2 visible-xs text-right">
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-
-		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
-			<!-- IF !reputation:disabled -->
-			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
-			<small>[[global:votes]]</small>
-			<!-- END -->
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
