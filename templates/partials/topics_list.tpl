@@ -10,7 +10,7 @@
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
 					<!-- IF topics.thumb -->
-					<img src="{config.relative_path}{topics.thumb}" class="user-img not-responsive" />
+					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
 					{buildAvatar(topics.user, "46", true, "not-responsive")}
 					<!-- ENDIF topics.thumb -->
@@ -21,7 +21,7 @@
 				<!-- IF !showSelect -->
 				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
 					<!-- IF topics.thumb -->
-					<img src="{config.relative_path}{topics.thumb}" class="user-img not-responsive" />
+					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
 					{buildAvatar(topics.user, "46", true, "not-responsive")}
 					<!-- ENDIF topics.thumb -->
