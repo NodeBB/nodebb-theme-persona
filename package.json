@@ -5,7 +5,7 @@
     "compatibility": "^1.16.0"
   },
   "description": "Persona theme for NodeBB",
-  "main": "theme.less",
+  "main": "library.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/psychobunny/nodebb-theme-persona"
