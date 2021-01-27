@@ -116,6 +116,7 @@
 				right: 12px;
 				font-size: 12px;
 				top: 0px;
+				z-index: 1;
 
 				@media (min-width: @screen-md-min) {
 					top: 2px;
@@ -411,6 +412,8 @@
 
 
 .topic {
+	.timeline;
+
 	&.deleted {
 		.opacity(0.3);
 
@@ -422,16 +425,9 @@
 	.posts {
 		list-style-type: none;
 		padding: 0;
-		[component="post"][data-index="0"] {
-			border-bottom: 5px solid @post-border-color;
-		}
+
 		[component="post"] {
 			position: relative;
-			border-bottom: 1px solid @post-border-color;
-
-			padding-bottom: @post-padding;
-			margin-bottom: @post-padding;
-
 			.transition(0.75s ease-in-out border-color);
 
 			.edit-icon {
@@ -657,12 +653,6 @@
 }
 
 [component="post"] {
-	&.topic-owner-post>.post-header .avatar {
-		-webkit-box-shadow: 0px 0px 4px 3px @brand-primary;
-		-moz-box-shadow: 0px 0px 4px 3px @brand-primary;
-		box-shadow: 0px 0px 4px 3px @brand-primary;
-	}
-
 	.avatar.avatar-sm2x {
 		font-size: 2.875rem;
 	}
