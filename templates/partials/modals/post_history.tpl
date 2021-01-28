@@ -24,7 +24,13 @@
 
 	{{{ if editable }}}
 	<button class="btn btn-primary" data-action="restore">[[topic:diffs.restore]]</button>
+	{{{ end }}}
+	{{{ if deletable }}}
+	<button class="btn btn-danger" data-action="delete">[[topic:diffs.delete]]</button>
+	{{{ end }}}
+	{{{ if editable }}}
 	<p class="help-block">[[topic:diffs.restore-description]]</p>
 	{{{ end }}}
+
 </div>
 <!-- END -->
