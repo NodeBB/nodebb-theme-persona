@@ -30,6 +30,9 @@
 						<input class="form-control" type="password" placeholder="[[register:password_placeholder]]" name="password" id="password" />
 						<span class="register-feedback" id="password-notify"></span>
 						<span class="help-block">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
+						<p id="caps-lock-warning" class="text-danger hidden">
+							<i class="fa fa-exclamation-triangle"></i> [[login:caps-lock-enabled]]
+						</p>
 					</div>
 				</div>
 				<div class="form-group">
