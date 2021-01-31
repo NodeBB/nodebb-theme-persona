@@ -48,9 +48,9 @@
 							<div class="row">
 								<div class="col-md-6">
 									<label>[[search:in-categories]]</label>
-									<select multiple class="form-control" id="posted-in-categories" size="{categoriesCount}">
-										{{{each categories}}}
-										<option value="{categories.value}">{categories.text}</option>
+									<select multiple class="form-control" id="posted-in-categories" size="{allCategoriesCount}">
+										{{{each allCategories}}}
+										<option value="{allCategories.value}">{allCategories.text}</option>
 										{{{end}}}
 									</select>
 									<input type="checkbox" id="search-children"> [[search:search-child-categories]]
