@@ -8,7 +8,7 @@
 		{{{end}}}
 	</ul>
 	{{{ if hasMoreSubCategories}}}
-	<button class="btn btn-default" component="category/load-more-subcategories" data-next-start="{nextSubCategoryStart}">[[category:load-more-subcategories]]</button>
+	<button class="btn btn-default" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
 	{{{ end }}}
 </div>
 {{{ end }}}
