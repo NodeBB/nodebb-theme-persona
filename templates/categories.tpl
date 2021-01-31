@@ -12,6 +12,7 @@
 			<!-- IMPORT partials/categories/item.tpl -->
 			{{{end}}}
 		</ul>
+		<!-- IMPORT partials/paginator.tpl -->
 	</div>
 	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		{{{each widgets.sidebar}}}
