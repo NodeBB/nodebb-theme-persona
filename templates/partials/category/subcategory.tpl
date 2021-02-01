@@ -1,9 +1,14 @@
+{{{ if children.length }}}
 <div class="subcategory">
-	<!-- IF children.length --><p>[[category:subcategories]]</p><!-- ENDIF children.length -->
+	<p>[[category:subcategories]]</p>
 
-	<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+	<ul component="category/subcategory/container" class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 		{{{each children}}}
 		<!-- IMPORT partials/categories/item.tpl -->
 		{{{end}}}
 	</ul>
+	{{{ if hasMoreSubCategories}}}
+	<button class="btn btn-default" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
+	{{{ end }}}
 </div>
+{{{ end }}}
