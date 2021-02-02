@@ -1,4 +1,4 @@
-<p>
+<p class="number-of-diffs">
 	<!-- IF numDiffs -->
 	[[topic:diffs.description, {numDiffs}]]
 	<!-- ELSE -->
