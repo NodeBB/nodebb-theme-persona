@@ -26,6 +26,10 @@
 		<form role="form" component="flags/filters">
 			<fieldset>
 				<div class="form-group">
+					<label for="filter-cid">[[flags:filter-cid]]</label>
+					<!-- IMPORT partials/category-filter.tpl -->
+				</div>
+				<div class="form-group">
 					<label for="sort">[[flags:sort]]</label>
 					<select class="form-control" id="sort" name="sort">
 						<optgroup label="[[flags:sort-all]]">
@@ -59,11 +63,6 @@
 						<option value="user">[[flags:filter-type-user]]</option>
 					</select>
 				</div>
-
-				<div class="form-group">
-					<label for="filter-cid">[[flags:filter-cid]]</label>
-					<!-- IMPORT partials/category-filter.tpl -->
-					</div>
 			</fieldset>
 
 			<fieldset class="collapse" id="more-filters" aria-expanded="false">
