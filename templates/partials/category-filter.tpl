@@ -7,9 +7,11 @@
         <input type="text" class="form-control" autocomplete="off">
     </div>
     <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
-        <li role="presentation" class="category">
+        {{{ if allCategoriesUrl }}}
+        <li role="presentation" class="category" data-all="all">
             <a role="menu-item" href="{config.relative_path}/{allCategoriesUrl}"><i component="category/select/icon" class="fa fa-fw fa-check {{{if selectedCategory}}}invisible{{{end}}}"></i> [[unread:all_categories]]</a>
         </li>
+        {{{ end }}}
         {{{each categories}}}
         <li role="presentation" class="category {{{ if categories.disabledClass }}}disabled{{{ end }}}" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}" data-name="{categories.name}">
             <a role="menu-item" href="#">{categories.level}<i component="category/select/icon" class="fa fa-fw fa-check {{{ if !categories.selected }}}invisible{{{ end }}}"></i><span component="category-markup" style="{{{ if categories.match }}}font-weight: bold;{{{end}}}">{{{ if categories.icon }}}<span class="fa-stack" style="{function.generateCategoryBackground}"><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span>{{{ end }}} {categories.name}</span></a>

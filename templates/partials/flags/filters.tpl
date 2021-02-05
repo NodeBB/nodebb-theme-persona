@@ -62,13 +62,8 @@
 
 				<div class="form-group">
 					<label for="filter-cid">[[flags:filter-cid]]</label>
-					<select class="form-control" id="filter-cid" name="cid" multiple="true">
-						<option value="">[[flags:filter-cid-all]]</option>
-						{{{each categories}}}
-						<option value="{@key}">{@value}</option>
-						{{{end}}}
-					</select>
-				</div>
+					<!-- IMPORT partials/category-filter.tpl -->
+					</div>
 			</fieldset>
 
 			<fieldset class="collapse" id="more-filters" aria-expanded="false">
