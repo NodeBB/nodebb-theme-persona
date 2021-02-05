@@ -164,14 +164,14 @@
 					<hr />
 					<div class="form-group">
 						<label for="memberPostCids">[[groups:details.member-post-cids]]</label>
-						<select multiple="true" name="memberPostCids" id="memberPostCids" class="form-control" size="15">
-							{{{each group.categories}}}
-							<option value="{categories.cid}"{{{ if ../selected }}} selected{{{ end }}}>
-								{../level}{../name}
-							</option>
-							{{{end}}}
-						</select>
-						<p class="help-block">[[groups:details.member-post-cids-help]]</p>
+						<div class="row">
+							<div class="col-md-6">
+								<input id="memberPostCids" type="text" class="form-control" value="{group.memberPostCids}">
+							</div>
+							<div class="col-md-6 member-post-cids-selector">
+								<!-- IMPORT partials/category-selector.tpl -->
+							</div>
+						</div>
 					</div>
 
 					<hr />
