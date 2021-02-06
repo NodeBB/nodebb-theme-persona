@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="btn-toolbar">
-	<!-- IMPORT partials/category-filter.tpl -->
+	<!-- IMPORT partials/category-filter-right.tpl -->
 </div>
 <hr/>
 <div class="row">
