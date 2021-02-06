@@ -57,7 +57,6 @@
 						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
 					</div>
 				</div>
-				<input id="referrer" type="hidden" name="referrer" value="" />
 				<input id="token" type="hidden" name="token" value="" />
 				<input id="noscript" type="hidden" name="noscript" value="true" />
 				<input type="hidden" name="_csrf" value="{config.csrf_token}" />
