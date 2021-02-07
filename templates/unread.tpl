@@ -39,7 +39,7 @@
 			</ul>
 		</div>
 
-		<!-- IMPORT partials/category-filter.tpl -->
+		<!-- IMPORT partials/category-filter-right.tpl -->
 
 		<div class="btn-group pull-right bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
