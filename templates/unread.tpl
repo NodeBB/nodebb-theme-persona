@@ -17,26 +17,8 @@
 		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
 
-		<div class="markread btn-group pull-right category-dropdown-container bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				[[unread:mark_as_read]] <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu category-dropdown-menu" role="menu">
-
-				<li role="presentation">
-					<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
-				</li>
-
-				<li role="presentation">
-					<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
-				</li>
-				<li class="divider"></li>
-				{{{each categories}}}
-				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack" style="{function.generateCategoryBackground}"><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
-				</li>
-				{{{end}}}
-			</ul>
+		<div class="markread btn-group pull-right {{{ if !topics.length }}}hidden{{{ end }}}">
+		<!-- IMPORT partials/category-selector-right.tpl -->
 		</div>
 
 		<!-- IMPORT partials/category-filter-right.tpl -->
