@@ -97,13 +97,12 @@ library.defineWidgetAreas = function(areas, callback) {
 	callback(null, areas);
 };
 
-library.getThemeConfig = function(config, callback) {
-	meta.settings.get('persona', function(err, settings) {
-		config.hideSubCategories = settings.hideSubCategories === 'on';
-		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
-		config.enableQuickReply = settings.enableQuickReply === 'on';
-		callback(null, config);
-	});
+library.getThemeConfig = async function(config) {
+	const settings = await meta.settings.get('persona');
+	config.hideSubCategories = settings.hideSubCategories === 'on';
+	config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
+	config.enableQuickReply = settings.enableQuickReply === 'on';
+	return config;
 };
 
 function renderAdmin(req, res, next) {
