@@ -179,7 +179,7 @@
 			<div class="well">
 				{{{each notificationSettings}}}
 				<div class="row">
-					<div class="form-group col-xs-7">
+					<div class="col-xs-7">
 						<label>{notificationSettings.label}</label>
 					</div>
 					<div class="form-group col-xs-5">
@@ -193,9 +193,11 @@
 				</div>
 				{{{end}}}
 
-				<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
 				<div class="row">
-					<div class="form-group col-xs-9">
+					<div class="col-xs-7">
+						<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
+					</div>
+					<div class="form-group col-xs-5">
 						<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
 							{{{each upvoteNotifFreq}}}
 							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
