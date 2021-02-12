@@ -2,7 +2,13 @@
 	<div class="timeline-badge">
 		<i class="fa {{{ if icon }}}{icon}{{{ else }}}fa-circle{{{ end }}}"></i>
 	</div>
-	<span class="timeline-text">{text}&nbsp;</span>
+	<span class="timeline-text">
+		{{{ if ../href }}}
+		<a href="{config.relative_path}{../href}">{../text}</a>&nbsp;
+		{{{ else }}}
+		{text}&nbsp;
+		{{{ end }}}
+	</span>
 
 	{{{ if user }}}
 		{{{ if !./user.system }}}<span><a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(user, "xs", true)}&nbsp;{./user.username}</a></span>&nbsp;{{{ end }}}
