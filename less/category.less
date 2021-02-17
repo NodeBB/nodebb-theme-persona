@@ -87,11 +87,19 @@
 					opacity: 0;
 				}
 
-				.avatar .select .fa-check {
-					opacity: 1;
-					border: 1px solid @brand-success;
-					color: @brand-success;
-				}
+				.avatar .select {
+					.fa-check {
+						opacity: 1;
+						border: 1px solid @brand-success;
+						color: @brand-success;
+
+						&:hover {
+							border: 1px solid @brand-success;
+							color: @brand-success;
+						}
+					}
+
+				} 
 			}
 
 			.fa-stack {
