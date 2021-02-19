@@ -62,3 +62,12 @@
 		</div>
 	</div>
 </div>
+
+<hr />
+
+<h4>[[user:avatar-background-colour]]</h4>
+
+<label><input type="radio" name="icon:bgColor" value="transparent" /><span></span></label>
+{{{ each iconBackgrounds }}}
+<label><input type="radio" name="icon:bgColor" value="{@value}" /><span style="background-color: {@value};"></span></label>
+{{{ end }}}
