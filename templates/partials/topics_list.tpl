@@ -90,7 +90,8 @@
 		</div>
 
 		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
-			<div class="card" style="border-color: {topics.category.bgColor}">
+			<div class="card background-link-container" style="border-color: {topics.category.bgColor}">
+				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
 				<!-- IF topics.unreplied -->
 				<p>
 					[[category:no_replies]]
