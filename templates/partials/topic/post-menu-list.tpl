@@ -57,7 +57,7 @@
 
 {{{each posts.tools}}}
 <li {{{ if ./disabled }}}class="disabled" {{{ end }}}>
-	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
+	<a {{{ if ./action}}}component="{./action}"{{{ end }}} role="menuitem" tabindex="-1" href="{{{ if ./href }}}{./href}{{{ else }}}#{{{ end }}}">
 		<span class="menu-icon"><i class="fa fa-fw {posts.tools.icon}"></i></span> {{posts.tools.html}}
 	</a>
 </li>
