@@ -4,8 +4,8 @@
 	</div>
 	<div class="panel-body">
 		<div class="form-group">
-			<label for="title">Title</label>
-			<input id="fork-title" type="text" class="form-control" placeholder="Enter new topic title">
+			<label for="title">[[topic:title]]</label>
+			<input id="fork-title" type="text" class="form-control" placeholder="[[topic:enter-new-topic-title]]">
 		</div>
 		<p>
 			[[topic:fork_topic_instruction]]<br />
