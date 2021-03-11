@@ -13,7 +13,7 @@
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left avatar avatar-md avatar-rounded" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 	<!-- ENDIF notifications.image -->
 
-	<div class="pull-right mark-read" aria-label="Mark Read"></div>
+	{{{ if ./nid }}}<div class="pull-right mark-read" aria-label="Mark Read"></div>{{{ end }}}
 	<a href="{notifications.path}">
 		<span class="pull-right relTime">{notifications.timeago}</span>
 		<span class="text">{notifications.bodyShort}</span>
