@@ -110,5 +110,6 @@
 <!-- IF posts.display_moderator_tools -->
 {{{ if posts.flags.exists }}}
 <li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flags.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
+<li><a component="post/flagResolve" data-flagId="{posts.flags.flagId}" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-check"></i> [[topic:resolve-flag]]</a></li>
 {{{ end }}}
 <!-- ENDIF posts.display_moderator_tools -->
