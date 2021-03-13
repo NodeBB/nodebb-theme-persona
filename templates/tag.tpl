@@ -13,6 +13,12 @@
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
 		</div>
+
+		<div class="btn-group pull-right">
+		<!-- IMPORT partials/category/tools.tpl -->
+		</div>
+
+		<!-- IMPORT partials/category-filter-right.tpl -->
 	</div>
 
 	<!-- IF !topics.length -->
