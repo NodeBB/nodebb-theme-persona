@@ -36,7 +36,7 @@
 					<div id="alert-error" class="alert alert-danger hide"></div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
 					<button id="fileUploadSubmitBtn" class="btn btn-primary">{button}</button>
 				</div>
 			</div>
