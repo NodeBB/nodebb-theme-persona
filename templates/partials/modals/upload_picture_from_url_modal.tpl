@@ -9,7 +9,7 @@
 					<input id="uploadFromUrl" class="form-control" type="text"/>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
 					<button class="btn btn-primary upload-btn">[[user:upload_picture]]</button>
 				</div>
 			</div>
