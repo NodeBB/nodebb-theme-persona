@@ -100,7 +100,7 @@
 <li class="divider"></li>
 {{{ if !posts.flags.flagged }}}
 <li><a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a></li>
-{{{ if !posts.selfPost}}}
+{{{ if (!posts.selfPost && posts.uid) }}}
 <li><a component="post/flagUser" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-user]]</a></li>
 {{{ end }}}
 {{{ else }}}
