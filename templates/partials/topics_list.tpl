@@ -20,11 +20,11 @@
 
 				<!-- IF !showSelect -->
 				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
-					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					{buildAvatar(topics.user, "46", true, "not-responsive")}
-					<!-- ENDIF topics.thumb -->
+					{{{ if ./thumbs.length }}}
+					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
+					{{{ else }}}
+					{buildAvatar(../user, "46", true, "not-responsive")}
+					{{{ end }}}
 				</a>
 				<!-- ENDIF !showSelect -->
 			</div>
