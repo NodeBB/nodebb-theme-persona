@@ -143,7 +143,9 @@
 					</button>
 					<ul class="dropdown-menu">
 						<li><a href="{config.relative_path}/uid/{target.uid}">[[flags:view-profile]]</a></li>
-						<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
+						{{{ if !config.disableChat }}}
+							<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
+						{{{ end }}}
 						<li role="separator" class="divider"></li>
 						{{{ if privileges.ban }}}<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>{{{ end }}}
 						{{{ if privileges.admin:users }}}
