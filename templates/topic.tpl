@@ -9,7 +9,8 @@
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title" component="topic/title">
 					<span component="topic/labels">
-						<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
+						<i component="topic/scheduled" class="fa fa-clock-o <!-- IF !scheduled -->hidden<!-- ENDIF !scheduled -->" title="[[topic:scheduled]]"></i>
+						<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF (scheduled || !pinned) -->hidden<!-- ENDIF (scheduled || !pinned) -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
 						<i component="topic/locked" class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
 						<i class="fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
 						{{{each icons}}}{@value}{{{end}}}
@@ -52,7 +53,9 @@
 		</div>
 		<!-- ENDIF merger -->
 
+		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
+		{{{ end }}}
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			{{{each posts}}}
