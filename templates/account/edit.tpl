@@ -117,9 +117,9 @@
 					{{{each sso}}}
 					<div class="list-group-item">
 						<!-- IF ../deauthUrl -->
-						<a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
+						<a data-component="{../component}" class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
 						<!-- END -->
-						<a href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
+						<a data-component="{../component}" href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
 							<!-- IF ../icon --><i class="fa {../icon}"></i><!-- ENDIF ../icon -->
 							<!-- IF ../associated -->[[user:sso.associated]]<!-- ELSE -->[[user:sso.not-associated]]<!-- ENDIF ../associated -->
 							{../name}
