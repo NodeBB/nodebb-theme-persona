@@ -179,6 +179,7 @@
 // Just add .dropup after the standard .dropdown class and you're set, bro.
 // TODO: abstract this so that the navbar fixed styles are not placed here?
 
+.caret-up,
 .dropup,
 .navbar-fixed-bottom .dropdown {
   // Reverse the caret
@@ -192,6 +193,12 @@
     top: auto;
     bottom: 100%;
     margin-bottom: 2px;
+  }
+}
+
+.caret-up {
+  .fa-caret-down::before {
+    content: @fa-var-caret-up;
   }
 }
 

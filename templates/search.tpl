@@ -40,7 +40,7 @@
 				</div>
 
 				<div class="panel panel-default">
-					<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
+					<div class="panel-heading caret-up" data-toggle="collapse" data-target=".search-options">
 						<h3 class="panel-title"><i class="fa fa-caret-down"></i> [[search:advanced-search]]</h3>
 					</div>
 					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
