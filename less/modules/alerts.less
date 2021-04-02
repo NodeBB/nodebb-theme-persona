@@ -7,14 +7,21 @@
 	bottom: 0px;
 
 	.alert {
+		overflow: hidden;
+		position: relative;
+
 		&::before {
-			position: relative;
-			top: -15px;
-			left: -15px;
-			display: block;
-			height: 2px;
-			width: 0;
 			transition: inherit;
+			display: block;
+			position: absolute;
+			z-index: 0;
+
+			opacity: 0.1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 100%;
 		}
 
 		&.alert-info::before {
