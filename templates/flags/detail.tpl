@@ -50,7 +50,7 @@
 						<ul class="list-group" component="flag/reports">
 							{{{ each reports }}}
 							<li class="list-group-item">
-								<a href="{config.relative_path}/user/{reporter.userslug}">{buildAvatar(./reporter, "sm", false)}</a>
+								<a href="{config.relative_path}/user/{./reporter.userslug}">{buildAvatar(./reporter, "sm", false)}</a>
 								&ndash; <span class="timeago" title="{./timestampISO}"></span>
 								<blockquote><em>{./value}</em></blockquote>
 							</li>
