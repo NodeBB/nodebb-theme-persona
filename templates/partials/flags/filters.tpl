@@ -3,7 +3,7 @@
 		<div class="panel-body collapse" id="flags-daily-wrapper" aria-expanded="false">
 			<div><canvas id="flags:daily" height="150"></canvas></div>
 		</div>
-		<div class="panel-footer" data-toggle="collapse" data-target="#flags-daily-wrapper" aria-controls="#flags-daily-wrapper"><small>[[flags:graph-label]]</small>&nbsp;<span class="caret"></span></div>
+		<div class="panel-footer" data-toggle="collapse" data-target="#flags-daily-wrapper" aria-controls="#flags-daily-wrapper"><small>[[flags:graph-label]]</small>&nbsp;<i class="fa fa-sort"></i></div>
 	</div>
 </div>
 
@@ -83,9 +83,9 @@
 			</fieldset>
 
 			{{{ if expanded }}}
-			<button type="button" class="btn btn-link btn-block caret-up" data-toggle="collapse" data-target="#more-filters" aria-controls="#more-filters" data-text-variant="[[flags:more-filters]] ">[[flags:fewer-filters]]&nbsp;<span class="caret"></span></button>
+			<button type="button" class="btn btn-link btn-block" data-toggle="collapse" data-target="#more-filters" aria-controls="#more-filters" data-text-variant="[[flags:more-filters]] ">[[flags:fewer-filters]]&nbsp;<i class="fa fa-sort"></i></button>
 			{{{ else }}}
-			<button type="button" class="btn btn-link btn-block" data-toggle="collapse" data-target="#more-filters" aria-controls="#more-filters" data-text-variant="[[flags:fewer-filters]] ">[[flags:more-filters]]&nbsp;<span class="caret"></span></button>
+			<button type="button" class="btn btn-link btn-block" data-toggle="collapse" data-target="#more-filters" aria-controls="#more-filters" data-text-variant="[[flags:fewer-filters]] ">[[flags:more-filters]]&nbsp;<i class="fa fa-sort"></i></button>
 			{{{ end }}}
 			<button type="button" id="apply-filters" class="btn btn-primary btn-block">[[flags:apply-filters]]</button>
 		</form>

@@ -8,7 +8,6 @@ $(document).ready(function () {
 	setupQuickReply();
 	configureNavbarHiding();
 	fixHeaderPadding();
-	tweakBsCollapse();
 
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', fixHeaderPadding);
@@ -21,8 +20,6 @@ $(document).ready(function () {
 		setupTaskbar();
 		setupMobileMenu();
 	});
-
-	$(window).on('action:ajaxify.end', tweakBsCollapse);
 
 	function fixHeaderPadding() {
 		var env = utils.findBootstrapEnvironment();
@@ -474,25 +471,5 @@ $(document).ready(function () {
 				$('.topic-main-buttons [title]').tooltip();
 			}
 		});
-	}
-
-	function tweakBsCollapse() {
-		$('[data-toggle="collapse"]').off('click', _tweakBsCollapse).on('click', _tweakBsCollapse);
-	}
-
-	function _tweakBsCollapse({ currentTarget: el }) {
-		const isVisible = $(el.getAttribute('data-target')).is(':visible');
-		el.classList.toggle('caret-up', !isVisible);
-		const textVariant = el.getAttribute('data-text-variant');
-		if (!textVariant) {
-			return;
-		}
-		el.setAttribute('data-text-variant', el.textContent);
-		for (const child of el.childNodes) {
-			if (child.textContent === el.textContent) {
-				child.textContent = textVariant;
-				break;
-			}
-		}
 	}
 });
