@@ -80,7 +80,7 @@
 
 			margin-left: initial;
 			> div:not(.content) {
-				margin-left: 1.5rem;
+				margin-left: 0;
 			}
 		}
 
@@ -89,6 +89,8 @@
 		}
 
 		.timeline-event {
+			margin-left: 1rem;
+
 			&:before, &+:not(.timeline-event):before {
 				content: '';
 				width: 1rem;
@@ -99,7 +101,7 @@
 			}
 
 			&+:not(.timeline-event):before {
-				left: calc(2rem + 1px);
+				left: calc(.5rem + 1px);
 			}
 
 			&+.timeline-event:before {
