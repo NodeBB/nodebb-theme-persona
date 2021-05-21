@@ -27,7 +27,9 @@
 			<fieldset>
 				<div class="form-group">
 					<label for="filter-cid">[[flags:filter-cid]]</label>
+					<div class="input-group">
 					<!-- IMPORT partials/category-filter.tpl -->
+					</div>
 				</div>
 				<div class="form-group">
 					<label for="sort">[[flags:sort]]</label>
