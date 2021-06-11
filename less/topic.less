@@ -412,8 +412,6 @@
 
 
 .topic {
-	.timeline;
-
 	&.deleted {
 		.opacity(0.3);
 
@@ -423,6 +421,10 @@
 	}
 
 	.posts {
+		&.timeline {
+			.timeline-style;
+		}
+
 		list-style-type: none;
 		padding: 0;
 
