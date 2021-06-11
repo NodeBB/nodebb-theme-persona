@@ -123,31 +123,33 @@
 		border-bottom: 2px solid lighten(@brand-primary, 30%);
 	}
 
-	[component="topic/event"].timeline-event {
-		text-align: left;
-		justify-content: left;
-		font-size: 1em;
+	[component="topic/event"], [component="topic/necro-post"] {
+		&.timeline-event {
+			text-align: left;
+			justify-content: left;
+			font-size: 1em;
 
-		.timeline-badge {
-			float: left;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 32px;
-			height: 32px;
-			padding: 0;
-			margin-left: -17px;
-			margin-right: 17px;
-			color: lighten(@brand-primary, 30%);
-			background-color: @body-bg;
-			border: 2px solid lighten(@brand-primary, 30%);
-			border-radius: 50%;
-		}
+			.timeline-badge {
+				float: left;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				padding: 0;
+				margin-left: -17px;
+				margin-right: 17px;
+				color: lighten(@brand-primary, 30%);
+				background-color: @body-bg;
+				border: 2px solid lighten(@brand-primary, 30%);
+				border-radius: 50%;
+			}
 
-		.timeline-text {
-			line-height: 32px;
-			text-transform: initial;
-			color: rgba(127,127,127,.5);
+			.timeline-text {
+				line-height: 32px;
+				text-transform: initial;
+				color: rgba(127,127,127,.5);
+			}
 		}
 	}
 }
