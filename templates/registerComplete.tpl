@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 		<p class="lead text-center">
-			[[register:interstitial.intro]]
+			{{{ if register }}}[[register:interstitial.intro-new]]{{{ else }}}[[register:interstitial.intro]]{{{ end }}}
 		</p>
 
 		<!-- IF errors.length -->
@@ -42,6 +42,6 @@
 </form>
 <form role="form" method="post" action="{config.relative_path}/register/abort">
 	<p class="text-center">
-		<button class="btn btn-link">[[register:cancel_registration]]</button>
+		<button class="btn btn-link">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
 	</p>
 </form>

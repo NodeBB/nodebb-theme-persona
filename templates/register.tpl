@@ -9,14 +9,6 @@
 			</div>
 			<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
-					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
-					<div class="col-lg-8">
-						<input class="form-control" type="email" placeholder="[[register:email_address_placeholder]]" name="email" id="email" autocorrect="off" autocapitalize="off" />
-						<span class="register-feedback" id="email-notify"></span>
-						<span class="help-block">[[register:help.email]]</span>
-					</div>
-				</div>
-				<div class="form-group">
 					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
 					<div class="col-lg-8">
 						<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
