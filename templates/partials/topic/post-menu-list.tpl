@@ -99,7 +99,7 @@
 {{{ if posts.display_flag_tools }}}
 <li class="divider"></li>
 
-<li {{{ if posts.flags.flaggged }}}hidden{{{ end }}}>
+<li {{{ if posts.flags.flagged }}}hidden{{{ end }}}>
 	<a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a>
 </li>
 <li {{{ if !posts.flags.flagged }}}hidden{{{ end }}} class="disabled text-muted">
