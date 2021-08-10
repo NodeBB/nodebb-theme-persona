@@ -18,4 +18,8 @@
 	{{{ end }}}
 
 	<span class="timeago timeline-text" title="{timestampISO}"></span>
+
+	{{{ if isAdminOrMod}}}
+	&nbsp;<span component="topic/event/delete" data-topic-event-id="{id}" class="timeline-text pointer" title="[[topic:delete-event]]"><i class="fa fa-trash"></i></span>
+	{{{ end }}}
 </li>
