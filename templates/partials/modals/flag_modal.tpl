@@ -11,15 +11,26 @@
 				<p class="lead">
 					[[flags:modal-body, {type}, {id}]]
 				</p>
-				<div class="btn-group btn-group-justified">
-					<div class="btn-group">
-						<button class="btn btn-default flag-reason">[[flags:modal-reason-spam]]</button>
+				<div>
+					<div class="radio">
+						<label for="flag-reason-spam">
+							<input type="radio" name="flag-reason" id="flag-reason-spam" value="[[flags:modal-reason-spam]]">
+							[[flags:modal-reason-spam]]
+						</label>
 					</div>
-					<div class="btn-group">
-						<button class="btn btn-default flag-reason">[[flags:modal-reason-offensive]]</button>
+
+					<div class="radio">
+						<label for="flag-reason-offensive">
+							<input type="radio" name="flag-reason" id="flag-reason-offensive" value="[[flags:modal-reason-offensive]]">
+							[[flags:modal-reason-offensive]]
+						</label>
 					</div>
-					<div class="btn-group">
-						<button class="btn btn-default toggle-custom">[[flags:modal-reason-other]]</button>
+
+					<div class="radio">
+						<label for="flag-reason-other">
+							<input type="radio" name="flag-reason" id="flag-reason-other" value="[[flags:modal-reason-other]]">
+							[[flags:modal-reason-other]]
+						</label>
 					</div>
 				</div>
 				<div class="form-group">
