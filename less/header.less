@@ -34,36 +34,31 @@
 				}
 			}
 
-			&.unread {
-				.bg-variant(@state-warning-bg);
-
-				.mark-read:after {
-					content: "\f111";
-				}
-
-				.mark-read:hover:after {
-					content: "\f10c";
-				}
-			}
-
 			.mark-read {
 				color: @text-muted;
 
 				&:after {
-					font-family: "FontAwesome";
-					content: "\f10c";
+					font-family: "Font Awesome 5 Free";
+					content: @fa-var-circle;
+					font-weight: 400;
 					padding: 4px 1rem;
 					position: relative;
 					top: 1px;
 				}
 
 				&:hover {
-					color: @gray-dark;
+					color: darken(@text-muted, 10%);
 					.pointer;
+				}
+			}
+			
+			&.unread {
+				.bg-variant(@state-warning-bg);
 
-					&:after {
-						content: "\f111";
-					}
+				.mark-read:after {
+					font-family: "Font Awesome 5 Free";
+					content: @fa-var-circle;
+					font-weight: 900;
 				}
 			}
 		}
