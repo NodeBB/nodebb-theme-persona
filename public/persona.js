@@ -95,24 +95,26 @@ $(document).ready(function () {
 	}
 
 	function setupTaskbar() {
-		$(window).on('filter:taskbar.push', function (ev, data) {
-			data.options.className = 'taskbar-' + data.module;
-			if (data.module === 'composer') {
-				data.options.icon = 'fa-commenting-o';
-			} else if (data.module === 'chat') {
-				if (data.element.length && !data.element.hasClass('active')) {
-					increaseChatCount(data.element);
+		require(['hooks'], (hooks) => {
+			hooks.on('filter:taskbar.push', (data) => {
+				data.options.className = 'taskbar-' + data.module;
+				if (data.module === 'composer') {
+					data.options.icon = 'fa-commenting-o';
+				} else if (data.module === 'chat') {
+					if (data.element.length && !data.element.hasClass('active')) {
+						increaseChatCount(data.element);
+					}
 				}
-			}
-		});
-		$(window).on('action:taskbar.pushed', function (ev, data) {
-			if (data.module === 'chat') {
-				createChatIcon(data);
-				var elData = data.element.data();
-				if (elData && elData.options && !elData.options.isSelf) {
-					increaseChatCount(data.element);
+			});
+			hooks.on('action:taskbar.pushed', (data) => {
+				if (data.module === 'chat') {
+					createChatIcon(data);
+					var elData = data.element.data();
+					if (elData && elData.options && !elData.options.isSelf) {
+						increaseChatCount(data.element);
+					}
 				}
-			}
+			});
 		});
 
 		socket.on('event:chats.markedAsRead', function (data) {
