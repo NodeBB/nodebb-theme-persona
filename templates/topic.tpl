@@ -67,6 +67,7 @@
 
 					<!-- IMPORT partials/topic/post.tpl -->
 				</li>
+				{renderTopicEvents(@index)}
 			{{{end}}}
 		</ul>
 
