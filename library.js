@@ -1,43 +1,38 @@
 'use strict';
 
-var meta = require.main.require('./src/meta');
-var user = require.main.require('./src/user');
+const meta = require.main.require('./src/meta');
+const user = require.main.require('./src/user');
 
-var library = {};
+const library = module.exports;
 
-library.init = function(params, callback) {
-	var app = params.router;
-	var middleware = params.middleware;
-
+library.init = async function (params) {
+	const { app, middleware } = params;
 	app.get('/admin/plugins/persona', middleware.admin.buildHeader, renderAdmin);
 	app.get('/api/admin/plugins/persona', renderAdmin);
-
-	callback();
 };
 
-library.addAdminNavigation = function(header, callback) {
+library.addAdminNavigation = async function (header) {
 	header.plugins.push({
 		route: '/plugins/persona',
 		icon: 'fa-paint-brush',
-		name: 'Persona Theme'
+		name: 'Persona Theme',
 	});
-
-	callback(null, header);
+	return header;
 };
 
-library.defineWidgetAreas = function(areas, callback) {
+library.defineWidgetAreas = async function (areas) {
 	const locations = ['header', 'sidebar', 'footer'];
 	const templates = [
 		'categories.tpl', 'category.tpl', 'topic.tpl', 'users.tpl',
-		'unread.tpl', 'recent.tpl', 'popular.tpl', 'top.tpl', 'tags.tpl', 'tag.tpl'
+		'unread.tpl', 'recent.tpl', 'popular.tpl', 'top.tpl', 'tags.tpl', 'tag.tpl',
 	];
 	function capitalizeFirst(str) {
-		return str.charAt(0).toUpperCase() + str.slice(1)
+		return str.charAt(0).toUpperCase() + str.slice(1);
 	}
-	templates.forEach(template => {
-		locations.forEach(location => {
+	templates.forEach((template) => {
+		locations.forEach((location) => {
 			areas.push({
-				name: capitalizeFirst(template.split('.')[0]) + ' ' + capitalizeFirst(location),
+				name: `${capitalizeFirst(template.split('.')[0])} ${capitalizeFirst(location)}`,
 				template: template,
 				location: location,
 			});
@@ -46,16 +41,15 @@ library.defineWidgetAreas = function(areas, callback) {
 
 	areas = areas.concat([
 		{
-			name: "Account Header",
-			template: "account/profile.tpl",
-			location: "header"
+			name: 'Account Header',
+			template: 'account/profile.tpl',
+			location: 'header',
 		},
 	]);
-
-	callback(null, areas);
+	return areas;
 };
 
-library.getThemeConfig = async function(config) {
+library.getThemeConfig = async function (config) {
 	const settings = await meta.settings.get('persona');
 	config.hideSubCategories = settings.hideSubCategories === 'on';
 	config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
@@ -63,7 +57,7 @@ library.getThemeConfig = async function(config) {
 	return config;
 };
 
-function renderAdmin(req, res, next) {
+function renderAdmin(req, res) {
 	res.render('admin/plugins/persona', {});
 }
 
@@ -74,7 +68,7 @@ library.addUserToTopic = async function (hookData) {
 			const userData = await user.getUserData(hookData.req.user.uid);
 			hookData.templateData.loggedInUser = userData;
 		} else {
-			hookData.templateData.loggedInUser =  {
+			hookData.templateData.loggedInUser = {
 				uid: 0,
 				username: '[[global:guest]]',
 				picture: user.getDefaultAvatar(),
