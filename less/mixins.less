@@ -110,6 +110,24 @@
 		}
 	}
 
+	@media (min-width: @screen-sm) {
+		.timeline-event {
+			[component="topic/event/delete"] {
+				visibility: hidden;
+			}
+
+			&:hover {
+				[component="topic/event/delete"] {
+					visibility: visible;
+
+					&:hover {
+						color: @brand-danger;
+					}
+				}
+			}
+		}
+	}
+
 	.necro-post {
 		border-left-style: dashed;
 	}
