@@ -68,18 +68,22 @@ function renderAdmin(req, res, next) {
 }
 
 library.addUserToTopic = async function (hookData) {
-	if (hookData.req.user) {
-		const userData = await user.getUserData(hookData.req.user.uid);
-		hookData.templateData.loggedInUser = userData;
-	} else {
-		hookData.templateData.loggedInUser =  {
-			uid: 0,
-			username: '[[global:guest]]',
-			picture: user.getDefaultAvatar(),
-			'icon:text': '?',
-			'icon:bgColor': '#aaa',
-		};
+	const settings = await meta.settings.get('persona');
+	if (settings.enableQuickReply === 'on') {
+		if (hookData.req.user) {
+			const userData = await user.getUserData(hookData.req.user.uid);
+			hookData.templateData.loggedInUser = userData;
+		} else {
+			hookData.templateData.loggedInUser =  {
+				uid: 0,
+				username: '[[global:guest]]',
+				picture: user.getDefaultAvatar(),
+				'icon:text': '?',
+				'icon:bgColor': '#aaa',
+			};
+		}
 	}
+
 	return hookData;
 };
 
