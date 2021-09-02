@@ -25,6 +25,7 @@ library.defineWidgetAreas = async function (areas) {
 	const templates = [
 		'categories.tpl', 'category.tpl', 'topic.tpl', 'users.tpl',
 		'unread.tpl', 'recent.tpl', 'popular.tpl', 'top.tpl', 'tags.tpl', 'tag.tpl',
+		'login.tpl', 'register.tpl',
 	];
 	function capitalizeFirst(str) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
