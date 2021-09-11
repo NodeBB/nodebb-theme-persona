@@ -6,9 +6,11 @@ const user = require.main.require('./src/user');
 const library = module.exports;
 
 library.init = async function (params) {
-	const { app, middleware } = params;
-	app.get('/admin/plugins/persona', middleware.admin.buildHeader, renderAdmin);
-	app.get('/api/admin/plugins/persona', renderAdmin);
+	const { router, middleware } = params;
+	const routeHelpers = require.main.require('./src/routes/helpers');
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', middleware, [], (req, res) => {
+		res.render('admin/plugins/persona', {});
+	});
 };
 
 library.addAdminNavigation = async function (header) {
@@ -57,10 +59,6 @@ library.getThemeConfig = async function (config) {
 	config.enableQuickReply = settings.enableQuickReply === 'on';
 	return config;
 };
-
-function renderAdmin(req, res) {
-	res.render('admin/plugins/persona', {});
-}
 
 library.addUserToTopic = async function (hookData) {
 	const settings = await meta.settings.get('persona');
