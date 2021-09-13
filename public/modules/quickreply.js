@@ -30,15 +30,23 @@ define('persona/quickreply', [
 		// data.element.textcomplete(data.strategies, data.options);
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
 
+		var ready = true;
 		components.get('topic/quickreply/button').on('click', function(e) {
 			e.preventDefault();
+			if (!ready) {
+				return;
+			}
+
 			var replyMsg = components.get('topic/quickreply/text').val();
 			var replyData = {
 				tid: ajaxify.data.tid,
 				handle: undefined,
 				content: replyMsg
 			};
+
+			ready = false;
 			api.post(`/topics/${ajaxify.data.tid}`, replyData, function (err, data) {
+				ready = true;
 				if (err) {
 					return app.alertError(err.message);
 				}
