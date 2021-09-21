@@ -1,9 +1,11 @@
 <ul component="category" class="topic-list" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
-	<meta itemprop="itemListOrder" content="descending">
 	{{{each topics}}}
 	<li component="category/topic" class="row clearfix category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+		<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
+		<meta itemprop="name" content="{function.stripTags, ../title}" />
+		<meta itemprop="itemListOrder" content="descending" />
+		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
-		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-6 col-sm-9 col-xs-10 content">
 			<div class="avatar pull-left">
@@ -38,7 +40,7 @@
 
 
 				<!-- IF !topics.noAnchor -->
-				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a><br />
+				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->">{topics.title}</a><br />
 				<!-- ELSE -->
 				<span>{topics.title}</span><br />
 				<!-- ENDIF !topics.noAnchor -->
