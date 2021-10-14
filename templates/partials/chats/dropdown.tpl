@@ -25,7 +25,7 @@
 		{{{end}}}
 	</ul>
 
-	<span class="teaser-content">{rooms.teaser.content}</span>
+	<span class="teaser-content"><strong class="teaser-username">{rooms.teaser.user.username}:</strong> {rooms.teaser.content}</span>
 	<span class="teaser-timestamp pull-right">{rooms.teaser.timeago}</span>
 </li>
 {{{end}}}
