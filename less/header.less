@@ -4,7 +4,6 @@
 		overflow-y: auto;
 		max-height: 250px;
 		padding: 0;
-		color: @gray-dark;
 
 		li.no-notifs {
 			text-align: center;
@@ -51,7 +50,7 @@
 					.pointer;
 				}
 			}
-			
+
 			&.unread {
 				.bg-variant(@state-warning-bg);
 
@@ -78,12 +77,8 @@
     			padding-right: 10px;
 			}
 
-			&:hover {
-				background: @gray-lighter;
-			}
-
 			&:not(:last-child) {
-				border-bottom: 1px solid @gray-lighter;
+				border-bottom: 1px solid @dropdown-border;
 			}
 
 			&.no_active a {
