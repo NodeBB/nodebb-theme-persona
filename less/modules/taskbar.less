@@ -6,12 +6,10 @@
 
 .taskbar {
 	display: none;
-	z-index: @zindex-popover;
 	left: auto;
 
 	// Bootswatch fix
 	&.navbar-fixed-bottom {
-		z-index: @zindex-popover;
 		left: auto;
 	}
 
@@ -35,11 +33,14 @@
 	}
 
 	.navbar-nav {
+		float: unset;
+		display: flex;
+		flex-direction: column;
 		padding-right: 15px;
 		padding-bottom: 15px;
 
 		li {
-			float: left;
+			margin-top: 1rem;
 
 			&.new a {
 				-webkit-animation-name: bounceIn;
@@ -150,7 +151,6 @@
 			&.taskbar-composer, &.taskbar-chat {
 				a {
 					text-align: center;
-					margin-left: 15px;
 
 					i {
 						font-size: 18px;
