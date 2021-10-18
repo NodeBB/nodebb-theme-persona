@@ -18,8 +18,8 @@
 			<h4>[[user:select-homepage]]</h4>
 			<div class="well">
 				<div class="form-group">
-					<label for="dailyDigestFreq">[[user:homepage]]</label>
-					<select class="form-control" data-property="homePageRoute">
+					<label for="homePageRoute">[[user:homepage]]</label>
+					<select class="form-control" id="homePageRoute" data-property="homePageRoute">
 						<option value="none">None</option>
 						{{{each homePageRoutes}}}
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
