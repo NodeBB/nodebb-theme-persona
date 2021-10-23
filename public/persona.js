@@ -272,7 +272,11 @@ $(document).ready(function () {
 
 			function loadNotifications() {
 				require(['notifications'], function (notifications) {
-					notifications.loadNotifications($('#menu [data-section="notifications"] ul'));
+					const notifList = $('#menu [data-section="notifications"] ul');
+					notifications.loadNotifications(notifList, function () {
+						notifList.find('.deco-none').removeClass('deco-none');
+						console.log(notifList.find('.deco-none'));
+					});
 				});
 			}
 
