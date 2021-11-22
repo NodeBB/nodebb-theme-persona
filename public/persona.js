@@ -23,11 +23,19 @@ $(document).ready(function () {
 
 	function fixHeaderPadding() {
 		var env = utils.findBootstrapEnvironment();
-		if (env === 'sm' || env === 'xs' || env === 'md') {
-			$('#panel').css('padding-top', $('#header-menu').outerHeight(true));
-		} else {
-			$('#panel').css('padding-top', $('#header-menu').outerHeight(true) - 70);
+		const headerEl = document.getElementById('header-menu');
+		const panelEl = document.getElementById('panel');
+		const headerRect = headerEl.getBoundingClientRect();
+		const headerStyle = window.getComputedStyle(headerEl);
+		let paddingTop = headerRect.y + headerRect.height + (parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
+
+		// body element itself introduces a hardcoded 70px padding on desktop resolution
+		if (env === 'lg') {
+			paddingTop -= 70;
 		}
+
+		panelEl.style.paddingTop = `${paddingTop}px`;
+
 	}
 
 	var lastBSEnv = '';
