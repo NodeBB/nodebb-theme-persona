@@ -25,17 +25,21 @@ $(document).ready(function () {
 		var env = utils.findBootstrapEnvironment();
 		const headerEl = document.getElementById('header-menu');
 		const panelEl = document.getElementById('panel');
+
+		if (!headerEl || !panelEl) {
+			return;
+		}
+
 		const headerRect = headerEl.getBoundingClientRect();
 		const headerStyle = window.getComputedStyle(headerEl);
-		let paddingTop = headerRect.y + headerRect.height + (parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
 
+		let paddingTop = headerRect.y + headerRect.height + (parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
 		// body element itself introduces a hardcoded 70px padding on desktop resolution
 		if (env === 'lg') {
 			paddingTop -= 70;
 		}
 
 		panelEl.style.paddingTop = `${paddingTop}px`;
-
 	}
 
 	var lastBSEnv = '';
