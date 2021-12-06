@@ -1,6 +1,4 @@
-"use strict";
-
-/*globals ajaxify, config, utils, app, socket, window, document, $*/
+'use strict';
 
 $(document).ready(function () {
 	setupNProgress();
@@ -32,7 +30,8 @@ $(document).ready(function () {
 		const headerRect = headerEl.getBoundingClientRect();
 		const headerStyle = window.getComputedStyle(headerEl);
 
-		let offset = headerRect.y + headerRect.height + (parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
+		let offset = headerRect.y + headerRect.height +
+			(parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
 		// body element itself introduces a hardcoded 70px padding on desktop resolution
 		if (env === 'lg') {
 			offset -= 70;
@@ -52,7 +51,7 @@ $(document).ready(function () {
 			return;
 		}
 		lastBSEnv = env;
-		var navbarEl = $(".navbar-fixed-top");
+		var navbarEl = $('.navbar-fixed-top');
 		navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 		navbarEl.css('top', '');
 
@@ -64,7 +63,7 @@ $(document).ready(function () {
 
 		function fixTopCss(topValue) {
 			if (ajaxify.data.template.topic) {
-				$('.topic .topic-header').css({top: topValue });
+				$('.topic .topic-header').css({ top: topValue });
 			} else {
 				var topicListHeader = $('.topic-list-header');
 				if (topicListHeader.length) {
@@ -74,12 +73,12 @@ $(document).ready(function () {
 		}
 
 		navbarEl.off('show.autoHidingNavbar')
-			.on('show.autoHidingNavbar', function() {
+			.on('show.autoHidingNavbar', function () {
 				fixTopCss('');
 			});
 
 		navbarEl.off('hide.autoHidingNavbar')
-			.on('hide.autoHidingNavbar', function() {
+			.on('hide.autoHidingNavbar', function () {
 				fixTopCss('0px');
 			});
 	}
@@ -164,7 +163,8 @@ $(document).ready(function () {
 	function setupEditedByIcon() {
 		function activateEditedTooltips() {
 			$('[data-pid] [component="post/editor"]').each(function () {
-				var el = $(this), icon;
+				var el = $(this);
+				var icon;
 
 				if (!el.attr('data-editor')) {
 					return;
@@ -359,7 +359,7 @@ $(document).ready(function () {
 									}
 								});
 						});
-					})
+					});
 				}
 			}
 
@@ -449,13 +449,13 @@ $(document).ready(function () {
 	}
 
 	function setupFavouriteMorph(parent, uid, username) {
-		require(['api'], function (api) {
+		require(['api', 'alerts'], function (api, alerts) {
 			parent.find('.btn-morph').click(function (ev) {
 				var type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
 				var method = $(this).hasClass('plus') ? 'put' : 'del';
 
 				api[method]('/users/' + uid + '/follow').then(() => {
-					app.alertSuccess('[[global:alert.' + type + ', ' + username + ']]');
+					alerts.success('[[global:alert.' + type + ', ' + username + ']]');
 				});
 
 				$(this).toggleClass('plus').toggleClass('heart');
@@ -465,9 +465,9 @@ $(document).ready(function () {
 					$(this).prepend('<b class="drop"></b>');
 				}
 
-				var drop = $(this).find('b.drop').removeClass('animate'),
-					x = ev.pageX - drop.width() / 2 - $(this).offset().left,
-					y = ev.pageY - drop.height() / 2 - $(this).offset().top;
+				var drop = $(this).find('b.drop').removeClass('animate');
+				var x = ev.pageX - (drop.width() / 2) - $(this).offset().left;
+				var y = ev.pageY - (drop.height() / 2) - $(this).offset().top;
 
 				drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 			});
