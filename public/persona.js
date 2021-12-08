@@ -30,8 +30,11 @@ $(document).ready(function () {
 		const headerRect = headerEl.getBoundingClientRect();
 		const headerStyle = window.getComputedStyle(headerEl);
 
-		let offset = headerRect.y + headerRect.height +
-			(parseInt(headerStyle.marginTop, 10) || 0) + (parseInt(headerStyle.marginBottom, 10) || 0);
+		let offset =
+			headerRect.y + headerRect.height +
+			(parseInt(headerStyle.marginTop, 10) || 0) +
+			(parseInt(headerStyle.marginBottom, 10) || 0);
+
 		// body element itself introduces a hardcoded 70px padding on desktop resolution
 		if (env === 'lg') {
 			offset -= 70;
@@ -253,7 +256,9 @@ $(document).ready(function () {
 
 			$(window).on('resize action:ajaxify.start', function () {
 				navSlideout.close();
-				if (chatsSlideout) { chatsSlideout.close(); }
+				if (chatsSlideout) {
+					chatsSlideout.close();
+				}
 				$('.account .cover').css('top', $('[component="navbar"]').height());
 			});
 
