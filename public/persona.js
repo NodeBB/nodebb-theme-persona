@@ -259,7 +259,6 @@ $(document).ready(function () {
 				if (chatsSlideout) {
 					chatsSlideout.close();
 				}
-				$('.account .cover').css('top', $('[component="navbar"]').height());
 			});
 
 			navSlideout
