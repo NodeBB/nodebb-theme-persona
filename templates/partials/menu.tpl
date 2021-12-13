@@ -204,7 +204,7 @@
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}">
 						<a title="{navigation.title}" class="navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
-						{{{ if navigation.dropdown }}} href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.properties.targetBlank }}} target="_blank"{{{ end }}}>
+						{{{ if navigation.dropdown }}} href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 							{{{ if navigation.iconClass }}}
 							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
 							{{{ end }}}
