@@ -28,7 +28,7 @@ define('persona/quickreply', [
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
 
 		var ready = true;
-		components.get('topic/quickreply/button').on('click', function(e) {
+		components.get('topic/quickreply/button').on('click', function (e) {
 			e.preventDefault();
 			if (!ready) {
 				return;
@@ -54,7 +54,7 @@ define('persona/quickreply', [
 						message: data.message,
 						timeout: 10000,
 						clickfn: function () {
-							ajaxify.go(`/post-queue#${data.id}`);
+							ajaxify.go(`/post-queue/${data.id}`);
 						},
 					});
 				}
