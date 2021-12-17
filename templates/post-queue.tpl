@@ -7,9 +7,11 @@
 	<div class="col-xs-12">
 		<div class="post-queue preventSlideout posts-list">
 			{{{ if !posts.length }}}
+			{{{ if isAdmin }}}
 			<p class="panel-body">
 				[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
 			</p>
+			{{{ end }}}
 			{{{ end }}}
 
 			{{{ each posts }}}
@@ -62,9 +64,14 @@
 					</div>
 				</div>
 				<div class="panel-footer text-right">
-					<div class="btn-group">
-						<button class="btn btn-success btn-xs" data-action="accept"><i class="fa fa-check"></i> [[post-queue:accept]] </button>
-						<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-times"></i> [[post-queue:reject]]</button>
+					<div>
+						{{{ if canAccept }}}
+						<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:reject]]</button>
+						<button class="btn btn-info btn-xs" data-action="notify"><i class="fa fa-fw fa-bell-o"></i> [[post-queue:notify]]</button>
+						<button class="btn btn-success btn-xs" data-action="accept"><i class="fa fa-fw fa-check"></i> [[post-queue:accept]] </button>
+						{{{ else }}}
+						<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:remove]]</button>
+						{{{ end }}}
 					</div>
 				</div>
 			</div>

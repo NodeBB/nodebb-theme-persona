@@ -48,7 +48,15 @@ define('persona/quickreply', [
 					return alerts.error(err);
 				}
 				if (data && data.queued) {
-					alerts.success(data.message);
+					alerts.alert({
+						type: 'success',
+						title: '[[global:alert.success]]',
+						message: data.message,
+						timeout: 10000,
+						clickfn: function () {
+							ajaxify.go(`/post-queue#${data.id}`);
+						},
+					});
 				}
 
 				components.get('topic/quickreply/text').val('');
