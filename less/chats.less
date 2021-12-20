@@ -25,6 +25,7 @@
 .chats-full, .chat-modal {
 	display: flex;
 	flex-wrap: nowrap;
+	height: calc(100vh - var(--panel-offset) - 70px);
 
 	[component="chat/nav-wrapper"] {
 		flex: 1;
@@ -606,6 +607,10 @@
 
 		[component="chat/nav-wrapper"][data-loaded="0"] + [component="chat/main-wrapper"] {
 			display: none;
+		}
+
+		.chats-full, .chat-modal {
+			height: calc(100vh - var(--panel-offset));
 		}
 	}
 
