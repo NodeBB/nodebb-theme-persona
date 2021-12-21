@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
             </li>
         </ul>
     </div>
