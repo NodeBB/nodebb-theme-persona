@@ -54,7 +54,7 @@
 				{{{ if topics.tags.length }}}
 				<span class="tag-list hidden-xs">
 					{{{each topics.tags}}}
-					<a href="{config.relative_path}/tags/{topics.tags.valueEscaped}"><span class="tag tag-item tag-class-{topics.tags.class}" style="{{{ if topics.tags.color }}}color: {topics.tags.color};{{{ end }}}{{{ if topics.tags.bgColor }}}background-color: {topics.tags.bgColor};{{{ end }}}">{topics.tags.valueEscaped}</span></a>
+					<a href="{config.relative_path}/tags/{topics.tags.valueEncoded}"><span class="tag tag-item tag-class-{topics.tags.class}">{topics.tags.valueEscaped}</span></a>
 					{{{end}}}
 					<small>&bull;</small>
 				</span>
