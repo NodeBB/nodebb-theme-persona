@@ -13,7 +13,7 @@
 				{{{ if config.searchEnabled }}}
 				<div class="navbar-search visible-xs pull-right">
 					<form action="{config.relative_path}/search" method="GET">
-						<button type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+						<button type="button" class="btn btn-link"><i class="fa fa-lg fa-fw fa-search" title="[[global:header.search]]"></i></button>
 						<input autocomplete="off" type="text" class="form-control hidden" name="term" placeholder="[[global:search]]"/>
 						<button class="btn btn-primary hidden" type="submit"></button>
 						<input type="text" class="hidden" name="in" value="{config.searchDefaultInQuick}" />
