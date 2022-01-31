@@ -10,10 +10,6 @@ $(document).ready(function () {
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', updatePanelOffset);
 
-	$(window).on('action:app.loggedIn', function () {
-		setupMobileMenu();
-	});
-
 	$(window).on('action:app.load', function () {
 		setupTaskbar();
 		setupMobileMenu();
@@ -196,14 +192,14 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['pulling', 'storage'], function (Pulling, Storage) {
+		require(['pulling', 'storage', 'alerts'], function (Pulling, Storage, alerts) {
 			if (!Pulling) {
 				return;
 			}
 
 			// initialization
 
-			var chatMenuVisible = !config.disableChat && app.user && parseInt(app.user.uid, 10);
+			var chatMenuVisible = app.user && parseInt(app.user.uid, 10);
 			var swapped = !!Storage.getItem('persona:menus:legacy-layout');
 			var margin = window.innerWidth;
 
@@ -285,19 +281,16 @@ $(document).ready(function () {
 				navSlideout.enable().toggle();
 			});
 
-			function loadNotifications() {
-				require(['notifications'], function (notifications) {
-					const notifList = $('#menu [data-section="notifications"] ul');
-					notifications.loadNotifications(notifList, function () {
-						notifList.find('.deco-none').removeClass('deco-none');
-						console.log(notifList.find('.deco-none'));
+			if (chatMenuVisible) {
+				chatsSlideout.on('opened', function loadNotifications() {
+					require(['notifications'], function (notifications) {
+						const notifList = $('#chats-menu [data-section="notifications"] ul');
+						notifications.loadNotifications(notifList, function () {
+							notifList.find('.deco-none').removeClass('deco-none');
+						});
 					});
 				});
-			}
 
-			navSlideout.on('opened', loadNotifications);
-
-			if (chatMenuVisible) {
 				navSlideout.on('beforeopen', function () {
 					chatsSlideout.close();
 					chatsSlideout.disable();
@@ -306,13 +299,16 @@ $(document).ready(function () {
 				});
 			}
 
-			$('#menu [data-section="navigation"] ul').html($('#main-nav').html() + ($('#search-menu').html() || '') + ($('#logged-out-menu').html() || ''));
+			$('#menu [data-section="navigation"] ul').html(
+				$('#main-nav').html() +
+				($('#logged-out-menu').html() || '')
+			);
 
-			$('#user-control-list').children().clone(true, true).appendTo($('#menu [data-section="profile"] ul'));
+			$('#user-control-list').children().clone(true, true).appendTo($('#chats-menu [data-section="profile"] ul'));
 
 			socket.on('event:user_status_change', function (data) {
 				if (parseInt(data.uid, 10) === app.user.uid) {
-					app.updateUserStatus($('#menu [component="user/status"]'), data.status);
+					app.updateUserStatus($('#chats-menu [component="user/status"]'), data.status);
 					navSlideout.close();
 				}
 			});
@@ -343,6 +339,27 @@ $(document).ready(function () {
 						navSlideout.enable();
 					});
 			}
+
+			const searchInputEl = $('.navbar-header .navbar-search input[name="term"]');
+			const searchButton = $('.navbar-header .navbar-search button[type="button"]');
+			searchButton.off('click').on('click', function () {
+				if (!config.loggedIn && !app.user.privileges['search:content']) {
+					alerts.alert({
+						message: '[[error:search-requires-login]]',
+						timeout: 3000,
+					});
+					ajaxify.go('login');
+					return false;
+				}
+
+				searchButton.addClass('hidden');
+				searchInputEl.removeClass('hidden').focus();
+				searchInputEl.off('blur').on('blur', function () {
+					searchInputEl.addClass('hidden');
+					searchButton.removeClass('hidden');
+				});
+				return false;
+			});
 
 			// add a checkbox in the user settings page
 			// so users can swap the sides the menus appear on

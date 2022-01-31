@@ -63,15 +63,50 @@
 			left: auto;
 			right: 7px;
 			top: 10px;
-
+			&[component="notifications/icon"] {
+				right: 41px;
+			}
 			&.unread-count::after {
 				position: static;
 			}
 		}
 	}
+	.navbar-header .navbar-search {
+		input[name="term"] {
+			width: 150px;
+		}
 
-	#menu {
-		padding-top: 100px;
+		padding: 4px 0px 4px 0px;
+	}
+	#menu .menu-section {
+		padding-top: 20px;
+	}
+	#chats-menu {
+		.nav-pills {
+			[component="user/status"] {
+				position: absolute;
+				right: 20px;
+			}
+
+			background-color: #101010;
+			height: 50px;
+			li {
+				margin: 0;
+				padding: 0;
+				width: 33%;
+				text-align: center;
+				height: 100%;
+				a {
+					height: 100%;
+					padding-top: 15px;
+				}
+				&.active {
+					a {
+						background-color: #1D1F20;
+					}
+				}
+			}
+		}
 	}
 
 	.slideout-menu {
@@ -170,7 +205,6 @@
 			font-style: normal;
 
 			&:after {
-				left: 5px;
 				top: -1px;
 				padding: 3px 7px;
 				background: #333;
@@ -189,10 +223,6 @@
 		margin: 0;
 	}
 
-	.menu-section {
-		margin: 25px 0;
-	}
-
 	.menu-section-title {
 		text-transform: uppercase;
 		color: #85888d;
@@ -205,7 +235,7 @@
 
 	.menu-section-list {
 		padding: 0;
-		margin: 10px 0;
+		margin: 0;
 		list-style: none;
 
 		a, button {
