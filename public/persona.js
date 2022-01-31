@@ -192,7 +192,7 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['pulling', 'storage', 'alerts'], function (Pulling, Storage, alerts) {
+		require(['pulling', 'storage', 'alerts', 'search'], function (Pulling, Storage, alerts, search) {
 			if (!Pulling) {
 				return;
 			}
@@ -354,12 +354,22 @@ $(document).ready(function () {
 
 				searchButton.addClass('hidden');
 				searchInputEl.removeClass('hidden').focus();
-				searchInputEl.off('blur').on('blur', function () {
-					searchInputEl.addClass('hidden');
-					searchButton.removeClass('hidden');
-				});
 				return false;
 			});
+			searchInputEl.on('blur', function () {
+				searchInputEl.addClass('hidden');
+				searchButton.removeClass('hidden');
+			});
+			search.enableQuickSearch({
+				searchElements: {
+					inputEl: searchInputEl,
+					resultEl: $('.navbar-header .navbar-search .quick-search-container'),
+				},
+				searchOptions: {
+					in: config.searchDefaultInQuick,
+				},
+			});
+
 
 			// add a checkbox in the user settings page
 			// so users can swap the sides the menus appear on

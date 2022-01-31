@@ -18,6 +18,9 @@
 						<button class="btn btn-primary hidden" type="submit"></button>
 						<input type="text" class="hidden" name="in" value="{config.searchDefaultInQuick}" />
 					</form>
+					<div class="quick-search-container hidden">
+						<div class="quick-search-results-container"></div>
+					</div>
 				</div>
 				{{{ end }}}
 
