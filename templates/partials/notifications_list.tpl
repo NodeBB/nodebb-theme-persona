@@ -15,8 +15,8 @@
 
 	{{{ if ./nid }}}<div class="pull-right mark-read" aria-label="Mark Read"></div>{{{ end }}}
 	<a href="{notifications.path}" class="deco-none">
-		<span class="pull-right relTime">{notifications.timeago}</span>
 		<span class="text">{notifications.bodyShort}</span>
+		<span class="pull-right relTime">{notifications.timeago}</span>
 	</a>
 	<div class="clear"></div>
 </li>
