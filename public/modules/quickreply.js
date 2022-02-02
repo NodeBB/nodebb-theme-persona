@@ -1,8 +1,8 @@
 'use strict';
 
 define('persona/quickreply', [
-	'components', 'composer/autocomplete', 'api', 'alerts',
-], function (components, autocomplete, api, alerts) {
+	'components', 'composer/autocomplete', 'api', 'alerts', 'uploadHelpers',
+], function (components, autocomplete, api, alerts, uploadHelpers) {
 	var QuickReply = {};
 
 	QuickReply.init = function () {
@@ -26,6 +26,22 @@ define('persona/quickreply', [
 		autocomplete._active.persona_qr = autocomplete.setup(data);
 		// data.element.textcomplete(data.strategies, data.options);
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
+
+
+		uploadHelpers.init({
+			dragDropAreaEl: $('[component="topic/quickreply/container"] .quickreply-message'),
+			pasteEl: element,
+			uploadFormEl: $('[component="topic/quickreply/upload"]'),
+			inputEl: element,
+			route: '/api/post/upload',
+			callback: function (uploads) {
+				let text = element.val();
+				uploads.forEach((upload) => {
+					text = text + (text ? '\n' : '') + (upload.isImage ? '!' : '') + `[${upload.filename}](${upload.url})`;
+				});
+				element.val(text);
+			},
+		});
 
 		var ready = true;
 		components.get('topic/quickreply/button').on('click', function (e) {

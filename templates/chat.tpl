@@ -21,8 +21,12 @@
 					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>
 					<button class="btn btn-primary" type="button" data-action="send"><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
 					<span component="chat/message/remaining">{maximumChatMessageLength}</span>
+					<form component="chat/upload" method="post" enctype="multipart/form-data">
+						<input type="file" name="files[]" multiple class="hidden"/>
+					</form>
 				</div>
 			</div>
+			<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 		</div>
 	</div>
 </div>

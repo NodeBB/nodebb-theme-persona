@@ -13,4 +13,5 @@
 	<div component="chat/main-wrapper">
 		<!-- IMPORT partials/chats/message-window.tpl -->
 	</div>
+	<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 </div>
