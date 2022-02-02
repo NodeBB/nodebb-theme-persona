@@ -36,6 +36,7 @@ $(document).ready(function () {
 			offset -= 70;
 		}
 
+		offset = Math.max(0, offset);
 		document.documentElement.style.setProperty('--panel-offset', `${offset}px`);
 	}
 

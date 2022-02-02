@@ -1,8 +1,8 @@
 <!-- IF roomId -->
 <div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 	<div component="chat/header">
-		<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
 		<button type="button" class="close" aria-label="Close" data-action="close"><span aria-hidden="true">&times;</span></button>
+		<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
 
 		<!-- IMPORT partials/chats/options.tpl -->
 		<span class="members">
