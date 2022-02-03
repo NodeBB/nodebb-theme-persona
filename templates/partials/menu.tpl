@@ -1,6 +1,6 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle pull-left" id="mobile-menu">
-					<i class="fa fa-lg fa-fw fa-bars"></i>
+					<i class="fa fa-lg fa-fw fa-bars unread-count" data-content="{unreadCount.topic}"></i>
 				</button>
 				{{{ if config.loggedIn }}}
 				<button type="button" class="navbar-toggle" id="mobile-chats">
