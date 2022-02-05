@@ -283,15 +283,6 @@ $(document).ready(function () {
 			});
 
 			if (chatMenuVisible) {
-				chatsSlideout.on('opened', function loadNotifications() {
-					require(['notifications'], function (notifications) {
-						const notifList = $('#chats-menu [data-section="notifications"] ul');
-						notifications.loadNotifications(notifList, function () {
-							notifList.find('.deco-none').removeClass('deco-none');
-						});
-					});
-				});
-
 				navSlideout.on('beforeopen', function () {
 					chatsSlideout.close();
 					chatsSlideout.disable();
@@ -314,11 +305,15 @@ $(document).ready(function () {
 				}
 			});
 
-			// right slideout chats menu
+			// right slideout notifications & chats menu
 
-			function loadChats() {
-				require(['chat'], function (chat) {
-					chat.loadChatsDropdown($('#chats-menu .chat-list'));
+			function loadNotificationsAndChats() {
+				require(['notifications', 'chat'], function (notifications, chat) {
+					const notifList = $('#chats-menu [data-section="notifications"] ul');
+					notifications.loadNotifications(notifList, function () {
+						notifList.find('.deco-none').removeClass('deco-none');
+						chat.loadChatsDropdown($('#chats-menu .chat-list'));
+					});
 				});
 			}
 
@@ -332,7 +327,7 @@ $(document).ready(function () {
 				});
 
 				chatsSlideout
-					.on('opened', loadChats)
+					.on('opened', loadNotificationsAndChats)
 					.on('beforeopen', function () {
 						navSlideout.close().disable();
 					})
