@@ -36,7 +36,11 @@
 				{{{ if !feeds:disableRSS }}}
 				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				{{{ end }}}
+				{{{ if browsingUsers }}}
+				<div class="inline-block hidden-xs">
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
+				</div>
+				{{{ end }}}
 
 				<!-- IMPORT partials/post_bar.tpl -->
 			</div>
@@ -70,6 +74,13 @@
 				{renderTopicEvents(@index, config.topicPostSort)}
 			{{{end}}}
 		</ul>
+
+		{{{ if browsingUsers }}}
+		<div class="visible-xs">
+			<!-- IMPORT partials/topic/browsing-users.tpl -->
+			<hr/>
+		</div>
+		{{{ end }}}
 
 		<!-- IF config.enableQuickReply -->
 		<!-- IMPORT partials/topic/quickreply.tpl -->
