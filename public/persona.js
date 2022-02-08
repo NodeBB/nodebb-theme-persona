@@ -45,42 +45,49 @@ $(document).ready(function () {
 		if (!$.fn.autoHidingNavbar) {
 			return;
 		}
-		var env = utils.findBootstrapEnvironment();
-		// if env didn't change don't destroy and recreate
-		if (env === lastBSEnv) {
-			return;
-		}
-		lastBSEnv = env;
-		var navbarEl = $('.navbar-fixed-top');
-		navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
-		navbarEl.css('top', '');
 
-		if (env === 'xs' || env === 'sm') {
-			navbarEl.autoHidingNavbar({
-				showOnBottom: false,
-			});
-		}
-
-		function fixTopCss(topValue) {
-			if (ajaxify.data.template.topic) {
-				$('.topic .topic-header').css({ top: topValue });
-			} else {
-				var topicListHeader = $('.topic-list-header');
-				if (topicListHeader.length) {
-					topicListHeader.css({ top: topValue });
-				}
+		require(['hooks'], (hooks) => {
+			var env = utils.findBootstrapEnvironment();
+			// if env didn't change don't destroy and recreate
+			if (env === lastBSEnv) {
+				return;
 			}
-		}
+			lastBSEnv = env;
+			var navbarEl = $('.navbar-fixed-top');
+			navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
+			navbarEl.css('top', '');
 
-		navbarEl.off('show.autoHidingNavbar')
-			.on('show.autoHidingNavbar', function () {
-				fixTopCss('');
-			});
+			hooks.fire('filter:persona.configureNavbarHiding', {
+				resizeEnvs: ['xs', 'sm'],
+			}).then(({ resizeEnvs }) => {
+				if (resizeEnvs.includes(env)) {
+					navbarEl.autoHidingNavbar({
+						showOnBottom: false,
+					});
+				}
 
-		navbarEl.off('hide.autoHidingNavbar')
-			.on('hide.autoHidingNavbar', function () {
-				fixTopCss('0px');
+				function fixTopCss(topValue) {
+					if (ajaxify.data.template.topic) {
+						$('.topic .topic-header').css({ top: topValue });
+					} else {
+						var topicListHeader = $('.topic-list-header');
+						if (topicListHeader.length) {
+							topicListHeader.css({ top: topValue });
+						}
+					}
+				}
+
+				navbarEl.off('show.autoHidingNavbar')
+					.on('show.autoHidingNavbar', function () {
+						fixTopCss('');
+					});
+
+				navbarEl.off('hide.autoHidingNavbar')
+					.on('hide.autoHidingNavbar', function () {
+						fixTopCss('0px');
+					});
 			});
+		});
 	}
 
 	function setupNProgress() {
