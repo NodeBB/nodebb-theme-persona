@@ -46,7 +46,14 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['hooks'], (hooks) => {
+		require(['hooks', 'storage'], (hooks, Storage) => {
+			let preference = ['xs', 'sm'];
+
+			try {
+				preference = JSON.parse(Storage.getItem('persona:navbar:autohide'));
+			} catch (e) {
+				console.warn('[persona/settings] Unable to parse value for navbar autohiding');
+			}
 			var env = utils.findBootstrapEnvironment();
 			// if env didn't change don't destroy and recreate
 			if (env === lastBSEnv) {
@@ -58,7 +65,7 @@ $(document).ready(function () {
 			navbarEl.css('top', '');
 
 			hooks.fire('filter:persona.configureNavbarHiding', {
-				resizeEnvs: ['xs', 'sm'],
+				resizeEnvs: preference,
 			}).then(({ resizeEnvs }) => {
 				if (resizeEnvs.includes(env)) {
 					navbarEl.autoHidingNavbar({

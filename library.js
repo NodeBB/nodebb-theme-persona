@@ -2,15 +2,23 @@
 
 const meta = require.main.require('./src/meta');
 const user = require.main.require('./src/user');
+const translator = require.main.require('./src/translator');
+
+const controllers = require('./lib/controllers');
 
 const library = module.exports;
 
 library.init = async function (params) {
 	const { router, middleware } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
-	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', middleware, [], (req, res) => {
-		res.render('admin/plugins/persona', {});
-	});
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', middleware, [], controllers.renderAdminPage);
+
+	routeHelpers.setupPageRoute(router, '/user/:userslug/theme', middleware, [
+		middleware.exposeUid,
+		middleware.ensureLoggedIn,
+		middleware.canViewUsers,
+		middleware.checkAccountPermissions,
+	], controllers.renderThemeSettings);
 };
 
 library.addAdminNavigation = async function (header) {
@@ -20,6 +28,24 @@ library.addAdminNavigation = async function (header) {
 		name: 'Persona Theme',
 	});
 	return header;
+};
+
+library.addProfileItem = async (data) => {
+	data.links.push({
+		id: 'theme',
+		route: 'theme',
+		icon: 'fa-paint-brush',
+		name: await translator.translate('[[persona:settings.title]]'),
+		visibility: {
+			self: true,
+			other: false,
+			moderator: false,
+			globalMod: false,
+			admin: false,
+		},
+	});
+
+	return data;
 };
 
 library.defineWidgetAreas = async function (areas) {
