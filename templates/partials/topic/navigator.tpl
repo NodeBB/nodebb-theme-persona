@@ -25,7 +25,14 @@
                         </div>
                     </div>
                 </div>
-                <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                    </div>
+                    <div class="col-xs-6">
+                        <button id="myNextPostBtn" class="btn btn-default form-control" disabled>[[topic:go-to-my-next-post]]</button>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
