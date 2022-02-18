@@ -13,7 +13,7 @@
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js",
-		"admin/plugins/persona.js": "public/admin.js",
+		"../admin/plugins/persona.js": "public/admin.js",
 		"persona/quickreply.js": "public/modules/quickreply.js"
 	},
 	"languages": "languages"
