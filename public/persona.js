@@ -379,33 +379,6 @@ $(document).ready(function () {
 					in: config.searchDefaultInQuick,
 				},
 			});
-
-
-			// add a checkbox in the user settings page
-			// so users can swap the sides the menus appear on
-
-			function setupSetting() {
-				if (ajaxify.data.template['account/settings'] && !document.getElementById('persona:menus:legacy-layout')) {
-					require(['translator'], function (translator) {
-						translator.translate('[[persona:mobile-menu-side]]', function (translated) {
-							$('<div class="well checkbox"><label><input type="checkbox" id="persona:menus:legacy-layout"/><strong>' + translated + '</strong></label></div>')
-								.appendTo('#content .account > .row > div:first-child')
-								.find('input')
-								.prop('checked', Storage.getItem('persona:menus:legacy-layout', 'true'))
-								.change(function (e) {
-									if (e.target.checked) {
-										Storage.setItem('persona:menus:legacy-layout', 'true');
-									} else {
-										Storage.removeItem('persona:menus:legacy-layout');
-									}
-								});
-						});
-					});
-				}
-			}
-
-			$(window).on('action:ajaxify.end', setupSetting);
-			setupSetting();
 		});
 	}
 
