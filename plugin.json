@@ -5,6 +5,7 @@
 		{ "hook": "filter:config.get", "method": "getThemeConfig" },
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:user.profileMenu", "method": "addProfileItem" },
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
@@ -14,7 +15,8 @@
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js",
 		"../admin/plugins/persona.js": "public/admin.js",
-		"persona/quickreply.js": "public/modules/quickreply.js"
+		"persona/quickreply.js": "public/modules/quickreply.js",
+		"../client/account/theme.js": "public/settings.js"
 	},
 	"languages": "languages"
 }

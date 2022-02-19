@@ -46,7 +46,14 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['hooks'], (hooks) => {
+		require(['hooks', 'storage'], (hooks, Storage) => {
+			let preference = ['xs', 'sm'];
+
+			try {
+				preference = JSON.parse(Storage.getItem('persona:navbar:autohide'));
+			} catch (e) {
+				console.warn('[persona/settings] Unable to parse value for navbar autohiding');
+			}
 			var env = utils.findBootstrapEnvironment();
 			// if env didn't change don't destroy and recreate
 			if (env === lastBSEnv) {
@@ -58,7 +65,7 @@ $(document).ready(function () {
 			navbarEl.css('top', '');
 
 			hooks.fire('filter:persona.configureNavbarHiding', {
-				resizeEnvs: ['xs', 'sm'],
+				resizeEnvs: preference,
 			}).then(({ resizeEnvs }) => {
 				if (resizeEnvs.includes(env)) {
 					navbarEl.autoHidingNavbar({
@@ -372,33 +379,6 @@ $(document).ready(function () {
 					in: config.searchDefaultInQuick,
 				},
 			});
-
-
-			// add a checkbox in the user settings page
-			// so users can swap the sides the menus appear on
-
-			function setupSetting() {
-				if (ajaxify.data.template['account/settings'] && !document.getElementById('persona:menus:legacy-layout')) {
-					require(['translator'], function (translator) {
-						translator.translate('[[persona:mobile-menu-side]]', function (translated) {
-							$('<div class="well checkbox"><label><input type="checkbox" id="persona:menus:legacy-layout"/><strong>' + translated + '</strong></label></div>')
-								.appendTo('#content .account > .row > div:first-child')
-								.find('input')
-								.prop('checked', Storage.getItem('persona:menus:legacy-layout', 'true'))
-								.change(function (e) {
-									if (e.target.checked) {
-										Storage.setItem('persona:menus:legacy-layout', 'true');
-									} else {
-										Storage.removeItem('persona:menus:legacy-layout');
-									}
-								});
-						});
-					});
-				}
-			}
-
-			$(window).on('action:ajaxify.end', setupSetting);
-			setupSetting();
 		});
 	}
 
