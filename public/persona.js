@@ -50,7 +50,7 @@ $(document).ready(function () {
 			let preference = ['xs', 'sm'];
 
 			try {
-				preference = JSON.parse(Storage.getItem('persona:navbar:autohide'));
+				preference = JSON.parse(Storage.getItem('persona:navbar:autohide')) || preference;
 			} catch (e) {
 				console.warn('[persona/settings] Unable to parse value for navbar autohiding');
 			}
