@@ -32,7 +32,7 @@
 		margin-bottom: 1em;
 		background-origin: content-box;
 		width: 100%;
-		top: calc(var(--panel-offset) + @navbar-height);
+		top: calc(var(--panel-offset) - 20px);
 		position: absolute;
 		left: auto;
 		right: 0px;
@@ -163,6 +163,12 @@
 
 		> * {
 			pointer-events: all;
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		.cover {
+			top: calc(var(--panel-offset) + @navbar-height);
 		}
 	}
 
