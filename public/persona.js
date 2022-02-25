@@ -207,7 +207,7 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['pulling', 'storage', 'alerts', 'search'], function (Pulling, Storage, alerts, search) {
+		require(['pulling/build/pulling-drawer', 'storage', 'alerts', 'search'], function (Pulling, Storage, alerts, search) {
 			if (!Pulling) {
 				return;
 			}
