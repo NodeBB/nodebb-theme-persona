@@ -174,10 +174,10 @@
 	}
 
 	> li {
+		display: flex;
 		position: relative;
 		clear: both;
 		list-style-type: none;
-		padding: 0.5em;
 		height: 80px;
 		.pointer;
 
@@ -195,34 +195,29 @@
 		&.unread {
 			background: lighten(@brand-primary, 35%);
 			border-bottom: 0;
-
 		}
 
 		.teaser-content {
-			display: block;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			font-size: 13px;
 			opacity: 0.8;
 		}
 
-		.room-name {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: block;
-			[component="chat/title"] {
-				overflow: hidden;
-    			white-space: nowrap;
-    			text-overflow: ellipsis;
-    			max-width: 350px;
-    			display: inline-block;
-			}
-		}
+		.notification-chat-content {
+			padding: 0.5em;
 
-		.teaser-content, .room-name {
-			padding-left: 80px;
+			.room-name {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: block;
+				[component="chat/title"] {
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					max-width: 350px;
+					display: inline-block;
+				}
+			}
 		}
 
 		&.bg-primary {
@@ -307,25 +302,13 @@
 		}
 
 		.main-avatar {
-			position: absolute;
-			top: 0px;
-			left: 0px;
-
 			.avatar {
 				height: 80px;
 				width: 80px;
 				font-size: 40px;
 				border-radius: 0;
+				background: @gray-lighter;
 			}
-		}
-
-		.avatar-placeholder {
-			height: 80px;
-			width: 80px;
-			background: @gray-lighter;
-			position: absolute;
-			top: 0px;
-			left: 0px;
 		}
 	}
 }

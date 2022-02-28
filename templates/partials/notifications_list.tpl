@@ -13,11 +13,11 @@
 	<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left avatar avatar-md avatar-rounded" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 	<!-- ENDIF notifications.image -->
 
-	<a href="{notifications.path}" class="notification-content deco-none">
+	<a href="{notifications.path}" class="notification-chat-content deco-none">
 		<span class="text">{notifications.bodyShort}</span>
 	</a>
 
-	<div class="notification-controls">
+	<div class="notification-chat-controls">
 		{{{ if ./nid }}}<div class="mark-read" aria-label="Mark Read"></div>{{{ end }}}
 		<span class="relTime">{notifications.timeago}</span>
 	</div>

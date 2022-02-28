@@ -29,7 +29,7 @@
 				}
 			}
 
-			.notification-content {
+			.notification-chat-content {
 				flex: 1;
 
 				a {
@@ -46,7 +46,7 @@
 				}
 			}
 
-			.notification-controls {
+			.notification-chat-controls {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -95,14 +95,19 @@
 		> li {
 			.pointer;
 			width: 500px;
-			padding-bottom: 1rem;
+			padding: 0;
 			margin: 0;
+			gap: 0;
+
+			.notification-chat-content {
+				padding: 0.5em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 
 			.teaser-content {
 				white-space: nowrap;
 				max-height: 19px;
-				padding-left: 90px;
-    			padding-right: 10px;
 			}
 
 			&:not(:last-child) {
