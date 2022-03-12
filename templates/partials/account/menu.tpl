@@ -33,16 +33,26 @@
 		<!-- ENDIF canEdit -->
 
 		<!-- IF !isSelf -->
-		<!-- IF canBan -->
+		{{{ if (canBan || canMute) }}}
 		<li role="separator" class="divider"></li>
 		<li class="dropdown-header">[[user:admin_actions_label]]</li>
+		{{{ end }}}
+		{{{ if canBan }}}
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
 			<a component="account/ban" href="#">[[user:ban_account]]</a>
 		</li>
 		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
 			<a component="account/unban" href="#">[[user:unban_account]]</a>
 		</li>
-		<!-- ENDIF canBan -->
+		{{{ end }}}
+		{{{ if canMute }}}
+		<li class="<!-- IF muted -->hide<!-- ENDIF muted -->">
+			<a component="account/mute" href="#">[[user:mute_account]]</a>
+		</li>
+		<li class="<!-- IF !muted -->hide<!-- ENDIF !muted -->">
+			<a component="account/unmute" href="#">[[user:unmute_account]]</a>
+		</li>
+		{{{ end }}}
 		<!-- IF isAdmin -->
 		<li>
 			<a component="account/delete-account" href="#" class="">[[user:delete_account_as_admin]]</a>
