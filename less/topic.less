@@ -41,19 +41,13 @@
 	}
 	.topic-header {
 		position: sticky;
-		top: calc(var(--panel-offset) + @navbar-height);
+		top: var(--panel-offset);
 		background-color: @body-bg;
 		z-index: @zindex-navbar;
 		margin-left: -15px;
 		margin-right: -15px;
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-
-	@media (max-width: @screen-md-max) {
-		.topic-header {
-			top: calc(var(--panel-offset) + @navbar-height - 70px);
-		}
 	}
 
 	.topic-info {
