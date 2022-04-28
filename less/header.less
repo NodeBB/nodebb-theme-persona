@@ -9,36 +9,51 @@
 		max-height: 250px;
 		padding: 0;
 
-		li.no-notifs {
-			text-align: center;
-		}
-
 		li {
+			display: flex;
+			gap: 1rem;
 			width: 400px;
 			text-align: left;
 			list-style-type: none;
-			padding: 0.5em;
-			clear: both;
+			padding: .75em 0.5em;
 
-			&.loading-text {
-				text-align: center;
+			&:hover {
+				background-color: @dropdown-link-hover-bg;
 			}
 
-			a {
-				white-space: normal;
-				margin: 0;
-				text-overflow: ellipsis;
+			&.loading-text, &.no-notifs {
+				justify-content: center;
 
-				.text {
-					margin-left: 40px;
-					margin-right: 60px;
-					display: block;
-					min-height: 32px;
+				a {
+					color: inherit;
 				}
+			}
+
+			.notification-chat-content {
+				flex: 1;
+
+				a {
+					white-space: normal;
+					margin: 0;
+					text-overflow: ellipsis;
+
+					.text {
+						margin-left: 40px;
+						margin-right: 60px;
+						display: block;
+						min-height: 32px;
+					}
+				}
+			}
+
+			.notification-chat-controls {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: .5rem;
+
 				.relTime {
 					font-size: 10px;
-					margin-top: 10px;
-					margin-right: 10px;
 				}
 			}
 
@@ -61,7 +76,11 @@
 			}
 
 			&.unread {
-				.bg-variant(@state-warning-bg);
+				background-color: @state-warning-bg;
+
+				&:hover {
+					background-color: darken(@state-warning-bg, 5%);
+				}
 
 				.mark-read:after {
 					font-weight: 900;
@@ -76,14 +95,20 @@
 		> li {
 			.pointer;
 			width: 500px;
-			padding-bottom: 1rem;
+			padding: 0;
 			margin: 0;
+			gap: 0;
+			overflow-y: hidden;
+
+			.notification-chat-content {
+				padding: 0.5rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 
 			.teaser-content {
 				white-space: nowrap;
 				max-height: 19px;
-				padding-left: 90px;
-    			padding-right: 10px;
 			}
 
 			&:not(:last-child) {

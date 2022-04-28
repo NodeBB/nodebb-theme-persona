@@ -31,13 +31,9 @@ $(document).ready(function () {
 			(parseInt(headerStyle.marginTop, 10) || 0) +
 			(parseInt(headerStyle.marginBottom, 10) || 0);
 
-		// body element itself introduces a hardcoded 70px padding on desktop resolution
-		if (env === 'lg') {
-			offset -= 70;
-		}
-
 		offset = Math.max(0, offset);
 		document.documentElement.style.setProperty('--panel-offset', `${offset}px`);
+		localStorage.setItem('panelOffset', offset);
 	}
 
 	var lastBSEnv = '';
@@ -207,7 +203,7 @@ $(document).ready(function () {
 			return;
 		}
 
-		require(['pulling', 'storage', 'alerts', 'search'], function (Pulling, Storage, alerts, search) {
+		require(['pulling/build/pulling-drawer', 'storage', 'alerts', 'search'], function (Pulling, Storage, alerts, search) {
 			if (!Pulling) {
 				return;
 			}

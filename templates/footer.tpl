@@ -9,10 +9,6 @@
 	</div>
 	<!-- ENDIF !isSpider -->
 
-	<div class="hide">
-	<!-- IMPORT 500-embed.tpl -->
-	</div>
-
 	<!-- IMPORT partials/footer/js.tpl -->
 </body>
 </html>
