@@ -148,6 +148,7 @@
 						{{{ end }}}
 						<li role="separator" class="divider"></li>
 						{{{ if privileges.ban }}}<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>{{{ end }}}
+						{{{ if privileges.mute}}}<li><a href="#" data-action="mute">[[user:mute_account]]</a></li>{{{ end }}}
 						{{{ if privileges.admin:users }}}
 						<li><a href="#" data-action="delete-account">[[user:delete_account_as_admin]]</a></li>
 						<li><a href="#" data-action="delete-content">[[user:delete_content]]</a></li>
