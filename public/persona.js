@@ -10,8 +10,10 @@ $(document).ready(function () {
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', updatePanelOffset);
 
-	setupTaskbar();
-	setupMobileMenu();
+	$(window).on('action:widgets.loaded', function () {
+		setupTaskbar();
+		setupMobileMenu();
+	});
 
 	function updatePanelOffset() {
 		var env = utils.findBootstrapEnvironment();
