@@ -146,6 +146,49 @@
 					<!-- ENDIF history.bans.length -->
 				</div>
 			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						[[user:info.mute-history]]
+
+						{{{ if !muted }}}
+						{{{ if !isSelf }}}
+						<button class="btn btn-xs pull-right btn-danger" component="account/mute">[[user:mute_account]]</button>
+						{{{ end }}}
+						{{{ else }}}
+						{{{ if !isSelf }}}
+						<button class="btn btn-xs pull-right btn-success" component="account/unmute">[[user:unmute_account]]</button>
+						{{{ end }}}
+						{{{ end }}}
+					</h3>
+				</div>
+				<div class="panel-body">
+					{{{ if history.mutes.length }}}
+					<ul class="ban-history">
+						{{{ each history.mutes }}}
+						<li>
+							<p>
+								<a href="{config.relative_path}/user/{history.mutes.user.userslug}">{buildAvatar(history.mutes.user, "sm", true)}</a>
+								<strong>
+									<a href="<!-- IF history.mutes.user.userslug -->{config.relative_path}/user/{history.mutes.user.userslug}<!-- ELSE -->#<!-- ENDIF history.mutes.user.userslug -->" itemprop="author" data-username="{history.mutes.user.username}" data-uid="{history.mutes.user.uid}">{history.mutes.user.username}</a>
+								</strong>
+								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
+								{{{ if ../until }}}
+								<span class="expiry">[[user:info.muted-until, {../untilReadable}]]</span><br />
+								{{{ end }}}
+
+								<span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
+							</p>
+						</li>
+						{{{end}}}
+					</ul>
+					{{{ else }}}
+					<div class="alert alert-success">[[user:info.no-mute-history]]</div>
+					{{{ end }}}
+				</div>
+			</div>
+
 			<!-- IF isAdminOrGlobalModerator -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
