@@ -147,8 +147,14 @@
 							<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
 						{{{ end }}}
 						<li role="separator" class="divider"></li>
-						{{{ if privileges.ban }}}<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>{{{ end }}}
-						{{{ if privileges.mute}}}<li><a href="#" data-action="mute">[[user:mute_account]]</a></li>{{{ end }}}
+						{{{ if privileges.ban }}}
+						<li class="{{{ if target.user.banned }}}hidden{{{ end }}}"><a href="#" data-action="ban">[[user:ban_account]]</a></li>
+						<li class="{{{ if !target.user.banned }}}hidden{{{ end }}}"><a href="#" data-action="unban">[[user:unban_account]]</a></li>
+						{{{ end }}}
+						{{{ if privileges.mute}}}
+						<li class="{{{ if target.user.muted }}}hidden{{{ end }}}"><a href="#" data-action="mute">[[user:mute_account]]</a></li>
+						<li class="{{{ if !target.user.muted }}}hidden{{{ end }}}"><a href="#" data-action="unmute">[[user:unmute_account]]</a></li>
+						{{{ end }}}
 						{{{ if privileges.admin:users }}}
 						<li><a href="#" data-action="delete-account">[[user:delete_account_as_admin]]</a></li>
 						<li><a href="#" data-action="delete-content">[[user:delete_content]]</a></li>
