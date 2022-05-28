@@ -2,20 +2,15 @@
 
 $(document).ready(function () {
 	setupNProgress();
+	setupTaskbar();
 	setupEditedByIcon();
+	setupMobileMenu();
 	setupQuickReply();
 	configureNavbarHiding();
 	updatePanelOffset();
 
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', updatePanelOffset);
-
-	require(['hooks'], (hooks) => {
-		hooks.on('action:app.load', () => {
-			setupTaskbar();
-			setupMobileMenu();
-		});
-	});
 
 	function updatePanelOffset() {
 		const headerEl = document.getElementById('header-menu');
