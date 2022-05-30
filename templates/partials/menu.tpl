@@ -57,8 +57,12 @@
 									</li>
 								</ul>
 							</li>
-							<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
-							<li class="notif-dropdown-link"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></li>
+							<li class="notif-dropdown-link">
+								<div class="btn-group btn-group-justified">
+									<a role="button" href="#" class="btn btn-secondary mark-all-read"><i class="fa fa-check-double"></i> [[notifications:mark_all_read]]</a>
+									<a class="btn btn-secondary" href="{relative_path}/notifications"><i class="fa fa-list"></i> [[notifications:see_all]]</a>
+								</div>
+							</li>
 						</ul>
 					</li>
 
@@ -75,8 +79,12 @@
 									</li>
 								</ul>
 							</li>
-							<li class="notif-dropdown-link"><a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a></li>
-							<li class="notif-dropdown-link"><a href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see_all]]</a></li>
+							<li class="notif-dropdown-link">
+								<div class="btn-group btn-group-justified">
+									<a class="btn btn-secondary mark-all-read" href="#" component="chats/mark-all-read"><i class="fa fa-check-double"></i> [[modules:chat.mark_all_read]]</a>
+									<a class="btn btn-secondary" href="{relative_path}/user/{user.userslug}/chats"><i class="fa fa-comments"></i> [[modules:chat.see_all]]</a>
+								</div>
+							</li>
 						</ul>
 					</li>
 					<!-- ENDIF canChat -->
