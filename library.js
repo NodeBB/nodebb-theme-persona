@@ -11,9 +11,9 @@ const library = module.exports;
 library.init = async function (params) {
 	const { router, middleware } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
-	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', middleware, [], controllers.renderAdminPage);
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', [], controllers.renderAdminPage);
 
-	routeHelpers.setupPageRoute(router, '/user/:userslug/theme', middleware, [
+	routeHelpers.setupPageRoute(router, '/user/:userslug/theme', [
 		middleware.exposeUid,
 		middleware.ensureLoggedIn,
 		middleware.canViewUsers,
