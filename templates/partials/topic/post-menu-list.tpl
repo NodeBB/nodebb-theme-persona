@@ -85,6 +85,12 @@
 	</li>
 	<!-- ENDIF config.loggedIn -->
 
+	<li>
+		<a role="menuitem" tabindex="-1" href="#" data-clipboard-text="{posts.absolute_url}">
+			<i class="fa fa-fw fa-link"></i> [[topic:copy-permalink]]
+		</a>
+	</li>
+
 	<!-- IF postSharing.length -->
 	<!-- IF config.loggedIn --><li class="divider"></li><!-- ENDIF config.loggedIn -->
 	<li class="dropdown-header">[[topic:share_this_post]]</li>
