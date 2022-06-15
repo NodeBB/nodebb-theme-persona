@@ -24,8 +24,8 @@
 				<small>[[global:reputation]]</small>
 				<span class="human-readable-number">{reputation}</span>
 			</div>
-			
-			<button class="btn-morph fab <!-- IF banned --> hide<!-- ENDIF banned -->">
+
+			<button class="btn-morph persona-fab <!-- IF banned --> hide<!-- ENDIF banned -->">
 				<span>
 					<span class="s1"></span>
 					<span class="s2"></span>
