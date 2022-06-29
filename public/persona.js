@@ -29,7 +29,8 @@ $(document).ready(function () {
 
 		offset = Math.max(0, offset);
 		document.documentElement.style.setProperty('--panel-offset', `${offset}px`);
-		localStorage.setItem('panelOffset', offset);
+		const api = require('api');
+		api.put('/plugins/offset', { offset });
 	}
 
 	var lastBSEnv = '';

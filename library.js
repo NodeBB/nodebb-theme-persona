@@ -3,6 +3,7 @@
 const meta = require.main.require('./src/meta');
 const user = require.main.require('./src/user');
 const translator = require.main.require('./src/translator');
+const routeHelpers = require.main.require('./src/routes/helpers');
 
 const controllers = require('./lib/controllers');
 
@@ -19,6 +20,17 @@ library.init = async function (params) {
 		middleware.canViewUsers,
 		middleware.checkAccountPermissions,
 	], controllers.renderThemeSettings);
+};
+
+library.addRoutes = async ({ router, middleware, helpers }) => {
+	routeHelpers.setupApiRoute(router, 'put', '/offset', [middleware.ensureLoggedIn], (req, res) => {
+		const { offset } = req.body;
+		if (isFinite(offset)) {
+			req.session.panelOffset = offset;
+		}
+
+		helpers.formatApiResponse(200, res);
+	});
 };
 
 library.addAdminNavigation = async function (header) {
