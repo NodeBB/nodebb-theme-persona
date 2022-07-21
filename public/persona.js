@@ -16,6 +16,7 @@ $(document).ready(function () {
 		const headerEl = document.getElementById('header-menu');
 
 		if (!headerEl) {
+			console.warn('[persona/updatePanelOffset] Could not find #header-menu, panel offset unchanged.');
 			return;
 		}
 
