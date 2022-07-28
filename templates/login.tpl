@@ -67,7 +67,7 @@
 			{{{ end }}}
 
 			{{{ if alternate_logins }}}
-			<div class="{{{ if allowLocalLogin }}}col-md-6<{{{ else }}}col-md-12{{{ end }}}">
+			<div class="{{{ if allowLocalLogin }}}col-md-6{{{ else }}}col-md-12{{{ end }}}">
 				<div class="alt-login-block">
 					<h4>[[login:alternative_logins]]</h4>
 					<ul class="alt-logins">
