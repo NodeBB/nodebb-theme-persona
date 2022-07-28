@@ -18,7 +18,7 @@ define('forum/account/theme', ['forum/account/header', 'storage', 'settings', 'a
 
 		document.getElementById('persona:menus:legacy-layout').checked = sidebarSwapped;
 		try {
-			const parsed = JSON.parse(autohideNavbarEnvs);
+			const parsed = JSON.parse(autohideNavbarEnvs) || ['xs', 'sm'];
 			parsed.forEach((env) => {
 				const optionEl = document.getElementById('persona:navbar:autohide').querySelector(`option[value="${env}"]`);
 				optionEl.selected = true;
