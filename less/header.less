@@ -146,6 +146,19 @@
 		display: none !important; //temp
 	}
 
+	.navbar-header {
+		display: flex;
+		align-items: center;
+
+		> a:last-of-type {
+			flex: 1;
+		}
+
+		.navbar-brand {
+			line-height: 1.5em;
+		}
+	}
+
 	.navbar-toggle {
 		.notification-icon {
 			position: absolute;
@@ -177,7 +190,6 @@
 	}
 
 	.forum-logo {
-		float: left;
 		max-height: 50px;
 		width: auto;
 	}
