@@ -16,8 +16,10 @@ body {
 // 		min-height: 100vh;
 // 	}
 // }
-.slideout-panel {
-	min-height: 100vh;
+@include media-breakpoint-down(sm) {
+	.slideout-panel {
+ 		min-height: 100vh;
+	}
 }
 
 button, a {
