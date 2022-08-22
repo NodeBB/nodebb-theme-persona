@@ -10,7 +10,7 @@
 			list-style: none;
 
 			&:not(.unread) {
-				.card {
+				.lastpost {
 					border-color: lighten($gray-light, 20%) !important;
 				}
 
@@ -114,7 +114,7 @@
 				vertical-align: -6px;
 			}
 
-			.card .user-icon {
+			.lastpost .user-icon {
 				display: inline-block;
 				@include user-icon-style(24px, 1.5rem, 50%);
 			}

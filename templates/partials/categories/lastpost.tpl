@@ -1,4 +1,4 @@
-<div class="card background-link-container" style="border-color: {../bgColor}">
+<div class="lastpost background-link-container" style="border-color: {../bgColor}">
 	{{{each ./posts}}}
 	<!-- IF @first -->
 	<div component="category/posts">
