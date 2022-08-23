@@ -5,7 +5,7 @@
 		<h1>{title}</h1>
 		<div class="col-lg-12">
 			<div class="btn-group bottom-sheet" component="category/watch/all">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+				<button class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" type="button">
 					<span>[[user:change_all]]</span>
 					<span class="caret"></span>
 				</button>

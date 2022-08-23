@@ -54,7 +54,7 @@
 					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 					<!-- IF group.pending.length -->
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
@@ -80,7 +80,7 @@
 						</td>
 						<td>
 							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
@@ -128,7 +128,7 @@
 						</td>
 						<td>
 							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">

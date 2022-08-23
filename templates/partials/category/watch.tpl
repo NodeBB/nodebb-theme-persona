@@ -1,7 +1,7 @@
 <!-- IF config.loggedIn -->
 <div class="btn-group topic-watch-dropdown bottom-sheet" component="topic/watch">
 
-	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+	<button class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" type="button">
 
 		<span component="category/watching/menu" <!-- IF !../isWatched -->class="hidden"<!-- ENDIF !../isWatched -->><i class="fa fa-fw fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline">[[category:watching]]</span></span>
 

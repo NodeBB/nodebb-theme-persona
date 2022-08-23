@@ -1,6 +1,6 @@
 <!-- IF config.loggedIn -->
 <div class="btn-group topic-watch-dropdown bottom-sheet" component="topic/watch">
-	<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" type="button"
+	<button class="btn btn-sm btn-default dropdown-toggle" data-bs-toggle="dropdown" type="button"
 		{{{if isFollowing}}}title="[[topic:watching]]"{{{end}}}
 		{{{if isNotFollowing}}}title="[[topic:not-watching]]"{{{end}}}
 		{{{if isIgnoring}}}title="[[topic:ignoring]]"{{{end}}}

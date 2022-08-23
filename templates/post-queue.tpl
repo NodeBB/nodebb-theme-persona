@@ -4,7 +4,7 @@
 
 	{{{ if !singlePost }}}
 	<div class="btn-group pull-right bottom-sheet" component="post-queue/bulk-actions">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false">
+		<button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false">
 			<i class="fa fa-clone"></i> [[post-queue:bulk-actions]] <span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu dropdown-menu-right">

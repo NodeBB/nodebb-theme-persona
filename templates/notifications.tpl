@@ -5,7 +5,7 @@
 
 	<div class="btn-toolbar">
 		<div class="dropdown pull-right">
-			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+			<button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
 				<i class="fa fa-eye"></i>
 				<span class="caret"></span>
 			</button>
@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="dropdown pull-right">
-			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown">
 				<!-- IF selectedFilter -->{selectedFilter.name}<!-- ENDIF selectedFilter --> <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">

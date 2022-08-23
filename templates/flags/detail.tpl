@@ -136,7 +136,7 @@
 
 				{{{ if target.uid }}}
 				<div class="btn-group btn-block" data-uid="{target.uid}">
-					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-street-view"></i>
 						[[flags:flagged-user]]
 						<span class="caret"></span>

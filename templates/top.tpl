@@ -21,7 +21,7 @@
 		<!-- IMPORT partials/category-filter-right.tpl -->
 
 		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">
 				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
@@ -34,7 +34,7 @@
 		</div>
 
 		<div class="btn-group pull-right <!-- IF !terms.length -->hidden<!-- ENDIF !terms.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">
 			{selectedTerm.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">

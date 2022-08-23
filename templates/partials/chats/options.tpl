@@ -1,5 +1,5 @@
 <div class="dropdown pull-right">
-  <button class="close" data-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
+  <button class="close" data-bs-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
   <ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
     <li class="dropdown-header">[[modules:chat.options]]</li>
     <li>
