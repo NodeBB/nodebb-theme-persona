@@ -5,8 +5,8 @@
 	{{{end}}}
 </div>
 <div class="recent">
-	<div class="topic-list-header btn-toolbar">
-		<div class="pull-left">
+	<div class="topic-list-header btn-toolbar justify-content-between">
+		<div class="btn-group">
 			<!-- IF canPost -->
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<!-- ELSE -->
@@ -16,24 +16,25 @@
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 		</div>
+		<div>
+			<div class="btn-group bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
+				<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+					<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-end" role="menu">
+					{{{each filters}}}
+					<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
+						<a class="dropdown-item" role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
+					</li>
+					{{{end}}}
+				</ul>
+			</div>
 
-		<div class="btn-group pull-right">
-		<!-- IMPORT partials/category/tools.tpl -->
-		</div>
+			<div class="btn-group">
+			<!-- IMPORT partials/category-filter-right.tpl -->
+			</div>
 
-		<!-- IMPORT partials/category-filter-right.tpl -->
-
-		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-			<button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown">
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				{{{each filters}}}
-				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
-					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				</li>
-				{{{end}}}
-			</ul>
+			<!-- IMPORT partials/category/tools.tpl -->
 		</div>
 	</div>
 
