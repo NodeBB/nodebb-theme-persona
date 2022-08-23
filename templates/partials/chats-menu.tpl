@@ -1,15 +1,15 @@
 {{{ if config.loggedIn }}}
 <ul class="nav nav-pills">
-	<li>
-		<a href="#notifications" data-toggle="tab"><span class="counter unread-count" component="notifications/icon" data-content="{unreadCount.notification}"></span> <i class="fa fa-fw fa-bell"></i></a>
+	<li class="nav-item">
+		<a class="nav-link" href="#notifications" data-bs-toggle="tab"><span class="counter unread-count" component="notifications/icon" data-content="{unreadCount.notification}"></span> <i class="fa fa-fw fa-bell"></i></a>
 	</li>
 	{{{ if !config.disableChat }}}
-	<li>
-		<a href="#chats" data-toggle="tab"><i class="counter unread-count" component="chat/icon" data-content="{unreadCount.chat}"></i> <i class="fa fa-fw fa-comment"></i></a>
+	<li class="nav-item">
+		<a class="nav-link" href="#chats" data-bs-toggle="tab"><i class="counter unread-count" component="chat/icon" data-content="{unreadCount.chat}"></i> <i class="fa fa-fw fa-comment"></i></a>
 	</li>
 	{{{ end }}}
-	<li class="active">
-		<a href="#profile" data-toggle="tab">
+	<li class="active nav-item">
+		<a class="nav-link active" href="#profile" data-bs-toggle="tab">
 			{buildAvatar(user, "sm", true, "user-icon")}
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 		</a>
@@ -17,7 +17,7 @@
 </ul>
 
 <div class="tab-content">
-	<div class="tab-pane fade active in" id="profile">
+	<div class="tab-pane fade show active" id="profile">
 		<section class="menu-section" data-section="profile">
 			<ul class="menu-section-list" component="header/usercontrol"></ul>
 		</section>

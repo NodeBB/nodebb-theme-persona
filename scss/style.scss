@@ -11,11 +11,6 @@ body {
 	padding-top: var(--panel-offset);
 }
 
-// @media (max-width: $screen-xs-max) {
-// 	.slideout-panel {
-// 		min-height: 100vh;
-// 	}
-// }
 @include media-breakpoint-down(sm) {
 	.slideout-panel {
  		min-height: 100vh;
@@ -279,11 +274,6 @@ a.permalink {
 	pointer-events: none;
 }
 
-// @media (max-width: @screen-sm-max) {
-// 	.form-control {
-// 		font-size: 16px;
-// 	}
-// }
 @include media-breakpoint-down(sm) {
 	.form-control {
 		font-size: 16px;
@@ -303,8 +293,4 @@ a.permalink {
 		top: 0;
 		left: 0;
 	}
-}
-
-.hidden, .hide {
-    display: none!important;
 }

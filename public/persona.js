@@ -343,8 +343,8 @@ $(document).ready(function () {
 					});
 			}
 
-			const searchInputEl = $('.navbar-header .navbar-search input[name="term"]');
-			const searchButton = $('.navbar-header .navbar-search button[type="button"]');
+			const searchInputEl = $('.navbar .navbar-search input[name="term"]');
+			const searchButton = $('.navbar .navbar-search button[type="button"]');
 			searchButton.off('click').on('click', function () {
 				if (!config.loggedIn && !app.user.privileges['search:content']) {
 					alerts.alert({
@@ -366,7 +366,7 @@ $(document).ready(function () {
 			search.enableQuickSearch({
 				searchElements: {
 					inputEl: searchInputEl,
-					resultEl: $('.navbar-header .navbar-search .quick-search-container'),
+					resultEl: $('.navbar .navbar-search .quick-search-container'),
 				},
 				searchOptions: {
 					in: config.searchDefaultInQuick,
