@@ -7,7 +7,7 @@
 		<meta itemprop="position" content="{../index}" />
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-		<div class="col-md-6 col-sm-9 col-xs-10 content">
+		<div class="col-md-6 col-sm-9 col-10 content">
 			<div class="avatar pull-left">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -71,7 +71,7 @@
 			</h2>
 		</div>
 
-		<div class="mobile-stat col-xs-2 visible-xs text-right">
+		<div class="mobile-stat col-2 visible-xs text-right">
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 

@@ -18,7 +18,7 @@
 		</div>
 		<div>
 			<div class="btn-group bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-				<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
 					<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu dropdown-menu-end" role="menu">
