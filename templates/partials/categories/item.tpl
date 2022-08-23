@@ -1,7 +1,7 @@
 <li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="row clearfix category-{../cid}">
 	<meta itemprop="name" content="{../name}">
 
-	<div class="content col-xs-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
+	<div class="content col-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
 		<div class="icon d-inline-block" style="{function.generateCategoryBackground}">
 			<i class="fa fa-fw {../icon}"></i>
 		</div>
@@ -48,16 +48,16 @@
 	</div>
 
 	<!-- IF !../link -->
-	<div class="col-md-1 hidden-sm hidden-xs stats">
+	<div class="col-md-1 d-none d-md-block stats">
 		<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
 		<small>[[global:topics]]</small>
 	</div>
-	<div class="col-md-1 hidden-sm hidden-xs stats">
+	<div class="col-md-1 d-none d-md-block stats">
 		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
 	<!-- IF !config.hideCategoryLastPost -->
-	<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+	<div class="col-md-3 col-sm-3 teaser d-none d-sm-block" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
 	<!-- ENDIF !config.hideCategoryLastPost -->

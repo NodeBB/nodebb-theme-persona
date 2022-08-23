@@ -11,8 +11,8 @@
 		var app = {
 			user: JSON.parse('{{userJSON}}')
 		};
-		// TODO: removed until bs5 migration is complete
-		// document.documentElement.style.setProperty('--panel-offset', `${localStorage.getItem('panelOffset') || 0}px`);
+
+		document.documentElement.style.setProperty('--panel-offset', `${localStorage.getItem('panelOffset') || 0}px`);
 	</script>
 
 	{{{if useCustomHTML}}}

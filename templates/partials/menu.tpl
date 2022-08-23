@@ -43,7 +43,7 @@
 				<span></span>
 			</div>
 
-			<div id="nav-dropdown" class="collapse navbar-collapse d-none d-sm-block">
+			<div id="nav-dropdown" class="collapse navbar-collapse d-none d-lg-block">
 				<ul id="main-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
 					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
