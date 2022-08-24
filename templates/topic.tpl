@@ -20,24 +20,24 @@
 			</h1>
 
 			<div class="topic-info clearfix">
-				<div class="category-item inline-block">
+				<div class="category-item d-inline-block">
 					<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
 						<i class="fa fa-fw {category.icon}"></i>
 					</div>
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 
-				<div class="tags tag-list inline-block hidden-xs">
+				<div class="tags tag-list d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/tags.tpl -->
 				</div>
-				<div class="inline-block hidden-xs">
+				<div class="d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
 				{{{ if !feeds:disableRSS }}}
 				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				{{{ end }}}
 				{{{ if browsingUsers }}}
-				<div class="inline-block hidden-xs">
+				<div class="d-inline-block hidden-xs">
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
 				</div>
 				{{{ end }}}
