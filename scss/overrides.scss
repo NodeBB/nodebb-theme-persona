@@ -8,3 +8,25 @@ $border-radius-lg: 0;
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;
+
+// persona colors
+$brand-primary:         darken(#428bca, 6.5%); // #337ab7
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+// persona link changes
+$primary: $brand-primary !default;
+$success: $brand-success !default;
+$info: $brand-info !default;
+$warning: $brand-warning !default;
+$danger: $brand-danger !default;
+// $light: $gray-200 !default;
+// $dark: $purple !default;
+$link-decoration:none!default;
+
+// font
+$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// BS5 default is 1rem(16px)
+$font-size-base: 0.875rem!default;
