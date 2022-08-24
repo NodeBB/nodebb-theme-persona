@@ -65,24 +65,26 @@
 				</ul>
 
 				{{{ if config.searchEnabled }}}
-				<form id="search-form" class="d-flex d-none d-sm-block" role="search" method="GET">
-					<button id="search-button" type="button" class="btn btn-link nav-item"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
-					<div class="hidden" id="search-fields">
-						<div class="form-group">
-							<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-							<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
+				<div class="d-flex d-none d-sm-block position-relative">
+					<form id="search-form" class="d-inline-block" role="search" method="GET">
+						<button id="search-button" type="button" class="btn btn-link nav-item"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+						<div class="hidden" id="search-fields">
+							<div class="form-group">
+								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+								<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
+							</div>
+							<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 						</div>
-						<button type="submit" class="btn btn-default hide">[[global:search]]</button>
+					</form>
+					<div id="quick-search-container" class="quick-search-container hidden">
+						<div class="checkbox filter-category">
+							<label>
+								<input type="checkbox" checked><span class="name"></span>
+							</label>
+						</div>
+						<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+						<div class="quick-search-results-container"></div>
 					</div>
-				</form>
-				<div id="quick-search-container" class="quick-search-container hidden">
-					<div class="checkbox filter-category">
-						<label>
-							<input type="checkbox" checked><span class="name"></span>
-						</label>
-					</div>
-					<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
-					<div class="quick-search-results-container"></div>
 				</div>
 				{{{ end }}}
 
