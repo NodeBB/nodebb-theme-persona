@@ -2,32 +2,31 @@
 <div class="notifications">
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
-	<div class="btn-toolbar">
-		<div class="dropdown pull-right">
-			<button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-				<i class="fa fa-eye"></i>
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-ajaxify="false" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
-			</ul>
-		</div>
-
-		<div class="dropdown pull-right">
-			<button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown">
+	<div class="btn-toolbar justify-content-end" role="toolbar">
+		<div class="btn-group me-2">
+			<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
 				<!-- IF selectedFilter -->{selectedFilter.name}<!-- ENDIF selectedFilter --> <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
+			<ul class="dropdown-menu dropdown-menu-end" role="menu">
 				{{{each filters}}}
 				<!-- IF filters.separator -->
-				<li role="separator" class="divider"></li>
+				<li role="separator" class="dropdown-divider"></li>
 				<!-- ELSE -->
 				<li role="presentation" class="category">
-					<a role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
+					<a class="dropdown-item" role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
 				</li>
 				<!-- ENDIF filters.separator -->
 				{{{end}}}
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+				<i class="fa fa-eye"></i>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><a class="dropdown-item" role="menuitem" tabindex="-1" href="#" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
 			</ul>
 		</div>
 	</div>

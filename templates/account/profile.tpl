@@ -93,7 +93,7 @@
 	<hr />
 
 	<div class="row">
-		<div class="col-xs-12 account-block hidden">
+		<div class="col-12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
 					<span class="account-username"> {username}</span>
@@ -109,7 +109,7 @@
 
 	<!-- IF groups.length -->
 	<div class="row">
-		<div class="col-xs-12 hidden">
+		<div class="col-12 hidden">
 			{{{each groups}}}
 			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
 			{{{end}}}
@@ -119,7 +119,7 @@
 
 	<!-- IF ips.length -->
 	<div class="row">
-		<div class="col-xs-12 hidden">
+		<div class="col-12 hidden">
 			<div class="panel-heading">
 				<h3 class="panel-title">[[global:recentips]]</h3>
 			</div>
@@ -134,10 +134,10 @@
 
 	<div class="row">
 		{{{ if bestPosts.length }}}
-		<div class="col-lg-12 col-xs-12">
+		<div class="col-lg-12 col-12">
 			<h1>[[pages:account/best, {username}]]</h1>
 
-			<div class="col-xs-12">
+			<div class="col-12">
 				<ul component="posts" class="posts-list">
 				{{{each bestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
@@ -147,9 +147,9 @@
 		</div>
 		{{{ end }}}
 		{{{ if latestPosts.length}}}
-		<div class="col-lg-12 col-xs-12">
+		<div class="col-lg-12 col-12">
 			<h1>[[pages:account/latest-posts, {username}]]</h1>
-			<div class="col-xs-12">
+			<div class="col-12">
 				<ul component="posts" class="posts-list">
 				{{{each latestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
