@@ -2,11 +2,11 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12 col-md-6">
+		<div class="col-12 col-md-6">
 			<!-- IF !disableCustomUserSkins -->
 			<h4>[[user:select-skin]]</h4>
-			<div class="well">
-				<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
+			<div class="card card-body bg-light">
+				<select class="form-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					{{{each bootswatchSkinOptions}}}
 					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
 					{{{end}}}
@@ -16,10 +16,10 @@
 
 			<!-- IF allowUserHomePage -->
 			<h4>[[user:select-homepage]]</h4>
-			<div class="well">
-				<div class="form-group">
+			<div class="card card-body bg-light">
+				<div class="mb-2">
 					<label for="homePageRoute">[[user:homepage]]</label>
-					<select class="form-control" id="homePageRoute" data-property="homePageRoute">
+					<select class="form-select" id="homePageRoute" data-property="homePageRoute">
 						<option value="none">None</option>
 						{{{each homePageRoutes}}}
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
@@ -27,7 +27,7 @@
 					</select>
 					<p class="help-block">[[user:homepage_description]]</p>
 				</div>
-				<div id="homePageCustom" class="form-group" style="display: none;">
+				<div id="homePageCustom" class="mb-2" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
 					<p class="help-block">[[user:custom_route_help]]</p>
@@ -36,7 +36,7 @@
 			<!-- ENDIF allowUserHomePage -->
 
 			<h4>[[global:privacy]]</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				<!-- IF !hideEmail -->
 				<div class="checkbox">
 					<label>
@@ -62,7 +62,7 @@
 			</div>
 
 			<h4>[[user:browsing]]</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/> <strong>[[user:open_links_in_new_tab]]</strong>
@@ -89,23 +89,26 @@
 			</div>
 
 			<h4>[[global:pagination]]</h4>
-			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong>[[user:paginate_description]]</strong>
-					</label>
+			<div class="card card-body bg-light">
+				<div class="mb-2 form-check">
+					<input type="checkbox" class="form-check-input" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong><label class="form-check-label">[[user:paginate_description]]</label></strong>
 				</div>
-
-				<strong>[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}"><br />
-				<strong>[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</strong><br /> <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}"><br />
+				<div class="mb-3">
+					<strong><label class="form-label">[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</label></strong>
+					<input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
+				</div>
+				<div class="">
+					<strong><label class="form-label">[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</label></strong>
+					<input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
+				</div>
 			</div>
 
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
-			<div class="well">
-				<div class="form-group">
+			<div class="card card-body bg-light">
+				<div class="mb-2">
 					<label for="dailyDigestFreq">[[user:digest_label]]</label>
-					<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
+					<select class="form-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						{{{each dailyDigestFreqOptions}}}
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						{{{end}}}
@@ -117,19 +120,19 @@
 
 			{{{each customSettings}}}
 			<h4>{customSettings.title}</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				{customSettings.content}
 			</div>
 			{{{end}}}
 
 		</div>
 
-		<div class="col-xs-12 col-md-6">
+		<div class="col-12 col-md-6">
 			<h4>[[global:language]]</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				<div class="row">
-					<div class="form-group col-lg-12">
-						<select data-property="userLang" class="form-control">
+					<div class="mb-2 col-lg-12">
+						<select data-property="userLang" class="form-select">
 							{{{each languages}}}
 							<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
 							{{{end}}}
@@ -140,8 +143,8 @@
 				<!-- IF isSelf -->
 				<label>[[user:acp_language]]</label>
 				<div class="row">
-					<div class="form-group col-lg-12">
-						<select data-property="acpLang" class="form-control">
+					<div class="mb-2 col-lg-12">
+						<select data-property="acpLang" class="form-select">
 							{{{each acpLanguages}}}
 							<option value="{acpLanguages.code}" <!-- IF acpLanguages.selected -->selected<!-- ENDIF acpLanguages.selected -->>{acpLanguages.name} ({acpLanguages.code})</option>
 							{{{end}}}
@@ -153,7 +156,7 @@
 			</div>
 
 			<h4>[[topic:watch]]</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/> <strong>[[user:follow_topics_you_create]]</strong>
@@ -164,9 +167,9 @@
 						<input type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/> <strong>[[user:follow_topics_you_reply_to]]</strong>
 					</label>
 				</div>
-				<div class="form-group">
+				<div class="mb-2">
 					<label>[[user:default-category-watch-state]]</label>
-					<select class="form-control" data-property="categoryWatchState">
+					<select class="form-select" data-property="categoryWatchState">
 						<option value="watching" <!-- IF categoryWatchState.watching -->selected<!-- ENDIF categoryWatchState.watching -->>[[category:watching]]</option>
 						<option value="notwatching" <!-- IF categoryWatchState.notwatching -->selected<!-- ENDIF categoryWatchState.notwatching -->>[[category:not-watching]]</option>
 						<option value="ignoring" <!-- IF categoryWatchState.ignoring -->selected<!-- ENDIF categoryWatchState.ignoring -->>[[category:ignoring]]</option>
@@ -176,14 +179,14 @@
 
 
 			<h4>[[user:notifications]]</h4>
-			<div class="well">
+			<div class="card card-body bg-light">
 				{{{each notificationSettings}}}
 				<div class="row">
-					<div class="col-xs-7">
+					<div class="col-7">
 						<label>{notificationSettings.label}</label>
 					</div>
-					<div class="form-group col-xs-5">
-						<select class="form-control" data-property="{notificationSettings.name}">
+					<div class="mb-2 col-5">
+						<select class="form-select" data-property="{notificationSettings.name}">
 							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
 							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
 							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
@@ -194,11 +197,11 @@
 				{{{end}}}
 
 				<div class="row">
-					<div class="col-xs-7">
+					<div class="col-7">
 						<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
 					</div>
-					<div class="form-group col-xs-5">
-						<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+					<div class="mb-2 col-5">
+						<select class="form-select" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
 							{{{each upvoteNotifFreq}}}
 							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
 								[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]

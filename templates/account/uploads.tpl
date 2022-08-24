@@ -13,7 +13,7 @@
 			<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
 		<!-- ENDIF !uploads.length -->
 
-		<div class="col-xs-12">
+		<div class="col-12">
             <table class="table table-striped">
                 <thead>
                     <tr>

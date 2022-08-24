@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 <div class="row">
-	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+	<div class="col-12 col-sm-8 col-sm-offset-2">
 		<p class="lead text-center">
 			{{{ if register }}}[[register:interstitial.intro-new]]{{{ else }}}[[register:interstitial.intro]]{{{ end }}}
 		</p>
@@ -24,7 +24,7 @@
 <form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}" enctype="multipart/form-data">
 	{{{each sections}}}
 	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+		<div class="col-12 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					{@value}
@@ -35,7 +35,7 @@
 	{{{end}}}
 
 	<div class="row">
-		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+		<div class="col-12 col-sm-8 col-sm-offset-2">
 			<button class="btn btn-primary btn-block">[[topic:composer.submit]]</button>
 		</div>
 	</div>

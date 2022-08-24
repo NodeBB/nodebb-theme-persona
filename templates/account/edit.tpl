@@ -5,7 +5,7 @@
 			<div class="col-md-2 col-sm-4">
 				<div class="account-picture-block text-center">
 					<div class="row">
-						<div class="col-xs-12 hidden-xs">
+						<div class="col-12 hidden-xs">
 							<!-- IF picture -->
 							<img id="user-current-picture" class="avatar avatar-xl avatar-rounded" src="{picture}" />
 							<!-- ELSE -->
@@ -74,7 +74,7 @@
 					<div class="form-group">
 						<label for="groupTitle">[[user:grouptitle]]</label>
 
-						<select class="form-control" id="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
+						<select class="form-select" id="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
 							<option value="">[[user:no-group-title]]</option>
 							{{{each groups}}}
 							<!-- IF groups.userTitleEnabled -->

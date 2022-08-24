@@ -8,7 +8,7 @@
 			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
 		<!-- ENDIF !posts.length -->
 
-		<div class="col-xs-12">
+		<div class="col-12">
 			<!-- IMPORT partials/posts_list.tpl -->
 
 			<!-- IF config.usePagination -->

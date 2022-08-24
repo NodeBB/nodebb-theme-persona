@@ -19,7 +19,7 @@
 </div>
 <hr/>
 <div class="row">
-	<div class="col-xs-12">
+	<div class="col-12">
 		<div class="post-queue preventSlideout posts-list">
 			{{{ if !posts.length }}}
 			{{{ if isAdmin }}}
@@ -41,7 +41,7 @@
 				<div class="panel-body">
 
 					<div class="row">
-						<div class="col-lg-2 col-xs-12">
+						<div class="col-lg-2 col-12">
 							<strong>[[post-queue:user]]</strong>
 							<div>
 								{{{ if posts.user.userslug}}}
@@ -51,13 +51,13 @@
 								{{{ end }}}
 							</div>
 						</div>
-						<div class="col-lg-3 col-xs-12">
+						<div class="col-lg-3 col-12">
 							<strong>[[post-queue:category]]{{{ if posts.data.cid}}} <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:category-editable]]"></i>{{{ end }}}</strong>
 							<div class="topic-category" {{{if posts.data.cid}}}data-editable="editable"{{{end}}}">
 								<a href="{config.relative_path}/category/{posts.category.slug}"><!-- IF posts.category.icon --><span class="fa-stack"><i style="color: {posts.category.bgColor};" class="fa fa-circle fa-stack-2x"></i><i style="color: {posts.category.color};" class="fa fa-stack-1x fa-fw {posts.category.icon}"></i></span><!-- ENDIF posts.category.icon --> {posts.category.name}</a>
 							</div>
 						</div>
-						<div class="col-lg-7 col-xs-12">
+						<div class="col-lg-7 col-12">
 							<strong>{{{ if posts.data.tid }}}[[post-queue:topic]]{{{ else }}}[[post-queue:title]] <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:title-editable]]"></i>{{{ end }}}</strong>
 							<div class="topic-title">
 								{{{ if posts.data.tid }}}

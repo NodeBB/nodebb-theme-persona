@@ -3,7 +3,7 @@
 
 	<!-- IF sessions.length -->
 	<div class="row">
-		<div class="col-xs-12 col-md-12">
+		<div class="col-12 col-md-12">
 			<p class="lead">[[user:sessions.description]]</p>
 			<hr />
 			<ul class="list-group" component="user/sessions">

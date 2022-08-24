@@ -2,7 +2,7 @@
 
 <div class="search">
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-12">
 			<form id="advanced-search">
 				<div class="form-group">
 					<div class="row">

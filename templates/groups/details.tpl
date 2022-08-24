@@ -11,11 +11,11 @@
 		<!-- ENDIF group.isOwner -->
 	</div>
 
-	<div class="col-xs-12">
+	<div class="col-12">
 		<!-- IMPORT partials/breadcrumbs.tpl -->
 	</div>
 
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-4 col-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -256,7 +256,7 @@
 			{{{end}}}
 		</div>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-12">
 		<div class="col-lg-11">
 			<!-- IF !posts.length -->
 			<div class="alert alert-info">[[groups:details.has_no_posts]]</div>

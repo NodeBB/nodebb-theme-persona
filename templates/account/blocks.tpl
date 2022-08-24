@@ -4,14 +4,14 @@
 	<div class="users row">
 		<h1>[[pages:account/blocks, {username}]]</h1>
 
-		<div class="col-sm-8 col-xs-12">
+		<div class="col-sm-8 col-12">
 			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 				<!-- IMPORT partials/users_list.tpl -->
 			</ul>
 			<div class="alert alert-warning text-center"<!-- IF users.length --> style="display: none;"<!-- END -->>[[user:has_no_blocks]]</div>
 			<!-- IMPORT partials/paginator.tpl -->
 		</div>
-		<div class="col-sm-4 col-xs-12">
+		<div class="col-sm-4 col-12">
 			<div class="panel panel-default">
 				<div class="panel-body form">
 					<div class="form-group">

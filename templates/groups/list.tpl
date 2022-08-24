@@ -40,7 +40,7 @@
 		<!-- IF groups.length -->
 		<!-- IMPORT partials/groups/list.tpl -->
 		<!-- ELSE -->
-		<div class="col-xs-12">
+		<div class="col-12">
 			<div class="alert alert-warning">
 			[[groups:no_groups_found]]
 			</div>

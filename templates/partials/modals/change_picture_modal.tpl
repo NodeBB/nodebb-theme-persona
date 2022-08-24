@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-xs-6 col-sm-8 col-md-6">
+	<div class="col-6 col-sm-8 col-md-6">
 		<div class="list-group media">
 			<button type="button" class="list-group-item" data-type="default">
 				<div class="media-left">
@@ -25,7 +25,7 @@
 			{{{end}}}
 		</div>
 	</div>
-	<div class="col-xs-6 col-sm-4 col-md-6">
+	<div class="col-6 col-sm-4 col-md-6">
 		<div class="btn-group-vertical btn-block" role="group">
 			<!-- IF allowProfileImageUploads -->
 			<button type="button" class="btn btn-default" data-action="upload">
