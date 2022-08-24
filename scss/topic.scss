@@ -43,7 +43,7 @@
 		position: sticky;
 		top: calc(var(--panel-offset) - 20px);
 		background-color: $body-bg;
-		z-index: $zindex-modal;
+		z-index: calc($zindex-dropdown - 1);
 		margin-left: -15px;
 		margin-right: -15px;
 		padding-left: 15px;

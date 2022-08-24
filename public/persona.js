@@ -178,7 +178,7 @@ $(document).ready(function () {
 				}
 
 				icon = el.closest('[data-pid]').find('.edit-icon').first();
-				icon.prop('title', el.text()).tooltip('fixTitle').removeClass('hidden');
+				icon.prop('title', el.text()).tooltip().removeClass('hidden');
 			});
 		}
 
@@ -188,7 +188,7 @@ $(document).ready(function () {
 				return parseInt($(el).closest('[data-pid]').attr('data-pid'), 10) === parseInt(data.post.pid, 10);
 			});
 			var el = parent.find('[component="post/editor"]').first();
-			icon.prop('title', el.text()).tooltip('fixTitle').removeClass('hidden');
+			icon.prop('title', el.text()).tooltip().removeClass('hidden');
 		});
 
 		$(window).on('action:topic.loaded', activateEditedTooltips);
