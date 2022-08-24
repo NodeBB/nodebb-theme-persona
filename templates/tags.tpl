@@ -11,7 +11,11 @@
 		<div class="col-lg-12">
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="[[global:search]]" id="tag-search">
-				<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+				<div class="input-group-btn search-button">
+					<button class="btn btn-primary">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
