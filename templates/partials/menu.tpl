@@ -65,32 +65,40 @@
 				</ul>
 
 				{{{ if config.searchEnabled }}}
-				<div class="d-flex d-none d-sm-block position-relative">
-					<form id="search-form" class="d-inline-block" role="search" method="GET">
-						<button id="search-button" type="button" class="btn btn-link nav-item"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
+					<form id="search-form" class="d-flex justify-content-end" role="search" method="GET">
 						<div class="hidden" id="search-fields">
-							<div class="form-group">
+							<div class="input-group flex-nowrap">
 								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-								<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
+
+								<div class="input-group-btn">
+									<button href="#" class="btn btn-outline-secondary">
+										<i class="fa fa-gears fa-fw advanced-search-link"></i>
+									</button>
+								</div>
+							</div>
+
+							<div id="quick-search-container" class="quick-search-container mt-2 hidden">
+								<div class="form-check filter-category mb-2">
+									<input class="form-check-input" type="checkbox" checked>
+									<label class="form-check-label name"></label>
+								</div>
+
+								<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+								<div class="quick-search-results-container"></div>
 							</div>
 							<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 						</div>
+
+						<li id="" class="nav-item"><a id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></li>
 					</form>
-					<div id="quick-search-container" class="quick-search-container hidden">
-						<div class="checkbox filter-category">
-							<label>
-								<input type="checkbox" checked><span class="name"></span>
-							</label>
-						</div>
-						<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
-						<div class="quick-search-results-container"></div>
-					</div>
+
 				</div>
 				{{{ end }}}
 
 				{{{ if !maintenanceHeader }}}
 				{{{ if config.loggedIn }}}
-				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0">
+				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
 					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications" title="[[global:header.notifications]]">
 						<a href="{relative_path}/notifications" class="nav-link" data-bs-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
 							<i component="notifications/icon" class="fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></i>
@@ -221,7 +229,7 @@
 					</li>
 				</ul>
 				{{{ else }}}
-				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb0-lg-0">
+				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb0-lg-0 align-items-center">
 					{{{ if allowRegistration }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">

@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-12">
 			<form id="advanced-search">
-				<div class="form-group">
+				<div class="mb-3">
 					<div class="row">
 						<div class="col-md-6">
 							<label>[[global:search]]</label>
@@ -12,7 +12,7 @@
 						</div>
 						<div class="col-md-2">
 							<label>[[search:in]]</label>
-							<select id="search-in" class="form-control">
+							<select id="search-in" class="form-select">
 								<option value="titlesposts">[[search:titles-posts]]</option>
 								<option value="titles">[[search:titles]]</option>
 								<option value="posts">[[global:posts]]</option>
@@ -27,7 +27,7 @@
 						</div>
 						<div class="col-md-2">
 							<label>[[search:match-words]]</label>
-							<select id="match-words-filter" class="form-control">
+							<select id="match-words-filter" class="form-select">
 								<option value="all">[[search:all]]</option>
 								<option value="any">[[search:any]]</option>
 							</select>
@@ -39,16 +39,16 @@
 					</div>
 				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading" data-toggle="collapse" data-target=".search-options">
-						<h3 class="panel-title"><i class="fa fa-sort"></i> [[search:advanced-search]]</h3>
+				<div class="card panel-default mb-3">
+					<div class="card-header" data-bs-toggle="collapse" data-bs-target=".search-options">
+						<h5 class="card-title"><i class="fa fa-sort"></i> [[search:advanced-search]]</h5>
 					</div>
-					<div class="panel-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
-						<div class="form-group post-search-item">
+					<div class="card-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
+						<div class="mb-2 post-search-item">
 							<div class="row">
 								<div class="col-md-6">
-									<label>[[search:in-categories]]</label>
-									<select multiple class="form-control" id="posted-in-categories" size="{allCategoriesCount}">
+									<label class="form-label">[[search:in-categories]]</label>
+									<select multiple class="form-select" id="posted-in-categories" size="{allCategoriesCount}">
 										{{{each allCategories}}}
 										<option value="{allCategories.value}">{allCategories.text}</option>
 										{{{end}}}
@@ -56,24 +56,24 @@
 									<input type="checkbox" id="search-children"> [[search:search-child-categories]]
 								</div>
 								<div class="col-md-6">
-									<div class="form-group post-search-item">
+									<div class="mb-2 post-search-item">
 										<div class="row">
 											<div class="col-md-6">
-												<label>[[search:posted-by]]</label>
+												<label class="form-label">[[search:posted-by]]</label>
 												<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
 											</div>
 											<div class="col-md-6">
-												<label>[[search:has-tags]]</label>
+												<label class="form-label">[[search:has-tags]]</label>
 												<input type="text" class="form-control" id="has-tags">
 											</div>
 										</div>
 									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:reply-count]]</label>
+									<div class="mb-2 post-search-item">
+										<label class="form-label">[[search:reply-count]]</label>
 										<div class="row">
 											<div class="col-md-6">
-												<select id="reply-count-filter" class="form-control">
+												<select id="reply-count-filter" class="form-select">
 													<option value="atleast">[[search:at-least]]</option>
 													<option value="atmost">[[search:at-most]]</option>
 												</select>
@@ -84,17 +84,17 @@
 										</div>
 									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:post-time]]</label>
+									<div class="mb-2 post-search-item">
+										<label class="form-label">[[search:post-time]]</label>
 										<div class="row">
 											<div class="col-md-6">
-												<select id="post-time-filter" class="form-control">
+												<select id="post-time-filter" class="form-select">
 													<option value="newer">[[search:newer-than]]</option>
 													<option value="older">[[search:older-than]]</option>
 												</select>
 											</div>
 											<div class="col-md-6">
-												<select id="post-time-range" class="form-control">
+												<select id="post-time-range" class="form-select">
 													<option value="">[[search:any-date]]</option>
 													<option value="86400">[[search:yesterday]]</option>
 													<option value="604800">[[search:one-week]]</option>
@@ -108,11 +108,11 @@
 										</div>
 									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:sort-by]]</label>
+									<div class="mb-2 post-search-item">
+										<label class="form-label">[[search:sort-by]]</label>
 										<div class="row">
 											<div class="col-md-6">
-												<select id="post-sort-by" class="form-control">
+												<select id="post-sort-by" class="form-select">
 													<option value="relevance">[[search:relevance]]</option>
 													<option value="timestamp">[[search:post-time]]</option>
 													<option value="votes">[[search:votes]]</option>
@@ -127,7 +127,7 @@
 												</select>
 											</div>
 											<div class="col-md-6">
-												<select id="post-sort-direction" class="form-control">
+												<select id="post-sort-direction" class="form-select">
 													<option value="desc">[[search:descending]]</option>
 													<option value="asc">[[search:ascending]]</option>
 												</select>
@@ -135,8 +135,8 @@
 										</div>
 									</div>
 
-									<div class="form-group post-search-item">
-										<label>[[search:show-results-as]]</label>
+									<div class="mb-2 post-search-item">
+										<label class="form-label">[[search:show-results-as]]</label>
 										<div class="radio">
 											<label>
 												<input type="radio" name="options" id="show-as-posts" checked>
@@ -154,12 +154,10 @@
 							</div>
 						</div>
 
-
-
 						<div class="btn-group">
 							<button type="submit" class="btn btn-primary">[[global:search]]</button>
-							<a class="btn btn-default" id="save-preferences" href="#">[[search:save-preferences]]</a>
-							<a class="btn btn-default" id="clear-preferences" href="#">[[search:clear-preferences]]</a>
+							<a class="btn btn-outline-secondary" id="save-preferences" href="#">[[search:save-preferences]]</a>
+							<a class="btn btn-outline-secondary" id="clear-preferences" href="#">[[search:clear-preferences]]</a>
 						</div>
 					</div>
 				</div>
@@ -178,8 +176,8 @@
 			<!-- ENDIF matchCount -->
 
 			{{{each posts}}}
-			<div class="topic-row panel panel-default clearfix">
-				<div class="panel-body">
+			<div class="topic-row card clearfix mb-3">
+				<div class="card-body">
 					<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "sm", true)}</a>
 					<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{posts.topic.title}</a></span>
 					<br/>

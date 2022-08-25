@@ -220,12 +220,6 @@
 			}
 		}
 	}
-
-	#search-form {
-		.advanced-search-link {
-			margin-left: -30px;
-		}
-	}
 }
 
 .breadcrumb {
@@ -315,7 +309,6 @@
 
 #search-form {
 	#search-button {
-		float: right;
 		max-width: 60px;
 		width: auto;
 		transition-property: max-width, padding-left, padding-right;
@@ -336,7 +329,6 @@
 		overflow: hidden;
 		transition: max-width 0.2s ease 0s;
 		max-height: 42px;
-		float: right;
 		display: inline-block !important;
 		visibility: visible !important;
 

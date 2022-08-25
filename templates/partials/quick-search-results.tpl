@@ -1,4 +1,4 @@
-<ul id="quick-search-results" class="quick-search-results">
+<ul id="quick-search-results" class="quick-search-results mb-2">
 {{{each posts}}}
 <li data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 	<a href="{config.relative_path}/post/{posts.pid}" class="deco-none">
@@ -15,7 +15,7 @@
 	 </a>
 </li>
 <!-- IF !@last -->
-<li role="separator" class="divider"></li>
+<li role="separator" class="dropdown-divider"></li>
 <!-- ENDIF -->
 {{{end}}}
 </ul>
