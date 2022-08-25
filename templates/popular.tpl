@@ -16,7 +16,7 @@
 		<div>
 		<!-- IMPORT partials/topic-terms.tpl -->
 		<!-- IMPORT partials/topic-filters.tpl -->
-		<!-- IMPORT partials/category-filter.tpl -->
+		<!-- IMPORT partials/category-filter-right.tpl -->
 		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
 	</div>

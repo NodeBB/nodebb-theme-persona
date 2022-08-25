@@ -187,6 +187,10 @@
 	}
 }
 
+.category-dropdown-container.right .category-dropdown-menu {
+	--bs-position: end;
+}
+
 .category-dropdown-menu {
 	max-height: 500px;
 	overflow-y: auto;

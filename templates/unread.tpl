@@ -15,10 +15,10 @@
 
 		<div>
 		<!-- IMPORT partials/topic-filters.tpl -->
-		<!-- IMPORT partials/category-filter.tpl -->
+		<!-- IMPORT partials/category-filter-right.tpl -->
 
 		<div class="markread btn-group {{{ if !topics.length }}}hidden{{{ end }}}">
-			<!-- IMPORT partials/category-selector.tpl -->
+			<!-- IMPORT partials/category-selector-right.tpl -->
 		</div>
 
 		<!-- IMPORT partials/category/tools.tpl -->

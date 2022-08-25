@@ -3,10 +3,10 @@
     <span class="visible-sm-inline visible-md-inline visible-lg-inline">{{{ if selectCategoryLabel }}}{selectCategoryLabel}{{{ else }}}[[topic:thread_tools.select_category]]{{{ end }}}</span><span class="visible-xs-inline"><i class="fa fa-fw {{{ if selectCategoryIcon }}}{selectCategoryIcon}{{{ else }}}fa-list{{{ end }}}"></i></span>
     {{{ end }}}</span> <span class="caret"></span>
 </button>
-<div component="category-selector-search" class="hidden">
+<div component="category-selector-search" class="hidden position-absolute">
     <input type="text" class="form-control" autocomplete="off">
 </div>
-<ul component="category/list" class="dropdown-menu dropdown-menu-end category-dropdown-menu" role="menu">
+<ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li component="category/no-matches" role="presentation" class="category hidden">
         <a role="menu-item">[[search:no-matches]]</a>
     </li>
