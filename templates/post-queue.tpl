@@ -1,18 +1,19 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div class="btn-toolbar">
-	<!-- IMPORT partials/category-filter-right.tpl -->
-
+<div class="btn-toolbar justify-content-end">
+	<div class="me-2">
+	<!-- IMPORT partials/category-filter.tpl -->
+	</div>
 	{{{ if !singlePost }}}
-	<div class="btn-group pull-right bottom-sheet" component="post-queue/bulk-actions">
-		<button type="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false">
+	<div class="btn-group bottom-sheet" component="post-queue/bulk-actions">
+		<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false">
 			<i class="fa fa-clone"></i> [[post-queue:bulk-actions]] <span class="caret"></span>
 		</button>
-		<ul class="dropdown-menu dropdown-menu-right">
-			<li><a href="#" data-action="accept-all">[[post-queue:accept-all]]</a></li>
-			<li><a href="#" data-action="accept-selected">[[post-queue:accept-selected]]</a></li>
-			<li class="divider"></li>
-			<li><a href="#" data-action="reject-all">[[post-queue:reject-all]]</a></li>
-			<li><a href="#" data-action="reject-selected">[[post-queue:reject-selected]]</a></li>
+		<ul class="dropdown-menu dropdown-menu-end">
+			<li><a class="dropdown-item" href="#" data-action="accept-all">[[post-queue:accept-all]]</a></li>
+			<li><a class="dropdown-item" href="#" data-action="accept-selected">[[post-queue:accept-selected]]</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-item" href="#" data-action="reject-all">[[post-queue:reject-all]]</a></li>
+			<li><a class="dropdown-item" href="#" data-action="reject-selected">[[post-queue:reject-selected]]</a></li>
 		</ul>
 	</div>
 	{{{ end }}}
@@ -23,23 +24,24 @@
 		<div class="post-queue preventSlideout posts-list">
 			{{{ if !posts.length }}}
 			{{{ if isAdmin }}}
-			<p class="panel-body">
+			<div class="card card-body">
+				<p>
 				[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
-			</p>
+				</p>
+			</div>
 			{{{ end }}}
 			{{{ end }}}
 
 			{{{ each posts }}}
-			<div class="panel panel-default" data-id="{posts.id}">
-				<div class="panel-heading">
+			<div class="card text-dark bg-light mb-3" data-id="{posts.id}">
+				<div class="card-header">
 					{{{ if !singlePost }}}
-					<input type="checkbox" autocomplete="off" />
+					<input type="checkbox" class="form-check-input" autocomplete="off" />
 					{{{ end }}}
 					<strong>{{{ if posts.data.tid }}}[[post-queue:reply]]{{{ else }}}[[post-queue:topic]]{{{ end }}}</strong>
-					<span class="timeago pull-right" title={posts.data.timestampISO}></span>
+					<span class="timeago float-end" title={posts.data.timestampISO}></span>
 				</div>
-				<div class="panel-body">
-
+				<div class="card-body">
 					<div class="row">
 						<div class="col-lg-2 col-12">
 							<strong>[[post-queue:user]]</strong>
@@ -81,14 +83,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-footer text-right">
+				<div class="card-footer text-end">
 					<div>
 						{{{ if canAccept }}}
-						<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:reject]]</button>
-						<button class="btn btn-info btn-xs" data-action="notify"><i class="fa fa-fw fa-bell-o"></i> [[post-queue:notify]]</button>
-						<button class="btn btn-success btn-xs" data-action="accept"><i class="fa fa-fw fa-check"></i> [[post-queue:accept]] </button>
+						<button class="btn btn-danger btn-sm" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:reject]]</button>
+						<button class="btn btn-info btn-sm" data-action="notify"><i class="fa fa-fw fa-bell-o"></i> [[post-queue:notify]]</button>
+						<button class="btn btn-success btn-sm" data-action="accept"><i class="fa fa-fw fa-check"></i> [[post-queue:accept]] </button>
 						{{{ else }}}
-						<button class="btn btn-danger btn-xs" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:remove]]</button>
+						<button class="btn btn-danger btn-sm" data-action="reject"><i class="fa fa-fw fa-times"></i> [[post-queue:remove]]</button>
 						{{{ end }}}
 					</div>
 				</div>

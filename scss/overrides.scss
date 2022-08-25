@@ -1,13 +1,13 @@
 // only overrides to bs5 variables here
 
 // no border radius in persona
-// $border-radius: 0;
-// $border-radius-sm: 0;
-// $border-radius-lg: 0;
+$border-radius: 0!default;
+$border-radius-sm: 0!default;
+$border-radius-lg: 0!default;
 
-$btn-border-radius: 0;
-$btn-border-radius-sm: 0;
-$btn-border-radius-lg: 0;
+$btn-border-radius: 0!default;
+$btn-border-radius-sm: 0!default;
+$btn-border-radius-lg: 0!default;
 
 // persona colors
 $brand-primary:         darken(#428bca, 6.5%); // #337ab7
