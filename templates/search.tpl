@@ -7,11 +7,11 @@
 				<div class="mb-3">
 					<div class="row">
 						<div class="col-md-6">
-							<label>[[global:search]]</label>
+							<label class="form-label">[[global:search]]</label>
 							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
 						<div class="col-md-2">
-							<label>[[search:in]]</label>
+							<label class="form-label">[[search:in]]</label>
 							<select id="search-in" class="form-select">
 								<option value="titlesposts">[[search:titles-posts]]</option>
 								<option value="titles">[[search:titles]]</option>
@@ -26,14 +26,14 @@
 							</select>
 						</div>
 						<div class="col-md-2">
-							<label>[[search:match-words]]</label>
+							<label class="form-label">[[search:match-words]]</label>
 							<select id="match-words-filter" class="form-select">
 								<option value="all">[[search:all]]</option>
 								<option value="any">[[search:any]]</option>
 							</select>
 						</div>
 						<div class="col-md-2">
-							<label>&nbsp;</label>
+							<label class="form-label">&nbsp;</label>
 							<button type="submit" class="btn btn-primary form-control">[[global:search]]</button>
 						</div>
 					</div>
@@ -189,7 +189,14 @@
 					<!-- ENDIF showAsPosts -->
 
 					<small class="post-info pull-right">
-						<a href="{config.relative_path}/category/{posts.category.slug}"><span class="fa-stack" style="{function.generateCategoryBackground, posts.category}"><i style="color:{posts.category.color};" class="fa {posts.category.icon} fa-stack-1x"></i></span> {posts.category.name}</a> &bull;
+						<a href="{config.relative_path}/category/{posts.category.slug}">
+							<div class="category-item d-inline-block">
+								<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, posts.category}">
+									<i class="fa fa-fw {posts.category.icon}"></i>
+								</div>
+								{posts.category.name}
+							</div>
+						</a> &bull
 						<span class="timeago" title="{posts.timestampISO}"></span>
 					</small>
 				</div>

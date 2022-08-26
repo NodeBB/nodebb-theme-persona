@@ -9,8 +9,10 @@
 		{posts.snippet}
 		</p>
 		<small class="post-info pull-right">
-			<span class="fa-stack" style="{function.generateCategoryBackground, posts.category}"><i style="color:{posts.category.color};" class="fa {posts.category.icon} fa-stack-1x"></i></span> {posts.category.name} &bull;
-			<span class="timeago" title="{posts.timestampISO}"></span>
+			<div class="category-item d-inline-block">
+				<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, posts.category}"><i class="fa fa-fw {posts.category.icon}"></i></div> {posts.category.name}
+				&bull; <span class="timeago" title="{posts.timestampISO}"></span>
+            </div>
 		</small>
 	 </a>
 </li>

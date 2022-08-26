@@ -8,7 +8,7 @@
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
 		<div class="col-md-6 col-sm-9 col-10 content">
-			<div class="avatar pull-left">
+			<div class="avatar pull-left me-2">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
 					{{{ if ./thumbs.length }}}
@@ -47,7 +47,13 @@
 
 				<!-- IF !template.category -->
 				<small>
-					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg" style="{function.generateCategoryBackground, topics.category}"><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
+					<div class="category-item d-inline-block">
+						<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, topics.category}">
+							<i class="fa fa-fw {topics.category.icon}"></i>
+						</div>
+						<a href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
+					</div>
+					&bull;
 				</small>
 				<!-- ENDIF !template.category -->
 

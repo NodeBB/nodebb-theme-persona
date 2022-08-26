@@ -56,7 +56,14 @@
 						<div class="col-lg-3 col-12">
 							<strong>[[post-queue:category]]{{{ if posts.data.cid}}} <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:category-editable]]"></i>{{{ end }}}</strong>
 							<div class="topic-category" {{{if posts.data.cid}}}data-editable="editable"{{{end}}}">
-								<a href="{config.relative_path}/category/{posts.category.slug}"><!-- IF posts.category.icon --><span class="fa-stack"><i style="color: {posts.category.bgColor};" class="fa fa-circle fa-stack-2x"></i><i style="color: {posts.category.color};" class="fa fa-stack-1x fa-fw {posts.category.icon}"></i></span><!-- ENDIF posts.category.icon --> {posts.category.name}</a>
+								<a href="{config.relative_path}/category/{posts.category.slug}">
+									<div class="category-item d-inline-block">
+										<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, posts.category}">
+											<i class="fa fa-fw {posts.category.icon}"></i>
+										</div>
+										{posts.category.name}
+									</div>
+								</a>
 							</div>
 						</div>
 						<div class="col-lg-7 col-12">

@@ -88,9 +88,8 @@
 .quick-search-results, .search-results {
 	.post-info {
 		font-size: 12px;
-		.fa-stack {
-			font-size: 10px;
-			border-radius: 50%;
+		.category-item .icon {
+			margin-top: -3px;
 		}
 	}
 }

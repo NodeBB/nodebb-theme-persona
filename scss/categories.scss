@@ -1,3 +1,23 @@
+.category-item > .icon {
+	min-width: 23px;
+	min-height: 23px;
+	font-size: 10px;
+	line-height: 12px;
+	padding: 5px;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+.categories > li .content .icon {
+	min-width: 46px;
+	min-height: 46px;
+	font-size: 17px;
+	line-height: 17px;
+	padding: 13px;
+	border-radius: 50%;
+	margin-right: 15px;
+	margin-top: 2px;
+}
+
 .categories, .category > ul {
 	list-style-type: none;
 	padding: 0;
@@ -17,17 +37,6 @@
 
 		.content {
 			padding: 10px 15px;
-
-			.icon {
-				font-size: 17px;
-				line-height: 17px;
-				padding: 13px;
-				border-radius: 50%;
-				margin-right: 15px;
-				min-width: 46px;
-				min-height: 46px;
-				margin-top: 2px;
-			}
 
 			img, .user-icon {
 				@include user-icon-style(46px, 2.4rem, 50%);

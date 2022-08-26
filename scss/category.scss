@@ -108,12 +108,6 @@
 				}
 			}
 
-			.fa-stack {
-				font-size: 90%;
-				border-radius: 50%;
-				vertical-align: -6px;
-			}
-
 			.lastpost .user-icon {
 				display: inline-block;
 				@include user-icon-style(24px, 1.5rem, 50%);
@@ -177,11 +171,6 @@
 }
 
 [component="category-selector"], .category-dropdown-container {
-	.fa-stack {
-		font-size: 65%;
-		border-radius: 50%;
-	}
-
 	#category-dropdown-check:checked + .dropdown-menu {
 		display: block;
 	}
@@ -194,6 +183,7 @@
 .category-dropdown-menu {
 	max-height: 500px;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .merge-topic-card {
