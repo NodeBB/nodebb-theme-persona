@@ -2,6 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<div class="users row">
+		<div class="col-12">
 		<h1>[[pages:{template.name}, {username}]]</h1>
 
 		<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
@@ -13,5 +14,6 @@
 		<!-- ENDIF !users.length -->
 
 		<!-- IMPORT partials/paginator.tpl -->
+		</div>
 	</div>
 </div>

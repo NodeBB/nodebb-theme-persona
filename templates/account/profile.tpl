@@ -120,13 +120,15 @@
 	<!-- IF ips.length -->
 	<div class="row">
 		<div class="col-12 hidden">
-			<div class="panel-heading">
-				<h3 class="panel-title">[[global:recentips]]</h3>
-			</div>
-			<div class="panel-body">
-			{{{each ips}}}
-				<div>{ips}</div>
-			{{{end}}}
+			<div class="card">
+				<h5 class="card-header">
+					[[global:recentips]]
+				</h5>
+				<div class="card-body">
+				{{{each ips}}}
+					<div>{ips}</div>
+				{{{end}}}
+				</div>
 			</div>
 		</div>
 	</div>

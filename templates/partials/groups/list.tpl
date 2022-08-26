@@ -2,7 +2,7 @@
 	<div class="col-lg-4 col-md-6 col-sm-12 mb-3" component="groups/summary" data-slug="{groups.slug}">
 		<div class="card">
 			<a href="{config.relative_path}/groups/{groups.slug}" class="card-header list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
-				<h3 class="card-title">{groups.displayName} <small>{groups.memberCount}</small></h3>
+				<h5 class="card-title">{groups.displayName} <small>{groups.memberCount}</small></h5>
 			</a>
 			<div class="card-body">
 				<ul class="members">

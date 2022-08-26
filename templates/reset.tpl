@@ -5,7 +5,7 @@
 	[[reset_password:enter_email]]
 </div>
 
-<div class="well">
+<div class="card card-body bg-light">
 	<div class="alert alert-success hide" id="success">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		[[reset_password:password_reset_sent]]
@@ -15,9 +15,11 @@
 		[[reset_password:invalid_email]]
 	</div>
 	<form onsubmit="return false;">
-		<input type="text" class="form-control input-block input-lg" placeholder="[[reset_password:enter_email_address]]" id="email" />
-
-		<br />
-		<button class="btn btn-primary btn-block btn-lg" id="reset" type="submit">[[reset_password:reset_password]]</button>
+		<div class="mb-3">
+			<input type="email" class="form-control form-control-lg" id="email" placeholder="[[reset_password:enter_email_address]]" autocomplete="off">
+		</div>
+		<div class="d-grid">
+			<button class="btn btn-primary btn-lg" id="reset" type="submit">[[reset_password:reset_password]]</button>
+		</div>
 	</form>
 </div>

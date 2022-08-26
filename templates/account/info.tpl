@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<!-- IF sessions.length -->
-	<div class="row">
+	<div class="row mb-3">
 		<div class="col-12 col-md-12">
 			<h4>[[global:sessions]]</h4>
 			<ul class="list-group" component="user/sessions">
@@ -11,7 +11,7 @@
 					<div class="pull-right">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
-						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+						<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">Revoke Session</button>
 						<!-- ENDIF !../current -->
 						<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 						{function.userAgentIcons}
@@ -31,11 +31,11 @@
 
 	<div class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[global:recentips]]</h3>
-				</div>
-				<div class="panel-body">
+			<div class="card mb-3">
+				<h5 class="card-header">
+					[[global:recentips]]
+				</h5>
+				<div class="card-body">
 					<ul>
 						{{{each ips}}}
 						<li>{@value}</li>
@@ -44,11 +44,11 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[user:info.username-history]]</h3>
-				</div>
-				<div class="panel-body">
+			<div class="card mb-3">
+				<h5 class="card-header">
+					[[user:info.username-history]]
+				</h5>
+				<div class="card-body">
 					<ul class="list-group">
 						{{{each usernames}}}
 						<li class="list-group-item">
@@ -60,11 +60,11 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[user:info.email-history]]</h3>
-				</div>
-				<div class="panel-body">
+			<div class="card">
+				<h5 class="card-header">
+					[[user:info.email-history]]
+				</h5>
+				<div class="card-body">
 					<ul class="list-group">
 						{{{each emails}}}
 						<li class="list-group-item">
@@ -77,11 +77,11 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[user:info.latest-flags]]</h3>
-				</div>
-				<div class="panel-body">
+			<div class="card mb-3">
+				<h5 class="card-header">
+					[[user:info.latest-flags]]
+				</h5>
+				<div class="card-body">
 					<!-- IF history.flags.length -->
 					<ul class="recent-flags">
 						{{{each history.flags}}}
@@ -103,24 +103,21 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
+			<div class="card mb-3">
+				<h5 class="card-header">
+					[[user:info.ban-history]]
 
-						[[user:info.ban-history]]
-
-						<!-- IF !banned -->
-						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
-						<!-- ENDIF !isSelf -->
-						<!-- ELSE -->
-						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
-						<!-- ENDIF !isSelf -->
-						<!-- ENDIF !banned -->
-					</h3>
-				</div>
-				<div class="panel-body">
+					<!-- IF !banned -->
+					<!-- IF !isSelf -->
+					<button class="btn btn-sm pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+					<!-- ENDIF !isSelf -->
+					<!-- ELSE -->
+					<!-- IF !isSelf -->
+					<button class="btn btn-sm pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+					<!-- ENDIF !isSelf -->
+					<!-- ENDIF !banned -->
+				</h5>
+				<div class="card-body">
 					<!-- IF history.bans.length -->
 					<ul class="ban-history">
 						{{{each history.bans}}}
@@ -147,23 +144,21 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						[[user:info.mute-history]]
+			<div class="card mb-3">
+				<h5 class="card-header">
+					[[user:info.mute-history]]
 
-						{{{ if !muted }}}
-						{{{ if !isSelf }}}
-						<button class="btn btn-xs pull-right btn-danger" component="account/mute">[[user:mute_account]]</button>
-						{{{ end }}}
-						{{{ else }}}
-						{{{ if !isSelf }}}
-						<button class="btn btn-xs pull-right btn-success" component="account/unmute">[[user:unmute_account]]</button>
-						{{{ end }}}
-						{{{ end }}}
-					</h3>
-				</div>
-				<div class="panel-body">
+					{{{ if !muted }}}
+					{{{ if !isSelf }}}
+					<button class="btn btn-sm pull-right btn-danger" component="account/mute">[[user:mute_account]]</button>
+					{{{ end }}}
+					{{{ else }}}
+					{{{ if !isSelf }}}
+					<button class="btn btn-sm pull-right btn-success" component="account/unmute">[[user:unmute_account]]</button>
+					{{{ end }}}
+					{{{ end }}}
+				</h5>
+				<div class="card-body">
 					{{{ if history.mutes.length }}}
 					<ul class="ban-history">
 						{{{ each history.mutes }}}
@@ -190,11 +185,11 @@
 			</div>
 
 			<!-- IF isAdminOrGlobalModerator -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">[[user:info.moderation-note]]</h3>
-				</div>
-				<div class="panel-body">
+			<div class="card">
+				<h5 class="card-header">
+					[[user:info.moderation-note]]
+				</h5>
+				<div class="card-body">
 					<textarea component="account/moderation-note" class="form-control"></textarea>
 					<br/>
 					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>

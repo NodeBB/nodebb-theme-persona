@@ -39,10 +39,10 @@
 					</div>
 				</div>
 
-				<div class="card panel-default mb-3">
-					<div class="card-header" data-bs-toggle="collapse" data-bs-target=".search-options">
-						<h5 class="card-title"><i class="fa fa-sort"></i> [[search:advanced-search]]</h5>
-					</div>
+				<div class="card mb-3">
+					<h5 class="card-header" data-bs-toggle="collapse" data-bs-target=".search-options">
+						<i class="fa fa-sort"></i> [[search:advanced-search]]
+					</h5>
 					<div class="card-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 						<div class="mb-2 post-search-item">
 							<div class="row">

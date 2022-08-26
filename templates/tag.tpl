@@ -5,20 +5,18 @@
 	{{{end}}}
 </div>
 <div class="tag">
-	<div class="topic-list-header btn-toolbar">
-		<div class="pull-left">
+	<div class="topic-list-header btn-toolbar justify-content-between">
+		<div class="btn-group">
 			<!-- IF loggedIn -->
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<!-- ELSE -->
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
 		</div>
-
-		<div class="btn-group pull-right">
+		<div>
+		<!-- IMPORT partials/category-filter-right.tpl -->
 		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
-
-		<!-- IMPORT partials/category-filter-right.tpl -->
 	</div>
 
 	<!-- IF !topics.length -->

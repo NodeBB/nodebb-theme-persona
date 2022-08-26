@@ -22,8 +22,8 @@
 				</div>
 			</div>
 			<!-- END -->
-			<div class="panel panel-default">
-				<div class="panel-body">
+			<div class="card text-dark bg-light">
+				<div class="card-body">
 					<p>[[user:consent.email_intro]]</p>
 					<!-- IF digest.enabled -->
 					<p>[[user:consent.digest_frequency, {digest.frequency}]]</p>
@@ -32,7 +32,7 @@
 					<!-- END -->
 
 					<div class="text-center">
-						<a class="btn btn-default" href="./settings">
+						<a class="btn btn-outline-secondary" href="./settings">
 							<i class="fa fa-cog"></i>
 							[[pages:account/settings]]
 						</a>
@@ -41,8 +41,8 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-body">
+			<div class="card text-dark bg-light">
+				<div class="card-body">
 					<p><strong>[[user:consent.right_of_access]]</strong></p>
 					<p>[[user:consent.right_of_access_description]]</p>
 					<p><strong>[[user:consent.right_to_rectification]]</strong></p>
@@ -52,14 +52,14 @@
 					<p><strong>[[user:consent.right_to_data_portability]]</strong></p>
 					<p>[[user:consent.right_to_data_portability_description]]</p>
 
-					<div class="btn-group-vertical btn-block">
-						<a data-action="export-profile" class="btn btn-default">
+					<div class="btn-group-vertical d-grid">
+						<a data-action="export-profile" class="btn btn-outline-secondary">
 							<i class="fa fa-download"></i> [[user:consent.export_profile]]
 						</a>
-						<a data-action="export-posts" class="btn btn-default">
+						<a data-action="export-posts" class="btn btn-outline-secondary">
 							<i class="fa fa-download"></i> [[user:consent.export_posts]]
 						</a>
-						<a data-action="export-uploads" class="btn btn-default">
+						<a data-action="export-uploads" class="btn btn-outline-secondary">
 							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
 						</a>
 					</div>

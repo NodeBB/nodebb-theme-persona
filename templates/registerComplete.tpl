@@ -25,8 +25,8 @@
 	{{{each sections}}}
 	<div class="row">
 		<div class="col-12 col-sm-8 col-sm-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-body">
+			<div class="card">
+				<div class="card-body">
 					{@value}
 				</div>
 			</div>

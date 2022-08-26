@@ -12,10 +12,10 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		</div>
 		<div class="col-sm-4 col-12">
-			<div class="panel panel-default">
-				<div class="panel-body form">
-					<div class="form-group">
-						<label for="user-search">[[users:search]]</label>
+			<div class="card text-dark bg-light">
+				<div class="card-body form">
+					<div class="">
+						<label class="form-label" for="user-search">[[users:search]]</label>
 						<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" />
 						<ul class="block-edit list-group">
 							{{{ each edit }}}
