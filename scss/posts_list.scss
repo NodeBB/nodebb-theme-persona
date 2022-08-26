@@ -32,7 +32,7 @@
 		}
 
 		.topic-title {
-			color: $gray-dark;
+			color: $gray-800;
 			font-weight: 900;
 			font-size: 125%;
 			text-decoration: underline;
@@ -41,7 +41,7 @@
 		.topic-category {
 			text-transform: uppercase;
 			font-size: 10px;
-			color: lighten($gray-base, 65%);
+			color: $gray-600;
 			margin-top: 6px;
 			margin-right: 10px;
 			margin-bottom: 25px;
@@ -50,7 +50,7 @@
 
 			a {
 				font-weight: 900;
-				color: $gray-light;
+				color: $gray-600;
 			}
 		}
 
@@ -81,7 +81,7 @@
 		}
 
 		.post-body {
-			border-right: 2px solid $brand-primary;
+			border-right: 2px solid $primary;
 			min-height: 100px;
 		}
 
@@ -104,10 +104,10 @@
 
 			.post-author {
 				padding-left: 25px;
-				color: lighten($gray-base, 65%);
+				color: $gray-600;
 
 				a {
-					color: $gray-light;
+					color: $gray-600;
 					font-weight: 900;
 
 				}

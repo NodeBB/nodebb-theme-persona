@@ -76,7 +76,7 @@
 				}
 
 				&:focus, &:hover {
-					color: $gray-lighter;
+					color: $gray-200;
 				}
 
 				border-radius: 50%;
@@ -112,14 +112,14 @@
 
 			&.taskbar-composer {
 				a, a:hover, a:focus, a:active {
-					background-color: #f44336;
+					background-color: $danger;
 					background-size: cover;
 				}
 			}
 
 			&.taskbar-chat {
 				a, a:hover, a:focus, a:active {
-					background: $brand-primary;
+					background: $primary;
 				}
 
 				&.new:after {
@@ -129,12 +129,12 @@
 					top: 0px;
 					font-size: 10px;
 					text-align: center;
-					border: 1px solid #890405;
+					border: 1px solid $danger;
 					color: #fff;
 					font-weight: bold;
 					min-width: 20px;
 					@include border-radius(4px);
-					background: #c91106;
+					background: $danger;
 					padding: 1px 2px;
 					font-family: $font-family-sans-serif;
 				}
@@ -151,7 +151,7 @@
 					i {
 						font-size: 18px;
 						line-height: 42px;
-						color: #FFF;
+						color: $body-color;
 					}
 				}
 			}

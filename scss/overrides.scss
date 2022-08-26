@@ -10,21 +10,27 @@ $btn-border-radius-sm: 0!default;
 $btn-border-radius-lg: 0!default;
 
 // persona colors
-$brand-primary:         darken(#428bca, 6.5%); // #337ab7
-$brand-success:         #5cb85c;
-$brand-info:            #5bc0de;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-// persona link changes
-$primary: $brand-primary !default;
-$success: $brand-success !default;
-$info: $brand-info !default;
-$warning: $brand-warning !default;
-$danger: $brand-danger !default;
-// $light: $gray-200 !default;
-// $dark: $purple !default;
-$link-decoration:none!default;
+$primary: darken(#428bca, 6.5%) !default;
+$secondary: $gray-600 !default;
+$success: #5cb85c !default;
+$info: #5bc0de !default;
+$warning: #f0ad4e !default;
+$danger: #d9534f !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$link-decoration:none !default;
 
 // font
 $font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;

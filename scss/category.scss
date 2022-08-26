@@ -11,7 +11,7 @@
 
 			&:not(.unread) {
 				.lastpost {
-					border-color: lighten($gray-light, 20%) !important;
+					border-color: lighten($gray-600, 20%) !important;
 				}
 
 				h2 a {
@@ -69,8 +69,8 @@
 
 			.avatar .select {
 				.fa-check {
-					border: 1px solid $brand-success;
-					color: $brand-success;
+					border: 1px solid $success;
+					color: $success;
 				}
 			}
 
@@ -80,8 +80,8 @@
 				}
 
 				.fa-check {
-					border: 1px solid $brand-success;
-					color: $brand-success;
+					border: 1px solid $success;
+					color: $success;
 					opacity: 1;
 				}
 			}
@@ -94,16 +94,16 @@
 				.avatar .select {
 					.fa-check {
 						opacity: 1;
-						background-color: $brand-success;
-						border: 1px solid $brand-success;
+						background-color: $success;
+						border: 1px solid $success;
 						color: $success;
 						@include transition(all .15s ease-in-out);
 					}
 
 					&:hover .fa-check {
-						background-color: $brand-success;
+						background-color: $success;
 						border: 1px solid $success;
-						color: $success;
+						color: $white;
 					}
 				}
 			}
@@ -133,13 +133,13 @@
 .category, .categories, .subcategory {
 	> p {
 		text-transform: uppercase;
-		color: $gray-light;
+		color: $gray-600;
 	}
 
 	.description {
 		font-weight: normal;
 		line-height: 1.2;
-		color: $gray-light;
+		color: $gray-600;
 		margin-top: 5px;
 		min-height: 25px
 	}
@@ -161,7 +161,7 @@
 
 .categories-title {
 	text-transform: uppercase;
-	color: $gray-light;
+	color: $gray-600;
 	margin: 0 0 10px;
 	font-size: 14px;
 	font-weight: normal;

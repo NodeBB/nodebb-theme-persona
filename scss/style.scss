@@ -78,7 +78,7 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	}
 
 	&.offline {
-		color: $gray;
+		color: $gray-600;
 	}
 }
 
@@ -92,7 +92,7 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 }
 
 .topic .topic-item.highlight, .category .category-item.highlight {
-	background-color: lighten($brand-info, 20%);
+	background-color: lighten($info, 20%);
 }
 
 .fa-facebook-square {
@@ -266,7 +266,7 @@ a.permalink {
 	&:hover,
 	&:focus,
 	&:active {
-		color: $gray-light;
+		color: $gray-600;
 		text-decoration: underline;
 	}
 }

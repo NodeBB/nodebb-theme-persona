@@ -19,7 +19,7 @@
 		.fullname {
 			text-align: center;
 			font-size: 20px;
-			color: $gray-light;
+			color: $gray-600;
 			font-weight: 300;
 			margin-bottom: 24px;
 		}
@@ -136,8 +136,8 @@
 			top: 1em;
 			right: 2em;
 			opacity: 1;
-			background-color: $brand-primary;
-			color: $gray-lighter;
+			background-color: $primary;
+			color: $gray-200;
 			padding: 0.5em;
 			font-weight: bold;
 
@@ -203,7 +203,7 @@
 			max-width: 75%;
 			margin-left: auto;
 			margin-right: auto;
-			color: $gray-light;
+			color: $gray-600;
 		}
 
 		.profile-meta {
@@ -233,7 +233,7 @@
 			.stat-label {
 				font-size: 12px;
 				text-transform: uppercase;
-				color: $gray-light;
+				color: $gray-600;
 			}
 		}
 	}
@@ -309,7 +309,7 @@
 	bottom: -26px;
 
 	.open #profile {
-		background-color: lighten($brand-primary, 10%);
+		background-color: lighten($primary, 10%);
 	}
 
 	.persona-fab {
@@ -383,7 +383,7 @@
 			&:checked {
 				+ span:before {
 					border-radius: 50%;
-					border: 2px solid $brand-primary;
+					border: 2px solid $primary;
 					position: relative;
 					top: -4px;
 					left: -4px;
@@ -399,7 +399,7 @@
 				+ span:before {
 					content: '\f05e';
 					font-family: FontAwesome;
-					color: $gray-lighter;
+					color: $gray-200;
 					font-size: 28px;
 				}
 			}
@@ -437,7 +437,7 @@
 		.timestamp {
 			font-size: 1.25rem;
 			font-style: italic;
-			color: $gray-light;
+			color: $gray-600;
 		}
 	}
 
@@ -446,14 +446,14 @@
 
 		li {
 			list-style-type: none;
-			border-bottom: 1px solid $gray-lighter;
+			border-bottom: 1px solid $gray-200;
 			margin-bottom: 1rem;
 		}
 
 		.expiry {
 			font-size: 1.25rem;
 			font-style: italic;
-			color: $gray-light;
+			color: $gray-600;
 		}
 	}
 }

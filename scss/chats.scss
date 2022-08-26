@@ -57,7 +57,7 @@
 				border-left: 1px solid;
 				border-right: 1px solid;
 				border-bottom: 1px solid;
-				border-color: $gray-lighter;
+				border-color: $gray-200;
 
 				i {
 					position: relative;
@@ -96,7 +96,7 @@
 
 	[component="chat/header"] {
 		padding: 10px;
-		border-bottom: 1px solid $gray-lighter;
+		border-bottom: 1px solid $gray-200;
 
 		span {
 			font-weight: 500;
@@ -133,7 +133,7 @@
 			flex: 1;
 			box-shadow: none;
 			border: 0;
-			border: 1px solid $gray-lighter;
+			border: 1px solid $gray-200;
 			border-radius: 0;
 		}
 
@@ -147,7 +147,7 @@
 			right: 5.25em;
 			z-index: 2;
 			bottom: 0;
-			color: $gray-light;
+			color: $gray-600;
 		}
 	}
 }
@@ -164,7 +164,7 @@
 	padding: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
-	border-top: 1px solid $gray-lighter;
+	border-top: 1px solid $gray-200;
 
 	> li.no_active {
 		height: initial;
@@ -183,7 +183,7 @@
 		border-left: 1px solid;
 		border-right: 1px solid;
 		border-bottom: 1px solid;
-		border-color: $gray-lighter;
+		border-color: $gray-200;
 
 		&.typing {
 			.username:after {
@@ -192,7 +192,7 @@
 		}
 
 		&.unread {
-			background: lighten($brand-primary, 35%);
+			background: lighten($primary, 35%);
 			border-bottom: 0;
 		}
 
@@ -218,7 +218,7 @@
 		}
 
 		&.bg-primary {
-			background: $brand-primary;
+			background: $primary;
 			border-bottom: 0;
 		}
 
@@ -304,7 +304,7 @@
 				width: 80px;
 				font-size: 40px;
 				border-radius: 0;
-				background: $gray-lighter;
+				background: $gray-200;
 			}
 		}
 	}
@@ -383,7 +383,7 @@
 			&[data-break="true"] {
 				padding-top: 1rem;
 				margin-top: 1rem;
-				border-top: 1px solid $gray-lighter;
+				border-top: 1px solid $gray-200;
 			}
 
 			&[data-break="true"]:first-child {
@@ -418,7 +418,7 @@
 			}
 
 			.chat-timestamp {
-				color: $gray-light;
+				color: $gray-600;
 				font-size: 1rem;
 				display: inline-block;
 				margin-left: 10px;
@@ -484,7 +484,7 @@
 		li.system-message {
 			list-style-type: none;
 			text-align: center;
-			color: $gray-light;
+			color: $gray-600;
 			font-size: 1.25rem;
 			padding: 1rem 0;
 
@@ -492,7 +492,7 @@
 				display: inline-block;
 				width: 10%;
 				content: '';
-				border-top: 1px solid $gray-lighter;
+				border-top: 1px solid $gray-200;
 				position: relative;
 				top: -0.3rem;
 				margin: 0 2rem;
@@ -501,7 +501,7 @@
 	}
 
 	.user-typing {
-		color: $gray-light;
+		color: $gray-600;
 		margin: 1.428rem 0;
 	}
 
