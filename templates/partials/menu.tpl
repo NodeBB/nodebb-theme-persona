@@ -87,7 +87,7 @@
 								<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
 								<div class="quick-search-results-container"></div>
 							</div>
-							<button type="submit" class="btn btn-default hide">[[global:search]]</button>
+							<button type="submit" class="btn btn-outline-secondary hide">[[global:search]]</button>
 						</div>
 
 						<li id="" class="nav-item"><a id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></li>

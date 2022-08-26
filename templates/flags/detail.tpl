@@ -115,12 +115,12 @@
 			<div class="col-sm-6">
 				<h2 class="h4">[[flags:quick-actions]]</h2>
 
-				<a class="btn btn-default btn-block" href="{config.relative_path}/{type_path}/{targetId}">
+				<a class="btn btn-outline-secondary btn-block" href="{config.relative_path}/{type_path}/{targetId}">
 					<i class="fa fa-external-link"></i>
 					[[flags:go-to-target]]
 				</a>
 
-				<a class="btn btn-default btn-block" href="#" data-action="assign">
+				<a class="btn btn-outline-secondary btn-block" href="#" data-action="assign">
 					<i class="fa fa-id-card-o"></i>
 					[[flags:assign-to-me]]
 				</a>
@@ -136,7 +136,7 @@
 
 				{{{ if target.uid }}}
 				<div class="btn-group btn-block" data-uid="{target.uid}">
-					<button type="button" class="btn btn-default btn-block dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button type="button" class="btn btn-outline-secondary btn-block dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<i class="fa fa-street-view"></i>
 						[[flags:flagged-user]]
 						<span class="caret"></span>

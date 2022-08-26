@@ -28,7 +28,7 @@
 	<div class="col-6 col-sm-4 col-md-6">
 		<div class="btn-group-vertical btn-block" role="group">
 			<!-- IF allowProfileImageUploads -->
-			<button type="button" class="btn btn-default" data-action="upload">
+			<button type="button" class="btn btn-outline-secondary" data-action="upload">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture]]
 				</span>
@@ -38,7 +38,7 @@
 				</span>
 			</button>
 			<!-- ENDIF allowProfileImageUploads -->
-			<button type="button" class="btn btn-default" data-action="upload-url">
+			<button type="button" class="btn btn-outline-secondary" data-action="upload-url">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture_from_url]]
 				</span>
@@ -48,7 +48,7 @@
 				</span>
 			</button>
 			<!-- IF uploaded -->
-			<button type="button" class="btn btn-default" data-action="remove-uploaded">
+			<button type="button" class="btn btn-outline-secondary" data-action="remove-uploaded">
 				<span class="hidden-xs hidden-sm">
 					[[user:remove_uploaded_picture]]
 				</span>

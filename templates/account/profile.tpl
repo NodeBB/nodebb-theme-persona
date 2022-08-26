@@ -100,7 +100,7 @@
 				</span>
 
 				<!-- IF !isSelf -->
-				<a component="account/unfollow" href="#" class="btn btn-default{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
+				<a component="account/unfollow" href="#" class="btn btn-outline-secondary{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
 				<a component="account/follow" href="#" class="btn btn-primary{{{ if isFollowing }}} hide{{{ end }}}">[[user:follow]]</a>
 				<!-- ENDIF !isSelf -->
 			</div>
