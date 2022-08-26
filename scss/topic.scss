@@ -522,7 +522,6 @@
 				padding-left: 20px;
 				padding-right: 20px;
 				padding-top: 10px;
-				padding-bottom: 10px;
 			}
 			.dropdown-menu {
 				width: 475px;
@@ -577,6 +576,7 @@
 			z-index: -1;
 			position: absolute;
 			transition: width 50ms ease-in;
+			height: 100%;
 		}
 	}
 	@include media-breakpoint-down(sm) {
