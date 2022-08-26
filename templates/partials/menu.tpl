@@ -53,6 +53,9 @@
 							{{{ if navigation.text }}}
 							<span class="{navigation.textClass}">{navigation.text}</span>
 							{{{ end }}}
+							{{{ if navigation.dropdown}}}
+							<i class="fa fa-caret-down"></i>
+							{{{ end }}}
 						</a>
 						{{{ if navigation.dropdown }}}
 						<ul class="dropdown-menu">
