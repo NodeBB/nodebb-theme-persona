@@ -33,7 +33,7 @@
 			{{{ end }}}
 
 			{{{ each posts }}}
-			<div class="card text-dark bg-light mb-3" data-id="{posts.id}">
+			<div class="card mb-3" data-id="{posts.id}">
 				<div class="card-header">
 					{{{ if !singlePost }}}
 					<input type="checkbox" class="form-check-input" autocomplete="off" />

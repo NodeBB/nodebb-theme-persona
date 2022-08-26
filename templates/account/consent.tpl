@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<!-- END -->
-			<div class="card text-dark bg-light">
+			<div class="card">
 				<div class="card-body">
 					<p>[[user:consent.email_intro]]</p>
 					<!-- IF digest.enabled -->
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="card text-dark bg-light">
+			<div class="card">
 				<div class="card-body">
 					<p><strong>[[user:consent.right_of_access]]</strong></p>
 					<p>[[user:consent.right_of_access_description]]</p>

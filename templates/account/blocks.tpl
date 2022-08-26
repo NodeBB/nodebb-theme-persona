@@ -12,7 +12,7 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		</div>
 		<div class="col-sm-4 col-12">
-			<div class="card text-dark bg-light">
+			<div class="card">
 				<div class="card-body form">
 					<div class="">
 						<label class="form-label" for="user-search">[[users:search]]</label>
