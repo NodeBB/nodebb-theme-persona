@@ -229,7 +229,7 @@
 					</li>
 				</ul>
 				{{{ else }}}
-				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb0-lg-0 align-items-center">
+				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
 					{{{ if allowRegistration }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">

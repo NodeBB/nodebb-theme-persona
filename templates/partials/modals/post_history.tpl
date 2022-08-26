@@ -29,7 +29,7 @@
 	<button class="btn btn-danger" data-action="delete">[[topic:diffs.delete]]</button>
 	{{{ end }}}
 	{{{ if editable }}}
-	<p class="help-block">[[topic:diffs.restore-description]]</p>
+	<p class="form-text">[[topic:diffs.restore-description]]</p>
 	{{{ end }}}
 
 </div>

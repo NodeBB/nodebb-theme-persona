@@ -216,11 +216,11 @@
 						<label>
 							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> <strong>[[groups:details.private]]</strong>
 							<!-- IF !allowPrivateGroups -->
-							<p class="help-block">
+							<p class="form-text">
 								[[groups:details.private_system_help]]
 							</p>
 							<!-- ENDIF !allowPrivateGroups -->
-							<p class="help-block">
+							<p class="form-text">
 								[[groups:details.private_help]]
 							</p>
 						</label>
@@ -238,7 +238,7 @@
 					<div class="checkbox">
 						<label>
 							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->> <strong>[[groups:details.hidden]]</strong>
-							<p class="help-block">
+							<p class="form-text">
 								[[groups:details.hidden_help]]
 							</p>
 						</label>

@@ -25,12 +25,12 @@
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
 						{{{end}}}
 					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
+					<p class="form-text">[[user:homepage_description]]</p>
 				</div>
 				<div id="homePageCustom" class="mb-2" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
+					<p class="form-text">[[user:custom_route_help]]</p>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
@@ -74,7 +74,7 @@
 						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/> <strong>[[user:enable_topic_searching]]</strong>
 					</label>
 				</div>
-				<p class="help-block">[[user:topic_search_help]]</p>
+				<p class="form-text">[[user:topic_search_help]]</p>
 				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="checkbox">
 					<label>
@@ -113,7 +113,7 @@
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						{{{end}}}
 					</select>
-					<p class="help-block">[[user:digest_description]]</p>
+					<p class="form-text">[[user:digest_description]]</p>
 				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->

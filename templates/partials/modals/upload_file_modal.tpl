@@ -13,7 +13,7 @@
 							<!-- ENDIF description -->
 							<input type="file" id="fileInput" name="files[]" <!-- IF accept -->accept="{accept}"<!-- ENDIF accept -->>
 							<!-- IF showHelp -->
-							<p class="help-block">
+							<p class="form-text">
 								<!-- IF accept -->
 								[[global:allowed-file-types, {accept}]]
 								<!-- ENDIF accept -->
