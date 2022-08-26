@@ -2,14 +2,14 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="upload-picture-url">[[user:upload_picture]]</h3>
+					<h5 class="modal-title" id="upload-picture-url">[[user:upload_picture]]</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
 				</div>
 				<div class="modal-body">
 					<input id="uploadFromUrl" class="form-control" type="text"/>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-outline-secondary" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
+					<button class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-hidden="true">[[global:close]]</button>
 					<button class="btn btn-primary upload-btn">[[user:upload_picture]]</button>
 				</div>
 			</div>
