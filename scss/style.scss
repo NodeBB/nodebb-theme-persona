@@ -66,15 +66,15 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	vertical-align: middle;
 
 	&.online {
-		color: $material-success;
+		color: $success;
 	}
 
 	&.away {
-		color: $material-warning;
+		color: $warning;
 	}
 
 	&.dnd {
-		color: $material-danger;
+		color: $danger;
 	}
 
 	&.offline {

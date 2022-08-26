@@ -25,36 +25,36 @@
 		}
 
 		&.alert-info::before {
-			background-color: $material-info;
+			background-color: $info;
 		}
 
 		&.alert-warning::before {
-			background-color: $material-warning;
+			background-color: $warning;
 		}
 
 		&.alert-success::before {
-			background-color: $material-success;
+			background-color: $success;
 		}
 
 		&.alert-danger::before {
-			background-color: $material-danger;
+			background-color: $danger;
 		}
 
 		&.animate {
 			&.alert-info::before {
-				background-color: lighten($material-info, 25%);
+				background-color: lighten($info, 25%);
 			}
 
 			&.alert-warning::before {
-				background-color: lighten($material-warning, 25%);
+				background-color: lighten($warning, 25%);
 			}
 
 			&.alert-success::before {
-				background-color: lighten($material-success, 25%);
+				background-color: lighten($success, 25%);
 			}
 
 			&.alert-danger::before {
-				background-color: lighten($material-danger, 25%);
+				background-color: lighten($danger, 25%);
 			}
 
 			&::before {
@@ -77,23 +77,23 @@
 		}
 
 		&.alert-info {
-			color: $material-info;
-			border-color: $material-info;
+			color: $info;
+			border-color: $info;
 		}
 
 		&.alert-warning {
-			color: $material-warning;
-			border-color: $material-warning;
+			color: $warning;
+			border-color: $warning;
 		}
 
 		&.alert-success {
-			color: $material-success;
-			border-color: $material-success;
+			color: $success;
+			border-color: $success;
 		}
 
 		&.alert-danger {
-			color: $material-danger;
-			border-color: $material-danger;
+			color: $danger;
+			border-color: $danger;
 		}
 	}
 }
