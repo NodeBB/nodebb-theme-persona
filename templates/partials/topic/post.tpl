@@ -60,7 +60,7 @@
 
 	<div class="clearfix">
 	{{{ if !hideReplies }}}
-	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies no-select pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
+	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
 			{buildAvatar(posts.replies.users, "xs", true, "")}
@@ -79,8 +79,8 @@
 	<small class="pull-right">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
-			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+			<a component="post/reply" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+			<a component="post/quote" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 		</span>
 
 		<!-- IF !reputation:disabled -->

@@ -25,7 +25,7 @@
 		<!-- ENDIF !isSelf -->
 		<!-- ENDIF loggedIn -->
 		<li>
-			<a class="dropdown-item" href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
+			<a class="dropdown-item" href="{config.relative_path}/user/{userslug}" class="d-inline-block" id="profile">[[user:profile]]</a>
 		</li>
 		<!-- IF canEdit -->
 		<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>

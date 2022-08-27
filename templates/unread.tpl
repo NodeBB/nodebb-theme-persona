@@ -8,7 +8,7 @@
 	<div class="topic-list-header btn-toolbar justify-content-between">
 		<div class="pull-left">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
-			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
+			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 		</div>
