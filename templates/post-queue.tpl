@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="btn-toolbar justify-content-end">
 	<div class="me-2">
-	<!-- IMPORT partials/category-filter.tpl -->
+	<!-- IMPORT partials/category-filter-right.tpl -->
 	</div>
 	{{{ if !singlePost }}}
 	<div class="btn-group bottom-sheet" component="post-queue/bulk-actions">
