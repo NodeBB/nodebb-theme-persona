@@ -32,11 +32,11 @@
 	</nav>
 
 	<main id="panel" class="slideout-panel">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light mb-3 header" id="header-menu" component="navbar">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
-		<div class="container" id="content">
+		<div class="container pt-3" id="content">
 		<!-- IMPORT partials/noscript/warning.tpl -->
 		<!-- IMPORT partials/noscript/message.tpl -->
