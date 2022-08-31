@@ -83,6 +83,7 @@
 		.post-body {
 			border-right: 2px solid $primary;
 			min-height: 100px;
+			position: relative; // to handle abs. positioning in .post-info child
 		}
 
 		.post-info {
