@@ -3,7 +3,7 @@
         {{{ if (selectedCategory && !showCategorySelectLabel) }}}
         <div class="category-item d-inline-block">
             <div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, selectedCategory}">
-                <i class="fa fa-fw {./icon}"></i>
+                <i class="fa fa-fw {selectedCategory.icon}"></i>
             </div>
             {selectedCategory.name}
         </div>
