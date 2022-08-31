@@ -4,7 +4,7 @@
 	> [component="post"], .timeline-event {
 		position: relative;	// for absolutely positioned pseudo-element, below
 		border-left: 2px solid lighten($primary, 30%);
-		margin-left: 2.5rem;
+		margin-left: 1.5rem;
 
 		&:not(:last-child) {
 			padding-bottom: $post-padding;
@@ -14,14 +14,14 @@
 		}
 
 		> div:not(.content) {
-			margin-left: -2.5rem;
+			margin-left: -1.5rem;
 		}
 
-		.avatar, .timeline-badge {
+		.icon .avatar, .timeline-badge {
 			// Opaque ring
 			position: relative;
 			z-index: 1;
-			box-shadow: 0 0 0 .5rem $body-bg;
+			box-shadow: 0 0 0 ($spacer * .5) $body-bg;
 		}
 	}
 
