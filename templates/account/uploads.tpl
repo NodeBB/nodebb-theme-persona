@@ -29,7 +29,7 @@
                         </td>
                         <td>
                             <div class="btn-group ">
-                                <button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-danger btn-sm" data-action="delete"><i class="fa fa-trash"></i></button>
                             </div>
                         </td>
                     </tr>
