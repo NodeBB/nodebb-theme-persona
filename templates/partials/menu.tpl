@@ -1,4 +1,5 @@
-			<button type="button" class="navbar-toggler" id="mobile-menu">
+			<div class="me-auto">
+			<button type="button" class="navbar-toggler border-0" id="mobile-menu">
 				<i class="fa fa-lg fa-fw fa-bars unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></i>
 			</button>
 
@@ -13,6 +14,7 @@
 				<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
 			</a>
 			{{{ end }}}
+			</div>
 
 			{{{ if config.searchEnabled }}}
 			<div class="navbar-search visible-xs">
@@ -29,7 +31,7 @@
 			{{{ end }}}
 
 			{{{ if config.loggedIn }}}
-			<button type="button" class="navbar-toggler" id="mobile-chats">
+			<button type="button" class="navbar-toggler border-0" id="mobile-chats">
 				<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 				<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
 				{buildAvatar(user, "md", true)}
@@ -192,7 +194,7 @@
 							</li>
 							{{{ if showModMenu }}}
 							<li role="presentation" class="dropdown-divider"></li>
-							<li class="dropdown-header">[[pages:moderator-tools]]</li>
+							<li><h6 class="dropdown-header">[[pages:moderator-tools]]</h6></li>
 							<li>
 								<a class="dropdown-item" href="{relative_path}/flags">
 									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
@@ -236,14 +238,14 @@
 					{{{ if allowRegistration }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">
-							<i class="fa fa-pencil fa-fw d-block d-sm-none"></i>
+							<i class="fa fa-pencil fa-fw d-inline-block d-sm-none"></i>
 							<span>[[global:register]]</span>
 						</a>
 					</li>
 					{{{ end }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/login">
-							<i class="fa fa-sign-in fa-fw d-block d-sm-none"></i>
+							<i class="fa fa-sign-in fa-fw d-inline-block d-sm-none"></i>
 							<span>[[global:login]]</span>
 						</a>
 					</li>
