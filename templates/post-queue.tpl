@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						<div class="col-lg-3 col-12">
-							<strong>[[post-queue:category]]{{{ if posts.data.cid}}} <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:category-editable]]"></i>{{{ end }}}</strong>
+							<strong>[[post-queue:category]]{{{ if posts.data.cid}}} <i class="fa fa-fw fa-edit" data-bs-toggle="tooltip" title="[[post-queue:category-editable]]"></i>{{{ end }}}</strong>
 							<div class="topic-category" {{{if posts.data.cid}}}data-editable="editable"{{{end}}}">
 								<a href="{config.relative_path}/category/{posts.category.slug}">
 									<div class="category-item d-inline-block">
@@ -67,7 +67,7 @@
 							</div>
 						</div>
 						<div class="col-lg-7 col-12">
-							<strong>{{{ if posts.data.tid }}}[[post-queue:topic]]{{{ else }}}[[post-queue:title]] <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:title-editable]]"></i>{{{ end }}}</strong>
+							<strong>{{{ if posts.data.tid }}}[[post-queue:topic]]{{{ else }}}[[post-queue:title]] <i class="fa fa-fw fa-edit" data-bs-toggle="tooltip" title="[[post-queue:title-editable]]"></i>{{{ end }}}</strong>
 							<div class="topic-title">
 								{{{ if posts.data.tid }}}
 								<a href="{config.relative_path}/topic/{posts.data.tid}">{posts.topic.title}</a>
@@ -83,7 +83,7 @@
 					</div>
 					<hr/>
 					<div>
-						<strong>[[post-queue:content]] <i class="fa fa-fw fa-edit" data-toggle="tooltip" title="[[post-queue:content-editable]]"></i></strong>
+						<strong>[[post-queue:content]] <i class="fa fa-fw fa-edit" data-bs-toggle="tooltip" title="[[post-queue:content-editable]]"></i></strong>
 						<div class="post-content">{posts.data.content}</div>
 						<div class="post-content-editable hidden">
 							<textarea class="form-control">{posts.data.rawContent}</textarea>
