@@ -46,7 +46,7 @@
 					top: 0px;
 					left: 0px;
 					border: 1px solid transparent;
-					background: white;
+					background: $white;
 					width: 100%;
 					height: 100%;
 					padding: 14px;
@@ -96,7 +96,7 @@
 						opacity: 1;
 						background-color: $success;
 						border: 1px solid $success;
-						color: $success;
+						color: $white;
 						@include transition(all .15s ease-in-out);
 					}
 
