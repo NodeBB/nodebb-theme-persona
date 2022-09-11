@@ -60,7 +60,7 @@
 
 				&:after {
 					font-family: "Font Awesome 5 Free";
-					content: $fa-var-circle;
+					content: fa-content($fa-var-circle);
 					font-weight: 400;
 					padding: 4px 1rem;
 					position: relative;
