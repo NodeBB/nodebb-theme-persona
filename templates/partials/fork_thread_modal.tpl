@@ -3,7 +3,7 @@
 		[[topic:fork_topic]]
 	</h5>
 	<div class="card-body">
-		<div class="form-group">
+		<div class="mb-3">
 			<label for="title">[[topic:title]]</label>
 			<input id="fork-title" type="text" class="form-control" placeholder="[[topic:enter-new-topic-title]]">
 		</div>
@@ -14,7 +14,7 @@
 	</div>
 	<div class="card-footer">
 		&nbsp;
-		<div class="btn-group pull-right">
+		<div class="btn-group float-end">
 			<button class="btn btn-link btn-sm" id="fork_thread_cancel">[[global:buttons.close]]</button>
 			<button class="btn btn-primary btn-sm" id="fork_thread_commit" disabled>[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button>
 		</div>

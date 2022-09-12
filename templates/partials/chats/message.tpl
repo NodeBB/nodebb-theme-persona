@@ -10,7 +10,7 @@
 		<!-- END -->
 		<span class="chat-timestamp timeago" title="{messages.timestampISO}"></span>
 		<!-- IF messages.edited -->
-		<div class="text-muted pull-right" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></div>
+		<div class="text-muted float-end" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></div>
 		<!-- ENDIF messages.edited -->
 	</div>
 	<div class="message-body-wrapper">

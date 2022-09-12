@@ -38,53 +38,60 @@
 			<h4>[[global:privacy]]</h4>
 			<div class="card card-body text-bg-light mb-3">
 				<!-- IF !hideEmail -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/>
+					<strong>
+						<label class="form-check-label">[[user:show_email]]</label>
+					</strong>
 				</div>
 				<!-- ENDIF !hideEmail -->
 
 				<!-- IF !hideFullname -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/> <strong>[[user:show_fullname]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/>
+					<strong>
+						<label class="form-check-label">[[user:show_fullname]]</label>
+					</strong>
 				</div>
 				<!-- ENDIF !hideFullname -->
 				<!-- IF !config.disableChat -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
+					<strong>
+						<label class="form-check-label">[[user:restrict_chats]]</label>
+					</strong>
 				</div>
 				<!-- ENDIF !config.disableChat -->
 			</div>
 
 			<h4>[[user:browsing]]</h4>
 			<div class="card card-body text-bg-light mb-3">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/> <strong>[[user:open_links_in_new_tab]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/>
+					<strong>
+						<label class="form-check-label">[[user:open_links_in_new_tab]]</label>
+					</strong>
 				</div>
 				<!-- IF inTopicSearchAvailable -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/> <strong>[[user:enable_topic_searching]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/>
+					<strong>
+						<label class="form-check-label">[[user:enable_topic_searching]]</label>
+					</strong>
 				</div>
 				<p class="form-text">[[user:topic_search_help]]</p>
 				<!-- ENDIF inTopicSearchAvailable -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/> <strong>[[user:update_url_with_post_index]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/>
+					<strong>
+						<label class="form-check-label">[[user:update_url_with_post_index]]</label>
+					</strong>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/> <strong>[[user:scroll_to_my_post]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/>
+					<strong>
+						<label class="form-check-label">[[user:scroll_to_my_post]]</label>
+					</strong>
 				</div>
 			</div>
 
@@ -157,15 +164,17 @@
 
 			<h4>[[topic:watch]]</h4>
 			<div class="card card-body text-bg-light mb-3">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/> <strong>[[user:follow_topics_you_create]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/>
+					<strong>
+						<label class="form-check-label">[[user:follow_topics_you_create]]</label>
+					</strong>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/> <strong>[[user:follow_topics_you_reply_to]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/>
+					<strong>
+						 <label class="form-check-label">[[user:follow_topics_you_reply_to]]</label>
+					</strong>
 				</div>
 				<div class="mb-2">
 					<label>[[user:default-category-watch-state]]</label>

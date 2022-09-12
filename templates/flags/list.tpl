@@ -7,14 +7,14 @@
 	<div class="col-sm-8 col-md-9">
 		<!-- IF hasFilter -->
 		<div class="alert alert-warning">
-			<p class="pull-right">
+			<p class="float-end">
 				<a href="{config.relative_path}/flags">[[flags:filter-reset]]</a>
 			</p>
 			[[flags:filter-active]]
 		</div>
 		<!-- ENDIF hasFilter -->
 
-		<div class="btn-group pull-right" component="flags/bulk-actions">
+		<div class="btn-group float-end" component="flags/bulk-actions">
 			<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
 				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
 			</button>

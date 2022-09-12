@@ -1,12 +1,12 @@
 <div class="clearfix post-header">
-	<div class="icon pull-left">
+	<div class="icon float-start">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{buildAvatar(posts.user, "sm2x", true, "", "user/picture")}
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 		</a>
 	</div>
 
-	<small class="pull-left">
+	<small class="float-start">
 		<strong>
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
 		</strong>
@@ -33,10 +33,10 @@
 		</span>
 
 	</small>
-	<small class="pull-right">
+	<small class="float-end">
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 	</small>
-	<small class="pull-right">
+	<small class="float-end">
 		<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
 		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
@@ -60,7 +60,7 @@
 
 	<div class="clearfix">
 	{{{ if !hideReplies }}}
-	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none pull-left {{{ if !posts.replies.count }}}hidden{{{ end }}}">
+	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start {{{ if !posts.replies.count }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
 			{buildAvatar(posts.replies.users, "xs", true, "")}
@@ -76,7 +76,7 @@
 	</a>
 	{{{ end }}}
 
-	<small class="pull-right">
+	<small class="float-end">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>

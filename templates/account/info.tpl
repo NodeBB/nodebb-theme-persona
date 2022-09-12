@@ -8,7 +8,7 @@
 			<ul class="list-group" component="user/sessions">
 				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
-					<div class="pull-right">
+					<div class="float-end">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
 						<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">Revoke Session</button>
@@ -53,7 +53,7 @@
 						{{{each usernames}}}
 						<li class="list-group-item">
 							{../value}
-							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+							<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
 						</li>
 						{{{end}}}
 					</ul>
@@ -69,7 +69,7 @@
 						{{{each emails}}}
 						<li class="list-group-item">
 							{../value}
-							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+							<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
 						</li>
 						{{{end}}}
 					</ul>
@@ -109,11 +109,11 @@
 
 					<!-- IF !banned -->
 					<!-- IF !isSelf -->
-					<button class="btn btn-sm pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+					<button class="btn btn-sm float-end btn-danger" component="account/ban">[[user:ban_account]]</button>
 					<!-- ENDIF !isSelf -->
 					<!-- ELSE -->
 					<!-- IF !isSelf -->
-					<button class="btn btn-sm pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+					<button class="btn btn-sm float-end btn-success" component="account/unban">[[user:unban_account]]</button>
 					<!-- ENDIF !isSelf -->
 					<!-- ENDIF !banned -->
 				</h5>
@@ -150,11 +150,11 @@
 
 					{{{ if !muted }}}
 					{{{ if !isSelf }}}
-					<button class="btn btn-sm pull-right btn-danger" component="account/mute">[[user:mute_account]]</button>
+					<button class="btn btn-sm float-end btn-danger" component="account/mute">[[user:mute_account]]</button>
 					{{{ end }}}
 					{{{ else }}}
 					{{{ if !isSelf }}}
-					<button class="btn btn-sm pull-right btn-success" component="account/unmute">[[user:unmute_account]]</button>
+					<button class="btn btn-sm float-end btn-success" component="account/unmute">[[user:unmute_account]]</button>
 					{{{ end }}}
 					{{{ end }}}
 				</h5>
@@ -192,14 +192,14 @@
 				<div class="card-body">
 					<textarea component="account/moderation-note" class="form-control"></textarea>
 					<br/>
-					<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+					<button class="btn btn-sm float-end btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
 					<br/>
 					<div component="account/moderation-note/list">
 						{{{each moderationNotes}}}
 						<hr/>
 
 						<div class="clearfix">
-							<div class="pull-left">
+							<div class="float-start">
 								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "sm", true)}</a>
 								<strong>
 									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>

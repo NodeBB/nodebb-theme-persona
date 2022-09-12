@@ -206,17 +206,12 @@
 		max-width: 100%;
 		@include text-ellipsis;
 		position: relative;
-		top: calc(16px / 4);
 	}
 
 	.fa {
 		margin-left: 10px;
 		color: rgb(153, 153, 153);
 	}
-
-	font-size: 16px;
-	padding: 0;
-	background: none;
 
 	@include media-breakpoint-down(sm) {
 		li {
@@ -285,11 +280,11 @@
 .navbar-toggler {
 	.notification-icon {
 		position: absolute;
-		&.fa-bell-o:after {
+		&[component="notifications/icon"]:after {
 			left: -5px;
 			top: -5px;
 		}
-		&.fa-comments:after {
+		&[component="chat/icon"]:after {
 			left: 20px;
 			top: -5px;
 		}

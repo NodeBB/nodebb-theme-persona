@@ -6,7 +6,7 @@
 	<!-- END -->
 </p>
 <!-- IF numDiffs -->
-<div class="form-group">
+<div class="mb-3">
 	<select class="form-control">
 		{{{each diffs}}}
 		<option value="{../timestamp}">

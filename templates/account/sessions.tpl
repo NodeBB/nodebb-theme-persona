@@ -9,7 +9,7 @@
 			<ul class="list-group" component="user/sessions">
 				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
-					<div class="pull-right">
+					<div class="float-end">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
 						<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">Revoke Session</button>

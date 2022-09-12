@@ -2,7 +2,7 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
-		<div class="icon pull-left" style="{function.generateCategoryBackground}">
+		<div class="icon float-start" style="{function.generateCategoryBackground}">
 			<i class="fa fa-fw {../icon}"></i>
 		</div>
 
@@ -38,7 +38,7 @@
 			{{{ end }}}
 			<!-- ENDIF !config.hideSubCategories -->
 		</div>
-		<span class="d-block d-sm-none pull-right">
+		<span class="d-block d-sm-none float-end">
 			<!-- IF ../teaser.timestampISO -->
 			<a class="permalink" href="{../teaser.url}">
 				<small class="timeago" title="{../teaser.timestampISO}"></small>

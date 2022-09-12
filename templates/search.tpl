@@ -188,10 +188,10 @@
 					</div>
 					<!-- ENDIF showAsPosts -->
 
-					<small class="post-info pull-right">
+					<small class="post-info float-end">
 						<a href="{config.relative_path}/category/{posts.category.slug}">
 							<div class="category-item d-inline-block">
-								<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, posts.category}">
+								<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, posts.category}">
 									<i class="fa fa-fw {posts.category.icon}"></i>
 								</div>
 								{posts.category.name}

@@ -212,8 +212,8 @@ $(document).ready(function () {
 			var margin = window.innerWidth;
 
 			if (swapped) {
-				$('#mobile-menu').removeClass('pull-left');
-				$('#mobile-chats').addClass('pull-left');
+				$('#mobile-menu').removeClass('float-start');
+				$('#mobile-chats').addClass('float-start');
 			}
 
 			if (document.documentElement.getAttribute('data-dir') === 'rtl') {

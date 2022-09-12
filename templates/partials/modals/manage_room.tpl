@@ -1,4 +1,4 @@
-<div class="form-group">
+<div class="mb-3">
 	<input class="form-control" type="text" placeholder="[[global:user-search-prompt]]" />
 	<p class="text-danger"></p>
 	<p class="form-text">[[modules:chat.add-user-help]]</p>

@@ -10,7 +10,7 @@
 		<div class="col-sm-6">
 			<!-- IF gdpr_consent -->
 			<div class="alert alert-success">
-				<i class="fa fa-check pull-right fa-3x"></i>
+				<i class="fa fa-check float-end fa-3x"></i>
 				[[user:consent.received]]
 			</div>
 			<!-- ELSE -->

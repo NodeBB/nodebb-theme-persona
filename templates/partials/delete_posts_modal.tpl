@@ -10,7 +10,7 @@
 	</div>
 	<div class="card-footer">
 		&nbsp;
-		<div class="btn-group pull-right">
+		<div class="btn-group float-end">
 			<button class="btn btn-link btn-sm" id="delete_posts_cancel">[[global:buttons.close]]</button>
 			<button class="btn btn-primary btn-sm" id="delete_posts_confirm" disabled>[[topic:delete]]</button>
 			<button class="btn btn-danger btn-sm" id="purge_posts_confirm" disabled>[[topic:purge]]</button>

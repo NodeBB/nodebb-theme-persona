@@ -8,7 +8,7 @@
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
 		<div class="col-md-6 col-sm-9 col-10 content">
-			<div class="avatar pull-left me-2">
+			<div class="avatar float-start me-2">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
 					{{{ if ./thumbs.length }}}
@@ -21,7 +21,7 @@
 				<!-- ENDIF showSelect -->
 
 				<!-- IF !showSelect -->
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
+				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="float-start">
 					{{{ if ./thumbs.length }}}
 					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
 					{{{ else }}}
@@ -48,7 +48,7 @@
 				<!-- IF !template.category -->
 				<small>
 					<div class="category-item d-inline-block">
-						<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, topics.category}">
+						<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, topics.category}">
 							<i class="fa fa-fw {topics.category.icon}"></i>
 						</div>
 						<a href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>

@@ -21,7 +21,7 @@
 
 			<div class="topic-info clearfix">
 				<div class="category-item d-inline-block">
-					<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
+					<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, category}">
 						<i class="fa fa-fw {category.icon}"></i>
 					</div>
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
@@ -47,8 +47,8 @@
 		</div>
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="pull-right">
+			<span class="float-start">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+			<span class="float-end">
 				<a href="{config.relative_path}/user/{merger.userslug}">
 					<strong>{merger.username}</strong>
 				</a>

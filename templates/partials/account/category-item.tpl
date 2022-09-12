@@ -2,7 +2,7 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-10  depth-{../depth}">
-		<div class="icon pull-left" style="{function.generateCategoryBackground}">
+		<div class="icon float-start" style="{function.generateCategoryBackground}">
 			<i class="fa fa-fw {../icon}"></i>
 		</div>
 

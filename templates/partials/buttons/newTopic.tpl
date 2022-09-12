@@ -10,7 +10,7 @@
 			<a role="menu-item" href="{config.relative_path}/compose?cid={categories.cid}">{categories.level}
 				<span component="category-markup">
 					<div class="category-item d-inline-block">
-						<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground}">
+						<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground}">
 							<i class="fa fa-fw {categories.icon}"></i>
 						</div>
 						{categories.name}

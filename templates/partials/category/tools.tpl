@@ -5,7 +5,7 @@
 		<span class="visible-xs-inline"><i class="fa fa-fw fa-gear"></i></span>
 		<span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu dropdown-menu-end pull-right">
+	<ul class="dropdown-menu dropdown-menu-end">
 		<li>
 			<a component="topic/mark-unread-for-all" href="#" class="dropdown-item">
 				<i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]

@@ -1,32 +1,32 @@
 <div class="row">
 	<div class="col-6 col-sm-8 col-md-6">
 		<div class="list-group media">
-			<button type="button" class="list-group-item" data-type="default">
-				<div class="media-left">
+			<button type="button" class="list-group-item d-flex align-items-center" data-type="default">
+				<div class="me-2">
 					<!-- IF defaultAvatar -->
 					<img class="media-object" src="{defaultAvatar}"  />
 					<!-- ELSE -->
 					<div class="user-icon media-object" style="background-color: {icon.bgColor};">{icon.text}</div>
 					<!-- ENDIF defaultAvatar -->
 				</div>
-				<div class="media-body">
-					<h4 class="media-heading">[[user:default_picture]]</h4>
+				<div>
+					<h6 class="media-heading">[[user:default_picture]]</h6>
 				</div>
 			</button>
 			{{{each pictures}}}
-			<button type="button" class="list-group-item" data-type="{pictures.type}">
-				<div class="media-left">
+			<button type="button" class="list-group-item d-flex align-items-center data-type="{pictures.type}">
+				<div class="me-2">
 					<img class="media-object" src="{pictures.url}" title="{pictures.text}" />
 				</div>
-				<div class="media-body">
-					<h4 class="media-heading">{pictures.text}</h4>
+				<div>
+					<h6 class="media-heading">{pictures.text}</h6>
 				</div>
 			</button>
 			{{{end}}}
 		</div>
 	</div>
 	<div class="col-6 col-sm-4 col-md-6">
-		<div class="btn-group-vertical btn-block" role="group">
+		<div class="d-grid" role="group">
 			<!-- IF allowProfileImageUploads -->
 			<button type="button" class="btn btn-outline-secondary" data-action="upload">
 				<span class="hidden-xs hidden-sm">

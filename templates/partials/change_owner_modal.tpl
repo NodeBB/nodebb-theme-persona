@@ -12,7 +12,7 @@
 	</div>
 	<div class="card-footer">
 		&nbsp;
-		<div class="btn-group pull-right">
+		<div class="btn-group float-end">
 			<button class="btn btn-link btn-sm" id="change_owner_cancel">[[global:buttons.close]]</button>
 			<button class="btn btn-primary btn-sm" id="change_owner_commit" disabled>[[topic:change-owner]]</button>
 		</div>

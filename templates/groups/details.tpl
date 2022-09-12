@@ -28,12 +28,12 @@
 				<h1>{group.displayName}</h1>
 				<p>{group.descriptionParsed}</p>
 				<!-- IF isAdmin -->
-				<div class="pull-right">
+				<div class="float-end">
 					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
 				</div>
 				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
-				<div class="pull-right">
+				<div class="float-end">
 					{function.membershipBtn, group}&nbsp;
 				</div>
 				<!-- ENDIF loggedIn -->
@@ -53,7 +53,7 @@
 				<h3 class="panel-title clearfix">
 					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 					<!-- IF group.pending.length -->
-					<div class="btn-group pull-right">
+					<div class="btn-group float-end">
 						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
 						</button>
@@ -79,7 +79,7 @@
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
 						</td>
 						<td>
-							<div class="btn-group pull-right">
+							<div class="btn-group float-end">
 								<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
@@ -111,7 +111,7 @@
 				</div>
 
 				<div class="form-group clearfix">
-					<button class="btn btn-outline-secondary btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
+					<button class="btn btn-outline-secondary btn-sm float-end" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
 				</div>
 
 				<table component="groups/invited" class="table table-striped table-hover">
@@ -127,7 +127,7 @@
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
 						</td>
 						<td>
-							<div class="btn-group pull-right">
+							<div class="btn-group float-end">
 								<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
 								</button>
@@ -145,7 +145,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
 				<h3 class="panel-title">
-					<i class="fa fa-caret-down pull-right"></i>
+					<i class="fa fa-caret-down float-end"></i>
 					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
 				</h3>
 			</div>
