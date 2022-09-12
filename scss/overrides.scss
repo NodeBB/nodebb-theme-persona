@@ -41,3 +41,6 @@ $font-size-base: 0.875rem!default;
 
 // no caret on dropdown-toggle
 $enable-caret: false;
+
+// disable smooth scroll, this makes window.scrollTo(0,0) in ajaxify.js take x milliseconds
+$enable-smooth-scroll: false;
