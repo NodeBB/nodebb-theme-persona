@@ -5,7 +5,7 @@
 		<div class="col-12 col-md-6">
 			<!-- IF !disableCustomUserSkins -->
 			<h4>[[user:select-skin]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<select class="form-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					{{{each bootswatchSkinOptions}}}
 					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
@@ -16,7 +16,7 @@
 
 			<!-- IF allowUserHomePage -->
 			<h4>[[user:select-homepage]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="mb-2">
 					<label for="homePageRoute">[[user:homepage]]</label>
 					<select class="form-select" id="homePageRoute" data-property="homePageRoute">
@@ -36,7 +36,7 @@
 			<!-- ENDIF allowUserHomePage -->
 
 			<h4>[[global:privacy]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<!-- IF !hideEmail -->
 				<div class="checkbox">
 					<label>
@@ -62,7 +62,7 @@
 			</div>
 
 			<h4>[[user:browsing]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/> <strong>[[user:open_links_in_new_tab]]</strong>
@@ -89,7 +89,7 @@
 			</div>
 
 			<h4>[[global:pagination]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="mb-2 form-check">
 					<input type="checkbox" class="form-check-input" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong><label class="form-check-label">[[user:paginate_description]]</label></strong>
 				</div>
@@ -105,7 +105,7 @@
 
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="mb-2">
 					<label for="dailyDigestFreq">[[user:digest_label]]</label>
 					<select class="form-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
@@ -120,7 +120,7 @@
 
 			{{{each customSettings}}}
 			<h4>{customSettings.title}</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				{customSettings.content}
 			</div>
 			{{{end}}}
@@ -129,7 +129,7 @@
 
 		<div class="col-12 col-md-6">
 			<h4>[[global:language]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="row">
 					<div class="mb-2 col-lg-12">
 						<select data-property="userLang" class="form-select">
@@ -156,7 +156,7 @@
 			</div>
 
 			<h4>[[topic:watch]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/> <strong>[[user:follow_topics_you_create]]</strong>
@@ -179,7 +179,7 @@
 
 
 			<h4>[[user:notifications]]</h4>
-			<div class="card card-body bg-light">
+			<div class="card card-body text-bg-light mb-3">
 				{{{each notificationSettings}}}
 				<div class="row">
 					<div class="col-7">

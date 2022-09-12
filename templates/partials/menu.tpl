@@ -47,7 +47,7 @@
 					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
-						<a title="{navigation.title}" class="nav-link navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
+						<a class="nav-link navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
 						{{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 							{{{ if navigation.iconClass }}}
 							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
@@ -161,6 +161,7 @@
 								</a>
 							</li>
 							<li role="presentation" class="dropdown-divider"></li>
+							<li><h6 class="dropdown-header">[[global:status]]</h6></li>
 							<li>
 								<a href="#" class="dropdown-item user-status" data-status="online">
 									<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="bold"<!-- ENDIF user.online -->> [[global:online]]</span>
