@@ -17,7 +17,7 @@
 	{{{each group.members}}}
 	<tr data-uid="{group.members.uid}">
 		<td>
-			<a href="{config.relative_path}/user/{group.members.userslug}">{buildAvatar(group.members, "sm", true)}</a>
+			<a href="{config.relative_path}/user/{group.members.userslug}">{buildAvatar(group.members, "24px", true)}</a>
 		</td>
 		<td class="member-name">
 			<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>

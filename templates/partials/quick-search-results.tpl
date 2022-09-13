@@ -2,7 +2,7 @@
 {{{each posts}}}
 <li data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 	<a href="{config.relative_path}/post/{posts.pid}" class="deco-none">
-		{buildAvatar(posts.user, "sm", true)}
+		{buildAvatar(posts.user, "24px", true)}
 		<span class="quick-search-title">{posts.topic.title}</span>
 		<br/>
 		<p class="snippet">

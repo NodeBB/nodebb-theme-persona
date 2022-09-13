@@ -1,7 +1,7 @@
 <div class="clearfix post-header">
 	<div class="icon float-start">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{buildAvatar(posts.user, "sm2x", true, "", "user/picture")}
+			{buildAvatar(posts.user, "48px", true, "", "user/picture")}
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 		</a>
 	</div>
@@ -63,7 +63,7 @@
 	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start {{{ if !posts.replies.count }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "xs", true, "")}
+			{buildAvatar(posts.replies.users, "16px", true, "")}
 			{{{end}}}
 		</span>
 

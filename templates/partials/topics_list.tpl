@@ -14,7 +14,7 @@
 					{{{ if ./thumbs.length }}}
 					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
 					{{{ else }}}
-					{buildAvatar(../user, "sm2x", true, "not-responsive")}
+					{buildAvatar(../user, "48px", true, "not-responsive")}
 					{{{ end }}}
 					<i class="fa fa-check"></i>
 				</div>
@@ -25,7 +25,7 @@
 					{{{ if ./thumbs.length }}}
 					<img src="{./thumbs.0.url}" class="user-img not-responsive" />
 					{{{ else }}}
-					{buildAvatar(../user, "sm2x", true, "not-responsive")}
+					{buildAvatar(../user, "48px", true, "not-responsive")}
 					{{{ end }}}
 				</a>
 				<!-- ENDIF !showSelect -->
@@ -108,7 +108,7 @@
 				<!-- ELSE -->
 				<!-- IF topics.teaser.pid -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, sm, true, "not-responsive")}</a>
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24px", true, "not-responsive")}</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>

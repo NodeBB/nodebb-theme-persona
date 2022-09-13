@@ -123,7 +123,7 @@
 						{{{each history.bans}}}
 						<li>
 							<p>
-								<a href="{config.relative_path}/user/{history.bans.user.userslug}">{buildAvatar(history.bans.user, "sm", true)}</a>
+								<a href="{config.relative_path}/user/{history.bans.user.userslug}">{buildAvatar(history.bans.user, "24px", true)}</a>
 								<strong>
 									<a href="<!-- IF history.bans.user.userslug -->{config.relative_path}/user/{history.bans.user.userslug}<!-- ELSE -->#<!-- ENDIF history.bans.user.userslug -->" itemprop="author" data-username="{history.bans.user.username}" data-uid="{history.bans.user.uid}">{history.bans.user.username}</a>
 								</strong>
@@ -164,7 +164,7 @@
 						{{{ each history.mutes }}}
 						<li>
 							<p>
-								<a href="{config.relative_path}/user/{history.mutes.user.userslug}">{buildAvatar(history.mutes.user, "sm", true)}</a>
+								<a href="{config.relative_path}/user/{history.mutes.user.userslug}">{buildAvatar(history.mutes.user, "24px", true)}</a>
 								<strong>
 									<a href="<!-- IF history.mutes.user.userslug -->{config.relative_path}/user/{history.mutes.user.userslug}<!-- ELSE -->#<!-- ENDIF history.mutes.user.userslug -->" itemprop="author" data-username="{history.mutes.user.username}" data-uid="{history.mutes.user.uid}">{history.mutes.user.username}</a>
 								</strong>
@@ -200,7 +200,7 @@
 
 						<div class="clearfix">
 							<div class="float-start">
-								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "sm", true)}</a>
+								<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">{buildAvatar(moderationNotes.user, "24px", true)}</a>
 								<strong>
 									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>
 								</strong>

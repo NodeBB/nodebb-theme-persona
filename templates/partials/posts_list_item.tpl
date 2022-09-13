@@ -11,7 +11,7 @@
         <small class="topic-category"><a href="{config.relative_path}/category/{../category.slug}">[[global:posted_in, {../category.name}]]</a></small>
 
         <div class="post-info">
-            <a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(../user, "md", true, "user-img not-responsive")}</a>
+            <a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(../user, "28px", true, "user-img not-responsive")}</a>
 
             <div class="post-author">
                 <a href="{config.relative_path}/user/{../user.userslug}">{../user.displayname}</a><br />

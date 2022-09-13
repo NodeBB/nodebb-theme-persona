@@ -34,7 +34,7 @@
 			<button type="button" class="navbar-toggler border-0" id="mobile-chats">
 				<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 				<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
-				{buildAvatar(user, "md", true)}
+				{buildAvatar(user, "32px", true)}
 			</button>
 			{{{ end }}}
 
@@ -150,7 +150,7 @@
 
 					<li id="user_label" class="nav-item dropdown" title="[[global:header.profile]]">
 						<label for="user-control-list-check" class="" data-bs-toggle="dropdown" id="user_dropdown" role="button">
-							{buildAvatar(user, "md", true)}
+							{buildAvatar(user, "32px", true)}
 							<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">

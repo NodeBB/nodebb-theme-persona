@@ -16,7 +16,6 @@
 		}
 
 		.user-img {
-			@include user-icon-style(28px, 1.5rem, 50%);
 			position: absolute;
 			top: 50%;
 			margin-top: -14px;
@@ -26,7 +25,6 @@
 		a {
 			span {
 				overflow: hidden;
-				height: 16px;
 				padding-left: 8px;
 			}
 		}
@@ -97,7 +95,6 @@
 			> a {
 				position: relative;
 				.user-img {
-					margin-top: -3px;
 					text-align: center;
 					padding: 0;
 				}
@@ -105,6 +102,7 @@
 
 			.post-author {
 				padding-left: 25px;
+				margin-top: -14px;
 				color: $gray-600;
 
 				a {

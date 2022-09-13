@@ -178,7 +178,7 @@
 			{{{each posts}}}
 			<div class="topic-row card clearfix mb-3">
 				<div class="card-body">
-					<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "sm", true)}</a>
+					<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "24px", true)}</a>
 					<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{posts.topic.title}</a></span>
 					<br/>
 					<!-- IF showAsPosts -->

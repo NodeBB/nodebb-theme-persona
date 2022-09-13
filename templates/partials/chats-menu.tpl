@@ -10,7 +10,7 @@
 	{{{ end }}}
 	<li class="nav-item">
 		<a class="nav-link active" href="#profile" data-bs-toggle="tab">
-			{buildAvatar(user, "sm", true, "user-icon")}
+			{buildAvatar(user, "24px", true, "user-icon")}
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 		</a>
 	</li>

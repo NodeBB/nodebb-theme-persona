@@ -73,7 +73,7 @@
 					{{{each group.pending}}}
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "sm", true)}</a>
+							<a href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "24px", true)}</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -121,7 +121,7 @@
 					{{{each group.invited}}}
 					<tr data-uid="{group.invited.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "sm", true)}</a>
+							<a href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "24px", true)}</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>

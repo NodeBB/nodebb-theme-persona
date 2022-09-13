@@ -16,7 +16,7 @@
     <li class="dropdown-header">[[modules:chat.in-room]]</li>
     {{{each users}}}
     <li>
-      <a class="dropdown-item" href="{config.relative_path}/uid/{../uid}">{buildAvatar(users, "sm", true)} {../username}</a>
+      <a class="dropdown-item" href="{config.relative_path}/uid/{../uid}">{buildAvatar(users, "24px", true)} {../username}</a>
     </li>
     {{{end}}}
     <!-- END -->

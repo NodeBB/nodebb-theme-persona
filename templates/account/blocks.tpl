@@ -22,7 +22,7 @@
 							<li class="list-group-item clearfix">
 								<button class="btn btn-sm btn-primary float-end" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
 								<div class="float-start">
-									<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
+									<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "24px", true)} {../username}</a>
 								</div>
 							</li>
 							{{{ end }}}
