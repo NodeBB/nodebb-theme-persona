@@ -1,16 +1,16 @@
 .category-item > .icon {
-	min-width: 23px;
-	min-height: 23px;
+	width: 22px;
+	height: 22px;
 	font-size: 10px;
 	line-height: 12px;
 	padding: 5px;
-	margin-right: 5px;
 	border-radius: 50%;
+	display: inline-block;
 }
 .categories > li .content .icon {
-	min-width: 46px;
-	min-height: 46px;
-	font-size: 17px;
+	width: 44px;
+	height: 44px;
+	font-size: 14px;
 	line-height: 17px;
 	padding: 13px;
 	border-radius: 50%;
@@ -115,8 +115,8 @@
 				margin-bottom: 1px;
 			}
 			.icon {
-				min-width: 23px;
-				min-height: 23px;
+				width: 23px;
+				height: 23px;
 				font-size: 10px;
 				line-height: 12px;
 				padding: 5px;

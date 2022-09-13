@@ -1,9 +1,9 @@
 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
     {{{ if selectedCategory }}}
     <div class="category-item d-inline-block">
-        <div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, selectedCategory}">
+        <span role="presentation" class="icon" style="{function.generateCategoryBackground, selectedCategory}">
             <i class="fa fa-fw {selectedCategory.icon}"></i>
-        </div>
+        </span>
         <span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedCategory.name}</span>
     </div>
     {{{ else }}}
@@ -21,9 +21,9 @@
         <a class="dropdown-item" role="menu-item" href="#">{../level}<i component="category/select/icon" class="fa fa-fw fa-check {{{ if !../selected }}}invisible{{{ end }}}"></i>
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
-                    <div role="presentation" class="icon float-start" style="{function.generateCategoryBackground}">
+                    <span role="presentation" class="icon" style="{function.generateCategoryBackground}">
                         <i class="fa fa-fw {./icon}"></i>
-                    </div>
+                    </span>
                     {./name}
                 </div>
             </span>

@@ -1,5 +1,4 @@
 <!-- IF posts.display_moderator_tools -->
-<li class="dropdown-header">[[topic:tools]]</li>
 <li>
 	<a class="dropdown-item" component="post/edit" role="menuitem" tabindex="-1" href="#">
 		<span class="menu-icon"><i class="fa fa-fw fa-pencil"></i></span> [[topic:edit]]

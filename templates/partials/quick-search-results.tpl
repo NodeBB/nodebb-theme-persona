@@ -10,7 +10,7 @@
 		</p>
 		<small class="post-info float-end">
 			<div class="category-item d-inline-block">
-				<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, posts.category}"><i class="fa fa-fw {posts.category.icon}"></i></div> {posts.category.name}
+				<span role="presentation" class="icon" style="{function.generateCategoryBackground, posts.category}"><i class="fa fa-fw {posts.category.icon}"></i></span> {posts.category.name}
 				&bull; <span class="timeago" title="{posts.timestampISO}"></span>
             </div>
 		</small>

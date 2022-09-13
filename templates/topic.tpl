@@ -21,9 +21,9 @@
 
 			<div class="topic-info clearfix">
 				<div class="category-item d-inline-block">
-					<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, category}">
+					<span role="presentation" class="icon" style="{function.generateCategoryBackground, category}">
 						<i class="fa fa-fw {category.icon}"></i>
-					</div>
+					</span>
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 

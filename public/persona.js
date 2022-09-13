@@ -491,8 +491,6 @@ $(document).ready(function () {
 						}
 					});
 				}
-
-				$('.topic-main-buttons [title]').tooltip();
 			}
 		});
 	}

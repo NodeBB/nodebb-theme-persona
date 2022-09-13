@@ -58,9 +58,9 @@
 							<div class="topic-category" {{{if posts.data.cid}}}data-editable="editable"{{{end}}}">
 								<a href="{config.relative_path}/category/{posts.category.slug}">
 									<div class="category-item d-inline-block">
-										<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, posts.category}">
+										<span role="presentation" class="icon" style="{function.generateCategoryBackground, posts.category}">
 											<i class="fa fa-fw {posts.category.icon}"></i>
-										</div>
+										</span>
 										{posts.category.name}
 									</div>
 								</a>

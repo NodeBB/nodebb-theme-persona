@@ -48,9 +48,9 @@
 				<!-- IF !template.category -->
 				<small>
 					<div class="category-item d-inline-block">
-						<div role="presentation" class="icon float-start" style="{function.generateCategoryBackground, topics.category}">
+						<span role="presentation" class="icon" style="{function.generateCategoryBackground, topics.category}">
 							<i class="fa fa-fw {topics.category.icon}"></i>
-						</div>
+						</span>
 						<a href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
 					</div>
 					&bull;
