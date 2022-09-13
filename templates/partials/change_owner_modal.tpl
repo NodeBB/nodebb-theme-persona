@@ -1,4 +1,4 @@
-<div class="card fork-thread-card">
+<div class="card tool-modal shadow">
 	<h5 class="card-header">[[topic:thread_tools.change_owner]]</h5>
 	<div class="card-body">
 		<div>

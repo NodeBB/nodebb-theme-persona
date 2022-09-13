@@ -1,4 +1,4 @@
-<div class="card merge-topic-card">
+<div class="card tool-modal shadow">
 	<h5 class="card-header">[[topic:thread_tools.merge_topics]]</h5>
 	<div class="card-body">
 		<p>
@@ -30,7 +30,7 @@
 				<input class="merge-main-topic-radio" type="radio" name="merge-topic-option" checked="true"> [[topic:merge-select-main-topic]]
 			</p>
 			<p>
-				<select class="form-control merge-main-topic-select">
+				<select class="form-select merge-main-topic-select">
 					{{{each topics}}}
 					<option value="{topics.tid}">{topics.title}</option>
 					{{{end}}}

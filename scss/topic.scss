@@ -628,13 +628,6 @@
 	}
 }
 
-.fork-thread-card {
-	position: fixed;
-	bottom: 10%;
-	right: 2rem;
-	z-index: 1;
-}
-
 .selection-tooltip-container {
 	position: absolute;
 	padding: 5px;
@@ -643,12 +636,6 @@
 	border-radius: 3px;
 	margin: 10px 0px 0px 0px;
 	z-index: 1;
-}
-
-@include media-breakpoint-up(sm) {
-	.fork-thread-card {
-		max-width: 33%;
-	}
 }
 
 [component="post"] {

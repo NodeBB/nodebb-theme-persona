@@ -184,19 +184,3 @@
 	overflow-x: hidden;
 }
 
-.merge-topic-card {
-	position: fixed;
-	bottom: 10%;
-	right: 2rem;
-	z-index: $zindex-modal;
-	.topics-section {
-		max-height: 500px;
-		overflow-y: auto;
-	}
-}
-
-@include media-breakpoint-down(sm) {
-	.merge-topic-card {
-		max-width: 33%;
-	}
-}
