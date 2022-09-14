@@ -60,7 +60,7 @@
 						{./heat}
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>
-					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
+					<td><span class="badge bg-{../labelClass}">[[flags:state-{../state}]]</span></td>
 				</tr>
 				{{{end}}}
 			</tbody>

@@ -1,5 +1,5 @@
 <div class="dropdown">
-  <button class="btn btn-link close" data-bs-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
+  <button class="btn btn-link p-2 text-muted align-text-top" data-bs-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
   <ul class="dropdown-menu dropdown-menu-end" component="chat/controls">
     <li class="dropdown-header">[[modules:chat.options]]</li>
     <li>

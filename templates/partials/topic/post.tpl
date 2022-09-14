@@ -14,7 +14,7 @@
 		<!-- IMPORT partials/topic/badge.tpl -->
 
 		<!-- IF posts.user.banned -->
-		<span class="label label-danger">[[user:banned]]</span>
+		<span class="badge bg-danger">[[user:banned]]</span>
 		<!-- ENDIF posts.user.banned -->
 
 		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">

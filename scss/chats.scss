@@ -362,9 +362,6 @@
 		li.chat-message {
 			position: relative;
 			list-style-type: none;
-			font-weight: 300;
-			padding: 0 1.428rem;
-			margin-right: 1.428rem;
 			transition: opacity .5s ease;
 
 			&:first-child {
@@ -410,13 +407,14 @@
 			.chat-user {
 				display: inline-block;
 				margin-left: 13px;
+
+				a {
+					color: $body-color;
+				}
 			}
 
 			.chat-timestamp {
-				color: $gray-600;
-				font-size: 1rem;
 				display: inline-block;
-				margin-left: 10px;
 				user-select: none;
 			}
 
@@ -454,8 +452,8 @@
 					display: none;
 
 					position: absolute;
-					bottom: 5px;
-					right: 30px;
+					bottom: 7px;
+					right: 14px;
 					border: 1px solid $gray-200;
 					box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
@@ -466,7 +464,8 @@
 
 				&:hover {
 					.message-body {
-						background: $nav-link-hover-color;
+						color: $dropdown-link-hover-color;
+						background: $dropdown-link-hover-bg;
 					}
 
 					.controls {
@@ -480,8 +479,6 @@
 			list-style-type: none;
 			text-align: center;
 			color: $gray-600;
-			font-size: 1.25rem;
-			padding: 1rem 0;
 
 			&::before, &::after {
 				display: inline-block;

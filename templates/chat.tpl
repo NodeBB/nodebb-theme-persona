@@ -1,13 +1,16 @@
-
 <div id="chat-modal" class="chat-modal modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></h5>
-
-
-				<button type="button" class="btn btn-link close hidden-xs hidden-sm" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<button type="button" class="btn btn-link close hidden-xs hidden-sm" data-action="minimize"><span aria-hidden="true"><i class="fa fa-minus"></i></span><span class="sr-only">[[modules:chat.minimize]]</span></button>
+		<div class="modal-content" style="width: 600px;">
+			<div class="modal-header d-flex">
+				<div class="fs-5 flex-grow-1" component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></div>
+				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize">
+					<span aria-hidden="true"><i class="fa fa-fw fa-expand"></i></span>
+					<span class="sr-only">[[modules:chat.maximize]]</span>
+				</button>
+				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="minimize">
+					<span aria-hidden="true"><i class="fa fa-fw fa-minus"></i></span>
+					<span class="sr-only">[[modules:chat.minimize]]</span>
+				</button>
 				<!-- IMPORT partials/chats/options.tpl -->
 
 				<button id="chat-close-btn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
