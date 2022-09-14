@@ -1,6 +1,7 @@
 			<div class="me-auto">
 			<button type="button" class="navbar-toggler border-0" id="mobile-menu">
-				<i class="fa fa-lg fa-fw fa-bars unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></i>
+				<i class="fa fa-lg fa-fw fa-bars unread-count" ></i>
+				<span component="unread/icon" class="notification-icon fa fa-fw fa-book unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></span>
 			</button>
 
 			{{{ if brand:logo }}}

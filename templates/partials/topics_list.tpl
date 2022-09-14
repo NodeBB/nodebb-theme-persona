@@ -31,30 +31,28 @@
 				<!-- ENDIF !showSelect -->
 			</div>
 
-			<h2 component="topic/header" class="title">
+			<h2 component="topic/header" class="title mb-1">
 				<i component="topic/scheduled" class="fa fa-clock-o <!-- IF !topics.scheduled -->hide<!-- ENDIF !topics.scheduled -->" title="[[topic:scheduled]]"></i>
 				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF (topics.scheduled || !topics.pinned) -->hide<!-- ENDIF (topics.scheduled || !topics.pinned) -->" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
 				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 				{{{each topics.icons}}}{@value}{{{end}}}
 
-
 				<!-- IF !topics.noAnchor -->
-				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->">{topics.title}</a><br />
+				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->">{topics.title}</a>
 				<!-- ELSE -->
-				<span>{topics.title}</span><br />
+				<span>{topics.title}</span>
 				<!-- ENDIF !topics.noAnchor -->
-
+			</h2>
+			<div class="info">
 				<!-- IF !template.category -->
-				<small>
-					<div class="category-item d-inline-block">
-						<span role="presentation" class="icon" style="{function.generateCategoryBackground, topics.category}">
-							<i class="fa fa-fw {topics.category.icon}"></i>
-						</span>
-						<a href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
-					</div>
-					&bull;
-				</small>
+				<div class="category-item d-inline-block">
+					<span role="presentation" class="icon" style="{function.generateCategoryBackground, topics.category}">
+						<i class="fa fa-fw {topics.category.icon}"></i>
+					</span>
+					<a class="text-muted" href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
+				</div>
+				&bull;
 				<!-- ENDIF !template.category -->
 
 				{{{ if topics.tags.length }}}
@@ -62,22 +60,22 @@
 					{{{each topics.tags}}}
 					<a href="{config.relative_path}/tags/{topics.tags.valueEncoded}"><span class="tag tag-item tag-class-{topics.tags.class}">{topics.tags.valueEscaped}</span></a>
 					{{{end}}}
-					<small>&bull;</small>
+					&bull;
 				</span>
 				{{{ end }}}
 
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a></small>
-				<small class="visible-xs-inline">
+				<span class="hidden-xs"><span class="timeago text-muted" title="{topics.timestampISO}"></span> &bull; <a class="text-muted" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a></span>
+				<span class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					<!-- ELSE -->
 					<span class="timeago" title="{topics.timestampISO}"></span>
 					<!-- ENDIF topics.teaser.timestamp -->
-				</small>
-			</h2>
+				</span>
+			</div>
 		</div>
 
-		<div class="mobile-stat col-2 visible-xs text-right">
+		<div class="mobile-stat col-2 visible-xs text-end">
 			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 

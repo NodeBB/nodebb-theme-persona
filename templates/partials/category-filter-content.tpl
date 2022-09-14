@@ -1,11 +1,11 @@
 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
     {{{ if selectedCategory }}}
-    <div class="category-item d-inline-block">
-        <span role="presentation" class="icon" style="{function.generateCategoryBackground, selectedCategory}">
+    <span class="category-item">
+        <span class="icon float-start me-1" style="{function.generateCategoryBackground, selectedCategory}">
             <i class="fa fa-fw {selectedCategory.icon}"></i>
         </span>
         <span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedCategory.name}</span>
-    </div>
+    </span>
     {{{ else }}}
     <span class="visible-sm-inline visible-md-inline visible-lg-inline">[[unread:all_categories]]</span><span class="visible-xs-inline"><i class="fa fa-fw fa-list"></i></span>{{{ end }}} <span class="caret"></span>
 </button>

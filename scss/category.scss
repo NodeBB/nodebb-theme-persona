@@ -18,7 +18,10 @@
 					color: $text-muted;
 				}
 			}
-
+			.info {
+				padding-left: 56px;
+				font-size: 0.75rem;
+			}
 			&.deleted {
 				-moz-opacity: 0.30;
 				opacity: 0.30;
@@ -120,7 +123,7 @@
 	}
 
 	.unread {
-		.topic-title {
+		.title {
 			font-weight: bold;
 		}
 	}

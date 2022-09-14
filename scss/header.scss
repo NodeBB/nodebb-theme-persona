@@ -280,6 +280,9 @@
 .navbar-toggler {
 	.notification-icon {
 		position: absolute;
+		&[component="unread/icon"]::after {
+			left: -10px;
+		}
 		&[component="notifications/icon"]:after {
 			left: -5px;
 			top: -5px;

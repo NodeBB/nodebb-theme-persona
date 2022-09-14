@@ -44,10 +44,6 @@
 		top: calc(var(--panel-offset));
 		background-color: $body-bg;
 		z-index: $zindex-sticky;
-		margin-left: -15px;
-		margin-right: -15px;
-		padding-left: 15px;
-		padding-right: 15px;
 	}
 
 	.topic-info {
@@ -378,7 +374,7 @@
 		}
 
 		.quickreply-message {
-			margin-left: 61px;
+			margin-left: 63px;
 			margin-bottom: 5px;
 
 			@include media-breakpoint-down(sm) {

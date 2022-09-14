@@ -1,12 +1,12 @@
 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
     <span component="category-selector-selected">
         {{{ if (selectedCategory && !showCategorySelectLabel) }}}
-        <div class="category-item d-inline-block">
-            <span role="presentation" class="icon" style="{function.generateCategoryBackground, selectedCategory}">
+        <span class="category-item">
+            <span role="presentation" class="icon float-start me-1" style="{function.generateCategoryBackground, selectedCategory}">
                 <i class="fa fa-fw {selectedCategory.icon}"></i>
             </span>
             {selectedCategory.name}
-        </div>
+        </span>
         {{{ else }}}
     <span class="visible-sm-inline visible-md-inline visible-lg-inline">{{{ if selectCategoryLabel }}}{selectCategoryLabel}{{{ else }}}[[topic:thread_tools.select_category]]{{{ end }}}</span><span class="visible-xs-inline"><i class="fa fa-fw {{{ if selectCategoryIcon }}}{selectCategoryIcon}{{{ else }}}fa-list{{{ end }}}"></i></span>
     {{{ end }}}</span> <span class="caret"></span>
