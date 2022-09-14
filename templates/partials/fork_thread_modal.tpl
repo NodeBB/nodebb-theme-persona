@@ -15,7 +15,7 @@
 	<div class="card-footer">
 		<div class="btn-group float-end">
 			<button class="btn btn-link btn-sm" id="fork_thread_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-sm" id="fork_thread_commit" disabled>[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button>
+			<button class="btn btn-primary btn-sm" id="fork_thread_commit" disabled>[[topic:fork_topic]]</button>
 		</div>
 	</div>
 </div>

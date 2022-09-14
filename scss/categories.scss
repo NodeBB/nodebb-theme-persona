@@ -1,4 +1,4 @@
-.category-item > .icon {
+.category-item > .icon, .category-children-item > .icon {
 	width: 20px;
 	height: 20px;
 	font-size: 10px;
@@ -7,7 +7,7 @@
 	border-radius: 50%;
 	display: inline-block;
 }
-.categories > li .content .icon {
+.categories > li .content > .icon {
 	width: 44px;
 	height: 44px;
 	font-size: 14px;
@@ -111,13 +111,10 @@
 
 		.category-children {
 			.category-children-item {
+				min-width: 180px;
 				margin-right: 10px;
 				margin-bottom: 1px;
-			}
-			.icon {
-				@include user-icon-style(23px, calc(23px * 0.6), 50%);
-				padding: 5px;
-				margin-right: 5px;
+				display: inline-block;
 			}
 		}
 
