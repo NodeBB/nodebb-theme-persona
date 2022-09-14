@@ -22,7 +22,7 @@
 		margin-bottom: 1em;
 		background-origin: content-box;
 		width: 100%;
-		top: calc(var(--panel-offset) - 20px);
+		top: var(--panel-offset);
 		position: absolute;
 		left: auto;
 		right: 0px;
