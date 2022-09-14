@@ -2,7 +2,7 @@
 <div component="topic/quickreply/container" class="clearfix quick-reply">
 	<div class="icon float-start hidden-xs">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{buildAvatar(loggedInUser, "46", true, "", "user/picture")}
+			{buildAvatar(loggedInUser, "48px", true, "", "user/picture")}
 			<!-- IF loggedInUser.status -->
 			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
 			<!-- ENDIF loggedInUser.status -->

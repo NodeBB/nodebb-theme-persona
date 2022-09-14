@@ -12,7 +12,7 @@
 		<!-- IF type_bool.post -->
 		<div class="d-flex">
 			<div class="flex-shrink-0">
-				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "64px", false, "media-object")}</a>
+				<a href="{config.relative_path}/user/{target.user.userslug}">{buildAvatar(target.user, "64px", true, "media-object")}</a>
 			</div>
 			<div class="flex-grow-1 ms-3">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.user.userslug}">{target.user.username}</a></h4>
@@ -24,7 +24,7 @@
 		<!-- IF type_bool.user -->
 		<div class="d-flex">
 			<div class="flex-shrink-0">
-				<a href="{config.relative_path}/user/{target.userslug}">{buildAvatar(target, "64px", false, "media-object")}</a>
+				<a href="{config.relative_path}/user/{target.userslug}">{buildAvatar(target, "64px", true, "media-object")}</a>
 			</div>
 			<div class="flex-grow-1 ms-3">
 				<h4 class="media-heading"><a href="{config.relative_path}/user/{target.userslug}">{target.username}</a></h4>
@@ -50,7 +50,7 @@
 						<ul class="list-group" component="flag/reports">
 							{{{ each reports }}}
 							<li class="list-group-item">
-								<a href="{config.relative_path}/user/{./reporter.userslug}">{buildAvatar(./reporter, "24px", false)}</a>
+								<a href="{config.relative_path}/user/{./reporter.userslug}">{buildAvatar(./reporter, "24px", true)}</a>
 								&ndash; <span class="timeago" title="{./timestampISO}"></span>
 								<blockquote><em>{./value}</em></blockquote>
 							</li>
@@ -99,7 +99,7 @@
 					{{{each notes}}}
 					<div class="d-flex mb-3">
 						<div class="flex-shrink-0">
-							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "32px", false, "media-object")}</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "32px", true, "media-object")}</a>
 						</div>
 						<div class="flex-grow-1 mx-3">
 							<h2 class="h5">
@@ -180,7 +180,7 @@
 					{{{each history}}}
 					<div class="d-flex">
 						<div class="flex-shrink-0">
-							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(history.user, "32px", false, "media-object")}</a>
+							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(history.user, "32px", true, "media-object")}</a>
 						</div>
 						<div class="flex-grow-1 ms-3">
 							<h4 class="media-heading">
