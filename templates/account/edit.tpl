@@ -7,9 +7,9 @@
 					<div class="row">
 						<div class="col-12 hidden-xs">
 							<!-- IF picture -->
-							<img id="user-current-picture" class="avatar avatar-xl avatar-rounded" src="{picture}" />
+							<img id="user-current-picture" class="avatar avatar-rounded" style="--avatar-size: 128px;" src="{picture}" />
 							<!-- ELSE -->
-							<div class="avatar avatar-xl avatar-rounded" style="background-color: {icon:bgColor};">{icon:text}</div>
+							<div class="avatar avatar-rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;">{icon:text}</div>
 							<!-- ENDIF picture -->
 						</div>
 					</div>
