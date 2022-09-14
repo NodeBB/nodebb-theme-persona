@@ -1,13 +1,13 @@
-<div class="row">
+<div class="d-flex mb-3">
 	<!-- IF group.isOwner -->
-	<div class="col-lg-2">
-		<button component="groups/members/add" type="button" class="btn btn-primary" title="[[groups:details.add-member]]"><i class="fa fa-user-plus"></i></button>
+	<div class="flex-shrink-0">
+		<button component="groups/members/add" type="button" class="btn btn-primary me-3" title="[[groups:details.add-member]]"><i class="fa fa-user-plus"></i></button>
 	</div>
 	<!-- ENDIF group.isOwner -->
-	<div class="<!-- IF group.isOwner -->col-lg-10<!-- ELSE -->col-lg-12<!-- ENDIF group.isOwner -->">
+	<div class="flex-grow-1">
 		<div class="input-group">
 			<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
-			<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
+			<span class="input-group-text search-button"><i class="fa fa-search"></i></span>
 		</div>
 	</div>
 </div>
@@ -20,7 +20,8 @@
 			<a href="{config.relative_path}/user/{group.members.userslug}">{buildAvatar(group.members, "24px", true)}</a>
 		</td>
 		<td class="member-name">
-			<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
+			<a class="align-text-top" href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a>
+			<i title="[[groups:owner]]" class="fa fa-star align-text-top text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
 
 			<!-- IF group.isOwner -->
 			<div class="owner-controls btn-group float-end">

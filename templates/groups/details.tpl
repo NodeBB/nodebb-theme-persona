@@ -16,16 +16,16 @@
 	</div>
 
 	<div class="col-lg-4 col-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
+		<div class="card mb-3">
+			<div class="card-header">
+				<span class="fs-5">
 					<i class="fa fa-list-ul"></i> [[groups:details.title]]
-					<!-- IF group.private --><span class="label label-info">[[groups:details.private]]</span><!-- ENDIF group.private -->
-					<!-- IF group.hidden --><span class="label label-info">[[groups:details.hidden]]</span>&nbsp;<!-- ENDIF group.hidden -->
-				</h3>
+					<!-- IF group.private --><span class="badge bg-info text-dark">[[groups:details.private]]</span><!-- ENDIF group.private -->
+					<!-- IF group.hidden --><span class="badge bg-info text-dark">[[groups:details.hidden]]</span>&nbsp;<!-- ENDIF group.hidden -->
+				</span>
 			</div>
-			<div class="panel-body">
-				<h1>{group.displayName}</h1>
+			<div class="card-body">
+				<h2>{group.displayName}</h2>
 				<p>{group.descriptionParsed}</p>
 				<!-- IF isAdmin -->
 				<div class="float-end">
@@ -39,18 +39,21 @@
 				<!-- ENDIF loggedIn -->
 			</div>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title"><i class="fa fa-users"></i> [[groups:details.members]]</h3>
+
+		<div class="card mb-3">
+			<div class="card-header">
+				<span class="fs-5">
+					<i class="fa fa-users"></i> [[groups:details.members]]
+				</span>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<!-- IMPORT partials/groups/memberlist.tpl -->
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title clearfix">
+		<div class="card mb-3">
+			<div class="card-header">
+				<div class="fs-5">
 					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 					<!-- IF group.pending.length -->
 					<div class="btn-group float-end">
@@ -63,9 +66,9 @@
 						</ul>
 					</div>
 					<!-- ENDIF group.pending.length -->
-				</h3>
+				</div>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<table component="groups/pending" class="table table-striped table-hover">
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
@@ -94,13 +97,13 @@
 				</table>
 			</div>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title clearfix">
+		<div class="card mb-3">
+			<div class="card-header">
+				<span class="fs-5">
 					<i class="fa fa-gift"></i> [[groups:details.invited]]
-				</h3>
+				</span>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<div class="input-group">
 					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 					<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
@@ -142,28 +145,28 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default">
-			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
-				<h3 class="panel-title">
+		<div class="card mb-3">
+			<div class="card-header pointer" data-bs-toggle="collapse" data-bs-target=".options">
+				<span class="fs-5">
 					<i class="fa fa-caret-down float-end"></i>
 					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
-				</h3>
+				</span>
 			</div>
 
-			<div class="panel-body options collapse">
+			<div class="card-body options collapse">
 				<form component="groups/settings" role="form">
-					<div class="form-group">
-						<label for="name">[[groups:details.group_name]]</label>
+					<div class="mb-3">
+						<label class="form-label" for="name">[[groups:details.group_name]]</label>
 						<input <!-- IF group.system -->readonly<!-- ENDIF group.system --> class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
 					</div>
-					<div class="form-group">
-						<label for="name">[[groups:details.description]]</label>
+					<div class="mb-3">
+						<label class="form-label" for="name">[[groups:details.description]]</label>
 						<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
 					</div>
 
 					<hr />
-					<div class="form-group">
-						<label for="memberPostCids">[[groups:details.member-post-cids]]</label>
+					<div class="mb-3">
+						<label class="form-label" for="memberPostCids">[[groups:details.member-post-cids]]</label>
 						<div class="row">
 							<div class="col-md-6">
 								<input id="memberPostCids" type="text" class="form-control" value="{group.memberPostCids}">
@@ -176,23 +179,23 @@
 
 					<hr />
 
-					<div class="form-group user-title-option">
-						<label for="userTitle">[[groups:details.badge_text]]</label>
+					<div class="mb-3 user-title-option">
+						<label class="form-label" for="userTitle">[[groups:details.badge_text]]</label>
 						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitleEscaped}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 					</div>
 
-					<div class="form-group user-title-option">
+					<div class="mb-3 user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
 						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="color: {group.textColor}; background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon -->"></i> <span class="label-text"><!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span></span>
 
 						<hr/>
 						<button component="groups/userTitleOption" type="button" class="btn btn-outline-secondary btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
 						<div>
-							<label for="labelColor" class="badge-color-label">[[groups:details.change_label_colour]]</label>
+							<label class="form-label" for="labelColor" class="badge-color-label">[[groups:details.change_label_colour]]</label>
 							<input component="groups/userTitleOption" type="color" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						</div>
 						<div>
-							<label for="color" class="badge-color-label">[[groups:details.change_text_colour]]</label>
+							<label class="form-label" for="color" class="badge-color-label">[[groups:details.change_text_colour]]</label>
 							<input component="groups/userTitleOption" type="color" name="textColor" value="<!-- IF group.textColor -->{group.textColor}<!-- ENDIF group.textColor -->" />
 						</div>
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
@@ -206,44 +209,39 @@
 						</div>
 					</div>
 					<hr />
-					<div class="checkbox">
-						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->> <strong>[[groups:details.userTitleEnabled]]</strong>
-						</label>
+					<div class="form-check">
+						<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->>
+						<label class="form-check-label">[[groups:details.userTitleEnabled]]</label>
 					</div>
-					<div class="checkbox">
-						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> <strong>[[groups:details.private]]</strong>
-							<!-- IF !allowPrivateGroups -->
-							<p class="form-text">
-								[[groups:details.private_system_help]]
-							</p>
-							<!-- ENDIF !allowPrivateGroups -->
-							<p class="form-text">
-								[[groups:details.private_help]]
-							</p>
-						</label>
+					<div class="form-check">
+						<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->>
+						<label class="form-check-label">[[groups:details.private]]</label>
+						<!-- IF !allowPrivateGroups -->
+						<p class="form-text">
+							[[groups:details.private_system_help]]
+						</p>
+						<!-- ENDIF !allowPrivateGroups -->
+						<p class="form-text">
+							[[groups:details.private_help]]
+						</p>
 					</div>
-					<div class="checkbox">
-						<label>
-							<input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->> <strong>[[groups:details.disableJoinRequests]]</strong>
-						</label>
+					<div class="form-check">
+						<input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->>
+						<label class="form-check-label">[[groups:details.disableJoinRequests]]</label>
 					</div>
-					<div class="checkbox">
-						<label>
-							<input name="disableLeave" type="checkbox"{{{if group.disableLeave}}} checked{{{end}}}> <strong>[[groups:details.disableLeave]]</strong>
-						</label>
+					<div class="form-check">
+						<input name="disableLeave" type="checkbox"{{{if group.disableLeave}}} checked{{{end}}}>
+						<label class="form-check-label">[[groups:details.disableLeave]]</label>
 					</div>
-					<div class="checkbox">
-						<label>
-							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->> <strong>[[groups:details.hidden]]</strong>
-							<p class="form-text">
-								[[groups:details.hidden_help]]
-							</p>
-						</label>
+					<div class="form-check">
+						<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
+						<label class="form-check-label">[[groups:details.hidden]]</label>
+						<p class="form-text">
+							[[groups:details.hidden_help]]
+						</p>
 					</div>
 
-					<button class="btn btn-link btn-sm float-end" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+					<button class="btn btn-link text-danger float-end" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 				</form>
 			</div>
