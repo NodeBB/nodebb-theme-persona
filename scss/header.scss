@@ -160,20 +160,9 @@
 		}
 	}
 
-	.forum-title {
-		margin: 0px;
-	}
-
 	.forum-logo {
-		float: left;
 		max-height: 50px;
 		width: auto;
-	}
-
-	@include media-breakpoint-down(sm) {
-		.forum-logo {
-			margin-left: 15px;
-		}
 	}
 
 	.header-topic-title {
