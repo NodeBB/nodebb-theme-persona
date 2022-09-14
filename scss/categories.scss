@@ -115,10 +115,7 @@
 				margin-bottom: 1px;
 			}
 			.icon {
-				width: 23px;
-				height: 23px;
-				font-size: 10px;
-				line-height: 12px;
+				@include user-icon-style(23px, calc(23px * 0.6), 50%);
 				padding: 5px;
 				margin-right: 5px;
 			}

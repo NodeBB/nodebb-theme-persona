@@ -286,9 +286,6 @@
 
 				.avatar {
 					border: 2px solid white;
-					width: 28px;
-					height: 28px;
-					line-height: 26px;
 					vertical-align: bottom;
 				}
 
@@ -300,10 +297,8 @@
 
 		.main-avatar {
 			.avatar {
-				height: 80px;
-				width: 80px;
-				font-size: 40px;
-				border-radius: 0;
+				$size: 80px;
+				@include user-icon-style($size, calc($size * 0.6), 0);
 				background: $gray-200;
 			}
 		}

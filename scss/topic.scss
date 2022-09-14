@@ -334,7 +334,7 @@
 			margin-top: -3px;
 
 			.avatar {
-				@include user-icon-style(23px, 1.3rem, 50%);
+				@include user-icon-style(23px, calc(23px * 0.6), 50%);
 			}
 		}
 

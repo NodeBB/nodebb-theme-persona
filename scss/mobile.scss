@@ -143,10 +143,8 @@
 					left: 0;
 
 					.avatar {
-						height: 40px;
-						width: 40px;
-						font-size: 20px;
-						border-radius: 0;
+						$size: 40px;
+						@include user-icon-style($size, calc($size * 0.6), 0);
 					}
 				}
 
