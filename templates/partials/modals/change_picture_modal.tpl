@@ -6,7 +6,7 @@
 				<div class="flex-shrink-0">
 					{buildAvatar(pictures, "48px", true)}
 				</div>
-				<div class="flex-grow-1 ms-3 align-self-center fs-5">
+				<div class="flex-grow-1 ms-3 align-self-center fs-5 text-start">
 					{pictures.username}
 				</div>
 			</button>
@@ -14,9 +14,9 @@
 		</div>
 	</div>
 	<div class="col-6 col-sm-4 col-md-6">
-		<div class="d-grid" role="group">
+		<div class="list-group">
 			<!-- IF allowProfileImageUploads -->
-			<button type="button" class="btn btn-outline-secondary" data-action="upload">
+			<button type="button" class="list-group-item" data-action="upload">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture]]
 				</span>
@@ -26,7 +26,7 @@
 				</span>
 			</button>
 			<!-- ENDIF allowProfileImageUploads -->
-			<button type="button" class="btn btn-outline-secondary" data-action="upload-url">
+			<button type="button" class="list-group-item" data-action="upload-url">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture_from_url]]
 				</span>
@@ -36,7 +36,7 @@
 				</span>
 			</button>
 			<!-- IF uploaded -->
-			<button type="button" class="btn btn-outline-secondary" data-action="remove-uploaded">
+			<button type="button" class="list-group-item" data-action="remove-uploaded">
 				<span class="hidden-xs hidden-sm">
 					[[user:remove_uploaded_picture]]
 				</span>
