@@ -2,8 +2,8 @@
 
 <div class="search">
 	<div class="row">
-		<div class="col-12">
-			<form id="advanced-search">
+		<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+			<form id="advanced-search mb-3">
 				<div class="mb-3">
 					<div class="row">
 						<div class="col-md-6">
@@ -162,66 +162,69 @@
 					</div>
 				</div>
 			</form>
-		</div>
-	</div>
 
-	<div class="row">
-		<div id="results" class="search-results col-md-12" data-search-query="{search_query}">
-			<!-- IF matchCount -->
-			<div class="alert alert-info">[[search:results_matching, {matchCount}, {search_query}, {time}]] </div>
-			<!-- ELSE -->
-			<!-- IF search_query -->
-			<div class="alert alert-warning">[[search:no-matches]]</div>
-			<!-- ENDIF search_query -->
-			<!-- ENDIF matchCount -->
+			<div id="results" class="search-results col-md-12" data-search-query="{search_query}">
+				<!-- IF matchCount -->
+				<div class="alert alert-info">[[search:results_matching, {matchCount}, {search_query}, {time}]] </div>
+				<!-- ELSE -->
+				<!-- IF search_query -->
+				<div class="alert alert-warning">[[search:no-matches]]</div>
+				<!-- ENDIF search_query -->
+				<!-- ENDIF matchCount -->
 
-			{{{each posts}}}
-			<div class="topic-row card clearfix mb-3">
-				<div class="card-body">
-					<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "24px", true)}</a>
-					<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{posts.topic.title}</a></span>
-					<br/>
-					<!-- IF showAsPosts -->
-					<div class="search-result-text">
-						{posts.content}
-						<p class="fade-out"></p>
+				{{{each posts}}}
+				<div class="topic-row card clearfix mb-3">
+					<div class="card-body">
+						<a href="{config.relative_path}/user/{posts.user.userslug}">{buildAvatar(posts.user, "24px", true)}</a>
+						<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{posts.topic.title}</a></span>
+						<br/>
+						<!-- IF showAsPosts -->
+						<div class="search-result-text">
+							{posts.content}
+							<p class="fade-out"></p>
+						</div>
+						<!-- ENDIF showAsPosts -->
+
+						<small class="post-info float-end">
+							<a href="{config.relative_path}/category/{posts.category.slug}">
+								<div class="category-item d-inline-block">
+									<span role="presentation" class="icon" style="{function.generateCategoryBackground, posts.category}">
+										<i class="fa fa-fw {posts.category.icon}"></i>
+									</span>
+									{posts.category.name}
+								</div>
+							</a> &bull;
+							<span class="timeago" title="{posts.timestampISO}"></span>
+						</small>
 					</div>
-					<!-- ENDIF showAsPosts -->
-
-					<small class="post-info float-end">
-						<a href="{config.relative_path}/category/{posts.category.slug}">
-							<div class="category-item d-inline-block">
-								<span role="presentation" class="icon" style="{function.generateCategoryBackground, posts.category}">
-									<i class="fa fa-fw {posts.category.icon}"></i>
-								</span>
-								{posts.category.name}
-							</div>
-						</a> &bull;
-						<span class="timeago" title="{posts.timestampISO}"></span>
-					</small>
 				</div>
-			</div>
-			{{{end}}}
-
-			<!-- IF users.length -->
-			<ul id="users-container" class="users-container">
-			<!-- IMPORT partials/users_list.tpl -->
-			</ul>
-			<!-- ENDIF users.length -->
-
-			<!-- IF tags.length -->
-			<!-- IMPORT partials/tags_list.tpl -->
-			<!-- ENDIF tags.length -->
-
-			{{{ if categories.length }}}
-			<ul class="categories">
-				{{{each categories}}}
-				<!-- IMPORT partials/categories/item.tpl -->
 				{{{end}}}
-			</ul>
-			{{{ end }}}
 
-			<!-- IMPORT partials/paginator.tpl -->
+				<!-- IF users.length -->
+				<ul id="users-container" class="users-container">
+				<!-- IMPORT partials/users_list.tpl -->
+				</ul>
+				<!-- ENDIF users.length -->
+
+				<!-- IF tags.length -->
+				<!-- IMPORT partials/tags_list.tpl -->
+				<!-- ENDIF tags.length -->
+
+				{{{ if categories.length }}}
+				<ul class="categories">
+					{{{each categories}}}
+					<!-- IMPORT partials/categories/item.tpl -->
+					{{{end}}}
+				</ul>
+				{{{ end }}}
+
+				<!-- IMPORT partials/paginator.tpl -->
+			</div>
+		</div>
+		<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+			{{{each widgets.sidebar}}}
+			{{widgets.sidebar.html}}
+			{{{end}}}
 		</div>
 	</div>
 </div>
