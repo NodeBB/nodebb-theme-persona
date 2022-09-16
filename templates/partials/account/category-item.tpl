@@ -11,7 +11,7 @@
 		</h2>
 		<div>
 			<!-- IF ../descriptionParsed -->
-			<div class="description">
+			<div class="description text-muted">
 				{../descriptionParsed}
 			</div>
 			<!-- ENDIF ../descriptionParsed -->

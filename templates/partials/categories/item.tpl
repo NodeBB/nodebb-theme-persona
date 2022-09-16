@@ -11,30 +11,30 @@
 		</h2>
 		<div>
 			<!-- IF ../descriptionParsed -->
-			<div class="description">
+			<div class="description text-muted">
 				{../descriptionParsed}
 			</div>
 			<!-- ENDIF ../descriptionParsed -->
 			<!-- IF !config.hideSubCategories -->
 			{{{ if ../children.length }}}
-			<span class="category-children">
-			{{{ each ../children }}}
-			{{{ if !../isSection }}}
-			<span class="category-children-item">
-				<div role="presentation" class="icon d-inline-block" style="{function.generateCategoryBackground}">
-					{{{ if ../icon }}}
-					<i class="fa fa-fw {../icon}"></i>
+			<div class="category-children">
+				{{{ each ../children }}}
+				{{{ if !../isSection }}}
+				<span class="category-children-item">
+					<div role="presentation" class="icon d-inline-block" style="{function.generateCategoryBackground}">
+						{{{ if ../icon }}}
+						<i class="fa fa-fw {../icon}"></i>
+						{{{ end }}}
+					</div>
+					{{{ if ../link }}}
+					<a href="{../link}">{../name}</a></span>
+					{{{ else }}}
+					<a href="{config.relative_path}/category/{../slug}">{../name}</a>
 					{{{ end }}}
-				</div>
-				{{{ if ../link }}}
-				<a href="{../link}"><small>{../name}</small></a></span>
-				{{{ else }}}
-				<a href="{config.relative_path}/category/{../slug}"><small>{../name}</small></a>
+				</span>
 				{{{ end }}}
-			</span>
-			{{{ end }}}
-			{{{ end }}}
-			</span>
+				{{{ end }}}
+			</div>
 			{{{ end }}}
 			<!-- ENDIF !config.hideSubCategories -->
 		</div>

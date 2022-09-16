@@ -72,7 +72,7 @@
 
 				{{{ if config.searchEnabled }}}
 				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
-					<form id="search-form" class="d-flex justify-content-end" role="search" method="GET">
+					<form id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
 						<div class="hidden" id="search-fields">
 							<div class="input-group flex-nowrap">
 								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
