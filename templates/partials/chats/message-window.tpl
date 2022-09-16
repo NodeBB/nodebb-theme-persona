@@ -1,16 +1,16 @@
 <!-- IF roomId -->
 <div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
-	<div component="chat/header">
-		<button type="button" class="close" aria-label="Close" data-action="close"><span aria-hidden="true">&times;</span></button>
-		<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
-
-		<!-- IMPORT partials/chats/options.tpl -->
-		<span class="members">
+	<div component="chat/header" class="d-flex align-items-center px-3">
+		<span class="members flex-grow-1">
 			[[modules:chat.chatting_with]]:
 			{{{each users}}}
 			<a href="{config.relative_path}/uid/{../uid}">{../username}</a><!-- IF !@last -->,<!-- END -->
 			{{{end}}}
 		</span>
+
+		<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted" data-action="pop-out" aria-hidden="true" aria-label="Pop Out"><i class="fa fa-compress"></i></button>
+		<!-- IMPORT partials/chats/options.tpl -->
+		<button type="button" class="btn-close" aria-hidden="true" aria-label="Close"></button>
 	</div>
 	<div component="chat/messages/scroll-up-alert" class="scroll-up-alert alert alert-info" role="button">[[modules:chat.scroll-up-alert]]</div>
 	<ul class="chat-content">

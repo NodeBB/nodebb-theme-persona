@@ -1,7 +1,8 @@
 // Make chats page edge-to-edge
 .page-user-chats {
 	#content.container {
-		width: auto;
+		@include make-container();
+		max-width: unset;
 		padding: 0;
 	}
 
@@ -22,7 +23,7 @@
 .chats-full, .chat-modal {
 	display: flex;
 	flex-wrap: nowrap;
-	height: calc(100vh - var(--panel-offset));
+	height: calc(100vh - var(--panel-offset) - $spacer);
 
 	[component="chat/nav-wrapper"] {
 		flex: 1;
@@ -95,7 +96,6 @@
 	}
 
 	[component="chat/header"] {
-		padding: 10px;
 		border-bottom: 1px solid $gray-200;
 
 		span {
@@ -173,7 +173,6 @@
 		position: relative;
 		clear: both;
 		list-style-type: none;
-		height: 80px;
 		@include pointer;
 
 		border-left: 1px solid;
