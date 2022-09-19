@@ -63,7 +63,6 @@ $(document).ready(function () {
 					return data;
 				})
 				.on('action:navigator.scrolled', () => {
-					console.warn('reenabling', navbarEl);
 					navbarEl.autoHidingNavbar('setDisableAutohide', false);
 				});
 
