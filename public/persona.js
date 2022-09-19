@@ -57,6 +57,16 @@ $(document).ready(function () {
 			navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 			navbarEl.css('top', '');
 
+			hooks
+				.on('filter:navigator.scroll', (data) => {
+					navbarEl.autoHidingNavbar('setDisableAutohide', true);
+					return data;
+				})
+				.on('action:navigator.scrolled', () => {
+					console.warn('reenabling', navbarEl);
+					navbarEl.autoHidingNavbar('setDisableAutohide', false);
+				});
+
 			hooks.fire('filter:persona.configureNavbarHiding', {
 				resizeEnvs: preference,
 			}).then(({ resizeEnvs }) => {
