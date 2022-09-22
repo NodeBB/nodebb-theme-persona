@@ -27,7 +27,7 @@
 						{{{ end }}}
 					</div>
 					{{{ if ../link }}}
-					<a href="{../link}">{../name}</a></span>
+					<a href="{../link}">{../name}</a>
 					{{{ else }}}
 					<a href="{config.relative_path}/category/{../slug}">{../name}</a>
 					{{{ end }}}
