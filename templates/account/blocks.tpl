@@ -5,9 +5,9 @@
 		<h1>[[pages:account/blocks, {username}]]</h1>
 
 		<div class="col-sm-8 col-12">
-			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
-				<!-- IMPORT partials/users_list.tpl -->
-			</ul>
+
+			<!-- IMPORT partials/users_list.tpl -->
+
 			<div class="alert alert-warning text-center"<!-- IF users.length --> style="display: none;"<!-- END -->>[[user:has_no_blocks]]</div>
 			<!-- IMPORT partials/paginator.tpl -->
 		</div>

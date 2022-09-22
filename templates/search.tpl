@@ -201,9 +201,7 @@
 				{{{end}}}
 
 				<!-- IF users.length -->
-				<ul id="users-container" class="users-container">
 				<!-- IMPORT partials/users_list.tpl -->
-				</ul>
 				<!-- ENDIF users.length -->
 
 				<!-- IF tags.length -->
