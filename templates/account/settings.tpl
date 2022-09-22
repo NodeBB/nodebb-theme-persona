@@ -190,7 +190,7 @@
 			<h4>[[user:notifications]]</h4>
 			<div class="card card-body text-bg-light mb-3">
 				{{{each notificationSettings}}}
-				<div class="row">
+				<div class="row mb-3">
 					<div class="col-7">
 						<label>{notificationSettings.label}</label>
 					</div>
