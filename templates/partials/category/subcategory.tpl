@@ -1,7 +1,7 @@
 {{{ if children.length }}}
 <div class="subcategory">
 	{{{ if hasMoreSubCategories }}}
-	<div><!-- IMPORT partials/category-selector.tpl --></div>
+	<div class="mb-2"><!-- IMPORT partials/category-selector.tpl --></div>
 	{{{ else }}}
 	<p>[[category:subcategories]]</p>
 	{{{ end }}}
@@ -12,7 +12,7 @@
 		{{{end}}}
 	</ul>
 	{{{ if hasMoreSubCategories}}}
-	<button class="btn btn-outline-secondary" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
+	<button class="btn btn-outline-secondary mb-2" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
 	{{{ end }}}
 </div>
 {{{ end }}}
