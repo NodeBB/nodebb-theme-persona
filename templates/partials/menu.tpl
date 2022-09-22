@@ -6,7 +6,7 @@
 				<div class="d-inline-flex align-items-center">
 					{{{ if brand:logo }}}
 					<a class="navbar-brand" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
-						<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-top" src="{brand:logo}?{config.cache-buster}" />
+						<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-bottom" src="{brand:logo}?{config.cache-buster}" />
 					</a>
 					{{{ end }}}
 					{{{ if config.showSiteTitle }}}
