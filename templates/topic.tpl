@@ -71,7 +71,11 @@
 
 					<!-- IMPORT partials/topic/post.tpl -->
 				</li>
-				{renderTopicEvents(@index, config.topicPostSort)}
+				{{{ if (config.topicPostSort != "most_votes") }}}
+				{{{ each ./events}}}
+				<!-- IMPORT partials/topic/event.tpl -->
+				{{{ end }}}
+				{{{ end }}}
 			{{{end}}}
 		</ul>
 
