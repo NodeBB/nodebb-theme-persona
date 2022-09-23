@@ -14,7 +14,7 @@
 		{{{ if ./user.system }}}
 		<span class="timeline-text">[[global:system-user]]</span>&nbsp;
 		{{{ else }}}
-		<span><a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "xs", true)} &nbsp; {./user.username}</a></span>&nbsp;
+		<span><a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "16px", true)} &nbsp; {./user.username}</a></span>&nbsp;
 		{{{ end }}}
 	{{{ end }}}
 	<span class="timeago timeline-text" title="{./timestampISO}"></span>
