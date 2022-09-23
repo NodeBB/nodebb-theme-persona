@@ -2,6 +2,7 @@
 <li <!-- IF locked -->hidden<!-- ENDIF locked -->><a component="topic/lock" href="#" class="dropdown-item <!-- IF locked -->hidden<!-- ENDIF locked -->"><i class="fa fa-fw fa-lock"></i> [[topic:thread_tools.lock]]</a></li>
 <li <!-- IF !locked -->hidden<!-- ENDIF !locked -->><a component="topic/unlock" href="#" class="dropdown-item <!-- IF !locked -->hidden<!-- ENDIF !locked -->"><i class="fa fa-fw fa-unlock"></i> [[topic:thread_tools.unlock]]</a></li>
 <li><a component="topic/move" class="dropdown-item" href="#"><i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move]]</a></li>
+<li><a component="topic/merge" class="dropdown-item" href="#"><i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.merge]]</a></li>
 <li><a component="topic/fork" class="dropdown-item" href="#"><i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.fork]]</a></li>
 {{{ if !scheduled }}}
 <li <!-- IF pinned -->hidden<!-- ENDIF pinned -->><a component="topic/pin" href="#" class="dropdown-item <!-- IF pinned -->hidden<!-- ENDIF pinned -->"><i class="fa fa-fw fa-thumb-tack"></i> [[topic:thread_tools.pin]]</a></li>
