@@ -77,15 +77,13 @@
 							<div class="input-group flex-nowrap">
 								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 
-								<div class="input-group-btn">
-									<button href="#" class="btn btn-outline-secondary">
-										<i class="fa fa-gears fa-fw advanced-search-link"></i>
-									</button>
-								</div>
+								<button href="#" class="btn btn-outline-secondary">
+									<i class="fa fa-gears fa-fw advanced-search-link"></i>
+								</button>
 							</div>
 
-							<div id="quick-search-container" class="quick-search-container mt-2 hidden">
-								<div class="form-check filter-category mb-2">
+							<div id="quick-search-container" class="quick-search-container dropdown-menu d-block mt-2 hidden">
+								<div class="form-check filter-category mb-2 ms-4">
 									<input class="form-check-input" type="checkbox" checked>
 									<label class="form-check-label name"></label>
 								</div>
