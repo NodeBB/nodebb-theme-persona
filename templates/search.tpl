@@ -3,7 +3,7 @@
 <div class="search">
 	<div class="row">
 		<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
-			<form id="advanced-search mb-3">
+			<form id="advanced-search" class="mb-3">
 				<div class="mb-3">
 					<div class="row">
 						<div class="col-md-6">
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 
-				<div class="card mb-3">
+				<div class="card">
 					<h5 class="card-header" data-bs-toggle="collapse" data-bs-target=".search-options">
 						<i class="fa fa-sort"></i> [[search:advanced-search]]
 					</h5>
