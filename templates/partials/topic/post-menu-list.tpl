@@ -6,12 +6,12 @@
 </li>
 <li <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->>
 	<a class="dropdown-item" component="post/delete" role="menuitem" tabindex="-1" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->">
-		<div class="inline menu-icon"><i class="fa fa-fw fa-trash-o"></i></div> <span>[[topic:delete]]</span>
+		<span class="menu-icon"><i class="fa fa-fw fa-trash-o"></i><span> [[topic:delete]]
 	</a>
 </li>
 <li <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a class="dropdown-item" component="post/restore" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
-		<div class="inline menu-icon"><i class="fa fa-fw fa-history"></i></div> <span>[[topic:restore]]</span>
+		<span class="menu-icon"><i class="fa fa-fw fa-history"></i><span> [[topic:restore]]
 	</a>
 </li>
 <!-- IF posts.display_purge_tools -->
