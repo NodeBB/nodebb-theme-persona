@@ -1,8 +1,8 @@
-<ul id="quick-search-results" class="quick-search-results list-unstyled mb-2 p-0 overflow-auto" style="max-width:400px; max-height: 500px;">
+<ul id="quick-search-results" class="quick-search-results list-unstyled mb-0 p-0 overflow-auto" style="max-width:400px; max-height: 500px;">
 {{{each posts}}}
 <li data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 	<a href="{config.relative_path}/post/{posts.pid}"
-		class="text-decoration-none text-reset clearfix d-block text-truncate px-4 py-1">
+		class="text-decoration-none text-reset clearfix d-block text-truncate px-3 py-1">
 		{buildAvatar(posts.user, "24px", true)}
 		<span class="quick-search-title fw-bold">{posts.topic.title}</span>
 		<br/>
@@ -23,7 +23,7 @@
 {{{end}}}
 </ul>
 <!-- IF multiplePages -->
-<div class="text-center">
+<div class="text-center mt-2">
 	<a href="{url}">
 		[[search:see-more-results, {matchCount}]]
 	</a>

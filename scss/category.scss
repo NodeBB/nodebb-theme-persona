@@ -159,19 +159,5 @@
 	line-height: 1.42857143;
 }
 
-[component="category-selector"], .category-dropdown-container {
-	#category-dropdown-check:checked + .dropdown-menu {
-		display: block;
-	}
-}
 
-.category-dropdown-container.right .category-dropdown-menu {
-	--bs-position: end;
-}
-
-.category-dropdown-menu {
-	max-height: 500px;
-	overflow-y: auto;
-	overflow-x: hidden;
-}
 
