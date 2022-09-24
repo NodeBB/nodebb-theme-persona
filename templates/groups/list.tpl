@@ -23,11 +23,9 @@
 				<div class="col-7 col-md-5">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="" id="search-text">
-						<div class="input-group-btn search-button">
-							<button id="search-button" class="btn btn-primary">
-								<i class="fa fa-search"></i>
-							</button>
-						</div>
+						<button id="search-button" class="btn btn-primary">
+							<i class="fa fa-search"></i>
+						</button>
 					</div>
 				</div>
 			</div>
