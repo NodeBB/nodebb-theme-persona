@@ -5,7 +5,7 @@
 </div>
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
-		<div class="topic-header">
+		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
 					<span component="topic/labels">
