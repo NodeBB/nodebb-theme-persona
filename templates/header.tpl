@@ -32,11 +32,16 @@
 	</nav>
 
 	<main id="panel" class="slideout-panel">
-		<nav class="navbar fixed-top navbar-expand-lg bg-light header border-bottom" id="header-menu" component="navbar">
+		<nav class="navbar sticky-top navbar-expand-lg bg-light header border-bottom" id="header-menu" component="navbar">
 			<div class="container justify-content-start">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
+		<script>
+			const rect = document.getElementById('header-menu').getBoundingClientRect();
+			const offset = Math.max(0, rect.bottom);
+			document.documentElement.style.setProperty('--panel-offset', offset + `px`);
+		</script>
 		<div class="container pt-3" id="content">
 		<!-- IMPORT partials/noscript/warning.tpl -->
 		<!-- IMPORT partials/noscript/message.tpl -->

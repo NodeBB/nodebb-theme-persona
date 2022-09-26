@@ -17,15 +17,18 @@
 	[component="groups/cover"] {
 		background-size: cover;
 		background-repeat: no-repeat;
-		min-height: 200px;
-		position: relative;
-		margin-bottom: 1em;
 		background-origin: content-box;
+
+		min-height: 200px;
 		width: 100%;
-		top: var(--panel-offset);
+		margin-bottom: 1em;
+		padding-left: 0;
+		padding-right: 0;
+
 		position: absolute;
+		top: var(--panel-offset);
+		right: 0;
 		left: auto;
-		right: 0px;
 
 		&:hover {
 			.controls {
