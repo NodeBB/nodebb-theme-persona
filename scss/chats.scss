@@ -80,9 +80,6 @@
 	[component="chat/main-wrapper"] {
 		flex: 3;
 		padding-bottom: 15px;
-		.alert {
-			margin: 1em;
-		}
 	}
 
 	[component="chat/messages"] {
@@ -553,9 +550,6 @@
 			display: none;
 		}
 
-		.chats-full, .chat-modal {
-			height: calc(100vh - var(--panel-offset));
-		}
 		[component="chat/messages"] {
 			width: calc(100vw);
 		}
