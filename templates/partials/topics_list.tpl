@@ -107,7 +107,7 @@
 				<!-- IF topics.teaser.pid -->
 				<p>
 					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24px", true, "not-responsive")}</a>
-					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+					<a class="permalink text-muted" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</p>

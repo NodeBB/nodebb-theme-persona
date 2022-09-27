@@ -48,11 +48,11 @@
 	</div>
 
 	<!-- IF !../link -->
-	<div class="col-md-1 d-none d-md-block stats">
+	<div class="col-md-1 d-none d-md-block stats text-muted">
 		<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
 		<small>[[global:topics]]</small>
 	</div>
-	<div class="col-md-1 d-none d-md-block stats">
+	<div class="col-md-1 d-none d-md-block stats text-muted">
 		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>

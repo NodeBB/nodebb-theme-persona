@@ -60,7 +60,7 @@
 
 	<div class="clearfix">
 	{{{ if !hideReplies }}}
-	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start {{{ if !posts.replies.count }}}hidden{{{ end }}}">
+	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start text-muted {{{ if !posts.replies.count }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
 			{buildAvatar(posts.replies.users, "16px", true, "")}
