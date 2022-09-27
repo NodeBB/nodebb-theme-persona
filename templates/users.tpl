@@ -18,7 +18,7 @@
 		<div class="col-lg-3 col-9">
 			<div class="search">
 				<div class="input-group">
-					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
+					<input class="form-control" id="search-user" type="text" placeholder="[[global:search]]"/>
 					<button class="btn btn-primary" type="button">
 						<i component="user/search/icon" class="fa fa-search"></i>
 					</button>

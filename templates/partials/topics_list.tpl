@@ -57,9 +57,9 @@
 
 				{{{ if topics.tags.length }}}
 				<span class="tag-list hidden-xs">
-					{{{each topics.tags}}}
-					<a href="{config.relative_path}/tags/{topics.tags.valueEncoded}"><span class="tag tag-item tag-class-{topics.tags.class}">{topics.tags.valueEscaped}</span></a>
-					{{{end}}}
+					{{{ each ./tags }}}
+					<!-- IMPORT partials/topic/tag.tpl -->
+					{{{ end }}}
 					&bull;
 				</span>
 				{{{ end }}}

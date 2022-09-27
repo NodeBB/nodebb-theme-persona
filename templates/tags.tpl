@@ -7,8 +7,8 @@
 <div class="tags">
 	<!-- IF displayTagSearch -->
 	<!-- IF tags.length -->
-	<div class="row">
-		<div class="col-lg-12">
+	<div class="row justify-content-end mb-3">
+		<div class="col-lg-3">
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="[[global:search]]" id="tag-search">
 				<button class="btn btn-primary" type="button">
