@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="unread">
-	<div class="topic-list-header btn-toolbar justify-content-between py-2 mb-2">
+	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2">
 		<div class="d-flex gap-1 align-items-stretch">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
