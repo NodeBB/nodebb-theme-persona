@@ -47,9 +47,7 @@
 			<div class="info">
 				<!-- IF !template.category -->
 				<div class="category-item d-inline-block">
-					<span role="presentation" class="icon" style="{function.generateCategoryBackground, topics.category}">
-						<i class="fa fa-fw {topics.category.icon}"></i>
-					</span>
+					{buildCategoryIcon(./category, "24px", "rounded-circle")}
 					<a class="text-muted" href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
 				</div>
 				&bull;

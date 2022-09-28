@@ -21,9 +21,7 @@
 
 			<div class="topic-info clearfix">
 				<div class="category-item d-inline-block">
-					<span role="presentation" class="icon" style="{function.generateCategoryBackground, category}">
-						<i class="fa fa-fw {category.icon}"></i>
-					</span>
+					{buildCategoryIcon(category, "24px", "rounded-circle")}
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 

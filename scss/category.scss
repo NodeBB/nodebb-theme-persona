@@ -19,7 +19,7 @@
 				}
 			}
 			.info {
-				padding-left: 56px;
+				margin-left: 62px;
 				font-size: 0.75rem;
 			}
 			&.deleted {
@@ -145,7 +145,7 @@
 		min-height: 25px
 	}
 
-	.description, .category-children {
+	.title, .description, .category-children {
 		margin-left: 62px;
 	}
 }

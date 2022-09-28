@@ -188,9 +188,7 @@
 						<small class="post-info float-end">
 							<a href="{config.relative_path}/category/{posts.category.slug}">
 								<div class="category-item d-inline-block">
-									<span role="presentation" class="icon" style="{function.generateCategoryBackground, posts.category}">
-										<i class="fa fa-fw {posts.category.icon}"></i>
-									</span>
+									{buildCategoryIcon(./category, "24px", "rounded-circle")}
 									{posts.category.name}
 								</div>
 							</a> &bull;

@@ -10,9 +10,7 @@
 			<a role="menu-item" href="{config.relative_path}/compose?cid={categories.cid}">{categories.level}
 				<span component="category-markup">
 					<div class="category-item d-inline-block">
-						<span role="presentation" class="icon" style="{function.generateCategoryBackground}">
-							<i class="fa fa-fw {categories.icon}"></i>
-						</span>
+						{buildCategoryIcon(@value, "24px", "rounded-circle")}
 						{categories.name}
 					</div>
 				</span>

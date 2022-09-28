@@ -2,8 +2,8 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-10  depth-{../depth}">
-		<div class="icon float-start" style="{function.generateCategoryBackground}">
-			<i class="fa fa-fw {../icon}"></i>
+		<div class="float-start">
+		{buildCategoryIcon(@value, "48px", "rounded-circle")}
 		</div>
 
 		<h2 class="title">

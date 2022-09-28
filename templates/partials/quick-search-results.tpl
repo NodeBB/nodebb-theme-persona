@@ -11,7 +11,7 @@
 		</p>
 		<small class="post-info float-end">
 			<div class="category-item d-inline-block">
-				<span role="presentation" class="icon p-1 rounded-1" style="{function.generateCategoryBackground, posts.category}"><i class="fa fa-fw {posts.category.icon}"></i></span> {posts.category.name}
+				{buildCategoryIcon(./category, "24px", "rounded-circle")} {posts.category.name}
 				&bull; <span class="timeago" title="{posts.timestampISO}"></span>
 			</div>
 		</small>

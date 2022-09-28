@@ -2,10 +2,9 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
-		<div class="icon float-start" style="{function.generateCategoryBackground}">
-			<i class="fa fa-fw {../icon}"></i>
+		<div class="float-start">
+		{buildCategoryIcon(@value, "48px", "rounded-circle")}
 		</div>
-
 		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl -->
 		</h2>
@@ -21,11 +20,7 @@
 				{{{ each ../children }}}
 				{{{ if !../isSection }}}
 				<span class="category-children-item">
-					<div role="presentation" class="icon d-inline-block" style="{function.generateCategoryBackground}">
-						{{{ if ../icon }}}
-						<i class="fa fa-fw {../icon}"></i>
-						{{{ end }}}
-					</div>
+					{buildCategoryIcon(@value, "24px", "rounded-circle")}
 					{{{ if ../link }}}
 					<a href="{../link}">{../name}</a>
 					{{{ else }}}

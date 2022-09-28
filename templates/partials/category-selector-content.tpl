@@ -2,9 +2,7 @@
     <span component="category-selector-selected">
         {{{ if (selectedCategory && !showCategorySelectLabel) }}}
         <span class="category-item">
-            <span role="presentation" class="icon float-start me-1" style="{function.generateCategoryBackground, selectedCategory}">
-                <i class="fa fa-fw {selectedCategory.icon}"></i>
-            </span>
+            {buildCategoryIcon(selectedCategory, "24px", "rounded-circle")}
             {selectedCategory.name}
         </span>
         {{{ else }}}
@@ -23,9 +21,7 @@
         <a class="dropdown-item" role="menu-item">{../level}
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
-                    <span role="presentation" class="icon" style="{function.generateCategoryBackground}">
-                        <i class="fa fa-fw {./icon}"></i>
-                    </span>
+                    {buildCategoryIcon(@value, "24px", "rounded-circle")}
                     {./name}
                 </div>
             </span>

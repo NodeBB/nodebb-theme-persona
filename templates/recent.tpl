@@ -16,7 +16,7 @@
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 		</div>
-		<div>
+		<div class="d-flex gap-1 align-items-stretch">
 		<!-- IMPORT partials/topic-filters.tpl -->
 		<!-- IMPORT partials/category-filter-right.tpl -->
 		<!-- IMPORT partials/category/tools.tpl -->
