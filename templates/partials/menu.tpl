@@ -72,8 +72,8 @@
 
 				{{{ if config.searchEnabled }}}
 				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
-					<form id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
-						<div class="hidden" id="search-fields">
+					<form component="search/form" id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
+						<div component="search/fields" class="hidden" id="search-fields">
 							<div class="input-group flex-nowrap">
 								<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 
@@ -94,7 +94,7 @@
 							<button type="submit" class="btn btn-outline-secondary hide">[[global:search]]</button>
 						</div>
 
-						<li id="" class="nav-item"><a id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></li>
+						<li id="" class="nav-item"><a component="search/button" id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></li>
 					</form>
 
 				</div>
