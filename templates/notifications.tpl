@@ -54,7 +54,7 @@
 					<a class="text-reset" component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 				</p>
 				<p class="timestamp">
-					<span class="timeago small text-muted text-reset" title="{notifications.datetimeISO}"></span>
+					<span class="timeago small text-reset" title="{notifications.datetimeISO}"></span>
 				</p>
 			</div>
 		</li>

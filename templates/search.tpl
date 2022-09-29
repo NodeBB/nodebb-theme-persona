@@ -6,11 +6,11 @@
 			<form id="advanced-search" class="mb-3">
 				<div class="mb-3">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<label class="form-label">[[global:search]]</label>
 							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<label class="form-label">[[search:in]]</label>
 							<select id="search-in" class="form-select">
 								<option value="titlesposts">[[search:titles-posts]]</option>
