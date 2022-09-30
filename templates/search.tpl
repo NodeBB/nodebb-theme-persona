@@ -40,10 +40,11 @@
 				</div>
 
 				<div class="card">
-					<h5 class="card-header" data-bs-toggle="collapse" data-bs-target=".search-options">
+					<h5 class="card-header pointer" data-bs-toggle="collapse" data-bs-target=".search-options">
 						<i class="fa fa-sort"></i> [[search:advanced-search]]
 					</h5>
-					<div class="card-body search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
+					<div class="collapse search-options {{{ if expandSearch }}}show{{{ end }}}">
+					<div class="card-body">
 						<div class="mb-2 post-search-item">
 							<div class="row">
 								<div class="col-md-6">
@@ -60,11 +61,15 @@
 										<div class="row">
 											<div class="col-md-6">
 												<label class="form-label">[[search:posted-by]]</label>
-												<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+												<div>
+													<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+												</div>
 											</div>
 											<div class="col-md-6">
 												<label class="form-label">[[search:has-tags]]</label>
-												<input type="text" class="form-control" id="has-tags">
+												<div>
+													<input type="text" class="form-control" id="has-tags">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -159,6 +164,7 @@
 							<a class="btn btn-outline-secondary" id="save-preferences" href="#">[[search:save-preferences]]</a>
 							<a class="btn btn-outline-secondary" id="clear-preferences" href="#">[[search:clear-preferences]]</a>
 						</div>
+					</div>
 					</div>
 				</div>
 			</form>

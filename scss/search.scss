@@ -1,20 +1,3 @@
-.search {
-	.user-img {
-		@include user-icon-style(24px, 1.5, 50%);
-	}
-	.post-search-item {
-		.bootstrap-tagsinput {
-			display: block;
-		}
-	}
-
-	#advanced-search {
-		.panel-heading {
-			cursor: pointer;
-		}
-	}
-}
-
 .search-result-title {
 	font-weight: 600;
 }
