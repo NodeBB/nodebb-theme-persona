@@ -66,7 +66,7 @@
 						</div>
 						<div class="col-lg-7 col-12">
 							<strong>{{{ if posts.data.tid }}}[[post-queue:topic]]{{{ else }}}[[post-queue:title]] <i class="fa fa-fw fa-edit" data-bs-toggle="tooltip" title="[[post-queue:title-editable]]"></i>{{{ end }}}</strong>
-							<div class="topic-title">
+							<div class="topic-title text-break">
 								{{{ if posts.data.tid }}}
 								<a href="{config.relative_path}/topic/{posts.data.tid}">{posts.topic.title}</a>
 								{{{ end }}}
@@ -82,9 +82,9 @@
 					<hr/>
 					<div>
 						<strong>[[post-queue:content]] <i class="fa fa-fw fa-edit" data-bs-toggle="tooltip" title="[[post-queue:content-editable]]"></i></strong>
-						<div class="post-content">{posts.data.content}</div>
+						<div class="post-content text-break">{posts.data.content}</div>
 						<div class="post-content-editable hidden">
-							<textarea class="form-control">{posts.data.rawContent}</textarea>
+							<textarea class="form-control w-100" style="height:300px;">{posts.data.rawContent}</textarea>
 						</div>
 					</div>
 				</div>
