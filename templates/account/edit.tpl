@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 	<!-- IF sso.length --><div><!-- ENDIF sso.length -->
 		<div class="row">
-			<div class="col-md-2 col-sm-4">
+			<div class="col-md-3 col-sm-4">
 				<div class="account-picture-block text-center">
 					<div class="row mb-3">
 						<div class="col-12 hidden-xs">
@@ -111,7 +111,7 @@
 			</div>
 
 			<!-- IF sso.length -->
-			<div class="col-md-5 col-sm-4">
+			<div class="col-md-4 col-sm-4">
 				<label>[[user:sso.title]]</label>
 				<div class="list-group">
 					{{{each sso}}}
