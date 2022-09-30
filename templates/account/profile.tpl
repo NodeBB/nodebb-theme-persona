@@ -140,7 +140,7 @@
 			<h1>[[pages:account/best, {username}]]</h1>
 
 			<div class="col-12">
-				<ul component="posts" class="posts-list">
+				<ul component="posts" class="posts-list list-unstyled">
 				{{{each bestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}
@@ -152,7 +152,7 @@
 		<div class="col-lg-12 col-12">
 			<h1>[[pages:account/latest-posts, {username}]]</h1>
 			<div class="col-12">
-				<ul component="posts" class="posts-list">
+				<ul component="posts" class="posts-list list-unstyled">
 				{{{each latestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}
