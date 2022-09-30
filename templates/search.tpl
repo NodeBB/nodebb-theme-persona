@@ -54,7 +54,10 @@
 										<option value="{allCategories.value}">{allCategories.text}</option>
 										{{{end}}}
 									</select>
-									<input type="checkbox" id="search-children"> [[search:search-child-categories]]
+									<div class="form-check">
+										<input id="search-children" class="form-check-input" type="checkbox"/>
+										<label class="form-check-label" for="search-children">[[search:search-child-categories]]</label>
+									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-2 post-search-item">
@@ -62,7 +65,7 @@
 											<div class="col-md-6">
 												<label class="form-label">[[search:posted-by]]</label>
 												<div>
-													<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+													<input type="text" class="form-control" id="posted-by-user">
 												</div>
 											</div>
 											<div class="col-md-6">
