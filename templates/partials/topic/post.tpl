@@ -6,44 +6,49 @@
 		</a>
 	</div>
 
-	<small class="float-start">
-		<strong>
-			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
-		</strong>
+	<small class="d-flex justify-content-between">
+		<div class="d-flex align-items-center gap-1">
+			<strong>
+				<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+			</strong>
 
-		<!-- IMPORT partials/topic/badge.tpl -->
+			{{{ each posts.user.selectedGroups }}}
+			{{{ if posts.user.selectedGroups.slug }}}
+			<!-- IMPORT partials/groups/badge.tpl -->
+			{{{ end }}}
+			{{{ end }}}
 
-		<!-- IF posts.user.banned -->
-		<span class="badge bg-danger">[[user:banned]]</span>
-		<!-- ENDIF posts.user.banned -->
+			<!-- IF posts.user.banned -->
+			<span class="badge bg-danger">[[user:banned]]</span>
+			<!-- ENDIF posts.user.banned -->
 
-		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			<!-- IF posts.toPid -->
-			<a component="post/parent" class="btn btn-sm btn-outline-secondary hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
-			<!-- ENDIF posts.toPid -->
+			<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+				<!-- IF posts.toPid -->
+				<a component="post/parent" class="btn btn-sm btn-outline-secondary hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+				<!-- ENDIF posts.toPid -->
 
-			<span>
-				<!-- IF posts.user.custom_profile_info.length -->
-				&#124;
-				{{{each posts.user.custom_profile_info}}}
-				{posts.user.custom_profile_info.content}
-				{{{end}}}
-				<!-- ENDIF posts.user.custom_profile_info.length -->
+				<span>
+					<!-- IF posts.user.custom_profile_info.length -->
+					&#124;
+					{{{each posts.user.custom_profile_info}}}
+					{posts.user.custom_profile_info.content}
+					{{{end}}}
+					<!-- ENDIF posts.user.custom_profile_info.length -->
+				</span>
 			</span>
-		</span>
+		</div>
+		<div class="d-flex align-items-center gap-1">
+			<span>
+				<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-	</small>
-	<small class="float-end">
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
-	</small>
-	<small class="float-end">
-		<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
+				<span data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></span>
 
-		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
-
-		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
-		</span>
+				<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					<a class="permalink text-muted" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
+				</span>
+			</span>
+			<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
+		</div>
 	</small>
 </div>
 

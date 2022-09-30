@@ -1,4 +1,4 @@
-<ul component="posts" class="posts-list" data-nextstart="{nextStart}">
+<ul component="posts" class="posts-list list-unstyled" data-nextstart="{nextStart}">
 	{{{each posts}}}
 	<!-- IMPORT partials/posts_list_item.tpl -->
 	{{{end}}}

@@ -1,16 +1,3 @@
-.group-label {
-	display: inline-block;
-	text-transform: uppercase;
-	vertical-align: -5px;
-	padding: 4px;
-	border-radius: 2px;
-	max-width: 150px;
-	overflow-x: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	line-height: 1.1;
-}
-
 .groups.details {
 	margin-top: 200px;
 
@@ -150,20 +137,10 @@
 			padding: .2em .3em .1em;
 		}
 	}
-
-	.options {
-		.user-title-option span.label {
-			@extend .group-label;
-		}
-	}
 }
 
 .groups.list {
 	[component="groups/summary"] {
-		.panel-body {
-			min-height: 72px;
-		}
-
 		.list-cover {
 			display: block;
 			background-size: cover;
