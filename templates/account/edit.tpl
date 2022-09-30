@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-2 col-sm-4">
 				<div class="account-picture-block text-center">
-					<div class="row">
+					<div class="row mb-3">
 						<div class="col-12 hidden-xs">
 							<!-- IF picture -->
 							<img id="user-current-picture" class="avatar avatar-rounded" style="--avatar-size: 128px;" src="{picture}" />
