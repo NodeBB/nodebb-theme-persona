@@ -49,64 +49,65 @@
 			</div>
 
 			<div class="<!-- IF !sso.length -->col-md-9 col-sm-8<!-- ELSE -->col-md-5 col-sm-4<!-- ENDIF !sso.length -->">
-				<form role="form" component="profile/edit/form">
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="fullname">[[user:fullname]]</label>
-						<input class="form-control" type="text" id="fullname" name="fullname" placeholder="[[user:fullname]]" value="{fullname}">
-					</div>
-					<!-- IF allowWebsite -->
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="website">[[user:website]]</label>
-						<input class="form-control" type="text" id="website" name="website" placeholder="http://..." value="{website}">
-					</div>
-					<!-- ENDIF allowWebsite -->
+				<div class="card card-body">
+					<form role="form" component="profile/edit/form">
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="fullname">[[user:fullname]]</label>
+							<input class="form-control" type="text" id="fullname" name="fullname" placeholder="[[user:fullname]]" value="{fullname}">
+						</div>
+						<!-- IF allowWebsite -->
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="website">[[user:website]]</label>
+							<input class="form-control" type="text" id="website" name="website" placeholder="http://..." value="{website}">
+						</div>
+						<!-- ENDIF allowWebsite -->
 
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="location">[[user:location]]</label>
-						<input class="form-control" type="text" id="location" name="location" placeholder="[[user:location]]" value="{location}">
-					</div>
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="location">[[user:location]]</label>
+							<input class="form-control" type="text" id="location" name="location" placeholder="[[user:location]]" value="{location}">
+						</div>
 
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="birthday">[[user:birthday]]</label>
-						<input class="form-control" type="date" id="birthday" name="birthday" value="{birthday}" placeholder="mm/dd/yyyy">
-					</div>
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="birthday">[[user:birthday]]</label>
+							<input class="form-control" type="date" id="birthday" name="birthday" value="{birthday}" placeholder="mm/dd/yyyy">
+						</div>
 
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="groupTitle">[[user:grouptitle]]</label>
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="groupTitle">[[user:grouptitle]]</label>
 
-						<select class="form-select" id="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
-							<option value="">[[user:no-group-title]]</option>
-							{{{each groups}}}
-							<!-- IF groups.userTitleEnabled -->
-							<option value="{groups.displayName}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
-							<!-- ENDIF groups.userTitleEnabled -->
-							{{{end}}}
-						</select>
-						<!-- IF allowMultipleBadges -->
-						<span>[[user:group-order-help]]</span>
-						<i role="button" component="group/order/up" class="fa fa-chevron-up"></i> <i role="button" component="group/order/down" class="fa fa-chevron-down"></i>
-						<!-- ENDIF -->
-					</div>
+							<select class="form-select" id="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
+								<option value="">[[user:no-group-title]]</option>
+								{{{each groups}}}
+								<!-- IF groups.userTitleEnabled -->
+								<option value="{groups.displayName}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
+								<!-- ENDIF groups.userTitleEnabled -->
+								{{{end}}}
+							</select>
+							<!-- IF allowMultipleBadges -->
+							<span>[[user:group-order-help]]</span>
+							<i role="button" component="group/order/up" class="fa fa-chevron-up"></i> <i role="button" component="group/order/down" class="fa fa-chevron-down"></i>
+							<!-- ENDIF -->
+						</div>
 
-					<!-- IF allowAboutMe -->
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="aboutme">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
-						<textarea class="form-control" id="aboutme" name="aboutme" rows="5">{aboutme}</textarea>
-					</div>
-					<!-- ENDIF allowAboutMe -->
+						<!-- IF allowAboutMe -->
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="aboutme">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
+							<textarea class="form-control" id="aboutme" name="aboutme" rows="5">{aboutme}</textarea>
+						</div>
+						<!-- ENDIF allowAboutMe -->
 
-					<!-- IF allowSignature -->
-					<!-- IF !disableSignatures -->
-					<div class="mb-2">
-						<label class="form-label fw-bold" for="signature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
-						<textarea class="form-control" id="signature" name="signature" rows="5">{signature}</textarea>
-					</div>
-					<!-- ENDIF !disableSignatures -->
-					<!-- ENDIF allowSignature -->
+						<!-- IF allowSignature -->
+						<!-- IF !disableSignatures -->
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="signature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
+							<textarea class="form-control" id="signature" name="signature" rows="5">{signature}</textarea>
+						</div>
+						<!-- ENDIF !disableSignatures -->
+						<!-- ENDIF allowSignature -->
 
-					<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
-				</form>
-
+						<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
+					</form>
+				</div>
 				<hr class="visible-xs visible-sm"/>
 			</div>
 
