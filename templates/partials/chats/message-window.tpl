@@ -10,7 +10,7 @@
 
 		<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted" data-action="pop-out" aria-hidden="true" aria-label="Pop Out"><i class="fa fa-compress"></i></button>
 		<!-- IMPORT partials/chats/options.tpl -->
-		<button type="button" class="btn-close" aria-hidden="true" aria-label="Close"></button>
+		<button type="button" class="btn-close" aria-hidden="true" aria-label="Close" data-action="close"></button>
 	</div>
 	<div component="chat/messages/scroll-up-alert" class="scroll-up-alert alert alert-info" role="button">[[modules:chat.scroll-up-alert]]</div>
 	<ul class="chat-content">
