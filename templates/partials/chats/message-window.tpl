@@ -12,7 +12,9 @@
 		<!-- IMPORT partials/chats/options.tpl -->
 		<button type="button" class="btn-close" aria-hidden="true" aria-label="Close" data-action="close"></button>
 	</div>
-	<div component="chat/messages/scroll-up-alert" class="scroll-up-alert alert alert-info" role="button">[[modules:chat.scroll-up-alert]]</div>
+	<div class="position-relative">
+		<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button">[[modules:chat.scroll-up-alert]]</div>
+	</div>
 	<ul class="chat-content">
 		<!-- IMPORT partials/chats/messages.tpl -->
 	</ul>
