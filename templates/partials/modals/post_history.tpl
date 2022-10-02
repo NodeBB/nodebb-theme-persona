@@ -20,7 +20,7 @@
 
 	<hr />
 
-	<ul class="posts-list diffs"></ul>
+	<ul class="posts-list diffs list-unstyled"></ul>
 
 	{{{ if editable }}}
 	<button class="btn btn-primary" data-action="restore">[[topic:diffs.restore]]</button>
