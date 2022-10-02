@@ -83,7 +83,7 @@
 				</h5>
 				<div class="card-body">
 					<!-- IF history.flags.length -->
-					<ul class="recent-flags">
+					<ul class="recent-flags list-unstyled">
 						{{{each history.flags}}}
 						<li>
 							<p>
@@ -119,7 +119,7 @@
 				</h5>
 				<div class="card-body">
 					<!-- IF history.bans.length -->
-					<ul class="ban-history">
+					<ul class="ban-history list-unstyled">
 						{{{each history.bans}}}
 						<li>
 							<p>
@@ -160,7 +160,7 @@
 				</h5>
 				<div class="card-body">
 					{{{ if history.mutes.length }}}
-					<ul class="ban-history">
+					<ul class="ban-history list-unstyled">
 						{{{ each history.mutes }}}
 						<li>
 							<p>

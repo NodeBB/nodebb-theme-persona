@@ -1,7 +1,7 @@
 <li component="categories/category" data-cid="{../cid}" data-parent-cid="{../parentCid}" class="row clearfix">
 	<meta itemprop="name" content="{../name}">
 
-	<div class="content col-10  depth-{../depth}">
+	<div class="content col-10 depth-{../depth}">
 		<div class="float-start">
 		{buildCategoryIcon(@value, "48px", "rounded-circle")}
 		</div>

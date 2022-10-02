@@ -349,10 +349,6 @@
 	.recent-flags {
 		padding-left: 0;
 
-		li {
-			list-style-type: none;
-		}
-
 		.title {
 			font-weight: bold;
 		}
@@ -368,7 +364,6 @@
 		padding-left: 0;
 
 		li {
-			list-style-type: none;
 			border-bottom: 1px solid $gray-200;
 			margin-bottom: 1rem;
 		}

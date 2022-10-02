@@ -3,7 +3,7 @@
 
 	<div class="row">
 		<h1>{title}</h1>
-		<div class="col-lg-12">
+		<div class="col-lg-12 mb-2">
 			<div class="btn-group bottom-sheet" component="category/watch/all">
 				<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button">
 					<span>[[user:change_all]]</span>
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="col-lg-12">
-			<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+			<ul class="categories list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 				{{{each categories}}}
 				<!-- IMPORT partials/account/category-item.tpl -->
 				{{{end}}}
