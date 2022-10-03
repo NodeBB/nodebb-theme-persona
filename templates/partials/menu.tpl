@@ -3,14 +3,14 @@
 					<i class="fa fa-lg fa-fw fa-bars unread-count" ></i>
 					<span component="unread/icon" class="notification-icon fa fa-fw fa-book unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></span>
 				</button>
-				<div class="d-inline-flex align-items-center">
+				<div class="d-inline-flex align-items-center w-75">
 					{{{ if brand:logo }}}
 					<a class="navbar-brand" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
 						<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-bottom" src="{brand:logo}?{config.cache-buster}" />
 					</a>
 					{{{ end }}}
 					{{{ if config.showSiteTitle }}}
-					<a class="navbar-brand" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
+					<a class="navbar-brand text-truncate" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
 						<span class="forum-title">{config.siteTitle}</span>
 					</a>
 					{{{ end }}}
