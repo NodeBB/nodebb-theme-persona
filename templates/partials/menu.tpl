@@ -3,7 +3,7 @@
 					<i class="fa fa-lg fa-fw fa-bars unread-count" ></i>
 					<span component="unread/icon" class="notification-icon fa fa-fw fa-book unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></span>
 				</button>
-				<div class="d-inline-flex align-items-center w-75">
+				<div class="d-inline-flex align-items-center">
 					{{{ if brand:logo }}}
 					<a class="navbar-brand" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
 						<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-bottom" src="{brand:logo}?{config.cache-buster}" />
