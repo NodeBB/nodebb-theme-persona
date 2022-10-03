@@ -10,22 +10,24 @@
 		</p>
 
 		<div class="row">
-			<div class="col-sm-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">[[ip-blacklist:active-rules]]</div>
-					<div class="panel-body">
-						<textarea id="blacklist-rules">{rules}</textarea><br />
-						<button type="button" class="btn btn-warning" data-action="test">
-							<i class="fa fa-bomb"></i> [[ip-blacklist:validate]]
-						</button>
-						<button type="button" class="btn btn-primary" data-action="apply">
-							<i class="fa fa-save"></i> [[ip-blacklist:apply]]
-						</button>
+			<div class="col-sm-6 d-flex flex-column">
+				<div class="card mb-3 flex-grow-1">
+					<div class="card-header">[[ip-blacklist:active-rules]]</div>
+					<div class="card-body d-flex flex-column">
+						<textarea id="blacklist-rules" class="flex-grow-1 mb-3 w-100 d-block border px-2 py-1">{rules}</textarea>
+						<div>
+							<button type="button" class="btn btn-warning" data-action="test">
+								<i class="fa fa-bomb"></i> [[ip-blacklist:validate]]
+							</button>
+							<button type="button" class="btn btn-primary" data-action="apply">
+								<i class="fa fa-save"></i> [[ip-blacklist:apply]]
+							</button>
+						</div>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">[[ip-blacklist:hints]]</div>
-					<div class="panel-body">
+				<div class="card flex-shrink-1">
+					<div class="card-header">[[ip-blacklist:hints]]</div>
+					<div class="card-body">
 						<p>
 							[[ip-blacklist:hint-1]]
 						</p>
@@ -36,18 +38,18 @@
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<div class="panel panel-default">
-					<div class="panel-body">
+				<div class="card mb-3">
+					<div class="card-body">
 						<div><canvas id="blacklist:hourly" height="250"></canvas></div>
 					</div>
-					<div class="panel-footer"><small>[[ip-blacklist:analytics.blacklist-hourly]]</small></div>
+					<div class="card-footer"><small>[[ip-blacklist:analytics.blacklist-hourly]]</small></div>
 				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-body">
+				<div class="card">
+					<div class="card-body">
 						<div><canvas id="blacklist:daily" height="250"></canvas></div>
 					</div>
-					<div class="panel-footer"><small>[[ip-blacklist:analytics.blacklist-daily]]</small></div>
+					<div class="card-footer"><small>[[ip-blacklist:analytics.blacklist-daily]]</small></div>
 				</div>
 			</div>
 		</div>

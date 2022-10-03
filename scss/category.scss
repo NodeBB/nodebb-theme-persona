@@ -1,0 +1,161 @@
+.category {
+
+	.topic-list {
+		overflow: visible;
+	}
+
+	> ul {
+		> li {
+			list-style: none;
+
+			&:not(.unread) {
+				.lastpost {
+					border-color: lighten($gray-600, 20%) !important;
+				}
+
+				h2 a {
+					color: $text-muted;
+				}
+			}
+			.info {
+				margin-left: 62px;
+				font-size: 0.75rem;
+			}
+			&.deleted {
+				-moz-opacity: 0.30;
+				opacity: 0.30;
+			}
+
+			&.scheduled {
+				opacity: 0.7;
+			}
+
+			.select {
+				position: relative;
+				@include pointer;
+
+				&:before {
+					content: "";
+					display: none;
+				}
+
+				.fa-check {
+					padding: 14.5px;	/* 14.5*2 + 15 + 2px border = 46px */
+					border-radius: 50%;
+					position: absolute;
+					font-size: 15px;
+					opacity: 0;
+					top: 0px;
+					left: 0px;
+					border: 1px solid transparent;
+					background: $white;
+					width: 100%;
+					height: 100%;
+					padding: 14px;
+
+					&:before {
+						@include pointer;
+					}
+				}
+
+				.avatar {
+					opacity: 1;
+				}
+
+				.fa-check, .avatar {
+					@include transition(.2s ease-in-out all);
+				}
+
+				float: left;
+			}
+
+			.avatar .select {
+				.fa-check {
+					border: 1px solid $success;
+					color: $success;
+				}
+			}
+
+			.avatar .select:hover {
+				.avatar {
+					opacity: 0;
+				}
+
+				.fa-check {
+					border: 1px solid $success;
+					color: $success;
+					opacity: 1;
+				}
+			}
+
+			&.selected {
+				.select .avatar {
+					opacity: 0;
+				}
+
+				.avatar .select {
+					.fa-check {
+						opacity: 1;
+						background-color: $success;
+						border: 1px solid $success;
+						color: $white;
+						@include transition(all .15s ease-in-out);
+					}
+
+					&:hover .fa-check {
+						background-color: $success;
+						border: 1px solid $success;
+						color: $white;
+					}
+				}
+			}
+
+			.lastpost .user-icon {
+				display: inline-block;
+				@include user-icon-style(24px, 1.5rem, 50%);
+			}
+		}
+
+		&:last-child li {
+			border-bottom: 0;
+		}
+	}
+
+	.unread {
+		.title {
+			font-weight: bold;
+		}
+	}
+
+	.subcategory {
+		margin-bottom: 10px;
+	}
+}
+
+.category, .categories, .subcategory {
+	> p {
+		text-transform: uppercase;
+	}
+
+	.description {
+		font-weight: normal;
+		line-height: 1.2;
+		margin-top: 5px;
+		min-height: 25px
+	}
+
+	.title, .description, .category-children {
+		margin-left: 62px;
+	}
+}
+
+.categories-title {
+	text-transform: uppercase;
+	margin: 0 0 10px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+}
+
+
+

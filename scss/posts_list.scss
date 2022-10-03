@@ -1,0 +1,128 @@
+.posts-list {
+	padding-left: 0px;
+
+	.posts-list-item {
+		width: 100%;
+		margin-bottom: 0px;
+
+		&.deleted {
+			-moz-opacity: 0.30;
+			opacity: 0.30;
+		}
+
+		&.scheduled {
+			opacity: 0.7;
+		}
+
+		.user-img {
+			position: absolute;
+			top: 50%;
+			margin-top: -14px;
+			margin-left: -14px;
+		}
+
+		a {
+			span {
+				overflow: hidden;
+				padding-left: 8px;
+			}
+		}
+
+		.topic-title {
+			color: $gray-800;
+			font-weight: 900;
+			font-size: 125%;
+			text-decoration: underline;
+		}
+
+		.topic-category {
+			text-transform: uppercase;
+			font-size: 10px;
+			color: $gray-600;
+			margin-top: 6px;
+			margin-right: 10px;
+			margin-bottom: 25px;
+			display: inline-block;
+			margin-top: 10px;
+
+			a {
+				font-weight: 900;
+				color: $gray-600;
+			}
+		}
+
+		.content {
+			max-height: 240px;
+			position: relative;
+			clear: left;
+			display: block;
+			overflow: hidden;
+			padding-right: 10px;
+			margin-top: 5px;
+			clear: both;
+
+			h1, h2, h3, h4, h5, h6 {
+				margin: 0;
+				font-size: 100%;
+			}
+
+			blockquote {
+				font-size: 100%;
+				margin: 8px 0;
+				padding: 0 10px;
+			}
+
+			p {
+				margin: 0 0 2px;
+			}
+		}
+
+		.post-body {
+			border-right: 2px solid $primary;
+			min-height: 100px;
+			position: relative; // to handle abs. positioning in .post-info child
+		}
+
+		.post-info {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			width: 175px;
+			height: 28px;
+			font-size: 10px;
+
+			> a {
+				position: relative;
+				.user-img {
+					text-align: center;
+					padding: 0;
+				}
+			}
+
+			.post-author {
+				padding-left: 25px;
+				margin-top: -14px;
+				color: $gray-600;
+
+				a {
+					color: $gray-600;
+					font-weight: 900;
+
+				}
+
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.posts-list.diffs .posts-list-item .content {
+	max-height: inherit;
+	overflow-y: none;
+}
+
+@include media-breakpoint-down(sm) {
+	.posts-list .posts-list-item .post-info {
+		width: 100px;
+	}
+}

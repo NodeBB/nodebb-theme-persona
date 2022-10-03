@@ -7,15 +7,15 @@
 	<div class="col-sm-8 col-md-9">
 		<!-- IF hasFilter -->
 		<div class="alert alert-warning">
-			<p class="pull-right">
+			<p class="float-end">
 				<a href="{config.relative_path}/flags">[[flags:filter-reset]]</a>
 			</p>
 			[[flags:filter-active]]
 		</div>
 		<!-- ENDIF hasFilter -->
 
-		<div class="btn-group pull-right" component="flags/bulk-actions">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
+		<div class="btn-group float-end" component="flags/bulk-actions">
+			<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
 				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu">
@@ -60,7 +60,7 @@
 						{./heat}
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>
-					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
+					<td><span class="badge bg-{../labelClass}">[[flags:state-{../state}]]</span></td>
 				</tr>
 				{{{end}}}
 			</tbody>

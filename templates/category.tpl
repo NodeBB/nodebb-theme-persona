@@ -8,24 +8,25 @@
 	<div class="category <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
-		<div class="topic-list-header clearfix">
-			<!-- IF privileges.topics:create -->
-			<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
-			<!-- ELSE -->
-				<!-- IF !loggedIn -->
-				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-				<!-- ENDIF !loggedIn -->
-			<!-- ENDIF privileges.topics:create -->
+		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
+			<div class="d-flex gap-1 align-items-stretch">
+				<!-- IF privileges.topics:create -->
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+				<!-- ELSE -->
+					<!-- IF !loggedIn -->
+					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+					<!-- ENDIF !loggedIn -->
+				<!-- ENDIF privileges.topics:create -->
 
-			<a href="{url}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
-			</a>
-
-			<span class="pull-right" component="category/controls">
+				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
+					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
+				</a>
+			</div>
+			<div class="d-flex gap-1 align-items-stretch">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools.tpl -->
-			</span>
+			</div>
 		</div>
 
 		<!-- IF !topics.length -->

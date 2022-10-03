@@ -2,21 +2,17 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<form class="form-horizontal edit-form">
-		<div class="control-group">
-			<label class="control-label" for="inputNewUsername">[[user:username]]</label>
-			<div class="controls">
-				<input class="form-control" type="text" id="inputNewUsername" placeholder="[[user:username]]" value="{username}">
-			</div>
+		<div class="mb-2">
+			<label class="form-label fw-bold" for="inputNewUsername">[[user:username]]</label>
+			<input class="form-control" type="text" id="inputNewUsername" placeholder="[[user:username]]" value="{username}">
 		</div>
 
 		<!-- disables autocomplete on FF --><input type="password" style="display:none">
 
 		<!-- IF isSelf -->
-		<div class="control-group">
-			<label class="control-label" for="inputCurrentPassword">[[user:current_password]]</label>
-			<div class="controls">
-				<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword -->>
-			</div>
+		<div class="mb-2">
+			<label class="form-label fw-bold" for="inputCurrentPassword">[[user:current_password]]</label>
+			<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword -->>
 		</div>
 		<!-- ENDIF isSelf -->
 

@@ -3,16 +3,16 @@
 
 	<!-- IF sessions.length -->
 	<div class="row">
-		<div class="col-xs-12 col-md-12">
+		<div class="col-12 col-md-12">
 			<p class="lead">[[user:sessions.description]]</p>
 			<hr />
 			<ul class="list-group" component="user/sessions">
 				{{{each sessions}}}
 				<li class="list-group-item" data-uuid="{../uuid}">
-					<div class="pull-right">
+					<div class="float-end">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
-						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+						<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">Revoke Session</button>
 						<!-- ENDIF !../current -->
 						<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 						{function.userAgentIcons}

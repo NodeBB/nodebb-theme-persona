@@ -5,7 +5,7 @@
 </div>
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
-		<div class="topic-header">
+		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
 					<span component="topic/labels">
@@ -20,24 +20,22 @@
 			</h1>
 
 			<div class="topic-info clearfix">
-				<div class="category-item inline-block">
-					<div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
-						<i class="fa fa-fw {category.icon}"></i>
-					</div>
+				<div class="category-item d-inline-block">
+					{buildCategoryIcon(category, "24px", "rounded-circle")}
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 
-				<div class="tags tag-list inline-block hidden-xs">
+				<div class="tags tag-list d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/tags.tpl -->
 				</div>
-				<div class="inline-block hidden-xs">
+				<div class="d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
 				{{{ if !feeds:disableRSS }}}
 				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				{{{ end }}}
 				{{{ if browsingUsers }}}
-				<div class="inline-block hidden-xs">
+				<div class="d-inline-block hidden-xs">
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
 				</div>
 				{{{ end }}}
@@ -47,8 +45,8 @@
 		</div>
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="pull-right">
+			<span class="float-start">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+			<span class="float-end">
 				<a href="{config.relative_path}/user/{merger.userslug}">
 					<strong>{merger.username}</strong>
 				</a>

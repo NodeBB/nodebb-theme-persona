@@ -20,7 +20,7 @@
 		<div class="text-center">
 		{{{each selectedGroup}}}
 		<!-- IF selectedGroup.slug -->
-			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="color:{selectedGroup.textColor};background-color: {selectedGroup.labelColor};"><!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
+		<!-- IMPORT partials/groups/badge.tpl -->
 		<!-- ENDIF selectedGroup.slug -->
 		{{{end}}}
 		</div>
@@ -93,14 +93,14 @@
 	<hr />
 
 	<div class="row">
-		<div class="col-xs-12 account-block hidden">
+		<div class="col-12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
 					<span class="account-username"> {username}</span>
 				</span>
 
 				<!-- IF !isSelf -->
-				<a component="account/unfollow" href="#" class="btn btn-default{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
+				<a component="account/unfollow" href="#" class="btn btn-outline-secondary{{{ if !isFollowing }}} hide{{{ end }}}">[[user:unfollow]]</a>
 				<a component="account/follow" href="#" class="btn btn-primary{{{ if isFollowing }}} hide{{{ end }}}">[[user:follow]]</a>
 				<!-- ENDIF !isSelf -->
 			</div>
@@ -109,7 +109,7 @@
 
 	<!-- IF groups.length -->
 	<div class="row">
-		<div class="col-xs-12 hidden">
+		<div class="col-12 hidden">
 			{{{each groups}}}
 			<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
 			{{{end}}}
@@ -119,14 +119,16 @@
 
 	<!-- IF ips.length -->
 	<div class="row">
-		<div class="col-xs-12 hidden">
-			<div class="panel-heading">
-				<h3 class="panel-title">[[global:recentips]]</h3>
-			</div>
-			<div class="panel-body">
-			{{{each ips}}}
-				<div>{ips}</div>
-			{{{end}}}
+		<div class="col-12 hidden">
+			<div class="card">
+				<h5 class="card-header">
+					[[global:recentips]]
+				</h5>
+				<div class="card-body">
+				{{{each ips}}}
+					<div>{ips}</div>
+				{{{end}}}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -134,11 +136,11 @@
 
 	<div class="row">
 		{{{ if bestPosts.length }}}
-		<div class="col-lg-12 col-xs-12">
+		<div class="col-lg-12 col-12">
 			<h1>[[pages:account/best, {username}]]</h1>
 
-			<div class="col-xs-12">
-				<ul component="posts" class="posts-list">
+			<div class="col-12">
+				<ul component="posts" class="posts-list list-unstyled">
 				{{{each bestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}
@@ -147,10 +149,10 @@
 		</div>
 		{{{ end }}}
 		{{{ if latestPosts.length}}}
-		<div class="col-lg-12 col-xs-12">
+		<div class="col-lg-12 col-12">
 			<h1>[[pages:account/latest-posts, {username}]]</h1>
-			<div class="col-xs-12">
-				<ul component="posts" class="posts-list">
+			<div class="col-12">
+				<ul component="posts" class="posts-list list-unstyled">
 				{{{each latestPosts}}}
 				<!-- IMPORT partials/posts_list_item.tpl -->
 				{{{end}}}

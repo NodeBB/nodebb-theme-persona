@@ -13,45 +13,45 @@
 					<p>{error}</p>
 				</div>
 				<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
-					<div class="form-group">
-						<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
-						<div class="col-lg-8">
+					<div class="row mb-3">
+						<label for="username" class="col-lg-2 col-form-label">[[register:username]]</label>
+						<div class="col-lg-10">
 							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="register-feedback" id="username-notify"></span>
-							<span class="help-block">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
+							<span class="form-text">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="password" class="col-lg-4 control-label">[[register:password]]</label>
-						<div class="col-lg-8">
+					<div class="row mb-2">
+						<label for="password" class="col-lg-2 col-form-label">[[register:password]]</label>
+						<div class="col-lg-10">
 							<input class="form-control" type="password" placeholder="[[register:password_placeholder]]" name="password" id="password" />
 							<span class="register-feedback" id="password-notify"></span>
-							<span class="help-block">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
+							<span class="form-text">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
 							<p id="caps-lock-warning" class="text-danger hidden">
 								<i class="fa fa-exclamation-triangle"></i> [[login:caps-lock-enabled]]
 							</p>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="password-confirm" class="col-lg-4 control-label">[[register:confirm_password]]</label>
-						<div class="col-lg-8">
+					<div class="row mb-2">
+						<label for="password-confirm" class="col-lg-2 col-form-label">[[register:confirm_password]]</label>
+						<div class="col-lg-10">
 							<input class="form-control" type="password" placeholder="[[register:confirm_password_placeholder]]" name="password-confirm" id="password-confirm" />
 							<span class="register-feedback" id="password-confirm-notify"></span>
 						</div>
 					</div>
 
 					{{{each regFormEntry}}}
-					<div class="form-group">
-						<label for="register-{regFormEntry.styleName}" class="col-lg-4 control-label">{regFormEntry.label}</label>
-						<div id="register-{regFormEntry.styleName}" class="col-lg-8">
+					<div class="row mb-2">
+						<label for="register-{regFormEntry.styleName}" class="col-lg-2 col-form-label">{regFormEntry.label}</label>
+						<div id="register-{regFormEntry.styleName}" class="col-lg-10">
 							{{regFormEntry.html}}
 						</div>
 					</div>
 					{{{end}}}
 
-					<div class="form-group">
-						<div class="col-lg-offset-4 col-lg-8">
-							<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
+					<div class="row">
+						<div class="offset-lg-2 col-lg-10">
+							<button class="btn btn-primary btn-lg" id="register" type="submit">[[register:register_now_button]]</button>
 						</div>
 					</div>
 					<input id="token" type="hidden" name="token" value="" />

@@ -7,30 +7,21 @@ $(document).ready(function () {
 	setupMobileMenu();
 	setupQuickReply();
 	configureNavbarHiding();
-	updatePanelOffset();
 
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
 	$(window).on('resize', updatePanelOffset);
 
 	function updatePanelOffset() {
-		const headerEl = document.getElementById('header-menu');
+		const header = document.getElementById('header-menu');
 
-		if (!headerEl) {
+		if (!header) {
 			console.warn('[persona/updatePanelOffset] Could not find #header-menu, panel offset unchanged.');
 			return;
 		}
 
-		const headerRect = headerEl.getBoundingClientRect();
-		const headerStyle = window.getComputedStyle(headerEl);
-
-		let offset =
-			headerRect.y + headerRect.height +
-			(parseInt(headerStyle.marginTop, 10) || 0) +
-			(parseInt(headerStyle.marginBottom, 10) || 0);
-
-		offset = Math.max(0, offset);
+		const rect = header.getBoundingClientRect();
+		const offset = Math.max(0, rect.bottom);
 		document.documentElement.style.setProperty('--panel-offset', `${offset}px`);
-		localStorage.setItem('panelOffset', offset);
 	}
 
 	var lastBSEnv = '';
@@ -187,7 +178,7 @@ $(document).ready(function () {
 				}
 
 				icon = el.closest('[data-pid]').find('.edit-icon').first();
-				icon.prop('title', el.text()).tooltip('fixTitle').removeClass('hidden');
+				icon.prop('title', el.text()).tooltip().removeClass('hidden');
 			});
 		}
 
@@ -197,7 +188,7 @@ $(document).ready(function () {
 				return parseInt($(el).closest('[data-pid]').attr('data-pid'), 10) === parseInt(data.post.pid, 10);
 			});
 			var el = parent.find('[component="post/editor"]').first();
-			icon.prop('title', el.text()).tooltip('fixTitle').removeClass('hidden');
+			icon.prop('title', el.text()).tooltip().removeClass('hidden');
 		});
 
 		$(window).on('action:topic.loaded', activateEditedTooltips);
@@ -221,8 +212,8 @@ $(document).ready(function () {
 			var margin = window.innerWidth;
 
 			if (swapped) {
-				$('#mobile-menu').removeClass('pull-left');
-				$('#mobile-chats').addClass('pull-left');
+				$('#mobile-menu').removeClass('float-start');
+				$('#mobile-chats').addClass('float-start');
 			}
 
 			if (document.documentElement.getAttribute('data-dir') === 'rtl') {
@@ -352,8 +343,8 @@ $(document).ready(function () {
 					});
 			}
 
-			const searchInputEl = $('.navbar-header .navbar-search input[name="term"]');
-			const searchButton = $('.navbar-header .navbar-search button[type="button"]');
+			const searchInputEl = $('.navbar .navbar-search input[name="term"]');
+			const searchButton = $('.navbar .navbar-search button[type="button"]');
 			searchButton.off('click').on('click', function () {
 				if (!config.loggedIn && !app.user.privileges['search:content']) {
 					alerts.alert({
@@ -375,7 +366,7 @@ $(document).ready(function () {
 			search.enableQuickSearch({
 				searchElements: {
 					inputEl: searchInputEl,
-					resultEl: $('.navbar-header .navbar-search .quick-search-container'),
+					resultEl: $('.navbar .navbar-search .quick-search-container'),
 				},
 				searchOptions: {
 					in: config.searchDefaultInQuick,
@@ -500,8 +491,6 @@ $(document).ready(function () {
 						}
 					});
 				}
-
-				$('.topic-main-buttons [title]').tooltip();
 			}
 		});
 	}

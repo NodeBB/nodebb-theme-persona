@@ -5,35 +5,23 @@
 	{{{end}}}
 </div>
 <div class="unread">
-	<div class="topic-list-header btn-toolbar">
-		<div class="pull-left">
+	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 gap-1 flex-nowrap overflow-auto">
+		<div class="d-flex gap-1 align-items-stretch">
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
-			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
+				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
 			</a>
 		</div>
 
-		<div class="btn-group pull-right">
-		<!-- IMPORT partials/category/tools.tpl -->
-		</div>
-
-		<div class="markread btn-group pull-right {{{ if !topics.length }}}hidden{{{ end }}}">
-		<!-- IMPORT partials/category-selector-right.tpl -->
-		</div>
-
+		<div class="d-flex gap-1 align-items-stretch">
+		<!-- IMPORT partials/topic-filters.tpl -->
 		<!-- IMPORT partials/category-filter-right.tpl -->
 
-		<div class="btn-group pull-right bottom-sheet">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedFilter.name}</span><span class="visible-xs-inline"><i class="fa fa-fw {selectedFilter.icon}"></i></span> <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				{{{each filters}}}
-				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
-					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
-				</li>
-				{{{end}}}
-			</ul>
+		<div class="markread btn-group {{{ if !topics.length }}}hidden{{{ end }}}">
+			<!-- IMPORT partials/category-selector-right.tpl -->
+		</div>
+
+		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
 	</div>
 

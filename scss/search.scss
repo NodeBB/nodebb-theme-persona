@@ -1,0 +1,39 @@
+.search-result-title {
+	font-weight: 600;
+}
+
+.search-result-text {
+	max-height: 250px;
+	overflow: hidden;
+	position: relative;
+
+	h4, p {
+		overflow-y: hidden;
+	}
+}
+
+.topic-search {
+	position: fixed;
+	top: 60px;
+	right: 10px;
+
+	button {
+		padding: 4px 6px;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.quick-search-container {
+		left: 0px;
+		right: 0px;
+	}
+}
+
+.quick-search-results, .search-results {
+	.post-info {
+		font-size: 12px;
+		.category-item .icon {
+			margin-top: -3px;
+		}
+	}
+}

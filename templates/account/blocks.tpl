@@ -1,35 +1,33 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
+	<h1>[[pages:account/blocks, {username}]]</h1>
+	<div class="row justify-content-end mb-2">
+		<div class="col-3">
+			<div class="dropdown">
+				<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" data-bs-toggle="dropdown" autocomplete="off"/>
+
+				<ul class="dropdown-menu block-edit list-unstyled">
+					<li><a href="#" class="dropdown-item">[[admin/menu:search.start-typing]]</a></li>
+					{{{ each edit }}}
+					<li class="">
+						<div class="dropdown-item d-flex flex-nowrap gap-2 justify-content-between">
+							<div class="text-truncate">
+								<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "24px", true)} {../username}</a>
+							</div>
+							<button class="btn btn-sm btn-primary text-nowrap" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
+						</div>
+					</li>
+					{{{ end }}}
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	<div class="users row">
-		<h1>[[pages:account/blocks, {username}]]</h1>
-
-		<div class="col-sm-8 col-xs-12">
-			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
-				<!-- IMPORT partials/users_list.tpl -->
-			</ul>
+		<div class="col-12">
+			<!-- IMPORT partials/users_list.tpl -->
 			<div class="alert alert-warning text-center"<!-- IF users.length --> style="display: none;"<!-- END -->>[[user:has_no_blocks]]</div>
 			<!-- IMPORT partials/paginator.tpl -->
-		</div>
-		<div class="col-sm-4 col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-body form">
-					<div class="form-group">
-						<label for="user-search">[[users:search]]</label>
-						<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" />
-						<ul class="block-edit list-group">
-							{{{ each edit }}}
-							<li class="list-group-item clearfix">
-								<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
-								<div class="pull-left">
-									<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "sm", true)} {../username}</a>
-								</div>
-							</li>
-							{{{ end }}}
-						</ul>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

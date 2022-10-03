@@ -1,7 +1,7 @@
 <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF rooms.unread -->unread<!-- ENDIF rooms.unread -->">
 	{{{each rooms.users}}}
 	<!-- IF @first -->
-	<div class="main-avatar">
+	<div class="main-avatar me-2">
 		<!-- IMPORT partials/chats/user.tpl -->
 	</div>
 	<!-- ENDIF @first -->

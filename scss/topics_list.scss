@@ -1,0 +1,17 @@
+#new-topics-alert {
+    margin-bottom: 0px;
+    padding: 10px 16px;
+}
+
+.topic-list-header {
+    top: calc(var(--panel-offset));
+    background-color: $body-bg;
+    z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
+    border-top: 1px solid $post-border-color;
+    border-bottom: 1px solid $post-border-color;
+}
+
+.topic-list .title small {
+    font-size: 12px;
+    font-weight: normal;
+}
