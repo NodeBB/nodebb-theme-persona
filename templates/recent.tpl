@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="recent">
-	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2">
+	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 gap-1 flex-nowrap overflow-auto">
 		<div class="d-flex gap-1 align-items-stretch">
 			{{{ if canPost }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
