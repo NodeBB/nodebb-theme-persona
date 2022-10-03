@@ -42,39 +42,6 @@
 				width: 100%;
 			}
 		}
-
-		[component="chat/search/list"] {
-			padding: 0;
-			overflow-x: hidden;
-			overflow-y: auto;
-
-			li {
-				position: relative;
-				clear: both;
-				list-style-type: none;
-				padding: .5em;
-				height: 70px;
-				cursor: pointer;
-				border-left: 1px solid;
-				border-right: 1px solid;
-				border-bottom: 1px solid;
-				border-color: $gray-200;
-
-				i {
-					position: relative;
-					left: -30px;
-					font-size: 20px;
-					top: -20px;
-				}
-
-				img, .user-icon {
-					@include user-icon-style(50px, 2.4rem, 50%);
-					margin-top: 4px;
-					margin-right: 13px;
-					margin-left: .5em;
-				}
-			}
-		}
 	}
 
 	[component="chat/main-wrapper"] {
