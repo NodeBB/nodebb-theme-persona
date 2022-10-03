@@ -1,8 +1,8 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 	<h1>[[pages:account/blocks, {username}]]</h1>
-	<div class="row justify-content-end">
-		<div class="col-3 mb-2">
+	<div class="row justify-content-end mb-2">
+		<div class="col-3">
 			<div class="dropdown">
 				<input class="form-control" type="text" id="user-search" placeholder="[[users:enter_username]]" data-bs-toggle="dropdown" autocomplete="off"/>
 
