@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="popular">
-	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 gap-1 flex-nowrap overflow-auto">
+	<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 gap-1 flex-nowrap">
 		<div class="d-flex gap-1 align-items-stretch">
 			{{{ if canPost }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
