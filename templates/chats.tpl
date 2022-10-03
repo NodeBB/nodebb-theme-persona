@@ -6,7 +6,7 @@
 				<li><a href="#" class="dropdown-item">[[admin/menu:search.start-typing]]</a></li>
 			</ul>
 		</div>
-		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
+		<ul component="chat/recent" class="chats-list list-unstyled" data-nextstart="{nextStart}">
 			{{{each rooms}}}
 			<!-- IMPORT partials/chats/recent_room.tpl -->
 			{{{end}}}
