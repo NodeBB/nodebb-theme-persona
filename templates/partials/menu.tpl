@@ -10,7 +10,7 @@
 					</a>
 					{{{ end }}}
 					{{{ if config.showSiteTitle }}}
-					<a class="navbar-brand text-truncate" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
+					<a class="navbar-brand text-truncate" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}" style="max-width:140px;">
 						<span class="forum-title">{config.siteTitle}</span>
 					</a>
 					{{{ end }}}
