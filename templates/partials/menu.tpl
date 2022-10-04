@@ -1,17 +1,17 @@
-			<div class="d-flex align-items-center me-auto">
+			<div class="d-flex align-items-center me-auto" style="min-width: 0px;">
 				<button type="button" class="navbar-toggler border-0" id="mobile-menu">
 					<i class="fa fa-lg fa-fw fa-bars unread-count" ></i>
 					<span component="unread/icon" class="notification-icon fa fa-fw fa-book unread-count" data-content="{unreadCount.mobileUnread}" data-unread-url="{unreadCount.unreadUrl}"></span>
 				</button>
-				<div class="d-inline-flex align-items-center">
+				<div class="d-inline-flex align-items-center" style="min-width: 0px;">
 					{{{ if brand:logo }}}
 					<a class="navbar-brand" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
 						<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-bottom" src="{brand:logo}?{config.cache-buster}" />
 					</a>
 					{{{ end }}}
 					{{{ if config.showSiteTitle }}}
-					<a class="navbar-brand text-truncate" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}" style="max-width:140px;">
-						<span class="forum-title">{config.siteTitle}</span>
+					<a class="navbar-brand text-truncate" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
+						{config.siteTitle}
 					</a>
 					{{{ end }}}
 				</div>
