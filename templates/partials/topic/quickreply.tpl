@@ -1,11 +1,11 @@
 <!-- IF privileges.topics:reply -->
 <div component="topic/quickreply/container" class="clearfix quick-reply">
 	<div class="icon float-start hidden-xs">
-		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+		<a data-uid="{loggedInUser.uid}" href="{{{ if loggedInUser.userslug }}}{config.relative_path}/user/{loggedInUser.userslug}{{{ else }}}#{{{ end }}}">
 			{buildAvatar(loggedInUser, "48px", true, "", "user/picture")}
-			<!-- IF loggedInUser.status -->
+			{{{ if loggedInUser.status }}}
 			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
-			<!-- ENDIF loggedInUser.status -->
+			{{{ end }}}
 		</a>
 	</div>
 	<form method="post" action="{config.relative_path}/compose">
