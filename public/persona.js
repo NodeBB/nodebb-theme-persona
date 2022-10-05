@@ -44,7 +44,7 @@ $(document).ready(function () {
 				return;
 			}
 			lastBSEnv = env;
-			var navbarEl = $('.navbar-fixed-top');
+			var navbarEl = $('[component="navbar"]');
 			navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 			navbarEl.css('top', '');
 
