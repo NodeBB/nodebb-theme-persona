@@ -12,6 +12,7 @@
 
 		&::before {
 			transition: inherit;
+			content: ' ';
 			display: block;
 			position: absolute;
 			z-index: 0;
