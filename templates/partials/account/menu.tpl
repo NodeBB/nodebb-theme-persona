@@ -2,7 +2,7 @@
 	<button type="button" class="persona-fab dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
-	<ul class="dropdown-menu dropdown-menu-end">
+	<ul class="dropdown-menu dropdown-menu-end account-sub-links">
 		<!-- IF loggedIn -->
 		<!-- IF !isSelf -->
 		<!-- IF !banned -->
