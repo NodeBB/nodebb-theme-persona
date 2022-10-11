@@ -72,7 +72,7 @@
 				padding: 3px 15px;
 				font-size: 20px;
 
-				&.user-icon {
+				&.avatar {
 					overflow: visible;
 				}
 
@@ -114,6 +114,7 @@
 			&.taskbar-composer {
 				a, a:hover, a:focus, a:active {
 					background-color: $danger;
+					color: white;
 					background-size: cover;
 				}
 			}
@@ -152,7 +153,6 @@
 					i {
 						font-size: 18px;
 						line-height: 42px;
-						color: $body-color;
 					}
 				}
 			}

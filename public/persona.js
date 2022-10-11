@@ -155,7 +155,7 @@ $(document).ready(function () {
 					} else {
 						el.css('background-color', user['icon:bgColor'])
 							.text(user['icon:text'])
-							.addClass('user-icon');
+							.addClass('avatar');
 					}
 				}
 			});
