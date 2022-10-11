@@ -7,6 +7,7 @@
 	<!-- ENDIF @first -->
 	{{{end}}}
 
+	{{{ if rooms.users.length }}}
 	<ul class="members">
 		{{{each rooms.users}}}
 		<li>
@@ -14,14 +15,17 @@
 		</li>
 		{{{end}}}
 	</ul>
+	{{{ end }}}
 
-	<div class="notification-chat-content">
-		<strong class="room-name">
-			<!-- IF !rooms.lastUser.uid -->
+	<div class="notification-chat-content flex-grow-1">
+		<!-- IF !rooms.lastUser.uid -->
+		<div class="p-3 text-center h-100">
 			<span>[[modules:chat.no-users-in-room]]</span>
-			<!-- ELSE -->
+		</div>
+		<!-- ELSE -->
+		<strong class="room-name">
 			<span component="chat/title"><!-- IF rooms.roomName -->{rooms.roomName}<!-- ELSE -->{rooms.usernames}<!-- ENDIF rooms.roomName --></span>
-			<!-- ENDIF !rooms.lastUser.uid -->
 		</strong>
+		<!-- ENDIF !rooms.lastUser.uid -->
 	</div>
 </li>
