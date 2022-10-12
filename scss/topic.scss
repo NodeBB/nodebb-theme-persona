@@ -618,16 +618,6 @@
 	}
 }
 
-.selection-tooltip-container {
-	position: absolute;
-	padding: 5px;
-	border: 1px solid $card-border-color;
-	background-color: $card-bg;
-	border-radius: 3px;
-	margin: 10px 0px 0px 0px;
-	z-index: 1;
-}
-
 [component="post"] {
 	>.post-header [component="user/picture"], >.post-header [component="user/status"] {
 		opacity: 1;
