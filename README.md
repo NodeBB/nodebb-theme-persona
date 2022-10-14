@@ -7,7 +7,7 @@ For the v3.x release line, Persona will be a supported theme bundled with NodeBB
 
 ## Issues
 
-Issues are now tracked in [the main project issue tracker](https://github.com/NodeBB/NodeBB/issues).
+Issues are now tracked in [the main project issue tracker](https://github.com/NodeBB/NodeBB/issues?q=is%3Aopen+is%3Aissue+label%3Athemes).
 
 ## Addons
 
