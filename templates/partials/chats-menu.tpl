@@ -1,15 +1,15 @@
 {{{ if config.loggedIn }}}
 <ul class="nav nav-pills">
 	<li class="nav-item">
-		<a class="nav-link" href="#notifications" data-bs-toggle="tab"><span class="counter unread-count" component="notifications/icon" data-content="{unreadCount.notification}"></span> <i class="fa fa-fw fa-bell"></i></a>
+		<a class="nav-link" href="#" data-bs-target="#notifications" data-bs-toggle="tab"><span class="counter unread-count" component="notifications/icon" data-content="{unreadCount.notification}"></span> <i class="fa fa-fw fa-bell"></i></a>
 	</li>
 	{{{ if !config.disableChat }}}
 	<li class="nav-item">
-		<a class="nav-link" href="#chats" data-bs-toggle="tab"><i class="counter unread-count" component="chat/icon" data-content="{unreadCount.chat}"></i> <i class="fa fa-fw fa-comment"></i></a>
+		<a class="nav-link" href="#" data-bs-target="#chats" data-bs-toggle="tab"><i class="counter unread-count" component="chat/icon" data-content="{unreadCount.chat}"></i> <i class="fa fa-fw fa-comment"></i></a>
 	</li>
 	{{{ end }}}
 	<li class="nav-item">
-		<a class="nav-link active" href="#profile" data-bs-toggle="tab">
+		<a class="nav-link active" href="#" data-bs-target="#profile" data-bs-toggle="tab">
 			{buildAvatar(user, "24px", true, "user-icon")}
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 		</a>
