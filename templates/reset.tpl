@@ -7,11 +7,11 @@
 
 <div class="card card-body bg-light">
 	<div class="alert alert-success hide" id="success">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		[[reset_password:password_reset_sent]]
 	</div>
 	<div class="alert alert-danger hide" id="error">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		[[reset_password:invalid_email]]
 	</div>
 	<form onsubmit="return false;">

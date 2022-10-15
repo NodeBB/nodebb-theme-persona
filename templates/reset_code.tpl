@@ -8,7 +8,7 @@
 	</div>
 	<!-- ENDIF displayExpiryNotice -->
 	<div class="alert alert-success hidden" id="success">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		<strong>[[reset_password:password_changed.title]]</strong>
 		<p>[[reset_password:password_changed.message]]</p>
 	</div>
