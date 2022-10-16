@@ -163,14 +163,14 @@
 		}
 	}
 
-	[component="post/upvote"].upvoted {
-		border-radius: 3px;
-		border: 1px solid @brand-success;
+	[component="post/upvote"].upvoted i::before {
+		content: @fa-var-chevron-circle-up;
+		color: @brand-primary;
 	}
 
-	[component="post/downvote"].downvoted {
-		border-radius: 3px;
-		border: 1px solid @brand-warning;
+	[component="post/downvote"].downvoted i::before {
+		content: @fa-var-chevron-circle-down;
+		color: @brand-primary;
 	}
 
 	[component="post/vote-count"] {
