@@ -140,20 +140,21 @@
 	[component="post/upvote"], [component="post/downvote"] {
 		display: inline-block;
 		padding: 1rem;
+		color: $text-muted;
 
 		&:focus {
 				text-decoration: none;
 		}
 	}
 
-	[component="post/upvote"].upvoted {
-		border-radius: 3px;
-		border: 1px solid $success;
+	[component="post/upvote"].upvoted i {
+		@include fa-icon-solid($fa-var-circle-chevron-up);
+		color: $primary;
 	}
 
-	[component="post/downvote"].downvoted {
-		border-radius: 3px;
-		border: 1px solid $warning;
+	[component="post/downvote"].downvoted i {
+		@include fa-icon-solid($fa-var-circle-chevron-down);
+		color: $primary;
 	}
 
 	[component="post/vote-count"] {
