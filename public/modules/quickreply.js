@@ -1,8 +1,12 @@
 'use strict';
 
 define('persona/quickreply', [
-	'components', 'composer/autocomplete', 'api', 'alerts', 'uploadHelpers',
-], function (components, autocomplete, api, alerts, uploadHelpers) {
+	'components', 'composer/autocomplete', 'api',
+	'alerts', 'uploadHelpers', 'mousetrap',
+], function (
+	components, autocomplete, api,
+	alerts, uploadHelpers, mousetrap
+) {
 	var QuickReply = {};
 
 	QuickReply.init = function () {
@@ -27,6 +31,11 @@ define('persona/quickreply', [
 		// data.element.textcomplete(data.strategies, data.options);
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
 
+		mousetrap.bind('ctrl+return', (e) => {
+			if (e.target === element.get(0)) {
+				components.get('topic/quickreply/button').get(0).click();
+			}
+		});
 
 		uploadHelpers.init({
 			dragDropAreaEl: $('[component="topic/quickreply/container"] .quickreply-message'),
