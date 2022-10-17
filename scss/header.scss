@@ -57,16 +57,12 @@
 
 			.mark-read {
 				color: $text-muted;
-
-				&:after {
-					font-family: "FontAwesome";
-					content: fa-content($fa-var-circle);
-					font-weight: 400;
-					padding: 4px 1rem;
-					position: relative;
-					top: 1px;
+				.read {
+					display: block;
 				}
-
+				.unread {
+					display: none;
+				}
 				&:hover {
 					color: darken($text-muted, 10%);
 					@include pointer;
@@ -80,8 +76,13 @@
 					background-color: darken($warning, 5%);
 				}
 
-				.mark-read:after {
-					font-weight: 900;
+				.mark-read {
+					.read {
+						display: none;
+					}
+					.unread {
+						display: block;
+					}
 				}
 			}
 		}

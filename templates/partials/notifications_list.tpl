@@ -18,7 +18,12 @@
 	</a>
 
 	<div class="notification-chat-controls">
-		{{{ if ./nid }}}<div class="mark-read" aria-label="Mark Read"></div>{{{ end }}}
+		{{{ if ./nid }}}
+		<div class="mark-read" aria-label="Mark Read">
+			<i class="unread fa fa-circle"></i>
+			<i class="read fa fa-circle-o"></i>
+		</div>
+		{{{ end }}}
 		<span class="relTime">{notifications.timeago}</span>
 	</div>
 </li>
