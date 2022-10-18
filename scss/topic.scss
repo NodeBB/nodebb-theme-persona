@@ -437,10 +437,6 @@
 		.content {
 			@include fix-lists;
 
-			blockquote {
-				font-size: 12px;
-			}
-
 			> blockquote {
 				> blockquote {
 					> *:not(.blockquote) {
