@@ -17,7 +17,7 @@
 		</div>
 		<div class="btn-group float-end">
 			<button type="submit" component="topic/quickreply/button" class="btn btn-primary">[[topic:post-quick-reply]]</button>
-			<button type="submit" component="topic/quickreply/expand" class="btn btn-default" formmethod="get"><i class="fa fa-expand"></i></button>
+			<button type="submit" component="topic/quickreply/expand" class="btn btn-outline-primary" formmethod="get"><i class="fa fa-expand"></i></button>
 		</div>
 	</form>
 	<form component="topic/quickreply/upload" method="post" enctype="multipart/form-data">
