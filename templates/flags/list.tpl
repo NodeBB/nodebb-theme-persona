@@ -19,8 +19,8 @@
 				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><a href="#" data-action="bulk-assign">[[flags:assign-to-me]]</a></li>
-				<li><a href="#" data-action="bulk-mark-resolved">[[flags:bulk-resolve]]</a></li>
+				<li><a href="#" class="dropdown-item" data-action="bulk-assign">[[flags:assign-to-me]]</a></li>
+				<li><a href="#" class="dropdown-item" data-action="bulk-mark-resolved">[[flags:bulk-resolve]]</a></li>
 			</ul>
 		</div>
 
