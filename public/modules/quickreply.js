@@ -1,10 +1,10 @@
 'use strict';
 
 define('persona/quickreply', [
-	'components', 'composer/autocomplete', 'api',
+	'components', 'composer', 'composer/autocomplete', 'api',
 	'alerts', 'uploadHelpers', 'mousetrap',
 ], function (
-	components, autocomplete, api,
+	components, composer, autocomplete, api,
 	alerts, uploadHelpers, mousetrap
 ) {
 	var QuickReply = {};
@@ -87,6 +87,14 @@ define('persona/quickreply', [
 				components.get('topic/quickreply/text').val('');
 				autocomplete._active.persona_qr.hide();
 			});
+		});
+
+		components.get('topic/quickreply/expand').on('click', (e) => {
+			e.preventDefault();
+
+			const textEl = components.get('topic/quickreply/text');
+			composer.newReply(ajaxify.data.tid, undefined, ajaxify.data.title, utils.escapeHTML(textEl.val()));
+			textEl.val('');
 		});
 	};
 
