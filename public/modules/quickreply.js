@@ -1,8 +1,12 @@
 'use strict';
 
 define('persona/quickreply', [
-	'components', 'composer/autocomplete', 'api', 'alerts', 'uploadHelpers',
-], function (components, autocomplete, api, alerts, uploadHelpers) {
+	'components', 'composer', 'composer/autocomplete', 'api',
+	'alerts', 'uploadHelpers', 'mousetrap',
+], function (
+	components, composer, autocomplete, api,
+	alerts, uploadHelpers, mousetrap
+) {
 	var QuickReply = {};
 
 	QuickReply.init = function () {
@@ -27,6 +31,11 @@ define('persona/quickreply', [
 		// data.element.textcomplete(data.strategies, data.options);
 		// $('.textcomplete-wrapper').css('height', '100%').find('textarea').css('height', '100%');
 
+		mousetrap.bind('ctrl+return', (e) => {
+			if (e.target === element.get(0)) {
+				components.get('topic/quickreply/button').get(0).click();
+			}
+		});
 
 		uploadHelpers.init({
 			dragDropAreaEl: $('[component="topic/quickreply/container"] .quickreply-message'),
@@ -78,6 +87,14 @@ define('persona/quickreply', [
 				components.get('topic/quickreply/text').val('');
 				autocomplete._active.persona_qr.hide();
 			});
+		});
+
+		components.get('topic/quickreply/expand').on('click', (e) => {
+			e.preventDefault();
+
+			const textEl = components.get('topic/quickreply/text');
+			composer.newReply(ajaxify.data.tid, undefined, ajaxify.data.title, utils.escapeHTML(textEl.val()));
+			textEl.val('');
 		});
 	};
 
