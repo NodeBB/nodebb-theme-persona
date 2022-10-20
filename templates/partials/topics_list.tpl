@@ -32,17 +32,17 @@
 			</div>
 
 			<h2 component="topic/header" class="title mb-1">
-				<i component="topic/scheduled" class="fa fa-clock-o <!-- IF !topics.scheduled -->hide<!-- ENDIF !topics.scheduled -->" title="[[topic:scheduled]]"></i>
-				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF (topics.scheduled || !topics.pinned) -->hide<!-- ENDIF (topics.scheduled || !topics.pinned) -->" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
-				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
-				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
+				<i component="topic/scheduled" class="fa fa-clock-o {{{ if !topics.scheduled }}}hide{{{ end }}}" title="[[topic:scheduled]]"></i>
+				<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hide{{{ end }}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
+				<i component="topic/locked" class="fa fa-lock {{{ if !topics.locked }}}hide{{{ end }}}" title="[[topic:locked]]"></i>
+				<i component="topic/moved" class="fa fa-arrow-circle-right {{{ if !topics.oldCid }}}hide{{{ end }}}" title="[[topic:moved]]"></i>
 				{{{each topics.icons}}}{@value}{{{end}}}
 
-				<!-- IF !topics.noAnchor -->
-				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->">{topics.title}</a>
-				<!-- ELSE -->
-				<span>{topics.title}</span>
-				<!-- ENDIF !topics.noAnchor -->
+				{{{ if topics.noAnchor }}}
+				<span>{./title}</span>
+				{{{ else }}}
+				<a href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}">{./title}</a>
+				{{{ end }}}
 			</h2>
 			<div class="info">
 				<!-- IF !template.category -->
