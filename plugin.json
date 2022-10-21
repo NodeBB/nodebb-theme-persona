@@ -15,6 +15,8 @@
 	"modules": {
 		"../admin/plugins/persona.js": "public/admin.js",
 		"persona/quickreply.js": "public/modules/quickreply.js",
+		"persona/taskbar.js": "public/modules/taskbar.js",
+		"persona/mobile-menu.js": "public/modules/mobile-menu.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
 	"languages": "languages"
