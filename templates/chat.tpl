@@ -1,6 +1,6 @@
 <div id="chat-modal" class="chat-modal modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
-		<div class="modal-content" style="width: 600px;">
+		<div class="modal-content">
 			<div class="modal-header d-flex">
 				<div class="fs-5 flex-grow-1" component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></div>
 				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize">
@@ -18,7 +18,7 @@
 
 			<div class="modal-body">
 				<div class="position-relative">
-					<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button">[[modules:chat.scroll-up-alert]]</div>
+					<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button" style="z-index: 1;">[[modules:chat.scroll-up-alert]]</div>
 				</div>
 				<ul class="chat-content" component="chat/messages">
 					<!-- IMPORT partials/chats/messages.tpl -->
