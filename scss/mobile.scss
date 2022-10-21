@@ -33,7 +33,7 @@
 	}
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
 	#panel {
 		background-color: inherit;
 		min-height: 100%;
