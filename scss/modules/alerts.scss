@@ -25,20 +25,48 @@
 			height: 100%;
 		}
 
-		&.alert-info::before {
-			background-color: $info;
+		&.alert-info {
+			.btn-close {
+				$btn-close-color: $info;
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
+			}
+
+			&::before {
+				background-color: $info;
+			}
 		}
 
-		&.alert-warning::before {
-			background-color: $warning;
+		&.alert-warning {
+			.btn-close {
+				$btn-close-color: $warning;
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
+			}
+
+			::before {
+				background-color: $warning;
+			}
 		}
 
-		&.alert-success::before {
-			background-color: $success;
+		&.alert-success {
+			.btn-close {
+				$btn-close-color: $success;
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
+			}
+
+			::before {
+				background-color: $success;
+			}
 		}
 
-		&.alert-danger::before {
-			background-color: $danger;
+		&.alert-danger {
+			.btn-close {
+				$btn-close-color: $danger;
+				background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
+			}
+
+			::before {
+				background-color: $danger;
+			}
 		}
 
 		&.animate {
