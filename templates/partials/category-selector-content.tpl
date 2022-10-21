@@ -21,7 +21,9 @@
         <a class="dropdown-item" role="menu-item">{../level}
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
+                    {{{ if ./icon }}}
                     {buildCategoryIcon(@value, "24px", "rounded-circle")}
+                    {{{ end }}}
                     {./name}
                 </div>
             </span>
