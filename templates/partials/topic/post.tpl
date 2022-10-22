@@ -66,14 +66,17 @@
 	<div class="clearfix">
 	{{{ if !hideReplies }}}
 	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start text-muted {{{ if !posts.replies.count }}}hidden{{{ end }}}">
-		<span component="post/reply-count/avatars" class="avatars {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
+		<span component="post/reply-count/avatars" class="avatars d-inline-flex gap-1 align-items-top hidden-xs {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "16px", true, "")}
+			<span>{buildAvatar(posts.replies.users, "16px", true, "")}</span>
 			{{{end}}}
+			{{{ if posts.replies.hasMore}}}
+			<span><i class="fa fa-ellipsis"></i></span>
+			{{{ end }}}
 		</span>
 
-		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
-		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
+		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
+		<span class="replies-last hidden-xs small">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
 		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
