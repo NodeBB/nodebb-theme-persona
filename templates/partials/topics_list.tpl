@@ -62,14 +62,9 @@
 				</span>
 				{{{ end }}}
 
-				<span class="hidden-xs"><span class="timeago text-muted" title="{topics.timestampISO}"></span> &bull; <a class="text-muted" href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a></span>
-				<span class="visible-xs-inline">
-					<!-- IF topics.teaser.timestamp -->
-					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
-					<!-- ELSE -->
-					<span class="timeago" title="{topics.timestampISO}"></span>
-					<!-- ENDIF topics.teaser.timestamp -->
-				</span>
+				<span class="hidden-xs"><span class="timeago text-muted" title="{./timestampISO}"></span> &bull; <a class="text-muted" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{./user.displayname}</a></span>
+
+				<span class="visible-xs-inline timeago text-muted" title="{{{ if ./teaser.timestampISO }}}{./teaser.timestampISO}{{{ else }}}{./timestampISO}{{{ end }}}"></span>
 			</div>
 		</div>
 
