@@ -7,7 +7,7 @@
 		[[reset_password:password_expired]]
 	</div>
 	<!-- ENDIF displayExpiryNotice -->
-	<div class="alert alert-success hidden" id="success">
+	<div class="alert alert-success alert-dismissible hidden" id="success">
 		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		<strong>[[reset_password:password_changed.title]]</strong>
 		<p>[[reset_password:password_changed.message]]</p>

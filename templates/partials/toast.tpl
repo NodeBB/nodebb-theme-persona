@@ -1,4 +1,4 @@
-<div id="{alert_id}" role="alert" class="alert alert-dismissable alert-{type}" component="toaster/toast">
+<div id="{alert_id}" role="alert" class="alert alert-dismissible alert-{type}" component="toaster/toast">
 	<button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="close"></button>
 	<!-- IF image -->
 	<img src="{image}">

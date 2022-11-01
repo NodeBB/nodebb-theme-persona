@@ -6,11 +6,11 @@
 </div>
 
 <div class="card card-body bg-light">
-	<div class="alert alert-success hide" id="success">
+	<div class="alert alert-success alert-dismissible hide" id="success">
 		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		[[reset_password:password_reset_sent]]
 	</div>
-	<div class="alert alert-danger hide" id="error">
+	<div class="alert alert-danger alert-dismissible hide" id="error">
 		<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 		[[reset_password:invalid_email]]
 	</div>
