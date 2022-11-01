@@ -10,7 +10,7 @@
 			{{{ if allowLocalLogin }}}
 			<div class="{{{ if alternate_logins }}}col-md-6{{{ else }}}col-md-12{{{ end }}}">
 				<div class="login-block">
-					<div class="alert alert-danger" id="login-error-notify" {{{ if error }}}style="display:block"{{{ else }}}style="display: none;"{{{ end }}}>
+					<div class="alert alert-danger alert-dismissible" id="login-error-notify" {{{ if error }}}style="display:block"{{{ else }}}style="display: none;"{{{ end }}}>
 						<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 						<strong>[[login:failed_login_attempt]]</strong>
 						<p>{error}</p>
