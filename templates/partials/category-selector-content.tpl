@@ -14,7 +14,7 @@
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li component="category/no-matches" role="presentation" class="category hidden">
-        <a role="menu-item">[[search:no-matches]]</a>
+        <a class="dropdown-item" role="menu-item">[[search:no-matches]]</a>
     </li>
     {{{each categoryItems}}}
     <li role="presentation" class="category {{{ if ../disabledClass }}}disabled {{{ end }}}" data-cid="{../cid}" data-name="{../name}" data-parent-cid="{../parentCid}">
