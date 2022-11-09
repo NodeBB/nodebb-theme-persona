@@ -36,12 +36,10 @@
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-			<button class="btn btn-primary btn-block">[[topic:composer.submit]]</button>
+			<div class="btn-group btn-block">
+				<button class="btn btn-block btn-primary">[[topic:composer.submit]]</button>
+				<button class="btn btn-block btn-link" formaction="{config.relative_path}/register/abort?_csrf={config.csrf_token}">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
+			</div>
 		</div>
 	</div>
-</form>
-<form role="form" method="post" action="{config.relative_path}/register/abort">
-	<p class="text-center">
-		<button class="btn btn-link">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
-	</p>
 </form>
