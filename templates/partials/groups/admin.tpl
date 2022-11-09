@@ -133,7 +133,7 @@
 
 			<div class="mb-3 user-title-option">
 				<label>[[groups:details.badge_preview]]</label><br />
-				<span class="badge rounded-1 text-uppercase text-truncate rounded-1 {{{ if !group.userTitleEnabled }}} hide{{{ end }}}" style="max-width:150px; color: {group.textColor}; background-color: {group.labelColor}"><i class="fa{{{ if group.icon }}} {group.icon}{{{ end }}}"></i> <span class="badge-text">{{{ if group.userTitle }}}{group.userTitle}{{{ else }}}{group.displayName}{{{ end }}}</span></span>
+				<span class="badge rounded-1 text-uppercase text-truncate rounded-1 {{{ if !group.userTitleEnabled }}} hide{{{ end }}}" style="max-width:150px; color: {group.textColor}; background-color: {group.labelColor}"><i class="fa{{{ if group.icon }}} {group.icon}{{{ if ./userTitle}}}me-1{{{ end }}}{{{ end }}}"></i><span class="badge-text">{{{ if group.userTitle }}}{group.userTitle}{{{ end }}}</span></span>
 
 				<hr/>
 				<button component="groups/userTitleOption" type="button" class="btn btn-outline-secondary btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
