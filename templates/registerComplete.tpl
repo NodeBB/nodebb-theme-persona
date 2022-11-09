@@ -37,15 +37,7 @@
 	<div class="row mt-3">
 		<div class="col-12 col-sm-8 offset-sm-2 d-grid">
 			<button class="btn btn-primary">[[topic:composer.submit]]</button>
-		</div>
-	</div>
-</form>
-<form role="form" method="post" action="{config.relative_path}/register/abort">
-	<div class="row mt-2">
-		<div class="col-12 col-sm-8 offset-sm-2 d-grid">
-			<p class="d-grid text-center">
-				<button class="btn btn-link">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
-			</p>
+			<button class="btn btn-link" formaction="{config.relative_path}/register/abort?_csrf={config.csrf_token}">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
 		</div>
 	</div>
 </form>
