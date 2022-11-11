@@ -26,7 +26,7 @@
 						<div class="row mb-2">
 							<label for="password" class="col-lg-2 col-form-label">[[user:password]]</label>
 							<div class="col-lg-10">
-								<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" <!-- IF username -->autocomplete="off"<!-- ENDIF username -->/>
+								<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" {{{ if username }}}autocomplete="off"{{{ end }}}/>
 								<p id="caps-lock-warning" class="text-danger hidden">
 									<i class="fa fa-exclamation-triangle"></i> [[login:caps-lock-enabled]]
 								</p>
@@ -56,12 +56,12 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-10 offset-lg-2">
-								<!-- IF allowRegistration -->
+								{{{ if allowRegistration }}}
 								<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
-								<!-- ENDIF allowRegistration -->
-								<!-- IF allowPasswordReset -->
+								{{{ end }}}
+								{{{ if allowPasswordReset }}}
 								<a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
-								<!-- ENDIF allowPasswordReset -->
+								{{{ end }}}
 							</div>
 						</div>
 					</form>

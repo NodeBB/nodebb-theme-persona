@@ -4,15 +4,15 @@
 	{{{end}}}
 </div>
 <div class="row">
-	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
 					<span component="topic/labels">
-						<i component="topic/scheduled" class="fa fa-clock-o <!-- IF !scheduled -->hidden<!-- ENDIF !scheduled -->" title="[[topic:scheduled]]"></i>
-						<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF (scheduled || !pinned) -->hidden<!-- ENDIF (scheduled || !pinned) -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
-						<i component="topic/locked" class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-						<i class="fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
+						<i component="topic/scheduled" class="fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
+						<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
+						<i component="topic/locked" class="fa fa-lock {{{ if !locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
+						<i class="fa fa-arrow-circle-right {{{ if !oldCid }}}hidden{{{ end }}}" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
 						{{{each icons}}}<span class="align-middle">{@value}</span>{{{end}}}
 					</span>
 					<span component="topic/title">{title}</span>
@@ -43,17 +43,9 @@
 				<!-- IMPORT partials/post_bar.tpl -->
 			</div>
 		</div>
-		<!-- IF merger -->
-		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="float-start">[[topic:merged_message, {config.relative_path}/topic/{mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="float-end">
-				<a href="{config.relative_path}/user/{merger.userslug}">
-					<strong>{merger.username}</strong>
-				</a>
-				<small class="timeago" title="{mergedTimestampISO}"></small>
-			</span>
-		</div>
-		<!-- ENDIF merger -->
+		{{{ if merger }}}
+		<!-- IMPORT partials/topic/merged-message.tpl -->
+		{{{ end }}}
 
 		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
@@ -84,17 +76,17 @@
 		</div>
 		{{{ end }}}
 
-		<!-- IF config.enableQuickReply -->
+		{{{ if config.enableQuickReply }}}
 		<!-- IMPORT partials/topic/quickreply.tpl -->
-		<!-- ENDIF config.enableQuickReply -->
+		{{{ end }}}
 
-		<!-- IF config.usePagination -->
+		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
-		<!-- ENDIF config.usePagination -->
+		{{{ end }}}
 
 		<!-- IMPORT partials/topic/navigator.tpl -->
 	</div>
-	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
+	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 {{{ if !widgets.sidebar.length }}}hidden{{{ end }}}">
 		{{{each widgets.sidebar}}}
 		{{widgets.sidebar.html}}
 		{{{end}}}
@@ -107,8 +99,8 @@
 	{{{end}}}
 </div>
 
-<!-- IF !config.usePagination -->
+{{{ if !config.usePagination }}}
 <noscript>
-	<!-- IMPORT partials/paginator.tpl -->
+<!-- IMPORT partials/paginator.tpl -->
 </noscript>
-<!-- ENDIF !config.usePagination -->
+{{{ end }}}

@@ -2,7 +2,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header d-flex">
-				<div class="fs-5 flex-grow-1" component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></div>
+				<div class="fs-5 flex-grow-1" component="chat/room/name">{{{ if roomName }}}{roomName}{{{ else }}}{usernames}{{{ end }}}</div>
 				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize">
 					<span aria-hidden="true"><i class="fa fa-fw fa-expand"></i></span>
 					<span class="sr-only">[[modules:chat.maximize]]</span>

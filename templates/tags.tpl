@@ -5,8 +5,8 @@
 	{{{end}}}
 </div>
 <div class="tags">
-	<!-- IF displayTagSearch -->
-	<!-- IF tags.length -->
+	{{{ if displayTagSearch }}}
+	{{{ if tags.length }}}
 	<div class="row justify-content-end mb-3">
 		<div class="col-lg-3">
 			<div class="input-group">
@@ -17,12 +17,12 @@
 			</div>
 		</div>
 	</div>
-	<!-- ENDIF tags.length -->
-	<!-- ENDIF displayTagSearch -->
+	{{{ end }}}
+	{{{ end }}}
 
-	<!-- IF !tags.length -->
+	{{{ if !tags.length }}}
 	<div class="alert alert-warning">[[tags:no_tags]]</div>
-	<!-- ENDIF !tags.length -->
+	{{{ end }}}
 
 	<div class="category row">
 		<div class="col-md-12 clearfix tag-list" data-nextstart="{nextStart}">

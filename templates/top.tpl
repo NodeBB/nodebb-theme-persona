@@ -22,14 +22,14 @@
 	</div>
 
 	<div class="category">
-		<!-- IF !topics.length -->
+		{{{ if !topics.length }}}
 		<div class="alert alert-warning" id="category-no-topics">[[top:no_top_topics]]</div>
-		<!-- ENDIF !topics.length -->
+		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
 
-		<!-- IF config.usePagination -->
-			<!-- IMPORT partials/paginator.tpl -->
-		<!-- ENDIF config.usePagination -->
+		{{{ if config.usePagination }}}
+		<!-- IMPORT partials/paginator.tpl -->
+		{{{ end }}}
 	</div>
 </div>
