@@ -69,7 +69,13 @@
 					<!-- ENDIF function.displayMenuItem -->
 					{{{end}}}
 				</ul>
-
+				<ul class="navbar-nav mb-2 mb-lg-0 hidden-xs">
+					<li class="nav-item">
+						<a href="#" id="reconnect" class="nav-link hide" title="[[global:reconnecting-message, {config.siteTitle}]]">
+							<i class="fa fa-check"></i>
+						</a>
+					</li>
+				</ul>
 				{{{ if config.searchEnabled }}}
 				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
 					<form component="search/form" id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
