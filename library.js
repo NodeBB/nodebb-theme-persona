@@ -105,5 +105,3 @@ library.addUserToTopic = async function (hookData) {
 
 	return hookData;
 };
-
-module.exports = library;
