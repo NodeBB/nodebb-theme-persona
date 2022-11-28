@@ -14,22 +14,22 @@
 		<li><h6 class="dropdown-header">[[global:status]]</h6></li>
 		<li>
 			<a href="#" class="dropdown-item user-status" data-status="online">
-				<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="bold"<!-- ENDIF user.online -->> [[global:online]]</span>
+				<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="fw-bold"<!-- ENDIF user.online -->> [[global:online]]</span>
 			</a>
 		</li>
 		<li>
 			<a href="#" class="dropdown-item user-status" data-status="away">
-				<i class="fa fa-fw fa-circle status away"></i><span <!-- IF user.away -->class="bold"<!-- ENDIF user.away -->> [[global:away]]</span>
+				<i class="fa fa-fw fa-circle status away"></i><span <!-- IF user.away -->class="fw-bold"<!-- ENDIF user.away -->> [[global:away]]</span>
 			</a>
 		</li>
 		<li>
 			<a href="#" class="dropdown-item user-status" data-status="dnd">
-				<i class="fa fa-fw fa-circle status dnd"></i><span <!-- IF user.dnd -->class="bold"<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
+				<i class="fa fa-fw fa-circle status dnd"></i><span <!-- IF user.dnd -->class="fw-bold"<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
 			</a>
 		</li>
 		<li>
 			<a href="#" class="dropdown-item user-status" data-status="offline">
-				<i class="fa fa-fw fa-circle status offline"></i><span <!-- IF user.offline -->class="bold"<!-- ENDIF user.offline -->> [[global:invisible]]</span>
+				<i class="fa fa-fw fa-circle status offline"></i><span <!-- IF user.offline -->class="fw-bold"<!-- ENDIF user.offline -->> [[global:invisible]]</span>
 			</a>
 		</li>
 		<li role="presentation" class="dropdown-divider"></li>
