@@ -88,7 +88,7 @@
 		border-left-style: dashed;
 	}
 
-	[component="post"]:last-child:after {
+	> [component="post"]:last-child:after {
 		content: '';
 		width: 1rem;
 		position: absolute;
