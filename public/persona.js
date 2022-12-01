@@ -5,7 +5,6 @@ $(document).ready(function () {
 	setupTaskbar();
 	setupEditedByIcon();
 	setupMobileMenu();
-	setupQuickReply();
 	configureNavbarHiding();
 
 	$(window).on('resize', utils.debounce(configureNavbarHiding, 200));
@@ -254,20 +253,6 @@ $(document).ready(function () {
 
 				drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 			});
-		});
-	}
-
-	function setupQuickReply() {
-		$(window).on('action:ajaxify.end', function (ev, data) {
-			if (data.url && data.url.match('^topic/')) {
-				if (config.enableQuickReply) {
-					require(['persona/quickreply'], function (quickreply) {
-						if (quickreply) {
-							quickreply.init();
-						}
-					});
-				}
-			}
 		});
 	}
 });
