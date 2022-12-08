@@ -14,7 +14,7 @@
 	<!-- IMPORT partials/topic/sort.tpl -->
 
 	<div class="d-inline-block">
-	<!-- IMPORT partials/thread_tools.tpl -->
+	<!-- IMPORT partials/topic/tools.tpl -->
 	</div>
 	<!-- IMPORT partials/topic/reply-button.tpl -->
 </div>
