@@ -32,10 +32,10 @@
 			</div>
 
 			<h2 component="topic/header" class="title mb-1">
-				<i component="topic/scheduled" class="fa fa-clock-o {{{ if !topics.scheduled }}}hide{{{ end }}}" title="[[topic:scheduled]]"></i>
-				<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hide{{{ end }}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
-				<i component="topic/locked" class="fa fa-lock {{{ if !topics.locked }}}hide{{{ end }}}" title="[[topic:locked]]"></i>
-				<i component="topic/moved" class="fa fa-arrow-circle-right {{{ if !topics.oldCid }}}hide{{{ end }}}" title="[[topic:moved]]"></i>
+				<i component="topic/scheduled" class="fa fa-clock-o {{{ if !topics.scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
+				<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hidden{{{ end }}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
+				<i component="topic/locked" class="fa fa-lock {{{ if !topics.locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
+				<i component="topic/moved" class="fa fa-arrow-circle-right {{{ if !topics.oldCid }}}hidden{{{ end }}}" title="[[topic:moved]]"></i>
 				{{{each topics.icons}}}{@value}{{{end}}}
 
 				{{{ if topics.noAnchor }}}
