@@ -76,7 +76,7 @@
 	</a>
 	{{{ end }}}
 
-	<small class="pull-right">
+	<small class="pull-right" component="post/actions">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
