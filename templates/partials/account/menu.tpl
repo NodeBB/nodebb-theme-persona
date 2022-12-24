@@ -18,7 +18,10 @@
 			<a class="dropdown-item" component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
 		<li>
-			<a class="dropdown-item" component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
+			<a class="dropdown-item {{{ if ./isBlocked }}}hidden{{{ end }}}" component="account/block" href="#">[[user:block_user]]</a>
+		</li>
+		<li>
+			<a class="dropdown-item {{{ if !./isBlocked }}}hidden{{{ end }}}" component="account/unblock" href="#">[[user:unblock_user]]</a>
 		</li>
 		<li role="separator" class="dropdown-divider"></li>
 		<!-- ENDIF !banned -->
