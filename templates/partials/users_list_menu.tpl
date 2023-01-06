@@ -1,4 +1,4 @@
-<ul class="nav nav-pills">
+<ul component="user/list/menu" class="nav nav-pills">
 	<li class="nav-item">
 		<a class="nav-link" href="{config.relative_path}/users?section=online">[[global:online]]</a>
 	</li>
