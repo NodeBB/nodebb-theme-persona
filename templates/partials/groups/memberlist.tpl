@@ -15,13 +15,13 @@
 <table component="groups/members" class="table table-striped table-hover" data-nextstart="{group.membersNextStart}">
 	<tbody>
 	{{{each group.members}}}
-	<tr data-uid="{group.members.uid}">
+	<tr data-uid="{group.members.uid}" data-isowner="{{{ if group.members.isOwner }}}1{{{ else }}}0{{{ end }}}">
 		<td class="p-2">
 			<a href="{config.relative_path}/user/{group.members.userslug}">{buildAvatar(group.members, "24px", true)}</a>
 		</td>
 		<td class="member-name p-2">
 			<a class="align-text-top" href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a>
-			<i title="[[groups:owner]]" class="user-owner-icon fa fa-star align-text-top text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
+			<i component="groups/owner/icon" title="[[groups:owner]]" class="user-owner-icon fa fa-star align-text-top text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
 
 			<!-- IF group.isOwner -->
 			<div class="owner-controls btn-group float-end">
