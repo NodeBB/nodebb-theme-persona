@@ -1,5 +1,5 @@
 <li id="user_label" class="nav-item dropdown" title="[[global:header.profile]]">
-	<label for="user-control-list-check" class="" data-bs-toggle="dropdown" id="user_dropdown" role="button">
+	<label for="user-control-list-check" class="" data-bs-toggle="dropdown" id="user_dropdown" role="button" component="header/avatar">
 		{buildAvatar(user, "32px", true)}
 		<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 	</label>
