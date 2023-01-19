@@ -28,7 +28,7 @@
 				<div class="mb-3">
 					<label class="form-label" for="filter-cid">[[flags:filter-cid]]</label>
 					<div class="input-group">
-					<!-- IMPORT partials/category-filter.tpl -->
+					<!-- IMPORT partials/category/filter-dropdown-left.tpl -->
 					</div>
 				</div>
 				<div class="mb-3">

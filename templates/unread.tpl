@@ -15,10 +15,10 @@
 
 		<div class="d-flex gap-1 align-items-stretch">
 		<!-- IMPORT partials/topic-filters.tpl -->
-		<!-- IMPORT partials/category-filter-right.tpl -->
+		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
 
 		<div class="markread btn-group {{{ if !topics.length }}}hidden{{{ end }}}">
-			<!-- IMPORT partials/category-selector-right.tpl -->
+			<!-- IMPORT partials/category/selector-dropdown-right.tpl -->
 		</div>
 
 		<!-- IMPORT partials/category/tools.tpl -->

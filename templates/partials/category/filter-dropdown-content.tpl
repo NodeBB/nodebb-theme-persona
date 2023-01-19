@@ -1,14 +1,15 @@
-<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+<button type="button" class="btn btn-outline-secondary d-flex gap-2 align-items-baseline dropdown-toggle" data-bs-toggle="dropdown">
     {{{ if selectedCategory }}}
     <span class="category-item">
-        {buildCategoryIcon(selectedCategory, "24px", "rounded-circle")}
-        <span class="visible-sm-inline visible-md-inline visible-lg-inline">{selectedCategory.name}</span>
+        {buildCategoryIcon(selectedCategory, "20px", "rounded-circle")}
+        <span class="visible-md-inline visible-lg-inline">{selectedCategory.name}</span>
     </span>
     {{{ else }}}
-    <span class="visible-sm-inline visible-md-inline visible-lg-inline">[[unread:all_categories]]</span><span class="visible-xs-inline"><i class="fa fa-fw fa-list"></i></span>{{{ end }}} <span class="caret"></span>
+    <i class="fa fa-fw fa-list"></i>
+    <span class="visible-md-inline visible-lg-inline">[[unread:all_categories]]</span>{{{ end }}}
 </button>
 <div component="category-selector-search" class="hidden position-absolute">
-    <input type="text" class="form-control" autocomplete="off">
+    <input type="text" class="form-control form-control-sm" autocomplete="off">
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li role="presentation" class="category" data-all="all">

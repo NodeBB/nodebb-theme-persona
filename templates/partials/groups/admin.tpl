@@ -119,7 +119,7 @@
 						<input id="memberPostCids" type="text" class="form-control" value="{group.memberPostCids}">
 					</div>
 					<div class="col-md-6 member-post-cids-selector">
-						<!-- IMPORT partials/category-selector.tpl -->
+						<!-- IMPORT partials/category/selector-dropdown-left.tpl -->
 					</div>
 				</div>
 			</div>

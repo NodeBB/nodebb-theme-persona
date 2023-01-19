@@ -18,7 +18,7 @@
 		</div>
 		<div class="d-flex gap-1 align-items-stretch">
 		<!-- IMPORT partials/topic-filters.tpl -->
-		<!-- IMPORT partials/category-filter-right.tpl -->
+		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
 		<!-- IMPORT partials/category/tools.tpl -->
 		</div>
 	</div>

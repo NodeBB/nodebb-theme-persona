@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="{{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		{{{ if pagination.pages.length }}}
-		<div><!-- IMPORT partials/category-selector.tpl --></div>
+		<div><!-- IMPORT partials/category/selector-dropdown-left.tpl --></div>
 		{{{ else }}}
 		<h1 class="categories-title">[[pages:categories]]</h1>
 		{{{ end }}}
