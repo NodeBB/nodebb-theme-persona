@@ -60,10 +60,9 @@
 					<div class="form-group">
 						<h2 class="h4" for="state">[[flags:state]]</h2>
 						<select class="form-control" id="state" name="state" disabled>
-							<option value="open">[[flags:state-open]]</option>
-							<option value="wip">[[flags:state-wip]]</option>
-							<option value="resolved">[[flags:state-resolved]]</option>
-							<option value="rejected">[[flags:state-rejected]]</option>
+							{{{ each states }}}
+							<option value="{@key}">{./label}</option>
+							{{{ end }}}
 						</select>
 					</div>
 					<div class="form-group">
