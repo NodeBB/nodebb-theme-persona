@@ -1,3 +1,11 @@
+{{{ if (!./index && widgets.mainpost-header.length) }}}
+<div data-widget-area="mainpost-header">
+	{{{ each widgets.mainpost-header }}}
+	{widgets.mainpost-header.html}
+	{{{ end }}}
+</div>
+{{{ end }}}
+
 <div class="clearfix post-header">
 	<div class="icon float-start">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
@@ -112,3 +120,10 @@
 	</div>
 	<div component="post/replies/container"></div>
 </div>
+{{{ if (!./index && widgets.mainpost-footer.length) }}}
+<div data-widget-area="mainpost-footer">
+	{{{ each widgets.mainpost-footer }}}
+	{widgets.mainpost-footer.html}
+	{{{ end }}}
+</div>
+{{{ end }}}
