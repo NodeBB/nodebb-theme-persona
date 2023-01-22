@@ -1,3 +1,12 @@
+[component="search/filters"] {
+	.filter-btn {
+		border-color: $gray-300!important;
+		&.active-filter {
+			border-color: $primary!important;
+		}
+	}
+}
+
 .search-result-title {
 	font-weight: 600;
 }
