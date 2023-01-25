@@ -1,19 +1,19 @@
-<div class="account">
-	<!-- IMPORT partials/account/header.tpl -->
+<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="row">
-		<h1>{title}</h1>
+<div class="row">
+	<h1>{title}</h1>
 
-		<!-- IF !posts.length -->
-			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
-		<!-- ENDIF !posts.length -->
+	<!-- IF !posts.length -->
+		<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
+	<!-- ENDIF !posts.length -->
 
-		<div class="col-12">
-			<!-- IMPORT partials/posts_list.tpl -->
+	<div class="col-12">
+		<!-- IMPORT partials/posts_list.tpl -->
 
-			<!-- IF config.usePagination -->
-				<!-- IMPORT partials/paginator.tpl -->
-			<!-- ENDIF config.usePagination -->
-		</div>
+		<!-- IF config.usePagination -->
+			<!-- IMPORT partials/paginator.tpl -->
+		<!-- ENDIF config.usePagination -->
 	</div>
 </div>
+
+<!-- IMPORT partials/account/footer.tpl -->
