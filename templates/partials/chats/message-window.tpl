@@ -20,6 +20,7 @@
 	</ul>
 	<div component="chat/composer">
 		<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="2"></textarea>
+		<button component="chat/upload/button" class="btn btn-light" type="button"><i class="fa fa-fw fa-2x fa-upload"></i></button>
 		<button class="btn btn-primary" type="button" data-action="send"><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
 		<span component="chat/message/remaining">{maximumChatMessageLength}</span>
 		<form component="chat/upload" method="post" enctype="multipart/form-data">
