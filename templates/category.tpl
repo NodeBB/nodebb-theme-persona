@@ -22,7 +22,7 @@
 					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex align-items-center hide" id="new-topics-alert"></div>
 				</a>
 			</div>
-			<div class="d-flex gap-1 align-items-stretch">
+			<div component="category/controls" class="d-flex gap-1 align-items-stretch">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools.tpl -->
