@@ -24,11 +24,17 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div class="post-queue preventSlideout posts-list">
-			{{{ if !posts.length }}}
-			{{{ if isAdmin }}}
-			<p class="panel-body">
-				[[post-queue:description, {config.relative_path}/admin/settings/post#post-queue]]
-			</p>
+			{{{ if (!posts.length && isAdmin) }}}
+			{{{ if !singlePost }}}
+			<div class="alert alert-info">
+				<p>[[post-queue:no-queued-posts]]</p>
+				{{{ if !enabled }}}<p>[[post-queue:enabling-help, {config.relative_path}/admin/settings/post#post-queue]]</p>{{{ end }}}
+			</div>
+			{{{ else }}}
+			<div class="alert alert-info">
+				<p>[[post-queue:no-single-post]]</p>
+				<p><a href=".">[[post-queue:back-to-list]]</a></p>
+			</div>
 			{{{ end }}}
 			{{{ end }}}
 
