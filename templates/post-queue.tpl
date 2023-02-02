@@ -1,8 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
+
+{{{ if !singlePost }}}
 <div class="btn-toolbar">
 	<!-- IMPORT partials/category-filter-right.tpl -->
 
-	{{{ if !singlePost }}}
 	<div class="btn-group pull-right bottom-sheet" component="post-queue/bulk-actions">
 		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false">
 			<i class="fa fa-clone"></i> [[post-queue:bulk-actions]] <span class="caret"></span>
@@ -15,9 +16,11 @@
 			<li><a href="#" data-action="reject-selected">[[post-queue:reject-selected]]</a></li>
 		</ul>
 	</div>
-	{{{ end }}}
 </div>
+
 <hr/>
+{{{ end }}}
+
 <div class="row">
 	<div class="col-xs-12">
 		<div class="post-queue preventSlideout posts-list">
