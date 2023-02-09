@@ -70,17 +70,92 @@
 			<fieldset class="collapse{{{ if expanded }}} show{{{ end }}}" id="more-filters" aria-expanded="{expanded}">
 				<div class="mb-3">
 					<label class="form-label" for="filter-assignee">[[flags:filter-assignee]]</label>
-					<input type="text" class="form-control" id="filter-assignee" name="assignee" />
+					<div component="flags/filter/assignee" class="dropdown" data-filter-name="assignee">
+						<a component="user/filter/button" class="filter-btn btn btn-sm border {{{ if filters.assignee }}}btn-primary{{{ else }}}btn-light{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+							<span class="filter-label">[[flags:filter-assignee]]</span>
+							<span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu" style="width: 350px;">
+							<li class="px-3 py-1 d-flex flex-column gap-2">
+								<input type="text" class="form-control" component="user/filter/search" placeholder="[[search:type-a-username]]">
+								<div component="user/filter/selected" class="d-flex flex-wrap gap-2">
+									{{{ each selected.assignee }}}
+									<div class="d-flex px-2 py-1 rounded-1 text-bg-primary gap-2 align-items-center text-sm">
+										{buildAvatar(@value, "16px", true)} {./username}
+										<button type="button" component="user/filter/delete" data-uid="{./uid}" class="btn btn-primary btn-sm py-0"><i class="fa fa-times fa-xs"></i></button>
+									</div>
+									{{{ end }}}
+								</div>
+								<hr/>
+								<div component="user/filter/results" class="d-flex flex-wrap gap-2">
+									{{{ each userFilterResults }}}
+									<button type="button" class="btn btn-light btn-sm border" data-uid="{./uid}" data-username="{./username}">{buildAvatar(@value, "16px", true)} {./username}</button>
+									{{{ end }}}
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 				<div class="mb-3">
 					<label class="form-label" for="filter-targetUid">[[flags:filter-targetUid]]</label>
-					<input type="text" class="form-control" id="filter-targetUid" name="targetUid" />
+					<div component="flags/filter/targetUid" class="dropdown" data-filter-name="targetUid">
+						<a component="user/filter/button" class="filter-btn btn btn-sm border {{{ if filters.targetUid }}}btn-primary{{{ else }}}btn-light{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+							<span class="filter-label">[[flags:filter-targetUid]]</span>
+							<span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu" style="width: 350px;">
+							<li class="px-3 py-1 d-flex flex-column gap-2">
+								<input type="text" class="form-control" component="user/filter/search" placeholder="[[search:type-a-username]]">
+								<div component="user/filter/selected" class="d-flex flex-wrap gap-2">
+									{{{ each selected.targetUid }}}
+									<div class="d-flex px-2 py-1 rounded-1 text-bg-primary gap-2 align-items-center text-sm">
+										{buildAvatar(@value, "16px", true)} {./username}
+										<button type="button" component="user/filter/delete" data-uid="{./uid}" class="btn btn-primary btn-sm py-0"><i class="fa fa-times fa-xs"></i></button>
+									</div>
+									{{{ end }}}
+								</div>
+								<hr/>
+								<div component="user/filter/results" class="d-flex flex-wrap gap-2">
+									{{{ each userFilterResults }}}
+									<button type="button" class="btn btn-light btn-sm border" data-uid="{./uid}" data-username="{./username}">{buildAvatar(@value, "16px", true)} {./username}</button>
+									{{{ end }}}
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 				<div class="mb-3">
 					<label class="form-label" for="filter-reporterId">[[flags:filter-reporterId]]</label>
-					<input type="text" class="form-control" id="filter-reporterId" name="reporterId" />
+					<div component="flags/filter/reporterId" class="dropdown" data-filter-name="reporterId">
+						<a component="user/filter/button" class="filter-btn btn btn-sm border {{{ if filters.reporterId }}}btn-primary{{{ else }}}btn-light{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+							<span class="filter-label">[[flags:filter-reporterId]]</span>
+							<span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu" style="width: 350px;">
+							<li class="px-3 py-1 d-flex flex-column gap-2">
+								<input type="text" class="form-control" component="user/filter/search" placeholder="[[search:type-a-username]]">
+								<div component="user/filter/selected" class="d-flex flex-wrap gap-2">
+									{{{ each selected.reporterId }}}
+									<div class="d-flex px-2 py-1 rounded-1 text-bg-primary gap-2 align-items-center text-sm">
+										{buildAvatar(@value, "16px", true)} {./username}
+										<button type="button" component="user/filter/delete" data-uid="{./uid}" class="btn btn-primary btn-sm py-0"><i class="fa fa-times fa-xs"></i></button>
+									</div>
+									{{{ end }}}
+								</div>
+								<hr/>
+								<div component="user/filter/results" class="d-flex flex-wrap gap-2">
+									{{{ each userFilterResults }}}
+									<button type="button" class="btn btn-light btn-sm border" data-uid="{./uid}" data-username="{./username}">{buildAvatar(@value, "16px", true)} {./username}</button>
+									{{{ end }}}
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</fieldset>
 
