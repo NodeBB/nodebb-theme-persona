@@ -84,10 +84,9 @@
 
 				<form role="form">
 					<div class="mb-3">
-						<h2 class="h4" for="note">[[flags:notes]]</h2>
-						<textarea id="note" class="form-control"></textarea>
-						<div class="d-grid">
-							<button type="button" class="btn btn-block btn-primary" data-action="appendNote">[[flags:add-note]]</button>
+						<div class="d-flex align-items-center">
+							<h2 class="h4 me-auto mb-0" for="note">[[flags:notes]]</h2>
+							<button type="button" class="btn btn-primary" data-action="addEditNote">[[flags:add-note]]</button>
 						</div>
 					</div>
 				</form>
@@ -97,7 +96,7 @@
 					<div class="alert alert-success text-center">[[flags:no-notes]]</div>
 					<!-- ENDIF !notes.length -->
 					{{{each notes}}}
-					<div class="d-flex mb-3">
+					<div class="d-flex mb-3" component="flag/note" data-datetime="{./datetime}" data-index="{@index}">
 						<div class="flex-shrink-0">
 							<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(notes.user, "32px", true, "media-object")}</a>
 						</div>
@@ -109,7 +108,7 @@
 							{../content}
 						</div>
 						<div class="flex-shrink-0">
-							<a href="#" class="btn btn-sm btn-link" data-action="prepare-edit"><i class="fa fa-pencil"></i></a>
+							<a href="#" class="btn btn-sm btn-link" data-action="addEditNote"><i class="fa fa-pencil"></i></a>
 							<a href="#" class="btn btn-sm btn-link" data-action="delete-note"><i class="fa fa-trash text-danger"></i></a>
 						</div>
 					</div>
