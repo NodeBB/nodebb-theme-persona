@@ -21,7 +21,9 @@
 	</div>
 </div>
 
-<form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}" enctype="multipart/form-data">
+<form role="form" method="post" action="{config.relative_path}/register/complete" enctype="multipart/form-data">
+	<input type="hidden" name="csrf_token" value="{config.csrf_token}" />
+
 	{{{each sections}}}
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -38,7 +40,7 @@
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<div class="btn-group btn-block">
 				<button class="btn btn-block btn-primary">[[topic:composer.submit]]</button>
-				<button class="btn btn-block btn-link" formaction="{config.relative_path}/register/abort?_csrf={config.csrf_token}">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
+				<button class="btn btn-block btn-link" formaction="{config.relative_path}/register/abort">{{{ if register }}}[[register:cancel_registration]]{{{ else }}}[[modules:bootbox.cancel]]{{{ end }}}</button>
 			</div>
 		</div>
 	</div>
