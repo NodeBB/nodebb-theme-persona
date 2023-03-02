@@ -96,22 +96,4 @@ library.getThemeConfig = async function (config) {
 	return config;
 };
 
-library.addUserToTopic = async function (hookData) {
-	const settings = await meta.settings.get('persona');
-	if (settings.enableQuickReply === 'on') {
-		if (hookData.req.user) {
-			const userData = await user.getUserData(hookData.req.user.uid);
-			hookData.templateData.loggedInUser = userData;
-		} else {
-			hookData.templateData.loggedInUser = {
-				uid: 0,
-				username: '[[global:guest]]',
-				picture: user.getDefaultAvatar(),
-				'icon:text': '?',
-				'icon:bgColor': '#aaa',
-			};
-		}
-	}
 
-	return hookData;
-};
