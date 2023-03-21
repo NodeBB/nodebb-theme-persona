@@ -110,6 +110,30 @@
 				</div>
 			</div>
 
+			<hr/>
+
+			<h6 class="fw-bold">[[global:sort]]</h6>
+			<div class="">
+				<div class="mb-2">
+					<label class="form-label">[[user:category-topic-sort]]</label>
+					<select class="form-select" data-property="categoryTopicSort">
+						<option value="newest_to_oldest" {{{ if (settings.categoryTopicSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest_to_oldest]]</option>
+						<option value="oldest_to_newest" {{{ if (settings.categoryTopicSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest_to_newest]]</option>
+						<option value="most_posts" {{{ if (settings.categoryTopicSort == "most_posts") }}}selected{{{ end }}}>[[topic:most_posts]]</option>
+						<option value="most_votes" {{{ if (settings.categoryTopicSort == "most_votes") }}}selected{{{ end }}}>[[topic:most_votes]]</option>
+						<option value="most_views" {{{ if (settings.categoryTopicSort == "most_views") }}}selected{{{ end }}}>[[topic:most_views]]</option>
+					</select>
+				</div>
+				<div class="">
+					<label class="form-label">[[user:topic-post-sort]]</label>
+					<select class="form-select" data-property="topicPostSort">
+						<option value="oldest_to_newest" {{{ if (settings.topicPostSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest_to_newest]]</option>
+						<option value="newest_to_oldest" {{{ if (settings.topicPostSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest_to_oldest]]</option>
+						<option value="most_votes" {{{ if (settings.topicPostSort == "most_votes") }}}selected{{{ end }}}>[[topic:most_votes]]</option>
+					</select>
+				</div>
+			</div>
+
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
 			<div class="card card-body mb-3">
