@@ -1,0 +1,8 @@
+[component="header/usercontrol"] {
+	[component="header/profilelink"] > div, .user-status > div {
+		min-width: 1.25em; // match fontawesome fixed width
+	}
+	.user-status.selected span {
+		font-weight: bold;
+	}
+}
