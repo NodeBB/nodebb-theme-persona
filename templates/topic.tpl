@@ -8,7 +8,7 @@
 		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
-					<span component="topic/labels" class="d-inline-flex gap-1 align-items-center">
+					<span component="topic/labels" class="d-inline-flex gap-2 align-items-center">
 						<i component="topic/scheduled" class="fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
 						<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
 						<i component="topic/locked" class="fa fa-lock {{{ if !locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
