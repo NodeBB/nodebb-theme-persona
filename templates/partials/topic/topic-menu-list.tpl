@@ -7,6 +7,7 @@
 <li><a component="topic/move" class="dropdown-item" href="#"><i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move]]</a></li>
 <li><a component="topic/merge" class="dropdown-item" href="#"><i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.merge]]</a></li>
 <li><a component="topic/fork" class="dropdown-item" href="#"><i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.fork]]</a></li>
+<li><a component="topic/tag" class="dropdown-item" href="#"><i class="fa fa-fw fa-tag"></i> [[topic:thread_tools.tag]]</a></li>
 {{{ if !scheduled }}}
 <li><a component="topic/move-posts" class="dropdown-item" href="#"><i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move-posts]]</a></li>
 {{{ end }}}

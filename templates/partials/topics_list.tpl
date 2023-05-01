@@ -53,14 +53,13 @@
 				&bull;
 				<!-- ENDIF !template.category -->
 
-				{{{ if topics.tags.length }}}
-				<span class="tag-list hidden-xs">
+
+				<span data-tid="{./tid}" component="topic/tags" class="tag-list hidden-xs {{{ if !./tags.length }}}hidden{{{ end}}}">
 					{{{ each ./tags }}}
 					<!-- IMPORT partials/topic/tag.tpl -->
 					{{{ end }}}
 					&bull;
 				</span>
-				{{{ end }}}
 
 				<span class="hidden-xs"><span class="timeago text-muted" title="{./timestampISO}"></span> &bull; <a class="text-muted" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{./user.displayname}</a></span>
 

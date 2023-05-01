@@ -25,7 +25,7 @@
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 
-				<div class="tags tag-list d-inline-block hidden-xs">
+				<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/tags.tpl -->
 				</div>
 				<div class="d-inline-block hidden-xs">
