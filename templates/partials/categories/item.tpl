@@ -1,4 +1,4 @@
-<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="row clearfix category-{../cid}">
+<li component="categories/category" data-cid="{./cid}" data-numRecentReplies="1" class="row clearfix category-{./cid} {./unread-class}">
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-12 <!-- IF config.hideCategoryLastPost -->col-md-10 col-sm-12<!-- ELSE -->col-md-7 col-sm-9<!-- ENDIF config.hideCategoryLastPost -->">
@@ -44,11 +44,11 @@
 
 	<!-- IF !../link -->
 	<div class="col-md-1 d-none d-md-block stats text-muted">
-		<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
+		<span class="human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
 		<small>[[global:topics]]</small>
 	</div>
 	<div class="col-md-1 d-none d-md-block stats text-muted">
-		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
+		<span class="human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
 	<!-- IF !config.hideCategoryLastPost -->
