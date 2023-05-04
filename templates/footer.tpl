@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	{{{ end }}}
-
+	<!-- IMPORT modules/taskbar.tpl -->
 	<!-- IMPORT partials/footer/js.tpl -->
 </body>
 </html>
