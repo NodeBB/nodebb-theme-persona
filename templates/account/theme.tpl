@@ -5,13 +5,12 @@
 <hr />
 
 <form id="theme-settings" role="form">
-	<div class="checkbox">
-		<label>
-			<input type="checkbox" id="persona:menus:legacy-layout" name="persona:menus:legacy-layout"> <strong>[[persona:settings.mobile-menu-side]]</strong>
-		</label>
-	</div><br />
+	<div class="form-check mb-3">
+		<input class="form-check-input" type="checkbox" id="persona:menus:legacy-layout" name="persona:menus:legacy-layout">
+		<label class="form-check-label" for="persona:menus:legacy-layout">[[persona:settings.mobile-menu-side]]</label>
+	</div>
 
-	<div class="form-group">
+	<div class="mb-3">
 		<label for="persona:navbar:autohide">[[persona:settings.autoHidingNavbar]]</label>
 		<select multiple class="form-control" name="persona:navbar:autohide" id="persona:navbar:autohide">
 			<option value="xs">[[persona:settings.autoHidingNavbar-xs]]</option>
