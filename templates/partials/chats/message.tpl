@@ -26,7 +26,7 @@
 			<button class="btn btn-sm btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
 			{{{ end }}}
 			{{{ if isAdminOrGlobalMod }}}
-			<button class="btn btn-sm btn-link chat-ip" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></button>
+			<button class="btn btn-sm btn-link chat-ip-button" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle"></i></button>
 			{{{ end }}}
 		</div>
 		{{{ end }}}
