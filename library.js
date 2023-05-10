@@ -1,8 +1,6 @@
 'use strict';
 
 const meta = require.main.require('./src/meta');
-const user = require.main.require('./src/user');
-const translator = require.main.require('./src/translator');
 
 const controllers = require('./lib/controllers');
 
@@ -35,7 +33,7 @@ library.addProfileItem = async (data) => {
 		id: 'theme',
 		route: 'theme',
 		icon: 'fa-paint-brush',
-		name: await translator.translate('[[persona:settings.title]]'),
+		name: '[[themes/persona:settings.title]]',
 		visibility: {
 			self: true,
 			other: false,
