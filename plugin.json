@@ -16,5 +16,6 @@
 		"persona/taskbar.js": "public/modules/taskbar.js",
 		"persona/mobile-menu.js": "public/modules/mobile-menu.js",
 		"../client/account/theme.js": "public/settings.js"
-	}
+	},
+	"languages": "languages"
 }
