@@ -2,6 +2,7 @@
 
 <div class="profile row">
 	<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
+	<div class="d-flex gap-2 justify-content-center mb-2" component="user/badges"></div>
 	<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 	<!-- IF isAdminOrGlobalModeratorOrModerator -->
 	<!-- IF banned -->
