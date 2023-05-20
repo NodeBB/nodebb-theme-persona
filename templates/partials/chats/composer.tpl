@@ -4,8 +4,10 @@
 		<div class="flex-grow-1 align-self-center">
 			<textarea component="chat/input" placeholder="[[modules:chat.placeholder.mobile]]" class="bg-transparent text-body form-control chat-input mousetrap rounded-0 border-0 shadow-none ps-1 py-0" style="min-height: 1.5rem;height:0;max-height:30vh;resize:none;"></textarea>
 		</div>
-		<div component="chat/message/remaining" class="text-xs text-muted me-1">{maximumChatMessageLength}</div>
-		<button class="btn btn-primary btn-sm px-2 rounded-1" type="button" data-action="send"><i class="fa fa-fw fa-paper-plane"></i></button>
+		<div class="d-flex gap-1">
+			<div component="chat/message/remaining" class="text-xs text-muted me-1 align-self-center">{maximumChatMessageLength}</div>
+			<button class="btn btn-primary btn-sm px-2 rounded-1" type="button" data-action="send"><i class="fa fa-fw fa-paper-plane"></i></button>
+		</div>
 	</div>
 	<form class="hidden" component="chat/upload" method="post" enctype="multipart/form-data">
 		<input type="file" name="files[]" multiple class="hidden"/>
