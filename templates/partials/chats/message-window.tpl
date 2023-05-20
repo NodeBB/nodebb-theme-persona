@@ -18,19 +18,7 @@
 	<ul class="chat-content">
 		<!-- IMPORT partials/chats/messages.tpl -->
 	</ul>
-	<div component="chat/composer" class="d-flex flex-column flex-md-row gap-2 border-top pt-2 align-items-start align-items-md-end">
-		<div class="w-100 flex-grow-1 position-relative">
-			<textarea component="chat/input" placeholder="[[modules:chat.placeholder.mobile]]" class="form-control chat-input mousetrap" style="height:0;resize:none;"></textarea>
-			<span component="chat/message/remaining" class="text-xs text-muted position-absolute me-1 mb-1" style="right: 0px; bottom:0px;">{maximumChatMessageLength}</span>
-		</div>
-		<div class="d-flex justify-content-between align-self-stretch gap-2">
-			<button component="chat/upload/button" class="btn btn-light btn-sm align-self-end" type="button"><i class="fa fa-fw fa-upload"></i></button>
-			<button class="btn btn-primary btn-sm align-self-end" type="button" data-action="send"><i class="fa fa-fw fa-paper-plane"></i></button>
-		</div>
-		<form class="hidden" component="chat/upload" method="post" enctype="multipart/form-data">
-			<input type="file" name="files[]" multiple class="hidden"/>
-		</form>
-	</div>
+	<!-- IMPORT partials/chats/composer.tpl -->
 </div>
 <!-- ELSE -->
 <div class="alert alert-info me-3">
