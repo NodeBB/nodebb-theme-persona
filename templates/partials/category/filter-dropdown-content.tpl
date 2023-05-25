@@ -9,7 +9,7 @@
     <span class="visible-md-inline visible-lg-inline">[[unread:all_categories]]</span>{{{ end }}}
 </button>
 <div component="category-selector-search" class="hidden position-absolute">
-    <input type="text" class="form-control form-control-sm" placeholder="[[search:type-to-search]]" autocomplete="off">
+    <input type="text" class="form-control" placeholder="[[search:type-to-search]]" autocomplete="off">
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li role="presentation" class="category" data-cid="all">
