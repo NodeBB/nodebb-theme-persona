@@ -56,6 +56,13 @@
 				<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
 			</a>
 		</li>
+		{{{ if registrationQueueEnabled }}}
+		<li>
+			<a class="dropdown-item" href="{relative_path}/registration-queue">
+				<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:registration-queue]]</span>
+			</a>
+		</li>
+		{{{ end }}}
 		<li>
 			<a class="dropdown-item" href="{relative_path}/ip-blacklist">
 				<i class="fa fa-fw fa-ban"></i> <span>[[pages:ip-blacklist]]</span>
