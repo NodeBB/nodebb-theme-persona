@@ -57,10 +57,12 @@
 						<div class="row">
 							<div class="col-lg-10 offset-lg-2">
 								{{{ if allowRegistration }}}
-								<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
+								<div>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></div>
 								{{{ end }}}
 								{{{ if allowPasswordReset }}}
-								<a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
+								<div>
+									<a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
+								</div>
 								{{{ end }}}
 							</div>
 						</div>
