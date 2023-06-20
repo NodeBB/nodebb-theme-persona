@@ -20,5 +20,5 @@
 		<button type="submit" class="btn btn-outline-secondary hide">[[global:search]]</button>
 	</div>
 
-	<li id="" class="nav-item"><a component="search/button" id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></li>
+	<div id="" class="nav-item"><a component="search/button" id="search-button" href="#" class="nav-link"><i class="fa fa-search fa-fw" title="Search"></i></a></div>
 </form>

@@ -13,7 +13,12 @@ define('persona/mobile-menu', [
 		}
 
 		// initialization
-
+		const panelEl = document.getElementById('panel');
+		const menuEl = document.getElementById('menu');
+		const chatsMenuEl = document.getElementById('chats-menu');
+		if (!menuEl || !chatsMenuEl) {
+			return;
+		}
 		const chatMenuVisible = app.user && parseInt(app.user.uid, 10);
 		let swapped = !!Storage.getItem('persona:menus:legacy-layout');
 		const margin = window.innerWidth;
@@ -28,8 +33,8 @@ define('persona/mobile-menu', [
 		}
 
 		const navSlideout = Pulling.create({
-			panel: document.getElementById('panel'),
-			menu: document.getElementById('menu'),
+			panel: panelEl,
+			menu: menuEl,
 			width: 256,
 			margin: margin,
 			side: swapped ? 'right' : 'left',
@@ -39,8 +44,8 @@ define('persona/mobile-menu', [
 		let chatsSlideout;
 		if (chatMenuVisible) {
 			chatsSlideout = Pulling.create({
-				panel: document.getElementById('panel'),
-				menu: document.getElementById('chats-menu'),
+				panel: panelEl,
+				menu: chatsMenuEl,
 				width: 256,
 				margin: margin,
 				side: swapped ? 'left' : 'right',
