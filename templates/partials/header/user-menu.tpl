@@ -34,6 +34,11 @@
 		</li>
 		<li role="presentation" class="dropdown-divider"></li>
 		<li>
+			<a class="dropdown-item" href="{relative_path}/user/{user.userslug}/bookmarks">
+				<i class="fa fa-fw fa-bookmark"></i> <span>[[user:bookmarks]]</span>
+			</a>
+		</li>
+		<li>
 			<a class="dropdown-item" component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 				<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
 			</a>
