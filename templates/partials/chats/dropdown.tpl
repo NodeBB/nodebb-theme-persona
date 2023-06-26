@@ -34,5 +34,5 @@
 </li>
 {{{end}}}
 <!-- ELSE -->
-<li class="no_active"><a href="#">[[modules:chat.no_active]]</a></li>
+<li class="no_active d-flex justify-content-center p-2"><a class="text-reset" href="#">[[modules:chat.no_active]]</a></li>
 <!-- ENDIF rooms.length -->
