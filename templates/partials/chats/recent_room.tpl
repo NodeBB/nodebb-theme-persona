@@ -18,14 +18,18 @@
 	{{{ end }}}
 
 	<div class="notification-chat-content flex-grow-1">
-		<!-- IF !rooms.lastUser.uid -->
-		<div class="p-3 text-center h-100">
-			<span>[[modules:chat.no-users-in-room]]</span>
+		<div component="chat/room/title" class="room-name fw-semibold">
+			{{{ if ./roomName}}}
+			{./roomName}
+			{{{ else }}}
+				{{{ if !./lastUser.uid }}}
+				<div class="p-3 text-center h-100">
+					<span>[[modules:chat.no-users-in-room]]</span>
+				</div>
+				{{{ else }}}
+				{./usernames}
+				{{{ end  }}}
+			{{{ end }}}
 		</div>
-		<!-- ELSE -->
-		<strong class="room-name">
-			<span component="chat/title"><!-- IF rooms.roomName -->{rooms.roomName}<!-- ELSE -->{rooms.usernames}<!-- ENDIF rooms.roomName --></span>
-		</strong>
-		<!-- ENDIF !rooms.lastUser.uid -->
 	</div>
 </li>
