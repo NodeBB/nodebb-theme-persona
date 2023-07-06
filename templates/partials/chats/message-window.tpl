@@ -1,27 +1,29 @@
-<!-- IF roomId -->
-<div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
-	<div component="chat/header" class="d-flex align-items-center px-3">
-		<span class="members flex-grow-1">
-			[[modules:chat.chatting_with]]:
-			{{{each users}}}
-			<a href="{config.relative_path}/uid/{../uid}">{../username}</a><!-- IF !@last -->,<!-- END -->
-			{{{end}}}
-		</span>
+<div class="d-flex flex-column h-100">
+	{{{ if !roomId }}}
+	<div class="d-flex flex-column align-items-center gap-3 p-5">
+		<i class="fa-solid fa-wind fs-2 text-muted"></i>
+		<span class="text-muted text-sm">[[modules:chat.no_active]]</span>
+	</div>
+	{{{ else }}}
+	<div component="chat/header" class="d-flex align-items-center px-md-3 gap-3">
+		<a href="#" data-action="close" role="button" class="flex-shrink-0 d-flex d-md-none btn btn-outline align-text-top"><i class="fa fa-chevron-left"></i></a>
+		<h5 class="members flex-grow-1 fw-semibold tracking-tight mb-0">
+			{{{ if ./roomName }}}# {roomName}{{{ else }}}{./chatWithMessage}{{{ end}}}
+		</h5>
 
-		<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted" data-action="pop-out" aria-hidden="true" aria-label="Pop Out"><i class="fa fa-compress"></i></button>
 		<!-- IMPORT partials/chats/options.tpl -->
-		<button type="button" class="btn-close" aria-hidden="true" aria-label="Close" data-action="close"></button>
 	</div>
-	<div class="position-relative">
-		<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button" style="z-index: 1;">[[modules:chat.scroll-up-alert]]</div>
+	<hr class="my-1"/>
+	<div class="d-flex flex-grow-1 gap-1 overflow-auto" style="min-width: 0px;">
+		<div component="chat/messages" class="expanded-chat d-flex flex-column flex-grow-1" data-roomid="{roomId}" style="min-width: 0px;">
+			<!-- IMPORT partials/chats/scroll-up-alert.tpl -->
+			<ul class="chat-content p-0 m-0 list-unstyled overflow-auto flex-grow-1">
+				<!-- IMPORT partials/chats/messages.tpl -->
+			</ul>
+			<!-- IMPORT partials/chats/composer.tpl -->
+		</div>
+
+		<!-- IMPORT partials/chats/user-list.tpl -->
 	</div>
-	<ul class="chat-content">
-		<!-- IMPORT partials/chats/messages.tpl -->
-	</ul>
-	<!-- IMPORT partials/chats/composer.tpl -->
+	{{{ end }}}
 </div>
-<!-- ELSE -->
-<div class="alert alert-info me-3">
-	[[modules:chat.no-messages]]
-</div>
-<!-- ENDIF roomId -->
