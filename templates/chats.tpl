@@ -15,7 +15,7 @@
 			<div id="public-rooms" component="chat/public" class="collapse show">
 				<div class="d-flex flex-column gap-1">
 					{{{ each publicRooms }}}
-					<div component="chat/public/room" class="btn btn-sm btn-light w-100 text-start ff-sans justify-content-start {{{ if ./unread}}}unread{{{ end }}}" data-roomid="{./roomId}"># {./roomName}</div>
+					<div component="chat/public/room" class="btm btm-sm btn-light w-100 d-flex justify-content-between {{{ if ./unread}}}unread{{{ end }}}" data-roomid="{./roomId}"><div># {./roomName}</div><div component="chat/public/room/unread/count" data-count="{./unreadCount}" class="badge border text-primary {{{ if !./unreadCount }}}hidden{{{ end }}}">{./unreadCountText}</div></div>
 					{{{ end }}}
 				</div>
 			</div>
