@@ -31,16 +31,6 @@ body.page-user-chats {
 	}
 }
 
-[component="chat/user/list/btn"] {
-	> div {
-		width: 60px;
-		&.user-count-1 { width: 24px; }
-		&.user-count-2 { width: 40px; }
-		.order-3 { left: -16px; }
-		.order-2 { left: -8px; }
-	}
-}
-
 /* Styles common to both full chat and chat modal */
 .chats-full, .chat-modal {
 	display: flex;
@@ -65,26 +55,8 @@ body.page-user-chats {
 	}
 
 	[component="chat/header"] {
-		border-bottom: 1px solid $gray-200;
-
-		span {
-			font-weight: 500;
-		}
-
 		.close {
 			margin-left: 0.5em;
-		}
-
-		.members {
-			a {
-				font-weight: 600;
-			}
-		}
-
-		.dropdown {
-			.avatar {
-				margin-right: 0.5em;
-			}
 		}
 	}
 
