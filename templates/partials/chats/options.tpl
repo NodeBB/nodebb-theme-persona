@@ -10,11 +10,13 @@
 					<i class="fa fa-fw text-muted fa-cog"></i> [[modules:chat.manage-room]]
 				</a>
 			</li>
+			{{{ if isOwner }}}
 			<li>
 				<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" data-action="rename">
 					<i class="fa fa-fw text-muted fa-edit"></i> [[modules:chat.rename-room]]
 				</a>
 			</li>
+			{{{ end }}}
 			<li>
 				<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" data-action="leave">
 					<i class="fa fa-fw text-muted fa-sign-out"></i> [[modules:chat.leave-room]]
@@ -43,7 +45,7 @@
 			<span class="order-1 text-decoration-none position-relative" href="{config.relative_path}/user/{./users.0.userslug}">{buildAvatar(./users.0, "24px", true)}</span>
 			{{{ end }}}
 		</div>
-		{increment(./userCount, "-1")}
+		{./userCount}
 	</div>
 	{{{ end }}}
 </div>
