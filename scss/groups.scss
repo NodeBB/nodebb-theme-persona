@@ -96,17 +96,6 @@
 		}
 	}
 
-	[component="groups/members"] {
-		tbody {
-			max-height: 500px;
-			display:block;
-			overflow-y: auto;
-			.member-name {
-				width: 100%;
-			}
-		}
-	}
-
 	h1 {
 		overflow-wrap: break-word;
 		margin-top: 0;
