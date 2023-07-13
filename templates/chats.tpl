@@ -16,7 +16,7 @@
 				<div class="d-flex flex-column gap-1">
 					{{{ each publicRooms }}}
 					<div component="chat/public/room" class="btn btn-sm btn-light d-flex justify-content-between hover-parent {{{ if ./unread}}}unread{{{ end }}}" data-roomid="{./roomId}">
-						<div># {./roomName}</div>
+						<div><i class="fa {./icon} text-muted"></i> {./roomName}</div>
 						<div class="d-flex gap-1">
 							<div component="chat/public/room/unread/count" data-count="{./unreadCount}" class="badge border text-primary {{{ if !./unreadCount }}}hidden{{{ end }}}">{./unreadCountText}</div>
 							<div component="chat/public/room/sort/handle" class="text-muted {{{ if isAdmin }}}hover-d-block{{{ else }}}d-none{{{ end }}}" style="cursor:grab;"><i class="fa fa-bars"></i></div>
