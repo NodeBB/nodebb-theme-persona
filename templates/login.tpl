@@ -34,10 +34,9 @@
 						</div>
 						<div class="row mb-2">
 							<div class="col-lg-10 offset-lg-2">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
-									</label>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" name="remember" id="remember" checked />
+									<label class="form-check-label" for="remember">[[login:remember_me]]</label>
 								</div>
 							</div>
 						</div>
