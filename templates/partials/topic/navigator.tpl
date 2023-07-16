@@ -1,4 +1,4 @@
-<div class="pagination-block text-bg-light text-center">
+<div class="pagination-block border border-1 text-bg-light text-center">
     <div class="progress-bar bg-info"></div>
     <div class="wrapper dropup">
         <i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
