@@ -1,9 +1,9 @@
-<div class="pagination-block text-center">
-    <div class="progress-bar"></div>
+<div class="pagination-block text-bg-light text-center">
+    <div class="progress-bar bg-info"></div>
     <div class="wrapper dropup">
         <i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
 
-        <a href="#" class="dropdown-toggle d-inline-block" data-bs-toggle="dropdown" data-bs-reference="parent">
+        <a href="#" class="dropdown-toggle d-inline-block text-decoration-none" data-bs-toggle="dropdown" data-bs-reference="parent">
             <span class="pagination-text"></span>
         </a>
 

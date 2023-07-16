@@ -454,7 +454,6 @@
 
 	.pagination-block {
 		position: fixed;
-		background-color: $gray-200;
 		bottom: 0px;
 		right: 0px;
 		z-index: 100;
@@ -462,7 +461,6 @@
 		opacity: 0;
 
 		.pagination-text {
-			color: $text-muted;
 			position: relative;
     		top: -3px;
     		font-weight: bolder;
@@ -527,7 +525,6 @@
 			}
 		}
 		.progress-bar {
-			background-color: $info;
 			display:block;
 			z-index: -1;
 			position: absolute;
