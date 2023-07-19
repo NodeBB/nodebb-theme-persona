@@ -25,21 +25,21 @@
 		<!-- IF section_sort-reputation -->
 		<div class="reputation">
 			<i class="fa fa-star"></i>
-			<span class="formatted-number">{users.reputation}</span>
+			<span>{formattedNumber(users.reputation)}</span>
 		</div>
 		<!-- ENDIF section_sort-reputation -->
 
 		<!-- IF section_sort-posts -->
 		<div class="post-count">
 			<i class="fa fa-pencil"></i>
-			<span class="formatted-number">{users.postcount}</span>
+			<span>{formattedNumber(users.postcount)}</span>
 		</div>
 		<!-- ENDIF section_sort-posts -->
 
 		<!-- IF section_flagged -->
 		<div class="flag-count">
 			<i class="fa fa-flag"></i>
-			<span><a class="formatted-number" href="{config.relative_path}/flags?targetUid={users.uid}">{users.flags}</a></span>
+			<span><a href="{config.relative_path}/flags?targetUid={users.uid}">{users.flags}</a></span>
 		</div>
 		<!-- ENDIF section_flagged -->
 	</div>

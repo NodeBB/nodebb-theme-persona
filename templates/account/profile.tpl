@@ -34,28 +34,28 @@
 	<div class="account-stats">
 		<!-- IF !reputation:disabled -->
 		<div class="stat">
-			<div class="human-readable-number" title="{reputation}">{reputation}</div>
+			<div title="{reputation}">{humanReadableNumber(reputation)}</div>
 			<span class="stat-label">[[global:reputation]]</span>
 		</div>
 		<!-- ENDIF !reputation:disabled -->
 
 		<div class="stat">
-			<div class="human-readable-number" title="{profileviews}">{profileviews}</div>
+			<div title="{profileviews}">{humanReadableNumber(profileviews)}</div>
 			<span class="stat-label">[[user:profile_views]]</span>
 		</div>
 
 		<div class="stat">
-			<div><a class="human-readable-number" title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{counts.posts}</a></div>
+			<div><a title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{humanReadableNumber(counts.posts)}</a></div>
 			<span class="stat-label">[[global:posts]]</span>
 		</div>
 
 		<div class="stat">
-			<div><a class="human-readable-number" title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{counts.followers}</a></div>
+			<div><a title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{humanReadableNumber(counts.followers)}</a></div>
 			<span class="stat-label">[[user:followers]]</span>
 		</div>
 
 		<div class="stat">
-			<div><a class="human-readable-number" title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{counts.following}</a></div>
+			<div><a title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{humanReadableNumber(counts.following)}</a></div>
 			<span class="stat-label">[[user:following]]</span>
 		</div>
 	</div>

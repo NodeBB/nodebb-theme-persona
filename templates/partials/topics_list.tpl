@@ -68,23 +68,23 @@
 		</div>
 
 		<div class="mobile-stat col-2 visible-xs text-end">
-			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
+			<span>{humanReadableNumber(topics.postcount)}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-votes">
 			<!-- IF !reputation:disabled -->
-			<span class="human-readable-number" title="{topics.votes}">{topics.votes}</span><br />
+			<span title="{topics.votes}">{humanReadableNumber(topics.votes)}</span><br />
 			<small>[[global:votes]]</small>
 			<!-- END -->
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-postcount">
-			<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
+			<span title="{topics.postcount}">{humanReadableNumber(topics.postcount)}</span><br />
 			<small>[[global:posts]]</small>
 		</div>
 
 		<div class="col-md-1 hidden-sm hidden-xs stats stats-viewcount">
-			<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
+			<span title="{topics.viewcount}">{humanReadableNumber(topics.viewcount)}</span><br />
 			<small>[[global:views]]</small>
 		</div>
 

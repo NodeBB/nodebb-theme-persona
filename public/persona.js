@@ -202,7 +202,6 @@ $(document).ready(function () {
 					}
 				}
 
-				utils.makeNumbersHumanReadable(card.find('.human-readable-number'));
 				setupCardRemoval(card);
 				card.fadeIn();
 			});

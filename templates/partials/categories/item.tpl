@@ -42,13 +42,13 @@
 		</span>
 	</div>
 
-	<!-- IF !../link -->
+	<!-- IF !./link -->
 	<div class="col-md-1 d-none d-md-block stats text-muted">
-		<span class="human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
+		<span title="{./totalTopicCount}">{humanReadableNumber(./totalTopicCount)}</span><br />
 		<small>[[global:topics]]</small>
 	</div>
 	<div class="col-md-1 d-none d-md-block stats text-muted">
-		<span class="human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
+		<span title="{./totalPostCount}">{humanReadableNumber(./totalPostCount)}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
 	<!-- IF !config.hideCategoryLastPost -->
@@ -56,5 +56,5 @@
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
 	<!-- ENDIF !config.hideCategoryLastPost -->
-	<!-- ENDIF !../link -->
+	<!-- ENDIF !./link -->
 </li>
