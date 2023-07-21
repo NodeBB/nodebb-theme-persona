@@ -1,10 +1,43 @@
 <div class="d-flex gap-1 align-items-stretch">
-	<div class="dropdown d-flex">
+	<!-- notification dropdown -->
+	<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.notification-settings]]">
+		<button class="btn btn-sm btn-light position-relative" data-bs-toggle="dropdown">
+			<i class="fa fa-bell text-muted"></i>
+			<span class="position-absolute top-0 end-0 text-xs text-muted opacity-75" style="font-size: 10px!important; padding: 1px; line-height: 10px;">
+				<i component="chat/notification/setting/icon" class="fa {notificationOptionsIcon}"></i>
+			</span>
+		</button>
+		<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" component="chat/notification/setting">
+			{{{ each notificationOptions }}}
+			<li>
+				<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" data-value="{./value}" data-icon="{./icon}">
+					<div class="d-flex flex-column gap-1">
+						<div class="d-flex align-items-center gap-2">
+							<div class="flex-grow-1">{./label}</div>
+							<i class="flex-shrink-0 fa fa-fw fa-check {{{ if !./selected }}}hidden{{{ end }}}"></i>
+						</div>
+						{{{ if @first}}}
+						<div component="chat/notification/setting/sub-label" class="text-sm text-muted">{./subLabel}</div>
+						{{{ end }}}
+					</div>
+				</a>
+			</li>
+
+			{{{ if @first }}}
+			<li><hr class="dropdown-divider"></li>
+			{{{ end }}}
+			{{{ end }}}
+		</ul>
+	</div>
+
+
+
+
+	<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.options]]">
 		<button class="btn btn-sm btn-light" data-bs-toggle="dropdown" component="chat/controlsToggle">
 			<i class="fa fa-gear text-muted"></i>
 		</button>
 		<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" component="chat/controls">
-			<li class="dropdown-header">[[modules:chat.options]]</li>
 			<li>
 				<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" data-action="members">
 					<i class="fa fa-fw text-muted fa-cog"></i> [[modules:chat.manage-room]]
