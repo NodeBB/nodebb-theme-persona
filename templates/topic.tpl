@@ -79,6 +79,11 @@
 		{{{ if config.enableQuickReply }}}
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		{{{ end }}}
+		{{{ if whoreadit }}}
+		<div class="d-inline-block hidden-xs">
+			<!-- IMPORT partials/topic/who-read-it.tpl -->
+		</div>
+		{{{ end }}}
 
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
