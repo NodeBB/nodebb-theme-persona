@@ -1,4 +1,12 @@
 <div class="d-flex gap-1 align-items-stretch">
+	<!-- search -->
+	<div class="position-relative align-self-center">
+		<input component="chat/room/search" class="form-control form-control-sm" placeholder="[[search:type-to-search]]" style="width: 150px;">
+		<a component="chat/room/search/clear" href="#" class="hidden px-2 py-1 position-absolute top-50 end-0 translate-middle-y">
+			<i class="fa fa-times text-muted opacity-75"></i>
+		</a>
+	</div>
+
 	<!-- notification dropdown -->
 	<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.notification-settings]]">
 		<button class="btn btn-sm btn-light position-relative" data-bs-toggle="dropdown">
