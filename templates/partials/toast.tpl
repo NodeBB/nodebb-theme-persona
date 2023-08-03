@@ -1,5 +1,4 @@
-<div id="{alert_id}" role="alert" class="alert alert-dismissible alert-{type}" component="toaster/toast">
-	<button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="close"></button>
+<div id="{alert_id}" role="alert" class="alert alert-dismissible alert-{type} fade show" component="toaster/toast">
 	<!-- IF image -->
 	<img src="{image}">
 	<!-- ENDIF image -->
@@ -9,6 +8,8 @@
 	<!-- ENDIF title -->
 
 	<!-- IF message -->
-	<p>{message}</p>
+	<p class="mb-0">{message}</p>
 	<!-- ENDIF message -->
+
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
 </div>
