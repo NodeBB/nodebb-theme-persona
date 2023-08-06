@@ -1,4 +1,7 @@
-<div component="chat/composer" class="d-flex flex-column flex-md-row gap-2 border-top pt-2 align-items-start align-items-md-end">
+<div component="chat/composer" class="d-flex flex-column gap-2 border-top pt-2 align-items-start">
+	<div component="chat/composer/replying-to" data-tomid="" class="text-sm px-2 d-flex gap-2 align-items-center hidden">
+		<div component="chat/composer/replying-to-text"></div> <button component="chat/composer/replying-to-cancel" class="btn-ghost-sm px-2 py-1"><i class="fa fa-times"></i></button>
+	</div>
 	<div class="w-100 flex-grow-1 flex-nowrap position-relative d-flex rounded-2 border border-secondary p-1 align-items-end">
 		<button component="chat/upload/button" class="btn btn-light btn-sm px-2 rounded-1" type="button"><i class="fa fa-fw fa-upload"></i></button>
 		<div class="flex-grow-1 align-self-center">

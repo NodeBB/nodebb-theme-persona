@@ -16,20 +16,24 @@
 				<button id="chat-close-btn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 
-			<div class="modal-body">
-				<div component="chat/messages" data-roomid="{roomId}">
-					<div class="position-relative">
-						<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button" style="z-index: 1;">[[modules:chat.scroll-up-alert]]</div>
+			<div class="modal-body d-flex flex-column" style="height: 500px;">
+				<div class="d-flex flex-grow-1 gap-1 overflow-auto" style="min-width: 0px;">
+					<div component="chat/messages" class="expanded-chat d-flex flex-column flex-grow-1" data-roomid="{roomId}" style="min-width: 0px;">
+						<!-- IMPORT partials/chats/scroll-up-alert.tpl -->
+						<ul component="chat/message/content" class="chat-content p-0 m-0 list-unstyled overflow-auto flex-grow-1">
+							<!-- IMPORT partials/chats/messages.tpl -->
+						</ul>
+						<ul component="chat/message/search/results" class="chat-content p-0 m-0 list-unstyled overflow-auto flex-grow-1 hidden">
+							<div component="chat/message/search/no-results" class="text-center p-4 d-flex flex-column">
+								<div class="p-4"><i class="fa-solid fa-wind fs-2 text-muted"></i></div>
+								<div class="text-xs fw-semibold text-muted">[[search:no-matches]]</div>
+							</div>
+						</ul>
+						<!-- IMPORT partials/chats/composer.tpl -->
 					</div>
-
-					<ul class="chat-content">
-						<!-- IMPORT partials/chats/messages.tpl -->
-					</ul>
-
-					<!-- IMPORT partials/chats/composer.tpl -->
 				</div>
-				<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 			</div>
+			<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 		</div>
 	</div>
 </div>
