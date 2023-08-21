@@ -1,4 +1,4 @@
-<div class="d-flex flex-column h-100">
+<div component="chat/message/window" class="d-flex flex-column h-100" >
 	{{{ if !roomId }}}
 	<div class="d-flex flex-column align-items-center gap-3 p-5">
 		<i class="fa-solid fa-wind fs-2 text-muted"></i>
@@ -13,10 +13,10 @@
 
 		<!-- IMPORT partials/chats/options.tpl -->
 	</div>
+	<!-- IMPORT partials/chats/scroll-up-alert.tpl -->
 	<hr class="my-1"/>
 	<div class="d-flex flex-grow-1 gap-1 overflow-auto" style="min-width: 0px;">
 		<div component="chat/messages" class="expanded-chat d-flex flex-column flex-grow-1" data-roomid="{roomId}" style="min-width: 0px;">
-			<!-- IMPORT partials/chats/scroll-up-alert.tpl -->
 			<ul component="chat/message/content" class="chat-content p-0 m-0 list-unstyled overflow-auto flex-grow-1">
 				<!-- IMPORT partials/chats/messages.tpl -->
 			</ul>
