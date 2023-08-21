@@ -32,10 +32,11 @@
 		<div component="chat/message/body" class="message-body">
 			{messages.content}
 		</div>
-
+		<!-- IMPORT partials/chats/reactions.tpl -->
 		<div component="chat/message/controls" class="btn-group controls">
+			<!-- IMPORT partials/chats/add-reaction.tpl -->
 			<button class="btn btn-sm btn-link" data-action="reply"><i class="fa fa-reply"></i></button>
-			{{{ if (!config.disableChatMessageEditing && messages.self) }}}
+			{{{ if (isAdminOrGlobalMod || (!config.disableChatMessageEditing && messages.self)) }}}
 			<button class="btn btn-sm btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 			<button class="btn btn-sm btn-link" data-action="delete"><i class="fa fa-times"></i></button>
 			<button class="btn btn-sm btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
