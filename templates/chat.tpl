@@ -2,12 +2,12 @@
 	<div class="modal-dialog">
 		<div class="modal-content" component="chat/message/window">
 			<div class="modal-header d-flex">
-				<div class="fs-6 flex-grow-1" component="chat/room/name" data-icon="{icon}">{{{ if ./roomName }}}<i class="fa {icon} text-muted"></i> {roomName}{{{ else }}}{./chatWithMessage}{{{ end}}}</div>
-				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize">
+				<div class="fs-6 flex-grow-1 fw-semibold tracking-tight text-truncate text-nowrap" component="chat/room/name" data-icon="{icon}">{{{ if ./roomName }}}<i class="fa {icon} text-muted"></i> {roomName}{{{ else }}}{./chatWithMessage}{{{ end}}}</div>
+				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize" title="[[modules:chat.maximize]]" data-bs-toggle="tooltip" data-bs-placement="bottom">
 					<span aria-hidden="true"><i class="fa fa-fw fa-expand"></i></span>
 					<span class="sr-only">[[modules:chat.maximize]]</span>
 				</button>
-				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="minimize">
+				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="minimize" title="[[modules:chat.minimize]]" data-bs-toggle="tooltip" data-bs-placement="bottom">
 					<span aria-hidden="true"><i class="fa fa-fw fa-minus"></i></span>
 					<span class="sr-only">[[modules:chat.minimize]]</span>
 				</button>
