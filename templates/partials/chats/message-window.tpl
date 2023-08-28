@@ -30,6 +30,7 @@
 		</div>
 
 		<!-- IMPORT partials/chats/user-list.tpl -->
+		<!-- IMPORT partials/chats/pinned-messages.tpl -->
 	</div>
 	{{{ end }}}
 </div>

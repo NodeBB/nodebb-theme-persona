@@ -41,9 +41,12 @@
 		</ul>
 	</div>
 
+	<!-- pinned messages -->
+	<button component="chat/pinned/messages/btn" class="btn btn-sm btn-light" title="[[modules:chat.pinned-messages]]" data-bs-toggle="tooltip" data-bs-placement="bottom">
+		<i class="fa fa-thumb-tack text-muted"></i>
+	</button>
 
-
-
+	<!-- manage/options dropdown -->
 	<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.options]]">
 		<button class="btn btn-sm btn-light" data-bs-toggle="dropdown" component="chat/controlsToggle">
 			<i class="fa fa-gear text-muted"></i>
@@ -76,6 +79,7 @@
 		</ul>
 	</div>
 
+	<!-- users toggle -->
 	{{{ if users.length }}}
 	<div component="chat/user/list/btn" class="btn btn-sm btn-light d-none d-lg-flex flex-nowrap gap-3 align-items-center" title="[[modules:chat.view-users-list]]" data-bs-toggle="tooltip" data-bs-placement="bottom">
 		<div class="d-flex text-nowrap">

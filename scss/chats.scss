@@ -334,6 +334,17 @@ body.page-user-chats {
 					opacity: 0.3;
 				}
 			}
+			&.pinned {
+				.message-body-wrapper .controls {
+					[data-action="pin"] {
+						display: none;
+					}
+
+					[data-action="unpin"] {
+						display: inline;
+					}
+				}
+			}
 
 			.chat-user-image {
 				@include user-icon-style(32px, 1.6rem, 50%);
@@ -393,7 +404,7 @@ body.page-user-chats {
 					border: 1px solid $gray-200;
 					box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
-					[data-action="restore"] {
+					[data-action="restore"], [data-action="unpin"] {
 						display: none;
 					}
 				}
