@@ -10,6 +10,10 @@
 		{{{ each messages }}}
 		<li component="chat/message" class="chat-message mx-2 pe-2 {{{ if messages.deleted }}} deleted{{{ end }}} {{{ if messages.pinned}}} pinned{{{ end }}} border-top pt-3" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-timestamp="{messages.timestamp}" data-username="{messages.fromUser.username}" data-index="{./index}">
 
+			{{{ if messages.parent }}}
+			<!-- IMPORT partials/chats/parent.tpl -->
+			{{{ end }}}
+
 			<div class="message-header lh-1 d-flex align-items-center gap-2 text-sm pb-2">
 				<a href="{config.relative_path}/user/{messages.fromUser.userslug}" class="text-decoration-none">{buildAvatar(messages.fromUser, "18px", true, "not-responsive")}</a>
 				<span class="chat-user fw-semibold"><a href="{config.relative_path}/user/{messages.fromUser.userslug}">{messages.fromUser.displayname}</a></span>
