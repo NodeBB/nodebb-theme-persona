@@ -280,7 +280,7 @@ body.page-user-chats {
 			flex: 1;
 		}
 	}
-	[component="chat/user/list/btn"] {
+	[component="chat/user/list/btn"], [component="chat/pinned/messages/btn"] {
 		display: none!important;
 	}
 }

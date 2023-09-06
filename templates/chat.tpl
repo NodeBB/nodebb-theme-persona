@@ -13,7 +13,7 @@
 				</button>
 				<!-- IMPORT partials/chats/options.tpl -->
 
-				<button id="chat-close-btn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<button id="chat-close-btn" type="button" class="btn-close" aria-label="Close"></button>
 			</div>
 			<!-- IMPORT partials/chats/scroll-up-alert.tpl -->
 			<div class="modal-body d-flex flex-column" style="height: 500px;">
