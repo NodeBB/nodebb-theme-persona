@@ -8,6 +8,7 @@
 	<div class="category {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
+		{{{ if (topics.length || privileges.topics:create) }}}
 		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
 			<div class="d-flex gap-1 align-items-stretch">
 				{{{ if privileges.topics:create }}}
@@ -28,14 +29,13 @@
 				<!-- IMPORT partials/category/tools.tpl -->
 			</div>
 		</div>
+		{{{ end }}}
 
-		{{{ if !topics.length }}}
-		{{{ if privileges.topics:create }}}
+		{{{ if (!topics.length && privileges.topics:create)}}}
 		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
 			[[category:no_topics]]
 		</div>
-		{{{ end }}}
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
