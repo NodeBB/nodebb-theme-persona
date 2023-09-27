@@ -2,7 +2,7 @@
 
 <div class="users row">
 	<div class="col-12">
-	<h1>[[pages:{template.name}, {username}]]</h1>
+	<h1 class="fs-2">[[pages:{template.name}, {username}]]</h1>
 
 	<!-- IMPORT partials/users_list.tpl -->
 

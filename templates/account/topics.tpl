@@ -1,7 +1,7 @@
 <!-- IMPORT partials/account/header.tpl -->
 
 <div class="row">
-	<h1>{title}</h1>
+	<h1 class="fs-2">{title}</h1>
 	<!-- IF showSort -->
 	<div class="btn-toolbar justify-content-end mb-2">
 		<div class="btn-group bottom-sheet" component="thread/sort">

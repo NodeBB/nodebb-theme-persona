@@ -1,5 +1,5 @@
 <!-- IMPORT partials/account/header.tpl -->
-<h1>[[pages:account/blocks, {username}]]</h1>
+<h1 class="fs-2">[[pages:account/blocks, {username}]]</h1>
 <div class="row justify-content-end mb-2">
 	<div class="col-3">
 		<div class="dropdown">
