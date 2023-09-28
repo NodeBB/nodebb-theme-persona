@@ -47,6 +47,11 @@
 		<!-- IMPORT partials/topic/merged-message.tpl -->
 		{{{ end }}}
 
+		{{{ if forker }}}
+		<!-- IMPORT partials/topic/forked-message.tpl -->
+		{{{ end }}}
+
+
 		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 		{{{ end }}}
