@@ -1,7 +1,9 @@
 <div class="text-center">
 	<div class="card mb-3">
 		<div class="card-body collapse" id="flags-daily-wrapper" aria-expanded="false">
-			<div><canvas id="flags:daily" height="150"></canvas></div>
+			<div class="position-relative" style="aspect-ratio: 2; max-height: initial;">
+				<canvas id="flags:daily" style="max-height: initial;"></canvas>
+			</div>
 		</div>
 		<div class="card-footer" data-bs-toggle="collapse" data-bs-target="#flags-daily-wrapper" aria-controls="#flags-daily-wrapper"><small>[[flags:graph-label]]</small>&nbsp;<i class="fa fa-sort"></i></div>
 	</div>
