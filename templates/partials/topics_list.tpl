@@ -93,7 +93,7 @@
 				<a class="background-link" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"></a>
 				<!-- IF topics.unreplied -->
 				<p>
-					[[category:no_replies]]
+					[[category:no-replies]]
 				</p>
 				<!-- ELSE -->
 				<!-- IF topics.teaser.pid -->

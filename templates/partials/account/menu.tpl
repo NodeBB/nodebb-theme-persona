@@ -8,20 +8,20 @@
 		<!-- IF !banned -->
 		<!-- IF !config.disableChat -->
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
-			<a class="dropdown-item" component="account/chat" href="#">[[user:chat_with, {username}]]</a>
+			<a class="dropdown-item" component="account/chat" href="#">[[user:chat-with, {username}]]</a>
 		</li>
 		<li>
-			<a class="dropdown-item" component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
+			<a class="dropdown-item" component="account/new-chat" href="#">[[user:new-chat-with, {username}]]</a>
 		</li>
 		<!-- ENDIF !config.disableChat -->
 		<li>
 			<a class="dropdown-item" component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
 		<li>
-			<a class="dropdown-item {{{ if ./isBlocked }}}hidden{{{ end }}}" component="account/block" href="#">[[user:block_user]]</a>
+			<a class="dropdown-item {{{ if ./isBlocked }}}hidden{{{ end }}}" component="account/block" href="#">[[user:block-user]]</a>
 		</li>
 		<li>
-			<a class="dropdown-item {{{ if !./isBlocked }}}hidden{{{ end }}}" component="account/unblock" href="#">[[user:unblock_user]]</a>
+			<a class="dropdown-item {{{ if !./isBlocked }}}hidden{{{ end }}}" component="account/unblock" href="#">[[user:unblock-user]]</a>
 		</li>
 		<li role="separator" class="dropdown-divider"></li>
 		<!-- ENDIF !banned -->
@@ -38,29 +38,29 @@
 		<!-- IF !isSelf -->
 		{{{ if (canBan || canMute) }}}
 		<li role="separator" class="dropdown-divider"></li>
-		<li class="dropdown-header">[[user:admin_actions_label]]</li>
+		<li class="dropdown-header">[[user:admin-actions-label]]</li>
 		{{{ end }}}
 		{{{ if canBan }}}
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
-			<a class="dropdown-item" component="account/ban" href="#">[[user:ban_account]]</a>
+			<a class="dropdown-item" component="account/ban" href="#">[[user:ban-account]]</a>
 		</li>
 		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
-			<a class="dropdown-item" component="account/unban" href="#">[[user:unban_account]]</a>
+			<a class="dropdown-item" component="account/unban" href="#">[[user:unban-account]]</a>
 		</li>
 		{{{ end }}}
 		{{{ if canMute }}}
 		<li class="<!-- IF muted -->hide<!-- ENDIF muted -->">
-			<a class="dropdown-item" component="account/mute" href="#">[[user:mute_account]]</a>
+			<a class="dropdown-item" component="account/mute" href="#">[[user:mute-account]]</a>
 		</li>
 		<li class="<!-- IF !muted -->hide<!-- ENDIF !muted -->">
-			<a class="dropdown-item" component="account/unmute" href="#">[[user:unmute_account]]</a>
+			<a class="dropdown-item" component="account/unmute" href="#">[[user:unmute-account]]</a>
 		</li>
 		{{{ end }}}
 		<!-- IF isAdmin -->
 		<li>
-			<a component="account/delete-account" href="#" class="dropdown-item">[[user:delete_account_as_admin]]</a>
-			<a component="account/delete-content" href="#" class="dropdown-item">[[user:delete_content]]</a>
-			<a component="account/delete-all" href="#" class="dropdown-item">[[user:delete_all]]</a>
+			<a component="account/delete-account" href="#" class="dropdown-item">[[user:delete-account-as-admin]]</a>
+			<a component="account/delete-content" href="#" class="dropdown-item">[[user:delete-content]]</a>
+			<a component="account/delete-all" href="#" class="dropdown-item">[[user:delete-all]]</a>
 		</li>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->
@@ -81,7 +81,7 @@
 		<li><a class="dropdown-item d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]] <span class="badge bg-secondary rounded-pill ms-2" title="{counts.groups}">{formattedNumber(counts.groups)}</span></a></li>
 
 		<!-- IF canEdit -->
-		<li><a class="dropdown-item d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/categories">[[user:watched_categories]] <span class="badge bg-secondary rounded-pill ms-2" title="{counts.categoriesWatched}">{formattedNumber(counts.categoriesWatched)}</span></a></li>
+		<li><a class="dropdown-item d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/categories">[[user:watched-categories]] <span class="badge bg-secondary rounded-pill ms-2" title="{counts.categoriesWatched}">{formattedNumber(counts.categoriesWatched)}</span></a></li>
 		{{{ if isSelf }}}
 		<li><a class="dropdown-item d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/tags">
 		[[user:watched-tags]] <span class="badge bg-secondary rounded-pill ms-2" title="{counts.tagsWatched}">{formattedNumber(counts.tagsWatched)}</span></a></li>

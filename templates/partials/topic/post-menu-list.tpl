@@ -92,7 +92,7 @@
 
 	<!-- IF postSharing.length -->
 	<!-- IF config.loggedIn --><li class="dropdown-divider"></li><!-- ENDIF config.loggedIn -->
-	<li class="dropdown-header">[[topic:share_this_post]]</li>
+	<li class="dropdown-header">[[topic:share-this-post]]</li>
 	<!-- ENDIF postSharing.length -->
 	{{{each postSharing}}}
 		<li>

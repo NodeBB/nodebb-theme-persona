@@ -25,12 +25,12 @@
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
 						{{{end}}}
 					</select>
-					<p class="form-text">[[user:homepage_description]]</p>
+					<p class="form-text">[[user:homepage-description]]</p>
 				</div>
 				<div id="homePageCustom" class="mb-2" style="display: none;">
-					<label for="homePageCustom">[[user:custom_route]]</label>
+					<label for="homePageCustom">[[user:custom-route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="form-text">[[user:custom_route_help]]</p>
+					<p class="form-text">[[user:custom-route-help]]</p>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
@@ -41,7 +41,7 @@
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/>
 					<strong>
-						<label class="form-check-label">[[user:show_email]]</label>
+						<label class="form-check-label">[[user:show-email]]</label>
 					</strong>
 				</div>
 				<!-- ENDIF !hideEmail -->
@@ -50,7 +50,7 @@
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/>
 					<strong>
-						<label class="form-check-label">[[user:show_fullname]]</label>
+						<label class="form-check-label">[[user:show-fullname]]</label>
 					</strong>
 				</div>
 				<!-- ENDIF !hideFullname -->
@@ -58,7 +58,7 @@
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
 					<strong>
-						<label class="form-check-label">[[user:restrict_chats]]</label>
+						<label class="form-check-label">[[user:restrict-chats]]</label>
 					</strong>
 				</div>
 				<!-- ENDIF !config.disableChat -->
@@ -69,28 +69,28 @@
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/>
 					<strong>
-						<label class="form-check-label">[[user:open_links_in_new_tab]]</label>
+						<label class="form-check-label">[[user:open-links-in-new-tab]]</label>
 					</strong>
 				</div>
 				<!-- IF inTopicSearchAvailable -->
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/>
 					<strong>
-						<label class="form-check-label">[[user:enable_topic_searching]]</label>
+						<label class="form-check-label">[[user:enable-topic-searching]]</label>
 					</strong>
 				</div>
-				<p class="form-text">[[user:topic_search_help]]</p>
+				<p class="form-text">[[user:topic-search-help]]</p>
 				<!-- ENDIF inTopicSearchAvailable -->
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/>
 					<strong>
-						<label class="form-check-label">[[user:update_url_with_post_index]]</label>
+						<label class="form-check-label">[[user:update-url-with-post-index]]</label>
 					</strong>
 				</div>
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/>
 					<strong>
-						<label class="form-check-label">[[user:scroll_to_my_post]]</label>
+						<label class="form-check-label">[[user:scroll-to-my-post]]</label>
 					</strong>
 				</div>
 			</div>
@@ -98,14 +98,14 @@
 			<h4>[[global:pagination]]</h4>
 			<div class="card card-body mb-3">
 				<div class="mb-2 form-check">
-					<input type="checkbox" class="form-check-input" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong><label class="form-check-label">[[user:paginate_description]]</label></strong>
+					<input type="checkbox" class="form-check-input" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->> <strong><label class="form-check-label">[[user:paginate-description]]</label></strong>
 				</div>
 				<div class="mb-3">
-					<strong><label class="form-label">[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</label></strong>
+					<strong><label class="form-label">[[user:topics-per-page]] ([[user:max-items-per-page, {maxTopicsPerPage}]])</label></strong>
 					<input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
 				</div>
 				<div class="">
-					<strong><label class="form-label">[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</label></strong>
+					<strong><label class="form-label">[[user:posts-per-page]] ([[user:max-items-per-page, {maxPostsPerPage}]])</label></strong>
 					<input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
 				</div>
 			</div>
@@ -117,19 +117,19 @@
 				<div class="mb-2">
 					<label class="form-label">[[user:category-topic-sort]]</label>
 					<select class="form-select" data-property="categoryTopicSort">
-						<option value="newest_to_oldest" {{{ if (settings.categoryTopicSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest_to_oldest]]</option>
-						<option value="oldest_to_newest" {{{ if (settings.categoryTopicSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest_to_newest]]</option>
-						<option value="most_posts" {{{ if (settings.categoryTopicSort == "most_posts") }}}selected{{{ end }}}>[[topic:most_posts]]</option>
-						<option value="most_votes" {{{ if (settings.categoryTopicSort == "most_votes") }}}selected{{{ end }}}>[[topic:most_votes]]</option>
-						<option value="most_views" {{{ if (settings.categoryTopicSort == "most_views") }}}selected{{{ end }}}>[[topic:most_views]]</option>
+						<option value="newest_to_oldest" {{{ if (settings.categoryTopicSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest-to-oldest]]</option>
+						<option value="oldest_to_newest" {{{ if (settings.categoryTopicSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest-to-newest]]</option>
+						<option value="most_posts" {{{ if (settings.categoryTopicSort == "most_posts") }}}selected{{{ end }}}>[[topic:most-posts]]</option>
+						<option value="most_votes" {{{ if (settings.categoryTopicSort == "most_votes") }}}selected{{{ end }}}>[[topic:most-votes]]</option>
+						<option value="most_views" {{{ if (settings.categoryTopicSort == "most_views") }}}selected{{{ end }}}>[[topic:most-views]]</option>
 					</select>
 				</div>
 				<div class="">
 					<label class="form-label">[[user:topic-post-sort]]</label>
 					<select class="form-select" data-property="topicPostSort">
-						<option value="oldest_to_newest" {{{ if (settings.topicPostSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest_to_newest]]</option>
-						<option value="newest_to_oldest" {{{ if (settings.topicPostSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest_to_oldest]]</option>
-						<option value="most_votes" {{{ if (settings.topicPostSort == "most_votes") }}}selected{{{ end }}}>[[topic:most_votes]]</option>
+						<option value="oldest_to_newest" {{{ if (settings.topicPostSort == "oldest_to_newest") }}}selected{{{ end }}}>[[topic:oldest-to-newest]]</option>
+						<option value="newest_to_oldest" {{{ if (settings.topicPostSort == "newest_to_oldest") }}}selected{{{ end }}}>[[topic:newest-to-oldest]]</option>
+						<option value="most_votes" {{{ if (settings.topicPostSort == "most_votes") }}}selected{{{ end }}}>[[topic:most-votes]]</option>
 					</select>
 				</div>
 			</div>
@@ -138,13 +138,13 @@
 			<h4>[[global:email]]</h4>
 			<div class="card card-body mb-3">
 				<div class="mb-2">
-					<label for="dailyDigestFreq">[[user:digest_label]]</label>
+					<label for="dailyDigestFreq">[[user:digest-label]]</label>
 					<select class="form-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						{{{each dailyDigestFreqOptions}}}
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						{{{end}}}
 					</select>
-					<p class="form-text">[[user:digest_description]]</p>
+					<p class="form-text">[[user:digest-description]]</p>
 				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
@@ -172,7 +172,7 @@
 				</div>
 				<!-- IF isAdmin -->
 				<!-- IF isSelf -->
-				<label>[[user:acp_language]]</label>
+				<label>[[user:acp-language]]</label>
 				<div class="row">
 					<div class="mb-2 col-lg-12">
 						<select data-property="acpLang" class="form-select">
@@ -191,13 +191,13 @@
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/>
 					<strong>
-						<label class="form-check-label">[[user:follow_topics_you_create]]</label>
+						<label class="form-check-label">[[user:follow-topics-you-create]]</label>
 					</strong>
 				</div>
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/>
 					<strong>
-						 <label class="form-check-label">[[user:follow_topics_you_reply_to]]</label>
+						 <label class="form-check-label">[[user:follow-topics-you-reply-to]]</label>
 					</strong>
 				</div>
 				<div class="mb-2">
@@ -221,9 +221,9 @@
 					<div class="mb-2 col-5">
 						<select class="form-select" data-property="{notificationSettings.name}">
 							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
-							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
-							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
-							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification-only]]</option>
+							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email-only]]</option>
+							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification-and-email]]</option>
 						</select>
 					</div>
 				</div>
@@ -247,7 +247,7 @@
 		</div>
 	</div>
 	<div class="form-actions">
-		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
+		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save-changes]]</a>
 	</div>
 </div>
 

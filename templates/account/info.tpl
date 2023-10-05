@@ -19,7 +19,7 @@
 				{../browser} {../version} on {../platform}<br />
 				<small class="timeago text-muted" title="{../datetimeISO}"></small>
 				<ul>
-					<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
+					<li><strong>[[global:ip-address]]</strong>: {../ip}</li>
 				</ul>
 			</li>
 			{{{end}}}
@@ -108,11 +108,11 @@
 
 				<!-- IF !banned -->
 				<!-- IF !isSelf -->
-				<button class="btn btn-sm float-end btn-danger" component="account/ban">[[user:ban_account]]</button>
+				<button class="btn btn-sm float-end btn-danger" component="account/ban">[[user:ban-account]]</button>
 				<!-- ENDIF !isSelf -->
 				<!-- ELSE -->
 				<!-- IF !isSelf -->
-				<button class="btn btn-sm float-end btn-success" component="account/unban">[[user:unban_account]]</button>
+				<button class="btn btn-sm float-end btn-success" component="account/unban">[[user:unban-account]]</button>
 				<!-- ENDIF !isSelf -->
 				<!-- ENDIF !banned -->
 			</h5>
@@ -149,11 +149,11 @@
 
 				{{{ if !muted }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm float-end btn-danger" component="account/mute">[[user:mute_account]]</button>
+				<button class="btn btn-sm float-end btn-danger" component="account/mute">[[user:mute-account]]</button>
 				{{{ end }}}
 				{{{ else }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm float-end btn-success" component="account/unmute">[[user:unmute_account]]</button>
+				<button class="btn btn-sm float-end btn-success" component="account/unmute">[[user:unmute-account]]</button>
 				{{{ end }}}
 				{{{ end }}}
 			</h5>

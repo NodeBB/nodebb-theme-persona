@@ -11,8 +11,8 @@
 	</li>
 	<li class="notif-dropdown-link">
 		<div class="btn-group d-flex justify-content-center">
-			<a role="button" href="#" class="btn btn-light mark-all-read"><i class="fa fa-check-double"></i> [[notifications:mark_all_read]]</a>
-			<a class="btn btn-light" href="{relative_path}/notifications"><i class="fa fa-list"></i> [[notifications:see_all]]</a>
+			<a role="button" href="#" class="btn btn-light mark-all-read"><i class="fa fa-check-double"></i> [[notifications:mark-all-read]]</a>
+			<a class="btn btn-light" href="{relative_path}/notifications"><i class="fa fa-list"></i> [[notifications:see-all]]</a>
 		</div>
 	</li>
 </ul>

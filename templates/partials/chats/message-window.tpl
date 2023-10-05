@@ -2,7 +2,7 @@
 	{{{ if !roomId }}}
 	<div class="d-flex flex-column align-items-center gap-3 p-5">
 		<i class="fa-solid fa-wind fs-2 text-muted"></i>
-		<span class="text-muted text-sm">[[modules:chat.no_active]]</span>
+		<span class="text-muted text-sm">[[modules:chat.no-active]]</span>
 	</div>
 	{{{ else }}}
 	<div component="chat/header" class="d-flex align-items-center px-md-3 gap-3">

@@ -1,6 +1,6 @@
 <div id="results" class="search-results col-md-12" data-search-query="{search_query}">
 	{{{ if matchCount }}}
-	<div class="alert alert-info">[[search:results_matching, {matchCount}, {search_query}, {time}]] </div>
+	<div class="alert alert-info">[[search:results-matching, {matchCount}, {search_query}, {time}]] </div>
 	{{{ else }}}
 	{{{ if search_query }}}
 	<div class="alert alert-warning">[[search:no-matches]]</div>

@@ -30,7 +30,7 @@
                         <button id="myNextPostBtn" class="btn btn-outline-secondary form-control" disabled>[[topic:go-to-my-next-post]]</button>
                     </div>
                     <div class="col-6">
-                        <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                        <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter-index]]">
                     </div>
                 </div>
             </li>

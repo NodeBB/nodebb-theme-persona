@@ -21,7 +21,7 @@
 	{{{ end }}}
 
 	{{{ if !tags.length }}}
-	<div class="alert alert-warning">[[tags:no_tags]]</div>
+	<div class="alert alert-warning">[[tags:no-tags]]</div>
 	{{{ end }}}
 
 	<div class="category row">

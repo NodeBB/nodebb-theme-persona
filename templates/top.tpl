@@ -23,7 +23,7 @@
 
 	<div class="category">
 		{{{ if !topics.length }}}
-		<div class="alert alert-warning" id="category-no-topics">[[top:no_top_topics]]</div>
+		<div class="alert alert-warning" id="category-no-topics">[[top:no-top-topics]]</div>
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->

@@ -13,7 +13,7 @@
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="quickreply-message">
 			<textarea name="content" component="topic/quickreply/text" class="form-control mousetrap" rows="5" placeholder="[[modules:composer.textarea.placeholder]]"></textarea>
-			<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
+			<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 		</div>
 		<div class="btn-group float-end">
 			<button type="submit" component="topic/quickreply/button" class="btn btn-primary">[[topic:post-quick-reply]]</button>

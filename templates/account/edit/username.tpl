@@ -10,8 +10,8 @@
 
 	<!-- IF isSelf -->
 	<div class="mb-2">
-		<label class="form-label fw-bold" for="inputCurrentPassword">[[user:current_password]]</label>
-		<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword -->>
+		<label class="form-label fw-bold" for="inputCurrentPassword">[[user:current-password]]</label>
+		<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current-password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword -->>
 	</div>
 	<!-- ENDIF isSelf -->
 
@@ -19,7 +19,7 @@
 
 	<br/>
 	<div class="form-actions">
-		<button id="submitBtn" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_username]]</button>
+		<button id="submitBtn" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change-username]]</button>
 	</div>
 </form>
 

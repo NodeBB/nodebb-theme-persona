@@ -41,7 +41,7 @@
 
 		<div class="stat">
 			<div title="{profileviews}">{humanReadableNumber(profileviews)}</div>
-			<span class="stat-label">[[user:profile_views]]</span>
+			<span class="stat-label">[[user:profile-views]]</span>
 		</div>
 
 		<div class="stat">
@@ -69,7 +69,7 @@
 
 		<!-- IF email -->
 		<span>[[user:email]]</span>
-		<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
+		<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email-hidden]]"></i> {email}</strong>
 		<!-- ENDIF email -->
 
 		<!-- IF websiteName -->

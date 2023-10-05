@@ -6,14 +6,14 @@
     </span>
     {{{ else }}}
     <i class="fa fa-fw fa-list"></i>
-    <span class="visible-md-inline visible-lg-inline">[[unread:all_categories]]</span>{{{ end }}}
+    <span class="visible-md-inline visible-lg-inline">[[unread:all-categories]]</span>{{{ end }}}
 </button>
 <div component="category-selector-search" class="hidden position-absolute">
     <input type="text" class="form-control" placeholder="[[search:type-to-search]]" autocomplete="off">
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li role="presentation" class="category" data-cid="all">
-        <a class="dropdown-item" role="menu-item" href="{{{ if allCategoriesUrl }}}{config.relative_path}/{allCategoriesUrl}{{{ else }}}#{{{ end }}}"><i component="category/select/icon" class="fa fa-fw fa-check {{{if selectedCategory}}}invisible{{{end}}}"></i> [[unread:all_categories]]</a>
+        <a class="dropdown-item" role="menu-item" href="{{{ if allCategoriesUrl }}}{config.relative_path}/{allCategoriesUrl}{{{ else }}}#{{{ end }}}"><i component="category/select/icon" class="fa fa-fw fa-check {{{if selectedCategory}}}invisible{{{end}}}"></i> [[unread:all-categories]]</a>
     </li>
     {{{each categoryItems}}}
     <li role="presentation" class="category {{{ if ../disabledClass }}}disabled{{{ end }}}" data-cid="{../cid}" data-parent-cid="{../parentCid}" data-name="{../name}">

@@ -26,7 +26,7 @@
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="dropdownMenu1">
-				<li role="presentation"><a class="dropdown-item" role="menuitem" tabindex="-1" href="#" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
+				<li role="presentation"><a class="dropdown-item" role="menuitem" tabindex="-1" href="#" component="notifications/mark_all">[[notifications:mark-all-read]]</a></li>
 			</ul>
 		</div>
 	</div>
@@ -34,7 +34,7 @@
 	<hr />
 
 	<div class="alert alert-info {{{ if notifications.length }}}hidden{{{ end }}}">
-		[[notifications:no_notifs]]
+		[[notifications:no-notifs]]
 	</div>
 
 	<ul class="notifications-list list-unstyled" data-nextstart="{nextStart}">

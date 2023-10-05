@@ -14,7 +14,7 @@
 		</div>
 		<!-- ELSE -->
 		<div class="alert alert-warning">
-			[[user:consent.not_received]]
+			[[user:consent.not-received]]
 			<br /><br />
 			<div class="text-center">
 				<button class="btn btn-warning" data-action="consent">[[user:consent.give]]</button>
@@ -23,11 +23,11 @@
 		<!-- END -->
 		<div class="card">
 			<div class="card-body">
-				<p>[[user:consent.email_intro]]</p>
+				<p>[[user:consent.email-intro]]</p>
 				<!-- IF digest.enabled -->
-				<p>[[user:consent.digest_frequency, {digest.frequency}]]</p>
+				<p>[[user:consent.digest-frequency, {digest.frequency}]]</p>
 				<!-- ELSE -->
-				[[user:consent.digest_off]]
+				[[user:consent.digest-off]]
 				<!-- END -->
 
 				<div class="text-center">
@@ -42,24 +42,24 @@
 	<div class="col-sm-6">
 		<div class="card">
 			<div class="card-body">
-				<p><strong>[[user:consent.right_of_access]]</strong></p>
-				<p>[[user:consent.right_of_access_description]]</p>
-				<p><strong>[[user:consent.right_to_rectification]]</strong></p>
-				<p>[[user:consent.right_to_rectification_description]]</p>
-				<p><strong>[[user:consent.right_to_erasure]]</strong></p>
-				<p>[[user:consent.right_to_erasure_description]]</p>
-				<p><strong>[[user:consent.right_to_data_portability]]</strong></p>
-				<p>[[user:consent.right_to_data_portability_description]]</p>
+				<p><strong>[[user:consent.right-of-access]]</strong></p>
+				<p>[[user:consent.right-of-access-description]]</p>
+				<p><strong>[[user:consent.right-to-rectification]]</strong></p>
+				<p>[[user:consent.right-to-rectification-description]]</p>
+				<p><strong>[[user:consent.right-to-erasure]]</strong></p>
+				<p>[[user:consent.right-to-erasure-description]]</p>
+				<p><strong>[[user:consent.right-to-data-portability]]</strong></p>
+				<p>[[user:consent.right-to-data-portability-description]]</p>
 
 				<div class="btn-group-vertical d-grid">
 					<a data-action="export-profile" class="btn btn-outline-secondary">
-						<i class="fa fa-download"></i> [[user:consent.export_profile]]
+						<i class="fa fa-download"></i> [[user:consent.export-profile]]
 					</a>
 					<a data-action="export-posts" class="btn btn-outline-secondary">
-						<i class="fa fa-download"></i> [[user:consent.export_posts]]
+						<i class="fa fa-download"></i> [[user:consent.export-posts]]
 					</a>
 					<a data-action="export-uploads" class="btn btn-outline-secondary">
-						<i class="fa fa-download"></i> [[user:consent.export_uploads]]
+						<i class="fa fa-download"></i> [[user:consent.export-uploads]]
 					</a>
 				</div>
 			</div>

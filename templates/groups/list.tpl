@@ -8,16 +8,16 @@
 	<div class="row justify-content-between">
 		<div class="col-lg-6">
 			<!-- IF allowGroupCreation -->
-			<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new_group]]</button>
+			<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new-group]]</button>
 			<!-- ENDIF allowGroupCreation -->
 		</div>
 		<div class="col-lg-6">
 			<div class="row justify-content-end">
 				<div class="col-5 col-md-6">
 					<select class="form-select" id="search-sort">
-						<option value="alpha">[[groups:details.group_name]]</option>
-						<option value="count">[[groups:details.member_count]]</option>
-						<option value="date">[[groups:details.creation_date]]</option>
+						<option value="alpha">[[groups:details.group-name]]</option>
+						<option value="count">[[groups:details.member-count]]</option>
+						<option value="date">[[groups:details.creation-date]]</option>
 					</select>
 				</div>
 				<div class="col-7 col-md-6">
@@ -40,7 +40,7 @@
 		<!-- ELSE -->
 		<div class="col-12">
 			<div class="alert alert-warning">
-			[[groups:no_groups_found]]
+			[[groups:no-groups-found]]
 			</div>
 		</div>
 		<!-- ENDIF groups.length -->

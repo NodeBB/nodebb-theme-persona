@@ -7,7 +7,7 @@
 	<!-- IMPORT partials/users_list.tpl -->
 
 	<!-- IF !users.length -->
-	<div class="alert alert-warning text-center">[[user:has_no_follower]]</div>
+	<div class="alert alert-warning text-center">[[user:has-no-follower]]</div>
 	<!-- ENDIF !users.length -->
 
 	<!-- IMPORT partials/paginator.tpl -->

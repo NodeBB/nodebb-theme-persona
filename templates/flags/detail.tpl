@@ -152,17 +152,17 @@
 							{{{ end }}}
 							<li class="dropdown-divider"></li>
 							{{{ if privileges.ban }}}
-							<li class="{{{ if target.user.banned }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="ban">[[user:ban_account]]</a></li>
-							<li class="{{{ if !target.user.banned }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="unban">[[user:unban_account]]</a></li>
+							<li class="{{{ if target.user.banned }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="ban">[[user:ban-account]]</a></li>
+							<li class="{{{ if !target.user.banned }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="unban">[[user:unban-account]]</a></li>
 							{{{ end }}}
 							{{{ if privileges.mute}}}
-							<li class="{{{ if target.user.muted }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="mute">[[user:mute_account]]</a></li>
-							<li class="{{{ if !target.user.muted }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="unmute">[[user:unmute_account]]</a></li>
+							<li class="{{{ if target.user.muted }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="mute">[[user:mute-account]]</a></li>
+							<li class="{{{ if !target.user.muted }}}hidden{{{ end }}}"><a class="dropdown-item" href="#" data-action="unmute">[[user:unmute-account]]</a></li>
 							{{{ end }}}
 							{{{ if privileges.admin:users }}}
-							<li><a class="dropdown-item" href="#" data-action="delete-account">[[user:delete_account_as_admin]]</a></li>
-							<li><a class="dropdown-item" href="#" data-action="delete-content">[[user:delete_content]]</a></li>
-							<li><a class="dropdown-item" href="#" data-action="delete-all">[[user:delete_all]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="delete-account">[[user:delete-account-as-admin]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="delete-content">[[user:delete-content]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="delete-all">[[user:delete-all]]</a></li>
 							{{{ end }}}
 						</ul>
 					</div>

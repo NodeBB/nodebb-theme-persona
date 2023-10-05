@@ -32,7 +32,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
+			<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 		</div>
 	</div>
 </div>

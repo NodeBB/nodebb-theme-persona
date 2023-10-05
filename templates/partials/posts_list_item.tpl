@@ -8,7 +8,7 @@
             {../content}
         </div>
 
-        <small class="topic-category"><a href="{config.relative_path}/category/{../category.slug}">[[global:posted_in, {../category.name}]]</a></small>
+        <small class="topic-category"><a href="{config.relative_path}/category/{../category.slug}">[[global:posted-in, {../category.name}]]</a></small>
 
         {{{ if ../isMainPost }}}
         {{{ if ../topic.tags.length }}}

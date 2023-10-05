@@ -20,7 +20,7 @@
 		</select>
 	</div>
 
-	<button id="save" type="button" class="btn btn-primary">[[global:save_changes]]</button>
+	<button id="save" type="button" class="btn btn-primary">[[global:save-changes]]</button>
 </form>
 
 <!-- IMPORT partials/account/footer.tpl -->
