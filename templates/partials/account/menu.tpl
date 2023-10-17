@@ -6,14 +6,14 @@
 		<!-- IF loggedIn -->
 		<!-- IF !isSelf -->
 		<!-- IF !banned -->
-		<!-- IF !config.disableChat -->
+		<!-- IF canChat -->
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
 			<a class="dropdown-item" component="account/chat" href="#">[[user:chat-with, {username}]]</a>
 		</li>
 		<li>
 			<a class="dropdown-item" component="account/new-chat" href="#">[[user:new-chat-with, {username}]]</a>
 		</li>
-		<!-- ENDIF !config.disableChat -->
+		<!-- ENDIF canChat -->
 		<li>
 			<a class="dropdown-item" component="account/flag" href="#">[[user:flag-profile]]</a>
 		</li>
