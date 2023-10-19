@@ -110,10 +110,8 @@
 				</div>
 			</div>
 
-			<hr/>
-
-			<h6 class="fw-bold">[[global:sort]]</h6>
-			<div class="">
+			<h4 class="fw-bold">[[global:sort]]</h4>
+			<div class="card card-body mb-3">
 				<div class="mb-2">
 					<label class="form-label">[[user:category-topic-sort]]</label>
 					<select class="form-select" data-property="categoryTopicSort">
