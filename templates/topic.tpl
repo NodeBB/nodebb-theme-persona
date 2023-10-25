@@ -3,7 +3,7 @@
 	{{widgets.header.html}}
 	{{{end}}}
 </div>
-<div class="row">
+<div class="row mb-5">
 	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
