@@ -1,4 +1,4 @@
-<li component="chat/message" class="chat-message mx-2 pe-2 fw-light clear{{{ if messages.deleted }}} deleted{{{ end }}} {{{ if messages.pinned}}} pinned{{{ end }}}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}" data-username="{messages.fromUser.username}">
+<li component="chat/message" class="chat-message mx-2 pe-2 fw-light clear{{{ if messages.deleted }}} deleted{{{ end }}} {{{ if messages.pinned}}} pinned{{{ end }}}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-index="{messages.index}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}" data-username="{messages.fromUser.username}">
 
 	{{{ if messages.parent }}}
 	<!-- IMPORT partials/chats/parent.tpl -->
@@ -37,6 +37,7 @@
 			{{{ if isAdminOrGlobalMod }}}
 			<button class="btn btn-sm btn-link chat-ip-button" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle"></i></button>
 			{{{ end }}}
+			<button class="btn btn-sm btn-link" data-action="copy-link" title="[[modules:chat.copy-link]]" data-mid="{messages.mid}"><i class="fa fa-link"></i></button>
 		</div>
 	</div>
 </li>
