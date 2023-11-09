@@ -13,12 +13,12 @@
 
 		<div component="chat/message/edited" class="text-muted float-end {{{ if !messages.edited }}}hidden{{{ end }}}" title="[[global:edited-timestamp, {messages.editedISO}]]"><i class="fa fa-edit"></i></span></div>
 	</div>
-	<div class="message-body-wrapper hover-parent">
+	<div class="message-body-wrapper">
 		<div component="chat/message/body" class="message-body ps-0 py-0 overflow-auto text-break">
 			{messages.content}
 		</div>
 		<div component="chat/message/controls" class="position-relative">
-			<div class="btn-group border shadow-sm controls position-absolute bg-body hover-d-block end-0" style="bottom:1rem;">
+			<div class="btn-group border shadow-sm controls position-absolute bg-body end-0" style="bottom:1rem;">
 				{{{ if (isAdminOrGlobalMod || (!config.disableChatMessageEditing && messages.self)) }}}
 				<button class="btn btn-sm btn-link" data-action="edit" title="[[topic:edit]]"><i class="fa fa-pencil"></i></button>
 				{{{ end }}}

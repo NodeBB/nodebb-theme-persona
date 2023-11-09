@@ -1,6 +1,6 @@
 <div component="chat/composer" class="d-flex flex-column border-top pt-2 align-items-start">
 	<div component="chat/composer/replying-to" data-tomid="" class="text-sm px-2 mb-1 d-flex gap-2 align-items-center hidden">
-		<div component="chat/composer/replying-to-text"></div> <button component="chat/composer/replying-to-cancel" class="btn-ghost-sm px-2 py-1"><i class="fa fa-times"></i></button>
+		<div component="chat/composer/replying-to-text"></div> <button component="chat/composer/replying-to-cancel" class="btn btn-sm btn-light px-2 py-1"><i class="fa fa-times"></i></button>
 	</div>
 	<div class="w-100 flex-grow-1 flex-nowrap position-relative d-flex rounded-2 border border-secondary p-1 align-items-end">
 		<button component="chat/upload/button" class="btn btn-light btn-sm px-2 rounded-1" type="button" title="[[global:upload]]" data-bs-toggle="tooltip"><i class="fa fa-fw fa-upload"></i></button>
@@ -9,7 +9,7 @@
 		</div>
 		<div class="d-flex gap-1">
 			{{{ each composerActions }}}
-			<button data-action="{./action}" class="btn-ghost-sm px-2 {./class}" type="button" title="{./title}" data-bs-toggle="tooltip"><i class="fa {./icon}"></i></button>
+			<button data-action="{./action}" class="btn btn-sm btn-light px-2 {./class} align-items-center" type="button" title="{./title}" data-bs-toggle="tooltip"><i class="fa {./icon}"></i></button>
 			{{{ end }}}
 			<button class="btn btn-primary btn-sm px-2 rounded-1" type="button" data-action="send" title="[[modules:chat.send]]" data-bs-toggle="tooltip"><i class="fa fa-fw fa-paper-plane"></i></button>
 		</div>

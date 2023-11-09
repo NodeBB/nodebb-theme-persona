@@ -25,19 +25,47 @@
 		<div component="chat/message/controls" class="btn-group controls">
 			<!-- IMPORT partials/chats/add-reaction.tpl -->
 			<button class="btn btn-sm btn-link" data-action="reply" title="[[topic:reply]]"><i class="fa fa-reply"></i></button>
-			{{{ if (isAdminOrGlobalMod || (!config.disableChatMessageEditing && messages.self)) }}}
-			<button class="btn btn-sm btn-link" data-action="edit" title="[[topic:edit]]"><i class="fa fa-pencil"></i></button>
-			<button class="btn btn-sm btn-link" data-action="delete" title="[[topic:delete]]"><i class="fa fa-trash"></i></button>
-			<button class="btn btn-sm btn-link" data-action="restore" title="[[topic:restore]]"><i class="fa fa-repeat"></i></button>
-			{{{ end }}}
-			{{{ if (isAdminOrGlobalMod || isOwner )}}}
-				<button class="btn btn-sm btn-link" data-action="pin" title="[[modules:chat.pin-message]]"><i class="fa fa-thumbtack"></i></button>
-				<button class="btn btn-sm btn-link" data-action="unpin" title="[[modules:chat.unpin-message]]"><i class="fa fa-thumbtack fa-rotate-90"></i></button>
-			{{{ end }}}
-			{{{ if isAdminOrGlobalMod }}}
-			<button class="btn btn-sm btn-link chat-ip-button" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle"></i></button>
-			{{{ end }}}
-			<button class="btn btn-sm btn-link" data-action="copy-link" title="[[modules:chat.copy-link]]" data-mid="{messages.mid}"><i class="fa fa-link"></i></button>
+
+			<div class="btn-group d-inline-block">
+				<button class="btn btn-sm btn-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-ellipsis" type="button"></i></button>
+				<ul class="dropdown-menu dropdown-menu-end p-1 text-sm list-unstyled">
+					{{{ if (isAdminOrGlobalMod || (!config.disableChatMessageEditing && messages.self)) }}}
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="edit"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-pencil text-muted"></i> [[topic:edit]]</span></a>
+					</li>
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="delete"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-trash text-muted"></i> [[topic:delete]]</span></a>
+					</li>
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="restore"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-repeat text-muted"></i> [[topic:restore]]</span></a>
+					</li>
+					{{{ end }}}
+
+					{{{ if (isAdminOrGlobalMod || isOwner )}}}
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="pin"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-thumbtack text-muted"></i> [[modules:chat.pin-message]]</span></a>
+					</li>
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="unpin"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-thumbtack fa-rotate-90 text-muted"></i> [[modules:chat.unpin-message]]</span></a>
+					</li>
+					<li class="dropdown-divider"></li>
+					{{{ end }}}
+
+					{{{ if isAdminOrGlobalMod }}}
+					<li>
+						<a href="#" class="dropdown-item rounded-1 chat-ip-button"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-info-circle text-muted"></i> [[modules:chat.show-ip]]</span></a>
+					</li>
+					{{{ end }}}
+
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="copy-text" data-mid="{messages.mid}"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-copy text-muted"></i> [[modules:chat.copy-text]]</span></a>
+					</li>
+
+					<li>
+						<a href="#" class="dropdown-item rounded-1" data-action="copy-link" data-mid="{messages.mid}"><span class="d-inline-flex align-items-center gap-2"><i class="fa fa-fw fa-link text-muted"></i> [[modules:chat.copy-link]]</span></a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </li>

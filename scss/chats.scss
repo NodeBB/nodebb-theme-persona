@@ -287,7 +287,9 @@ body.page-user-chats {
 
 .expanded-chat, .chat-modal {
 	.chat-content {
-		@include fix-lists;
+		.message-body {
+			@include fix-lists;
+		}
 		overflow-y: auto;
 		overflow-x: hidden;
 		resize: none;
@@ -326,7 +328,7 @@ body.page-user-chats {
 					}
 
 					[data-action="restore"] {
-						display: inline;
+						display: block;
 					}
 				}
 
@@ -341,7 +343,7 @@ body.page-user-chats {
 					}
 
 					[data-action="unpin"] {
-						display: inline;
+						display: block;
 					}
 				}
 			}
@@ -397,7 +399,9 @@ body.page-user-chats {
 
 				.controls {
 					display: none;
-
+					&:has([aria-expanded="true"]) {
+						display: flex;
+					}
 					position: absolute;
 					bottom: 7px;
 					right: 14px;
@@ -416,7 +420,7 @@ body.page-user-chats {
 					}
 
 					.controls {
-						display: block;
+						display: flex;
 					}
 				}
 			}
