@@ -1,11 +1,11 @@
 <button type="button" class="btn btn-outline-secondary d-flex gap-2 dropdown-toggle" data-bs-toggle="dropdown">
     {{{ if selectedTag }}}
     <span class="d-inline-flex align-items-center gap-1">
-        <i class="fa fa-fw fa-tags link-primary"></i>
+        <i class="fa fa-fw fa-tags text-primary"></i>
         <span class="visible-md-inline visible-lg-inline fw-semibold">{selectedTag.label}</span>
     </span>
     {{{ else }}}
-    <i class="fa fa-fw fa-tags link-primary"></i>
+    <i class="fa fa-fw fa-tags text-primary"></i>
     <span class="visible-md-inline visible-lg-inline fw-semibold">[[tags:all-tags]]</span>
     {{{ end }}}
 </button>
