@@ -92,7 +92,7 @@
 	</a>
 	{{{ end }}}
 
-	<small class="float-end" component="post/actions">
+	<small class="d-flex justify-content-end align-items-center gap-1" component="post/actions">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>

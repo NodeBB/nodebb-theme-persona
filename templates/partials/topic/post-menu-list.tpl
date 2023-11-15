@@ -94,11 +94,11 @@
 	<!-- IF config.loggedIn --><li class="dropdown-divider"></li><!-- ENDIF config.loggedIn -->
 	<li class="dropdown-header">[[topic:share-this-post]]</li>
 	<!-- ENDIF postSharing.length -->
-	{{{each postSharing}}}
-		<li>
-			<a class="dropdown-item" role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-fw {postSharing.class}"></i></span> {postSharing.name}</a>
-		</li>
-	{{{end}}}
+	<li class="d-flex gap-2 px-3">
+		{{{ each postSharing }}}
+		<a class="dropdown-item rounded-1 d-flex align-items-center px-1 py-2 w-auto" role="menuitem" component="share/{./id}" tabindex="-1" href="#" title="{./name}"><i class="fa-fw text-muted {./class}"></i></a>
+		{{{ end }}}
+	</li>
 <!-- ENDIF !posts.deleted -->
 
 {{{ if posts.display_flag_tools }}}
