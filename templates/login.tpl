@@ -13,7 +13,7 @@
 					<div class="alert alert-danger alert-dismissible" id="login-error-notify" {{{ if error }}}style="display:block"{{{ else }}}style="display: none;"{{{ end }}}>
 						<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 						<strong>[[login:failed-login-attempt]]</strong>
-						<p>{error}</p>
+						<p class="mb-0">{error}</p>
 					</div>
 
 					<form class="form-horizontal" role="form" method="post" id="login-form">
