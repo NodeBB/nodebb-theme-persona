@@ -20,13 +20,13 @@
 						<div class="row mb-2">
 							<label for="username" class="col-lg-2 col-form-label">{allowLoginWith}</label>
 							<div class="col-lg-10">
-								<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}"/>
+								<input class="form-control" type="text" placeholder="{allowLoginWith}" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="nickname" value="{username}"/>
 							</div>
 						</div>
 						<div class="row mb-2">
 							<label for="password" class="col-lg-2 col-form-label">[[user:password]]</label>
 							<div class="col-lg-10">
-								<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" {{{ if username }}}autocomplete="off"{{{ end }}}/>
+								<input class="form-control" type="password" placeholder="[[user:password]]" name="password" id="password" autocomplete="current-password" autocapitalize="off" />
 								<p id="caps-lock-warning" class="text-danger hidden">
 									<i class="fa fa-exclamation-triangle"></i> [[login:caps-lock-enabled]]
 								</p>

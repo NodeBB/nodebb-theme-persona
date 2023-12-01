@@ -16,7 +16,7 @@
 					<div class="row mb-3">
 						<label for="username" class="col-lg-2 col-form-label">[[register:username]]</label>
 						<div class="col-lg-10">
-							<input class="form-control" type="text" placeholder="[[register:username-placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
+							<input class="form-control" type="text" placeholder="[[register:username-placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="nickname" />
 							<span class="register-feedback" id="username-notify"></span>
 							<span class="form-text">[[register:help.username-restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
 						</div>
@@ -24,7 +24,7 @@
 					<div class="row mb-2">
 						<label for="password" class="col-lg-2 col-form-label">[[register:password]]</label>
 						<div class="col-lg-10">
-							<input class="form-control" type="password" placeholder="[[register:password-placeholder]]" name="password" id="password" />
+							<input class="form-control" type="password" placeholder="[[register:password-placeholder]]" name="password" id="password" autocomplete="new-password" autocapitalize="off" />
 							<span class="register-feedback" id="password-notify"></span>
 							<span class="form-text">[[register:help.minimum-password-length, {minimumPasswordLength}]]</span>
 							<p id="caps-lock-warning" class="text-danger hidden">
@@ -35,7 +35,7 @@
 					<div class="row mb-2">
 						<label for="password-confirm" class="col-lg-2 col-form-label">[[register:confirm-password]]</label>
 						<div class="col-lg-10">
-							<input class="form-control" type="password" placeholder="[[register:confirm-password-placeholder]]" name="password-confirm" id="password-confirm" />
+							<input class="form-control" type="password" placeholder="[[register:confirm-password-placeholder]]" name="password-confirm" id="password-confirm" autocomplete="new-password" autocapitalize="off" />
 							<span class="register-feedback" id="password-confirm-notify"></span>
 						</div>
 					</div>
