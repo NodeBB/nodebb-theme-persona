@@ -23,10 +23,13 @@ body.page-user-chats {
 	$calcHeight: calc(100vh - var(--panel-offset) - $spacer);
 	overflow: hidden;
 	height: 100%;
+	[data-widget-area="footer"] {
+		display: none;
+	}
 	> #panel {
 		height: $calcHeight;
 		> .container {
-			height: $calcHeight;
+			height: 100%;
 		}
 	}
 }
@@ -47,7 +50,6 @@ body.page-user-chats {
 .chats-full, .chat-modal {
 	display: flex;
 	flex-wrap: nowrap;
-	height: calc(100vh - var(--panel-offset) - $spacer);
 
 	[component="chat/nav-wrapper"] {
 		width: 300px;
@@ -499,10 +501,19 @@ body.page-user-chats {
 /* Mobile handling of chat page */
 @include media-breakpoint-down(md) {
 	.page-user-chats {
-		padding-bottom: 0;
-
+		padding-bottom: 0!important;
+		> #panel {
+			height: 100%!important;
+			.container {
+				height: 100%!important;
+			}
+		}
 		[component="chat/nav-wrapper"] {
 			width: 100%;
+		}
+
+		&.chat-loaded .navbar {
+			display: none;
 		}
 
 		[component="chat/nav-wrapper"][data-loaded="1"] {
