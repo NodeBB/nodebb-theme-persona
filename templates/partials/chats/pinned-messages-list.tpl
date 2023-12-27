@@ -11,7 +11,7 @@
 
 		<span class="chat-timestamp text-muted timeago" title="{messages.timestampISO}"></span>
 
-		<div component="chat/message/edited" class="text-muted float-end {{{ if !messages.edited }}}hidden{{{ end }}}" title="[[global:edited-timestamp, {messages.editedISO}]]"><i class="fa fa-edit"></i></span></div>
+		<div component="chat/message/edited" class="text-muted float-end {{{ if !messages.edited }}}hidden{{{ end }}}" title="[[global:edited-timestamp, {isoTimeToLocaleString(messages.editedISO, config.userLang)}]]"><i class="fa fa-edit"></i></span></div>
 	</div>
 	<div class="message-body-wrapper">
 		<div component="chat/message/body" class="message-body ps-0 py-0 overflow-auto text-break">
