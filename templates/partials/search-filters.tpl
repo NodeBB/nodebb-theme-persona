@@ -176,7 +176,7 @@
 			<ul class="dropdown-menu p-1 text-sm" style="width: 300px;">
 				<li class="px-3 py-1 d-flex flex-column gap-2">
 					<button id="save-preferences" class="btn btn-primary">[[search:save-preferences]]</button>
-					<button id="clear-preferences" class="btn-outline border">[[search:clear-preferences]]</button>
+					<button id="clear-preferences" class="btn btn-ghost border">[[search:clear-preferences]]</button>
 				</li>
 			</ul>
 		</div>
