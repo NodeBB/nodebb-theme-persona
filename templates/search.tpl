@@ -12,6 +12,7 @@
 					<option value="titlesposts">[[search:in-titles-posts]]</option>
 					<option value="titles">[[search:in-titles]]</option>
 					<option value="posts">[[search:in-posts]]</option>
+					<option value="bookmarks">[[search:in-bookmarks]]</option>
 					<option value="categories">[[search:in-categories]]</option>
 					{{{if privileges.search:users}}}
 					<option value="users">[[search:in-users]]</option>
