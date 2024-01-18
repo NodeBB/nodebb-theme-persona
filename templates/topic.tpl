@@ -4,7 +4,12 @@
 	{{{end}}}
 </div>
 <div class="row mb-5">
-	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
+	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
+		<meta itemprop="datePublished" content="{timestampISO}">
+		<meta itemprop="dateModified" content="{lastposttimeISO}">
+		<meta itemprop="author" itemscope itemtype="https://schema.org/Person" itemref="topicAuthorName{{{ if author.userslug }}} topicAuthorUrl{{{ end }}}">
+		<meta id="topicAuthorName" itemprop="name" content="{author.username}">
+		{{{ if author.userslug }}}<meta id="topicAuthorUrl" itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
 		<div class="topic-header sticky-top">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
