@@ -4,12 +4,12 @@
 			<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 			<!-- IF group.pending.length -->
 			<div class="btn-group float-end">
-				<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					[[global:more]] <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
-					<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept-all]]</a></li>
-					<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject-all]]</a></li>
+					<li><a class="dropdown-item" href="#" href="#" data-action="acceptAll" role="menuitem">[[groups:pending.accept-all]]</a></li>
+					<li><a class="dropdown-item" href="#" href="#" data-action="rejectAll" role="menuitem">[[groups:pending.reject-all]]</a></li>
 				</ul>
 			</div>
 			<!-- ENDIF group.pending.length -->
@@ -30,12 +30,12 @@
 				</td>
 				<td class="p-2">
 					<div class="btn-group float-end">
-						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
-							<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="reject">[[groups:pending.reject]]</a></li>
+							<li><a class="dropdown-item" href="#" href="#" data-action="accept" role="menuitem">[[groups:pending.accept]]</a></li>
+							<li><a class="dropdown-item" href="#" href="#" data-action="reject" role="menuitem">[[groups:pending.reject]]</a></li>
 						</ul>
 					</div>
 				</td>
@@ -78,11 +78,11 @@
 				</td>
 				<td class="p-2">
 					<div class="btn-group float-end">
-						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="rescindInvite" role="menuitem">[[groups:invited.uninvite]]</a></li>
 						</ul>
 					</div>
 				</td>

@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-secondary d-flex gap-2 align-items-baseline dropdown-toggle" data-bs-toggle="dropdown">
+<button type="button" class="btn btn-outline-secondary d-flex gap-2 align-items-baseline dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{{ if selectedCategory }}}
     <span class="category-item">
         {buildCategoryIcon(selectedCategory, "20px", "rounded-circle")}
@@ -13,11 +13,11 @@
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li role="presentation" class="category" data-cid="all">
-        <a class="dropdown-item" role="menu-item" href="{{{ if allCategoriesUrl }}}{config.relative_path}/{allCategoriesUrl}{{{ else }}}#{{{ end }}}"><i component="category/select/icon" class="fa fa-fw fa-check {{{if selectedCategory}}}invisible{{{end}}}"></i> [[unread:all-categories]]</a>
+        <a class="dropdown-item" role="menuitem" href="{{{ if allCategoriesUrl }}}{config.relative_path}/{allCategoriesUrl}{{{ else }}}#{{{ end }}}"><i component="category/select/icon" class="fa fa-fw fa-check {{{if selectedCategory}}}invisible{{{end}}}"></i> [[unread:all-categories]]</a>
     </li>
     {{{each categoryItems}}}
     <li role="presentation" class="category {{{ if ../disabledClass }}}disabled{{{ end }}}" data-cid="{../cid}" data-parent-cid="{../parentCid}" data-name="{../name}">
-        <a class="dropdown-item" role="menu-item" href="#">{../level}<i component="category/select/icon" class="fa fa-fw fa-check {{{ if !../selected }}}invisible{{{ end }}}"></i>
+        <a class="dropdown-item" role="menuitem" href="#">{../level}<i component="category/select/icon" class="fa fa-fw fa-check {{{ if !../selected }}}invisible{{{ end }}}"></i>
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
                     {{{ if ./icon}}}

@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span component="category-selector-selected">
         {{{ if (selectedCategory && !showCategorySelectLabel) }}}
         <span class="category-item">
@@ -14,11 +14,11 @@
 </div>
 <ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
     <li component="category/no-matches" role="presentation" class="category hidden">
-        <a class="dropdown-item" role="menu-item">[[search:no-matches]]</a>
+        <a class="dropdown-item" role="menuitem">[[search:no-matches]]</a>
     </li>
     {{{each categoryItems}}}
     <li role="presentation" class="category {{{ if ../disabledClass }}}disabled {{{ end }}}" data-cid="{../cid}" data-name="{../name}" data-parent-cid="{../parentCid}">
-        <a class="dropdown-item {{{ if ./disabledClass }}}disabled {{{ end }}}" role="menu-item" href="#">{../level}
+        <a class="dropdown-item {{{ if ./disabledClass }}}disabled {{{ end }}}" role="menuitem" href="#">{../level}
             <span component="category-markup" style="{{{ if ../match }}}font-weight: bold;{{{end}}}">
                 <div class="category-item d-inline-block">
                     {{{ if ./icon }}}

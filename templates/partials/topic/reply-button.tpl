@@ -1,10 +1,10 @@
 <div component="topic/reply/container" class="btn-group action-bar bottom-sheet <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">
 	<a href="{config.relative_path}/compose?tid={tid}" class="btn btn-sm btn-primary" component="topic/reply" data-ajaxify="false" role="button"><i class="fa fa-reply visible-xs-inline"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"> [[topic:reply]]</span></a>
-	<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+	<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu dropdown-menu-end" role="menu">
-		<li><a class="dropdown-item" href="#" component="topic/reply-as-topic">[[topic:reply-as-topic]]</a></li>
+		<li><a class="dropdown-item" href="#" component="topic/reply-as-topic" role="menuitem">[[topic:reply-as-topic]]</a></li>
 	</ul>
 </div>
 

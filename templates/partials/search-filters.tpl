@@ -2,12 +2,12 @@
 	<!-- category filter -->
 	<div class="post-search-item">
 		<div component="category/filter" class="dropdown" data-filter-name="category">
-			<a component="category/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.categories.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+			<a component="category/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.categories.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.categories.active }}}{filters.categories.label}{{{ else }}}[[search:categories]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm">
+			<ul class="dropdown-menu p-1 text-sm" role="menu">
 				<li class="px-3 py-1 mb-2 d-flex flex-column gap-2">
 					<div component="category-selector-search">
 						<input type="text" class="form-control" component="category/filter/search" placeholder="[[search:type-a-category]]">
@@ -28,12 +28,12 @@
 	<!-- tag filter -->
 	<div class="post-search-item">
 		<div component="tag/filter" class="dropdown" data-filter-name="tag">
-			<a component="tag/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.tags.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+			<a component="tag/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.tags.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.tags.active }}}{filters.tags.label}{{{ else }}}[[search:tags]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-column gap-2">
 					<input type="text" class="form-control" component="tag/filter/search" placeholder="[[search:type-a-tag]]">
 					<div component="tag/filter/selected" class="d-flex flex-wrap gap-2">
@@ -58,12 +58,12 @@
 	<!-- user name filter -->
 	<div class="post-search-item">
 		<div component="user/filter" class="dropdown" data-filter-name="user">
-			<a component="user/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.users.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+			<a component="user/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.users.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.users.active }}}{filters.users.label}{{{ else }}}[[search:posted-by]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-column gap-2">
 					<input type="text" class="form-control" component="user/filter/search" placeholder="[[search:type-a-username]]">
 					<div component="user/filter/selected" class="d-flex flex-wrap gap-2">
@@ -89,12 +89,12 @@
 	<!-- reply count filter -->
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="replies">
-			<a id="reply-count-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.replies.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<a id="reply-count-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.replies.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.replies.active }}}{filters.replies.label}{{{ else }}}[[search:replies]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 300px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 300px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-nowrap gap-2">
 					<select id="reply-count-filter" class="form-select py-2 ps-2 pe-3">
 						<option value="atleast">[[search:at-least]]</option>
@@ -109,12 +109,12 @@
 	<!-- time filter -->
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="time">
-			<a id="post-time-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.time.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<a id="post-time-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.time.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.time.active }}}{filters.time.label}{{{ else }}}[[search:time]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 350px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-nowrap gap-2">
 					<select id="post-time-filter" class="form-select py-2 ps-2 pe-3">
 						<option value="newer">[[search:newer-than]]</option>
@@ -138,12 +138,12 @@
 	<!-- sort filter -->
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="sort">
-			<a id="sort-by-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.sort.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<a id="sort-by-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.sort.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="filter-label">{{{ if filters.sort.active }}}{filters.sort.label}{{{ else }}}[[search:sort]]{{{ end }}}</span>
 				<span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 250px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 250px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-column gap-2">
 					<select id="post-sort-by" class="form-select py-2 ps-2 pe-3">
 						<option value="relevance">[[search:relevance]]</option>
@@ -170,10 +170,10 @@
 	<!-- save & reset preferences -->
 	<div class="post-search-item">
 		<div class="dropdown">
-			<a class="btn btn-light btn-sm border border-gray-300 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">[[search:save]] <span class="caret"></span>
+			<a class="btn btn-light btn-sm border border-gray-300 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">[[search:save]] <span class="caret"></span>
 			</a>
 
-			<ul class="dropdown-menu p-1 text-sm" style="width: 300px;">
+			<ul class="dropdown-menu p-1 text-sm" style="width: 300px;" role="menu">
 				<li class="px-3 py-1 d-flex flex-column gap-2">
 					<button id="save-preferences" class="btn btn-primary">[[search:save-preferences]]</button>
 					<button id="clear-preferences" class="btn btn-ghost border">[[search:clear-preferences]]</button>

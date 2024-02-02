@@ -1,7 +1,7 @@
-<a href="{relative_path}/notifications" class="nav-link" data-bs-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
+<a href="{relative_path}/notifications" class="nav-link" data-bs-toggle="dropdown" id="notif_dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 	<i component="notifications/icon" class="fa fa-fw {{{ if unreadCount.notification}}}fa-bell{{{ else }}}fa-bell-o{{{ end }}} unread-count" data-content="{unreadCount.notification}"></i>
 </a>
-<ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="notif_dropdown" >
+<ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="notif_dropdown" role="menu">
 	<li>
 		<ul component="notifications/list" class="notification-list">
 			<li class="loading-text">

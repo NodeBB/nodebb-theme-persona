@@ -18,9 +18,9 @@
 			<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false" disabled="disabled">
 				<i class="fa fa-clone"></i> [[flags:bulk-actions]] <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu">
-				<li><a href="#" class="dropdown-item" data-action="bulk-assign">[[flags:assign-to-me]]</a></li>
-				<li><a href="#" class="dropdown-item" data-action="bulk-mark-resolved">[[flags:bulk-resolve]]</a></li>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#" class="dropdown-item" data-action="bulk-assign" role="menuitem">[[flags:assign-to-me]]</a></li>
+				<li><a href="#" class="dropdown-item" data-action="bulk-mark-resolved" role="menuitem">[[flags:bulk-resolve]]</a></li>
 			</ul>
 		</div>
 

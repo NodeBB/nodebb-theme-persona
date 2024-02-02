@@ -3,7 +3,7 @@
     <div class="wrapper dropup">
         <i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
 
-        <a href="#" class="dropdown-toggle d-inline-block text-decoration-none" data-bs-toggle="dropdown" data-bs-reference="parent">
+        <a href="#" class="dropdown-toggle d-inline-block text-decoration-none" data-bs-toggle="dropdown" data-bs-reference="parent" aria-haspopup="true" aria-expanded="false">
             <span class="pagination-text"></span>
         </a>
 

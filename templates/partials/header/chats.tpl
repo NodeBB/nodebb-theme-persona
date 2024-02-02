@@ -1,7 +1,7 @@
-<a class="nav-link" data-bs-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" id="chat_dropdown" component="chat/dropdown" data-ajaxify="false" role="button">
+<a class="nav-link" data-bs-toggle="dropdown" href="{relative_path}/user/{user.userslug}/chats" id="chat_dropdown" component="chat/dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 	<i component="chat/icon" class="fa {{{ if unreadCount.chat}}}fa-comment{{{ else }}}fa-comment-o{{{ end }}} fa-fw unread-count" data-content="{unreadCount.chat}"></i> <span class="d-inline d-sm-none">[[global:header.chats]]</span>
 </a>
-<ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="chat_dropdown" style="min-width: 300px; width: 300px;">
+<ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="chat_dropdown" style="min-width: 300px; width: 300px;" role="menu">
 	<li>
 		<ul component="chat/list" class="chat-list chats-list">
 			<li class="loading-text">
