@@ -40,14 +40,12 @@
 						</div>
 					</div>
 
-					{{{each regFormEntry}}}
-					<div class="row mb-2">
-						<label for="register-{regFormEntry.styleName}" class="col-lg-2 col-form-label">{regFormEntry.label}</label>
-						<div id="register-{regFormEntry.styleName}" class="col-lg-10">
-							{{regFormEntry.html}}
-						</div>
+					{{{ each regFormEntry }}}
+					<div class="row mb-2 {./styleName}">
+						<label for="{./inputId}" class="col-lg-2 col-form-label">{./label}</label>
+						<div class="col-lg-10">{{./html}}</div>
 					</div>
-					{{{end}}}
+					{{{ end }}}
 
 					<div class="row">
 						<div class="offset-lg-2 col-lg-10">
