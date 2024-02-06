@@ -3,9 +3,9 @@
 		<div class="input-group flex-nowrap">
 			<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 
-			<button href="#" class="btn btn-outline-secondary">
-				<i class="fa fa-gears fa-fw advanced-search-link"></i>
-			</button>
+			<a href="{config.relative_path}/search" class="btn btn-outline-secondary" aria-label="[[search:type-to-search]]">
+				<i class="fa fa-gears fa-fw"></i>
+			</a>
 		</div>
 
 		<div id="quick-search-container" class="quick-search-container dropdown-menu d-block mt-2 hidden">

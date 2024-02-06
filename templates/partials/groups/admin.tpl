@@ -8,8 +8,8 @@
 					[[global:more]] <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
-					<li><a class="dropdown-item" href="#" href="#" data-action="acceptAll" role="menuitem">[[groups:pending.accept-all]]</a></li>
-					<li><a class="dropdown-item" href="#" href="#" data-action="rejectAll" role="menuitem">[[groups:pending.reject-all]]</a></li>
+					<li><a class="dropdown-item" href="#" data-action="acceptAll" role="menuitem">[[groups:pending.accept-all]]</a></li>
+					<li><a class="dropdown-item" href="#" data-action="rejectAll" role="menuitem">[[groups:pending.reject-all]]</a></li>
 				</ul>
 			</div>
 			<!-- ENDIF group.pending.length -->
@@ -34,8 +34,8 @@
 							[[global:more]] <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a class="dropdown-item" href="#" href="#" data-action="accept" role="menuitem">[[groups:pending.accept]]</a></li>
-							<li><a class="dropdown-item" href="#" href="#" data-action="reject" role="menuitem">[[groups:pending.reject]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="accept" role="menuitem">[[groups:pending.accept]]</a></li>
+							<li><a class="dropdown-item" href="#" data-action="reject" role="menuitem">[[groups:pending.reject]]</a></li>
 						</ul>
 					</div>
 				</td>
