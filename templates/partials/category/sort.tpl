@@ -1,7 +1,7 @@
 <div class="btn-group bottom-sheet" component="thread/sort">
-	<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
-		<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:sort-by]]</span>
-		<span class="visible-xs-inline"><i class="fa fa-fw fa-sort"></i></span>
+	<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:topic-sort-option, {sortOptionLabel}]]">
+		<i class="fa fa-fw fa-sort"></i>
+		<span class="visible-sm-inline visible-md-inline visible-lg-inline">{sortOptionLabel}</span>
 		<span class="caret"></span>
 	</button>
 
