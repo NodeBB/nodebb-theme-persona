@@ -39,12 +39,14 @@
 								</div>
 							</div>
 						</div>
-						{{{each loginFormEntry}}}
-						<div class="row mb-2 loginFormEntry">
-							<label for="login-{loginFormEntry.styleName}" class="col-lg-2 col-form-label">{loginFormEntry.label}</label>
-							<div id="login-{loginFormEntry.styleName}" class="col-lg-10">{{loginFormEntry.html}}</div>
+
+						{{{ each loginFormEntry }}}
+						<div class="row mb-2 loginFormEntry {./styleName}">
+							<label for="{./inputId}" class="col-lg-2 col-form-label">{./label}</label>
+							<div class="col-lg-10">{{./html}}</div>
 						</div>
 						{{{end}}}
+
 						<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 						<input type="hidden" name="noscript" id="noscript" value="true" />
 						<div class="row">
