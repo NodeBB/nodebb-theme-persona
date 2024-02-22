@@ -16,31 +16,32 @@
 		</div>
 	</div>
 	<div class="card-body">
+		<div component="groups/pending/alert" class="alert alert-info {{{ if group.pending.length }}}hidden{{{ end }}}">[[groups:pending.none]]</div>
+
 		<table component="groups/pending" class="table table-striped table-hover">
-			<!-- IF !group.pending.length -->
-			<div class="alert alert-info">[[groups:pending.none]]</div>
-			<!-- ENDIF !group.pending.length -->
-			{{{each group.pending}}}
-			<tr data-uid="{group.pending.uid}">
-				<td class="p-2">
-					<a href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "24px", true)}</a>
-				</td>
-				<td class="member-name p-2">
-					<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
-				</td>
-				<td class="p-2">
-					<div class="btn-group float-end">
-						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							[[global:more]] <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a class="dropdown-item" href="#" data-action="accept" role="menuitem">[[groups:pending.accept]]</a></li>
-							<li><a class="dropdown-item" href="#" data-action="reject" role="menuitem">[[groups:pending.reject]]</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			{{{end}}}
+			<tbody>
+				{{{each group.pending}}}
+				<tr data-uid="{group.pending.uid}">
+					<td class="p-2">
+						<a href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "24px", true)}</a>
+					</td>
+					<td class="member-name p-2">
+						<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
+					</td>
+					<td class="p-2">
+						<div class="btn-group float-end">
+							<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								[[global:more]] <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a class="dropdown-item" href="#" data-action="accept" role="menuitem">[[groups:pending.accept]]</a></li>
+								<li><a class="dropdown-item" href="#" data-action="reject" role="menuitem">[[groups:pending.reject]]</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				{{{end}}}
+			</tbody>
 		</table>
 	</div>
 </div>
@@ -64,30 +65,31 @@
 			<button class="btn btn-outline-secondary btn-sm float-end" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
 		</div>
 
+		<div component="groups/invited/alert" class="alert alert-info {{{ if group.invited.length }}}hidden{{{ end }}}">[[groups:invited.none]]</div>
+
 		<table component="groups/invited" class="table table-striped table-hover">
-			<!-- IF !group.invited.length -->
-			<div class="alert alert-info">[[groups:invited.none]]</div>
-			<!-- ENDIF !group.invited.length -->
-			{{{each group.invited}}}
-			<tr data-uid="{group.invited.uid}">
-				<td class="p-2">
-					<a href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "24px", true)}</a>
-				</td>
-				<td class="member-name p-2">
-					<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
-				</td>
-				<td class="p-2">
-					<div class="btn-group float-end">
-						<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							[[global:more]] <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a class="dropdown-item" href="#" data-action="rescindInvite" role="menuitem">[[groups:invited.uninvite]]</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			{{{end}}}
+			<tbody>
+				{{{ each group.invited }}}
+				<tr data-uid="{group.invited.uid}">
+					<td class="p-2">
+						<a href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "24px", true)}</a>
+					</td>
+					<td class="member-name p-2">
+						<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
+					</td>
+					<td class="p-2">
+						<div class="btn-group float-end">
+							<button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								[[global:more]] <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a class="dropdown-item" href="#" data-action="rescindInvite" role="menuitem">[[groups:invited.uninvite]]</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				{{{end}}}
+			</tbody>
 		</table>
 	</div>
 </div>
