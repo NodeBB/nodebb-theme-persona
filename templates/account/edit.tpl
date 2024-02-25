@@ -13,21 +13,21 @@
 					</div>
 				</div>
 				<ul class="list-group mb-3">
-					<!-- IF allowProfilePicture -->
-					<a component="profile/change/picture" href="#" class="list-group-item">[[user:change-picture]]</a>
-					<!-- ENDIF allowProfilePicture -->
-					<!-- IF !username:disableEdit -->
-					<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change-username]]</a>
-					<!-- ENDIF !username:disableEdit -->
-					<!-- IF !email:disableEdit -->
-					<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change-email]]</a>
-					<!-- ENDIF !email:disableEdit -->
-					<!-- IF canChangePassword -->
-					<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change-password]]</a>
-					<!-- ENDIF canChangePassword -->
-					{{{each editButtons}}}
-					<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
-					{{{end}}}
+					{{{ if allowProfilePicture }}}
+					<li class="list-group-item"><a component="profile/change/picture" href="#" class="text-decoration-none text-reset">[[user:change-picture]]</a></li>
+					{{{ end }}}
+					{{{ if !username:disableEdit }}}
+					<li class="list-group-item"><a href="{config.relative_path}/user/{userslug}/edit/username" class="text-decoration-none text-reset">[[user:change-username]]</a></li>
+					{{{ end }}}
+					{{{ if !email:disableEdit }}}
+					<li class="list-group-item"><a href="{config.relative_path}/user/{userslug}/edit/email" class="text-decoration-none text-reset">[[user:change-email]]</a></li>
+					{{{ end }}}
+					{{{ if canChangePassword }}}
+					<li class="list-group-item"><a href="{config.relative_path}/user/{userslug}/edit/password" class="text-decoration-none text-reset">[[user:change-password]]</a></li>
+					{{{ end }}}
+					{{{ each editButtons }}}
+					<li class="list-group-item"><a href="{config.relative_path}{./link}" class="text-decoration-none text-reset">{./text}</a></li>
+					{{{ end }}}
 				</ul>
 
 				<!-- IF config.requireEmailConfirmation -->
@@ -73,18 +73,21 @@
 				<div class="mb-2">
 					<label class="form-label fw-bold" for="groupTitle">[[user:grouptitle]]</label>
 
-					<select class="form-select" id="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
-						<option value="">[[user:no-group-title]]</option>
-						{{{each groups}}}
-						<!-- IF groups.userTitleEnabled -->
-						<option value="{groups.displayName}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
-						<!-- ENDIF groups.userTitleEnabled -->
-						{{{end}}}
-					</select>
-					<!-- IF allowMultipleBadges -->
-					<span>[[user:group-order-help]]</span>
-					<i role="button" component="group/order/up" class="fa fa-chevron-up"></i> <i role="button" component="group/order/down" class="fa fa-chevron-down"></i>
-					<!-- ENDIF -->
+					<div class="d-flex flex-column gap-2" component="group/badge/list">
+						{{{ each groups }}}
+						<div component="group/badge/item" class="d-flex gap-2 justify-content-between align-items-center" data-value="{./displayName}" data-selected="{./selected}">
+							<!-- IMPORT partials/groups/badge.tpl -->
+							<div class="d-flex gap-1">
+								<button component="group/toggle/hide" type="button" class="btn-ghost-sm {{{ if !./selected }}}hidden{{{ end }}}" title="[[user:hide-group-title]]"><i class="fa fa-fw fa-eye"></i></button>
+								<button component="group/toggle/show" type="button" class="btn-ghost-sm {{{ if ./selected }}}hidden{{{ end }}}" title="[[user:show-group-title]]"><i class="fa fa-fw fa-eye-slash"></i></button>
+								{{{ if allowMultipleBadges }}}
+								<button component="group/order/up" type="button" class="btn-ghost-sm" title="[[user:order-group-up]]"><i class="fa fa-fw fa-chevron-up"></i></button>
+								<button component="group/order/down" type="button" class="btn-ghost-sm" title="[[user:order-group-down]]"><i class="fa fa-fw fa-chevron-down"></i></button>
+								{{{ end }}}
+							</div>
+						</div>
+						{{{ end }}}
+					</div>
 				</div>
 
 				<!-- IF allowAboutMe -->
