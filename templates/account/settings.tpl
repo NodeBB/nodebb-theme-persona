@@ -27,7 +27,7 @@
 					</select>
 					<p class="form-text">[[user:homepage-description]]</p>
 				</div>
-				<div id="homePageCustom" class="mb-2" style="display: none;">
+				<div id="homePageCustomContainer" class="mb-2" style="display: none;">
 					<label for="homePageCustom">[[user:custom-route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
 					<p class="form-text">[[user:custom-route-help]]</p>
