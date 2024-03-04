@@ -6,8 +6,8 @@
 	</button>
 
 	<ul class="dropdown-menu dropdown-menu-end" role="menu">
-		<li><a class="dropdown-item" href="#" class="newest_to_oldest" data-sort="newest_to_oldest" role="menuitem"><i class="fa fa-fw"></i> [[topic:newest-to-oldest]]</a></li>
-		<li><a class="dropdown-item" href="#" class="oldest_to_newest" data-sort="oldest_to_newest" role="menuitem"><i class="fa fa-fw"></i> [[topic:oldest-to-newest]]</a></li>
+		<li><a class="dropdown-item" href="#" class="recently_replied" data-sort="recently_replied" role="menuitem"><i class="fa fa-fw"></i> [[topic:recently-replied]]</a></li>
+		<li><a class="dropdown-item" href="#" class="recently_created" data-sort="recently_created" role="menuitem"><i class="fa fa-fw"></i> [[topic:recently-created]]</a></li>
 		<li><a class="dropdown-item" href="#" class="most_posts" data-sort="most_posts" role="menuitem"><i class="fa fa-fw"></i> [[topic:most-posts]]</a></li>
 		<li><a class="dropdown-item" href="#" class="most_votes" data-sort="most_votes" role="menuitem"><i class="fa fa-fw"></i> [[topic:most-votes]]</a></li>
 		<li><a class="dropdown-item" href="#" class="most_views" data-sort="most_views" role="menuitem"><i class="fa fa-fw"></i> [[topic:most-views]]</a></li>

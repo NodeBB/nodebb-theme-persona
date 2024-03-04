@@ -2,7 +2,7 @@
   "name": "nodebb-theme-persona",
   "version": "13.3.10",
   "nbbpm": {
-    "compatibility": "^3.5.0"
+    "compatibility": "^3.7.0"
   },
   "description": "Persona theme for NodeBB",
   "main": "library.js",
