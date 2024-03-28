@@ -8,9 +8,9 @@
 <div class="row">
 	<div class="col-sm-6">
 		<!-- IF gdpr_consent -->
-		<div class="alert alert-success">
-			<i class="fa fa-check float-end fa-3x"></i>
+		<div class="alert alert-success d-flex gap-3">
 			[[user:consent.received]]
+			<i class="fa fa-check fa-3x"></i>
 		</div>
 		<!-- ELSE -->
 		<div class="alert alert-warning">
