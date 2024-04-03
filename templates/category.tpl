@@ -19,7 +19,7 @@
 					{{{ end }}}
 				{{{ end }}}
 
-				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
+				<a href="{url}" class="d-inline-block">
 					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
 				</a>
 			</div>
