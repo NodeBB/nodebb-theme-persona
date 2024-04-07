@@ -91,7 +91,7 @@
 							{{{ else }}}
 							<a class="title" href="{config.relative_path}/post/{../pid}">{../title}</a><br />
 							{{{ end }}}
-							<span class="timestamp">[[flags:flagged-timeago-readable, {../timestampISO}, {../timestampReadable}]]</span>
+							<span class="timestamp">[[flags:flagged-timeago-readable, {../timestampISO}, {isoTimeToLocaleString(./timestampISO, config.userLang)}]]</span>
 						</p>
 					</li>
 					{{{end}}}
@@ -126,9 +126,9 @@
 							<strong>
 								<a href="<!-- IF history.bans.user.userslug -->{config.relative_path}/user/{history.bans.user.userslug}<!-- ELSE -->#<!-- ENDIF history.bans.user.userslug -->" itemprop="author" data-username="{history.bans.user.username}" data-uid="{history.bans.user.uid}">{history.bans.user.username}</a>
 							</strong>
-							<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
+							<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {isoTimeToLocaleString(./timestampISO, config.userLang)}<br />
 							<!-- IF ../until -->
-							<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
+							<span class="expiry">[[user:info.banned-until, isoTimeToLocaleString{./untilISO, config.userLang)}]]</span><br />
 							<!-- ELSE -->
 							<span class="expiry">[[user:info.banned-permanently]]</span><br />
 							<!-- ENDIF ../until -->
@@ -167,9 +167,9 @@
 							<strong>
 								<a href="<!-- IF history.mutes.user.userslug -->{config.relative_path}/user/{history.mutes.user.userslug}<!-- ELSE -->#<!-- ENDIF history.mutes.user.userslug -->" itemprop="author" data-username="{history.mutes.user.username}" data-uid="{history.mutes.user.uid}">{history.mutes.user.username}</a>
 							</strong>
-							<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
+							<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {isoTimeToLocaleString(./timestampISO, config.userLang)}<br />
 							{{{ if ../until }}}
-							<span class="expiry">[[user:info.muted-until, {../untilReadable}]]</span><br />
+							<span class="expiry">[[user:info.muted-until, {isoTimeToLocaleString(./untilISO, config.userLang)}]]</span><br />
 							{{{ end }}}
 
 							<span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
