@@ -344,34 +344,3 @@
   font-size:20px;
   font-weight:bold;
 }
-
-.page-user-info {
-	.recent-flags {
-		padding-left: 0;
-
-		.title {
-			font-weight: bold;
-		}
-
-		.timestamp {
-			font-size: 1.25rem;
-			font-style: italic;
-			color: $gray-600;
-		}
-	}
-
-	.ban-history {
-		padding-left: 0;
-
-		li {
-			border-bottom: 1px solid $gray-200;
-			margin-bottom: 1rem;
-		}
-
-		.expiry {
-			font-size: 1.25rem;
-			font-style: italic;
-			color: $gray-600;
-		}
-	}
-}
