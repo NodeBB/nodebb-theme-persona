@@ -48,13 +48,20 @@
 				[[user:info.username-history]]
 			</h5>
 			<div class="card-body">
-				<ul class="list-group">
-					{{{each usernames}}}
-					<li class="list-group-item">
-						{../value}
-						<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
+				<ul class="list-unstyled mb-0">
+					{{{ each usernames }}}
+					<li class="d-flex justify-content-between mb-1">
+						<span class="text-sm">{./value}</span>
+
+						<div>
+							{{{ if ./byUid }}}
+							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
+							{buildAvatar(./byUser, "18px", true)}</a>
+							{{{ end }}}
+							<span class="timeago text-sm lh-1" title="{./timestampISO}"></span>
+						</div>
 					</li>
-					{{{end}}}
+					{{{ end }}}
 				</ul>
 			</div>
 		</div>
@@ -64,13 +71,19 @@
 				[[user:info.email-history]]
 			</h5>
 			<div class="card-body">
-				<ul class="list-group">
-					{{{each emails}}}
-					<li class="list-group-item">
-						{../value}
-						<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
+				<ul class="list-unstyled mb-0">
+					{{{ each emails }}}
+					<li class="d-flex justify-content-between mb-1">
+						<span class="text-sm">{./value}</span>
+						<div>
+							{{{ if ./byUid }}}
+							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
+							{buildAvatar(./byUser, "18px", true)}</a>
+							{{{ end }}}
+							<span class="timeago text-sm lh-1" title="{./timestampISO}"></span>
+						</div>
 					</li>
-					{{{end}}}
+					{{{ end }}}
 				</ul>
 			</div>
 		</div>
