@@ -10,29 +10,36 @@
 		<meta itemprop="author" itemscope itemtype="https://schema.org/Person" itemref="topicAuthorName{{{ if author.userslug }}} topicAuthorUrl{{{ end }}}">
 		<meta id="topicAuthorName" itemprop="name" content="{author.username}">
 		{{{ if author.userslug }}}<meta id="topicAuthorUrl" itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
-		<div class="topic-header sticky-top">
-			<h1 component="post/header" class="" itemprop="name">
-				<span class="topic-title">
-					<span component="topic/labels" class="d-inline-flex gap-2 align-items-center">
-						<i component="topic/scheduled" class="fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
-						<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
-						<i component="topic/locked" class="fa fa-lock {{{ if !locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
-						<i class="fa fa-arrow-circle-right {{{ if !oldCid }}}hidden{{{ end }}}" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
-						{{{each icons}}}<span class="lh-1 align-middle">{@value}</span>{{{end}}}
-					</span>
-					<span component="topic/title">{title}</span>
-				</span>
+		<div class="topic-header sticky-top mb-3">
+			<h1 component="post/header" itemprop="name">
+				<div class="topic-title d-flex">
+					<span class="fs-3" component="topic/title">{title}</span>
+				</div>
 			</h1>
 
-			<div class="topic-info clearfix">
+			<div class="topic-info pb-2 d-flex gap-3 align-items-center flex-wrap">
+				<span component="topic/labels" class="d-flex text-md gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
+						<i class="fa fa-clock-o"></i> [[topic:scheduled]]
+					</span>
+					<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
+						<i class="fa fa-thumb-tack"></i> {{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
+					</span>
+					<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
+						<i class="fa fa-lock"></i> [[topic:locked]]
+					</span>
+					<a component="topic/moved" href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
+						<i class="fa fa-arrow-circle-right"></i> {{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
+					</a>
+					{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
+				</span>
+
 				<div class="category-item d-inline-block">
 					{buildCategoryIcon(category, "24px", "rounded-circle")}
 					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
 				</div>
 
-				<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-inline-block hidden-xs">
-					<!-- IMPORT partials/topic/tags.tpl -->
-				</div>
+				<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-inline-block hidden-xs hidden-empty"><!-- IMPORT partials/topic/tags.tpl --></div>
 				<div class="d-inline-block hidden-xs">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
@@ -44,8 +51,9 @@
 				<!-- IMPORT partials/topic/browsing-users.tpl -->
 				</div>
 				{{{ end }}}
-
-				<!-- IMPORT partials/post_bar.tpl -->
+				<div class="ms-auto">
+					<!-- IMPORT partials/post_bar.tpl -->
+				</div>
 			</div>
 		</div>
 		{{{ if merger }}}
