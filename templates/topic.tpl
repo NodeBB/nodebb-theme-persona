@@ -5,11 +5,16 @@
 </div>
 <div class="row mb-5">
 	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
+		<meta itemprop="headline" content="{escape(titleRaw)}">
+		<meta itemprop="text" content="{escape(titleRaw)}">
+		<meta itemprop="url" content="{url}">
 		<meta itemprop="datePublished" content="{timestampISO}">
 		<meta itemprop="dateModified" content="{lastposttimeISO}">
-		<meta itemprop="author" itemscope itemtype="https://schema.org/Person" itemref="topicAuthorName{{{ if author.userslug }}} topicAuthorUrl{{{ end }}}">
-		<meta id="topicAuthorName" itemprop="name" content="{author.username}">
-		{{{ if author.userslug }}}<meta id="topicAuthorUrl" itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
+		<div itemprop="author" itemscope itemtype="https://schema.org/Person">
+			<meta itemprop="name" content="{author.username}">
+			{{{ if author.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
+		</div>
+
 		<div class="topic-header sticky-top mb-3">
 			<h1 component="post/header" itemprop="name">
 				<div class="topic-title d-flex">
