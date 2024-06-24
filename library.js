@@ -98,12 +98,13 @@ library.getThemeConfig = async function (config) {
 
 library.addUserToTopic = async function (hookData) {
 	const settings = await meta.settings.get('persona');
+	const { templateData } = hookData;
 	if (settings.enableQuickReply === 'on') {
 		if (hookData.req.user) {
 			const userData = await user.getUserData(hookData.req.user.uid);
-			hookData.templateData.loggedInUser = userData;
+			templateData.loggedInUser = userData;
 		} else {
-			hookData.templateData.loggedInUser = {
+			templateData.loggedInUser = {
 				uid: 0,
 				username: '[[global:guest]]',
 				picture: user.getDefaultAvatar(),
@@ -111,6 +112,13 @@ library.addUserToTopic = async function (hookData) {
 				'icon:bgColor': '#aaa',
 			};
 		}
+	}
+
+	// add author field to topic if its missing
+	if (!templateData.hasOwnProperty('author')) {
+		templateData.author = await user.getUserFields(templateData.uid, [
+			'username', 'userslug',
+		]);
 	}
 
 	return hookData;

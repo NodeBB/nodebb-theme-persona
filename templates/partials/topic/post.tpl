@@ -15,8 +15,10 @@
 	</div>
 
 	<small class="pull-left">
-		<strong>
-			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+		<strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+			<meta itemprop="name" content="{./user.username}">
+			{{{ if ./user.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{./user.userslug}">{{{ end }}}
+			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
 		</strong>
 
 		<!-- IMPORT partials/topic/badge.tpl -->

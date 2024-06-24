@@ -4,7 +4,18 @@
 	{{{end}}}
 </div>
 <div class="row">
-	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
+	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
+		<meta itemprop="headline" content="{escape(titleRaw)}">
+		<meta itemprop="text" content="{escape(titleRaw)}">
+		<meta itemprop="url" content="{url}">
+		<meta itemprop="datePublished" content="{timestampISO}">
+		<meta itemprop="dateModified" content="{lastposttimeISO}">
+		<div itemprop="author" itemscope itemtype="https://schema.org/Person">
+			<meta itemprop="name" content="{author.username}">
+			{{{ if author.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
+		</div>
+
+
 		<div class="topic-header">
 			<h1 component="post/header" class="" itemprop="name">
 				<span class="topic-title">
