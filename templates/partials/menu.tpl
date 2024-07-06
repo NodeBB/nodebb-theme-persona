@@ -17,7 +17,7 @@
 				</div>
 			</div>
 
-			{{{ if config.searchEnabled }}}
+			{{{ if (config.searchEnabled && user.privileges.search:content) }}}
 			<div class="navbar-search visible-xs">
 				<form action="{config.relative_path}/search" method="GET">
 					<button type="button" class="btn btn-link"><i class="fa fa-lg fa-fw fa-search" title="[[global:header.search]]"></i></button>
@@ -76,7 +76,7 @@
 						</a>
 					</li>
 				</ul>
-				{{{ if config.searchEnabled }}}
+				{{{ if (config.searchEnabled && user.privileges.search:content) }}}
 				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
 					<!-- IMPORT partials/header/search.tpl -->
 				</div>
