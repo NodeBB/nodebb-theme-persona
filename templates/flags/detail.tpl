@@ -119,7 +119,7 @@
 				<h2 class="h4">[[flags:quick-actions]]</h2>
 
 				<div class="d-grid gap-1">
-					<a class="btn btn-light" href="{config.relative_path}/{type_path}/{targetId}">
+					<a class="btn btn-light" href="{config.relative_path}/{type_path}/{encodeURIComponent(targetId)}">
 						<i class="fa fa-external-link"></i>
 						[[flags:go-to-target]]
 					</a>

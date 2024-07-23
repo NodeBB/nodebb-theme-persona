@@ -4,7 +4,7 @@
 		<a data-uid="{loggedInUser.uid}" href="{{{ if loggedInUser.userslug }}}{config.relative_path}/user/{loggedInUser.userslug}{{{ else }}}#{{{ end }}}">
 			{buildAvatar(loggedInUser, "48px", true, "", "user/picture")}
 			{{{ if loggedInUser.status }}}
-			<i component="user/status" class="fa fa-circle status {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
+			<i component="user/status" class="fa fa-circle status position-absolute top-100 start-100 {loggedInUser.status}" title="[[global:{loggedInUser.status}]]"></i>
 			{{{ end }}}
 		</a>
 	</div>

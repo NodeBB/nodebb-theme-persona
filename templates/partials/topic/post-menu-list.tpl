@@ -84,11 +84,24 @@
 	</li>
 	{{{ end }}}
 
+	{{{ if !posts.display_original_url }}}
 	<li>
 		<a class="dropdown-item" role="menuitem" href="#" data-clipboard-text="{posts.absolute_url}">
 			<i class="fa fa-fw fa-link"></i> [[topic:copy-permalink]]
 		</a>
 	</li>
+	{{{ else }}}
+	<li>
+		<a class="dropdown-item" role="menuitem" href="#" data-clipboard-text="{{{ if posts.url }}}{posts.url}{{{ else }}}{posts.pid}{{{ end }}}">
+			<i class="fa fa-fw fa-link"></i> [[topic:copy-permalink]]
+		</a>
+	</li>
+	<li>
+		<a class="dropdown-item" role="menuitem" href="{{{ if posts.url }}}{posts.url}{{{ else }}}{posts.pid}{{{ end }}}">
+			<i class="fa fa-fw fa-external-link"></i> [[topic:go-to-original]]
+		</a>
+	</li>
+	{{{ end }}}
 
 	<!-- IF postSharing.length -->
 	<!-- IF config.loggedIn --><li class="dropdown-divider"></li><!-- ENDIF config.loggedIn -->
@@ -108,7 +121,7 @@
 	<a class="dropdown-item" component="post/flag" role="menuitem" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a>
 </li>
 <li {{{ if !posts.flags.flagged }}}hidden{{{ end }}} class="disabled text-muted">
-	<a class="dropdown-item" component="post/already-flagged" role="menuitem" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:already-flagged]]</a>
+	<a class="dropdown-item" component="post/already-flagged" role="menuitem" href="#" data-flag-id="{posts.flagId}"><i class="fa fa-fw fa-flag"></i> [[topic:already-flagged]]</a>
 </li>
 
 {{{ if (!posts.selfPost && posts.uid) }}}

@@ -23,6 +23,20 @@
 			z-index: 1;
 			box-shadow: 0 0 0 ($spacer * .5) $body-bg;
 		}
+
+		[component="user/locality"] {
+			transform: translate(-75%, -100%);
+			z-index: 2;
+			background-color: $body-bg;
+			font-size: .75rem;
+			margin-left: -15px;
+		}
+
+		[component="user/status"] {
+			transform: translate(-80%, -100%);
+			z-index: 2;
+			margin-left: -15px;
+		}
 	}
 
 	@include media-breakpoint-down(sm) {
@@ -80,6 +94,16 @@
 						color: $danger;
 					}
 				}
+			}
+
+			[component="user/status"] {
+				padding: 5px;
+				top: 36px;
+				left: 36px;
+			}
+
+			[component="user/locality"] {
+				font-size: .75rem;
 			}
 		}
 	}

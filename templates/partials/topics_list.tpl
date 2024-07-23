@@ -37,7 +37,7 @@
 				<i component="topic/scheduled" class="fa fa-clock-o {{{ if !topics.scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
 				<i component="topic/pinned" class="fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hidden{{{ end }}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
 				<i component="topic/locked" class="fa fa-lock {{{ if !topics.locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
-				<i component="topic/moved" class="fa fa-arrow-circle-right {{{ if !topics.oldCid }}}hidden{{{ end }}}" title="[[topic:moved]]"></i>
+				<i component="topic/moved" class="fa fa-arrow-circle-right  {{{ if (!./oldCid || (./oldCid == "-1")) }}}hidden{{{ end }}}" title="[[topic:moved]]"></i>
 				{{{each topics.icons}}}{@value}{{{end}}}
 
 				{{{ if topics.noAnchor }}}
@@ -47,13 +47,13 @@
 				{{{ end }}}
 			</h2>
 			<div class="info">
-				<!-- IF !template.category -->
+				{{{ if (!template.category && !template.world) }}}
 				<div class="category-item d-inline-block">
 					{buildCategoryIcon(./category, "24px", "rounded-circle")}
 					<a class="text-muted" href="{config.relative_path}/category/{topics.category.slug}">{topics.category.name}</a>
 				</div>
 				&bull;
-				<!-- ENDIF !template.category -->
+				{{{ end }}}
 
 
 				<span data-tid="{./tid}" component="topic/tags" class="tag-list hidden-xs {{{ if !./tags.length }}}hidden{{{ end}}}">

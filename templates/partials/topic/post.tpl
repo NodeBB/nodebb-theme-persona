@@ -10,7 +10,14 @@
 	<div class="icon float-start">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{buildAvatar(posts.user, "48px", true, "", "user/picture")}
-			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+			{{{ if ./user.isLocal }}}
+			<span component="user/status" class="position-absolute top-100 start-100 border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
+			{{{ else }}}
+			<span component="user/locality" class="position-absolute top-100 start-100 lh-1 border border-white border-2 rounded-circle small" title="[[global:remote-user]]">
+				<span class="visually-hidden">[[global:remote-user]]</span>
+				<i class="fa fa-globe"></i>
+			</span>
+			{{{ end }}}
 		</a>
 	</div>
 
@@ -98,6 +105,10 @@
 			<a component="post/reply" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 			<a component="post/quote" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 		</span>
+
+		{{{ if ./announces }}}
+		<a component="post/announce-count" href="#" class="btn-ghost-sm" title="[[activitypub:announcers]]"><i class="fa fa-share-alt text-primary"></i> {./announces}</a>
+		{{{ end }}}
 
 		<!-- IF !reputation:disabled -->
 		<span class="votes">

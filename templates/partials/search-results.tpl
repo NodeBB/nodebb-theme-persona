@@ -12,7 +12,7 @@
 		<div class="card-body">
 			<div>
 				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
-				<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{./topic.title}</a></span>
+				<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}">{./topic.title}</a></span>
 			</div>
 
 			{{{ if showAsPosts }}}

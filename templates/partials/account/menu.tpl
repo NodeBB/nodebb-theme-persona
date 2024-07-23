@@ -15,7 +15,10 @@
 		</li>
 		<!-- ENDIF canChat -->
 		<li>
-			<a class="dropdown-item" component="account/flag" href="#" role="menuitem">[[user:flag-profile]]</a>
+			<a {{{if flagId }}}hidden{{{end}}} class="dropdown-item" component="account/flag" href="#" role="menuitem">[[user:flag-profile]]</a>
+		</li>
+		<li>
+			<a {{{if !flagId }}}hidden{{{end}}} class="dropdown-item" component="account/already-flagged" href="#" role="menuitem" data-flag-id="{flagId}">[[user:profile-flagged]]</a>
 		</li>
 		<li>
 			<a class="dropdown-item {{{ if ./isBlocked }}}hidden{{{ end }}}" component="account/block" href="#" role="menuitem">[[user:block-user]]</a>

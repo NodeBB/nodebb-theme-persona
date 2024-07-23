@@ -21,6 +21,7 @@
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#" class="dropdown-item" data-action="bulk-assign" role="menuitem">[[flags:assign-to-me]]</a></li>
 				<li><a href="#" class="dropdown-item" data-action="bulk-mark-resolved" role="menuitem">[[flags:bulk-resolve]]</a></li>
+				<li><a href="#" class="dropdown-item" data-action="bulk-purge" role="menuitem">[[flags:bulk-purge]]</a></li>
 			</ul>
 		</div>
 
