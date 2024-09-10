@@ -67,11 +67,7 @@
 					{{{each authentication}}}
 					<li class="{authentication.name}">
 						<a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}">
-							{{{ if ./icons.svg }}}
-							{./icons.svg}
-							{{{ else }}}
-							<i class="fa {./icons.normal} fa-3x"></i>
-							{{{ end }}}
+							<i class="fa {./icons.normal} fa-3x" style="color:{./color};"></i>
 						</a>
 					</li>
 					{{{end}}}
