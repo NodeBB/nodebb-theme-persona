@@ -26,20 +26,6 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	text-decoration:none;
 }
 
-.alt-logins {
-	margin: 0 0 0 1em;
-	padding: 0;
-	list-style-type: none;
-
-	li {
-		vertical-align: middle;
-		background: transparent;
-		margin: 0.25em;
-		@include pointer;
-		@include inline-block;
-	}
-}
-
 #content {
 	padding-bottom: 20px;
 	-webkit-transition: opacity 150ms linear;
