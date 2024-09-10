@@ -76,6 +76,9 @@
 	}
 	#menu .menu-section {
 		padding-top: 20px;
+		.nav-item {
+			padding: 0.5rem 1rem;
+		}
 	}
 	#chats-menu {
 		.nav-pills {
@@ -101,6 +104,9 @@
 				}
 			}
 		}
+		.menu-section-list .text-muted {
+			color: #fff!important;
+		}
 	}
 
 	.slideout-menu {
@@ -121,95 +127,6 @@
 		}
 		.chat-list {
 			max-height: 100%;
-
-			li {
-				width: auto;
-				border: none;
-				color: #fff;
-				position: relative;
-				height: 60px;
-
-				&:hover {
-					background: none;
-				}
-
-				&:not(:last-child) {
-					border-bottom: none;
-				}
-
-				.main-avatar {
-					position: absolute;
-					top: 0;
-					left: 0;
-
-					.avatar {
-						$size: 40px;
-						@include user-icon-style($size, calc($size * 0.6), 0);
-					}
-				}
-
-				.members {
-					display: none;
-				}
-
-				.room-name {
-					display: block;
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-					padding-left: 60px;
-				}
-
-				.teaser-content {
-					padding-left: 60px;
-					display: block;
-					font-size: 13px;
-					opacity: .8;
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-				}
-				.teaser-timestamp {
-					font-size: 10px;
-					margin-right: 0.5rem;
-					margin-top: 0.5rem;
-				}
-			}
-		}
-
-		.menu-section {
-			.notification-list-mobile li .text {
-				display: block;
-			}
-			.chat-list, .notification-list-mobile {
-				.user-link {
-					display: inline;
-				}
-				.unread {
-					background-color: inherit;
-				}
-
-				.notification-chat-content {
-					padding-top: 10px;
-					padding-right: 20px;
-				}
-
-				.notification-chat-controls {
-					display: none;
-				}
-			}
-			.chat-list .unread .room-name::after,
-			.notification-list-mobile .unread a::after {
-				content: "new";
-				text-transform: uppercase;
-				color: #FFF;
-				margin-left: 5px;
-				font-size: 10px;
-				background: #C91106;
-				border: 1px solid #890405;
-				padding: 2px 3px;
-				border-radius: 5px;
-			}
 		}
 
 		.counter {
@@ -242,28 +159,6 @@
 		letter-spacing: 1px;
 		padding: 0 20px;
 		margin:0;
-	}
-
-	.menu-section-list {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-
-		a, button {
-			display: block;
-			padding: 10px 20px;
-			text-align: left;
-			width: 100%;
-
-			&:hover {
-				background-color: rgba(255, 255, 255, 0.1);
-				text-decoration: none;
-			}
-		}
-
-		.user-status {
-			padding-left: 40px;
-		}
 	}
 
 	.slideout-open,
@@ -323,9 +218,5 @@
 			font-size: 21px;
 			top: 28px;
 		}
-	}
-
-	[data-section="notifications"] ul li a:first-child {
-		display: none;
 	}
 }
