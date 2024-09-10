@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-secondary d-flex gap-2 align-items-baseline dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<button type="button" class="btn btn-outline-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{{ if selectedCategory }}}
     <span class="category-item">
         {buildCategoryIcon(selectedCategory, "20px", "rounded-circle")}
