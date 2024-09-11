@@ -3,7 +3,7 @@
 </a>
 <ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="chat_dropdown" role="menu">
 	<li>
-		<ul component="chat/list" class="chat-list chats-list">
+		<ul component="chat/list" class="chat-list chats-list ghost-scrollbar pe-1">
 			<li class="loading-text">
 				<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 			</li>

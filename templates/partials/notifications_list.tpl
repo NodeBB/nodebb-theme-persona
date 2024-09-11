@@ -8,7 +8,7 @@
 {{{ each notifications }}}
 <div class="{./readClass}" data-nid="{./nid}" data-path="{./path}" {{{ if ./pid }}}data-pid="{./pid}"{{{ end }}}{{{ if ./tid }}}data-tid="{./tid}"{{{ end }}}>
 	<div class="d-flex gap-1 justify-content-between">
-		<div class="btn-ghost-sm d-flex gap-2 flex-grow-1 align-items-start">
+		<div class="btn btn-ghost btn-sm d-flex gap-2 flex-grow-1 align-items-start text-start">
 			<a class="flex-grow-0 flex-shrink-0" href="{{{ if ./user.userslug}}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 				{{{ if (./image && ./from) }}}
 				<img class="avatar avatar-rounded" style="--avatar-size: 32px;" src="{./image}" />
@@ -30,7 +30,7 @@
 		</div>
 		<div>
 			{{{ if ./nid }}}
-			<button class="mark-read btn-ghost-sm flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
+			<button class="mark-read btn btn-ghost btn-sm flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
 				<i class="unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-read]]"></i>
 				<i class="read fa fa-2xs fa-circle-o text-secondary {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
 			</button>
