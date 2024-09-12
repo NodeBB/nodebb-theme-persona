@@ -21,7 +21,7 @@
 			<!-- IMPORT partials/category/selector-dropdown-right.tpl -->
 		</div>
 
-		<!-- IMPORT partials/category/tools.tpl -->
+		<!-- IMPORT partials/category/tools-dropdown-right.tpl -->
 		</div>
 	</div>
 

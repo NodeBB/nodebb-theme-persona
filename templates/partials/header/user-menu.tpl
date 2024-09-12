@@ -4,7 +4,7 @@
 		<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 	</a>
 	<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
-	<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu dropdown-menu-end" aria-labelledby="user_dropdown" role="menu">
+	<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="user_dropdown" role="menu">
 		<li>
 			<a class="dropdown-item" component="header/profilelink" href="{relative_path}/user/{user.userslug}" role="menuitem">
 				<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
