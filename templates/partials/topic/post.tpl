@@ -107,7 +107,7 @@
 		</span>
 
 		{{{ if ./announces }}}
-		<a component="post/announce-count" href="#" class="btn-ghost-sm" title="[[activitypub:announcers]]"><i class="fa fa-share-alt text-primary"></i> {./announces}</a>
+		<a component="post/announce-count" href="#" class="btn btn-ghost btn-sm" title="[[activitypub:announcers]]"><i class="fa fa-share-alt text-primary"></i> {./announces}</a>
 		{{{ end }}}
 
 		<!-- IF !reputation:disabled -->
