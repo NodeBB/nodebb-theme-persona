@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div>
-						<button class="mark-read btn-ghost-sm" style="width: 1.5rem; height: 1.5rem;">
+						<button class="mark-read btn btn-ghost btn-sm d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
 							<i class="unread fa fa-2xs fa-circle text-primary"></i>
 						</button>
 					</div>
