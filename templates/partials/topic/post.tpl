@@ -95,20 +95,20 @@
 	<small class="d-flex justify-content-end align-items-center gap-1" component="post/actions">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
-			<a component="post/reply" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+			<a component="post/reply" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+			<a component="post/quote" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 		</span>
 
 		<!-- IF !reputation:disabled -->
 		<span class="votes">
-			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
+			<a component="post/upvote" href="#" class="btn btn-sm btn-link <!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
 				<i class="fa fa-chevron-up"></i>
 			</a>
 
-			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+			<span class="btn btn-sm btn-link" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 
 			<!-- IF !downvote:disabled -->
-			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
+			<a component="post/downvote" href="#" class="btn btn-sm btn-link <!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
 				<i class="fa fa-chevron-down"></i>
 			</a>
 			<!-- ENDIF !downvote:disabled -->

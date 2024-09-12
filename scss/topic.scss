@@ -93,16 +93,6 @@
 		top: -$post-padding;
 	}
 
-	[component="post/upvote"], [component="post/downvote"] {
-		display: inline-block;
-		padding: 1rem;
-		color: $text-muted;
-
-		&:focus {
-				text-decoration: none;
-		}
-	}
-
 	[component="post/upvote"].upvoted i {
 		@include fa-icon-solid($fa-var-circle-chevron-up);
 		color: $primary;
@@ -111,11 +101,6 @@
 	[component="post/downvote"].downvoted i {
 		@include fa-icon-solid($fa-var-circle-chevron-down);
 		color: $primary;
-	}
-
-	[component="post/vote-count"] {
-		display: inline-block;
-		padding: 1rem 0.5rem;
 	}
 
 	[component="post/parent"] {
@@ -192,30 +177,6 @@
 		word-wrap: break-word;
 		overflow: hidden;
 		min-height: 60px;
-	}
-
-	.post-tools {
-		a {
-			padding: 1rem 10px;
-			@include pointer;
-		}
-	}
-
-	[component="post/tools"] {
-		font-size: 14px;
-
-		> a {
-			padding: 1rem;
-		}
-
-		// temporary until we build component toggling
-		.favourite.btn-warning, .follow.btn-success {
-			background: white !important;
-			color: #333;
-			&:hover {
-				background: $primary !important;
-			}
-		}
 	}
 
 	h1 {

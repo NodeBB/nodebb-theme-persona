@@ -15,9 +15,9 @@
 			<textarea name="content" component="topic/quickreply/text" class="form-control mousetrap" rows="5" placeholder="[[modules:composer.textarea.placeholder]]"></textarea>
 			<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 		</div>
-		<div class="btn-group float-end">
-			<button type="submit" component="topic/quickreply/button" class="btn btn-primary">[[topic:post-quick-reply]]</button>
-			<button type="submit" component="topic/quickreply/expand" class="btn btn-outline-primary" formmethod="get"><i class="fa fa-expand"></i></button>
+		<div class="d-flex justify-content-end gap-1">
+			<button type="submit" component="topic/quickreply/expand" class="btn btn-outline-primary btn-sm" formmethod="get"><i class="fa fa-expand"></i></button>
+			<button type="submit" component="topic/quickreply/button" class="btn btn-primary btn-sm">[[topic:post-quick-reply]]</button>
 		</div>
 	</form>
 	<form component="topic/quickreply/upload" method="post" enctype="multipart/form-data">
