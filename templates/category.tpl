@@ -26,7 +26,7 @@
 			<div component="category/controls" class="d-flex gap-1 align-items-stretch">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
-				<!-- IMPORT partials/category/tools.tpl -->
+				<!-- IMPORT partials/category/tools-dropdown-right.tpl -->
 			</div>
 		</div>
 		{{{ end }}}

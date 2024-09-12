@@ -16,7 +16,7 @@
 		<div class="d-flex gap-1 align-items-stretch">
 		<!-- IMPORT partials/tags/watch.tpl -->
 		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
-		<!-- IMPORT partials/category/tools.tpl -->
+		<!-- IMPORT partials/category/tools-dropdown-right.tpl -->
 		</div>
 	</div>
 
