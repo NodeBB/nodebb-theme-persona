@@ -10,7 +10,7 @@
 	{{{each posts}}}
 	<div class="topic-row card clearfix mb-3">
 		<div class="card-body">
-			<div>
+			<div class="mb-2">
 				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
 				<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{posts.pid}">{./topic.title}</a></span>
 			</div>
@@ -18,11 +18,10 @@
 			{{{ if showAsPosts }}}
 			<div class="search-result-text">
 				{./content}
-				<p class="fade-out"></p>
 			</div>
 			{{{ end }}}
 
-			<small class="post-info float-end">
+			<small class="post-info">
 				<a href="{config.relative_path}/category/{./category.slug}">
 					<div class="category-item d-inline-block">
 						{buildCategoryIcon(./category, "24px", "rounded-circle")}

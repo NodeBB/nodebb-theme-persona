@@ -11,16 +11,6 @@
 	font-weight: 600;
 }
 
-.search-result-text {
-	max-height: 250px;
-	overflow: hidden;
-	position: relative;
-
-	h4, p {
-		overflow-y: hidden;
-	}
-}
-
 .topic-search {
 	position: fixed;
 	top: 60px;
