@@ -4,6 +4,7 @@
 		<span class="menu-icon"><i class="fa fa-fw fa-pencil"></i></span> [[topic:edit]]
 	</a>
 </li>
+{{{ if posts.display_delete_tools }}}
 <li <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->>
 	<a class="dropdown-item d-flex align-items-center gap-2" component="post/delete" role="menuitem" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->">
 		<span class="menu-icon"><i class="fa fa-fw fa-trash-o"></i></span> [[topic:delete]]
@@ -14,6 +15,7 @@
 		<span class="menu-icon"><i class="fa fa-fw fa-history"></i><span> [[topic:restore]]
 	</a>
 </li>
+{{{ end }}}
 <!-- IF posts.display_purge_tools -->
 <li <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a class="dropdown-item d-flex align-items-center gap-2" component="post/purge" role="menuitem" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
@@ -37,6 +39,14 @@
 	</a>
 </li>
 <!-- ENDIF posts.display_change_owner_tools -->
+
+{{{ if posts.display_manage_editors_tools }}}
+<li>
+	<a class="dropdown-item d-flex align-items-center gap-2" component="post/manage-editors" role="menuitem" href="#">
+		<span class="menu-icon"><i class="fa fa-fw fa-user-pen"></i></span> [[topic:manage-editors]]
+	</a>
+</li>
+{{{ end }}}
 
 <!-- IF posts.ip -->
 <li>
