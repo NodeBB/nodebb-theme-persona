@@ -70,6 +70,26 @@
 					<input class="form-control" type="date" id="birthday" name="birthday" value="{birthday}" placeholder="mm/dd/yyyy">
 				</div>
 
+				{{{ each customUserFields }}}
+				<div class="mb-2">
+					<label class="form-label fw-bold" for="{./key}">{./name}</label>
+					{{{ if ((./type == "input-text") || (./type == "input-link")) }}}
+					<input class="form-control" type="text" id="{./key}" name="{./key}" value="{./value}">
+					{{{ end }}}
+
+					{{{ if (./type == "input-number") }}}
+					<input class="form-control" type="number" id="{./key}" name="{./key}" value="{./value}">
+					{{{ end }}}
+					{{{ if (./type == "select") }}}
+					<select class="form-select" id="{./key}" name="{./key}">
+						{{{ each ./select-options}}}
+						<option value="{./value}" {{{ if ./selected }}}selected{{{ end }}}>{./value}</option>
+						{{{ end }}}
+					</select>
+					{{{ end }}}
+				</div>
+				{{{ end }}}
+
 				<div class="mb-2">
 					<label class="form-label fw-bold" for="groupTitle">[[user:grouptitle]]</label>
 
