@@ -20,14 +20,10 @@
 		}
 	}
 
-	[component="topic/labels"] {
-		font-size: 20px;
-		color: $text-muted;
-	}
-
 	[component="topic/browsing-users"] {
 		margin-bottom: -5px;
 	}
+
 	.topic-header {
 		top: var(--panel-offset);
 		background-color: $body-bg;
@@ -240,49 +236,7 @@
 			margin-left: 1px;
 		}
 	}
-
-	.quick-reply {
-		position: relative;
-		.icon {
-			position: relative;
-			border-radius: 50%;
-			min-width: 46px;
-			min-height: 46px;
-			margin-top: 2px;
-
-			> a > .status {
-				position: absolute;
-				right: 12px;
-				font-size: 12px;
-				top: 0px;
-
-				@include media-breakpoint-up(md) {
-					top: 2px;
-					font-size: 16px;
-				}
-			}
-
-			.avatar {
-				margin-right: 15px;
-			}
-		}
-
-		.quickreply-message {
-			margin-left: 63px;
-			margin-bottom: 5px;
-
-			@include media-breakpoint-down(sm) {
-				margin-left: 0;
-
-				[component="topic/quickreply/text"] {
-					font-size: 16px;
-					padding: 10px;
-				}
-			}
-		}
-	}
 }
-
 
 .topic {
 	&.deleted {
@@ -453,48 +407,6 @@
 		.pagination-block {
 			width: 100%;
 		}
-	}
-}
-
-.thread_active_users {
-	text-transform: initial;
-
-	a[data-uid] {
-		position: relative;
-
-		img, .user-icon {
-			@include user-icon-style(20px, 1rem, 50%);
-			vertical-align: middle;
-			margin: 0 7px;
-		}
-
-		&::after {
-			position: absolute;
-			z-index: 0;
-			opacity: 0;
-
-			font-family: "FontAwesome";
-			content: "\f11c";
-			padding: 4px 0.25em;
-			top: -36px;
-			left: 7px;
-
-			@include transition("opacity ease 250ms, top ease 250ms")
-		}
-
-		&.replying::after {
-			opacity: 1;
-			top: -50px;
-			animation: topic-reply-pulse 2s ease-in infinite;
-		}
-	}
-
-	.anonymous-box {
-		border: 1px solid #ddd;
-		width: 24px;
-		height: 24px;
-		position: relative;
-		text-align: center;
 	}
 }
 

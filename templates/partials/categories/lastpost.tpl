@@ -1,26 +1,24 @@
-<div class="lastpost background-link-container" style="border-color: {../bgColor}">
-	{{{each ./posts}}}
-	<!-- IF @first -->
-	<div component="category/posts">
-		<a class="background-link" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"></a>
-		<p>
-			<a href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(posts.user, "24px", true)}</a>
-			<a class="permalink text-muted" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
-				<small class="timeago" title="{../timestampISO}"></small>
-			</a>
-		</p>
-		<div class="post-content">
-			{../content}
+<div class="lastpost border-start border-4 lh-sm h-100" style="border-color: {./bgColor}!important;">
+	{{{ each ./posts }}}
+	{{{ if @first }}}
+	<div component="category/posts" class="ps-2 text-xs d-flex flex-column h-100 gap-1">
+		<div class="text-nowrap text-truncate">
+			<a class="text-decoration-none" href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(posts.user, "18px", true, "avatar-tooltip")}</a>
+			<a class="permalink text-muted timeago text-xs" href="{config.relative_path}/topic/{./topic.slug}{{{ if ./index }}}/{./index}{{{ end }}}" title="{./timestampISO}" aria-label="[[global:lastpost]]"></a>
+		</div>
+		<div class="post-content text-xs text-break line-clamp-sm-2 lh-sm position-relative flex-fill">
+			<a class="stretched-link" tabindex="-1" href="{config.relative_path}/topic/{./topic.slug}{{{ if ./index }}}/{./index}{{{ end }}}" aria-label="[[global:lastpost]]"></a>
+			{./content}
 		</div>
 	</div>
-	<!-- ENDIF @first -->
-	{{{end}}}
+	{{{ end }}}
+	{{{ end }}}
 
-	<!-- IF !../posts.length -->
-	<div component="category/posts">
-		<div class="post-content">
+	{{{ if !./posts.length }}}
+	<div component="category/posts" class="ps-2">
+		<div class="post-content overflow-hidden text-xs">
 			[[category:no-new-posts]]
 		</div>
 	</div>
-	<!-- ENDIF !../posts.length -->
+	{{{ end }}}
 </div>

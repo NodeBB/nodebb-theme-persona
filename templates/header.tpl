@@ -33,7 +33,7 @@
 
 	<main id="panel" class="slideout-panel">
 		<nav class="navbar sticky-top navbar-expand-lg bg-light header border-bottom py-0" id="header-menu" component="navbar">
-			<div class="container justify-content-start flex-nowrap">
+			<div class="container-lg justify-content-start flex-nowrap">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
@@ -42,6 +42,6 @@
 			const offset = Math.max(0, rect.bottom);
 			document.documentElement.style.setProperty('--panel-offset', offset + `px`);
 		</script>
-		<div class="container pt-3" id="content">
+		<div class="container-lg pt-3" id="content">
 		<!-- IMPORT partials/noscript/warning.tpl -->
 		<!-- IMPORT partials/noscript/message.tpl -->

@@ -22,8 +22,8 @@
 				</div>
 			</h1>
 
-			<div class="topic-info pb-2 d-flex gap-3 align-items-center flex-wrap">
-				<span component="topic/labels" class="d-flex text-md gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+			<div class="topic-info pb-2 d-flex gap-2 align-items-center flex-wrap">
+				<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
 					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 						<i class="fa fa-clock-o"></i> [[topic:scheduled]]
 					</span>
@@ -38,16 +38,9 @@
 					</a>
 					{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 				</span>
-
-				<div class="category-item d-inline-block">
-					{buildCategoryIcon(category, "24px", "rounded-circle")}
-					<a href="{config.relative_path}/category/{category.slug}">{category.name}</a>
-				</div>
-
-				<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-inline-block hidden-xs hidden-empty"><!-- IMPORT partials/topic/tags.tpl --></div>
-				<div class="d-inline-block hidden-xs">
-					<!-- IMPORT partials/topic/stats.tpl -->
-				</div>
+				{function.buildCategoryLabel, category, "a", "border"}
+				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
+				<div class="d-flex hidden-xs gap-2"><!-- IMPORT partials/topic/stats.tpl --></div>
 				{{{ if !feeds:disableRSS }}}
 				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 				{{{ end }}}
