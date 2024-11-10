@@ -1,44 +1,10 @@
 .topic {
-	[component="post/header"] {
-		margin-top: 0px;
-		line-height: 40px;
-
-		.topic-title {
-			word-wrap: break-word;
-			color:inherit;
-		}
-
-		> span {
-			text-transform: uppercase;
-			color: $gray-600;
-			display: inline-block;
-			margin-top: 8px;
-		}
-
-		.topic-title {
-			text-transform: initial;
-		}
-	}
-
-	[component="topic/browsing-users"] {
-		margin-bottom: -5px;
-	}
-
 	.topic-header {
 		top: var(--panel-offset);
-		background-color: $body-bg;
 		z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
 	}
 
-	.topic-info {
-		border-bottom: 1px solid $post-border-color;
-	}
-
 	.posts {
-		h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-			margin-top: 0px;
-		}
-
 		.icon {
 			position: relative;
 			border-radius: 50%;
@@ -99,11 +65,6 @@
 		color: $primary;
 	}
 
-	[component="post/parent"] {
-		border: 0;
-		font-size: 10px;
-	}
-
 	.threaded-replies {
 		margin-left: 60px;
 		padding: 1rem 0px;
@@ -148,23 +109,6 @@
 		display: inline-block;
 	}
 
-	.title {
-		p {
-			margin-bottom: 4px;
-		}
-
-		small {
-			margin-top: 2px;
-			display: block;
-
-			color: $gray-600;
-
-			strong {
-				color: $gray-800;
-			}
-		}
-	}
-
 	.content {
 		margin-top: $post-padding;
 		padding-bottom: 1px;
@@ -173,22 +117,6 @@
 		word-wrap: break-word;
 		overflow: hidden;
 		min-height: 60px;
-	}
-
-	h1 {
-		.btn-group, .btn {
-			margin-left: 15px;
-		}
-
-		.btn {
-			background: $body-bg;
-			text-transform: uppercase;
-			font-weight: 600;
-			box-shadow: none !important;
-			font-size: 11px;
-			color: $gray-600;
-			padding: 0;
-		}
 	}
 
 	.post-signature {

@@ -15,14 +15,14 @@
 			{{{ if author.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
 		</div>
 
-		<div class="topic-header sticky-top mb-3">
+		<div class="topic-header sticky-top mb-3 bg-body">
 			<h1 component="post/header" itemprop="name">
 				<div class="topic-title d-flex">
 					<span class="fs-3" component="topic/title">{title}</span>
 				</div>
 			</h1>
 
-			<div class="topic-info pb-2 d-flex gap-2 align-items-center flex-wrap">
+			<div class="topic-info border-bottom pb-2 d-flex gap-2 align-items-center flex-wrap">
 				<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
 					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 						<i class="fa fa-clock-o"></i> [[topic:scheduled]]
