@@ -1,7 +1,7 @@
 ul.topics-list, ul.categories-list {
 	li {
 		&.deleted {
-			.meta, .topic-thumbs { display: none!important; }
+			.meta, .topic-thumbs { visibility: hidden!important; }
 			opacity: 0.65;
 		}
 

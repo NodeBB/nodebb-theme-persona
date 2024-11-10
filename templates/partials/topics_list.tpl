@@ -14,7 +14,7 @@
 					{buildAvatar(./user, "40px", true, "avatar avatar-tooltip")}
 				</a>
 				{{{ if showSelect }}}
-				<div class="checkbox position-absolute top-100 start-50 translate-middle-x pt-2 m-0 d-none d-lg-flex" style="max-width:max-content">
+				<div class="checkbox position-absolute top-100 start-50 translate-middle-x m-0 d-none d-lg-flex" style="max-width:max-content">
 					<i component="topic/select" class="fa text-muted pointer fa-square-o p-1 hover-visible"></i>
 				</div>
 				{{{ end }}}
@@ -23,7 +23,7 @@
 				<h3 component="topic/header" class="title text-break fs-5 fw-semibold m-0 tracking-tight w-100 {{{ if showSelect }}}me-4 me-lg-0{{{ end }}}">
 					<a class="text-reset" href="{{{ if topics.noAnchor }}}#{{{ else }}}{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}{{{ end }}}">{./title}</a>
 				</h3>
-				<span component="topic/labels" class="d-flex flex-wrap gap-1 w-100 align-items-center">
+				<div component="topic/labels" class="d-flex flex-wrap gap-1 w-100 align-items-center">
 					<span component="topic/watched" class="badge border border-gray-300 text-body {{{ if !./followed }}}hidden{{{ end }}}">
 						<i class="fa fa-bell-o"></i>
 						<span>[[topic:watching]]</span>
@@ -70,7 +70,7 @@
 					</div>
 
 					<a href="{config.relative_path}/topic/{./slug}" class="d-none d-lg-block badge bg-transparent text-muted fw-normal timeago" title="{./timestampISO}"></a>
-				</span>
+				</div>
 				{{{ if showSelect }}}
 				<div class="checkbox position-absolute top-0 end-0 m-0 d-flex d-lg-none" style="max-width:max-content">
 					<i component="topic/select" class="fa fa-square-o text-muted pointer p-1"></i>
