@@ -1,5 +1,5 @@
 <noscript><div class="dropdown" component="category-selector"></noscript>
-<button component="category/post" for="category-dropdown-check" class="btn btn-primary text-nowrap" id="new_topic" role="button">
+<button component="category/post" for="category-dropdown-check" class="btn btn-primary btn-sm text-nowrap" id="new_topic" role="button">
 	[[category:new-topic-button]]
 </button>
 <noscript>
