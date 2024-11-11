@@ -88,18 +88,18 @@
 		<div class="d-flex p-0 col-lg-5 col-12 align-content-stretch">
 			<div class="meta stats d-none d-lg-grid col-6 gap-1 pe-2 text-muted" style="grid-template-columns: 1fr 1fr 1fr;">
 				{{{ if !reputation:disabled }}}
-				<div class="stats-votes p-1 overflow-hidden d-flex flex-column align-items-center">
+				<div class="stats-votes overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./votes}">{humanReadableNumber(./votes, 0)}</span>
 					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:votes]]</span>
 					<i class="d-xl-none fa fa-fw text-xs text-muted opacity-75 fa-chevron-up"></i>
 				</div>
 				{{{ end }}}
-				<div class="stats-postcount p-1 overflow-hidden d-flex flex-column align-items-center">
+				<div class="stats-postcount overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./postcount}">{humanReadableNumber(./postcount, 0)}</span>
 					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:posts]]</span>
 					<i class="d-xl-none fa-regular fa-fw text-xs text-muted opacity-75 fa-message"></i>
 				</div>
-				<div class="stats-viewcount p-1 overflow-hidden d-flex flex-column align-items-center">
+				<div class="stats-viewcount overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./viewcount}">{humanReadableNumber(./viewcount, 0)}</span>
 					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:views]]</span>
 					<i class="d-xl-none fa fa-fw text-xs text-muted opacity-75 fa-eye"></i>

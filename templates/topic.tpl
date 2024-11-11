@@ -16,41 +16,52 @@
 		</div>
 
 		<div class="topic-header sticky-top mb-3 bg-body">
-			<h1 component="post/header" itemprop="name">
-				<div class="topic-title d-flex">
-					<span class="fs-3" component="topic/title">{title}</span>
-				</div>
-			</h1>
+			<div class="d-flex gap-3 flew-wrap border-bottom pb-2 align-items-start">
+				<div class="d-flex flex-column gap-2 flex-grow-1">
+					<h1 component="post/header" class="mb-0" itemprop="name">
+						<div class="topic-title d-flex">
+							<span class="fs-3" component="topic/title">{title}</span>
+						</div>
+					</h1>
 
-			<div class="topic-info border-bottom pb-2 d-flex gap-2 align-items-center flex-wrap">
-				<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
-					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
-						<i class="fa fa-clock-o"></i> [[topic:scheduled]]
-					</span>
-					<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
-						<i class="fa fa-thumb-tack"></i> {{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
-					</span>
-					<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
-						<i class="fa fa-lock"></i> [[topic:locked]]
-					</span>
-					<a component="topic/moved" href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
-						<i class="fa fa-arrow-circle-right"></i> {{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
-					</a>
-					{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
-				</span>
-				{function.buildCategoryLabel, category, "a", "border"}
-				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
-				<div class="d-flex hidden-xs gap-2"><!-- IMPORT partials/topic/stats.tpl --></div>
-				{{{ if !feeds:disableRSS }}}
-				{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
-				{{{ end }}}
-				{{{ if browsingUsers }}}
-				<div class="d-inline-block hidden-xs">
-				<!-- IMPORT partials/topic/browsing-users.tpl -->
+					<div class="topic-info d-flex gap-2 align-items-center flex-wrap">
+						<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+							<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
+								<i class="fa fa-clock-o"></i> [[topic:scheduled]]
+							</span>
+							<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
+								<i class="fa fa-thumb-tack"></i> {{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
+							</span>
+							<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
+								<i class="fa fa-lock"></i> [[topic:locked]]
+							</span>
+							<a component="topic/moved" href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
+								<i class="fa fa-arrow-circle-right"></i> {{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
+							</a>
+							{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
+						</span>
+						{function.buildCategoryLabel, category, "a", "border"}
+						<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
+						<div class="d-flex hidden-xs gap-2"><!-- IMPORT partials/topic/stats.tpl --></div>
+						{{{ if !feeds:disableRSS }}}
+						{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
+						{{{ end }}}
+						{{{ if browsingUsers }}}
+						<div class="d-inline-block hidden-xs">
+						<!-- IMPORT partials/topic/browsing-users.tpl -->
+						</div>
+						{{{ end }}}
+						<div class="ms-auto">
+							<!-- IMPORT partials/post_bar.tpl -->
+						</div>
+					</div>
 				</div>
-				{{{ end }}}
-				<div class="ms-auto">
-					<!-- IMPORT partials/post_bar.tpl -->
+				<div class="d-flex gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
+					{{{ each thumbs }}}
+					<a class="d-inline-block h-100" href="{./url}">
+						<img class="rounded-1 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
+					</a>
+					{{{ end }}}
 				</div>
 			</div>
 		</div>
