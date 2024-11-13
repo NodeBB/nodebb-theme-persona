@@ -164,7 +164,7 @@
 <div class="row">
 	{{{ if bestPosts.length }}}
 	<div class="col-lg-12 col-12">
-		<h1>[[pages:account/best, {username}]]</h1>
+		<h1 class="fs-3">[[pages:account/best, {username}]]</h1>
 
 		<div class="col-12">
 			<ul component="posts" class="posts-list list-unstyled">
@@ -177,7 +177,7 @@
 	{{{ end }}}
 	{{{ if latestPosts.length}}}
 	<div class="col-lg-12 col-12">
-		<h1>[[pages:account/latest-posts, {username}]]</h1>
+		<h1 class="fs-3">[[pages:account/latest-posts, {username}]]</h1>
 		<div class="col-12">
 			<ul component="posts" class="posts-list list-unstyled">
 			{{{each latestPosts}}}

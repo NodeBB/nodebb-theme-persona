@@ -1,8 +1,6 @@
 <!-- IMPORT partials/account/header.tpl -->
-
+<h1 class="fs-4">[[pages:{template.name}, {username}]]</h1>
 <div class="row">
-	<h1 class="fs-2">[[pages:{template.name}, {username}]]</h1>
-
 	<div class="col-12 groups list">
 		<div component="groups/container" id="groups-list" class="row">
 			<!-- IF !groups.length -->

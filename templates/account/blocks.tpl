@@ -1,5 +1,5 @@
 <!-- IMPORT partials/account/header.tpl -->
-<h1 class="fs-2">[[pages:account/blocks, {username}]]</h1>
+<h1 class="fs-4">[[pages:account/blocks, {username}]]</h1>
 <div class="row justify-content-end mb-2">
 	<div class="col-3">
 		<div class="dropdown">
@@ -30,6 +30,7 @@
 </div>
 
 <div class="users row">
+	<div class="alert alert-warning text-center {{{ if users.length }}}hidden{{{ end }}}">[[user:has-no-blocks]]</div>
 	<div id="users-container" class="users-container list-unstyled d-flex flex-wrap gap-2">
 		{{{ each users }}}
 		<div class="d-flex flex-column gap-1">
@@ -38,7 +39,6 @@
 		</div>
 		{{{ end }}}
 
-		<div class="alert alert-warning text-center"<!-- IF users.length --> style="display: none;"<!-- END -->>[[user:has-no-blocks]]</div>
 		<!-- IMPORT partials/paginator.tpl -->
 	</div>
 </div>
