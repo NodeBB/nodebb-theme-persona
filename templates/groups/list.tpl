@@ -7,9 +7,9 @@
 <div class="groups list">
 	<div class="row justify-content-between">
 		<div class="col-lg-6">
-			<!-- IF allowGroupCreation -->
+			{{{ if allowGroupCreation }}}
 			<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new-group]]</button>
-			<!-- ENDIF allowGroupCreation -->
+			{{{ end }}}
 		</div>
 		<div class="col-lg-6">
 			<div class="row justify-content-end">
@@ -35,14 +35,14 @@
 	<hr />
 
 	<div component="groups/container" class="row" id="groups-list" data-nextstart={nextStart}>
-		<!-- IF groups.length -->
+		{{{ if groups.length }}}
 		<!-- IMPORT partials/groups/list.tpl -->
-		<!-- ELSE -->
+		{{{ else }}}
 		<div class="col-12">
 			<div class="alert alert-warning">
 			[[groups:no-groups-found]]
 			</div>
 		</div>
-		<!-- ENDIF groups.length -->
+		{{{ end }}}
 	</div>
 </div>
