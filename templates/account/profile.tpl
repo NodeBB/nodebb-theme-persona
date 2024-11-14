@@ -60,32 +60,59 @@
 		</div>
 	</div>
 
-	<div class="text-center profile-meta">
-		<span>[[user:joined]]</span>
-		<strong class="timeago" title="{joindateISO}"></strong>
+	<div class="profile-meta d-flex gap-3 flex-wrap justify-content-center">
+		<div class="w-100 d-flex gap-3 justify-content-center">
+			<div>
+				<span class="stat-label">[[user:joined]]</span>
+				<span class="timeago fw-bold" title="{joindateISO}"></span>
+			</div>
 
-		<span>[[user:lastonline]]</span>
-		<strong class="timeago" title="{lastonlineISO}"></strong><br />
+			<div>
+				<span class="stat-label">[[user:lastonline]]</span>
+				<span class="timeago fw-bold" title="{lastonlineISO}"></span>
+			</div>
+		</div>
 
-		<!-- IF email -->
-		<span>[[user:email]]</span>
-		<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email-hidden]]"></i> {email}</strong>
-		<!-- ENDIF email -->
+		{{{ if email }}}
+		<div>
+			<span class="stat-label">[[user:email]]</span>
+			<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email-hidden]]"></i> {email}</strong>
+		</div>
+		{{{ end }}}
 
-		<!-- IF websiteName -->
-		<span>[[user:website]]</span>
-		<strong><a href="{websiteLink}" rel="nofollow noreferrer me">{websiteName}</a></strong>
-		<!-- ENDIF websiteName -->
+		{{{ if websiteName }}}
+		<div>
+			<span class="stat-label">[[user:website]]</span>
+			<a href="{websiteLink}" class="fw-bold" rel="nofollow noreferrer me">{websiteName}</a>
+		</div>
+		{{{ end }}}
 
-		<!-- IF location -->
-		<span>[[user:location]]</span>
-		<strong>{location}</strong>
-		<!-- ENDIF location -->
+		{{{ if location }}}
+		<div>
+			<span class="stat-label">[[user:location]]</span>
+			<span class="fw-bold">{location}</span>
+		</div>
+		{{{ end }}}
 
-		<!-- IF age -->
-		<span>[[user:age]]</span>
-		<strong>{age}</strong>
-		<!-- ENDIF age -->
+		{{{ if age }}}
+		<div>
+			<span class="stat-label">[[user:age]]</span>
+			<span class="fw-bold">{age}</span>
+		</div>
+		{{{ end }}}
+
+		{{{ each customUserFields }}}
+		{{{ if ./value }}}
+		<div>
+			<span class="stat-label">{./name}</span>
+			{{{ if (./type == "input-link") }}}
+			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer me">{./value}</a>
+			{{{ else }}}
+			<span class="fw-bold">{./value}</span>
+			{{{ end }}}
+		</div>
+		{{{ end }}}
+		{{{ end }}}
 	</div>
 </div>
 
@@ -137,7 +164,7 @@
 <div class="row">
 	{{{ if bestPosts.length }}}
 	<div class="col-lg-12 col-12">
-		<h1>[[pages:account/best, {username}]]</h1>
+		<h1 class="fs-3">[[pages:account/best, {username}]]</h1>
 
 		<div class="col-12">
 			<ul component="posts" class="posts-list list-unstyled">
@@ -150,7 +177,7 @@
 	{{{ end }}}
 	{{{ if latestPosts.length}}}
 	<div class="col-lg-12 col-12">
-		<h1>[[pages:account/latest-posts, {username}]]</h1>
+		<h1 class="fs-3">[[pages:account/latest-posts, {username}]]</h1>
 		<div class="col-12">
 			<ul component="posts" class="posts-list list-unstyled">
 			{{{each latestPosts}}}

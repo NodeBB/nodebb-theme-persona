@@ -96,18 +96,6 @@
 		}
 	}
 
-	h1 {
-		overflow-wrap: break-word;
-		margin-top: 0;
-	}
-
-	.post-body {
-		.topic-title, p {
-			overflow-y: hidden;
-			display: block;
-		}
-	}
-
 	@include media-breakpoint-up(md) {
 		margin-top: 300px;
 
@@ -117,50 +105,6 @@
 			.controls {
 				min-height: 300px;
 				line-height: 300px;
-			}
-		}
-	}
-
-	.panel-title {
-		.label {
-			padding: .2em .3em .1em;
-		}
-	}
-}
-
-.groups.list {
-	[component="groups/summary"] {
-		.list-cover {
-			display: block;
-			background-size: cover;
-			min-height: 125px;
-			background-position: 50% 50%;
-			@include pointer;
-
-			h5 {
-				background-color: rgba(0,0,0,0.5);
-				display: inline-block;
-				padding: 0.25em 0.5em;
-				color: white;
-				font-weight: bold;
-				text-transform: capitalize;
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				overflow-x: hidden;
-				max-width: 100%;
-			}
-		}
-
-		.members {
-			padding-left: 0;
-
-			> li {
-				list-style-type: none;
-				display: inline-block;
-			}
-
-			.truncated {
-				vertical-align: bottom;
 			}
 		}
 	}

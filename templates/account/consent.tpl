@@ -1,5 +1,5 @@
 <!-- IMPORT partials/account/header.tpl -->
-<h2>[[user:consent.title]]</h2>
+<h3>[[user:consent.title]]</h3>
 <p class="lead">[[user:consent.lead]]</p>
 <p>[[user:consent.intro]]</p>
 

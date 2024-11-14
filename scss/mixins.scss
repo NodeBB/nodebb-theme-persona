@@ -21,7 +21,7 @@
 			// Opaque ring
 			position: relative;
 			z-index: 1;
-			box-shadow: 0 0 0 ($spacer * .5) $body-bg;
+			box-shadow: 0 0 0 ($spacer * .5) var(--bs-body-bg);
 		}
 
 		[component="user/locality"] {

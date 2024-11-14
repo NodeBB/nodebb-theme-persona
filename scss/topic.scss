@@ -1,48 +1,10 @@
 .topic {
-	[component="post/header"] {
-		margin-top: 0px;
-		line-height: 40px;
-
-		.topic-title {
-			word-wrap: break-word;
-			color:inherit;
-		}
-
-		> span {
-			text-transform: uppercase;
-			color: $gray-600;
-			display: inline-block;
-			margin-top: 8px;
-		}
-
-		.topic-title {
-			text-transform: initial;
-		}
-	}
-
-	[component="topic/labels"] {
-		font-size: 20px;
-		color: $text-muted;
-	}
-
-	[component="topic/browsing-users"] {
-		margin-bottom: -5px;
-	}
 	.topic-header {
 		top: var(--panel-offset);
-		background-color: $body-bg;
 		z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
 	}
 
-	.topic-info {
-		border-bottom: 1px solid $post-border-color;
-	}
-
 	.posts {
-		h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-			margin-top: 0px;
-		}
-
 		.icon {
 			position: relative;
 			border-radius: 50%;
@@ -103,11 +65,6 @@
 		color: $primary;
 	}
 
-	[component="post/parent"] {
-		border: 0;
-		font-size: 10px;
-	}
-
 	.threaded-replies {
 		margin-left: 60px;
 		padding: 1rem 0px;
@@ -152,23 +109,6 @@
 		display: inline-block;
 	}
 
-	.title {
-		p {
-			margin-bottom: 4px;
-		}
-
-		small {
-			margin-top: 2px;
-			display: block;
-
-			color: $gray-600;
-
-			strong {
-				color: $gray-800;
-			}
-		}
-	}
-
 	.content {
 		margin-top: $post-padding;
 		padding-bottom: 1px;
@@ -177,22 +117,6 @@
 		word-wrap: break-word;
 		overflow: hidden;
 		min-height: 60px;
-	}
-
-	h1 {
-		.btn-group, .btn {
-			margin-left: 15px;
-		}
-
-		.btn {
-			background: $body-bg;
-			text-transform: uppercase;
-			font-weight: 600;
-			box-shadow: none !important;
-			font-size: 11px;
-			color: $gray-600;
-			padding: 0;
-		}
 	}
 
 	.post-signature {
@@ -240,49 +164,7 @@
 			margin-left: 1px;
 		}
 	}
-
-	.quick-reply {
-		position: relative;
-		.icon {
-			position: relative;
-			border-radius: 50%;
-			min-width: 46px;
-			min-height: 46px;
-			margin-top: 2px;
-
-			> a > .status {
-				position: absolute;
-				right: 12px;
-				font-size: 12px;
-				top: 0px;
-
-				@include media-breakpoint-up(md) {
-					top: 2px;
-					font-size: 16px;
-				}
-			}
-
-			.avatar {
-				margin-right: 15px;
-			}
-		}
-
-		.quickreply-message {
-			margin-left: 63px;
-			margin-bottom: 5px;
-
-			@include media-breakpoint-down(sm) {
-				margin-left: 0;
-
-				[component="topic/quickreply/text"] {
-					font-size: 16px;
-					padding: 10px;
-				}
-			}
-		}
-	}
 }
-
 
 .topic {
 	&.deleted {
@@ -453,48 +335,6 @@
 		.pagination-block {
 			width: 100%;
 		}
-	}
-}
-
-.thread_active_users {
-	text-transform: initial;
-
-	a[data-uid] {
-		position: relative;
-
-		img, .user-icon {
-			@include user-icon-style(20px, 1rem, 50%);
-			vertical-align: middle;
-			margin: 0 7px;
-		}
-
-		&::after {
-			position: absolute;
-			z-index: 0;
-			opacity: 0;
-
-			font-family: "FontAwesome";
-			content: "\f11c";
-			padding: 4px 0.25em;
-			top: -36px;
-			left: 7px;
-
-			@include transition("opacity ease 250ms, top ease 250ms")
-		}
-
-		&.replying::after {
-			opacity: 1;
-			top: -50px;
-			animation: topic-reply-pulse 2s ease-in infinite;
-		}
-	}
-
-	.anonymous-box {
-		border: 1px solid #ddd;
-		width: 24px;
-		height: 24px;
-		position: relative;
-		text-align: center;
 	}
 }
 

@@ -1,4 +1,4 @@
-<ul id="quick-search-results" class="quick-search-results list-unstyled mb-0 p-0 overflow-auto" style="max-width: {dropdown.maxWidth}; max-height: {dropdown.maxHeight};">
+<ul id="quick-search-results" class="quick-search-results list-unstyled mb-0 p-0 overflow-auto ghost-scrollbar" style="max-width: {dropdown.maxWidth}; max-height: {dropdown.maxHeight};">
 {{{each posts}}}
 <li data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 	<a href="{config.relative_path}/post/{posts.pid}"
