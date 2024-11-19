@@ -7,13 +7,16 @@
 			<button class="btn btn-ghost btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				{{{ if selectedFilter }}}{selectedFilter.name}{{{ end}}} <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu dropdown-menu-end" role="menu">
+			<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
 				{{{ each filters }}}
 				{{{ if filters.separator }}}
 				<li role="separator" class="dropdown-divider"></li>
 				{{{ else }}}
 				<li role="presentation" class="category">
-					<a class="dropdown-item" role="menuitem" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw {{{ if filters.selected }}}fa-check{{{ end }}}"></i> {filters.name}</a>
+					<a class="dropdown-item rounded-1 d-flex gap-3 align-items-center justify-content-between" role="menuitem" href="{config.relative_path}/notifications?filter={filters.filter}">
+						<span><i class="fa fa-fw {{{ if filters.selected }}}fa-check{{{ end }}}"></i> {filters.name}</span>
+						<span class="">{./count}</span>
+					</a>
 				</li>
 				{{{ end }}}
 				{{{ end }}}
