@@ -34,7 +34,7 @@
 
 	<hr />
 
-	<div component="groups/container" class="row" id="groups-list" data-nextstart={nextStart}>
+	<div component="groups/container" class="row" id="groups-list">
 		{{{ if groups.length }}}
 		<!-- IMPORT partials/groups/list.tpl -->
 		{{{ else }}}
@@ -45,4 +45,6 @@
 		</div>
 		{{{ end }}}
 	</div>
+
+	<!-- IMPORT partials/paginator.tpl -->
 </div>
