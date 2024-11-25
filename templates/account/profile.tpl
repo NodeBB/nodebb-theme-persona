@@ -80,20 +80,6 @@
 		</div>
 		{{{ end }}}
 
-		{{{ if websiteName }}}
-		<div>
-			<span class="stat-label">[[user:website]]</span>
-			<a href="{websiteLink}" class="fw-bold" rel="nofollow noreferrer me">{websiteName}</a>
-		</div>
-		{{{ end }}}
-
-		{{{ if location }}}
-		<div>
-			<span class="stat-label">[[user:location]]</span>
-			<span class="fw-bold">{location}</span>
-		</div>
-		{{{ end }}}
-
 		{{{ if age }}}
 		<div>
 			<span class="stat-label">[[user:age]]</span>
@@ -106,7 +92,7 @@
 		<div>
 			<span class="stat-label">{./name}</span>
 			{{{ if (./type == "input-link") }}}
-			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer me">{./value}</a>
+			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer">{./linkValue}</a>
 			{{{ else }}}
 			<span class="fw-bold">{./value}</span>
 			{{{ end }}}

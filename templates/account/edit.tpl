@@ -53,17 +53,6 @@
 					<label class="form-label fw-bold" for="fullname">[[user:fullname]]</label>
 					<input class="form-control" type="text" id="fullname" name="fullname" placeholder="[[user:fullname]]" value="{fullname}">
 				</div>
-				<!-- IF allowWebsite -->
-				<div class="mb-2">
-					<label class="form-label fw-bold" for="website">[[user:website]]</label>
-					<input class="form-control" type="text" id="website" name="website" placeholder="http://..." value="{website}">
-				</div>
-				<!-- ENDIF allowWebsite -->
-
-				<div class="mb-2">
-					<label class="form-label fw-bold" for="location">[[user:location]]</label>
-					<input class="form-control" type="text" id="location" name="location" placeholder="[[user:location]]" value="{location}">
-				</div>
 
 				<div class="mb-2">
 					<label class="form-label fw-bold" for="birthday">[[user:birthday]]</label>
@@ -80,8 +69,9 @@
 					{{{ if (./type == "input-number") }}}
 					<input class="form-control" type="number" id="{./key}" name="{./key}" value="{./value}">
 					{{{ end }}}
-					{{{ if (./type == "select") }}}
-					<select class="form-select" id="{./key}" name="{./key}">
+
+					{{{ if ((./type == "select") || (./type == "select-multi")) }}}
+					<select class="form-select" id="{./key}" name="{./key}" {{{ if (./type == "select-multi") }}} multiple{{{ end }}}>
 						{{{ each ./select-options}}}
 						<option value="{./value}" {{{ if ./selected }}}selected{{{ end }}}>{./value}</option>
 						{{{ end }}}
