@@ -8,20 +8,20 @@
 	<div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
 		<div>
 			{{{ if allowGroupCreation }}}
-			<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new-group]]</button>
+			<button class="btn btn-sm btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new-group]]</button>
 			{{{ end }}}
 		</div>
 
 		<div class="d-flex gap-3 align-items-center">
-			<select class="form-select" id="search-sort">
+			<select class="form-select form-select-sm" id="search-sort">
 				<option value="alpha">[[groups:details.group-name]]</option>
 				<option value="count">[[groups:details.member-count]]</option>
 				<option value="date">[[groups:details.creation-date]]</option>
 			</select>
 
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="" id="search-text">
-				<button id="search-button" class="btn btn-primary">
+				<input type="text" class="form-control form-control-sm" placeholder="[[global:search]]" name="query" value="" id="search-text">
+				<button id="search-button" class="btn btn-sm btn-primary">
 					<i class="fa fa-search"></i>
 				</button>
 			</div>

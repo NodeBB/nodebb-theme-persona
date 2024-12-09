@@ -26,6 +26,8 @@
 		</div>
 	</div>
 
+	<hr/>
+
 	<!-- IMPORT partials/users_list.tpl -->
 
 	<!-- IMPORT partials/paginator.tpl -->

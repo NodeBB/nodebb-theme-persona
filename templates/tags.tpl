@@ -7,11 +7,11 @@
 <div class="tags">
 	{{{ if displayTagSearch }}}
 	{{{ if tags.length }}}
-	<div class="row justify-content-end mb-3">
-		<div class="col-lg-3">
+	<div class="d-flex justify-content-end mb-3">
+		<div class="search">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="[[global:search]]" id="tag-search">
-				<button class="btn btn-primary" type="button">
+				<input type="text" class="form-control form-control-sm" placeholder="[[global:search]]" id="tag-search">
+				<button class="btn btn-sm btn-primary" type="button">
 					<i class="fa fa-search"></i>
 				</button>
 			</div>
@@ -19,6 +19,8 @@
 	</div>
 	{{{ end }}}
 	{{{ end }}}
+
+	<hr/>
 
 	{{{ if !tags.length }}}
 	<div class="alert alert-warning">[[tags:no-tags]]</div>
