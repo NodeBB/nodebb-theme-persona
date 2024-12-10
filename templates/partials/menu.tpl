@@ -44,7 +44,7 @@
 			</div>
 
 			<div id="nav-dropdown" class="collapse navbar-collapse d-none d-lg-block">
-				<ul id="main-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
+				<ul id="main-nav" class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
 					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
@@ -77,14 +77,14 @@
 					</li>
 				</ul>
 				{{{ if (config.searchEnabled && user.privileges.search:content) }}}
-				<div class="navbar-nav mb-2 mb-lg-0 position-relative">
+				<div class="navbar-nav mb-2 me-2 mb-lg-0 position-relative">
 					<!-- IMPORT partials/header/search.tpl -->
 				</div>
 				{{{ end }}}
 
 				{{{ if !maintenanceHeader }}}
 				{{{ if config.loggedIn }}}
-				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
+				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center gap-2">
 					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications" title="[[global:header.notifications]]">
 						<!-- IMPORT partials/header/notifications.tpl -->
 					</li>
@@ -98,7 +98,7 @@
 					<!-- IMPORT partials/header/user-menu.tpl -->
 				</ul>
 				{{{ else }}}
-				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
+				<ul id="logged-out-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center gap-2">
 					{{{ if allowRegistration }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">
