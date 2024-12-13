@@ -70,6 +70,10 @@
 					<input class="form-control" type="number" id="{./key}" name="{./key}" value="{./value}">
 					{{{ end }}}
 
+					{{{ if (./type == "input-date") }}}
+					<input class="form-control" type="date" id="{./key}" name="{./key}" value="{./value}">
+					{{{ end }}}
+
 					{{{ if ((./type == "select") || (./type == "select-multi")) }}}
 					<select class="form-select" id="{./key}" name="{./key}" {{{ if (./type == "select-multi") }}} multiple{{{ end }}}>
 						{{{ each ./select-options}}}
