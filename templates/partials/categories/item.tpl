@@ -36,7 +36,7 @@
 			{{{ end }}}
 		</div>
 	</div>
-	{{{ if (!./link && !./isSection) }}}
+	{{{ if !./link }}}
 	<div class="d-flex col-md-5 col-12 align-content-stretch">
 		<div class="meta stats d-none d-lg-grid col-6 gap-1 pe-2 text-muted" style="grid-template-columns: 1fr 1fr;">
 			<div class="overflow-hidden rounded-1 d-flex flex-column align-items-center">
