@@ -22,16 +22,16 @@
 			{{{ end }}}
 			{{{ if !config.hideSubCategories }}}
 			{{{ if ./children.length }}}
-			<div class="category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
+			<ul class="list-unstyled category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
 				{{{ each ./children }}}
 				{{{ if !./isSection }}}
-				<span class="category-children-item small d-flex gap-1 align-items-center">
+				<li class="category-children-item small d-flex gap-1 align-items-center">
 					{buildCategoryIcon(@value, "24px", "rounded-circle")}
 					<a href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" class="text-reset">{./name}</a>
-				</span>
+				</li>
 				{{{ end }}}
 				{{{ end }}}
-			</div>
+			</ul>
 			{{{ end }}}
 			{{{ end }}}
 		</div>
