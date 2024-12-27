@@ -30,18 +30,18 @@
 		</div>
 
 		<div class="container">
-			<!-- IMPORT partials/account/menu.tpl -->
-
 			<!-- IF allowCoverPicture -->
 			<!-- IF canEdit -->
 			<div class="controls">
-				<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
-				<span class="resize"><i class="fa fa-fw fa-4x fa-arrows"></i></span>
-				<span class="remove"><i class="fa fa-fw fa-4x fa-times"></i></span>
+				<a href="#" class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></a>
+				<a href="#" class="resize"><i class="fa fa-fw fa-4x fa-arrows"></i></a>
+				<a href="#" class="remove"><i class="fa fa-fw fa-4x fa-times"></i></a>
 			</div>
-			<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
+			<a href="#" class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></a>
 			<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
 			<!-- ENDIF canEdit -->
 			<!-- ENDIF allowCoverPicture -->
+
+			<!-- IMPORT partials/account/menu.tpl -->
 		</div>
 	</div>

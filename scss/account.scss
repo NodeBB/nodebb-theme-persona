@@ -74,10 +74,8 @@
 			}
 		}
 
-		&:hover {
-			.controls {
-				opacity: 0.8;
-			}
+		&:hover .controls, .controls:focus-within {
+			opacity: 0.8;
 		}
 
 		.controls {
