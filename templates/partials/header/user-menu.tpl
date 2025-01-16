@@ -4,32 +4,37 @@
 		<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 	</a>
 	<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
-	<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="user_dropdown" role="menu">
+	<ul id="user-control-list" component="header/usercontrol" class="overscroll-behavior-contain user-dropdown dropdown-menu shadow p-1 text-sm ff-base" role="menu">
 		<li>
-			<a class="dropdown-item" component="header/profilelink" href="{relative_path}/user/{user.userslug}" role="menuitem">
-				<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username">{user.username}</span>
+			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" component="header/profilelink" href="{relative_path}/user/{user.userslug}" role="menuitem" aria-label="[[user:profile]]">
+				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status {user.status}"><span class="visually-hidden">[[global:{user.status}]]</span></span>
+				<span class="fw-semibold" component="header/username">{user.username}</span>
 			</a>
 		</li>
 		<li role="presentation" class="dropdown-divider"></li>
-		<li><h6 class="dropdown-header">[[global:status]]</h6></li>
+		<li><h6 class="dropdown-header text-xs">[[global:status]]</h6></li>
 		<li>
-			<a href="#" class="dropdown-item user-status {{{ if user.online }}}selected{{{ end }}}" data-status="online" role="menuitem">
-				<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
+			<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.online }}}selected{{{ end }}}" data-status="online" role="menuitem">
+				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status online"></span>
+				<span class="flex-grow-1">[[global:online]]</span>
 			</a>
 		</li>
 		<li>
-			<a href="#" class="dropdown-item user-status {{{ if user.away }}}selected{{{ end }}}" data-status="away" role="menuitem">
-				<i class="fa fa-fw fa-circle status away"></i><span> [[global:away]]</span>
+			<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.away }}}selected{{{ end }}}" data-status="away" role="menuitem">
+				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status away"></span>
+				<span class="flex-grow-1">[[global:away]]</span>
 			</a>
 		</li>
 		<li>
-			<a href="#" class="dropdown-item user-status {{{ if user.dnd }}}selected{{{ end }}}" data-status="dnd" role="menuitem">
-				<i class="fa fa-fw fa-circle status dnd"></i><span> [[global:dnd]]</span>
+			<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.dnd }}}selected{{{ end }}}" data-status="dnd" role="menuitem">
+				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status dnd"></span>
+				<span class="flex-grow-1">[[global:dnd]]</span>
 			</a>
 		</li>
 		<li>
-			<a href="#" class="dropdown-item user-status {{{ if user.offline }}}selected{{{ end }}}" data-status="offline" role="menuitem">
-				<i class="fa fa-fw fa-circle status offline"></i><span> [[global:invisible]]</span>
+			<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.offline }}}selected{{{ end }}}" data-status="offline" role="menuitem">
+				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status offline"></span>
+				<span class="flex-grow-1">[[global:invisible]]</span>
 			</a>
 		</li>
 		<li role="presentation" class="dropdown-divider"></li>
