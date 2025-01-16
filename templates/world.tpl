@@ -29,9 +29,18 @@
 		</div>
 		{{{ end }}}
 
-		{{{ if (!topics.length && privileges.topics:create)}}}
-		<hr class="visible-xs" />
-		<div class="alert alert-info" id="category-no-topics">[[activitypub:no-topics]]</div>
+		{{{ if !topics.length }}}
+		<div class="row">
+			<div class="col-md-10 offset-md-1 d-flex align-items-center">
+				<div>
+					<h2 class="fs-4 mb-3">[[world:onboard.title]]</h2>
+					<p>[[world:onboard.what]]</p>
+					<p>[[world:onboard.why]]</p>
+					<p>[[world:onboard.how]]</p>
+				</div>
+				<i class="fa fa-comment-nodes fa-8x p-3"></i>
+			</div>
+		</div>
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
