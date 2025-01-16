@@ -94,11 +94,24 @@
 	</li>
 	{{{ end }}}
 
+	{{{ if !posts.display_original_url }}}
 	<li>
 		<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" role="menuitem" href="#" data-clipboard-text="{posts.absolute_url}">
 			<i class="fa fa-fw fa-link"></i> [[topic:copy-permalink]]
 		</a>
 	</li>
+	{{{ else }}}
+	<li>
+		<a class="dropdown-item" role="menuitem" href="#" data-clipboard-text="{{{ if posts.url }}}{posts.url}{{{ else }}}{posts.pid}{{{ end }}}">
+			<i class="fa fa-fw fa-link"></i> [[topic:copy-permalink]]
+		</a>
+	</li>
+	<li>
+		<a class="dropdown-item" role="menuitem" href="{{{ if posts.url }}}{posts.url}{{{ else }}}{posts.pid}{{{ end }}}">
+			<i class="fa fa-fw fa-external-link"></i> [[topic:go-to-original]]
+		</a>
+	</li>
+	{{{ end }}}
 
 	<!-- IF postSharing.length -->
 	<!-- IF config.loggedIn --><li class="dropdown-divider"></li><!-- ENDIF config.loggedIn -->

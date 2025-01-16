@@ -1,0 +1,25 @@
+.status {
+	padding: 3px;
+
+	&.online {
+		background-color: $success;
+	}
+
+	&.away {
+		background-color: $warning;
+	}
+
+	&.dnd {
+		background-color: $danger;
+	}
+
+	&.offline {
+		background-color: $gray-600;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.status {
+		padding: 5px;
+	}
+}
