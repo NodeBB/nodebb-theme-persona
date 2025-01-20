@@ -129,7 +129,7 @@ define('persona/mobile-menu', [
 		function loadNotificationsAndChats() {
 			require(['notifications', 'chat'], function (notifications, chat) {
 				const notifList = $('#chats-menu [data-section="notifications"] ul');
-				notifications.loadNotifications(notifList, function () {
+				notifications.loadNotifications(null, notifList, function () {
 					notifList.find('.deco-none').removeClass('deco-none');
 					chat.loadChatsDropdown($('#chats-menu .chat-list'));
 				});

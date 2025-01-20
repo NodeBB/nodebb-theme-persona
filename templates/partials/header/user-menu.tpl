@@ -1,10 +1,10 @@
-<li id="user_label" class="nav-item dropdown" title="[[global:header.profile]]">
+<li id="user_label" class="nav-item dropdown px-3" title="[[global:header.profile]]">
 	<a href="#" for="user-control-list-check" data-bs-toggle="dropdown" id="user_dropdown" role="button" component="header/avatar" aria-haspopup="true" aria-expanded="false">
 		{buildAvatar(user, "32px", true)}
 		<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 	</a>
 	<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
-	<ul id="user-control-list" component="header/usercontrol" class="overscroll-behavior-contain user-dropdown dropdown-menu shadow p-1 text-sm ff-base" role="menu">
+	<ul id="user-control-list" component="header/usercontrol" class="overscroll-behavior-contain user-dropdown dropdown-menu dropdown-menu-end shadow p-1 text-sm ff-base" role="menu">
 		<li>
 			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" component="header/profilelink" href="{relative_path}/user/{user.userslug}" role="menuitem" aria-label="[[user:profile]]">
 				<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status {user.status}"><span class="visually-hidden">[[global:{user.status}]]</span></span>

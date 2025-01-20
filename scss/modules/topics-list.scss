@@ -18,7 +18,7 @@ ul.topics-list, ul.categories-list {
 
 		// all other skins use link-color for unread titles
 		&.unread .title a {
-			color: $link-color;
+			color: $link-color!important;
 			font-weight: bold;
 		}
 
@@ -35,7 +35,7 @@ ul.topics-list, ul.categories-list {
 .skin-noskin {
 	ul.topics-list, ul.categories-list {
 		li.unread .title {
-			color: $primary;
+			color: $primary!important;
 		}
 	}
 }

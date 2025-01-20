@@ -40,27 +40,6 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	}
 }
 
-.status {
-	font-size: 10px;
-	vertical-align: middle;
-
-	&.online {
-		color: $success;
-	}
-
-	&.away {
-		color: $warning;
-	}
-
-	&.dnd {
-		color: $danger;
-	}
-
-	&.offline {
-		color: $gray-600;
-	}
-}
-
 
 .topic .topic-item, .category .category-item {
 	-webkit-transition: background-color 500ms linear;

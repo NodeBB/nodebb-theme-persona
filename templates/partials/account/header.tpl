@@ -14,7 +14,7 @@
 			<!-- ELSE -->
 			<div class="avatar avatar-rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;" title="{username}">{icon:text}</div>
 			<!-- ENDIF picture -->
-			<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
+			<span component="user/status" class="position-absolute border border-white border-2 rounded-circle status {status}"><span class="visually-hidden">[[global:{status}]]</span></span>
 
 			<!-- IF loggedIn -->
 			<!-- IF !isSelf -->

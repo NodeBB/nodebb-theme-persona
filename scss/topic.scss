@@ -14,6 +14,9 @@
 
 
 			> a > .status {
+				display: inline-block;
+				width: 4px;
+				height: 4px;
 				position: absolute;
 				right: 12px;
 				font-size: 12px;
@@ -21,6 +24,8 @@
 				z-index: 1;
 
 				@include media-breakpoint-up(md) {
+					width: 15px;
+					height: 15px;
 					top: 2px;
 					font-size: 16px;
 				}

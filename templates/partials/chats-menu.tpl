@@ -11,7 +11,6 @@
 	<li class="nav-item">
 		<a class="nav-link active text-decoration-none" href="#" data-bs-target="#profile" data-bs-toggle="tab">
 			{buildAvatar(user, "24px", true, "user-icon")}
-			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 		</a>
 	</li>
 </ul>
