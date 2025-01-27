@@ -12,11 +12,11 @@
 		<div class="card-body">
 			<div class="mb-2">
 				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
-				<span class="search-result-text search-result-title"><a href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}">{./topic.title}</a></span>
+				<a class="topic-title fw-semibold fs-5" href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}">{./topic.title}</a>
 			</div>
 
 			{{{ if showAsPosts }}}
-			<div class="search-result-text">
+			<div component="post/content" class="content">
 				{./content}
 			</div>
 			{{{ end }}}
