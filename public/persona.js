@@ -193,7 +193,8 @@ $(document).ready(function () {
 				if (parseInt(app.user.uid, 10) === parseInt(data.uid, 10) || !app.user.uid) {
 					card.find('.btn-morph').hide();
 				} else {
-					setupFavouriteMorph(card, data.uid, data.username);
+					const uid = isFinite(data.uid) ? data.uid : encodeURIComponent(data.userslug);
+					setupFavouriteMorph(card, uid, data.username);
 
 					if (isFollowing) {
 						$('.btn-morph').addClass('heart');
@@ -212,7 +213,8 @@ $(document).ready(function () {
 	}
 
 	function setupFavouriteButtonOnProfile() {
-		setupFavouriteMorph($('[component="account/cover"]'), ajaxify.data.uid, ajaxify.data.username);
+		const uid = isFinite(ajaxify.data.uid) ? ajaxify.data.uid : encodeURIComponent(ajaxify.data.userslug);
+		setupFavouriteMorph($('[component="account/cover"]'), uid, ajaxify.data.username);
 	}
 
 	function setupCardRemoval(card) {
