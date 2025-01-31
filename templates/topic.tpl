@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="topic-header sticky-top mb-3 bg-body">
-			<div class="d-flex gap-3 flex-wrap border-bottom pb-2 align-items-start">
+			<div class="d-flex flex-wrap gap-3 border-bottom pb-2">
 				<div class="d-flex flex-column gap-2 flex-grow-1">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
