@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="topic-header sticky-top mb-3 bg-body">
-			<div class="d-flex gap-3 flew-wrap border-bottom pb-2 align-items-start">
+			<div class="d-flex gap-3 flex-wrap border-bottom pb-2 align-items-start">
 				<div class="d-flex flex-column gap-2 flex-grow-1">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
@@ -56,7 +56,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
+				<div class="d-flex flex-wrap gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
 					{{{ each thumbs }}}
 					<a class="d-inline-block h-100" href="{./url}">
 						<img class="rounded-1 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
