@@ -2,6 +2,9 @@
 	.topic-header {
 		top: var(--panel-offset);
 		z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
+		[component="topic/browsing-users-label"] {
+			display:none!important;
+		}
 	}
 
 	.posts {
