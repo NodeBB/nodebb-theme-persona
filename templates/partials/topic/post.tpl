@@ -40,9 +40,9 @@
 			<!-- ENDIF posts.user.banned -->
 
 			<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-				<!-- IF posts.toPid -->
-				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
-				<!-- ENDIF posts.toPid -->
+				{{{ if posts.toPid }}}
+				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @{{{ if posts.parent.user.userslug }}}{posts.parent.user.username}{{{ else }}}[[global:guest]]{{{ end }}}</a>
+				{{{ end }}}
 
 				<span>
 					<!-- IF posts.user.custom_profile_info.length -->
