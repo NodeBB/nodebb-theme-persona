@@ -166,35 +166,30 @@ $(document).ready(function () {
 	function generateUserCard(ev) {
 		var avatar = $(this);
 		var uid = avatar.parents('[data-uid]').attr('data-uid');
-		var data = (ajaxify.data.topics || ajaxify.data.posts);
-
-		for (var i = 0, ii = data.length; i < ii; i++) {
-			if (parseInt(data[i].uid, 10) === parseInt(uid, 10)) {
-				data = data[i].user;
-				break;
-			}
-		}
+		const topicOrPost = (ajaxify.data.topics || ajaxify.data.posts || []).find(d => String(d.uid) === String(uid));
+		if (!topicOrPost) return;
+		const user = topicOrPost.user;
 
 		$('.persona-usercard').remove();
 
-		if (parseInt(data.uid, 10) === 0) {
+		if (!user.userslug) {
 			return false;
 		}
 
-		socket.emit('user.isFollowing', { uid: data.uid }, function (err, isFollowing) {
+		socket.emit('user.isFollowing', { uid: user.uid }, function (err, isFollowing) {
 			if (err) {
 				return err;
 			}
 
-			app.parseAndTranslate('modules/usercard', data, function (html) {
+			app.parseAndTranslate('modules/usercard', user, function (html) {
 				var card = $(html);
 				avatar.parents('a').after(card.hide());
 
-				if (parseInt(app.user.uid, 10) === parseInt(data.uid, 10) || !app.user.uid) {
+				if (String(app.user.uid) === String(user.uid) || !app.user.uid) {
 					card.find('.btn-morph').hide();
 				} else {
-					const uid = isFinite(data.uid) ? data.uid : encodeURIComponent(data.userslug);
-					setupFavouriteMorph(card, uid, data.username);
+					const uid = isFinite(user.uid) ? user.uid : encodeURIComponent(user.userslug);
+					setupFavouriteMorph(card, uid, user.username);
 
 					if (isFollowing) {
 						$('.btn-morph').addClass('heart');

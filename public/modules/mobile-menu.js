@@ -19,7 +19,7 @@ define('persona/mobile-menu', [
 		if (!menuEl || !chatsMenuEl) {
 			return;
 		}
-		const chatMenuVisible = app.user && parseInt(app.user.uid, 10);
+		const chatMenuVisible = app.user && app.user.userslug;
 		let swapped = !!Storage.getItem('persona:menus:legacy-layout');
 		const margin = window.innerWidth;
 
@@ -118,7 +118,7 @@ define('persona/mobile-menu', [
 		$('#user-control-list').children().clone(true, true).appendTo($('#chats-menu [data-section="profile"] ul'));
 
 		socket.on('event:user_status_change', function (data) {
-			if (parseInt(data.uid, 10) === app.user.uid) {
+			if (String(data.uid) === String(app.user.uid)) {
 				app.updateUserStatus($('#chats-menu [component="user/status"]'), data.status);
 				navSlideout.close();
 			}
