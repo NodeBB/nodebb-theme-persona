@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="topic-header sticky-top mb-3 bg-body">
-			<div class="d-flex flex-wrap gap-3 border-bottom pb-2">
+			<div class="d-flex flex-wrap gap-3 border-bottom p-2">
 				<div class="d-flex flex-column gap-2 flex-grow-1">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
@@ -56,13 +56,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex flex-wrap gap-2 align-items-center hidden-empty" component="topic/thumb/list">
-					{{{ each thumbs }}}
-					<a class="d-inline-block" href="{./url}">
-						<img class="rounded-1 bg-light" style="width:auto; max-width: 4rem; height: 3.33rem;object-fit: contain;" src="{./url}" />
-					</a>
-					{{{ end }}}
-				</div>
+				<div class="d-flex flex-wrap gap-2 align-items-center hidden-empty" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
 			</div>
 		</div>
 		{{{ if merger }}}

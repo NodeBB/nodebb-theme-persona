@@ -9,7 +9,7 @@
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
 		{{{ if (topics.length || privileges.topics:create) }}}
-		<div class="topic-list-header sticky-top btn-toolbar justify-content-between align-items-center py-2 mb-2 flex-nowrap">
+		<div class="topic-list-header text-bg-light sticky-top btn-toolbar justify-content-between align-items-center p-1 mb-2 flex-nowrap">
 			<div class="d-flex gap-1">
 				{{{ if privileges.topics:create }}}
 				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary btn-sm text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>

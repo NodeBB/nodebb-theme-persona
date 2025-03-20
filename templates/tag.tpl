@@ -5,7 +5,7 @@
 	{{{end}}}
 </div>
 <div class="tag">
-	<div class="topic-list-header sticky-top btn-toolbar justify-content-between align-items-center py-2 mb-2 gap-1">
+	<div class="topic-list-header text-bg-light sticky-top btn-toolbar justify-content-between align-items-center p-1 mb-2 gap-1">
 		<div class="d-flex gap-1">
 			{{{ if loggedIn }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->

@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="world {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		{{{ if (topics.length || privileges.topics:create) }}}
-		<div class="topic-list-header sticky-top btn-toolbar justify-content-between py-2 mb-2 flex-nowrap">
+		<div class="topic-list-header text-bg-light sticky-top btn-toolbar justify-content-between p-1 mb-2 gap-1 flex-nowrap">
 			<div class="d-flex gap-1 align-items-stretch">
 				{{{ if privileges.topics:create }}}
 				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>

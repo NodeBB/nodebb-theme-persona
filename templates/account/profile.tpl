@@ -1,9 +1,9 @@
 <!-- IMPORT partials/account/header.tpl -->
 
 <div class="profile row">
-	<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
+	<h1 class="fullname text-center fs-2 text-secondary fw-light">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</h1>
 	<div class="d-flex gap-2 justify-content-center mb-2" component="user/badges"></div>
-	<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
+	<h2 class="username text-center fs-5"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 	<!-- IF isAdminOrGlobalModeratorOrModerator -->
 	<!-- IF banned -->
 	<div class="text-center">
@@ -24,43 +24,42 @@
 	<!-- ENDIF selectedGroup.slug -->
 	{{{end}}}
 	</div>
-	<br/>
 	<!-- ENDIF selectedGroup.length -->
 
 	<!-- IF aboutme -->
-	<span component="aboutme" class="text-center aboutme">{aboutmeParsed}</span>
+	<div component="aboutme" class="text-center aboutme text-secondary w-75 mx-auto text-center">{aboutmeParsed}</div>
 	<!-- ENDIF aboutme -->
 
-	<div class="account-stats">
+	<div class="account-stats fs-1 text-center mb-3">
 		<!-- IF !reputation:disabled -->
-		<div class="stat">
+		<div class="stat d-inline-block" style="min-width: 100px;">
 			<div title="{reputation}">{humanReadableNumber(reputation)}</div>
-			<span class="stat-label">[[global:reputation]]</span>
+			<div class="stat-label text-xs text-uppercase text-secondary">[[global:reputation]]</div>
 		</div>
 		<!-- ENDIF !reputation:disabled -->
 
-		<div class="stat">
+		<div class="stat d-inline-block" style="min-width: 100px;">
 			<div title="{profileviews}">{humanReadableNumber(profileviews)}</div>
-			<span class="stat-label">[[user:profile-views]]</span>
+			<div class="stat-label text-xs text-uppercase text-secondary">[[user:profile-views]]</div>
 		</div>
 
-		<div class="stat">
+		<div class="stat d-inline-block" style="min-width: 100px;">
 			<div><a title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{humanReadableNumber(counts.posts)}</a></div>
-			<span class="stat-label">[[global:posts]]</span>
+			<div class="stat-label text-xs text-uppercase text-secondary">[[global:posts]]</div>
 		</div>
 
-		<div class="stat">
+		<div class="stat d-inline-block" style="min-width: 100px;">
 			<div><a title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{humanReadableNumber(counts.followers)}</a></div>
-			<span class="stat-label">[[user:followers]]</span>
+			<div class="stat-label text-xs text-uppercase text-secondary">[[user:followers]]</div>
 		</div>
 
-		<div class="stat">
+		<div class="stat d-inline-block" style="min-width: 100px;">
 			<div><a title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{humanReadableNumber(counts.following)}</a></div>
-			<span class="stat-label">[[user:following]]</span>
+			<div class="stat-label text-xs text-uppercase text-secondary">[[user:following]]</div>
 		</div>
 	</div>
 
-	<div class="profile-meta d-flex gap-3 flex-wrap justify-content-center">
+	<div class="profile-meta text-xs text-uppercase d-flex gap-3 flex-wrap justify-content-center">
 		<div class="w-100 d-flex gap-3 justify-content-center">
 			<div>
 				<span class="stat-label">[[user:joined]]</span>
@@ -81,8 +80,8 @@
 		{{{ end }}}
 
 		{{{ if age }}}
-		<div>
-			<span class="stat-label">[[user:age]]</span>
+		<div class="">
+			<span class="stat-label text-secondary ">[[user:age]]</span>
 			<span class="fw-bold">{age}</span>
 		</div>
 		{{{ end }}}

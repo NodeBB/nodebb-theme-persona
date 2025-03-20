@@ -3,7 +3,6 @@
 
 	.posts-list-item {
 		width: 100%;
-		margin-bottom: 0px;
 
 		&.deleted {
 			-moz-opacity: 0.30;
@@ -29,26 +28,9 @@
 		}
 
 		.topic-title {
-			color: $gray-800;
 			font-weight: 900;
 			font-size: 125%;
 			text-decoration: underline;
-		}
-
-		.topic-category {
-			text-transform: uppercase;
-			font-size: 10px;
-			color: $gray-600;
-			margin-top: 6px;
-			margin-right: 10px;
-			margin-bottom: 25px;
-			display: inline-block;
-			margin-top: 10px;
-
-			a {
-				font-weight: 900;
-				color: $gray-600;
-			}
 		}
 
 		.content {
@@ -102,15 +84,10 @@
 			.post-author {
 				padding-left: 25px;
 				margin-top: -14px;
-				color: $gray-600;
 
 				a {
-					color: $gray-600;
 					font-weight: 900;
-
 				}
-
-				text-transform: uppercase;
 			}
 		}
 	}
