@@ -6,6 +6,22 @@
 </div>
 <div class="row">
 	<div class="world {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
+		<form role="search" method="GET" action="{config.relative_path}/search">
+			<input type="hidden" name="in" value="categories" />
+			<input class="form-control form-control-lg" component="category-search" name="term" type="text" autocomplete="off" placeholder="Find a category..." aria-label="Category Search" />
+		</form>
+
+		<div class="quick-search-container dropdown-menu d-block p-2 hidden">
+			<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+			<div class="quick-search-results-container"></div>
+		</div>
+
+		<hr />
+
+		{{{ each categories }}}
+		<!-- IMPORT partials/categories/item.tpl -->
+		{{{ end }}}
+
 		{{{ if (topics.length || privileges.topics:create) }}}
 		<div class="topic-list-header text-bg-light sticky-top btn-toolbar justify-content-between p-1 mb-2 gap-1 flex-nowrap">
 			<div class="d-flex gap-1 align-items-stretch">
