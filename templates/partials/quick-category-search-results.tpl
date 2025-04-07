@@ -16,7 +16,7 @@
 				<a class="stretched-link" href="{config.relative_path}/category/{./slug}"></a>
 				<span class="quick-search-title fw-semibold text-sm">
 					{./name}
-					{{{ if ./url }}}
+					{{{ if ./inbox }}}
 					(<i class="fa fa-globe"></i> {./slug})
 					{{{ end }}}
 				</span>
