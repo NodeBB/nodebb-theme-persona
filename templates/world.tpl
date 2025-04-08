@@ -18,9 +18,11 @@
 
 		<hr />
 
-		{{{ each categories }}}
-		<!-- IMPORT partials/categories/item.tpl -->
-		{{{ end }}}
+		<ul class="categories-list">
+			{{{ each categories }}}
+			<!-- IMPORT partials/categories/item.tpl -->
+			{{{ end }}}
+		</ul>
 
 		{{{ if (topics.length || privileges.topics:create) }}}
 		<div class="topic-list-header text-bg-light sticky-top btn-toolbar justify-content-between p-1 mb-2 gap-1 flex-nowrap">
