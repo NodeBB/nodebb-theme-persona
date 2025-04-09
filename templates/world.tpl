@@ -6,9 +6,22 @@
 </div>
 <div class="row">
 	<div class="world {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
-		<form role="search" method="GET" action="{config.relative_path}/search">
+		<form class="mb-4" role="search" method="GET" action="{config.relative_path}/search">
 			<input type="hidden" name="in" value="categories" />
-			<input class="form-control form-control-lg" component="category-search" name="term" type="text" autocomplete="off" placeholder="Find a category..." aria-label="Category Search" />
+			<div class="input-group" id="category-options">
+				<input class="form-control form-control-lg" component="category-search" name="term" type="text" autocomplete="off" placeholder="Find a category..." aria-label="Category Search" />
+				<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cog"></i></button>
+				<ul class="dropdown-menu dropdown-menu-end">
+					<li id="show-categories"><a class="dropdown-item" href="#">
+						<i class="fa fa-eye"></i>
+						[[world:show-categories]]
+					</a></li>
+					<li id="hide-categories"><a class="dropdown-item" href="#">
+						<i class="fa fa-eye-slash"></i>
+						[[world:hide-categories]]
+					</a></li>
+				</ul>
+			</div>
 		</form>
 
 		<div class="quick-search-container dropdown-menu d-block p-2 hidden">
@@ -16,9 +29,7 @@
 			<div class="quick-search-results-container"></div>
 		</div>
 
-		<hr />
-
-		<ul class="categories-list">
+		<ul class="categories-list ps-0 hidden">
 			{{{ each categories }}}
 			<!-- IMPORT partials/categories/item.tpl -->
 			{{{ end }}}
