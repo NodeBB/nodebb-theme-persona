@@ -13,3 +13,10 @@
 	<span class="fw-bold" title="{viewcount}">{humanReadableNumber(viewcount)}</span>
 	<span class="hidden-xs text-lowercase fw-normal">[[global:views]]</span>
 </span>
+{{{ if ./followercount }}}
+<span class="badge text-body border border-gray-300 stats text-xs">
+	<i class="fa fa-fw fa-bell-o visible-xs-inline" title="[[global:watching]]"></i>
+	<span class="fw-bold" title="{viewcount}">{humanReadableNumber(followercount)}</span>
+	<span class="hidden-xs text-lowercase fw-normal">[[global:watching]]</span>
+</span>
+{{{ end }}}
