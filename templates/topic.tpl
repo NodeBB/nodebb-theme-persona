@@ -42,7 +42,7 @@
 						</span>
 						{function.buildCategoryLabel, category, "a", "border"}
 						<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
-						<div class="d-flex hidden-xs gap-2"><!-- IMPORT partials/topic/stats.tpl --></div>
+						<div class="d-flex gap-2"><!-- IMPORT partials/topic/stats.tpl --></div>
 						{{{ if !feeds:disableRSS }}}
 						{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
 						{{{ end }}}
