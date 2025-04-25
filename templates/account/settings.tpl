@@ -50,10 +50,41 @@
 				</div>
 				<!-- ENDIF !hideFullname -->
 				<!-- IF !config.disableChat -->
-				<div class="form-check">
-					<input id="restrictChat" class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
-					<label for="restrictChat" class="form-check-label">[[user:restrict-chats]]</label>
+				<div class="form-check mb-2">
+					<input id="disableIncomingMessages" class="form-check-input" type="checkbox" data-property="disableIncomingMessages" <!-- IF settings.disableIncomingMessages -->checked<!-- ENDIF settings.disableIncomingMessages -->/>
+					<label for="disableIncomingMessages" class="form-check-label">[[user:disable-incoming-chats]]</label>
 				</div>
+
+				<div class="d-flex flex-column mb-3">
+					<label class="form-label text-sm" for="chatAllowListAdd">[[user:chat-allow-list]]</label>
+
+					<div component="chat/allow/list" class="d-flex flex-wrap gap-2 mb-2">
+						{{{ each settings.chatAllowListUsers }}}
+						<div component="chat/allow/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
+							{buildAvatar(@value, "16px", true)} {./username}
+							<button component="chat/allow/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
+						</div>
+						{{{ end }}}
+					</div>
+
+					<input type="text" class="form-control form-control-sm" id="chatAllowListAdd" placeholder="[[user:chat-list-add-user]]"/>
+				</div>
+
+				<div class="d-flex flex-column mb-3">
+					<label class="form-label text-sm" for="chatAllowListAdd">[[user:chat-deny-list]]</label>
+
+					<div component="chat/deny/list" class="d-flex flex-wrap gap-2 mb-2">
+						{{{ each settings.chatDenyListUsers }}}
+						<div component="chat/deny/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
+							{buildAvatar(@value, "16px", true)} {./username}
+							<button component="chat/deny/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
+						</div>
+						{{{ end }}}
+					</div>
+
+					<input type="text" class="form-control form-control-sm" id="chatDenyListAdd" placeholder="[[user:chat-list-add-user]]"/>
+				</div>
+
 				<!-- ENDIF !config.disableChat -->
 			</div>
 
