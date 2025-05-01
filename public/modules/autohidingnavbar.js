@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  *  Bootstrap Auto-Hiding Navbar - v4.0.0
  *  An extension for Bootstrap's fixed navbar which hides the navbar while the page is scrolling downwards and shows it the other way. The plugin is able to show/hide the navbar programmatically as well.
