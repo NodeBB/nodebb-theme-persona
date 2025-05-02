@@ -160,7 +160,7 @@
 							{{{ if history.flags.targetPurged }}}
 							<div>[[flags:target-purged]]</div>
 							{{{ else }}}
-							<a class="title" href="{config.relative_path}/post/{./pid}">{./title}</a>
+							<a class="title" href="{config.relative_path}/post/{encodeURIComponent(./pid)}">{./title}</a>
 							{{{ end }}}
 						</p>
 						{{{ end }}}

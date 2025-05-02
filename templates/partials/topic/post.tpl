@@ -41,7 +41,7 @@
 
 			<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 				{{{ if posts.toPid }}}
-				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @{{{ if posts.parent.user.userslug }}}{posts.parent.user.username}{{{ else }}}[[global:guest]]{{{ end }}}</a>
+				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{encodeURIComponent(posts.toPid)}"><i class="fa fa-reply"></i> @{{{ if posts.parent.user.userslug }}}{posts.parent.user.username}{{{ else }}}[[global:guest]]{{{ end }}}</a>
 				{{{ end }}}
 
 				<span>
@@ -60,7 +60,7 @@
 					<span data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last-edited-by, {posts.editor.username}]] <span class="timeago" title="{isoTimeToLocaleString(posts.editedISO, config.userLang)}"></span></span>
 
 					<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-						<a class="permalink text-muted" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
+						<a class="permalink text-muted" href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 					</span>
 				</span>
 				<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
