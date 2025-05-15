@@ -34,7 +34,7 @@
 			{function.membershipBtn, group}
 			{{{ end }}}
 			{{{ if isAdmin }}}
-			<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
+			<a href="{config.relative_path}/admin/manage/groups/{group.slug}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
 			{{{ end }}}
 		</div>
 	</div>
