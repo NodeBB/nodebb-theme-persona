@@ -14,7 +14,7 @@
 	.form-control::placeholder {
 		color:$gray-100!important;
 	}
-	.topic-header {
+	.topic-header, .topic-list-header {
 		background-color: transparent!important;
 		backdrop-filter: blur(5px);
 	}

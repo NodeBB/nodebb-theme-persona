@@ -6,6 +6,9 @@
 .topic-list-header {
     top: calc(var(--panel-offset));
     z-index: $zindex-dropdown; // allows for top nav dropdowns to appear on top
+    background-color: $body-bg;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 }
 
 .topic-list .title small {
