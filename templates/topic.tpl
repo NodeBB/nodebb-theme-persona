@@ -56,7 +56,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex flex-wrap gap-2 align-items-center hidden-empty" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
+				<div class="d-flex flex-wrap gap-2 align-items-center hidden-empty {{{ if greaterthan(thumbs.length, "4") }}}thumbs-collapsed{{{ end }}}" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
 			</div>
 		</div>
 		{{{ if merger }}}
