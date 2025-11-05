@@ -24,6 +24,12 @@
 				</a>
 			</div>
 			<div component="category/controls" class="d-flex gap-1">
+				{{{ if !isNumber(cid) }}}
+				<a href="{./url}" class="btn btn-sm d-flex gap-2 align-items-center" data-ajaxify="false">
+					<i class="fa fa-external-link text-primary"></i>
+					<span class="fw-semibold">View Original</span>
+				</a>
+				{{{ end }}}
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools-dropdown-right.tpl -->
