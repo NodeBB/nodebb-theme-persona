@@ -12,7 +12,7 @@
 	<!-- IMPORT partials/topic/watch.tpl -->
 	<!-- IMPORT partials/topic/sort.tpl -->
 	<button component="topic/crosspost" title="[[topic:crosspost-topic]]" class="btn btn-sm btn-ghost">
-		<i class="fa fa-fw fa-clone text-secondary"></i>
+		<i class="fa fa-fw fa-square-arrow-up-right text-secondary"></i>
 	</button>
 
 	<div class="d-inline-block">
