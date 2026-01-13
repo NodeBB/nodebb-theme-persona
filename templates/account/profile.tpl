@@ -59,7 +59,7 @@
 		</div>
 	</div>
 
-	<div class="profile-meta text-xs text-uppercase d-flex gap-3 flex-wrap justify-content-center">
+	<div class="profile-meta text-xs text-uppercase d-flex gap-3 flex-wrap justify-content-center align-items-center">
 		<div class="w-100 d-flex gap-3 justify-content-center">
 			<div>
 				<span class="stat-label">[[user:joined]]</span>
@@ -81,19 +81,19 @@
 
 		{{{ if age }}}
 		<div class="">
-			<span class="stat-label text-secondary ">[[user:age]]</span>
+			<span class="stat-label">[[user:age]]</span>
 			<span class="fw-bold">{age}</span>
 		</div>
 		{{{ end }}}
 
 		{{{ each customUserFields }}}
 		{{{ if ./value }}}
-		<div>
+		<div class="d-flex gap-1 flex-nowrap align-items-center">
 			<span class="stat-label">{./name}</span>
 			{{{ if (./type == "input-link") }}}
 			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer">{./linkValue}</a>
 			{{{ else }}}
-			<span class="fw-bold">{./value}</span>
+			<span class="fw-bold d-flex flex-nowrap align-items-center">{./value}</span>
 			{{{ end }}}
 		</div>
 		{{{ end }}}
