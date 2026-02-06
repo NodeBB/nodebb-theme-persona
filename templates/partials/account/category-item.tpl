@@ -10,7 +10,7 @@
 					<!-- IMPORT partials/categories/link.tpl -->
 				</div>
 				{{{ if ./descriptionParsed }}}
-				<div class="description text-muted text-xs w-100">{./descriptionParsed}</div>
+				<div class="description text-muted text-xs w-100 line-clamp-5">{./descriptionParsed}</div>
 				{{{ end }}}
 			</div>
 		</div>
