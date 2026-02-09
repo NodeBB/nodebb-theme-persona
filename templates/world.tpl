@@ -30,14 +30,36 @@
 				<div class="col-lg-4 col-sm-12 mt-2 pt-1">
 					<form class="mb-3" role="search" method="GET" action="{config.relative_path}/search">
 						<input type="hidden" name="in" value="categories" />
-						<input class="form-control form-control-lg" component="category-search" name="term" type="text" autocomplete="off" placeholder="[[world:category-search]]" />
+						<div class="input-group bottom-sheet">
+							<input class="form-control form-control-lg" component="category-search" name="term" type="text" autocomplete="off" placeholder="[[world:category-search]]" />
+							<button class="btn btn-outline-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="dropdown">
+								<i class="fa fa-fw fa-list"></i>
+							</button>
+							<ul class="dropdown-menu">
+								{{{ each categories }}}
+								<li class="flex-grow-1 align-items-start d-flex gap-2 p-1 mb-2 position-relative">
+									<div>
+										{buildCategoryIcon(@value, "24px", "rounded-1")}
+									</div>
+									<div class="d-grid gap-0">
+										<div class="title fw-semibold">
+											<a class="text-reset stretched-link" href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{../name}</a>
+										</div>
+										{{{ if ./descriptionParsed }}}
+										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{./descriptionParsed}</div>
+										{{{ end }}}
+									</div>
+								</li>
+								{{{ end }}}
+							</ul>
+						</div>
 					</form>
 					<div class="quick-search-container dropdown-menu d-block p-2 hidden">
 						<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
 						<div class="quick-search-results-container"></div>
 					</div>
 
-					<ul class="categories-list ps-0 list-unstyled pt-3">
+					<ul class="categories-list ps-0 list-unstyled pt-3 d-none d-md-block">
 						{{{ each categories }}}
 						<!-- IMPORT partials/account/category-item.tpl -->
 						{{{ end }}}
@@ -64,7 +86,7 @@
 						</div>
 						<a class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center fw-semibold" id="world-help" href="#">
 							<i class="fa fa-question text-primary"></i>
-							[[world:help]]
+							<span class="visible-md-inline visible-lg-inline">[[world:help]]</span>
 						</a>
 						<!-- IMPORT partials/category/tools-dropdown-left.tpl -->
 					</div>
