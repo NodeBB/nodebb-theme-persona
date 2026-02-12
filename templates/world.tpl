@@ -70,7 +70,7 @@
 				<div class="col-lg-8 col-sm-12">
 					{{{ if posts.length }}}
 					<div class="topic-list-header sticky-top btn-toolbar justify-content-end align-items-center px-1 py-2 mb-2 flex-nowrap">
-						<div class="btn-group bottom-sheet">
+						<div class="dropdown bottom-sheet">
 							<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown">
 								<i class="fa fa-fw fa-arrow-down-wide-short text-primary"></i>
 								<span id="sort-label" class="visible-md-inline visible-lg-inline fw-semibold"></span>

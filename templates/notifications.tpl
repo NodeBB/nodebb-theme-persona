@@ -3,7 +3,7 @@
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<div class="d-flex gap-2 justify-content-end" role="toolbar">
-		<div class="btn-group me-2">
+		<div class="dropdown me-2">
 			<button class="btn btn-ghost btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				{{{ if selectedFilter }}}{selectedFilter.name}{{{ end}}} <span class="caret"></span>
 			</button>

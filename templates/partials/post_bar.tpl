@@ -1,4 +1,4 @@
-<div class="topic-main-buttons float-end d-inline-block">
+<div class="topic-main-buttons d-flex gap-2 align-items-center">
 	<span class="loading-indicator btn float-start hidden" done="0">
 		<span class="hidden-xs">[[topic:loading-more-posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 	</span>

@@ -4,7 +4,7 @@
 	<div class="d-flex justify-content-between align-items-center mb-3">
 		<h1 class="fs-4">{title}</h1>
 		<div class="mb-2">
-			<div class="btn-group bottom-sheet" component="category/watch/all">
+			<div class="dropdown bottom-sheet" component="category/watch/all">
 				<button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
 					<span>[[user:change-all]]</span>
 					<span class="caret"></span>

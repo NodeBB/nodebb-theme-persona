@@ -1,5 +1,5 @@
 {{{ if config.loggedIn }}}
-<div class="btn-group bottom-sheet" component="topic/watch"
+<div class="dropdown bottom-sheet" component="topic/watch"
 data-bs-toggle="tooltip"
 	{{{if isFollowing}}}title="[[topic:watching]]"{{{end}}}
 	{{{if isNotFollowing}}}title="[[topic:not-watching]]"{{{end}}}

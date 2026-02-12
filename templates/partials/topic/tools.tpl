@@ -1,5 +1,5 @@
 {{{ if privileges.view_thread_tools }}}
-<div title="[[topic:thread-tools.title]]" class="btn-group thread-tools bottom-sheet">
+<div title="[[topic:thread-tools.title]]" class="dropdown thread-tools bottom-sheet">
 	<button class="btn btn-sm btn-ghost dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
 		<i class="fa fa-fw fa-gear text-secondary"></i>
 	</button>

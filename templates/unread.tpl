@@ -17,7 +17,7 @@
 		<!-- IMPORT partials/topic-filters.tpl -->
 		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
 
-		<div class="markread btn-group {{{ if !topics.length }}}hidden{{{ end }}}">
+		<div class="markread {{{ if !topics.length }}}hidden{{{ end }}}">
 			<!-- IMPORT partials/category/selector-dropdown-right.tpl -->
 		</div>
 

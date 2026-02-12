@@ -4,7 +4,7 @@
 	<div class="d-flex gap-1">
 		<h3 class="fw-semibold fs-4 mb-0 align-self-center">[[global:topics]]</h3>
 		{{{ if showSort }}}
-		<div class="btn-group bottom-sheet" component="thread/sort">
+		<div class="dropdown bottom-sheet" component="thread/sort">
 			<button title="[[global:sort]]" class="btn btn-ghost btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><i class="fa-solid fa-arrow-up-wide-short"></i></button>
 			<ul class="dropdown-menu p-1 text-sm" role="menu">
 				{{{each sortOptions }}}
