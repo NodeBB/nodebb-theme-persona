@@ -101,6 +101,10 @@
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		{{{ end }}}
 
+		{{{ if !config.loggedIn }}}
+		<!-- IMPORT partials/topic/guest-cta.tpl -->
+		{{{ end }}}
+
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
