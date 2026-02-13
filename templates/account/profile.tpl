@@ -8,7 +8,7 @@
 	<!-- IF banned -->
 	<div class="text-center">
 	<!-- IF banned_until -->
-	[[user:info.banned-until, {banned_until_readable}]]
+	[[user:info.banned-until, {isoTimeToLocaleString(./banned_until_readable, config.userLang)}]]
 	<!-- ELSE -->
 	[[user:info.banned-permanently]]
 	<!-- ENDIF banned_until -->
