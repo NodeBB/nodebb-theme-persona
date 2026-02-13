@@ -13,9 +13,13 @@
 				{{{ if ./user }}}
 				{buildAvatar(./user, "32px", true)}
 				{{{ else }}}
-				{{{ if (./icon || ./image) }}}
-				<div class="avatar avatar-rounded" style="--avatar-size: 32px;"><i class="text-secondary fa {{{ if ./icon }}}{./icon}{{{ else }}}{./image}{{{ end }}}"></i></div>
-				{{{ end }}}
+					{{{ if ./icon }}}
+					<div class="avatar avatar-rounded" style="--avatar-size: 32px;"><i class="text-secondary fa {./icon}"></i></div>
+					{{{ else }}}
+						{{{ if ./image }}}
+						<img class="avatar avatar-rounded" style="--avatar-size: 32px;" src="{./image}" />
+						{{{ end }}}
+					{{{ end }}}
 				{{{ end }}}
 			</a>
 
