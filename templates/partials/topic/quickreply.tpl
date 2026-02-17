@@ -1,4 +1,4 @@
-{{{ if privileges.topics:reply }}}
+{{{ if (privileges.topics:create || privileges.topics:reply) }}}
 <div component="topic/quickreply/container" class="quick-reply d-flex gap-3 mb-4">
 	<div class="icon hidden-xs">
 		<a class="d-inline-block position-relative" href="{{{ if loggedInUser.userslug }}}{config.relative_path}/user/{loggedInUser.userslug}{{{ else }}}#{{{ end }}}">
@@ -16,7 +16,7 @@
 			<div class="d-flex justify-content-end gap-2">
 				<button type="button" component="topic/quickreply/upload/button" class="btn btn-ghost btn-sm border"><i class="fa fa-upload"></i></button>
 				<button type="button" component="topic/quickreply/expand" class="btn btn-ghost btn-sm border" title="[[topic:open-composer]]"><i class="fa fa-expand"></i></button>
-				<button type="submit" component="topic/quickreply/button" class="btn btn-sm btn-primary">[[topic:post-quick-reply]]</button>
+				<button type="submit" component="topic/quickreply/button" class="btn btn-sm btn-primary">[[topic:post-quick-{{{ if tid }}}reply{{{ else }}}create{{{ end }}}]]</button>
 			</div>
 		</div>
 	</form>

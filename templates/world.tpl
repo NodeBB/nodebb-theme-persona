@@ -91,6 +91,9 @@
 						<!-- IMPORT partials/category/tools-dropdown-left.tpl -->
 					</div>
 					{{{ end }}}
+
+					<!-- IMPORT partials/topic/quickreply.tpl -->
+
 					<ul class="list-unstyled" id="world-feed">
 						{{{ each posts }}}
 						<!-- IMPORT partials/feed/item.tpl -->
