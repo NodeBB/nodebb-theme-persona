@@ -90,25 +90,34 @@
 
 			<h4>[[user:browsing]]</h4>
 			<div class="card card-body mb-3">
+				<div class="mb-2">
+					<div class="d-flex gap-4 align-items-center justify-content-between mb-3">
+						<label class="form-label text-sm mb-0" for="unreadCutoff">[[user:unread.cutoff, {maximumUnreadCutoff}]]</label>
+						<input id="unreadCutoff" value="{settings.unreadCutoff}" type="number" class="form-control form-control-sm text-end" data-property="unreadCutoff" min="1" max="{maximumUnreadCutoff}" style="max-width: 64px;">
+					</div>
+					<p class="form-text text-xs">[[user:unread.cutoff-help]]</p>
+				</div>
+
 				<div class="form-check mb-2">
 					<input id="openOutgoingLinksInNewTab" class="form-check-input" type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/>
 					<label for="openOutgoingLinksInNewTab" class="form-check-label">[[user:open-links-in-new-tab]]</label>
 				</div>
-				<!-- IF inTopicSearchAvailable -->
-				<div class="form-check mb-2">
-					<input id="topicSearchEnabled" class="form-check-input" type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/>
-					<label for="topicSearchEnabled" class="form-check-label">[[user:enable-topic-searching]]</label>
-				</div>
-				<p class="form-text">[[user:topic-search-help]]</p>
-				<!-- ENDIF inTopicSearchAvailable -->
+
 				<div class="form-check mb-2">
 					<input id="updateUrlWithPostIndex" class="form-check-input" type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/>
 					<label for="updateUrlWithPostIndex" class="form-check-label">[[user:update-url-with-post-index]]</label>
 				</div>
-				<div class="form-check">
+				<div class="form-check mb-2">
 					<input id="scrollToMyPost" class="form-check-input" type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/>
 					<label for="scrollToMyPost" class="form-check-label">[[user:scroll-to-my-post]]</label>
 				</div>
+				{{{ if inTopicSearchAvailable }}}
+				<div class="form-check">
+					<input id="topicSearchEnabled" class="form-check-input" type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/>
+					<label for="topicSearchEnabled" class="form-check-label">[[user:enable-topic-searching]]</label>
+				</div>
+				<p class="form-text">[[user:topic-search-help]]</p>
+				{{{ end }}}
 			</div>
 
 			<h4>[[global:pagination]]</h4>
@@ -117,13 +126,13 @@
 					<input id="usePagination" type="checkbox" class="form-check-input" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->>
 					<label for="usePagination" class="form-check-label">[[user:paginate-description]]</label>
 				</div>
-				<div class="mb-3">
-					<label for="topicsPerPage" class="form-label">[[user:topics-per-page]] ([[user:max-items-per-page, {maxTopicsPerPage}]])</label>
-					<input id="topicsPerPage" type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
+				<div class="d-flex gap-4 align-items-center justify-content-between  mb-2">
+					<label class="form-label text-sm text-nowrap mb-0" for="topicsPerPage">[[user:topics-per-page]] ([[user:max-items-per-page, {maxTopicsPerPage}]])</label>
+					<input type="number" class="form-control form-control-sm text-end" id="topicsPerPage" data-property="topicsPerPage" value="{settings.topicsPerPage}" min="1" max="{maxTopicsPerPage}" style="max-width: 64px;">
 				</div>
-				<div>
-					<label for="postsPerPage" class="form-label">[[user:posts-per-page]] ([[user:max-items-per-page, {maxPostsPerPage}]])</label>
-					<input id="postsPerPage" type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
+				<div class="d-flex gap-4 align-items-center justify-content-between">
+					<label class="form-label text-sm text-nowrap mb-0" for="postsPerPage">[[user:posts-per-page]] ([[user:max-items-per-page, {maxPostsPerPage}]])</label>
+					<input type="number" class="form-control form-control-sm text-end" id="postsPerPage" data-property="postsPerPage" value="{settings.postsPerPage}" min="1" max="{maxPostsPerPage}" style="max-width: 64px;">
 				</div>
 			</div>
 
