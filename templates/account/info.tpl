@@ -1,41 +1,30 @@
 <!-- IMPORT partials/account/header.tpl -->
 
-<!-- IF sessions.length -->
-<div class="row mb-3">
-	<div class="col-12 col-md-12">
-		<h4>[[global:sessions]]</h4>
-		<ul class="list-group" component="user/sessions">
-			{{{each sessions}}}
-			<li class="list-group-item" data-uuid="{../uuid}">
-				<div class="float-end">
-					<!-- IF isSelfOrAdminOrGlobalModerator -->
-					<!-- IF !../current -->
-					<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">Revoke Session</button>
-					<!-- ENDIF !../current -->
-					<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
-					{function.userAgentIcons}
-					<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
-				</div>
-				{../browser} {../version} on {../platform}<br />
-				<small class="timeago text-muted" title="{../datetimeISO}"></small>
-				<ul>
-					<li><strong>[[global:ip-address]]</strong>: {../ip}</li>
-				</ul>
-			</li>
-			{{{end}}}
-		</ul>
-	</div>
+{{{ if sessions.length }}}
+<div class="mb-3">
+	<h5>[[global:sessions]]</h5>
+	<ul class="list-group" component="user/sessions">
+		<!-- IMPORT partials/account/session-list.tpl -->
+	</ul>
 </div>
-<!-- ENDIF sessions.length -->
+{{{ end }}}
 
 <div class="row">
-	<div class="col-sm-6">
-		<div class="card mb-3">
-			<h5 class="card-header">
-				[[global:recentips]]
-			</h5>
-			<div class="card-body">
-				<ul>
+	<div class="col-sm-6 mb-3">
+		{{{ if invitedBy}}}
+		<div class="mb-4 pb-3 border-bottom">
+			<h6>[[user:info.invited-by]]</h6>
+			<div class="d-flex align-items-center gap-2">
+				<a href="">{buildAvatar(invitedBy, "24px", true)}</a>
+				<a href="">{invitedBy.username}</a>
+			</div>
+		</div>
+		{{{ end }}}
+
+		<div class="mb-4 border-bottom">
+			<h6>[[global:recentips]]</h6>
+			<div class="">
+				<ul class="text-sm text-secondary">
 					{{{each ips}}}
 					<li>{@value}</li>
 					{{{end}}}
@@ -43,22 +32,20 @@
 			</div>
 		</div>
 
-		<div class="card mb-3">
-			<h5 class="card-header">
-				[[user:info.username-history]]
-			</h5>
-			<div class="card-body">
-				<ul class="list-unstyled mb-0">
+		<div class="mb-4 border-bottom">
+			<h6>[[user:info.username-history]]</h6>
+			<div class="">
+				<ul class="list-unstyled">
 					{{{ each usernames }}}
 					<li class="d-flex justify-content-between mb-1">
-						<span class="text-sm">{./value}</span>
+						<span class="text-sm text-secondary">{./value}</span>
 
 						<div>
 							{{{ if ./byUid }}}
 							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./byUser, "18px", true)}</a>
 							{{{ end }}}
-							<span class="timeago text-sm lh-1" title="{./timestampISO}"></span>
+							<span class="timeago text-sm text-secondary lh-1 align-middle" title="{./timestampISO}"></span>
 						</div>
 					</li>
 					{{{ end }}}
@@ -66,79 +53,30 @@
 			</div>
 		</div>
 
-		<div class="card mb-3">
-			<h5 class="card-header">
-				[[user:info.email-history]]
-			</h5>
-			<div class="card-body">
-				<ul class="list-unstyled mb-0">
+		<div class="mb-4 border-bottom">
+			<h6>[[user:info.email-history]]</h6>
+			<div class="">
+				<ul class="list-unstyled">
 					{{{ each emails }}}
 					<li class="d-flex justify-content-between mb-1">
-						<span class="text-sm">{./value}</span>
+						<span class="text-sm text-secondary">{./value}</span>
 						<div>
 							{{{ if ./byUid }}}
 							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./byUser, "18px", true)}</a>
 							{{{ end }}}
-							<span class="timeago text-sm lh-1" title="{./timestampISO}"></span>
+							<span class="timeago text-sm text-secondary lh-1 align-middle" title="{./timestampISO}"></span>
 						</div>
 					</li>
 					{{{ end }}}
 				</ul>
 			</div>
 		</div>
-		<!-- IF isAdminOrGlobalModerator -->
-		<div class="card">
-			<h5 class="card-header">
-				[[user:info.moderation-note]]
-			</h5>
-			<div class="card-body">
-				<textarea component="account/moderation-note" class="form-control"></textarea>
-				<br/>
-				<button class="btn btn-sm float-end btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
-				<br/>
-				<div component="account/moderation-note/list">
-					{{{ each moderationNotes }}}
-					<hr/>
 
-					<div data-id="{./id}">
-						<div class="mb-1">
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{buildAvatar(./user, "24px", true)}</a>
-
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" class="fw-bold" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
-
-							<span class="timeago" title="{./timestampISO}"></span>
-						</div>
-
-						<div component="account/moderation-note/content-area" class="d-flex flex-column">
-							<div class="content">
-								{./note}
-							</div>
-							<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">[[topic:edit]]</button>
-						</div>
-
-						<div component="account/moderation-note/edit-area" class="d-flex flex-column gap-2">
-							<textarea class="form-control w-100 overflow-hidden">{./rawNote}</textarea>
-							<div class="align-self-end">
-								<button component="account/moderation-note/cancel-edit" class="btn btn-sm btn-link text-danger align-self-end">[[global:cancel]]</button>
-								<button component="account/moderation-note/save-edit" class="btn btn-sm btn-primary align-self-end">[[global:save]]</button>
-							</div>
-						</div>
-					</div>
-					{{{ end }}}
-				</div>
-				<!-- IMPORT partials/paginator.tpl -->
-			</div>
-		</div>
-		<!-- ENDIF isAdminOrGlobalModerator -->
-	</div>
-	<div class="col-sm-6">
-		<div class="card mb-3">
-			<h5 class="card-header">
-				[[user:info.latest-flags]]
-			</h5>
-			<div class="card-body">
-				<!-- IF history.flags.length -->
+			<div class="mb-3 border-bottom">
+			<h6>[[user:info.latest-flags]]</h6>
+			<div class="">
+				{{{ if history.flags.length }}}
 				<ul class="recent-flags list-unstyled">
 					{{{ each history.flags }}}
 					<li class="mb-4 border-bottom">
@@ -176,28 +114,25 @@
 					</li>
 					{{{ end }}}
 				</ul>
-				<!-- ELSE -->
-				<div class="alert alert-success">[[user:info.no-flags]]</div>
-				<!-- ENDIF history.flags.length -->
+				{{{ else }}}
+				<div class="alert alert-light">[[user:info.no-flags]]</div>
+				{{{ end }}}
 			</div>
 		</div>
 
-		<div class="card mb-3">
-			<h5 class="card-header">
+		<div class="mb-3 border-bottom">
+			<h6 class="d-flex align-items-center justify-content-between">
 				[[user:info.ban-history]]
 
-				<!-- IF !banned -->
-				<!-- IF !isSelf -->
-				<button class="btn btn-sm float-end btn-danger" component="account/ban">[[user:ban-account]]</button>
-				<!-- ENDIF !isSelf -->
-				<!-- ELSE -->
-				<!-- IF !isSelf -->
-				<button class="btn btn-sm float-end btn-success" component="account/unban">[[user:unban-account]]</button>
-				<!-- ENDIF !isSelf -->
-				<!-- ENDIF !banned -->
-			</h5>
-			<div class="card-body">
-				<!-- IF history.bans.length -->
+				{{{ if (!banned && !isSelf) }}}
+				<button class="btn btn-sm btn-danger" component="account/ban">[[user:ban-account]]</button>
+				{{{ end }}}
+				{{{ if (banned && !isSelf) }}}
+				<button class="btn btn-sm btn-success" component="account/unban">[[user:unban-account]]</button>
+				{{{ end }}}
+			</h6>
+			<div class="">
+				{{{ if history.bans.length }}}
 				<ul class="ban-history list-unstyled">
 					{{{ each history.bans }}}
 					<li class="mb-4 border-bottom">
@@ -218,7 +153,7 @@
 						<p class="mb-1">
 							<span class="reason">[[user:info.banned-reason-label]]: <strong>{./reason}</strong></span>
 						</p>
-						<p class="">
+						<p>
 							{{{ if ./until }}}
 							<span class="expiry">[[user:info.banned-until, {isoTimeToLocaleString(./untilISO, config.userLang)}]]</span>
 							{{{ else }}}
@@ -230,27 +165,27 @@
 					</li>
 					{{{ end }}}
 				</ul>
-				<!-- ELSE -->
-				<div class="alert alert-success">[[user:info.no-ban-history]]</div>
-				<!-- ENDIF history.bans.length -->
+				{{{ else }}}
+				<div class="alert alert-light">[[user:info.no-ban-history]]</div>
+				{{{ end }}}
 			</div>
 		</div>
 
-		<div class="card mb-3">
-			<h5 class="card-header">
+		<div class="mb-3">
+			<h6 class="d-flex align-items-center justify-content-between">
 				[[user:info.mute-history]]
 
 				{{{ if !muted }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm float-end btn-danger" component="account/mute">[[user:mute-account]]</button>
+				<button class="btn btn-sm btn-danger" component="account/mute">[[user:mute-account]]</button>
 				{{{ end }}}
 				{{{ else }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm float-end btn-success" component="account/unmute">[[user:unmute-account]]</button>
+				<button class="btn btn-sm btn-success" component="account/unmute">[[user:unmute-account]]</button>
 				{{{ end }}}
 				{{{ end }}}
-			</h5>
-			<div class="card-body">
+			</h6>
+			<div class="">
 				{{{ if history.mutes.length }}}
 				<ul class="ban-history list-unstyled">
 					{{{ each history.mutes }}}
@@ -272,7 +207,7 @@
 						<p class="mb-1">
 							<span class="reason">[[user:info.banned-reason-label]]: <strong>{./reason}</strong></span>
 						</p>
-						<p class="">
+						<p>
 							{{{ if ./until }}}
 							<span class="expiry">[[user:info.muted-until, {isoTimeToLocaleString(./untilISO, config.userLang)}]]</span>
 							{{{ end }}}
@@ -281,11 +216,59 @@
 					{{{ end }}}
 				</ul>
 				{{{ else }}}
-				<div class="alert alert-success">[[user:info.no-mute-history]]</div>
+				<div class="alert alert-light">[[user:info.no-mute-history]]</div>
 				{{{ end }}}
 			</div>
 		</div>
 
+	</div>
+
+	<div class="col-sm-6 mb-3">
+		{{{ if isAdminOrGlobalModerator }}}
+		<div class="card">
+			<h5 class="card-header">
+				[[user:info.moderation-note]]
+			</h5>
+			<div class="card-body">
+				<textarea component="account/moderation-note" class="form-control mb-3" aria-label="[[user:info.moderation-note]]"></textarea>
+
+				<button class="btn btn-sm float-end btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+				<br/>
+				<div component="account/moderation-note/list">
+					{{{ each moderationNotes }}}
+					<hr/>
+
+					<div data-id="{./id}">
+						<div class="d-flex align-items-baseline gap-1 mb-1">
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{buildAvatar(./user, "24px", true)}</a>
+
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" class="fw-bold" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
+
+							<span class="timeago text-sm text-secondary" title="{./timestampISO}"></span>
+						</div>
+
+
+						<div component="account/moderation-note/content-area" class="d-flex flex-column">
+							<div class="content text-secondary">
+								{./note}
+							</div>
+							<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">[[topic:edit]]</button>
+						</div>
+
+						<div component="account/moderation-note/edit-area" class="d-flex flex-column gap-2 hidden">
+							<textarea class="form-control form-control-sm w-100 overflow-hidden">{./rawNote}</textarea>
+							<div class="align-self-end">
+								<button component="account/moderation-note/cancel-edit" class="btn btn-sm btn-link text-danger align-self-end">[[global:cancel]]</button>
+								<button component="account/moderation-note/save-edit" class="btn btn-sm btn-primary align-self-end">[[global:save]]</button>
+							</div>
+						</div>
+					</div>
+					{{{ end }}}
+				</div>
+				<!-- IMPORT partials/paginator.tpl -->
+			</div>
+		</div>
+		{{{ end }}}
 	</div>
 </div>
 
