@@ -17,7 +17,7 @@
 
 		<div class="topic-header sticky-top mb-3 bg-body">
 			<div class="d-flex flex-wrap gap-3 border-bottom p-2">
-				<div class="d-flex flex-column gap-2 flex-grow-1">
+				<div class="d-flex flex-column gap-2 flex-md-shrink-50">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
 							<span class="fs-3" component="topic/title">{title}</span>
@@ -56,7 +56,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex flex-wrap gap-2 align-items-center hidden-empty {{{ if greaterthan(thumbs.length, "4") }}}thumbs-collapsed{{{ end }}}" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
+				<div class="flex-shrink-1 d-flex flex-wrap gap-2 align-items-start hidden-empty {{{ if greaterthan(thumbs.length, "4") }}}thumbs-collapsed{{{ end }}}" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
 			</div>
 		</div>
 		{{{ if merger }}}
