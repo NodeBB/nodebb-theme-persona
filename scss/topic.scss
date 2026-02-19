@@ -8,7 +8,7 @@
 	}
 
 	[component="topic/thumb/list"] {
-		&.thumbs-collapsed a.d-inline-block:nth-of-type(n+4) {
+		&.thumbs-collapsed a.d-inline-block:nth-of-type(n+3) {
   			display: none!important;
 		}
 	}
