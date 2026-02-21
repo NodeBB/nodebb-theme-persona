@@ -242,7 +242,7 @@
 					</div>
 				</div>
 				<hr />
-				<table component="notification/table" class="table table-sm">
+				<table component="notification/table" class="table">
 					<thead>
 						<tr>
 							<th></th>
