@@ -227,36 +227,59 @@
 
 			<h4>[[user:notifications]]</h4>
 			<div class="card card-body mb-3">
-				{{{each notificationSettings}}}
-				<div class="row mb-3">
+				<div class="row align-items-center">
 					<div class="col-7">
-						<label for="{./name}">{notificationSettings.label}</label>
+						<label class="text-sm" for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
 					</div>
-					<div class="mb-2 col-5">
-						<select class="form-select" id="{./name}" data-property="{notificationSettings.name}">
-							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
-							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification-only]]</option>
-							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email-only]]</option>
-							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification-and-email]]</option>
-						</select>
-					</div>
-				</div>
-				{{{end}}}
-
-				<div class="row">
-					<div class="col-7">
-						<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
-					</div>
-					<div class="mb-2 col-5">
-						<select class="form-select" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
-							{{{each upvoteNotifFreq}}}
-							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
-								[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]
+					<div class="col-5">
+						<select class="form-select form-select-sm" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+							{{{ each upvoteNotifFreq }}}
+							<option value="{./name}" {{{ if ./selected }}}selected{{{ end }}}>
+								[[user:upvote-notif-freq.{./name}]]
 							</option>
 							{{{end}}}
 						</select>
 					</div>
 				</div>
+				<hr />
+				<table component="notification/table" class="table table-sm">
+					<thead>
+						<tr>
+							<th></th>
+							<th class="text-center fw-semibold px-2">[[user:notification-type-web]]</th>
+							<th class="text-center fw-semibold px-2">[[user:notification-type-email]]</th>
+						</tr>
+					</thead>
+					<tbody>
+					{{{ each notificationSettings }}}
+						<tr component="notification/setting" class="align-middle">
+							<td style="width:100%;">
+								<div class="align-items-center">
+									<label class="text-sm tracking-tight" for="{./name}">{./label}</label>
+									<select class="form-select form-select-sm d-none" id="{./name}" data-property="{./name}">
+										<option value="none" {{{ if ./none }}}selected{{{ end }}}>[[notifications:none]]</option>
+										<option value="notification" {{{ if ./notification }}}selected{{{ end }}}>[[notifications:notification-only]]</option>
+										<option value="email" {{{ if ./email }}}selected{{{ end }}}>[[notifications:email-only]]</option>
+										<option value="notificationemail" {{{ if ./notificationemail }}}selected{{{ end }}}>[[notifications:notification-and-email]]</option>
+									</select>
+								</div>
+							</td>
+							<td class="text-center">
+								<a href="#" data-type="notification" data-value="{{{ if (./notification || ./notificationemail) }}}1{{{ else }}}0{{{ end}}}">
+									<i class="fa-solid fa-lg fa-bell text-primary {{{ if (!./notification && !./notificationemail) }}}hidden{{{ end }}}"></i>
+									<i class="fa-regular fa-lg fa-bell text-secondary {{{ if (./notification || ./notificationemail) }}}hidden{{{ end }}}"></i>
+								</a>
+							</td>
+							<td class="text-center">
+								<a href="#" data-type="email" data-value="{{{ if (./email || ./notificationemail) }}}1{{{ else }}}0{{{ end}}}">
+									<i class="fa-solid fa-lg fa-envelope text-primary {{{ if (!./email && !./notificationemail) }}}hidden{{{ end }}}"></i>
+									<i class="fa-regular fa-lg fa-envelope text-secondary {{{ if (./email || ./notificationemail) }}}hidden{{{ end }}}"></i>
+								</a>
+							</td>
+						</tr>
+					{{{end}}}
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
