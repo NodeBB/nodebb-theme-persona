@@ -256,12 +256,7 @@
 							<td style="width:100%;">
 								<div class="align-items-center">
 									<label class="text-sm tracking-tight" for="{./name}">{./label}</label>
-									<select class="form-select form-select-sm d-none" id="{./name}" data-property="{./name}">
-										<option value="none" {{{ if ./none }}}selected{{{ end }}}>[[notifications:none]]</option>
-										<option value="notification" {{{ if ./notification }}}selected{{{ end }}}>[[notifications:notification-only]]</option>
-										<option value="email" {{{ if ./email }}}selected{{{ end }}}>[[notifications:email-only]]</option>
-										<option value="notificationemail" {{{ if ./notificationemail }}}selected{{{ end }}}>[[notifications:notification-and-email]]</option>
-									</select>
+									<input type="hidden" data-property="{./name}" value="{./value}">
 								</div>
 							</td>
 							<td class="text-center">
