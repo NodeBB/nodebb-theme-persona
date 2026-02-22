@@ -39,8 +39,8 @@ define('persona/taskbar', [
 				const el = $('#taskbar [data-uuid="' + data.uuid + '"] a');
 				el.parent('[data-uuid]').attr('data-roomId', data.options.roomId);
 
-				if (chatObj.users.length === 1) {
-					const user = chatObj.users[0];
+				if (chatObj.users.length === 2) {
+					const user = chatObj.users.find(u => String(u.uid) !== String(app.user.uid));
 					el.find('i').remove();
 
 					if (user.picture) {
@@ -48,7 +48,7 @@ define('persona/taskbar', [
 						el.css('background-size', 'cover');
 					} else {
 						el.css('background-color', user['icon:bgColor'])
-							.text(user['icon:text'])
+							.html(`<span class="d-inline">${user['icon:text']}</span>`)
 							.addClass('avatar');
 					}
 				}

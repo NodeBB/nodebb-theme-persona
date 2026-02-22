@@ -122,6 +122,7 @@
 			&.taskbar-chat {
 				a, a:hover, a:focus, a:active {
 					background: $primary;
+					color: white;
 				}
 
 				&.new:after {
@@ -150,7 +151,7 @@
 				a {
 					text-align: center;
 
-					i {
+					i, span {
 						font-size: 18px;
 						line-height: 42px;
 					}
