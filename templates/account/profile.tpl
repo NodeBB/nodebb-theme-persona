@@ -16,15 +16,15 @@
 	<!-- ENDIF banned -->
 	<!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
 
-	<!-- IF selectedGroup.length -->
-	<div class="text-center">
+	{{{ if selectedGroup.length }}}
+	<div class="d-flex gap-1 flex-wrap justify-content-center mb-3">
 	{{{each selectedGroup}}}
 	<!-- IF selectedGroup.slug -->
 	<!-- IMPORT partials/groups/badge.tpl -->
 	<!-- ENDIF selectedGroup.slug -->
 	{{{end}}}
 	</div>
-	<!-- ENDIF selectedGroup.length -->
+	{{{ end }}}
 
 	<!-- IF aboutme -->
 	<div component="aboutme" class="text-center aboutme text-secondary w-75 mx-auto text-center">{aboutmeParsed}</div>
