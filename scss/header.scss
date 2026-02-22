@@ -37,6 +37,9 @@
 }
 
 .breadcrumb {
+	background-color: transparent!important;
+	background-image: none!important;
+	border: none!important;
 	li {
 		max-width: 100%;
 		@include text-ellipsis;

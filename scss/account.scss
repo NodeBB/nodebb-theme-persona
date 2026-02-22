@@ -33,7 +33,8 @@
 			left: 50%;
 			margin-left: -64px;
 			top: 128px;
-			border: 4px solid white;
+			border: 4px solid var(--bs-body-bg);
+			background-color: var(--bs-body-bg);
 			border-radius: 50%;
 
 			.persona-fab.btn-morph {
