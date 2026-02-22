@@ -19,7 +19,7 @@
 	<div class="d-flex flex-column flex-md-row justify-content-md-between pb-2 mb-4 mt-2 border-bottom">
 		<div class="d-flex flex-column">
 			<div class="d-flex align-items-center gap-2">
-				<h3 class="mb-0">{group.displayName}</h3>
+				<h3 class="mb-0 text-capitalize">{group.displayName}</h3>
 			</div>
 			<div class="d-flex gap-2">
 				{group.descriptionParsed}
