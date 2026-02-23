@@ -11,8 +11,8 @@
 			box-shadow: none!important;
 		}
 	}
-	.form-control::placeholder {
-		color:$gray-100!important;
+	.form-control::placeholder, .bootstrap-tagsinput input::placeholder {
+		color: $gray-100!important;
 	}
 	.topic-header, .topic-list-header, .position-sticky.bg-body {
 		background-color: transparent!important;
