@@ -92,8 +92,8 @@
 			<div class="card card-body mb-3">
 				<div class="mb-2">
 					<div class="d-flex gap-4 align-items-center justify-content-between mb-3">
-						<label class="form-label text-sm mb-0" for="unreadCutoff">[[user:unread.cutoff, {maximumUnreadCutoff}]]</label>
-						<input id="unreadCutoff" value="{settings.unreadCutoff}" type="number" class="form-control form-control-sm text-end" data-property="unreadCutoff" min="1" max="{maximumUnreadCutoff}" style="max-width: 64px;">
+						<label class="form-label text-sm mb-0" for="unreadCutoff">[[user:unread.cutoff, {maxUnreadCutoff}]]</label>
+						<input id="unreadCutoff" value="{settings.unreadCutoff}" type="number" class="form-control form-control-sm text-end" data-property="unreadCutoff" min="1" max="{maxUnreadCutoff}" style="max-width: 64px;">
 					</div>
 					<p class="form-text text-xs">[[user:unread.cutoff-help]]</p>
 				</div>
