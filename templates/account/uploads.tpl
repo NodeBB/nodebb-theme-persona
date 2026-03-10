@@ -11,7 +11,7 @@
 <!-- ENDIF !uploads.length -->
 
 <div class="table-responsive">
-	<table class="table table-striped w-100">
+	<table class="table table-sm w-100">
 		<thead>
 			<tr>
 				<th></th>
@@ -21,8 +21,8 @@
 		<tbody>
 			{{{ each uploads }}}
 			<tr data-name="{./name}">
-				<td>
-					<a class="text-break" href="{config.relative_path}{./url}">{./url}</a>
+				<td class="align-middle">
+					<a class="text-break text-reset text-sm" href="{config.relative_path}{./url}">{./url}</a>
 				</td>
 				<td style="width: 1%; white-space: nowrap;">
 					<button class="btn btn-danger btn-sm" data-action="delete" aria-label="[[aria:delete-upload-button]]"><i class="fa fa-trash"></i></button>
