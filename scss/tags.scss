@@ -3,8 +3,8 @@
 	.tag {
 		text-transform: uppercase;
 		font-size: 10px;
-		background: $gray-200;
-		color: $gray-600;
+		background-color: $gray-200!important;
+		color: $gray-700!important;
 		padding: 5px;
 		white-space: nowrap;
 	}
