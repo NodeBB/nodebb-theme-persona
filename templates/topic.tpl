@@ -44,7 +44,7 @@
 						<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
 						<div class="d-flex gap-2" component="topic/stats"><!-- IMPORT partials/topic/stats.tpl --></div>
 						{{{ if !feeds:disableRSS }}}
-						{{{ if rssFeedUrl }}}<a class="hidden-xs" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a>{{{ end }}}
+						{{{ if rssFeedUrl }}}<a class="hidden-xs link-secondary" target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square fa-xl"></i></a>{{{ end }}}
 						{{{ end }}}
 						{{{ if browsingUsers }}}
 						<div class="d-inline-block hidden-xs">

@@ -46,11 +46,6 @@
 		position: relative;
 	}
 
-	.fa {
-		margin-left: 10px;
-		color: rgb(153, 153, 153);
-	}
-
 	@include media-breakpoint-down(sm) {
 		li {
 			display: none;
