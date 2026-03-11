@@ -34,7 +34,7 @@
 	<div class="mb-3 user-title-option">
 		<div class="d-flex align-items-center gap-3">
 			<label class="form-label mb-0">[[groups:details.badge-preview]]</label>
-			<span class="badge rounded-1 text-uppercase text-truncate rounded-1 {{{ if !group.userTitleEnabled }}} hide{{{ end }}}" style="max-width:150px; color: {group.textColor}; background-color: {group.labelColor}"><i class="fa{{{ if group.icon }}} {group.icon}{{{ if group.userTitle}}} me-1{{{ end }}}{{{ end }}}"></i><span class="badge-text">{{{ if group.userTitle }}}{group.userTitle}{{{ end }}}</span></span>
+			<span class="badge rounded-1 text-uppercase text-truncate rounded-1 d-flex align-items-center gap-1 {{{ if !group.userTitleEnabled }}} hide{{{ end }}}" style="max-width:150px; color: {group.textColor}; background-color: {group.labelColor}"><i class="fa {{{ if (group.icon && (group.icon != "fa-nbb-none")) }}}{group.icon}{{{ else }}}hidden{{{ end }}}"></i><span class="badge-text">{{{ if group.userTitle }}}{group.userTitle}{{{ end }}}</span></span>
 		</div>
 		<hr/>
 		<div class="d-flex flex-column gap-2">
