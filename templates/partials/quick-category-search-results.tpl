@@ -12,7 +12,7 @@
 	<li data-cid="{./cid}" class="d-flex flex-column gap-1">
 		<div class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center rounded-1 text-start text-reset d-block text-truncate px-2 py-1 position-relative">
 			<div class="flex-shrink-0">{buildCategoryIcon(@value, "40px", "rounded-circle")}</div>
-			<div class="flex-grow-1">
+			<div class="flex-grow-1" style="min-width:0;">
 				<a class="stretched-link" href="{config.relative_path}/category/{./slug}"></a>
 				<span class="quick-search-title fw-semibold text-sm">
 					{./name}
