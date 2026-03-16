@@ -27,7 +27,7 @@
 	<div class="world {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<div class="category">
 			<div class="row flex-row-reverse">
-				<div class="col-lg-4 col-sm-12 mt-2 pt-1">
+				<div class="col-lg-4 col-sm-12 mt-2 pt-1 {{{ if !config.loggedIn }}}invisible{{{ end }}}">
 					<form class="mb-3" role="search" method="GET" action="{config.relative_path}/search">
 						<input type="hidden" name="in" value="categories" />
 						<div class="input-group bottom-sheet">
@@ -66,7 +66,6 @@
 					</ul>
 				</div>
 
-				{{{ if posts.length }}}
 				<div class="col-lg-8 col-sm-12">
 					{{{ if posts.length }}}
 					<div class="topic-list-header sticky-top btn-toolbar justify-content-end align-items-center px-1 py-2 mb-2 flex-nowrap">
@@ -98,6 +97,20 @@
 
 					<!-- IMPORT partials/topic/quickreply.tpl -->
 
+					{{{ if !config.loggedIn }}}
+					<div class="alert alert-info alert-dismissible fade show">
+						<p class="fw-semibold">
+							[[world:onboard.title]]
+						</p>
+						<p>[[world:onboard.what]]</p>
+						<p>[[world:onboard.why]]</p>
+						<p>[[world:onboard.how]]</p>
+						<a href="{config.relative_path}/register" class="fw-semibold btn btn-sm btn-warning">[[global:register]]</a>
+						<a href="{config.relative_path}/login" class="fw-semibold btn btn-sm btn-info">[[global:login]]</a>
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+					{{{ end }}}
+
 					<ul class="list-unstyled" id="world-feed">
 						{{{ each posts }}}
 						<!-- IMPORT partials/feed/item.tpl -->
@@ -108,19 +121,6 @@
 					<!-- IMPORT partials/paginator.tpl -->
 					{{{ end }}}
 				</div>
-				{{{ else }}}
-				<div class="col-lg-8 col-sm-12 d-flex gap-3 align-items-top">
-					<div>
-						<h2 class="fs-4 mb-3">
-							<i class="fa fa-comment-nodes"></i>
-							[[world:onboard.title]]
-						</h2>
-						<p>[[world:onboard.what]]</p>
-						<p>[[world:onboard.why]]</p>
-						<p>[[world:onboard.how]]</p>
-					</div>
-				</div>
-				{{{ end }}}
 			</div>
 		</div>
 	</div>
