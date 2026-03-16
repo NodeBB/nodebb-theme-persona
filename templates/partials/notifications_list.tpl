@@ -44,8 +44,8 @@
 			{{{ end }}}
 		</div>
 	</div>
+	{{{ if !@last }}}
+	<hr class="my-1" />
+	{{{ end }}}
 </div>
-{{{ if !@last }}}
-<hr class="my-1" />
-{{{ end }}}
 {{{ end }}}
