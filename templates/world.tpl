@@ -70,6 +70,7 @@
 				<div class="col-lg-8 col-sm-12">
 					{{{ if posts.length }}}
 					<div class="topic-list-header sticky-top btn-toolbar justify-content-end align-items-center px-1 py-2 mb-2 flex-nowrap">
+						{{{ if config.loggedIn }}}
 						<div class="dropdown bottom-sheet">
 							<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown">
 								<i class="fa fa-fw fa-arrow-down-wide-short text-primary"></i>
@@ -77,6 +78,8 @@
 							</button>
 							<ul class="dropdown-menu" id="sort-options">
 								<li><a class="dropdown-item" href="{config.relative_path}/world">[[world:latest]]</a></li>
+								<li><a class="dropdown-item" href="{config.relative_path}/world?local=1">[[world:latest-local]]</a></li>
+								<li><a class="dropdown-item" href="{config.relative_path}/world?all=1">[[world:latest-all]]</a></li>
 								<li><a class="dropdown-item" href="{config.relative_path}/world?sort=popular&term=day">[[world:popular-day]]</a></li>
 								<li><a class="dropdown-item" href="{config.relative_path}/world?sort=popular&term=week">[[world:popular-week]]</a></li>
 								<li><a class="dropdown-item" href="{config.relative_path}/world?sort=popular&term=month">[[world:popular-month]]</a></li>
@@ -84,6 +87,7 @@
 								<li><a class="dropdown-item" href="{config.relative_path}/world?sort=popular&term=alltime">[[world:popular-alltime]]</a></li>
 							</ul>
 						</div>
+						{{{ end }}}
 						<a class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center fw-semibold" id="world-help" href="#">
 							<i class="fa fa-question text-primary"></i>
 							<span class="visible-md-inline visible-lg-inline">[[world:help]]</span>
