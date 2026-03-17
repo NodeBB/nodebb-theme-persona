@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<div class="d-flex justify-content-end gap-2">
-				<div class="me-auto">
+				<div class="me-auto hidden" component="topic/quickreply/category-selector">
 					<!-- IMPORT partials/category/selector-dropdown-left.tpl -->
 				</div>
 				<button type="button" component="topic/quickreply/upload/button" class="btn btn-ghost btn-sm border"><i class="fa fa-upload"></i></button>
