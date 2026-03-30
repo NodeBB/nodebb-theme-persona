@@ -19,7 +19,7 @@
 	<div class="d-flex flex-column flex-md-row justify-content-md-between pb-2 mb-4 mt-2 border-bottom gap-3">
 		<div class="d-flex flex-column gap-2">
 			<div class="d-flex flex-column flex-md-row align-items-md-center gap-2">
-				<h3 class="mb-0 text-capitalize">{group.displayName}</h3>
+				<h3 class="mb-0 text-capitalize">{generateGroupDisplayName(group)}</h3>
 				<div>
 					{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
 					{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
