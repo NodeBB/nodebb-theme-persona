@@ -3,18 +3,27 @@
 <div class="profile row">
 	<h1 class="fullname text-center fs-2 text-secondary fw-light">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</h1>
 	<div class="d-flex gap-2 justify-content-center mb-2" component="user/badges"></div>
-	<h2 class="username text-center fs-5"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
-	<!-- IF isAdminOrGlobalModeratorOrModerator -->
-	<!-- IF banned -->
-	<div class="text-center">
-	<!-- IF banned_until -->
-	[[user:info.banned-until, {isoTimeToLocaleString(./banned_until_readable, config.userLang)}]]
-	<!-- ELSE -->
-	[[user:info.banned-permanently]]
-	<!-- ENDIF banned_until -->
-	</div>
-	<!-- ENDIF banned -->
-	<!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
+	<h2 class="username text-center fs-5">@{username}</h2>
+	{{{ if isAdminOrGlobalModeratorOrModerator }}}
+		{{{ if banned }}}
+		<div class="text-center">
+		{{{ if banned_until }}}
+		[[user:info.banned-until, {isoTimeToLocaleString(./banned_until_readable, config.userLang)}]]
+		{{{ else }}}
+		[[user:info.banned-permanently]]
+		{{{ end }}}
+		</div>
+		{{{ end }}}
+		{{{ if muted }}}
+		<div class="text-center">
+		{{{ if mutedUntil }}}
+		[[user:info.muted-until, {isoTimeToLocaleString(./muted_until_readable, config.userLang)}]]
+		{{{ else }}}
+		[[user:info.muted-permanently]]
+		{{{ end }}}
+		</div>
+		{{{ end }}}
+	{{{ end }}}
 
 	{{{ if selectedGroup.length }}}
 	<div class="d-flex gap-1 flex-wrap justify-content-center mb-3">
