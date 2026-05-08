@@ -11,5 +11,7 @@
 	<a class="btn btn-ghost btn-sm ff-secondary" href="{config.relative_path}/users?section=flagged">[[users:most-flags]]</a>
 
 	<a class="btn btn-ghost btn-sm ff-secondary" href="{config.relative_path}/users?section=banned">[[user:banned]]</a>
+
+	<a class="btn btn-ghost btn-sm ff-secondary" href="{config.relative_path}/users?section=muted">[[user:muted]]</a>
 	{{{ end }}}
 </div>
