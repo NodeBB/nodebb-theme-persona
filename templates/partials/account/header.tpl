@@ -16,7 +16,6 @@
 			<!-- ENDIF picture -->
 			<span component="user/status" class="position-absolute border border-white border-2 rounded-circle status {status}"><span class="visually-hidden">[[global:{status}]]</span></span>
 
-			<!-- IF loggedIn -->
 			<!-- IF !isSelf -->
 			<button class="btn-morph persona-fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->" title="<!-- IF isFollowing -->[[global:unfollow]]<!-- ELSE -->[[global:follow]]<!-- ENDIF isFollowing -->">
 				<span>
@@ -26,7 +25,6 @@
 				</span>
 			</button>
 			<!-- ENDIF !isSelf -->
-			<!-- ENDIF loggedIn -->
 		</div>
 
 		<div class="container">
