@@ -3,8 +3,8 @@
 	<button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu dropdown-menu-end" role="menu">
-		<li><a class="dropdown-item" href="#" component="topic/reply-as-topic" role="menuitem">[[topic:reply-as-topic]]</a></li>
+	<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
+		<li><a class="dropdown-item rounded-1" href="#" component="topic/reply-as-topic" role="menuitem">[[topic:reply-as-topic]]</a></li>
 	</ul>
 </div>
 
