@@ -1,3 +1,9 @@
+@use "fontawesome/scss/variables" as fa-vars;
+@use 'fontawesome/scss/solid' as fa-solid;
+@use "fontawesome/scss/mixins" as fa-mixins;
+@use "fontawesome/scss/functions" as fa-functions;
+
+
 .topic {
 	.topic-header {
 		top: var(--panel-offset);
@@ -70,12 +76,12 @@
 	}
 
 	[component="post/upvote"].upvoted i {
-		@include fa-icon-solid($fa-var-circle-chevron-up);
+		@include fa-solid.icon(fa-vars.$var-circle-chevron-up);
 		color: $primary;
 	}
 
 	[component="post/downvote"].downvoted i {
-		@include fa-icon-solid($fa-var-circle-chevron-down);
+		@include fa-solid.icon(fa-vars.$var-circle-chevron-down);
 		color: $primary;
 	}
 
@@ -364,7 +370,7 @@
 			background-color: $success;
     		-webkit-transition: .2s ease-in-out all;
     		transition: .2s ease-in-out all;
-			content: fa-content($fa-var-check);
+			content: fa-functions.fa-content(fa-vars.$var-check);
     		padding: 14px;
 		    border-radius: 50%;
 		    opacity: 1;
