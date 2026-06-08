@@ -3,15 +3,6 @@
 	<div class="row">
 		<div class="col-md-3 col-sm-4">
 			<div class="account-picture-block text-center">
-				<div class="row mb-3">
-					<div class="col-12 hidden-xs">
-						<!-- IF picture -->
-						<img id="user-current-picture" class="avatar avatar-rounded" style="--avatar-size: 128px;" src="{picture}" />
-						<!-- ELSE -->
-						<div class="avatar avatar-rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;">{icon:text}</div>
-						<!-- ENDIF picture -->
-					</div>
-				</div>
 				<ul class="list-group mb-3">
 					{{{ if allowProfilePicture }}}
 					<li class="list-group-item"><a component="profile/change/picture" href="#" class="text-decoration-none text-reset">[[user:change-picture]]</a></li>

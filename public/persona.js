@@ -186,7 +186,7 @@ $(document).ready(function () {
 				avatar.parents('a').after(card.hide());
 
 				if (String(app.user.uid) === String(user.uid) || !app.user.uid) {
-					card.find('.btn-morph').hide();
+					card.find('.btn-morph').addClass('invisible');
 				} else {
 					const uid = isFinite(user.uid) ? user.uid : encodeURIComponent(user.userslug);
 					setupFavouriteMorph(card, uid, user.username);

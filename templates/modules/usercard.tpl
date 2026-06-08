@@ -1,31 +1,32 @@
-<div class="persona-usercard">
+<div class="persona-usercard d-flex text-bg-dark">
 	<a href="{config.relative_path}/user/{userslug}">
-		<!-- IF picture -->
-		<div class="usercard-picture" style="background-image:url({picture})"></div>
-		<!-- ELSE -->
-		<div class="usercard-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
-		<!-- ENDIF picture -->
+		{buildAvatar(@value, "150px", false, "shadow-none")}
 	</a>
-	<div class="usercard-body">
-		<a href="{config.relative_path}/user/{userslug}">
-			<span class="usercard-name"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></span><br />
-			<span class="usercard-username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></span>
-			<!-- IF !banned -->
-			<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
-			<!-- ENDIF !banned -->
+	<div class="usercard-body w-100 d-flex flex-column justify-content-between gap-2 py-2 px-3 overflow-hidden position-relative">
+
+		<a href="{config.relative_path}/user/{userslug}" class="text-reset text-truncate d-block">
+			<span class="usercard-name fs-5">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</span>
 		</a>
 
-		<div class="row usercard-info">
-			<div class="col-4">
-				<small>[[global:posts]]</small>
-				<span>{humanReadableNumber(postcount)}</span>
-			</div>
-			<div class="col-4">
-				<small>[[global:reputation]]</small>
-				<span>{humanReadableNumber(reputation)}</span>
-			</div>
+		<div class="d-flex gap-2 align-items-center">
+			<a href="{config.relative_path}/user/{userslug}" class="text-reset text-truncate d-block">
+				<span class="usercard-username text-uppercase text-sm text-truncate">{{{ if !banned }}}@{username}{{{ else }}}[[user:banned]]{{{ end }}}</span>
+			</a>
+			{{{ if !banned }}}
+			<span component="user/status" class="border border-white border-2 m-0 rounded-circle status {status}" title="[[global:{status}]]" style="transform: none;"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
+			{{{ end }}}
+		</div>
 
-			<button class="btn-morph persona-fab <!-- IF banned --> hide<!-- ENDIF banned -->">
+		<div class="d-flex justify-content-between usercard-info">
+			<div class="d-flex flex-column text-center">
+				<small>[[global:posts]]</small>
+				<span class="fs-5">{humanReadableNumber(postcount)}</span>
+			</div>
+			<div class="d-flex flex-column text-center">
+				<small>[[global:reputation]]</small>
+				<span class="fs-5">{humanReadableNumber(reputation)}</span>
+			</div>
+			<button class="btn-morph persona-fab fs-3  {{{ if banned }}} invisible{{{ end }}}">
 				<span>
 					<span class="s1"></span>
 					<span class="s2"></span>
@@ -34,4 +35,5 @@
 			</button>
 		</div>
 	</div>
+
 </div>
