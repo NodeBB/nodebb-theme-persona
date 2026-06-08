@@ -46,7 +46,7 @@
 			<div id="nav-dropdown" class="collapse navbar-collapse d-none d-lg-block">
 				<ul id="main-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
 					{{{each navigation}}}
-					<!-- IF function.displayMenuItem, @index -->
+					{{{ if displayMenuItem(@root, @index) }}}
 					<li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
 						<a class="nav-link navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
 						{{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
@@ -66,8 +66,8 @@
 						</ul>
 						{{{ end }}}
 					</li>
-					<!-- ENDIF function.displayMenuItem -->
-					{{{end}}}
+					{{{ end }}}
+					{{{ end }}}
 				</ul>
 				<ul class="navbar-nav mb-2 mb-lg-0 hidden-xs">
 					<li class="nav-item">

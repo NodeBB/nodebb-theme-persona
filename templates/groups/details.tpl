@@ -31,7 +31,7 @@
 		</div>
 		<div class="d-flex gap-2 align-items-start">
 			{{{ if loggedIn }}}
-			{function.membershipBtn, group}
+			{membershipBtn(group)}
 			{{{ end }}}
 			{{{ if isAdmin }}}
 			<a href="{config.relative_path}/admin/manage/groups/{group.slug}" target="_blank" class="btn btn-light text-nowrap"><i class="fa fa-gear"></i> [[user:edit]]</a>
