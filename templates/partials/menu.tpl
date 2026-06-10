@@ -62,7 +62,7 @@
 						</a>
 						{{{ if navigation.dropdown }}}
 						<ul class="dropdown-menu p-1" role="menu">
-							{navigation.dropdownContent}
+							{{navigation.dropdownContent}}
 						</ul>
 						{{{ end }}}
 					</li>
