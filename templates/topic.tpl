@@ -40,7 +40,7 @@
 							</a>
 							{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 						</span>
-						{buildCategoryLabel(category, "a", "border")}
+						{{buildCategoryLabel(category, "a", "border")}}
 						<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
 						<div class="d-flex gap-2" component="topic/stats"><!-- IMPORT partials/topic/stats.tpl --></div>
 						{{{ if !feeds:disableRSS }}}

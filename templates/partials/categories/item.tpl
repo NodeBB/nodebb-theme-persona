@@ -3,7 +3,7 @@
 
 	<div class="d-flex col-md-7 gap-2 gap-lg-3">
 		<div class="flex-shrink-0">
-		{buildCategoryIcon(@value, "48px", "rounded-circle")}
+		{{buildCategoryIcon(@value, "48px", "rounded-circle")}}
 		</div>
 		<div class="flex-grow-1 d-flex flex-wrap gap-1">
 			<h2 class="title text-break fs-4 fw-semibold m-0 tracking-tight w-100">
@@ -26,7 +26,7 @@
 				{{{ each ./children }}}
 				{{{ if !./isSection }}}
 				<li class="category-children-item small d-flex gap-1 align-items-center">
-					{buildCategoryIcon(@value, "24px", "rounded-circle")}
+					{{buildCategoryIcon(@value, "24px", "rounded-circle")}}
 					<a href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" class="text-reset">{./name}</a>
 				</li>
 				{{{ end }}}

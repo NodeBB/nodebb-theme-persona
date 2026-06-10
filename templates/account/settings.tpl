@@ -61,7 +61,7 @@
 					<div component="chat/allow/list" class="d-flex flex-wrap gap-2 mb-2">
 						{{{ each settings.chatAllowListUsers }}}
 						<div component="chat/allow/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
-							{buildAvatar(@value, "16px", true)} {./username}
+							{{buildAvatar(@value, "16px", true)}} {./username}
 							<button component="chat/allow/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
 						</div>
 						{{{ end }}}
@@ -76,7 +76,7 @@
 					<div component="chat/deny/list" class="d-flex flex-wrap gap-2 mb-2">
 						{{{ each settings.chatDenyListUsers }}}
 						<div component="chat/deny/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
-							{buildAvatar(@value, "16px", true)} {./username}
+							{{buildAvatar(@value, "16px", true)}} {./username}
 							<button component="chat/deny/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
 						</div>
 						{{{ end }}}

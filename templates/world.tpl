@@ -13,7 +13,7 @@
 
 <div class="category-header d-flex flex-column gap-2">
 	<div class="d-flex gap-2 align-items-center mb-1 {{{ if config.theme.centerHeaderElements }}}justify-content-center{{{ end }}}">
-		{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}
+		{{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}}
 		<h1 class="tracking-tight fs-2 fw-semibold mb-0 text-center">[[world:name]]</h1>
 	</div>
 	{{{ if ./descriptionParsed }}}
@@ -39,7 +39,7 @@
 								{{{ each categories }}}
 								<li class="flex-grow-1 align-items-start d-flex gap-2 p-1 mb-2 position-relative">
 									<div>
-										{buildCategoryIcon(@value, "24px", "rounded-1")}
+										{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 									</div>
 									<div class="d-grid gap-0">
 										<div class="title fw-semibold">

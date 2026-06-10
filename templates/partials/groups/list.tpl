@@ -11,7 +11,7 @@
 			<ul class="members list-unstyled d-flex align-items-center gap-2 flex-wrap">
 				{{{each groups.members}}}
 				<li>
-					<a href="{config.relative_path}/user/{groups.members.userslug}">{buildAvatar(groups.members, "24px", true)}</a>
+					<a href="{config.relative_path}/user/{groups.members.userslug}">{{buildAvatar(groups.members, "24px", true)}}</a>
 				</li>
 				{{{end}}}
 			</ul>

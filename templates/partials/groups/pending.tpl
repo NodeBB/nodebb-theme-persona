@@ -13,7 +13,7 @@
 			<tr data-uid="{group.pending.uid}" class="align-middle">
 				<td class="member-name p-2 d-flex align-items-center justify-content-between">
 					<div class="d-flex gap-2">
-						<a class="text-decoration-none" href="{config.relative_path}/user/{group.pending.userslug}">{buildAvatar(group.pending, "24px", true)}</a>
+						<a class="text-decoration-none" href="{config.relative_path}/user/{group.pending.userslug}">{{buildAvatar(group.pending, "24px", true)}}</a>
 						<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
 					</div>
 					<div class="d-flex gap-2">

@@ -2,7 +2,7 @@
 <div component="topic/quickreply/container" class="quick-reply d-flex gap-3 mb-4">
 	<div class="icon hidden-xs">
 		<a class="d-inline-block position-relative" href="{{{ if loggedInUser.userslug }}}{config.relative_path}/user/{loggedInUser.userslug}{{{ else }}}#{{{ end }}}">
-			{buildAvatar(loggedInUser, "48px", true, "", "user/picture")}
+			{{buildAvatar(loggedInUser, "48px", true, "", "user/picture")}}
 		</a>
 	</div>
 	<form class="flex-grow-1 d-flex flex-column gap-2" method="post" action="{config.relative_path}/compose">

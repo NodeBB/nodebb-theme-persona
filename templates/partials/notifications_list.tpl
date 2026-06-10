@@ -11,7 +11,7 @@
 		<div class="btn btn-ghost btn-sm d-flex gap-2 flex-grow-1 align-items-start text-start">
 			<a class="flex-grow-0 flex-shrink-0" href="{{{ if ./user.userslug}}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 				{{{ if ./user }}}
-				{buildAvatar(./user, "32px", true)}
+				{{buildAvatar(./user, "32px", true)}}
 				{{{ else }}}
 					{{{ if ./icon }}}
 					<div class="avatar avatar-rounded" style="--avatar-size: 32px;"><i class="text-secondary fa {./icon}"></i></div>

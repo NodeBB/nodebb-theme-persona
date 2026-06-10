@@ -21,7 +21,7 @@
 			<tr data-uid="{group.invited.uid}" class="align-middle">
 				<td class="member-name p-2 d-flex align-items-center justify-content-between">
 					<div class="d-flex align-items-center gap-2">
-						<a class="text-decoration-none" href="{config.relative_path}/user/{group.invited.userslug}">{buildAvatar(group.invited, "24px", true)}</a>
+						<a class="text-decoration-none" href="{config.relative_path}/user/{group.invited.userslug}">{{buildAvatar(group.invited, "24px", true)}}</a>
 						<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
 					</div>
 					<button class="btn btn-outline-secondary btn-sm text-nowrap" data-action="rescindInvite">[[groups:invited.uninvite]]</button>

@@ -1,6 +1,6 @@
 <li id="user_label" class="nav-item dropdown px-3" title="[[global:header.profile]]">
 	<a href="#" for="user-control-list-check" data-bs-toggle="dropdown" id="user_dropdown" role="button" component="header/avatar" aria-haspopup="true" aria-expanded="false">
-		{buildAvatar(user, "32px", true)}
+		{{buildAvatar(user, "32px", true)}}
 		<span id="user-header-name" class="d-block d-sm-none">{user.username}</span>
 	</a>
 	<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">

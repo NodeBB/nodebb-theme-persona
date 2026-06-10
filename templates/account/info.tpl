@@ -15,7 +15,7 @@
 		<div class="mb-4 pb-3 border-bottom">
 			<h6>[[user:info.invited-by]]</h6>
 			<div class="d-flex align-items-center gap-2">
-				<a href="">{buildAvatar(invitedBy, "24px", true)}</a>
+				<a href="">{{buildAvatar(invitedBy, "24px", true)}}</a>
 				<a href="">{invitedBy.username}</a>
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 						<div>
 							{{{ if ./byUid }}}
 							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./byUser, "18px", true)}</a>
+							{{buildAvatar(./byUser, "18px", true)}}</a>
 							{{{ end }}}
 							<span class="timeago text-sm text-secondary lh-1 align-middle" title="{./timestampISO}"></span>
 						</div>
@@ -63,7 +63,7 @@
 						<div>
 							{{{ if ./byUid }}}
 							<a class="lh-1" href="{{{ if ./byUser.userslug }}}{config.relative_path}/user/{./byUser.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./byUser, "18px", true)}</a>
+							{{buildAvatar(./byUser, "18px", true)}}</a>
 							{{{ end }}}
 							<span class="timeago text-sm text-secondary lh-1 align-middle" title="{./timestampISO}"></span>
 						</div>
@@ -107,7 +107,7 @@
 							<span class="text-sm">[[user:info.reported-by]]</span>
 							<div class="d-flex text-nowrap">
 								{{{ each ./reports }}}
-								<a style="width: 18px; z-index: 3;" class="text-decoration-none" href="{config.relative_path}/user/{./reporter.userslug}">{buildAvatar(./reporter, "24px", true)}</a>
+								<a style="width: 18px; z-index: 3;" class="text-decoration-none" href="{config.relative_path}/user/{./reporter.userslug}">{{buildAvatar(./reporter, "24px", true)}}</a>
 								{{{ end }}}
 							</div>
 						</div>
@@ -138,7 +138,7 @@
 					<li class="mb-4 border-bottom">
 						<div class="mb-1 d-flex align-items-center justify-content-between">
 							<div>
-								<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
+								<a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "24px", true)}}</a>
 								<strong>
 									<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
 								</strong>
@@ -192,7 +192,7 @@
 					<li class="mb-4 border-bottom">
 						<div class="mb-1 d-flex align-items-center justify-content-between">
 							<div>
-								<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
+								<a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "24px", true)}}</a>
 								<strong>
 									<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
 								</strong>
@@ -240,7 +240,7 @@
 
 					<div data-id="{./id}">
 						<div class="d-flex align-items-baseline gap-1 mb-1">
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{buildAvatar(./user, "24px", true)}</a>
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{{buildAvatar(./user, "24px", true)}}</a>
 
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" class="fw-bold" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
 

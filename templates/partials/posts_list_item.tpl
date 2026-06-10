@@ -23,7 +23,7 @@
         </div>
 
         <div class="post-info">
-            <a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "28px", true, "user-img not-responsive")}</a>
+            <a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "28px", true, "user-img not-responsive")}}</a>
 
             <div class="post-author text-secondary text-uppercase">
                 <a class="text-reset" href="{config.relative_path}/user/{./user.userslug}">{./user.displayname}</a><br />

@@ -20,7 +20,7 @@
 			<td class="member-name p-2 w-100 ">
 				<div class="d-flex align-items-center justify-content-between">
 					<div class="d-flex align-items-center gap-2">
-						<a class="text-decoration-none" href="{config.relative_path}/user/{group.members.userslug}">{buildAvatar(group.members, "24px", true)}</a>
+						<a class="text-decoration-none" href="{config.relative_path}/user/{group.members.userslug}">{{buildAvatar(group.members, "24px", true)}}</a>
 						<a class="align-text-top" href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a>
 						<i component="groups/owner/icon" title="[[groups:owner]]" class="user-owner-icon fa fa-star align-text-top text-warning {{{ if !group.members.isOwner }}}invisible{{{ end }}}"></i>
 					</div>

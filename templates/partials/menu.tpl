@@ -35,7 +35,7 @@
 			<button type="button" class="navbar-toggler border-0" id="mobile-chats">
 				<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o unread-count" data-content="{unreadCount.notification}"></span>
 				<span component="chat/icon" class="notification-icon fa fa-fw fa-comments unread-count" data-content="{unreadCount.chat}"></span>
-				{buildAvatar(user, "32px", true)}
+				{{buildAvatar(user, "32px", true)}}
 			</button>
 			{{{ end }}}
 
