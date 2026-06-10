@@ -11,7 +11,7 @@
 			</h2>
 			{{{ if ./descriptionParsed }}}
 			<div class="description text-muted text-sm w-100 line-clamp-sm-5">
-				{./descriptionParsed}
+				{{./descriptionParsed}}
 			</div>
 			{{{ end }}}
 			{{{ if ./teaser.timestampISO }}}

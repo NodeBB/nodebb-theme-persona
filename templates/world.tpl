@@ -18,7 +18,7 @@
 	</div>
 	{{{ if ./descriptionParsed }}}
 	<p class="description text-secondary text-sm w-100 {{{ if config.theme.centerHeaderElements }}}text-center{{{ end }}}">
-		{./descriptionParsed}
+		{{./descriptionParsed}}
 	</p>
 	{{{ end }}}
 </div>
@@ -46,7 +46,7 @@
 											<a class="text-reset stretched-link" href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{../name}</a>
 										</div>
 										{{{ if ./descriptionParsed }}}
-										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{./descriptionParsed}</div>
+										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{{./descriptionParsed}}</div>
 										{{{ end }}}
 									</div>
 								</li>

@@ -22,7 +22,7 @@
 				</span>
 				<br/>
 				<div class="snippet text-xs text-break text-wrap mb-0 text-sm text-secondary line-clamp-1">
-					{./descriptionParsed}
+					{{./descriptionParsed}}
 				</div>
 			</div>
 		</div>
