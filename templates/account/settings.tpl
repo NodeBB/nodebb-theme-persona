@@ -176,7 +176,7 @@
 			{{{each customSettings}}}
 			<h4>{customSettings.title}</h4>
 			<div class="card card-body mb-3">
-				{customSettings.content}
+				{{customSettings.content}}
 			</div>
 			{{{end}}}
 

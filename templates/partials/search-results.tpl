@@ -17,7 +17,7 @@
 
 			{{{ if showAsPosts }}}
 			<div component="post/content" class="content">
-				{./content}
+				{{./content}}
 			</div>
 			{{{ end }}}
 

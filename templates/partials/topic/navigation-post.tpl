@@ -9,4 +9,4 @@
 	</small>
 </div>
 
-<div>{post.content}</div>
+<div>{{post.content}}</div>

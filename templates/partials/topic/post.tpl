@@ -48,7 +48,7 @@
 					<!-- IF posts.user.custom_profile_info.length -->
 					&#124;
 					{{{each posts.user.custom_profile_info}}}
-					{posts.user.custom_profile_info.content}
+					{{posts.user.custom_profile_info.content}}
 					{{{end}}}
 					<!-- ENDIF posts.user.custom_profile_info.length -->
 				</span>
