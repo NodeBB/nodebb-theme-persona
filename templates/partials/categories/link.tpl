@@ -1,11 +1,5 @@
-<!-- IF ../isSection -->
-{../name}
-<!-- ELSE -->
-<!-- IF ../link -->
-<a href="{../link}" itemprop="url">
-<!-- ELSE -->
-<a href="{config.relative_path}/category/{../slug}" itemprop="url">
-<!-- ENDIF ../link -->
-{../name}
-</a>
-<!-- ENDIF ../isSection -->
+{{{ if ./isSection }}}
+{{escapeTxHtml(./name)}}
+{{{ else }}}
+<a class="text-reset" href="{{{ if ./link }}}{{escapeTxHtml(./link)}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{{escapeTxHtml(./name)}}</a>
+{{{ end }}}
