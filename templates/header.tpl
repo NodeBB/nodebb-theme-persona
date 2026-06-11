@@ -7,8 +7,8 @@
 	{{{each linkTags}}}{{buildLinkTag(@value)}}{{{end}}}
 
 	<script>
-		const config = JSON.parse('{{configJSON}}');
-		const app = {
+		var config = JSON.parse('{{configJSON}}');
+		var app = {
 			user: JSON.parse('{{userJSON}}')
 		};
 

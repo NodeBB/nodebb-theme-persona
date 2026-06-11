@@ -5,22 +5,14 @@
 </div>
 <div class="row mb-5">
 	<div class="topic {{{ if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
-		<meta itemprop="headline" content="{escape(titleRaw)}">
-		<meta itemprop="text" content="{escape(titleRaw)}">
-		<meta itemprop="url" content="{url}">
-		<meta itemprop="datePublished" content="{timestampISO}">
-		<meta itemprop="dateModified" content="{lastposttimeISO}">
-		<div itemprop="author" itemscope itemtype="https://schema.org/Person">
-			<meta itemprop="name" content="{author.username}">
-			{{{ if author.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{author.userslug}">{{{ end }}}
-		</div>
+		<!-- IMPORT partials/topic/meta-tags.tpl -->
 
 		<div class="topic-header sticky-top mb-3 bg-body">
 			<div class="d-flex flex-wrap gap-3 border-bottom p-2">
 				<div class="d-flex flex-column gap-2 flex-md-shrink-50">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
-							<span class="fs-3" component="topic/title">{title}</span>
+							<span class="fs-3" component="topic/title">{{escapeTxHtml(title)}}</span>
 						</div>
 					</h1>
 
