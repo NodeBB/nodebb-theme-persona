@@ -36,7 +36,7 @@
 	{{{ end }}}
 
 	<!-- IF aboutme -->
-	<div component="aboutme" class="text-center aboutme text-secondary w-75 mx-auto text-center">{aboutmeParsed}</div>
+	<div component="aboutme" class="text-center aboutme text-secondary w-75 mx-auto text-center">{{aboutmeParsed}}</div>
 	<!-- ENDIF aboutme -->
 
 	<div class="account-stats fs-1 text-center mb-3">
