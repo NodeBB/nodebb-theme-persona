@@ -7,7 +7,7 @@
 		{{{end}}}
 	</div>
 
-	<div class="cover" component="account/cover" style="background-image: url({escape(cover:url)}); background-position: {cover:position};">
+	<div class="cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 		<div class="avatar-wrapper" data-uid="{uid}">
 			{{buildAvatar(@value, "128px", true)}}
 			<span component="user/status" class="position-absolute border border-white border-2 rounded-circle status {status}"><span class="visually-hidden">[[global:{status}]]</span></span>
