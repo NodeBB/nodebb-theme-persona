@@ -3,7 +3,7 @@
 	{{{ each topics }}}
 	<li component="category/topic" class="category-item hover-parent py-2 mb-2 d-flex flex-column flex-lg-row align-items-start {generateTopicClass(@value)}" <!-- IMPORT partials/data/category.tpl -->>
 		<link itemprop="url" content="{config.relative_path}/topic/{./slug}" />
-		<meta itemprop="name" content="{{generateTopicTitle(@value)}}" />
+		<meta itemprop="name" content="{./title}" />
 		<meta itemprop="itemListOrder" content="descending" />
 		<meta itemprop="position" content="{increment(./index, "1")}" />
 		<a id="{./index}" data-index="{./index}" component="topic/anchor"></a>
@@ -21,7 +21,7 @@
 			</div>
 			<div class="flex-grow-1 d-flex flex-wrap gap-1 position-relative">
 				<h3 component="topic/header" class="title text-break fs-5 fw-semibold m-0 tracking-tight w-100 {{{ if showSelect }}}me-4 me-lg-0{{{ end }}}">
-					<a class="text-reset" href="{{{ if topics.noAnchor }}}#{{{ else }}}{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}{{{ end }}}">{{generateTopicTitle(./title)}}</a>
+					<a class="text-reset" href="{{{ if topics.noAnchor }}}#{{{ else }}}{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}{{{ end }}}">{./title}</a>
 				</h3>
 				<div component="topic/labels" class="d-flex flex-wrap gap-1 w-100 align-items-center">
 					<span component="topic/watched" class="badge border border-gray-300 text-body {{{ if !./followed }}}hidden{{{ end }}}">
