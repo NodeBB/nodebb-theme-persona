@@ -29,7 +29,7 @@
 				</a>
 				{{{ if ./bodyLong}}}
 				<div class="text-secondary text-sm line-clamp-2 text-contain hidden-blockquote hidden-pre hidden-first-child-br">
-					{./bodyLong}
+					{{./bodyLong}}
 				</div>
 				{{{ end }}}
 				<div class="text-xs text-muted">{{{ if ./timeagoLong }}}{./timeagoLong}{{{ else }}}<span class="timeago" title="{./datetimeISO}"></span>{{{ end }}}</div>

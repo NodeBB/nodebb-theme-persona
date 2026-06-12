@@ -14,7 +14,7 @@
 				{{{ else }}}
 				<li role="presentation" class="category">
 					<a class="dropdown-item rounded-1 d-flex gap-3 align-items-center justify-content-between" role="menuitem" href="{config.relative_path}/notifications?filter={filters.filter}">
-						<span><i class="fa fa-fw {{{ if filters.selected }}}fa-check{{{ end }}}"></i> {filters.name}</span>
+						<span><i class="fa fa-fw {{{ if filters.selected }}}fa-check{{{ end }}}"></i> {tx(filters.name)}</span>
 						<span class="">{./count}</span>
 					</a>
 				</li>
