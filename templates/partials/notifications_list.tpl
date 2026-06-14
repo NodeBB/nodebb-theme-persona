@@ -25,7 +25,7 @@
 
 			<div class="d-flex flex-grow-1 flex-column gap-1 align-items-start position-relative">
 				<a href="{./path}" class="text-decoration-none d-inline-block text-reset text-break text-sm ff-sans stretched-link" component="notifications/item/link">
-					{./bodyShort}
+					{{./bodyShort}}
 				</a>
 				{{{ if ./bodyLong}}}
 				<div class="text-secondary text-sm line-clamp-2 text-contain hidden-blockquote hidden-pre hidden-first-child-br">

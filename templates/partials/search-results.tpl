@@ -1,6 +1,6 @@
 <div id="results" class="search-results col-md-12" data-search-query="{search_query}">
 	{{{ if matchCount }}}
-	<div class="alert alert-info">[[search:results-matching, {matchCount}, {txEscape(search_query)}, {time}]] </div>
+	<div class="alert alert-info">{{tx("search:results-matching", matchCount, txEscape(search_query), time)}}</div>
 	{{{ else }}}
 	{{{ if search_query }}}
 	<div class="alert alert-warning">[[search:no-matches]]</div>
@@ -25,7 +25,7 @@
 				<a href="{config.relative_path}/category/{./category.slug}">
 					<div class="category-item d-inline-block">
 						{{buildCategoryIcon(./category, "24px", "rounded-circle")}}
-						{./category.name}
+						{tx(./category.name)}
 					</div>
 				</a> &bull;
 				<span class="timeago" title="{./timestampISO}"></span>
