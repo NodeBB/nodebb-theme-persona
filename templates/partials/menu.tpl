@@ -47,14 +47,14 @@
 				<ul id="main-nav" class="navbar-nav me-auto mb-2 mb-lg-0">
 					{{{each navigation}}}
 					{{{ if displayMenuItem(@root, @index) }}}
-					<li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{navigation.title}">
+					<li class="nav-item {navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}" title="{tx(./title)}">
 						<a class="nav-link navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
 						{{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 							{{{ if navigation.iconClass }}}
-							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
+							<i class="fa fa-fw {navigation.iconClass}" data-content="{./content}"></i>
 							{{{ end }}}
-							{{{ if navigation.text }}}
-							<span class="{navigation.textClass}">{navigation.text}</span>
+							{{{ if ./text }}}
+							<span class="{./textClass}">{tx(./text)}</span>
 							{{{ end }}}
 							{{{ if navigation.dropdown}}}
 							<i class="fa fa-caret-down"></i>
