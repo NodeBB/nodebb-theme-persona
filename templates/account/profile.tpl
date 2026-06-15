@@ -156,28 +156,74 @@
 <!-- ENDIF ips.length -->
 
 <div class="row">
-	{{{ if bestPosts.length }}}
-	<div class="col-lg-12 col-12">
-		<h1 class="fs-3">[[pages:account/best, {username}]]</h1>
+	{{{ if (bestPosts.length || latestPosts.length) }}}
+	<div class="col-12">
+		<ul class="nav nav-tabs mb-3" role="tablist">
+			{{{ if bestPosts.length }}}
+			<li class="nav-item" role="presentation">
+				<button
+					class="nav-link active"
+					id="best-posts-tab"
+					data-bs-toggle="tab"
+					data-bs-target="#best-posts-pane"
+					type="button"
+					role="tab"
+					aria-controls="best-posts-pane"
+					aria-selected="true"
+				>
+					[[pages:account/best, {username}]]
+				</button>
+			</li>
+			{{{ end }}}
+			{{{ if latestPosts.length }}}
+			<li class="nav-item" role="presentation">
+				<button
+					class="nav-link {{{ if !bestPosts.length }}}active{{{ end }}}"
+					id="latest-posts-tab"
+					data-bs-toggle="tab"
+					data-bs-target="#latest-posts-pane"
+					type="button"
+					role="tab"
+					aria-controls="latest-posts-pane"
+					aria-selected="{{{ if !bestPosts.length }}}true{{{ else }}}false{{{ end }}}"
+				>
+					[[pages:account/latest-posts, {username}]]
+				</button>
+			</li>
+			{{{ end }}}
+		</ul>
 
-		<div class="col-12">
-			<ul component="posts" class="posts-list list-unstyled">
-			{{{each bestPosts}}}
-			<!-- IMPORT partials/posts_list_item.tpl -->
-			{{{end}}}
-			</ul>
-		</div>
-	</div>
-	{{{ end }}}
-	{{{ if latestPosts.length}}}
-	<div class="col-lg-12 col-12">
-		<h1 class="fs-3">[[pages:account/latest-posts, {username}]]</h1>
-		<div class="col-12">
-			<ul component="posts" class="posts-list list-unstyled">
-			{{{each latestPosts}}}
-			<!-- IMPORT partials/posts_list_item.tpl -->
-			{{{end}}}
-			</ul>
+		<div class="tab-content">
+			{{{ if bestPosts.length }}}
+			<div
+				class="tab-pane fade show active"
+				id="best-posts-pane"
+				role="tabpanel"
+				aria-labelledby="best-posts-tab"
+				tabindex="0"
+			>
+				<ul component="posts" class="posts-list list-unstyled">
+				{{{each bestPosts}}}
+				<!-- IMPORT partials/posts_list_item.tpl -->
+				{{{end}}}
+				</ul>
+			</div>
+			{{{ end }}}
+			{{{ if latestPosts.length }}}
+			<div
+				class="tab-pane fade {{{ if !bestPosts.length }}}show active{{{ end }}}"
+				id="latest-posts-pane"
+				role="tabpanel"
+				aria-labelledby="latest-posts-tab"
+				tabindex="0"
+			>
+				<ul component="posts" class="posts-list list-unstyled">
+				{{{each latestPosts}}}
+				<!-- IMPORT partials/posts_list_item.tpl -->
+				{{{end}}}
+				</ul>
+			</div>
+			{{{ end }}}
 		</div>
 	</div>
 	{{{ end }}}
