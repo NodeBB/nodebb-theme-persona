@@ -6,7 +6,7 @@
 		</a>
 		<div class="card-body">
 			<p class="text-muted">
-				{./description}
+				{txEscape(./description)}
 			</p>
 			<ul class="members list-unstyled d-flex align-items-center gap-2 flex-wrap">
 				{{{each groups.members}}}

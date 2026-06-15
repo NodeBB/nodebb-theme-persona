@@ -51,6 +51,7 @@
 				<p><strong>[[user:consent.right-to-data-portability]]</strong></p>
 				<p>[[user:consent.right-to-data-portability-description]]</p>
 
+				{{{ if canExport }}}
 				<div class="btn-group-vertical d-grid">
 					<a data-action="export-profile" class="btn btn-outline-secondary">
 						<i class="fa fa-download"></i> [[user:consent.export-profile]]
@@ -62,6 +63,7 @@
 						<i class="fa fa-download"></i> [[user:consent.export-uploads]]
 					</a>
 				</div>
+				{{{ end }}}
 			</div>
 		</div>
 </div>
