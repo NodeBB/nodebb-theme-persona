@@ -5,7 +5,7 @@
 	</div>
 	<div class="mb-3">
 		<label class="form-label" for="description">[[groups:details.description]]</label>
-		<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{txEscape(group.description)}</textarea>
+		<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
 	</div>
 
 	<hr />
