@@ -5,7 +5,7 @@
         </a>
 
         <div component="post/content" class="content mb-3">
-            {{../content}}
+            {{txEscape(../content)}}
         </div>
 
         <div class="mb-3">
