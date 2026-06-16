@@ -92,7 +92,7 @@
 			{{{ end }}}
 		</span>
 
-		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
+		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{tx(posts.replies.text)}</span>
 		<span class="replies-last hidden-xs small">[[topic:last-reply-time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-down" component="post/replies/open"></i>
