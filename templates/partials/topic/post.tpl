@@ -77,7 +77,7 @@
 
 <div class="post-footer">
 	{{{ if posts.user.signature }}}
-	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{{posts.user.signature}}</div>
+	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{{txEscape(posts.user.signature)}}</div>
 	{{{ end }}}
 
 	<div class="clearfix">
