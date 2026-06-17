@@ -15,7 +15,7 @@
             {{{ if ../topic.tags.length }}}
             <span class="tag-list">
                 {{{ each ../topic.tags }}}
-                <a href="{config.relative_path}/tags/{topic.tags.valueEncoded}"><span class="tag tag-item tag-class-{topic.tags.class}">{topic.tags.valueEscaped}</span></a>
+                <a href="{config.relative_path}/tags/{topic.tags.valueEncoded}"><span class="tag tag-item tag-class-{topic.tags.class}">{topic.tags.value}</span></a>
                 {{{ end }}}
             </span>
             {{{ end }}}

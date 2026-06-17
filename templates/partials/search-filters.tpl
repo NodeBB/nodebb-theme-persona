@@ -3,7 +3,7 @@
 	<div class="post-search-item">
 		<div component="category/filter" class="dropdown" data-filter-name="category">
 			<a component="category/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.categories.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.categories.active }}}{filters.categories.label}{{{ else }}}[[search:categories]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.categories.active }}}{tx(filters.categories.label)}{{{ else }}}[[search:categories]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
@@ -29,7 +29,7 @@
 	<div class="post-search-item">
 		<div component="tag/filter" class="dropdown" data-filter-name="tag">
 			<a component="tag/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.tags.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.tags.active }}}{filters.tags.label}{{{ else }}}[[search:tags]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.tags.active }}}{tx(filters.tags.label)}{{{ else }}}[[search:tags]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
@@ -39,15 +39,15 @@
 					<div component="tag/filter/selected" class="d-flex flex-wrap gap-2">
 						{{{ each tagFilterSelected }}}
 						<div class="d-flex px-2 py-1 rounded-1 text-bg-primary gap-2 align-items-center text-sm">
-							<div>{./valueEscaped}</div>
-							<button component="tag/filter/delete" data-tag="{./valueEscaped}" class="btn btn-primary btn-sm py-0"><i class="fa fa-times fa-xs"></i></button>
+							<div>{./value}</div>
+							<button component="tag/filter/delete" data-tag="{./value}" class="btn btn-primary btn-sm py-0"><i class="fa fa-times fa-xs"></i></button>
 						</div>
 						{{{ end }}}
 					</div>
 					<hr class="my-2"/>
 					<div component="tag/filter/results" class="d-flex flex-wrap gap-2">
 						{{{ each tagFilterResults }}}
-						<button class="btn btn-light btn-sm border" data-tag="{./valueEscaped}">{./valueEscaped}</button>
+						<button class="btn btn-light btn-sm border" data-tag="{./value}">{./value}</button>
 						{{{ end }}}
 					</div>
 				</li>
@@ -59,7 +59,7 @@
 	<div class="post-search-item">
 		<div component="user/filter" class="dropdown" data-filter-name="user">
 			<a component="user/filter/button" class="filter-btn btn btn-light btn-sm border {{{ if filters.users.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.users.active }}}{filters.users.label}{{{ else }}}[[search:posted-by]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.users.active }}}{tx(filters.users.label)}{{{ else }}}[[search:posted-by]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
@@ -90,7 +90,7 @@
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="replies">
 			<a id="reply-count-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.replies.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.replies.active }}}{filters.replies.label}{{{ else }}}[[search:replies]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.replies.active }}}{tx(filters.replies.label)}{{{ else }}}[[search:replies]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
@@ -110,7 +110,7 @@
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="time">
 			<a id="post-time-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.time.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.time.active }}}{filters.time.label}{{{ else }}}[[search:time]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.time.active }}}{tx(filters.time.label)}{{{ else }}}[[search:time]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
@@ -139,7 +139,7 @@
 	<div class="post-search-item">
 		<div class="dropdown" data-filter-name="sort">
 			<a id="sort-by-button" class="filter-btn btn btn-light btn-sm border {{{ if filters.sort.active }}}active-filter{{{ end }}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="filter-label">{{{ if filters.sort.active }}}{filters.sort.label}{{{ else }}}[[search:sort]]{{{ end }}}</span>
+				<span class="filter-label">{{{ if filters.sort.active }}}{tx(filters.sort.label)}{{{ else }}}[[search:sort]]{{{ end }}}</span>
 				<span class="caret text-primary opacity-75"></span>
 			</a>
 
