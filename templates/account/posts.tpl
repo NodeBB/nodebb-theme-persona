@@ -21,7 +21,7 @@
 </div>
 
 <!-- IF !posts.length -->
-	<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
+	<div class="alert alert-warning text-center">{tx(noItemsFoundKey)}</div>
 <!-- ENDIF !posts.length -->
 
 <div class="col-12">
