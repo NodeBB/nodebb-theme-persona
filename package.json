@@ -45,8 +45,7 @@
     "pulling": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "9.25.1",
-    "eslint-config-nodebb": "^1.1.4",
-    "eslint-plugin-import": "^2.31.0"
+    "eslint": "10.5.0",
+    "eslint-config-nodebb": "^2.0.3"
   }
 }
