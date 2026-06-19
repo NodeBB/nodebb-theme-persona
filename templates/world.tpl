@@ -13,12 +13,12 @@
 
 <div class="category-header d-flex flex-column gap-2">
 	<div class="d-flex gap-2 align-items-center mb-1 {{{ if config.theme.centerHeaderElements }}}justify-content-center{{{ end }}}">
-		{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}
+		{{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}}
 		<h1 class="tracking-tight fs-2 fw-semibold mb-0 text-center">[[world:name]]</h1>
 	</div>
 	{{{ if ./descriptionParsed }}}
 	<p class="description text-secondary text-sm w-100 {{{ if config.theme.centerHeaderElements }}}text-center{{{ end }}}">
-		{./descriptionParsed}
+		{{./descriptionParsed}}
 	</p>
 	{{{ end }}}
 </div>
@@ -39,14 +39,14 @@
 								{{{ each categories }}}
 								<li class="flex-grow-1 align-items-start d-flex gap-2 p-1 mb-2 position-relative">
 									<div>
-										{buildCategoryIcon(@value, "24px", "rounded-1")}
+										{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 									</div>
 									<div class="d-grid gap-0">
 										<div class="title fw-semibold">
 											<a class="text-reset stretched-link" href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{../name}</a>
 										</div>
 										{{{ if ./descriptionParsed }}}
-										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{./descriptionParsed}</div>
+										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{{./descriptionParsed}}</div>
 										{{{ end }}}
 									</div>
 								</li>

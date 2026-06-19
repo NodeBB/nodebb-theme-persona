@@ -11,7 +11,7 @@
 		<div class="btn btn-ghost btn-sm d-flex gap-2 flex-grow-1 align-items-start text-start">
 			<a class="flex-grow-0 flex-shrink-0" href="{{{ if ./user.userslug}}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 				{{{ if ./user }}}
-				{buildAvatar(./user, "32px", true)}
+				{{buildAvatar(./user, "32px", true)}}
 				{{{ else }}}
 					{{{ if ./icon }}}
 					<div class="avatar avatar-rounded" style="--avatar-size: 32px;"><i class="text-secondary fa {./icon}"></i></div>
@@ -25,11 +25,11 @@
 
 			<div class="d-flex flex-grow-1 flex-column gap-1 align-items-start position-relative">
 				<a href="{./path}" class="text-decoration-none d-inline-block text-reset text-break text-sm ff-sans stretched-link" component="notifications/item/link">
-					{./bodyShort}
+					{{./bodyShort}}
 				</a>
 				{{{ if ./bodyLong}}}
 				<div class="text-secondary text-sm line-clamp-2 text-contain hidden-blockquote hidden-pre hidden-first-child-br">
-					{./bodyLong}
+					{{./bodyLong}}
 				</div>
 				{{{ end }}}
 				<div class="text-xs text-muted">{{{ if ./timeagoLong }}}{./timeagoLong}{{{ else }}}<span class="timeago" title="{./datetimeISO}"></span>{{{ end }}}</div>

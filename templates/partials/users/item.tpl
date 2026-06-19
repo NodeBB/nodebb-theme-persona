@@ -1,5 +1,5 @@
 <li class="users-box registered-user text-center pb-3" data-uid="{users.uid}" style="width: 102px;">
-	<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "64px", true)}</a>
+	<a href="{config.relative_path}/user/{users.userslug}">{{buildAvatar(users, "64px", true)}}</a>
 
 	<div class="user-info">
 		<div class="text-nowrap text-truncate">

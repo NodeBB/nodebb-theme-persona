@@ -8,7 +8,7 @@
 			<div class="card card-body mb-3">
 				<select class="form-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					{{{each bootswatchSkinOptions}}}
-					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
+					<option value="{bootswatchSkinOptions.value}" {{{ if bootswatchSkinOptions.selected }}}selected{{{ end }}}>{tx(bootswatchSkinOptions.name)}</option>
 					{{{end}}}
 				</select>
 			</div>
@@ -61,7 +61,7 @@
 					<div component="chat/allow/list" class="d-flex flex-wrap gap-2 mb-2">
 						{{{ each settings.chatAllowListUsers }}}
 						<div component="chat/allow/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
-							{buildAvatar(@value, "16px", true)} {./username}
+							{{buildAvatar(@value, "16px", true)}} {./username}
 							<button component="chat/allow/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
 						</div>
 						{{{ end }}}
@@ -76,7 +76,7 @@
 					<div component="chat/deny/list" class="d-flex flex-wrap gap-2 mb-2">
 						{{{ each settings.chatDenyListUsers }}}
 						<div component="chat/deny/list/user" data-uid="{./uid}" class="d-flex px-2 py-1 rounded-1 text-bg-light gap-2 align-items-center text-sm">
-							{buildAvatar(@value, "16px", true)} {./username}
+							{{buildAvatar(@value, "16px", true)}} {./username}
 							<button component="chat/deny/delete" data-uid="{./uid}" class="btn btn-light btn-sm py-0"><i class="fa fa-times fa-xs text-danger"></i></button>
 						</div>
 						{{{ end }}}
@@ -165,7 +165,7 @@
 					<label class="form-label" for="dailyDigestFreq">[[user:digest-label]]</label>
 					<select class="form-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						{{{each dailyDigestFreqOptions}}}
-						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
+						<option value="{./value}" {{{ if ./selected }}}selected="1"{{{ end }}}>{tx(./name)}</option>
 						{{{end}}}
 					</select>
 					<p class="form-text">[[user:digest-description]]</p>
@@ -176,7 +176,7 @@
 			{{{each customSettings}}}
 			<h4>{customSettings.title}</h4>
 			<div class="card card-body mb-3">
-				{customSettings.content}
+				{{customSettings.content}}
 			</div>
 			{{{end}}}
 
@@ -255,7 +255,7 @@
 						<tr component="notification/setting" class="align-middle">
 							<td style="width:100%;">
 								<div class="align-items-center">
-									<label class="text-sm tracking-tight" for="{./name}">{./label}</label>
+									<label class="text-sm tracking-tight" for="{./name}">{tx(./label)}</label>
 									<input type="hidden" data-property="{./name}" value="{./value}">
 								</div>
 							</td>

@@ -6,7 +6,7 @@
 		<button class="btn btn-sm btn-outline-secondary" type="button" data-action="revokeSession">[[user:revoke-session]]</button>
 		{{{ end }}}
 		{{{ end }}}
-		{userAgentIcons(@value)}
+		{{userAgentIcons(@value)}}
 		<i class="fa fa-circle text-{{{ if ./current }}}success{{{ else }}}muted{{{ end }}}"></i>
 	</div>
 	[[user:browser-version-on-platform, {./browser}, {./version}, {./platform}]]<br />

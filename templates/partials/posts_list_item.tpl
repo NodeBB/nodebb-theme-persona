@@ -5,7 +5,7 @@
         </a>
 
         <div component="post/content" class="content mb-3">
-            {../content}
+            {{txEscape(../content)}}
         </div>
 
         <div class="mb-3">
@@ -15,7 +15,7 @@
             {{{ if ../topic.tags.length }}}
             <span class="tag-list">
                 {{{ each ../topic.tags }}}
-                <a href="{config.relative_path}/tags/{topic.tags.valueEncoded}"><span class="tag tag-item tag-class-{topic.tags.class}">{topic.tags.valueEscaped}</span></a>
+                <a href="{config.relative_path}/tags/{topic.tags.valueEncoded}"><span class="tag tag-item tag-class-{topic.tags.class}">{topic.tags.value}</span></a>
                 {{{ end }}}
             </span>
             {{{ end }}}
@@ -23,7 +23,7 @@
         </div>
 
         <div class="post-info">
-            <a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "28px", true, "user-img not-responsive")}</a>
+            <a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "28px", true, "user-img not-responsive")}}</a>
 
             <div class="post-author text-secondary text-uppercase">
                 <a class="text-reset" href="{config.relative_path}/user/{./user.userslug}">{./user.displayname}</a><br />

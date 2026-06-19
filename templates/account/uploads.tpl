@@ -1,5 +1,5 @@
 <!-- IMPORT partials/account/header.tpl -->
-<h1 class="fs-4">{title}</h1>
+<h1 class="fs-4">{tx(title)}</h1>
 <!-- IF privateUploads -->
 <div class="alert alert-info text-center">[[uploads:private-uploads-info]]</div>
 <!-- ELSE -->

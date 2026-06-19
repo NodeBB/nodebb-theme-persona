@@ -1,3 +1,3 @@
 <li component="topic/necro-post" class="necro-post text-muted timeline-event">
-	<span class="timeline-text">{text}</span>
+	<span class="timeline-text">{tx(text)}</span>
 </li>

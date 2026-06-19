@@ -90,11 +90,11 @@
 		<li><a class="dropdown-item d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/uploads" role="menuitem">[[global:uploads]] <span class="badge bg-secondary rounded-pill ms-2" title="{counts.uploaded}">{formattedNumber(counts.uploaded)}</span></a></li>
 		<!-- ENDIF canEdit -->
 
-		{{{each profile_links}}}
+		{{{ each profile_links }}}
 		<!-- IF @first -->
 		<li role="separator" class="dropdown-divider"></li>
 		<!-- ENDIF @first -->
-		<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF ../icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- END -->{profile_links.name}</a></li>
-		{{{end}}}
+		<li id="{./id}" class="plugin-link {{{ if ./public }}}public{{{ else }}}private{{{ end }}}"><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/{profile_links.route}">{{{ if icon }}}<i class="fa fa-fw {./icon}"></i> {{{ end }}}{tx(./name)}</a></li>
+		{{{ end }}}
 	</ul>
 </div>

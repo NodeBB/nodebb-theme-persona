@@ -23,7 +23,7 @@ $(document).ready(function () {
 		document.documentElement.style.setProperty('--panel-offset', `${offset}px`);
 	}
 
-	var lastBSEnv = '';
+	let lastBSEnv = '';
 	function configureNavbarHiding() {
 		if (!$.fn.autoHidingNavbar) {
 			return;
@@ -37,13 +37,13 @@ $(document).ready(function () {
 			} catch (e) {
 				console.warn('[persona/settings] Unable to parse value for navbar autohiding');
 			}
-			var env = utils.findBootstrapEnvironment();
+			const env = utils.findBootstrapEnvironment();
 			// if env didn't change don't destroy and recreate
 			if (env === lastBSEnv) {
 				return;
 			}
 			lastBSEnv = env;
-			var navbarEl = $('[component="navbar"]');
+			const navbarEl = $('[component="navbar"]');
 			navbarEl.autoHidingNavbar('destroy').removeData('plugin_autoHidingNavbar');
 			navbarEl.css('top', '');
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
 					if (ajaxify.data.template.topic) {
 						$('.topic .topic-header').css({ top: topValue });
 					} else {
-						var topicListHeader = $('.topic-list-header');
+						const topicListHeader = $('.topic-list-header');
 						if (topicListHeader.length) {
 							topicListHeader.css({ top: topValue });
 						}
@@ -119,24 +119,22 @@ $(document).ready(function () {
 	function setupEditedByIcon() {
 		function activateEditedTooltips() {
 			$('[data-pid] [component="post/editor"]').each(function () {
-				var el = $(this);
-				var icon;
-
+				const el = $(this);
 				if (!el.attr('data-editor')) {
 					return;
 				}
 
-				icon = el.closest('[data-pid]').find('.edit-icon').first();
+				const icon = el.closest('[data-pid]').find('.edit-icon').first();
 				icon.prop('title', el.text()).tooltip().removeClass('hidden');
 			});
 		}
 
 		$(window).on('action:posts.edited', function (ev, data) {
-			var parent = $('[data-pid="' + data.post.pid + '"]');
-			var icon = parent.find('.edit-icon').filter(function (index, el) {
+			const parent = $('[data-pid="' + data.post.pid + '"]');
+			const icon = parent.find('.edit-icon').filter(function (index, el) {
 				return parseInt($(el).closest('[data-pid]').attr('data-pid'), 10) === parseInt(data.post.pid, 10);
 			});
-			var el = parent.find('[component="post/editor"]').first();
+			const el = parent.find('[component="post/editor"]').first();
 			icon.prop('title', el.text()).tooltip().removeClass('hidden');
 		});
 
@@ -157,15 +155,15 @@ $(document).ready(function () {
 		});
 
 		$(window).on('action:posts.loading', function (ev, data) {
-			for (var i = 0, ii = data.posts.length; i < ii; i++) {
+			for (let i = 0, ii = data.posts.length; i < ii; i++) {
 				(ajaxify.data.topics || ajaxify.data.posts)[data.posts[i].index] = data.posts[i];
 			}
 		});
 	}
 
 	function generateUserCard(ev) {
-		var avatar = $(this);
-		var uid = avatar.parents('[data-uid]').attr('data-uid');
+		const avatar = $(this);
+		const uid = avatar.parents('[data-uid]').attr('data-uid');
 		const topicOrPost = (ajaxify.data.topics || ajaxify.data.posts || []).find(d => String(d.uid) === String(uid));
 		if (!topicOrPost) return;
 		const user = topicOrPost.user;
@@ -182,7 +180,7 @@ $(document).ready(function () {
 			}
 
 			app.parseAndTranslate('modules/usercard', user, function (html) {
-				var card = $(html);
+				const card = $(html);
 				avatar.parents('a').after(card.hide());
 
 				if (String(app.user.uid) === String(user.uid) || !app.user.uid) {
@@ -229,8 +227,8 @@ $(document).ready(function () {
 	function setupFavouriteMorph(parent, uid, username) {
 		require(['api', 'alerts'], function (api, alerts) {
 			parent.find('.btn-morph').click(function (ev) {
-				var type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
-				var method = $(this).hasClass('plus') ? 'put' : 'del';
+				const type = $(this).hasClass('plus') ? 'follow' : 'unfollow';
+				const method = $(this).hasClass('plus') ? 'put' : 'del';
 
 				api[method]('/users/' + uid + '/follow').then(() => {
 					alerts.success('[[global:alert.' + type + ', ' + username + ']]');
@@ -243,9 +241,9 @@ $(document).ready(function () {
 					$(this).prepend('<b class="drop"></b>');
 				}
 
-				var drop = $(this).find('b.drop').removeClass('animate');
-				var x = ev.pageX - (drop.width() / 2) - $(this).offset().left;
-				var y = ev.pageY - (drop.height() / 2) - $(this).offset().top;
+				const drop = $(this).find('b.drop').removeClass('animate');
+				const x = ev.pageX - (drop.width() / 2) - $(this).offset().left;
+				const y = ev.pageY - (drop.height() / 2) - $(this).offset().top;
 
 				drop.css({ top: y + 'px', left: x + 'px' }).addClass('animate');
 			});

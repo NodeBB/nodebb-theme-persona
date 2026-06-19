@@ -9,7 +9,7 @@
 <div class="clearfix post-header">
 	<div class="icon float-start">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{buildAvatar(posts.user, "48px", true, "", "user/picture")}
+			{{buildAvatar(posts.user, "48px", true, "", "user/picture")}}
 			{{{ if ./user.isLocal }}}
 			<span component="user/status" class="position-absolute top-100 start-100 border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
 			{{{ else }}}
@@ -48,7 +48,7 @@
 					<!-- IF posts.user.custom_profile_info.length -->
 					&#124;
 					{{{each posts.user.custom_profile_info}}}
-					{posts.user.custom_profile_info.content}
+					{{posts.user.custom_profile_info.content}}
 					{{{end}}}
 					<!-- ENDIF posts.user.custom_profile_info.length -->
 				</span>
@@ -72,12 +72,12 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
-	{posts.content}
+	{{posts.content}}
 </div>
 
 <div class="post-footer">
 	{{{ if posts.user.signature }}}
-	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
+	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{{txEscape(posts.user.signature)}}</div>
 	{{{ end }}}
 
 	<div class="clearfix">
@@ -85,14 +85,14 @@
 	<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="threaded-replies user-select-none float-start text-muted {{{ if (!./replies || shouldHideReplyContainer(@value)) }}}hidden{{{ end }}}">
 		<span component="post/reply-count/avatars" class="avatars d-inline-flex gap-1 align-items-top hidden-xs {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 			{{{each posts.replies.users}}}
-			<span>{buildAvatar(posts.replies.users, "16px", true, "")}</span>
+			<span>{{buildAvatar(posts.replies.users, "16px", true, "")}}</span>
 			{{{end}}}
 			{{{ if posts.replies.hasMore}}}
 			<span><i class="fa fa-ellipsis"></i></span>
 			{{{ end }}}
 		</span>
 
-		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
+		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{tx(posts.replies.text)}</span>
 		<span class="replies-last hidden-xs small">[[topic:last-reply-time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-down" component="post/replies/open"></i>

@@ -1,6 +1,6 @@
 <div id="results" class="search-results col-md-12" data-search-query="{search_query}">
 	{{{ if matchCount }}}
-	<div class="alert alert-info">[[search:results-matching, {matchCount}, {txEscape(search_query)}, {time}]] </div>
+	<div class="alert alert-info">{{tx("search:results-matching", matchCount, txEscape(search_query), time)}}</div>
 	{{{ else }}}
 	{{{ if search_query }}}
 	<div class="alert alert-warning">[[search:no-matches]]</div>
@@ -11,21 +11,21 @@
 	<div class="topic-row card clearfix mb-3">
 		<div class="card-body">
 			<div class="mb-2">
-				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
+				<a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "24px", true)}}</a>
 				<a class="topic-title fw-semibold fs-5" href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}">{./topic.title}</a>
 			</div>
 
 			{{{ if showAsPosts }}}
 			<div component="post/content" class="content">
-				{./content}
+				{{./content}}
 			</div>
 			{{{ end }}}
 
 			<small class="post-info">
 				<a href="{config.relative_path}/category/{./category.slug}">
 					<div class="category-item d-inline-block">
-						{buildCategoryIcon(./category, "24px", "rounded-circle")}
-						{./category.name}
+						{{buildCategoryIcon(./category, "24px", "rounded-circle")}}
+						{tx(./category.name)}
 					</div>
 				</a> &bull;
 				<span class="timeago" title="{./timestampISO}"></span>

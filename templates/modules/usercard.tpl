@@ -1,6 +1,6 @@
 <div class="persona-usercard d-flex text-bg-dark">
 	<a href="{config.relative_path}/user/{userslug}">
-		{buildAvatar(@value, "150px", false, "shadow-none")}
+		{{buildAvatar(@value, "150px", false, "shadow-none")}}
 	</a>
 	<div class="usercard-body w-100 d-flex flex-column justify-content-between gap-2 py-2 px-3 overflow-hidden position-relative">
 

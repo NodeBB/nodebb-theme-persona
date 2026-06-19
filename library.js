@@ -1,6 +1,6 @@
 'use strict';
 
-const meta = require.main.require('./src/meta');
+const meta = nodebb.require('./src/meta');
 
 const controllers = require('./lib/controllers');
 
@@ -8,7 +8,7 @@ const library = module.exports;
 
 library.init = async function (params) {
 	const { router, middleware } = params;
-	const routeHelpers = require.main.require('./src/routes/helpers');
+	const routeHelpers = nodebb.require('./src/routes/helpers');
 	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/persona', [], controllers.renderAdminPage);
 
 	routeHelpers.setupPageRoute(router, '/user/:userslug/theme', [

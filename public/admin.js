@@ -1,7 +1,7 @@
 'use strict';
 
 define('admin/plugins/persona', ['settings'], function (Settings) {
-	var ACP = {};
+	const ACP = {};
 
 	ACP.init = function () {
 		Settings.load('persona', $('.persona-settings'));

@@ -10,7 +10,7 @@
 	{{{ end }}}
 	<li class="nav-item">
 		<a class="nav-link active text-decoration-none" href="#" data-bs-target="#profile" data-bs-toggle="tab">
-			{buildAvatar(user, "24px", true, "user-icon")}
+			{{buildAvatar(user, "24px", true, "user-icon")}}
 		</a>
 	</li>
 </ul>

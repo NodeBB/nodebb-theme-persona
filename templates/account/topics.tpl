@@ -32,7 +32,7 @@
 
 
 {{{ if !topics.length }}}
-<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
+<div class="alert alert-warning text-center">{tx(noItemsFoundKey)}</div>
 {{{ end }}}
 
 <div class="category">

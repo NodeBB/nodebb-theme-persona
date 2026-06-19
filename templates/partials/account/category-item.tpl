@@ -3,14 +3,14 @@
 	<div class="content depth-{./depth} d-flex gap-2">
 		<div class="flex-grow-1 align-items-start d-flex gap-2">
 			<div>
-				{buildCategoryIcon(@value, "24px", "rounded-circle")}
+				{{buildCategoryIcon(@value, "24px", "rounded-circle")}}
 			</div>
 			<div class="d-grid gap-0">
 				<div class="title fw-semibold">
 					<!-- IMPORT partials/categories/link.tpl -->
 				</div>
 				{{{ if ./descriptionParsed }}}
-				<div class="description text-muted text-xs w-100 line-clamp-5">{./descriptionParsed}</div>
+				<div class="description text-muted text-xs w-100 line-clamp-5">{{./descriptionParsed}}</div>
 				{{{ end }}}
 			</div>
 		</div>
