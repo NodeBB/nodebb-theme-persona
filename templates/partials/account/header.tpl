@@ -8,8 +8,14 @@
 	</div>
 
 	<div class="cover position-absolute start-0 top-0" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
-		<div class="avatar-wrapper bg-body rounded-circle  position-absolute start-50 top-100 translate-middle" data-uid="{uid}" style="padding: 4px;">
+		<div class="avatar-wrapper bg-body rounded-circle position-absolute start-50 top-100 translate-middle hover-parent" data-uid="{uid}" style="padding: 4px;">
 			{{buildAvatar(@value, "128px", true)}}
+			{{{ if (allowProfilePicture && isSelfOrAdminOrGlobalModerator)}}}
+			<a href="#" component="profile/change/picture" class="d-none d-md-block pointer p-2 rounded-1 text-bg-light position-absolute top-50 start-50 translate-middle hover-opacity-75">
+				<span><i class="fa fa-fw fa-upload"></i></span>
+			</a>
+			{{{ end }}}
+
 			<span component="user/status" class="fs-3 position-absolute border border-white border-2 rounded-circle status {status}" style="top: 17px; right: 3px; padding: 10px;"><span class="visually-hidden">[[global:{status}]]</span></span>
 
 			{{{ if !isSelf }}}

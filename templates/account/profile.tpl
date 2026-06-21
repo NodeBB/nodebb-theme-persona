@@ -158,11 +158,11 @@
 <div class="row">
 	{{{ if (bestPosts.length || latestPosts.length) }}}
 	<div class="col-12">
-		<ul class="nav nav-tabs mb-3" role="tablist">
+		<ul class="nav nav-tabs mb-3 justify-content-center" role="tablist">
 			{{{ if bestPosts.length }}}
 			<li class="nav-item" role="presentation">
 				<button
-					class="nav-link active"
+					class="nav-link active fw-semibold"
 					id="best-posts-tab"
 					data-bs-toggle="tab"
 					data-bs-target="#best-posts-pane"
@@ -178,7 +178,7 @@
 			{{{ if latestPosts.length }}}
 			<li class="nav-item" role="presentation">
 				<button
-					class="nav-link {{{ if !bestPosts.length }}}active{{{ end }}}"
+					class="nav-link fw-semibold {{{ if !bestPosts.length }}}active{{{ end }}}"
 					id="latest-posts-tab"
 					data-bs-toggle="tab"
 					data-bs-target="#latest-posts-pane"
