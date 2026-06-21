@@ -9,4 +9,4 @@
 	</small>
 </div>
 
-<div>{{txEscape(post.content)}}</div>
+<div>{{renderContent(post.content, post.deleted)}}</div>

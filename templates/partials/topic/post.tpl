@@ -72,7 +72,7 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
-	{{posts.content}}
+	{{renderContent(posts.content, posts.deleted)}}
 </div>
 
 <div class="post-footer">

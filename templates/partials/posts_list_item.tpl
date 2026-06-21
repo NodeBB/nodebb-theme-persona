@@ -4,8 +4,8 @@
             {{{ if !./isMainPost }}}RE: {{{ end }}}{./topic.title}
         </a>
 
-        <div component="post/content" class="content mb-3">
-            {{txEscape(../content)}}
+        <div component="post/content" class="content mb-3 text-break">
+            {{renderContent(./content, ./deleted)}}
         </div>
 
         <div class="mb-3">
