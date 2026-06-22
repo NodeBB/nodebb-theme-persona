@@ -43,7 +43,7 @@
 									</div>
 									<div class="d-grid gap-0">
 										<div class="title fw-semibold">
-											<a class="text-reset stretched-link" href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{../name}</a>
+											<a class="text-reset stretched-link" href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" itemprop="url">{{tx(./name)}</a>
 										</div>
 										{{{ if ./descriptionParsed }}}
 										<div class="description text-muted text-xs w-100 line-clamp-sm-5">{{./descriptionParsed}}</div>
