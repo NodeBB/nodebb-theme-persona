@@ -54,7 +54,7 @@
 							<i class="fa fa-fw {navigation.iconClass}" data-content="{./content}"></i>
 							{{{ end }}}
 							{{{ if ./text }}}
-							<span class="{./textClass}">{tx(./text)}</span>
+							<span class="{./textClass}">{{tx(./text)}}</span>
 							{{{ end }}}
 							{{{ if navigation.dropdown}}}
 							<i class="fa fa-caret-down"></i>

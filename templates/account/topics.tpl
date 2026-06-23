@@ -10,7 +10,7 @@
 				{{{each sortOptions }}}
 				<li>
 					<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="{config.relative_path}{./url}" role="menuitem">
-						<div class="flex-grow-1">{./name}</div>
+						<div class="flex-grow-1">{{tx(./name)}}</div>
 						<i class="flex-shrink-0 fa fa-fw {{{if ./selected}}}fa-check{{{end}}}"></i>
 					</a>
 				</li>
@@ -32,7 +32,7 @@
 
 
 {{{ if !topics.length }}}
-<div class="alert alert-warning text-center">{tx(noItemsFoundKey)}</div>
+<div class="alert alert-warning text-center">{{tx(noItemsFoundKey)}}</div>
 {{{ end }}}
 
 <div class="category">

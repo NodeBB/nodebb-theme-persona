@@ -8,7 +8,7 @@
 			<div class="card card-body mb-3">
 				<select class="form-select" id="bootswatchSkin" data-property="bootswatchSkin">
 					{{{each bootswatchSkinOptions}}}
-					<option value="{bootswatchSkinOptions.value}" {{{ if bootswatchSkinOptions.selected }}}selected{{{ end }}}>{tx(bootswatchSkinOptions.name)}</option>
+					<option value="{bootswatchSkinOptions.value}" {{{ if bootswatchSkinOptions.selected }}}selected{{{ end }}}>{{tx(bootswatchSkinOptions.name)}}</option>
 					{{{end}}}
 				</select>
 			</div>
@@ -165,7 +165,7 @@
 					<label class="form-label" for="dailyDigestFreq">[[user:digest-label]]</label>
 					<select class="form-select" id="dailyDigestFreq" data-property="dailyDigestFreq" autocomplete="off">
 						{{{each dailyDigestFreqOptions}}}
-						<option value="{./value}" {{{ if ./selected }}}selected="1"{{{ end }}}>{tx(./name)}</option>
+						<option value="{./value}" {{{ if ./selected }}}selected="1"{{{ end }}}>{{tx(./name)}}</option>
 						{{{end}}}
 					</select>
 					<p class="form-text">[[user:digest-description]]</p>
@@ -259,7 +259,7 @@
 						<tr component="notification/setting" class="align-middle">
 							<td style="width:100%;">
 								<div class="align-items-center">
-									<label class="text-sm tracking-tight" for="{./name}">{tx(./label)}</label>
+									<label class="text-sm tracking-tight" for="{./name}">{{tx(./label)}}</label>
 									<input type="hidden" data-property="{./name}" value="{./value}">
 								</div>
 							</td>
