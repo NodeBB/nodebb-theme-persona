@@ -9,4 +9,4 @@
 	</small>
 </div>
 
-<div>{{{ if post.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(post.content))}}{{{ end }}}</div>
+<div>{{{ if post.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(post.content)}}{{{ end }}}</div>
