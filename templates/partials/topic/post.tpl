@@ -72,7 +72,7 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
-	{{renderContent(posts.content, posts.deleted)}}
+	{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(posts.content)}}{{{ end }}}
 </div>
 
 <div class="post-footer">

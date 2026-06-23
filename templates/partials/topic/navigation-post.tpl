@@ -9,4 +9,4 @@
 	</small>
 </div>
 
-<div>{{renderContent(post.content, post.deleted)}}</div>
+<div>{{{ if post.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(post.content))}}</div>
