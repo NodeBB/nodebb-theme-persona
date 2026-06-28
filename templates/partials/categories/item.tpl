@@ -25,7 +25,7 @@
 			<ul class="list-unstyled category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
 				{{{ each ./children }}}
 				{{{ if !./isSection }}}
-				<li class="category-children-item small d-flex gap-1 align-items-center">
+				<li class="category-children-item small d-flex gap-1 align-items-center text-break">
 					{{buildCategoryIcon(@value, "24px", "rounded-circle")}}
 					<a href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" class="text-reset">{./name}</a>
 				</li>
