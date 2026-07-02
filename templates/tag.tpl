@@ -10,7 +10,7 @@
 			{{{ if loggedIn }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			{{{ else }}}
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">[[category:guest-login-post]]</a>
+			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">{{tx("category:guest-login-post")}}</a>
 			{{{ end }}}
 		</div>
 		<div class="d-flex gap-1">
@@ -22,11 +22,11 @@
 
 	<div class="category">
 		{{{ if !topics.length }}}
-		<div class="alert alert-warning">[[tags:no-tag-topics]]</div>
+		<div class="alert alert-warning">{{tx("tags:no-tag-topics")}}</div>
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->
-		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load-more]]</button>
+		<button id="load-more-btn" class="btn btn-primary hide">{{tx("unread:load-more")}}</button>
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}

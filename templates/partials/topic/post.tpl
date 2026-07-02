@@ -11,10 +11,10 @@
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{{buildAvatar(posts.user, "48px", true, "", "user/picture")}}
 			{{{ if ./user.isLocal }}}
-			<span component="user/status" class="position-absolute top-100 start-100 border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
+			<span component="user/status" class="position-absolute top-100 start-100 border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">{{tx(concat("global:", posts.user.status))}}</span></span>
 			{{{ else }}}
 			<span component="user/locality" class="position-absolute top-100 start-100 lh-1 border border-white border-2 rounded-circle small" title="[[global:remote-user]]">
-				<span class="visually-hidden">[[global:remote-user]]</span>
+				<span class="visually-hidden">{{tx("global:remote-user")}}</span>
 				<i class="fa fa-globe"></i>
 			</span>
 			{{{ end }}}
@@ -36,12 +36,12 @@
 			{{{ end }}}
 
 			<!-- IF posts.user.banned -->
-			<span class="badge bg-danger">[[user:banned]]</span>
+			<span class="badge bg-danger">{{tx("user:banned")}}</span>
 			<!-- ENDIF posts.user.banned -->
 
 			<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 				{{{ if posts.toPid }}}
-				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{encodeURIComponent(posts.toPid)}"><i class="fa fa-reply"></i> @{{{ if posts.parent.user.userslug }}}{posts.parent.user.username}{{{ else }}}[[global:guest]]{{{ end }}}</a>
+				<a component="post/parent" class="btn btn-sm btn-ghost py-0 px-1 text-xs hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{encodeURIComponent(posts.toPid)}"><i class="fa fa-reply"></i> @{{{ if posts.parent.user.userslug }}}{posts.parent.user.username}{{{ else }}}{{tx("global:guest")}}{{{ end }}}</a>
 				{{{ end }}}
 
 				<span>
@@ -57,7 +57,7 @@
 				<span>
 					<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-					<span data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last-edited-by, {posts.editor.username}]] <span class="timeago" title="{isoTimeToLocaleString(posts.editedISO, config.userLang)}"></span></span>
+					<span data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">{{tx("global:last-edited-by", txEscape(posts.editor.username))}} <span class="timeago" title="{isoTimeToLocaleString(posts.editedISO, config.userLang)}"></span></span>
 
 					<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 						<a class="permalink text-muted" href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}"><span class="timeago" title="{posts.timestampISO}"></span></a>
@@ -93,7 +93,7 @@
 		</span>
 
 		<span class="replies-count small" component="post/reply-count/text" data-replies="{posts.replies.count}">{{tx(posts.replies.text)}}</span>
-		<span class="replies-last hidden-xs small">[[topic:last-reply-time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
+		<span class="replies-last hidden-xs small">{{tx("topic:last-reply-time")}} <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
 
 		<i class="fa fa-fw fa-chevron-down" component="post/replies/open"></i>
 	</a>
@@ -102,12 +102,12 @@
 	<small class="d-flex justify-content-end align-items-center gap-1" component="post/actions">
 		<!-- IMPORT partials/topic/reactions.tpl -->
 		<span class="post-tools">
-			<a component="post/reply" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+			<a component="post/reply" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">{{tx("topic:reply")}}</a>
+			<a component="post/quote" href="#" class="btn btn-sm btn-link user-select-none <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">{{tx("topic:quote")}}</a>
 		</span>
 
 		{{{ if ./announces }}}
-		<a component="post/announce-count" href="#" class="btn-ghost-sm" title="[[topic:announcers]]"><i class="fa fa-share-alt text-primary"></i> {./announces}</a>
+		<a component="post/announce-count" href="#" class="btn-ghost-sm" title="{{tx("topic:announcers")}}"><i class="fa fa-share-alt text-primary"></i> {./announces}</a>
 		{{{ end }}}
 
 		<!-- IF !reputation:disabled -->

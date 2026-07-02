@@ -1,16 +1,16 @@
 <!-- IMPORT partials/account/header.tpl -->
-<h1 class="fs-4">[[pages:account/blocks, {username}]]</h1>
+<h1 class="fs-4">{{tx("pages:account/blocks", txEscape(username))}}</h1>
 <div class="row justify-content-end mb-2">
 	<div class="col-3">
 		<div class="dropdown">
-			<input class="form-control" type="text" id="user-search" placeholder="[[users:enter-username]]" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false"/>
+			<input class="form-control" type="text" id="user-search" placeholder="{{tx("users:enter-username")}}" data-bs-toggle="dropdown" autocomplete="off" aria-haspopup="true" aria-expanded="false"/>
 
 			<ul component="blocks/search/list" class="dropdown-menu p-1 block-edit list-unstyled" role="menu">
 				<li component="blocks/start-typing">
-					<a href="#" class="dropdown-item rounded-1" role="menuitem">[[admin/menu:search.start-typing]]</a>
+					<a href="#" class="dropdown-item rounded-1" role="menuitem">{{tx("admin/menu:search.start-typing")}}</a>
 				</li>
 				<li component="blocks/no-users" class="hidden">
-					<a href="#" class="dropdown-item rounded-1" role="menuitem">[[users:no-users-found]]</a>
+					<a href="#" class="dropdown-item rounded-1" role="menuitem">{{tx("users:no-users-found")}}</a>
 				</li>
 				{{{ each edit }}}
 				<li component="blocks/search/match">
@@ -19,8 +19,8 @@
 							<a href="{config.relative_path}/uid/{../uid}">{{buildAvatar(edit, "24px", true)}} {../username}</a>
 						</div>
 
-						<button class="btn btn-sm btn-outline-danger text-nowrap {{{ if ./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="block">[[user:block-user]]</button>
-						<button class="btn btn-sm btn-outline-primary text-nowrap {{{ if !./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
+						<button class="btn btn-sm btn-outline-danger text-nowrap {{{ if ./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="block">{{tx("user:block-user")}}</button>
+						<button class="btn btn-sm btn-outline-primary text-nowrap {{{ if !./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="unblock">{{tx("user:unblock-user")}}</button>
 					</div>
 				</li>
 				{{{ end }}}
@@ -30,12 +30,12 @@
 </div>
 
 <div class="users row">
-	<div class="alert alert-warning text-center {{{ if users.length }}}hidden{{{ end }}}">[[user:has-no-blocks]]</div>
+	<div class="alert alert-warning text-center {{{ if users.length }}}hidden{{{ end }}}">{{tx("user:has-no-blocks")}}</div>
 	<div id="users-container" class="users-container list-unstyled d-flex flex-wrap gap-2">
 		{{{ each users }}}
 		<div class="d-flex flex-column gap-1">
 			<!-- IMPORT partials/users/item.tpl -->
-			<button class="btn btn-sm btn-outline-primary text-nowrap mx-auto" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
+			<button class="btn btn-sm btn-outline-primary text-nowrap mx-auto" data-uid="{./uid}" data-action="unblock">{{tx("user:unblock-user")}}</button>
 		</div>
 		{{{ end }}}
 

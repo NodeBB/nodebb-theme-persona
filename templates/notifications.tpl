@@ -25,14 +25,14 @@
 
 		<button component="notifications/mark_all" class="btn btn-ghost btn-sm" type="button">
 			<i class="fa fa-eye"></i>
-			[[notifications:mark-all-read]]
+			{{tx("notifications:mark-all-read")}}
 		</button>
 	</div>
 
 	<hr />
 
 	<div class="alert alert-info {{{ if notifications.length }}}hidden{{{ end }}}">
-		[[notifications:no-notifs]]
+		{{tx("notifications:no-notifs")}}
 	</div>
 
 	<ul component="notifications/list" class="notifications-list list-unstyled" data-nextstart="{nextStart}">

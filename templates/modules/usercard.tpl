@@ -10,20 +10,20 @@
 
 		<div class="d-flex gap-2 align-items-center">
 			<a href="{config.relative_path}/user/{userslug}" class="text-reset text-truncate d-block">
-				<span class="usercard-username text-uppercase text-sm text-truncate">{{{ if !banned }}}@{username}{{{ else }}}[[user:banned]]{{{ end }}}</span>
+				<span class="usercard-username text-uppercase text-sm text-truncate">{{{ if !banned }}}@{username}{{{ else }}}{{tx("user:banned")}}{{{ end }}}</span>
 			</a>
 			{{{ if !banned }}}
-			<span component="user/status" class="border border-white border-2 m-0 rounded-circle status {status}" title="[[global:{status}]]" style="transform: none;"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
+			<span component="user/status" class="border border-white border-2 m-0 rounded-circle status {status}" title="{{tx(concat("global:", status))}}" style="transform: none;"><span class="visually-hidden">{{tx(concat("global:", status))}}</span></span>
 			{{{ end }}}
 		</div>
 
 		<div class="d-flex justify-content-between usercard-info">
 			<div class="d-flex flex-column text-center">
-				<small>[[global:posts]]</small>
+				<small>{{tx("global:posts")}}</small>
 				<span class="fs-5">{humanReadableNumber(postcount)}</span>
 			</div>
 			<div class="d-flex flex-column text-center">
-				<small>[[global:reputation]]</small>
+				<small>{{tx("global:reputation")}}</small>
 				<span class="fs-5">{humanReadableNumber(reputation)}</span>
 			</div>
 			<button class="btn-morph persona-fab fs-3  {{{ if banned }}} invisible{{{ end }}}">
@@ -35,5 +35,4 @@
 			</button>
 		</div>
 	</div>
-
 </div>

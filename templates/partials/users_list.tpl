@@ -8,7 +8,7 @@
 	<br/>
 	<div class="user-info">
 		<span id="online_anon_count">{anonymousUserCount}</span>
-		<span>[[global:guests]]</span>
+		<span>{{tx("global:guests")}}</span>
 	</div>
 </li>
 <!-- ENDIF anonymousUserCount -->

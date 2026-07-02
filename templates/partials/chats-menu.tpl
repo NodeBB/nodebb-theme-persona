@@ -24,7 +24,7 @@
 	<div class="tab-pane fade" id="notifications">
 		<section class="menu-section text-bg-dark px-1" data-section="notifications">
 			<ul class="menu-section-list notification-list-mobile list-unstyled" component="notifications/list"></ul>
-			<div class="menu-section-list text-center p-3"><a href="{relative_path}/notifications">[[notifications:see-all]]</a></div>
+			<div class="menu-section-list text-center p-3"><a href="{relative_path}/notifications">{{tx("notifications:see-all")}}</a></div>
 		</section>
 	</div>
 	{{{ if !config.disableChat }}}
@@ -33,7 +33,7 @@
 			<ul class="menu-section-list chat-list list-unstyled" component="chat/list">
 
 			</ul>
-			<div class="menu-section-list text-center p-3"><a class="navigation-link" href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see-all]]</a></div>
+			<div class="menu-section-list text-center p-3"><a class="navigation-link" href="{relative_path}/user/{user.userslug}/chats">{{tx("modules:chat.see-all")}}</a></div>
 		</section>
 	</div>
 	{{{ end }}}

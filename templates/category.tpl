@@ -12,22 +12,22 @@
 		<div class="topic-list-header sticky-top btn-toolbar justify-content-between align-items-center px-1 py-2 mb-2 flex-nowrap">
 			<div class="d-flex gap-1">
 				{{{ if privileges.topics:create }}}
-				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary btn-sm text-nowrap" data-ajaxify="false" role="button">[[category:new-topic-button]]</a>
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary btn-sm text-nowrap" data-ajaxify="false" role="button">{{tx("category:new-topic-button")}}</a>
 				{{{ else }}}
 					{{{ if !loggedIn }}}
-					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">[[category:guest-login-post]]</a>
+					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">{{tx("category:guest-login-post")}}</a>
 					{{{ end }}}
 				{{{ end }}}
 
 				<a href="{url}" class="d-inline-block">
-					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
+					<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>{{tx("recent:load-new-posts")}}</div>
 				</a>
 			</div>
 			<div component="category/controls" class="d-flex gap-1">
 				{{{ if !isNumber(cid) }}}
 				<a href="{./url}" class="btn btn-sm d-flex gap-2 align-items-center" data-ajaxify="false">
 					<i class="fa fa-external-link text-primary"></i>
-					<span class="fw-semibold">View Original</span>
+					<span class="fw-semibold">{{tx("category:view-original")}}</span>
 				</a>
 				{{{ end }}}
 				<!-- IMPORT partials/category/watch.tpl -->
@@ -40,7 +40,7 @@
 		{{{ if (./inbox && (./hasFollowers == false)) }}}
 		<div class="alert alert-warning mb-4" id="category-no-followers" data-bs-toggle="dropdown" data-bs-target='[component="topic/watch"] button' aria-hidden="true">
 			<i class="fa fa-triangle-exclamation pe-2"></i>
-			[[category:no-followers]]
+			{{tx("category:no-followers")}}
 			<a href="#" class="stretched-link"></a>
 		</div>
 		{{{ end }}}
@@ -48,7 +48,7 @@
 		{{{ if (!topics.length && privileges.topics:create)}}}
 		<hr class="visible-xs" />
 		<div class="alert alert-warning" id="category-no-topics">
-			[[category:no-topics]]
+			{{tx("category:no-topics")}}
 		</div>
 		{{{ end }}}
 

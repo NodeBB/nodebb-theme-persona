@@ -41,11 +41,11 @@
 		<div class="meta stats d-none d-lg-grid col-6 gap-1 pe-2 text-muted" style="grid-template-columns: 1fr 1fr;">
 			<div class="overflow-hidden rounded-1 d-flex flex-column align-items-center">
 				<span class="fs-4" title="{./totalTopicCount}">{humanReadableNumber(./totalTopicCount, 0)}</span>
-				<span class="text-uppercase text-xs">[[global:topics]]</span>
+				<span class="text-uppercase text-xs">{{tx("global:topics")}}</span>
 			</div>
 			<div class="overflow-hidden rounded-1 d-flex flex-column align-items-center">
 				<span class="fs-4" title="{./totalPostCount}">{humanReadableNumber(./totalPostCount, 0)}</span>
-				<span class="text-uppercase text-xs">[[global:posts]]</span>
+				<span class="text-uppercase text-xs">{{tx("global:posts")}}</span>
 			</div>
 		</div>
 		{{{ if !config.hideCategoryLastPost }}}

@@ -19,16 +19,16 @@
 					<div class="topic-info d-flex gap-2 align-items-center flex-wrap">
 						<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">
 							<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
-								<i class="fa fa-clock-o"></i> [[topic:scheduled]]
+								<i class="fa fa-clock-o"></i> {{tx("topic:scheduled")}}
 							</span>
 							<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
-								<i class="fa fa-thumb-tack"></i> {{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
+								<i class="fa fa-thumb-tack"></i> {{{ if !pinExpiry }}}{{tx("topic:pinned")}}{{{ else }}}{{tx("topic:pinned-with-expiry", isoTimeToLocaleString(./pinExpiryISO, config.userLang))}}{{{ end }}}
 							</span>
 							<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
-								<i class="fa fa-lock"></i> [[topic:locked]]
+								<i class="fa fa-lock"></i> {{tx("topic:locked")}}
 							</span>
 							<a component="topic/moved" href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
-								<i class="fa fa-arrow-circle-right"></i> {{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
+								<i class="fa fa-arrow-circle-right"></i> {{{ if privileges.isAdminOrMod }}}{{tx("topic:moved-from", oldCategory.name)}}{{{ else }}}{{tx("topic:moved")}}{{{ end }}}
 							</a>
 							{{{ each ./icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
 						</span>

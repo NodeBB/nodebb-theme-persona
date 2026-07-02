@@ -14,23 +14,23 @@
                     <div class="col-8 post-content"></div>
                     <div class="col-4 text-end">
                         <div class="scroller-content">
-                            <span class="pointer pagetop">[[topic:first-post]] <i class="fa fa-angle-double-up"></i></span>
+                            <span class="pointer pagetop">{{tx("topic:first-post")}} <i class="fa fa-angle-double-up"></i></span>
                             <div class="scroller-container">
                                 <div class="scroller-thumb">
                                     <span class="thumb-text"></span>
                                     <div class="scroller-thumb-icon"></div>
                                 </div>
                             </div>
-                            <span class="pointer pagebottom">[[topic:last-post]] <i class="fa fa-angle-double-down"></i></span>
+                            <span class="pointer pagebottom">{{tx("topic:last-post")}} <i class="fa fa-angle-double-down"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <button id="myNextPostBtn" class="btn btn-outline-secondary form-control" disabled>[[topic:go-to-my-next-post]]</button>
+                        <button id="myNextPostBtn" class="btn btn-outline-secondary form-control" disabled>{{tx("topic:go-to-my-next-post")}}</button>
                     </div>
                     <div class="col-6">
-                        <input type="number" class="form-control" id="indexInput" placeholder="[[global:pagination.enter-index]]">
+                        <input type="number" class="form-control" id="indexInput" placeholder="{{tx("global:pagination.enter-index")}}">
                     </div>
                 </div>
             </li>

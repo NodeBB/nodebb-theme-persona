@@ -10,13 +10,13 @@
 
 		<div class="d-flex gap-2 align-items-center">
 			{{{ if showInviteButton }}}
-			<button component="user/invite" class="btn btn-sm btn-success text-nowrap"><i class="fa fa-users"></i> [[users:invite]]</button>
+			<button component="user/invite" class="btn btn-sm btn-success text-nowrap"><i class="fa fa-users"></i> {{tx("users:invite")}}</button>
 			{{{ end }}}
 
 			{{{ if displayUserSearch }}}
 			<div class="search">
 				<div class="input-group">
-					<input class="form-control form-control-sm" id="search-user" type="text" placeholder="[[global:search]]"/>
+					<input class="form-control form-control-sm" id="search-user" type="text" placeholder="{{tx("global:search")}}"/>
 					<button class="btn btn-sm btn-primary" type="button">
 						<i component="user/search/icon" class="fa fa-search"></i>
 					</button>

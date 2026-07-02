@@ -20,8 +20,8 @@
 			{{{ if (config.searchEnabled && user.privileges.search:content) }}}
 			<div class="navbar-search visible-xs">
 				<form action="{config.relative_path}/search" method="GET">
-					<button type="button" class="btn btn-link"><i class="fa fa-lg fa-fw fa-search" title="[[global:header.search]]"></i></button>
-					<input autocomplete="off" type="text" class="form-control hidden" name="term" placeholder="[[global:search]]"/>
+					<button type="button" class="btn btn-link"><i class="fa fa-lg fa-fw fa-search" title="{{tx("global:header.search")}}"></i></button>
+					<input autocomplete="off" type="text" class="form-control hidden" name="term" placeholder="{{tx("global:search")}}"/>
 					<button class="btn btn-primary hidden" type="submit"></button>
 					<input type="text" class="hidden" name="in" value="{config.searchDefaultInQuick}" />
 				</form>
@@ -71,7 +71,7 @@
 				</ul>
 				<ul class="navbar-nav mb-2 mb-lg-0 hidden-xs">
 					<li class="nav-item">
-						<a href="#" id="reconnect" class="nav-link hide" title="[[global:reconnecting-message, {config.siteTitle}]]">
+						<a href="#" id="reconnect" class="nav-link hide" title="{{tx("global:reconnecting-message", config.siteTitle)}}">
 							<i class="fa fa-check"></i>
 						</a>
 					</li>
@@ -85,12 +85,12 @@
 				{{{ if !maintenanceHeader }}}
 				{{{ if config.loggedIn }}}
 				<ul id="logged-in-menu" class="navbar-nav me-0 mb-2 mb-lg-0 align-items-center">
-					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications" title="[[global:header.notifications]]">
+					<li class="nav-item notifications dropdown d-none d-sm-block" component="notifications" title="{{tx("global:header.notifications")}}">
 						<!-- IMPORT partials/header/notifications.tpl -->
 					</li>
 
 					{{{ if canChat }}}
-					<li class="nav-item chats dropdown" title="[[global:header.chats]]">
+					<li class="nav-item chats dropdown" title="{{tx("global:header.chats")}}">
 						<!-- IMPORT partials/header/chats.tpl -->
 					</li>
 					{{{ end }}}
@@ -103,14 +103,14 @@
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/register">
 							<i class="fa fa-pencil fa-fw d-inline-block d-sm-none"></i>
-							<span>[[global:register]]</span>
+							<span>{{tx("global:register")}}</span>
 						</a>
 					</li>
 					{{{ end }}}
 					<li class="nav-item">
 						<a class="nav-link" href="{relative_path}/login">
 							<i class="fa fa-sign-in fa-fw d-inline-block d-sm-none"></i>
-							<span>[[global:login]]</span>
+							<span>{{tx("global:login")}}</span>
 						</a>
 					</li>
 				</ul>
@@ -120,7 +120,7 @@
 					<li class="nav-item">
 						<a href="{relative_path}/login">
 							<i class="fa fa-sign-in fa-fw d-block d-sm-none"></i>
-							<span>[[global:login]]</span>
+							<span>{{tx("global:login")}}</span>
 						</a>
 					</li>
 				</ul>
