@@ -25,10 +25,10 @@
 <!-- IF multiplePages -->
 <div class="text-center mt-2">
 	<a href="{url}">
-		[[search:see-more-results, {matchCount}]]
+		{{tx("search:see-more-results", matchCount)}}
 	</a>
 </div>
 <!-- ENDIF multiplePages -->
 {{{if !posts.length}}}
-<div class="text-center no-results">[[search:no-matches]]</li>
+<div class="text-center no-results">{{tx("search:no-matches")}}</div>
 {{{end}}}

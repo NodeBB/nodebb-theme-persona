@@ -9,7 +9,7 @@
         </div>
 
         <div class="mb-3">
-            <a class="topic-category text-xs fw-bold text-uppercase text-secondary mb-3" href="{config.relative_path}/category/{../category.slug}">[[global:posted-in, {../category.name}]]</a>
+            <a class="topic-category text-xs fw-bold text-uppercase text-secondary mb-3" href="{config.relative_path}/category/{../category.slug}">{{tx("global:posted-in", ../category.name)}}</a>
 
             {{{ if ../isMainPost }}}
             {{{ if ../topic.tags.length }}}

@@ -1,13 +1,13 @@
 <!-- IMPORT partials/account/header.tpl -->
 <h1 class="fs-4">{{tx(title)}}</h1>
 <!-- IF privateUploads -->
-<div class="alert alert-info text-center">[[uploads:private-uploads-info]]</div>
+<div class="alert alert-info text-center">{{tx("uploads:private-uploads-info")}}</div>
 <!-- ELSE -->
-<div class="alert alert-info text-center">[[uploads:public-uploads-info]]</div>
+<div class="alert alert-info text-center">{{tx("uploads:public-uploads-info")}}</div>
 <!-- ENDIF privateUploads -->
 
 <!-- IF !uploads.length -->
-	<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
+	<div class="alert alert-warning text-center">{{tx("uploads:no-uploads-found")}}</div>
 <!-- ENDIF !uploads.length -->
 
 <div class="table-responsive">
@@ -25,7 +25,7 @@
 					<a class="text-break text-reset text-sm" href="{config.relative_path}{./url}">{./url}</a>
 				</td>
 				<td style="width: 1%; white-space: nowrap;">
-					<button class="btn btn-danger btn-sm" data-action="delete" aria-label="[[aria:delete-upload-button]]"><i class="fa fa-trash"></i></button>
+					<button class="btn btn-danger btn-sm" data-action="delete" aria-label="{{tx("aria:delete-upload-button")}}"><i class="fa fa-trash"></i></button>
 				</td>
 			</tr>
 			{{{ end }}}

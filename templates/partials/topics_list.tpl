@@ -28,27 +28,27 @@
 				<div component="topic/labels" class="d-flex flex-wrap gap-1 w-100 align-items-center">
 					<span component="topic/watched" class="badge border border-gray-300 text-body {{{ if !./followed }}}hidden{{{ end }}}">
 						<i class="fa fa-bell-o"></i>
-						<span>[[topic:watching]]</span>
+						<span>{{tx("topic:watching")}}</span>
 					</span>
 					<span component="topic/ignored" class="badge border border-gray-300 text-body {{{ if !./ignored }}}hidden{{{ end }}}">
 						<i class="fa fa-eye-slash"></i>
-						<span>[[topic:ignoring]]</span>
+						<span>{{tx("topic:ignoring")}}</span>
 					</span>
 					<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 						<i class="fa fa-clock-o"></i>
-						<span>[[topic:scheduled]]</span>
+						<span>{{tx("topic:scheduled")}}</span>
 					</span>
 					<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (./scheduled || !./pinned) }}}hidden{{{ end }}}">
 						<i class="fa fa-thumb-tack"></i>
-						<span>{{{ if !./pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}</span>
+						<span>{{{ if !./pinExpiry }}}{{tx("topic:pinned")}}{{{ else }}}{{tx("topic:pinned-with-expiry", isoTimeToLocaleString(./pinExpiryISO, config.userLang))}}{{{ end }}}</span>
 					</span>
 					<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !./locked }}}hidden{{{ end }}}">
 						<i class="fa fa-lock"></i>
-						<span>[[topic:locked]]</span>
+						<span>{{tx("topic:locked")}}</span>
 					</span>
 					<span component="topic/moved" class="badge border border-gray-300 text-body {{{ if !./oldCid }}}hidden{{{ end }}}">
 						<i class="fa fa-arrow-circle-right"></i>
-						<span>[[topic:moved]]</span>
+						<span>{{tx("topic:moved")}}</span>
 					</span>
 					{{{ each ./icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
 
@@ -80,7 +80,7 @@
 				{{{ end }}}
 			</div>
 			{{{ if ./thumbs.length }}}
-			<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="[[topic:thumb-image]]">
+			<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="{{tx("topic:thumb-image")}}">
 				<img class="topic-thumb rounded-1 bg-light" style="width:auto;max-width: 5.33rem;height: 3.33rem;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 				<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute bottom-0 end-0 badge rounded-1 opacity-75 fw-semibold text-bg-light" style="margin: 0.125rem; z-index: 1;">{./thumbs.length}</span>
 			</a>
@@ -92,18 +92,18 @@
 				{{{ if !reputation:disabled }}}
 				<div class="stats-votes overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./votes}">{humanReadableNumber(./votes, 0)}</span>
-					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:votes]]</span>
+					<span class="d-none d-xl-flex text-uppercase text-xs">{{tx("global:votes")}}</span>
 					<i class="d-xl-none fa fa-fw text-xs text-muted opacity-75 fa-chevron-up"></i>
 				</div>
 				{{{ end }}}
 				<div class="stats-postcount overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./postcount}">{humanReadableNumber(./postcount, 0)}</span>
-					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:posts]]</span>
+					<span class="d-none d-xl-flex text-uppercase text-xs">{{tx("global:posts")}}</span>
 					<i class="d-xl-none fa-regular fa-fw text-xs text-muted opacity-75 fa-message"></i>
 				</div>
 				<div class="stats-viewcount overflow-hidden d-flex flex-column align-items-center">
 					<span class="fs-4" title="{./viewcount}">{humanReadableNumber(./viewcount, 0)}</span>
-					<span class="d-none d-xl-flex text-uppercase text-xs">[[global:views]]</span>
+					<span class="d-none d-xl-flex text-uppercase text-xs">{{tx("global:views")}}</span>
 					<i class="d-xl-none fa fa-fw text-xs text-muted opacity-75 fa-eye"></i>
 				</div>
 			</div>
@@ -111,16 +111,16 @@
 				<div class="lastpost border-start border-4 lh-sm h-100 d-flex flex-column gap-1" style="border-color: {./category.bgColor}!important;">
 					{{{ if ./unreplied }}}
 					<div class="ps-2 text-xs">
-						[[category:no-replies]]
+						{{tx("category:no-replies")}}
 					</div>
 					{{{ else }}}
 					{{{ if ./teaser.pid }}}
 					<div class="ps-2">
 						<a href="{{{ if ./teaser.user.userslug }}}{config.relative_path}/user/{./teaser.user.userslug}{{{ else }}}#{{{ end }}}" class="text-decoration-none avatar-tooltip" title="{./teaser.user.displayname}">{{buildAvatar(./teaser.user, "18px", true)}}</a>
-						<a class="permalink text-muted timeago text-xs" href="{config.relative_path}/topic/{./slug}/{./teaser.index}" title="{./teaser.timestampISO}" aria-label="[[global:lastpost]]"></a>
+						<a class="permalink text-muted timeago text-xs" href="{config.relative_path}/topic/{./slug}/{./teaser.index}" title="{./teaser.timestampISO}" aria-label="{{tx("global:lastpost")}}"></a>
 					</div>
 					<div class="post-content text-xs ps-2 line-clamp-sm-2 lh-sm text-break position-relative flex-fill">
-						<a class="stretched-link" tabindex="-1" href="{config.relative_path}/topic/{./slug}/{./teaser.index}" aria-label="[[global:lastpost]]"></a>
+						<a class="stretched-link" tabindex="-1" href="{config.relative_path}/topic/{./slug}/{./teaser.index}" aria-label="{{tx("global:lastpost")}}"></a>
 						{{txEscape(./teaser.content)}}
 					</div>
 					{{{ end }}}

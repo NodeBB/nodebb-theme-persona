@@ -1,7 +1,7 @@
 {{{ if !notifications.length }}}
 <div class="no-notifs text-center p-4 d-flex flex-column">
 	<div class="p-4"><i class="fa-solid fa-wind fs-2 text-muted"></i></div>
-	<div class="text-xs fw-semibold text-muted">[[notifications:no-notifs]]</div>
+	<div class="text-xs fw-semibold text-muted">{{tx("notifications:no-notifs")}}</div>
 </div>
 {{{ end }}}
 
@@ -38,8 +38,8 @@
 		<div>
 			{{{ if ./nid }}}
 			<button class="mark-read btn btn-ghost btn-sm d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
-				<i class="lh-1 unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-read]]"></i>
-				<i class="lh-1 read fa fa-2xs fa-circle-o text-secondary {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
+				<i class="lh-1 unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="{{tx("unread:mark-as-read")}}"></i>
+				<i class="lh-1 read fa fa-2xs fa-circle-o text-secondary {{{ if !./read }}}hidden{{{ end }}}" aria-label="{{tx("unread:mark-as-unread")}}"></i>
 			</button>
 			{{{ end }}}
 		</div>

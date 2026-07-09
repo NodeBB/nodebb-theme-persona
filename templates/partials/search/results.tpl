@@ -3,7 +3,7 @@
 	<div class="alert alert-info">{{tx("search:results-matching", matchCount, txEscape(search_query), time)}}</div>
 	{{{ else }}}
 	{{{ if search_query }}}
-	<div class="alert alert-warning">[[search:no-matches]]</div>
+	<div class="alert alert-warning">{{tx("search:no-matches")}}</div>
 	{{{ end }}}
 	{{{ end }}}
 
@@ -17,7 +17,7 @@
 
 			{{{ if showAsPosts }}}
 			<div component="post/content" class="content">
-				{{./content}}
+				{{txEscape(./content)}}
 			</div>
 			{{{ end }}}
 
@@ -25,7 +25,7 @@
 				<a href="{config.relative_path}/category/{./category.slug}">
 					<div class="category-item d-inline-block">
 						{{buildCategoryIcon(./category, "24px", "rounded-circle")}}
-						{tx(./category.name)}
+						{{tx(./category.name)}}
 					</div>
 				</a> &bull;
 				<span class="timeago" title="{./timestampISO}"></span>

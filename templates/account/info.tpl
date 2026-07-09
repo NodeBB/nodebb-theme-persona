@@ -2,7 +2,7 @@
 
 {{{ if sessions.length }}}
 <div class="mb-3">
-	<h5>[[global:sessions]]</h5>
+	<h5>{{tx("global:sessions")}}</h5>
 	<ul class="list-group" component="user/sessions">
 		<!-- IMPORT partials/account/session-list.tpl -->
 	</ul>
@@ -13,7 +13,7 @@
 	<div class="col-sm-6 mb-3">
 		{{{ if invitedBy}}}
 		<div class="mb-4 pb-3 border-bottom">
-			<h6>[[user:info.invited-by]]</h6>
+			<h6>{{tx("user:info.invited-by")}}</h6>
 			<div class="d-flex align-items-center gap-2">
 				<a href="">{{buildAvatar(invitedBy, "24px", true)}}</a>
 				<a href="">{invitedBy.username}</a>
@@ -22,7 +22,7 @@
 		{{{ end }}}
 
 		<div class="mb-4 border-bottom">
-			<h6>[[global:recentips]]</h6>
+			<h6>{{tx("global:recentips")}}</h6>
 			<div class="">
 				<ul class="text-sm text-secondary">
 					{{{each ips}}}
@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="mb-4 border-bottom">
-			<h6>[[user:info.username-history]]</h6>
+			<h6>{{tx("user:info.username-history")}}</h6>
 			<div class="">
 				<ul class="list-unstyled">
 					{{{ each usernames }}}
@@ -54,7 +54,7 @@
 		</div>
 
 		<div class="mb-4 border-bottom">
-			<h6>[[user:info.email-history]]</h6>
+			<h6>{{tx("user:info.email-history")}}</h6>
 			<div class="">
 				<ul class="list-unstyled">
 					{{{ each emails }}}
@@ -74,7 +74,7 @@
 		</div>
 
 			<div class="mb-3 border-bottom">
-			<h6>[[user:info.latest-flags]]</h6>
+			<h6>{{tx("user:info.latest-flags")}}</h6>
 			<div class="">
 				{{{ if history.flags.length }}}
 				<ul class="recent-flags list-unstyled">
@@ -83,20 +83,20 @@
 						<div class="mb-1 d-flex align-items-center justify-content-between">
 							<div>
 								{{{ if (./type == "user")}}}
-								<span class="badge text-bg-info">[[user:info.profile]]</span>
+								<span class="badge text-bg-info">{{tx("user:info.profile")}}</span>
 								{{{ else }}}
-								<span class="badge text-bg-info">[[user:info.post]]</span>
+								<span class="badge text-bg-info">{{tx("user:info.post")}}</span>
 								{{{ end }}}
 								<span class="timestamp timeago" title="{./timestampISO}"></span>
 							</div>
 
-							<a href="{config.relative_path}/flags/{./flagId}" class="badge badge border border-gray-300 text-body">[[user:info.view-flag]]</a>
+							<a href="{config.relative_path}/flags/{./flagId}" class="badge badge border border-gray-300 text-body">{{tx("user:info.view-flag")}}</a>
 						</div>
 
 						{{{ if (./type == "post") }}}
 						<p class="mb-1">
 							{{{ if history.flags.targetPurged }}}
-							<div>[[flags:target-purged]]</div>
+							<div>{{tx("flags:target-purged")}}</div>
 							{{{ else }}}
 							<a class="title" href="{config.relative_path}/post/{encodeURIComponent(./pid)}">{./title}</a>
 							{{{ end }}}
@@ -104,7 +104,7 @@
 						{{{ end }}}
 
 						<div class="d-flex gap-2 align-items-center mb-3">
-							<span class="text-sm">[[user:info.reported-by]]</span>
+							<span class="text-sm">{{tx("user:info.reported-by")}}</span>
 							<div class="d-flex text-nowrap">
 								{{{ each ./reports }}}
 								<a style="width: 18px; z-index: 3;" class="text-decoration-none" href="{config.relative_path}/user/{./reporter.userslug}">{{buildAvatar(./reporter, "24px", true)}}</a>
@@ -115,20 +115,20 @@
 					{{{ end }}}
 				</ul>
 				{{{ else }}}
-				<div class="alert alert-light">[[user:info.no-flags]]</div>
+				<div class="alert alert-light">{{tx("user:info.no-flags")}}</div>
 				{{{ end }}}
 			</div>
 		</div>
 
 		<div class="mb-3 border-bottom">
 			<h6 class="d-flex align-items-center justify-content-between">
-				[[user:info.ban-history]]
+				{{tx("user:info.ban-history")}}
 
 				{{{ if (!banned && !isSelf) }}}
-				<button class="btn btn-sm btn-danger" component="account/ban">[[user:ban-account]]</button>
+				<button class="btn btn-sm btn-danger" component="account/ban">{{tx("user:ban-account")}}</button>
 				{{{ end }}}
 				{{{ if (banned && !isSelf) }}}
-				<button class="btn btn-sm btn-success" component="account/unban">[[user:unban-account]]</button>
+				<button class="btn btn-sm btn-success" component="account/unban">{{tx("user:unban-account")}}</button>
 				{{{ end }}}
 			</h6>
 			<div class="">
@@ -145,20 +145,20 @@
 								<span class="timestamp timeago" title="{./timestampISO}"></span>
 							</div>
 							{{{ if (./type != "unban") }}}
-							<span class="badge text-bg-danger">[[user:banned]]</span>
+							<span class="badge text-bg-danger">{{tx("user:banned")}}</span>
 							{{{ else }}}
-							<span class="badge text-bg-success">[[user:unbanned]]</span>
+							<span class="badge text-bg-success">{{tx("user:unbanned")}}</span>
 							{{{ end }}}
 						</div>
 						<p class="mb-1">
-							<span class="reason">[[user:info.banned-reason-label]]: <strong>{{tx(./reason)}}</strong></span>
+							<span class="reason">{{tx("user:info.banned-reason-label")}}: <strong>{{tx(./reason)}}</strong></span>
 						</p>
 						<p>
 							{{{ if ./until }}}
-							<span class="expiry">[[user:info.banned-until, {isoTimeToLocaleString(./untilISO, config.userLang)}]]</span>
+							<span class="expiry">{{tx("user:info.banned-until", isoTimeToLocaleString(./untilISO, config.userLang))}}</span>
 							{{{ else }}}
 							{{{ if (./type != "unban") }}}
-							<span class="expiry">[[user:info.banned-permanently]]</span>
+							<span class="expiry">{{tx("user:info.banned-permanently")}}</span>
 							{{{ end }}}
 							{{{ end }}}
 						</p>
@@ -166,22 +166,22 @@
 					{{{ end }}}
 				</ul>
 				{{{ else }}}
-				<div class="alert alert-light">[[user:info.no-ban-history]]</div>
+				<div class="alert alert-light">{{tx("user:info.no-ban-history")}}</div>
 				{{{ end }}}
 			</div>
 		</div>
 
 		<div class="mb-3">
 			<h6 class="d-flex align-items-center justify-content-between">
-				[[user:info.mute-history]]
+				{{tx("user:info.mute-history")}}
 
 				{{{ if !muted }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm btn-danger" component="account/mute">[[user:mute-account]]</button>
+				<button class="btn btn-sm btn-danger" component="account/mute">{{tx("user:mute-account")}}</button>
 				{{{ end }}}
 				{{{ else }}}
 				{{{ if !isSelf }}}
-				<button class="btn btn-sm btn-success" component="account/unmute">[[user:unmute-account]]</button>
+				<button class="btn btn-sm btn-success" component="account/unmute">{{tx("user:unmute-account")}}</button>
 				{{{ end }}}
 				{{{ end }}}
 			</h6>
@@ -199,24 +199,24 @@
 								<span class="timestamp timeago" title="{./timestampISO}"></span>
 							</div>
 							{{{ if (./type != "unmute") }}}
-							<span class="badge text-bg-danger">[[user:muted]]</span>
+							<span class="badge text-bg-danger">{{tx("user:muted")}}</span>
 							{{{ else }}}
-							<span class="badge text-bg-success">[[user:unmuted]]</span>
+							<span class="badge text-bg-success">{{tx("user:unmuted")}}</span>
 							{{{ end }}}
 						</div>
 						<p class="mb-1">
-							<span class="reason">[[user:info.banned-reason-label]]: <strong>{{tx(./reason)}}</strong></span>
+							<span class="reason">{{tx("user:info.banned-reason-label")}}: <strong>{{tx(./reason)}}</strong></span>
 						</p>
 						<p>
 							{{{ if ./until }}}
-							<span class="expiry">[[user:info.muted-until, {isoTimeToLocaleString(./untilISO, config.userLang)}]]</span>
+							<span class="expiry">{{tx("user:info.muted-until", isoTimeToLocaleString(./untilISO, config.userLang))}}</span>
 							{{{ end }}}
 						</p>
 					</li>
 					{{{ end }}}
 				</ul>
 				{{{ else }}}
-				<div class="alert alert-light">[[user:info.no-mute-history]]</div>
+				<div class="alert alert-light">{{tx("user:info.no-mute-history")}}</div>
 				{{{ end }}}
 			</div>
 		</div>
@@ -227,12 +227,12 @@
 		{{{ if isAdminOrGlobalModerator }}}
 		<div class="card">
 			<h5 class="card-header">
-				[[user:info.moderation-note]]
+				{{tx("user:info.moderation-note")}}
 			</h5>
 			<div class="card-body">
-				<textarea component="account/moderation-note" class="form-control mb-3" aria-label="[[user:info.moderation-note]]"></textarea>
+				<textarea component="account/moderation-note" class="form-control mb-3" aria-label="{{tx("user:info.moderation-note")}}"></textarea>
 
-				<button class="btn btn-sm float-end btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+				<button class="btn btn-sm float-end btn-success" component="account/save-moderation-note">{{tx("user:info.moderation-note.add")}}</button>
 				<br/>
 				<div component="account/moderation-note/list">
 					{{{ each moderationNotes }}}
@@ -252,14 +252,14 @@
 							<div class="content text-secondary">
 								{./note}
 							</div>
-							<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">[[topic:edit]]</button>
+							<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">{{tx("topic:edit")}}</button>
 						</div>
 
 						<div component="account/moderation-note/edit-area" class="d-flex flex-column gap-2 hidden">
 							<textarea class="form-control form-control-sm w-100 overflow-hidden">{./rawNote}</textarea>
 							<div class="align-self-end">
-								<button component="account/moderation-note/cancel-edit" class="btn btn-sm btn-link text-danger align-self-end">[[global:cancel]]</button>
-								<button component="account/moderation-note/save-edit" class="btn btn-sm btn-primary align-self-end">[[global:save]]</button>
+								<button component="account/moderation-note/cancel-edit" class="btn btn-sm btn-link text-danger align-self-end">{{tx("global:cancel")}}</button>
+								<button component="account/moderation-note/save-edit" class="btn btn-sm btn-primary align-self-end">{{tx("global:save")}}</button>
 							</div>
 						</div>
 					</div>

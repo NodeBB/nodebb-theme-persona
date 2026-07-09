@@ -10,10 +10,10 @@
 			{{{ if canPost }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			{{{ else }}}
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">[[category:guest-login-post]]</a>
+			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">{{tx("category:guest-login-post")}}</a>
 			{{{ end }}}
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
-				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>
+				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>{{tx("recent:load-new-posts")}}</div>
 			</a>
 		</div>
 		<div class="d-flex gap-1">
@@ -26,7 +26,7 @@
 
 	<div class="category">
 		<!-- IF !topics.length -->
-		<div class="alert alert-warning" id="category-no-topics">[[recent:no-recent-topics]]</div>
+		<div class="alert alert-warning" id="category-no-topics">{{tx("recent:no-recent-topics")}}</div>
 		<!-- ENDIF !topics.length -->
 
 		<!-- IMPORT partials/topics_list.tpl -->

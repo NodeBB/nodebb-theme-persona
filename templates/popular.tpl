@@ -10,7 +10,7 @@
 			{{{ if canPost }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			{{{ else }}}
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">[[category:guest-login-post]]</a>
+			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">{{tx("category:guest-login-post")}}</a>
 			{{{ end }}}
 		</div>
 		<div class="d-flex gap-1">
@@ -23,7 +23,7 @@
 
 	<div class="category">
 		{{{ if !topics.length }}}
-		<div class="alert alert-warning" id="category-no-topics">[[recent:no-popular-topics]]</div>
+		<div class="alert alert-warning" id="category-no-topics">{{tx("recent:no-popular-topics")}}</div>
 		{{{ end }}}
 
 		<!-- IMPORT partials/topics_list.tpl -->

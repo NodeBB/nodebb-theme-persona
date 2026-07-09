@@ -1,1 +1,1 @@
-<small data-editor="{editor.userslug}" component="post/editor" class="hidden">[[global:last-edited-by, {editor.username}]] <span class="timeago" title="{isoTimeToLocaleString(editedISO, config.userLang)}"></span></small>
+<small data-editor="{editor.userslug}" component="post/editor" class="hidden">{{tx("global:last-edited-by", txEscape(editor.username))}} <span class="timeago" title="{isoTimeToLocaleString(editedISO, config.userLang)}"></span></small>

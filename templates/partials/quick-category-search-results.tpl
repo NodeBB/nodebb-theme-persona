@@ -1,7 +1,7 @@
 {{{ if (multiplePages && !config.theme.topMobilebar) }}}
 <div class="show-more-container">
 	<div class="text-center d-block d-md-none">
-		<a href="{url}" class="btn btn-sm btn-primary">[[search:see-more-results, {matchCount}]]</a>
+		<a href="{url}" class="btn btn-sm btn-primary">{{tx("search:see-more-results", matchCount)}}</a>
 	</div>
 	<li role="separator" class="dropdown-divider d-block d-md-none"></li>
 </div>
@@ -35,16 +35,16 @@
 
 {{{ if multiplePages }}}
 <div class="text-center mt-2 d-none d-md-block">
-	<a href="{url}" class="btn btn-sm btn-primary">[[search:see-more-results, {matchCount}]]</a>
+	<a href="{url}" class="btn btn-sm btn-primary">{{tx("search:see-more-results", matchCount)}}</a>
 </div>
 {{{ end }}}
 {{{ if (multiplePages && config.theme.topMobilebar) }}}
 <div class="text-center mt-2 d-block d-md-none">
-	<a href="{url}" class="btn btn-sm btn-primary">[[search:see-more-results, {matchCount}]]</a>
+	<a href="{url}" class="btn btn-sm btn-primary">{{tx("search:see-more-results", matchCount)}}</a>
 </div>
 {{{ end }}}
 
 {{{if !categories.length}}}
-<div class="text-center no-results py-2 py-md-0">[[search:no-matches]]</li>
+<div class="text-center no-results py-2 py-md-0">{{tx("search:no-matches")}}</div>
 <li role="separator" class="dropdown-divider d-block d-md-none"></li>
 {{{end}}}
