@@ -5,7 +5,7 @@
         </a>
 
         <div component="post/content" class="content mb-3 text-break">
-            {{{ if ./txContent }}}{{tx(./content)}}{{{ else }}}{{txEscape(./content)}}{{{ end }}}
+            {{{ if ./txContent }}}{{tx(./content)}}{{{ else }}}{{./content}}{{{ end }}}
         </div>
 
         <div class="mb-3">
