@@ -98,7 +98,7 @@
 		{{{ each customUserFields }}}
 		{{{ if ./value }}}
 		<div class="d-flex gap-1 flex-nowrap align-items-center">
-			<span class="stat-label">{./name}</span>
+			<span class="stat-label">{{tx(./name)}}</span>
 			{{{ if (./type == "input-link") }}}
 			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer">{./linkValue}</a>
 			{{{ else }}}
