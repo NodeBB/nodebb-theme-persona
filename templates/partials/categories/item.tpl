@@ -27,7 +27,7 @@
 				{{{ if !./isSection }}}
 				<li class="category-children-item small d-flex gap-1 align-items-center text-break">
 					{{buildCategoryIcon(@value, "24px", "rounded-circle")}}
-					<a href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" class="text-reset">{./name}</a>
+					<a href="{{{ if ./link }}}{./link}{{{ else }}}{config.relative_path}/category/{./slug}{{{ end }}}" class="text-reset flex-1">{./name}</a>
 				</li>
 				{{{ end }}}
 				{{{ end }}}
