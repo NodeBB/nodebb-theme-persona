@@ -52,7 +52,7 @@
 
 				{{{ each customUserFields }}}
 				<div class="mb-2">
-					<label class="form-label fw-bold" for="{./key}">{./name}</label>
+					<label class="form-label fw-bold" for="{./key}">{{tx(./name)}}</label>
 					{{{ if ((./type == "input-text") || (./type == "input-link")) }}}
 					<input class="form-control" type="text" id="{./key}" name="{./key}" value="{./value}">
 					{{{ end }}}
