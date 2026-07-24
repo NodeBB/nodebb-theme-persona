@@ -67,7 +67,7 @@
 						{{{ end }}}
 					</div>
 
-					<input type="text" class="form-control form-control-sm" id="chatAllowListAdd" placeholder="[[user:chat-list-add-user]]"/>
+					<input type="text" class="form-control form-control-sm" id="chatAllowListAdd" placeholder="{{tx("user:chat-list-add-user")}}"/>
 				</div>
 
 				<div class="d-flex flex-column mb-3">
