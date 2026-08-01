@@ -13,7 +13,7 @@
 			<div class="imagedrop"><div>{{tx("topic:composer.drag-and-drop-images")}}</div></div>
 		</div>
 		<div>
-			<div class="d-flex justify-content-end gap-2">
+			<div class="d-flex justify-content-end align-items-center gap-2">
 				<div class="me-auto hidden" component="topic/quickreply/category-selector">
 					<!-- IMPORT partials/category/selector-dropdown-left.tpl -->
 				</div>
