@@ -1,14 +1,22 @@
 <div class="account">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
+	<div class="cover position-absolute start-0 top-0" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
+		<div class="container">
+			{{{ if (allowCoverPicture && canEdit) }}}
+			<div class="controls text-center">
+				<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
+				<span class="resize p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
+				<span class="remove p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
+			</div>
+			<a href="#" class="save btn btn-primary">{{tx("groups:cover-save")}} <i class="fa fa-fw fa-floppy-o"></i></a>
+			<div class="indicator text-bg-primary">{{tx("groups:cover-saving")}} <i class="fa fa-fw fa-refresh fa-spin"></i></div>
+			{{{ end }}}
 
-	<div data-widget-area="header">
-		{{{each widgets.header}}}
-		{{widgets.header.html}}
-		{{{end}}}
+			<!-- IMPORT partials/account/menu.tpl -->
+		</div>
 	</div>
 
-	<div class="cover position-absolute start-0 top-0" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
-		<div class="avatar-wrapper bg-body rounded-circle position-absolute start-50 top-100 translate-middle hover-parent" data-uid="{uid}" style="padding: 4px;">
+	<div class="d-flex gap-2 w-100 pb-4 justify-content-center">
+		<div class="avatar-wrapper bg-body rounded-circle position-relative hover-parent" data-uid="{uid}" style="margin-top: -80px; padding: 4px;">
 			{{buildAvatar(@value, "128px", true)}}
 			{{{ if (allowProfilePicture && isSelfOrAdminOrGlobalModerator)}}}
 			<a href="#" component="profile/change/picture" class="d-none d-md-block pointer p-2 rounded-1 text-bg-light position-absolute top-50 start-50 translate-middle hover-opacity-75">
@@ -28,18 +36,12 @@
 			</button>
 			{{{ end }}}
 		</div>
+	</div>
 
-		<div class="container">
-			{{{ if (allowCoverPicture && canEdit) }}}
-			<div class="controls text-center">
-				<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
-				<span class="resize p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
-				<span class="remove p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
-			</div>
-			<a href="#" class="save btn btn-primary">{{tx("groups:cover-save")}} <i class="fa fa-fw fa-floppy-o"></i></a>
-			<div class="indicator text-bg-primary">{{tx("groups:cover-saving")}} <i class="fa fa-fw fa-refresh fa-spin"></i></div>
-			{{{ end }}}
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-			<!-- IMPORT partials/account/menu.tpl -->
-		</div>
+	<div data-widget-area="header">
+		{{{each widgets.header}}}
+		{{widgets.header.html}}
+		{{{end}}}
 	</div>
