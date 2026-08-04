@@ -7,7 +7,7 @@
 
 			<ul component="blocks/search/list" class="dropdown-menu p-1 block-edit list-unstyled" role="menu">
 				<li component="blocks/start-typing">
-					<a href="#" class="dropdown-item rounded-1" role="menuitem">{{tx("admin/menu:search.start-typing")}}</a>
+					<a href="#" class="dropdown-item rounded-1" role="menuitem">{{tx("search:type-to-search")}}</a>
 				</li>
 				<li component="blocks/no-users" class="hidden">
 					<a href="#" class="dropdown-item rounded-1" role="menuitem">{{tx("users:no-users-found")}}</a>
