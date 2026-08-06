@@ -35,8 +35,8 @@ define('persona/taskbar', [
 		});
 
 		function createChatIcon(data) {
-			$.getJSON(config.relative_path + '/api/user/' + app.user.userslug + '/chats/' + data.options.roomId, function (chatObj) {
-				const el = $('#taskbar [data-uuid="' + data.uuid + '"] a');
+			$.getJSON(`${config.relative_path}/api/user/${app.user.userslug}/chats/${data.options.roomId}`, function (chatObj) {
+				const el = $(`#taskbar [data-uuid="${data.uuid}"] a`);
 				el.parent('[data-uuid]').attr('data-roomId', data.options.roomId);
 
 				if (chatObj.users.length === 2) {
