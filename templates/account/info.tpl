@@ -224,7 +224,7 @@
 	</div>
 
 	<div class="col-sm-6 mb-3">
-		{{{ if isAdminOrGlobalModerator }}}
+		{{{ if isAdminOrGlobalModeratorOrModerator }}}
 		<div class="card">
 			<h5 class="card-header">
 				{{tx("user:info.moderation-note")}}
@@ -236,10 +236,8 @@
 				<br/>
 				<div component="account/moderation-note/list">
 					{{{ each moderationNotes }}}
-					<hr/>
-
-					<div data-id="{./id}">
-						<div class="d-flex align-items-baseline gap-1 mb-1">
+					<div data-id="{./id}" class="border-bottom pb-3 mb-3">
+						<div class="d-flex align-items-baseline gap-2 mb-1">
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">{{buildAvatar(./user, "24px", true)}}</a>
 
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" class="fw-bold" itemprop="author" data-username="{./user.username}" data-uid="{./user.uid}">{./user.username}</a>
@@ -252,7 +250,12 @@
 							<div class="content text-secondary">
 								{./note}
 							</div>
-							<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">{{tx("topic:edit")}}</button>
+							{{{ if isAdmin }}}
+							<div class="d-flex gap-1 justify-content-end">
+								<button component="account/moderation-note/delete" class="btn btn-sm btn-link text-danger align-self-end">{{tx("topic:delete")}}</button>
+								<button component="account/moderation-note/edit" class="btn btn-sm btn-link align-self-end">{{tx("topic:edit")}}</button>
+							</div>
+							{{{ end }}}
 						</div>
 
 						<div component="account/moderation-note/edit-area" class="d-flex flex-column gap-2 hidden">
