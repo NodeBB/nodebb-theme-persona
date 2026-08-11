@@ -10,27 +10,30 @@
 	<div class="alert alert-warning text-center">{{tx("uploads:no-uploads-found")}}</div>
 <!-- ENDIF !uploads.length -->
 
-<div class="table-responsive">
-	<table class="table table-sm w-100">
-		<thead>
-			<tr>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			{{{ each uploads }}}
-			<tr data-name="{./name}">
-				<td class="align-middle">
-					<a class="text-break text-reset text-sm" href="{config.relative_path}{./url}">{./url}</a>
-				</td>
-				<td style="width: 1%; white-space: nowrap;">
-					<button class="btn btn-danger btn-sm" data-action="delete" aria-label="{{tx("aria:delete-upload-button")}}"><i class="fa fa-trash"></i></button>
-				</td>
-			</tr>
-			{{{ end }}}
-		</tbody>
-	</table>
+<div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-4">
+	{{{ each uploads }}}
+	<div class="" data-name="{./name}">
+		<div class="card h-100">
+			<div class="card-body d-flex flex-column justify-content-between">
+				<div class="mb-2 text-center d-flex flex-column gap-2">
+					<a class="text-sm" href="{config.relative_path}{./url}" target="_blank">
+						{{{ if ./isImage}}}
+						<img src="{config.relative_path}{./url}" class="img-fluid rounded mb-2" alt="{./name}" style="width:auto; max-width: 6.33rem; height: 6.0rem; object-fit: contain;">
+						{{{ else }}}
+						<div class="mx-auto d-flex align-items-center justify-content-center" style="width:auto; max-width: 6.33rem; height: 6.0rem; object-fit: contain;">
+							<i class="fa-regular fa-file-lines fa-4x mb-2 text-secondary" ></i>
+						</div>
+						{{{ end }}}
+					</a>
+					<a class="text-xs text-break text-secondary" target="_blank" href="{config.relative_path}{./url}">{./name}</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<button class="btn btn-ghost btn-sm" data-action="delete" aria-label="{{tx("aria:delete-upload-button")}}"><i class="fa fa-trash text-danger"></i> {{tx("uploads:delete-upload")}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{{ end }}}
 </div>
 
 <!-- IMPORT partials/paginator.tpl -->
