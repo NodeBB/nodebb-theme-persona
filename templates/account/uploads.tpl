@@ -15,19 +15,19 @@
 	<div class="" data-name="{./name}">
 		<div class="card h-100">
 			<div class="card-body d-flex flex-column justify-content-between">
-				<div class="mb-2 text-center d-flex flex-column gap-2">
-					<a class="text-sm" href="{config.relative_path}{./url}" target="_blank">
+				<div class="mb-2 text-center d-flex flex-column justify-content-center gap-2 flex-grow-1">
+					<a class="d-flex align-items-center justify-content-center text-sm" href="{config.relative_path}{./url}" target="_blank">
 						{{{ if ./isImage}}}
-						<img src="{config.relative_path}{./url}" class="img-fluid rounded mb-2" alt="{./name}" style="width:auto; max-width: 6.33rem; height: 6.0rem; object-fit: contain;">
+						<img src="{config.relative_path}{./url}" class="img-fluid rounded mb-2" alt="{./name}" style="width:auto; height: auto; max-height: 8rem; object-fit: contain;">
 						{{{ else }}}
-						<div class="mx-auto d-flex align-items-center justify-content-center" style="width:auto; max-width: 6.33rem; height: 6.0rem; object-fit: contain;">
+						<div class="d-flex align-items-center justify-content-center" style="width:auto; height: auto; max-height: 8rem; object-fit: contain;">
 							<i class="fa-regular fa-file-lines fa-4x mb-2 text-secondary" ></i>
 						</div>
 						{{{ end }}}
 					</a>
-					<a class="text-xs text-break text-secondary" target="_blank" href="{config.relative_path}{./url}">{./name}</a>
+					<a class="text-xs text-break text-secondary text-center" target="_blank" href="{config.relative_path}{./url}">{./filename}</a>
 				</div>
-				<div class="d-flex justify-content-center">
+				<div class="d-flex flex-column gap-1 align-items-center">
 					<button class="btn btn-ghost btn-sm" data-action="delete" aria-label="{{tx("aria:delete-upload-button")}}"><i class="fa fa-trash text-danger"></i> {{tx("uploads:delete-upload")}}</button>
 				</div>
 			</div>
