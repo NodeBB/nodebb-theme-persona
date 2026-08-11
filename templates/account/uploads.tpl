@@ -13,14 +13,14 @@
 <div class="row row-cols-2 row-cols-lg-3 row-cols-xl-4 g-4 mb-4">
 	{{{ each uploads }}}
 	<div class="" data-name="{./name}">
-		<div class="card h-100">
-			<div class="card-body d-flex flex-column justify-content-between">
-				<div class="mb-2 text-center d-flex flex-column justify-content-center gap-2 flex-grow-1">
-					<a class="d-flex align-items-center justify-content-center text-sm" href="{config.relative_path}{./url}" target="_blank">
+		<div class="card h-100 border-0">
+			<div class="card-body p-1 d-flex flex-column justify-content-between">
+				<div class="mb-2 text-center d-flex flex-column justify-content-start gap-2 flex-grow-1">
+					<a class="d-flex align-items-center p-1 rounded-3 bg-light border justify-content-center text-sm" href="{config.relative_path}{./url}" target="_blank" style="width: 100%; height: auto; aspect-ratio: 1;">
 						{{{ if ./isImage}}}
-						<img src="{config.relative_path}{./url}" class="img-fluid rounded mb-2" alt="{./name}" style="width:auto; height: auto; max-height: 8rem; object-fit: contain;">
+						<img src="{config.relative_path}{./url}" class="rounded img-fluid" alt="{./name}" style="width: 100%; height: auto; aspect-ratio:1; object-fit: cover;">
 						{{{ else }}}
-						<div class="d-flex align-items-center justify-content-center" style="width:auto; height: auto; max-height: 8rem; object-fit: contain;">
+						<div class="d-flex align-items-center justify-content-center" style="width: 100%; height: auto; aspect-ratio:1; object-fit: cover;">
 							<i class="fa-regular fa-file-lines fa-4x mb-2 text-secondary" ></i>
 						</div>
 						{{{ end }}}
