@@ -10,7 +10,7 @@
 {{{ end }}}
 
 <div class="row">
-	<div class="col-sm-6 mb-3">
+	<div class="{{{ if isAdminOrGlobalModeratorOrModerator }}}col-sm-6{{{ else }}}col-12{{{ end }}} mb-4">
 		{{{ if invitedBy}}}
 		<div class="mb-4 pb-3 border-bottom">
 			<h6>{{tx("user:info.invited-by")}}</h6>
@@ -73,7 +73,8 @@
 			</div>
 		</div>
 
-			<div class="mb-3 border-bottom">
+		{{{ if isAdminOrGlobalModeratorOrModerator }}}
+		<div class="mb-4 border-bottom">
 			<h6>{{tx("user:info.latest-flags")}}</h6>
 			<div class="">
 				{{{ if history.flags.length }}}
@@ -120,7 +121,7 @@
 			</div>
 		</div>
 
-		<div class="mb-3 border-bottom">
+		<div class="mb-4 border-bottom">
 			<h6 class="d-flex align-items-center justify-content-between">
 				{{tx("user:info.ban-history")}}
 
@@ -171,7 +172,7 @@
 			</div>
 		</div>
 
-		<div class="mb-3">
+		<div class="mb-4">
 			<h6 class="d-flex align-items-center justify-content-between">
 				{{tx("user:info.mute-history")}}
 
@@ -220,11 +221,11 @@
 				{{{ end }}}
 			</div>
 		</div>
-
 	</div>
+	{{{ end }}}
 
-	<div class="col-sm-6 mb-3">
-		{{{ if isAdminOrGlobalModeratorOrModerator }}}
+	{{{ if isAdminOrGlobalModeratorOrModerator }}}
+	<div class="col-sm-6 mb-4">
 		<div class="card">
 			<h5 class="card-header">
 				{{tx("user:info.moderation-note")}}
@@ -245,10 +246,9 @@
 							<span class="timeago text-sm text-secondary" title="{./timestampISO}"></span>
 						</div>
 
-
 						<div component="account/moderation-note/content-area" class="d-flex flex-column">
 							<div class="content text-secondary">
-								{./note}
+								{{./note}}
 							</div>
 							{{{ if isAdmin }}}
 							<div class="d-flex gap-1 justify-content-end">
@@ -271,8 +271,8 @@
 				<!-- IMPORT partials/paginator.tpl -->
 			</div>
 		</div>
-		{{{ end }}}
 	</div>
+	{{{ end }}}
 </div>
 
 <!-- IMPORT partials/account/footer.tpl -->
