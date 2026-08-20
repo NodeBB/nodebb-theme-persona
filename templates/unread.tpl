@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="d-flex gap-1">
-		<!-- IMPORT partials/topic-filters.tpl -->
+		<!-- IMPORT partials/topic-filters-right.tpl -->
 		<!-- IMPORT partials/category/filter-dropdown-right.tpl -->
 
 		<div class="markread {{{ if !topics.length }}}hidden{{{ end }}}">
