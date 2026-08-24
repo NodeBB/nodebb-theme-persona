@@ -100,7 +100,7 @@
 		<div class="d-flex gap-1 flex-nowrap align-items-center">
 			<span class="stat-label">{{tx(./name)}}</span>
 			{{{ if (./type == "input-link") }}}
-			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer">{./linkValue}</a>
+			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer{{{ if (./key == "website") }}} me{{{ end }}}">{./linkValue}</a>
 			{{{ else }}}
 			<span class="fw-bold d-flex flex-nowrap align-items-center">{./value}</span>
 			{{{ end }}}
