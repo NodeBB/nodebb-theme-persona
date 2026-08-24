@@ -251,7 +251,9 @@
 						<tr>
 							<th></th>
 							<th class="text-center fw-semibold px-2">{{tx("user:notification-type-web")}}</th>
+							{{{ if !disableNotificationEmails }}}
 							<th class="text-center fw-semibold px-2">{{tx("user:notification-type-email")}}</th>
+							{{{ end }}}
 						</tr>
 					</thead>
 					<tbody>
@@ -269,12 +271,14 @@
 									<i class="fa-regular fa-lg fa-bell text-secondary {{{ if (./notification || ./notificationemail) }}}hidden{{{ end }}}"></i>
 								</a>
 							</td>
+							{{{ if !disableNotificationEmails }}}
 							<td class="text-center">
 								<a href="#" data-type="email" data-value="{{{ if (./email || ./notificationemail) }}}1{{{ else }}}0{{{ end}}}">
 									<i class="fa-solid fa-lg fa-envelope text-primary {{{ if (!./email && !./notificationemail) }}}hidden{{{ end }}}"></i>
 									<i class="fa-regular fa-lg fa-envelope text-secondary {{{ if (./email || ./notificationemail) }}}hidden{{{ end }}}"></i>
 								</a>
 							</td>
+							{{{ end }}}
 						</tr>
 					{{{end}}}
 					</tbody>
