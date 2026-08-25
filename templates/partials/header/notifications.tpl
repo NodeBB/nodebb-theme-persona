@@ -3,9 +3,9 @@
 </a>
 
 <ul class="notifications-dropdown dropdown-menu dropdown-menu-end p-1 shadow" role="menu">
-	<li>
-		<button type="button" class="btn btn-ghost btn-sm fw-bold" data-filter="all">{{tx("notifications:all")}}</button>
-		<button type="button" class="btn btn-ghost btn-sm" data-filter="unread">{{tx("unread:title")}}</button>
+	<li class="d-flex gap-1 align-items-center">
+		<button type="button" class="btn btn-ghost btn-sm {{{ if !unreadCount.notification }}}active{{{ end }}} px-3" data-filter="all">{{tx("notifications:all")}}</button>
+		<button type="button" class="btn btn-ghost btn-sm d-flex align-items-center gap-2 {{{ if unreadCount.notification }}}active{{{ end }}}" data-filter="unread">{{tx("unread:title")}} <span component="notifications/count" class="{{{ if !unreadCount.notification }}}hidden{{{ end }}}">{unreadCount.notification}</span></button>
 	</li>
 	<li class="dropdown-divider"></li>
 	<li>
