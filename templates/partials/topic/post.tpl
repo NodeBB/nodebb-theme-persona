@@ -8,16 +8,9 @@
 
 <div class="clearfix post-header">
 	<div class="icon float-start">
-		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+		<a href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}">
 			{{buildAvatar(posts.user, "48px", true, "", "user/picture")}}
-			{{{ if ./user.isLocal }}}
-			<span component="user/status" class="position-absolute top-100 start-100 border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">{{tx(concat("global:", posts.user.status))}}</span></span>
-			{{{ else }}}
-			<span component="user/locality" class="position-absolute top-100 start-100 lh-1 border border-white border-2 rounded-circle small" title="{{tx("global:remote-user")}}">
-				<span class="visually-hidden">{{tx("global:remote-user")}}</span>
-				<i class="fa fa-globe"></i>
-			</span>
-			{{{ end }}}
+			<!-- IMPORT partials/topic/user-status.tpl -->
 		</a>
 	</div>
 
@@ -26,7 +19,7 @@
 			<strong class="text-nowrap" itemprop="author" itemscope itemtype="https://schema.org/Person">
 				<meta itemprop="name" content="{./user.username}">
 				{{{ if ./user.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{./user.userslug}">{{{ end }}}
-				<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{{txDisplayname(posts.user)}}</a>
+				<a href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{{txDisplayname(posts.user)}}</a>
 			</strong>
 
 			{{{ each posts.user.selectedGroups }}}
