@@ -12,7 +12,7 @@
 				<div class="d-flex flex-column gap-2 flex-md-shrink-50">
 					<h1 component="post/header" class="mb-0" itemprop="name">
 						<div class="topic-title d-flex">
-							<span class="fs-3" component="topic/title">{title}</span>
+							<span class="fs-3" component="topic/title">{{renderTitleEmoji(title, titleEmoji)}}</span>
 						</div>
 					</h1>
 
