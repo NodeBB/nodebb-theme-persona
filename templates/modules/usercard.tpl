@@ -5,7 +5,7 @@
 	<div class="usercard-body w-100 d-flex flex-column justify-content-between gap-2 py-2 px-3 overflow-hidden position-relative">
 
 		<a href="{config.relative_path}/user/{userslug}" class="text-reset text-truncate d-block">
-			<span class="usercard-name fs-5">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</span>
+			<span class="usercard-name fs-5">{{{ if fullname }}}{{renderShortcodeEmoji(fullname, fullnameEmoji)}}{{{ else }}}{username}{{{ end }}}</span>
 		</a>
 
 		<div class="d-flex gap-2 align-items-center">

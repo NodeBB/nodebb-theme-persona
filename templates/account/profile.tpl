@@ -1,7 +1,7 @@
 <!-- IMPORT partials/account/header.tpl -->
 
 <div class="profile row">
-	<h1 class="fullname text-center fs-2 text-secondary fw-light">{{{ if fullname }}}{fullname}{{{ else }}}{username}{{{ end }}}</h1>
+	<h1 class="fullname text-center fs-2 text-secondary fw-light">{{{ if fullname }}}{{renderShortcodeEmoji(fullname, fullnameEmoji)}}{{{ else }}}{username}{{{ end }}}</h1>
 	<div class="d-flex gap-2 justify-content-center mb-2" component="user/badges"></div>
 	<h2 class="username text-center fs-5">@{username}</h2>
 	{{{ if isAdminOrGlobalModeratorOrModerator }}}

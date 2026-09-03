@@ -19,7 +19,7 @@
 			<strong class="text-nowrap" itemprop="author" itemscope itemtype="https://schema.org/Person">
 				<meta itemprop="name" content="{./user.username}">
 				{{{ if ./user.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{./user.userslug}">{{{ end }}}
-				<a href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{{txDisplayname(posts.user)}}</a>
+				<a href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{{renderShortcodeEmoji(txDisplayname(posts.user), posts.user.fullnameEmoji)}}</a>
 			</strong>
 
 			{{{ each posts.user.selectedGroups }}}
