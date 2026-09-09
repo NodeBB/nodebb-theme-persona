@@ -9,4 +9,13 @@
 	</small>
 </div>
 
-<div>{{{ if post.txContent }}}{{tx(post.content)}}{{{ else }}}{{post.content}}{{{ end }}}</div>
+<div>
+{{{ if post.contentWarning }}}
+<details class="content-warning">
+<summary>{post.contentWarning}</summary>
+{{{ if post.txContent }}}{{tx(post.content)}}{{{ else }}}{{post.content}}{{{ end }}}
+</details>
+{{{ else }}}
+{{{ if post.txContent }}}{{tx(post.content)}}{{{ else }}}{{post.content}}{{{ end }}}
+{{{ end }}}
+</div>

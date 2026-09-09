@@ -65,7 +65,14 @@
 <br />
 
 <div class="content" component="post/content" itemprop="text">
+	{{{ if posts.contentWarning }}}
+	<details class="content-warning">
+	<summary>{posts.contentWarning}</summary>
 	{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{posts.content}}{{{ end }}}
+	</details>
+	{{{ else }}}
+	{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{posts.content}}{{{ end }}}
+	{{{ end }}}
 </div>
 
 <div class="post-footer">

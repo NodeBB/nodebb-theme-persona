@@ -5,7 +5,14 @@
         </a>
 
         <div component="post/content" class="content mb-3 text-break">
+            {{{ if ./contentWarning }}}
+            <details class="content-warning">
+            <summary>{./contentWarning}</summary>
             {{{ if ./txContent }}}{{tx(./content)}}{{{ else }}}{{./content}}{{{ end }}}
+            </details>
+            {{{ else }}}
+            {{{ if ./txContent }}}{{tx(./content)}}{{{ else }}}{{./content}}{{{ end }}}
+            {{{ end }}}
         </div>
 
         <div class="mb-3">
