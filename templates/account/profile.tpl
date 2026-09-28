@@ -101,6 +101,7 @@
 			<span class="stat-label">{{tx(./name)}}</span>
 			{{{ if (./type == "input-link") }}}
 			<a class="fw-bold" href="{./value}" rel="nofollow noreferrer me">{./linkValue}</a>
+				{{{ if ./verified }}}<i class="fa fa-check text-success" title="{{tx("user:link-verified")}}"></i>{{{ end }}}
 			{{{ else }}}
 			<span class="fw-bold d-flex flex-nowrap align-items-center">{./value}</span>
 			{{{ end }}}
