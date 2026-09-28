@@ -1,5 +1,5 @@
 {{{ if ./items.length }}}
-<li component="topic/event" class="timeline-event text-muted d-flex align-items-start gap-2 pt-4 px-2 px-lg-0">
+<li component="topic/event" class="timeline-event text-muted d-flex align-items-start gap-2 pt-4">
 	<div class="timeline-badge my-2 my-lg-1">
 		<i class="fa fa-fw {{{ if ./icon }}}{./icon}{{{ else }}}fa-circle{{{ end }}} small"></i>
 	</div>
@@ -24,7 +24,7 @@
 	</div>
 </li>
 {{{ else }}}
-<li component="topic/event" class="timeline-event text-muted d-flex align-items-start align-items-lg-center gap-2 pt-4 px-2 px-lg-0" data-topic-event-id="{./id}" data-topic-event-type="{./type}">
+<li component="topic/event" class="timeline-event text-muted d-flex align-items-center gap-2 pt-4" data-topic-event-id="{./id}" data-topic-event-type="{./type}">
 	<div class="timeline-badge">
 		<i class="fa fa-fw {{{ if ./icon }}}{./icon}{{{ else }}}fa-circle{{{ end }}} small"></i>
 	</div>
