@@ -1,6 +1,6 @@
 {{{ if ./items.length }}}
 <li component="topic/event" class="timeline-event text-muted d-flex align-items-start gap-2 pt-4">
-	<div class="timeline-badge my-2 my-lg-1">
+	<div class="timeline-badge my-1">
 		<i class="fa fa-fw {{{ if ./icon }}}{./icon}{{{ else }}}fa-circle{{{ end }}} small"></i>
 	</div>
 	<div class="d-flex flex-column align-items-start">
