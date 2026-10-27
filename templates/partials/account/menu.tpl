@@ -76,6 +76,9 @@
 		<!-- ENDIF canEdit -->
 		<li role="separator" class="dropdown-divider"></li>
 		<li><a class="dropdown-item rounded-1 d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/topics" role="menuitem">{{tx("global:topics")}} <span class="badge bg-secondary rounded-pill ms-2" title="{counts.topics}">{formattedNumber(counts.topics)}</span></a></li>
+
+		<li><a class="dropdown-item rounded-1 d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/shares" role="menuitem">{{tx("user:shares")}} <span class="badge bg-secondary rounded-pill ms-2" title="{counts.shares}">{formattedNumber(counts.shares)}</span></a></li>
+
 		<li><a class="dropdown-item rounded-1 d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/posts" role="menuitem">{{tx("global:posts")}} <span class="badge bg-secondary rounded-pill ms-2" title="{counts.posts}">{formattedNumber(counts.posts)}</span></a></li>
 
 		<li><a class="dropdown-item rounded-1 d-flex justify-content-between align-items-center" href="{config.relative_path}/user/{userslug}/groups" role="menuitem">{{tx("global:header.groups")}} <span class="badge bg-secondary rounded-pill ms-2" title="{counts.groups}">{formattedNumber(counts.groups)}</span></a></li>
